@@ -1,0 +1,1540 @@
+# tactiq.io free youtube transcript
+# Elon Musk talks Twitter, Tesla and how his brain works — live at TED2022
+# https://www.youtube.com/watch/cdZZpaB2kDM
+
+00:00:02.480 hello
+00:00:04.720 so
+00:00:06.080 in just a few minutes um elon musk will
+00:00:08.880 be joining us here live on stage
+00:00:12.000 for a conversation uh
+00:00:14.559 rumor has it there are a few things to
+00:00:16.160 talk about with him
+00:00:18.080 um
+00:00:20.240 we we we will see
+00:00:22.320 but um before that
+00:00:24.720 i just want to show you something
+00:00:26.880 special
+00:00:29.119 i want you to come with me to
+00:00:31.439 tesla's huge gigafactory in austin texas
+00:00:35.520 so the day before it opened last week
+00:00:37.760 the evening before i was allowed to walk
+00:00:39.840 around it
+00:00:40.960 no one else there
+00:00:42.879 and what i saw there was honestly pretty
+00:00:45.360 mind-blowing
+00:00:46.559 this is elon musk's famous machine that
+00:00:49.680 builds the machine and his view the
+00:00:51.680 secret to a sustainable future is not
+00:00:54.000 just making an electric car
+00:00:55.840 it's making a system that churns out
+00:00:58.800 huge numbers of electric cars with a
+00:01:00.960 margin so that they can fund further
+00:01:03.920 growth
+00:01:04.959 when i was there um none of us knew
+00:01:07.119 whether elon would actually be able to
+00:01:08.400 make it here today so i took the chance
+00:01:10.240 to sit down with him and record an epic
+00:01:13.200 interview
+00:01:14.400 and i just want to show you
+00:01:16.320 a nine
+00:01:18.159 an eight minute excerpt of that
+00:01:20.560 interview so here from austin texas elon
+00:01:23.040 musk
+00:01:24.320 i want us to switch now to think a bit
+00:01:25.920 about artificial intelligence i i'm
+00:01:28.000 curious about your timelines and how you
+00:01:30.560 predict and how come some things are so
+00:01:32.400 amazingly on the money and some aren't
+00:01:34.079 so when it comes to predicting
+00:01:36.720 sales of tesla vehicles for example
+00:01:39.200 i mean you've kind of been amazing i
+00:01:40.240 think in 2014
+00:01:41.840 when tesla had sold that year 60 000
+00:01:45.200 cars you said 2020 i think we will do
+00:01:48.880 half a million a year yeah we did almost
+00:01:50.479 exactly half a million five years ago
+00:01:52.960 last time you came today we um i asked
+00:01:55.360 you about for self-driving and um you
+00:01:57.920 said yep this very year where i am
+00:02:00.640 confident that we will have a car going
+00:02:03.040 from la to new york uh without any
+00:02:06.399 intervention yeah i i don't want to blow
+00:02:08.639 your mind but i'm not always right
+00:02:11.280 um
+00:02:12.160 so talk what's the difference between
+00:02:13.760 those two why why
+00:02:15.360 why has full self-driving in particular
+00:02:17.440 been so hard to predict i mean the thing
+00:02:20.400 that really got me and i think it's
+00:02:21.680 going to get a lot of other people is
+00:02:23.360 that
+00:02:24.400 there are just so many false stones with
+00:02:26.959 with self-driving um where you think you
+00:02:30.000 think you've got the problem
+00:02:32.080 have a handle on the problem and then it
+00:02:33.680 nope uh it turns out uh you just hit a
+00:02:37.040 ceiling um and and uh
+00:02:39.519 uh
+00:02:40.319 because what happened if you if you were
+00:02:42.400 to plot the progress
+00:02:44.080 the progress looks like a log curve so
+00:02:45.920 it's like yeah
+00:02:47.040 a series of log curves so
+00:02:49.040 uh most people don't like cookies i
+00:02:50.640 suppose but it shows the show
+00:02:53.760 it goes it goes up sort of a you know
+00:02:55.760 sort of a fairly straight way and then
+00:02:57.040 it starts tailing off right and and and
+00:02:59.360 you start there's a kind of ocean
+00:03:00.480 getting diminishing returns you know in
+00:03:02.239 retrospect they seem obvious but uh in
+00:03:04.480 in order to solve uh full self-driving
+00:03:06.879 uh properly you actually just you have
+00:03:08.800 to solve real-world ai
+00:03:10.959 um you you you know because you said
+00:03:13.040 what are the road networks designed to
+00:03:15.920 to work with they're designed to work
+00:03:17.599 with a biological neural net our brains
+00:03:20.720 and with uh vision our eyes
+00:03:24.720 and so in order to make it work
+00:03:28.799 with computers you basically need
+00:03:31.280 to solve real world ai
+00:03:33.599 and vision
+00:03:35.200 because because we we need
+00:03:38.799 we need cameras
+00:03:40.400 and silicon neural nets
+00:03:42.400 uh in order to have to have
+00:03:45.120 self-driving work for a system that was
+00:03:46.879 designed for eyes and biological neural
+00:03:49.760 nets
+00:03:50.720 it you know when you i guess when you
+00:03:52.799 put it that way it's like quite obvious
+00:03:54.799 that the only way to solve full
+00:03:56.319 self-driving is to solve real-world
+00:03:58.959 ai and sophisticated vision what do you
+00:04:01.439 feel about the current architecture do
+00:04:02.640 you think you have an architecture now
+00:04:04.560 where where there is
+00:04:06.799 a chance for the logarithmic curve not
+00:04:08.720 to tail off any anytime
+00:04:10.720 soon
+00:04:11.840 well i mean
+00:04:13.599 admittedly these these uh may be an
+00:04:15.599 infamous uh last words but i i actually
+00:04:18.000 am confident that we will solve it this
+00:04:19.199 year
+00:04:20.079 uh that we will exceed uh
+00:04:22.560 you're like what the probability
+00:04:25.199 of an accident at what point should you
+00:04:27.120 exceed that of the average person right
+00:04:29.199 um i think we will exceed that this year
+00:04:31.440 we could be here
+00:04:32.800 talking again in a year it's like well
+00:04:34.479 yeah another year went by and it didn't
+00:04:36.240 happen but i think this i think this is
+00:04:37.919 the year is there an element that you
+00:04:39.280 actually deliberately
+00:04:40.800 make aggressive prediction timelines to
+00:04:44.800 drive people to be ambitious and without
+00:04:46.720 that nothing gets done
+00:04:48.320 so it's it feels like at some point in
+00:04:50.320 the last year
+00:04:52.479 seeing the progress on
+00:04:55.120 understanding you that you're that the
+00:04:57.280 ai the tesla ai understanding the world
+00:04:59.680 around it led to a kind of an aha moment
+00:05:02.639 in tesla because you really surprised
+00:05:03.840 people recently when you said
+00:05:06.160 probably the most important product
+00:05:08.080 development going on at tesla this year
+00:05:10.639 is this robot optimus yes
+00:05:13.520 is it something that happened in the
+00:05:15.440 development of fourself driving that
+00:05:16.880 gave you the confidence to say you know
+00:05:18.160 what we could do something special here
+00:05:21.199 yeah exactly so you know it took me a
+00:05:23.520 while to sort of realize that that in
+00:05:26.160 order to solve self-driving you really
+00:05:28.400 needed to solve real-world ai um
+00:05:31.280 at the point of which you solve
+00:05:32.560 real-world ai for a car which is really
+00:05:34.800 a robot on four wheels uh you can then
+00:05:37.919 generalize that to a robot on legs as
+00:05:40.960 well
+00:05:41.759 the thing that the things that are
+00:05:43.360 currently missing are uh
+00:05:45.600 enough intelligence enough to tell
+00:05:47.199 intelligence for the robot to navigate
+00:05:48.560 the real world and do useful things
+00:05:50.720 without being explicitly instructed it
+00:05:53.120 is so so the missing things are
+00:05:54.639 basically real world uh intelligence and
+00:05:57.759 uh scaling up manufacturing um those are
+00:06:00.319 two things that tesla is very good at
+00:06:02.560 and
+00:06:03.600 uh so then we basically just need to
+00:06:05.600 design the the uh specialized actuators
+00:06:08.560 and sensors that are needed for a
+00:06:09.759 humanoid robot
+00:06:11.680 people have no idea this is going to be
+00:06:13.440 bigger than the car
+00:06:16.160 um but so talk about i mean i think the
+00:06:18.319 first applications you you've mentioned
+00:06:20.400 are probably going to be manufacturing
+00:06:21.520 but eventually the vision is to to have
+00:06:23.360 these available for people at home
+00:06:25.280 correct if you had a robot that really
+00:06:28.880 understood the 3d architecture of your
+00:06:31.680 house and
+00:06:33.520 knew where every object in that house
+00:06:36.960 was or was supposed to be and could
+00:06:39.120 recognize all those objects i mean that
+00:06:42.400 that's kind of amazing isn't that like
+00:06:44.000 like that the kind of thing that you
+00:06:45.039 could ask a robot to do
+00:06:47.120 would be what like tidy up yeah um
+00:06:50.400 absolutely
+00:06:51.840 or make make dinner i guess mow the lawn
+00:06:54.880 take take a cup of tea to grandma and
+00:06:57.599 show her family pictures and
+00:06:59.919 exactly take care of my grandmother and
+00:07:02.960 make sure yeah exactly and it could
+00:07:04.479 recognize obviously recognize everyone
+00:07:06.240 in the home yeah could play catch with
+00:07:08.400 your kids yes i mean obviously we need
+00:07:10.639 to be careful this doesn't uh become a
+00:07:12.560 dystopian situation
+00:07:14.840 um like i think one of the things that's
+00:07:16.800 going to be important is to have a
+00:07:18.400 localized rom chip on the
+00:07:21.440 robot that cannot be updated over the
+00:07:23.840 air uh where if you for example were to
+00:07:26.560 say stop stop stop that would if anyone
+00:07:28.960 said that then the robot would stop you
+00:07:30.639 know type of thing
+00:07:31.919 and that's not updatable remotely um i
+00:07:34.400 think it's going to be important to have
+00:07:35.360 safety features like that
+00:07:37.039 yeah that that sounds wise and i do
+00:07:39.440 think there should be a regular free
+00:07:40.400 agency for ai i've said this for many
+00:07:42.160 years i don't love being regulated but i
+00:07:44.400 you know i think this is an important
+00:07:45.759 thing for public safety do you think
+00:07:47.520 there will be basically like in say 2050
+00:07:50.160 or whatever that like a
+00:07:52.080 a robot in most homes is what they will
+00:07:54.800 be and people will
+00:07:56.240 probably count
+00:07:57.680 you'll have your own butler basically
+00:07:59.919 yeah you'll have your sort of buddy
+00:08:01.520 robot
+00:08:02.560 probably yeah i mean how much of a buddy
+00:08:05.120 do like do you do
+00:08:06.639 how many applications you thought is
+00:08:07.759 there you know can you have a romantic
+00:08:09.520 partner
+00:08:10.960 lot of a sex
+00:08:11.680 inevitable
+00:08:13.360 i mean i did promise the internet that i
+00:08:14.800 would make cat girls we'll have we could
+00:08:16.319 make a robot cackle
+00:08:19.280 how are you because yeah
+00:08:21.280 you know
+00:08:24.319 so
+00:08:25.039 yeah i i guess uh it'll be what whatever
+00:08:27.680 people want really you know so what sort
+00:08:30.160 of timeline should we be
+00:08:32.640 thinking about of the first the first
+00:08:34.640 models that are actually made and
+00:08:37.599 sold
+00:08:39.839 you know the the first units that that
+00:08:41.839 we tend to make are
+00:08:43.360 um
+00:08:44.480 for jobs that are dangerous boring
+00:08:46.480 repetitive and things that people don't
+00:08:48.000 want to do and you know i think we'll
+00:08:49.920 have like an interesting prototype uh
+00:08:52.240 sometime this year we might have
+00:08:54.160 something useful next year but i think
+00:08:56.880 quite likely within at least two years
+00:08:59.519 and then we'll see rapid growth year
+00:09:01.040 over year of the usefulness of the
+00:09:02.720 humanoid robots um and decrease in cost
+00:09:05.279 and scaling out production
+00:09:07.279 help me on the economics of this so what
+00:09:09.120 what do you picture the cost of one of
+00:09:10.640 these being well i think the cost is
+00:09:12.959 actually not going to be uh crazy high
+00:09:15.279 um
+00:09:16.560 like less than a car yeah but but think
+00:09:18.640 about the economics of this if you can
+00:09:21.279 replace a
+00:09:23.120 thirty thousand dollar forty thousand
+00:09:24.560 dollar a year worker
+00:09:26.800 which you have to pay every year
+00:09:28.640 with a one-time payment of twenty five
+00:09:30.640 thousand dollars for a robot that can
+00:09:32.880 work longer hours
+00:09:35.279 doesn't go on vacation i mean that could
+00:09:37.760 it could be a pretty rapid replacement
+00:09:40.320 of certain types of jobs how worried
+00:09:43.200 should the world be about that
+00:09:44.959 i wouldn't worry about the the sort of
+00:09:46.800 putting people out of a job thing um i
+00:09:48.560 think
+00:09:49.519 we're actually going to have and already
+00:09:51.360 do have a massive shortage of labor so i
+00:09:53.680 i i think we'll we will have um
+00:09:57.680 uh
+00:09:59.760 not not people out of work but actually
+00:10:01.519 still a shortage labor even in the
+00:10:03.279 future uh but
+00:10:06.640 this really will be a world of abundance
+00:10:09.279 any goods and services
+00:10:11.440 uh will be available to anyone who wants
+00:10:13.839 them that it'll be so cheap to have
+00:10:15.600 goods and services it'll be ridiculous
+00:10:22.720 so
+00:10:25.040 that is part of
+00:10:27.120 an epic 80 minute interview
+00:10:29.760 which we are releasing to people
+00:10:33.120 members of ted 2022 right after this
+00:10:35.680 conference um you should be able to
+00:10:38.720 look at it on the ted live
+00:10:41.200 website
+00:10:42.160 um there's public interest in it we're
+00:10:44.800 putting that out to the world on sunday
+00:10:47.279 afternoon i think sunday evening but uh
+00:10:49.279 but if you're into this kind of stuff um
+00:10:51.760 definitely a good thing to do over the
+00:10:52.880 weekend um
+00:10:54.720 now then
+00:10:55.839 hearing from elon live there's there's
+00:10:57.839 huge public interest in that we have
+00:11:00.640 opened up this segment to live stream
+00:11:03.839 and so
+00:11:04.800 we're joined right now by i think quite
+00:11:07.120 a few people around the world um welcome
+00:11:09.920 to vancouver welcome to ted 22 you're
+00:11:11.600 joining us on the last day of our
+00:11:12.839 conference here in a packed
+00:11:15.360 theater
+00:11:16.480 and
+00:11:17.920 we've been hearing all week from
+00:11:19.839 people with dreams about what the next
+00:11:22.480 era
+00:11:23.760 of humanity is going to be
+00:11:26.800 and now arguably
+00:11:28.399 the biggest visionary of them all elon
+00:11:30.480 musk
+00:11:34.940 [Music]
+00:11:40.839 hey elon welcome
+00:11:46.800 so elon um a few hours ago
+00:11:50.000 you
+00:11:50.800 made
+00:11:51.680 an offer to buy twitter
+00:11:56.959 why
+00:12:00.120 [Laughter]
+00:12:03.040 how'd you know
+00:12:05.600 little bird
+00:12:06.800 tweeted in my ear or something i don't
+00:12:08.320 know
+00:12:09.200 by the way have you seen the movie ted
+00:12:10.560 about the bear
+00:12:11.760 i i i have i have a movie
+00:12:19.600 so um
+00:12:20.959 yeah yeah so
+00:12:23.760 was there a question
+00:12:25.200 why why make that offer oh so
+00:12:28.079 um
+00:12:28.959 well i think it's very important for
+00:12:31.360 uh there to be
+00:12:33.040 an inclusive arena for
+00:12:35.920 free speech
+00:12:37.279 where
+00:12:38.720 all yeah so uh yeah
+00:12:40.959 um
+00:12:43.600 twitter has become kind of the de facto
+00:12:45.680 town square um so
+00:12:48.880 uh
+00:12:49.680 it's just really important that people
+00:12:51.519 have the both the uh the reality and the
+00:12:54.880 perception
+00:12:56.160 uh that they're able to speak freely
+00:12:59.040 within the bounds of the law um
+00:13:01.600 and
+00:13:03.200 you know so one of the things that i
+00:13:04.720 believe twitter should do is open source
+00:13:07.279 the algorithm
+00:13:08.639 um and make any changes
+00:13:11.279 uh to people's tweets you know if
+00:13:12.880 they're emphasized or de-emphasized uh
+00:13:15.600 that action should be
+00:13:17.440 made apparent so you anyone can see that
+00:13:19.920 action has been taken
+00:13:21.360 so there's there's no sort of behind the
+00:13:22.800 scenes
+00:13:24.000 manipulation either algorithmically or
+00:13:27.360 manually um
+00:13:30.000 but
+00:13:31.600 last week when we spoke elon um i asked
+00:13:34.399 you whether you were thinking of taking
+00:13:36.000 over you said no way said i i do not
+00:13:38.240 want to own twitter it is a recipe for
+00:13:40.639 misery everyone will blame me for
+00:13:43.199 everything what on earth changed no i
+00:13:45.440 think i think everyone will still blame
+00:13:46.880 me for everything
+00:13:48.800 yeah if something if if i acquire
+00:13:50.959 twitter and something goes wrong it's my
+00:13:52.480 fault 100
+00:13:54.320 i i think there will be quite a few
+00:13:55.760 arrows uh yes um it will it will be
+00:13:58.480 miserable but you still want to do it
+00:13:59.839 why i mean i hope it's not too miserable
+00:14:02.000 uh but
+00:14:03.519 um
+00:14:05.279 i i just think it's important to the fun
+00:14:08.160 like
+00:14:09.279 uh
+00:14:10.720 it's important to the function of
+00:14:13.440 democracy
+00:14:14.720 it's important to the function of
+00:14:17.040 uh the united states uh as a free
+00:14:19.760 country and many other countries and to
+00:14:21.440 help
+00:14:22.160 actually to help
+00:14:23.279 freedom in the world
+00:14:24.720 more broadly than the u.s
+00:14:26.720 and so
+00:14:28.079 i think it's uh
+00:14:30.720 it's a
+00:14:32.079 you know i think this there's the risk
+00:14:34.240 civilizational risk
+00:14:36.320 uh is decreased if twitter
+00:14:39.199 the more we can increase the trust of
+00:14:41.839 twitter as a public platform and so
+00:14:45.199 i do think this will be somewhat painful
+00:14:47.120 and i'm not sure that i will actually be
+00:14:48.560 able to to acquire it
+00:14:50.880 and i should also say
+00:14:52.320 the intent is is to
+00:14:55.120 retain as many shareholders as is
+00:14:57.680 allowed by the law in a private company
+00:14:59.440 which i think is around
+00:15:01.040 2000 or so so we'll it's not like it
+00:15:03.920 it's definitely not not from the
+00:15:05.279 standpoint of letting me figure out how
+00:15:06.480 to monopolize or maximize my ownership
+00:15:08.639 of twitter
+00:15:09.680 but we'll try to bring along as many
+00:15:11.760 shoulders as we right as we're allowed
+00:15:13.360 to you don't necessarily want to pay out
+00:15:15.199 40 or whatever it is billion dollars in
+00:15:17.040 cash you you'd like them to come come
+00:15:18.800 with you in in
+00:15:20.639 i mean
+00:15:21.440 i mean i could technically afford it um
+00:15:28.160 what i'm saying is this this is
+00:15:30.079 this is uh this is not a
+00:15:32.959 way to sort of make money
+00:15:34.800 you know i think this is it's just that
+00:15:37.199 i think this is um this could
+00:15:40.000 my
+00:15:40.720 strong intuitive sense is that uh having
+00:15:44.320 a public platform that is maximally
+00:15:46.959 trusted
+00:15:48.160 um and and and
+00:15:50.480 and broadly inclusive
+00:15:52.720 um is extremely important to the future
+00:15:55.839 of civilization but you've described
+00:15:58.240 yourself i don't care about the
+00:15:59.360 economics at all
+00:16:00.959 okay that's that's core to hear you this
+00:16:03.040 is not about the economics it's for the
+00:16:05.920 the moral good that you think will
+00:16:07.120 achieve you you've described yourself
+00:16:08.480 elon as a free speech absolutist
+00:16:11.440 but
+00:16:12.160 does that mean that there's literally
+00:16:13.839 nothing that people can't say and it's
+00:16:16.160 okay
+00:16:17.600 well i i i think uh
+00:16:20.639 obviously uh twitter or any forum is
+00:16:23.600 bound by the laws of the country that it
+00:16:25.839 operates in um
+00:16:27.759 so
+00:16:28.880 obviously there are some limitations on
+00:16:31.759 free speech uh in in the us and and of
+00:16:34.880 course uh
+00:16:36.480 twitter would have to abide by those uh
+00:16:38.800 right rules so so so you can't incite
+00:16:40.959 people to violence like that that the
+00:16:43.440 like a direct incitement to violence you
+00:16:46.480 know you can't do the equivalent of
+00:16:47.600 crying fire in a in a movie theater for
+00:16:50.480 example no that would be a crime yeah
+00:16:52.800 right
+00:16:53.519 it should be a crime but here's here's
+00:16:55.199 the challenge is is that it's it's such
+00:16:57.920 a nuanced difference between different
+00:16:59.759 things so
+00:17:01.199 there's
+00:17:02.240 there's excitement to violence yeah
+00:17:04.160 that's a no if it's illegal um there's
+00:17:06.480 hate speech which some forms of hate
+00:17:08.880 speech are fine you know i hate spinach
+00:17:12.400 um
+00:17:13.760 i mean if it's a sauteed in a
+00:17:16.240 you know cream sauce that would be quite
+00:17:18.240 nice
+00:17:19.039 but so so
+00:17:20.559 but the problem is so so so let's say
+00:17:22.400 someone says okay here's one tweet i
+00:17:24.319 hate politician x yeah next tweet is i
+00:17:27.280 wish polite politician x wasn't alive
+00:17:30.320 as we some of us have said about putin
+00:17:32.720 right now for example so that's
+00:17:34.480 legitimate speech
+00:17:36.559 another tweet is i wish politician x
+00:17:38.640 wasn't alive with a picture of their
+00:17:40.720 head with a gun sight over it
+00:17:43.520 or that plus their address i mean at
+00:17:46.640 some point
+00:17:48.559 someone has to make a decision as to
+00:17:50.559 which of those is not okay can an
+00:17:52.880 algorithm
+00:17:54.160 do that well surely you need human
+00:17:55.520 judgment at some point
+00:17:57.440 no i think
+00:17:58.400 the like i said
+00:18:01.200 in my view
+00:18:02.400 uh twitter should um
+00:18:05.200 match the laws of the of the country of
+00:18:07.919 and and and really you know
+00:18:09.919 that there's an obligation to to do that
+00:18:12.840 um
+00:18:14.640 but going beyond going beyond that um
+00:18:17.280 and having it be
+00:18:18.880 unclear who's making what changes to who
+00:18:21.280 to where
+00:18:22.559 uh having tweets sort of mysteriously be
+00:18:25.280 promoted and demoted
+00:18:27.039 with no insight into what's going on uh
+00:18:29.679 having a black box algorithm uh promote
+00:18:32.000 some things and other not not other
+00:18:33.520 things i think this can be quite
+00:18:35.280 dangerous
+00:18:36.320 so so so the idea of opening the
+00:18:38.640 algorithm is a huge deal and i think
+00:18:40.480 many people would would welcome that of
+00:18:42.720 understanding exactly how it's making
+00:18:44.799 the decision and critique it and
+00:18:46.960 critique like i want to improve what
+00:18:48.400 wondering is like like i think like the
+00:18:50.080 code should be on github you know so
+00:18:52.480 then uh and so people can look through
+00:18:54.480 it and say like i see a problem here i
+00:18:57.200 don't i don't agree with this
+00:18:58.880 um
+00:18:59.760 they can highlight issues right um
+00:19:02.160 suggest changes in the same way that you
+00:19:04.160 sort of update linux or or signal or
+00:19:06.559 something like that you know but as i
+00:19:08.240 understand it like at some point right
+00:19:11.440 now
+00:19:12.480 what the algorithm would do is it would
+00:19:14.080 look at for example how many people have
+00:19:15.840 flagged a tweet as obnoxious
+00:19:19.600 and then
+00:19:21.039 at some point a human has to look at it
+00:19:22.799 and make make a decision as to does this
+00:19:25.679 cross the line or not that the algorithm
+00:19:27.840 itself can't i don't think yet um tell
+00:19:30.880 the difference between
+00:19:32.400 legal and okay and and definitely
+00:19:34.160 obnoxious and so the question is which
+00:19:36.559 humans you know make make that
+00:19:39.360 core i mean do you have do you have a
+00:19:40.720 picture of that right now twitter
+00:19:43.679 and facebook and others you know they've
+00:19:45.120 hired thousands of people to try to help
+00:19:48.080 make wise decisions and the trouble is
+00:19:50.000 that no one can agree on on what is wise
+00:19:52.400 how do you solve that
+00:19:55.679 well i i i think we would want to er on
+00:19:58.480 this if if in doubt
+00:20:00.400 uh
+00:20:01.200 let let the speech that let it exist uh
+00:20:04.480 it would have you know if it's a
+00:20:07.520 you know a
+00:20:09.280 a gray area i would say let let the
+00:20:11.679 tweet exist
+00:20:12.960 um
+00:20:13.840 but
+00:20:14.559 obviously you know in a case where
+00:20:16.480 there's perhaps a lot of controversy uh
+00:20:19.840 that you would not want to necessarily
+00:20:21.440 promote that tweet if uh you know so the
+00:20:25.600 i'm not i'm not saying this is that i
+00:20:27.679 have all the answers here um
+00:20:29.679 but
+00:20:30.400 i i do think that we want to be just
+00:20:33.120 very reluctant to delete things
+00:20:36.000 and and have um
+00:20:37.679 just just be very cautious with with
+00:20:39.679 with permanent bands uh you know
+00:20:42.799 timeouts i think are better or uh than
+00:20:45.679 sort of permanent bands
+00:20:47.120 and um
+00:20:49.760 but just just in general like i said
+00:20:53.440 uh how how it won't be perfect but i
+00:20:56.240 think we wanted to really uh have
+00:20:59.760 like so the possession and reality that
+00:21:01.520 speech is as
+00:21:02.799 free as reasonably possible
+00:21:04.880 and a good sign as to whether there's
+00:21:07.280 free speech is
+00:21:09.280 is
+00:21:10.000 is someone you
+00:21:11.520 don't like allowed to say something you
+00:21:13.679 don't like
+00:21:15.280 and if that is the case then we have
+00:21:16.880 free speech and it's it's damn annoying
+00:21:19.440 when someone you don't like says
+00:21:21.039 something you don't like
+00:21:22.559 that is a sign of a healthy functioning
+00:21:25.440 uh
+00:21:26.480 free speech situation
+00:21:30.799 so
+00:21:31.600 i think many people would agree with
+00:21:33.120 that and look at the reaction online
+00:21:34.480 many people are excited by
+00:21:36.400 you coming in and the changes you're
+00:21:37.520 proposing some others are absolutely
+00:21:39.440 horrified here's how they would see it
+00:21:41.039 they would say wait a sec we agree that
+00:21:43.200 that twitter is an incredibly important
+00:21:45.280 town square it is a it is you know where
+00:21:47.919 the world exchanges opinion about life
+00:21:49.600 and death matters
+00:21:50.960 how on earth could it be owned by the
+00:21:52.880 world's richest person that can't be
+00:21:54.799 right
+00:21:55.760 so how how do you i mean what's the
+00:21:57.600 response there is there any way that you
+00:21:59.840 can
+00:22:00.880 distance yourself from the actual
+00:22:02.880 decision-making that matters on content
+00:22:05.120 at
+00:22:06.080 in some very clear way that is
+00:22:08.000 convincing to people
+00:22:10.320 well like i said i think the
+00:22:13.280 it's it's very important that like the
+00:22:15.600 the algorithm be open sourced and that
+00:22:17.440 any manual uh adjustments be
+00:22:20.480 uh identified like so if this tweet if
+00:22:23.200 somebody did something to a tweet it's
+00:22:25.840 there's information attached to it that
+00:22:27.440 this that action was taken and i i i i
+00:22:30.799 won't personally be uh you know in their
+00:22:33.440 editing tweets
+00:22:34.799 um
+00:22:36.320 but you'll know if something was done to
+00:22:39.120 promote demote or otherwise affect uh a
+00:22:42.240 tweet um
+00:22:44.000 you know
+00:22:45.200 as for
+00:22:46.320 media sort of ownership i mean you've
+00:22:48.080 got you know um mark zuckerberg owning
+00:22:50.960 facebook and
+00:22:52.320 instagram and whatsapp um
+00:22:54.559 and with a share ownership structure
+00:22:56.400 that will
+00:22:57.760 have
+00:22:58.799 mark zuckerberg the 14th still
+00:23:01.120 controlling those
+00:23:02.559 uh entities
+00:23:04.640 so
+00:23:08.159 literally um
+00:23:11.039 what's that need we won't have that on
+00:23:12.480 twitter
+00:23:13.600 if if you commit to opening up the
+00:23:15.440 algorithm that that definitely gives
+00:23:17.360 some level of confidence um talk about
+00:23:20.480 talk about some of the other changes
+00:23:21.600 that you've proposed so you
+00:23:24.240 at the edit button that's that's
+00:23:26.159 definitely coming if you if you have
+00:23:28.080 your way yeah yeah
+00:23:29.760 and how do you i mean i i think
+00:23:32.240 i mean
+00:23:33.120 one
+00:23:34.159 frankly
+00:23:35.200 um
+00:23:37.679 the
+00:23:38.799 top priority i have i would have is is
+00:23:41.919 eliminating the the spammings and scam
+00:23:44.320 bots
+00:23:45.440 and the bot armies that are on twitter
+00:23:48.400 um
+00:23:51.440 you know i think i think these these fun
+00:23:53.919 influence
+00:23:55.039 that
+00:23:56.159 they're not they're they're they they
+00:23:57.840 make the product much worse
+00:24:00.320 um if i see if you know
+00:24:02.559 if i had a dogecoin for every crypto
+00:24:04.240 scam i saw
+00:24:05.200 [Laughter]
+00:24:10.080 more you know 100 billion dollars
+00:24:13.840 do you regret sparking the sort of storm
+00:24:16.480 of excitement overdose and you know
+00:24:18.960 where it's gone or
+00:24:20.960 i mean i think deutsche is fun and you
+00:24:23.520 know i've always said don't bet the form
+00:24:24.960 of dogecoin uh fyi
+00:24:27.039 yeah
+00:24:29.440 but i i think i think it's it's i like
+00:24:32.240 dogs and i like memes and uh it's got
+00:24:34.640 both of those
+00:24:36.080 and
+00:24:37.200 but just on the on the edit button how
+00:24:39.200 how do you get around the problem of so
+00:24:40.880 someone tweets elon rocks and it's
+00:24:42.960 tweeted by two million people um and um
+00:24:46.000 and then then after that they edit it so
+00:24:48.480 i'm elon sucks and um and then all those
+00:24:51.360 retweets
+00:24:52.559 they're all embarrassed and how how do
+00:24:54.720 you avoid that type of
+00:24:56.559 changing of meaning so that retweeters
+00:24:59.039 are exploited
+00:25:02.559 well i think uh you know you'd only have
+00:25:05.279 the edit capability for a short period
+00:25:07.679 of time and probably the thing to do at
+00:25:10.320 upon the edit would be to zero out
+00:25:12.799 all retweets and favorites
+00:25:14.960 okay
+00:25:16.559 i'm open to ideas though you know
+00:25:19.039 so in one way the um algorithm works
+00:25:21.760 kind of well for you right now i just i
+00:25:23.520 wanted to show you this this is so
+00:25:25.600 this is a typical tweet of of mine kind
+00:25:28.720 of lame and wordy and whatever and look
+00:25:30.720 at and the amazing response it gets is
+00:25:32.640 this oh my god
+00:25:34.320 97 likes
+00:25:36.400 um and then i tried another one um
+00:25:41.279 and uh
+00:25:45.279 29 000 likes so the algorithm at least
+00:25:48.720 seems to be at the moment you know if
+00:25:50.480 elon musk expanded the world immediately
+00:25:54.840 um not bad right
+00:25:58.159 yeah i guess so i mean that was
+00:26:00.960 cool
+00:26:01.840 i mean you but but you've
+00:26:03.520 so help us understand how it is you've
+00:26:05.600 built this incredible
+00:26:07.440 um following on twitter yourself when
+00:26:10.960 i mean some of the people who love you
+00:26:12.720 the most look at some of what you tweet
+00:26:14.400 and they they
+00:26:15.919 they think it's somewhere between um
+00:26:18.240 embarrassing and crazy some of it's
+00:26:20.159 amazing i mean
+00:26:21.820 [Laughter]
+00:26:24.640 is that actually why it's worked or why
+00:26:27.760 why has it worked
+00:26:29.440 i mean i don't know i mean i i'm
+00:26:31.679 you know tweeting more or less stream of
+00:26:33.360 consciousness you know it's not like let
+00:26:35.039 me think about some grand plan about my
+00:26:36.960 twitter or whatever you know i'm like
+00:26:38.720 literally on the toilet or something i'm
+00:26:40.960 like oh this is funny and then tweet
+00:26:42.880 that out you know
+00:26:44.320 that's
+00:26:45.679 that's like most of them
+00:26:46.810 [Laughter]
+00:26:48.240 you know over sharing
+00:26:51.279 but um but you are obsessed with getting
+00:26:53.039 the most out of every minute of your day
+00:26:55.360 and so why not you know
+00:26:57.520 um
+00:26:59.039 so
+00:27:00.080 i don't know i just like try to tweet
+00:27:02.000 out like things that are interesting or
+00:27:03.279 funny or
+00:27:04.880 you know and then people seem to
+00:27:07.440 like it
+00:27:08.640 so if if you are unsuccessful actually
+00:27:11.679 before i ask that let me ask this if i
+00:27:13.919 don't
+00:27:14.640 yeah so how can i say
+00:27:16.400 is uh funding secured
+00:27:19.760 [Music]
+00:27:23.279 i i have sufficient uh assets to
+00:27:26.640 complete the
+00:27:28.000 uh
+00:27:29.520 it's not a forward-looking statement
+00:27:30.960 blah blah but
+00:27:33.520 i have to i mean i can do it if possible
+00:27:35.440 right um
+00:27:36.640 so um
+00:27:38.960 and um
+00:27:41.120 i mean i should say actually even in the
+00:27:42.559 in
+00:27:43.600 originally
+00:27:44.559 the
+00:27:45.840 uh with with tesla back in the day
+00:27:48.080 funding was actually secured
+00:27:50.240 i want to be clear about that
+00:27:51.760 um in fact this may be a good
+00:27:53.279 opportunity to to to clarify that um
+00:27:56.559 if funding was indeed secured um and uh
+00:28:00.399 i should say like why why do i do not
+00:28:02.640 have respect for the sec in that
+00:28:04.720 situation and i don't mean to
+00:28:06.480 blame everyone at the sec but certainly
+00:28:08.399 the san francisco office
+00:28:10.000 um it's because the sec
+00:28:12.640 knew that funding was secured
+00:28:15.520 but they pursued the
+00:28:17.279 an active public investigation
+00:28:18.880 nonetheless at the time tesla was in a
+00:28:21.520 precarious financial situation
+00:28:23.600 and i was told by the banks that if i
+00:28:25.200 did not agree to settle with the sec
+00:28:27.600 that they would the banks would cease
+00:28:28.960 providing working capital and tesla
+00:28:30.399 would go bankrupt immediately
+00:28:32.399 so that's like having
+00:28:34.000 a gun to your child's head
+00:28:36.159 so i was forced to concede to the sec
+00:28:39.200 unlawfully
+00:28:41.039 those bastards
+00:28:44.080 and and and now that they they say
+00:28:47.840 it makes it look like i lied when i did
+00:28:49.360 not in fact lie i was i was forced to
+00:28:51.600 admit that i lied for to save tesla's
+00:28:53.840 life and that's the only reason
+00:28:55.919 given what's actually happened
+00:28:59.440 given what's actually happened to tesla
+00:29:01.039 since then though aren't you glad that
+00:29:03.440 you didn't take it private
+00:29:07.120 yeah i mean
+00:29:10.240 it's difficult to put yourself in the
+00:29:11.679 position at the time tesla was under the
+00:29:13.840 most relentless short seller attack in
+00:29:16.399 the history of the stock market
+00:29:18.799 uh there's something called short and
+00:29:20.320 distort
+00:29:21.520 um where the barrage of negativity that
+00:29:24.880 tesla was experiencing from short sales
+00:29:26.559 wall street was beyond or belief tesla
+00:29:29.279 was the most shorted stock in the
+00:29:31.520 history of stock markets
+00:29:33.760 this is saying something
+00:29:35.520 so
+00:29:36.720 you know this was affecting our ability
+00:29:38.080 to hire people it was affecting our
+00:29:39.440 ability to sell cars
+00:29:41.440 it was
+00:29:42.399 uh
+00:29:43.120 they were
+00:29:44.080 yeah it was terrible um
+00:29:47.200 yeah they wanted tesla to die so bad
+00:29:49.760 they could taste it
+00:29:51.600 well most of them have paid the price
+00:29:54.080 yes
+00:29:55.600 where are they now
+00:29:58.799 um
+00:30:01.440 so
+00:30:02.559 so that was a really strong statement i
+00:30:04.000 mean obviously a lot of people
+00:30:05.760 who who support you i thought would say
+00:30:08.559 you have so much to
+00:30:10.640 offer the world on the upside on the
+00:30:12.159 vision side don't don't waste your time
+00:30:14.080 getting getting distracted by these
+00:30:16.320 these battles that bring out negativity
+00:30:18.159 and and and make people feel that you're
+00:30:20.720 being defensive or like people don't
+00:30:22.080 like fights especially with with
+00:30:23.760 powerful government authorities they'd
+00:30:25.440 rather they'd rather buy into your to a
+00:30:27.520 dream do do you like aren't you
+00:30:29.760 encouraged by people just just to edit
+00:30:32.000 that
+00:30:33.039 in that
+00:30:34.320 you know temptation out and uh
+00:30:37.200 go with the bigger story
+00:30:41.120 um well i mean i i would say like you
+00:30:43.600 know i'm sort of a mixed bag you know i
+00:30:48.840 mean well you're a fighter and you you
+00:30:51.279 don't you don't you don't you don't
+00:30:54.559 you don't like to lose and and you you
+00:30:56.799 you are determined that you don't
+00:30:58.240 basically i i mean you are sure i don't
+00:31:00.000 like to lose i'm not sure many people do
+00:31:01.840 um
+00:31:02.799 but the truth matters to me a lot really
+00:31:05.840 like
+00:31:07.039 sort of pathologically it matters to me
+00:31:09.679 okay so so you don't like to lose if in
+00:31:12.880 this case you are not successful in you
+00:31:15.519 know the board
+00:31:16.960 does not accept your offer you've said
+00:31:18.480 you won't go higher is there a plan b
+00:31:24.640 there is
+00:31:29.600 i i think we i think we would like to
+00:31:31.840 hear a little bit about plan b
+00:31:37.440 for it for another time i think
+00:31:39.440 another time yeah all right
+00:31:40.930 [Applause]
+00:31:44.840 i that that's a nice tease all right so
+00:31:48.240 um
+00:31:50.000 i i would love
+00:31:51.840 to
+00:31:53.360 try to understand this brain of yours
+00:31:55.919 more ilan i i if with your permission
+00:31:58.000 i'd like to just play this this is the
+00:32:00.320 oh actually before we do that
+00:32:02.080 um here was one of the of the thousands
+00:32:04.799 of questions that people asked i thought
+00:32:06.240 this was actually quite a good one um if
+00:32:08.240 you could go back in time and change one
+00:32:10.000 decision you made along the way
+00:32:11.919 do your own edit button
+00:32:13.440 which one would it be and why
+00:32:16.480 do you mean like a career decision or
+00:32:17.919 something
+00:32:18.799 just any decision over the last
+00:32:21.200 few years like your decision to invest
+00:32:23.039 in twitter in the first place or your
+00:32:26.840 anything um i mean the
+00:32:30.559 the worst business decision i ever made
+00:32:32.320 was
+00:32:33.200 um
+00:32:34.399 not starting tesla with just jb straval
+00:32:38.080 by far the worst decision i've ever made
+00:32:40.399 is not just starting tesla with jb
+00:32:43.360 that that that's the number one by far
+00:32:46.159 all right so jb strabo was was the
+00:32:47.919 visionary co-founder who who who was
+00:32:49.840 obsessed with and knew so much about
+00:32:51.519 batteries and your your decision to go
+00:32:54.640 with tesla the company as it was meant
+00:32:56.240 that you got locked into what you
+00:32:58.480 concluded it was a weird architecture
+00:33:00.159 now this this
+00:33:01.840 there's a lot of confusion tesla
+00:33:04.880 tesla did not exist in any
+00:33:07.200 tesla was a shell company with no
+00:33:08.559 employees uh no intellectual property
+00:33:10.720 when i invested but the
+00:33:13.440 a false narrative has been created by um
+00:33:16.159 one of the other co-founders uh martin
+00:33:17.840 everhard and i don't want to get into
+00:33:19.279 the nastiness here but uh
+00:33:22.320 i didn't invest in an existing company
+00:33:24.640 we created a company yeah and
+00:33:27.760 ultimately the creation that company uh
+00:33:30.480 was was done by
+00:33:32.399 uh jv and me um and
+00:33:34.960 unfortunately there's a someone else and
+00:33:37.840 another co-founder who has made it his
+00:33:39.600 life's mission
+00:33:40.960 uh to make it sound like he he created
+00:33:42.960 the company which is false wasn't there
+00:33:44.799 another issue
+00:33:45.919 right at the heart of the development of
+00:33:48.080 the tesla model 3 where tesla almost
+00:33:50.480 went bankrupt and i i think you have
+00:33:52.240 said that part of the reason for that
+00:33:54.320 was that you overestimated the extent to
+00:33:57.039 which it was possible at that time to
+00:33:59.360 automate a a factory a huge amount was
+00:34:02.240 spent
+00:34:03.279 kind of over automating and it didn't
+00:34:05.519 work
+00:34:06.480 and it nearly took the company down is
+00:34:08.239 that fair
+00:34:11.599 uh i mean
+00:34:13.760 first of all it's important to
+00:34:15.760 understand like what what has tesla
+00:34:18.320 actually accomplished that is that is
+00:34:20.639 most noteworthy um it is not the
+00:34:23.599 creation of
+00:34:25.280 an electric vehicle or creating
+00:34:27.199 electrical vehicle prototype or
+00:34:29.839 low volume production
+00:34:31.440 of a
+00:34:32.560 of a car that they've been
+00:34:35.040 uh hundreds of cars startups over the
+00:34:37.760 years hundreds and uh in fact at one
+00:34:40.399 point um bloomberg counted up the number
+00:34:42.239 of electric vehicle startups and they i
+00:34:44.480 think they got to almost 500. yeah so
+00:34:47.119 the hard part is not creating a
+00:34:48.879 prototype or going into limited
+00:34:50.399 production
+00:34:51.440 the the the absolutely difficult thing
+00:34:54.079 which has not been accomplished by an
+00:34:55.440 american car company in 100 years is
+00:34:58.240 reaching volume production without going
+00:35:00.839 bankrupt
+00:35:02.400 is the actual hard thing
+00:35:04.480 um the last company american company to
+00:35:07.040 reach volume production without going
+00:35:08.720 bankrupt was chrysler in the 20s right
+00:35:12.560 and and and it nearly happened to tesla
+00:35:16.240 yes it but it's not like oh geez i guess
+00:35:18.560 if we just done more manual stuff things
+00:35:20.160 would have been fine
+00:35:21.760 of course not uh that is definitely not
+00:35:24.000 the case uh
+00:35:25.760 so
+00:35:27.440 we basically messed up
+00:35:29.760 almost every aspect of the model 3
+00:35:32.079 production line
+00:35:34.160 from
+00:35:36.000 from cells to packs to
+00:35:39.119 driving voters
+00:35:40.800 motors
+00:35:42.560 body line the paint shop
+00:35:45.119 uh
+00:35:46.400 final assembly
+00:35:47.920 um
+00:35:49.200 everything everything was messed up
+00:35:51.760 um and i lived in that fa i lived in the
+00:35:54.320 fremont and and nevada factories
+00:35:57.359 for three years
+00:35:59.680 fixing the that production line running
+00:36:01.920 around like a maniac
+00:36:03.760 through every part of that factory
+00:36:06.720 living with the team
+00:36:10.079 i slept on the floor
+00:36:12.640 so that the
+00:36:13.839 the team who was going through
+00:36:15.760 a hard time
+00:36:17.200 could see me on the floor
+00:36:19.680 uh
+00:36:21.520 that they knew that i was not in some
+00:36:23.599 ivory tower
+00:36:25.680 whatever pain they experienced i was i
+00:36:27.839 had it more and some people who knew you
+00:36:30.720 well
+00:36:31.680 actually thought you were making a
+00:36:32.640 terrible mistake that you were driving
+00:36:33.920 yourself you were
+00:36:35.280 you were driving yourself to the edge of
+00:36:37.040 sanity almost and yeah and
+00:36:39.359 and that you were in danger of making
+00:36:42.320 bad
+00:36:43.520 choices and in fact i heard you say last
+00:36:45.200 week elon that that you because of
+00:36:47.119 tesla's huge value now and and you know
+00:36:50.640 the the significance of every minute
+00:36:52.240 that you spend that you are in danger of
+00:36:54.640 sort of
+00:36:56.000 obsessing over spending all this time to
+00:36:57.920 the point of to the edge of
+00:37:00.720 sanity
+00:37:01.920 um
+00:37:03.119 that doesn't that doesn't sound super
+00:37:04.640 wise isn't that like your your your time
+00:37:09.119 your your completely sane centered
+00:37:11.920 rested time and decision making
+00:37:14.560 is more powerful and compelling than
+00:37:17.520 that sort of i can barely
+00:37:19.839 hold my eyes open so surely it should be
+00:37:22.640 an absolute strategic priority to look
+00:37:24.560 after yourself
+00:37:28.720 i mean there wasn't any other way to
+00:37:30.480 make it work
+00:37:32.079 there were three years of hell
+00:37:35.839 17 8 2017 18 and 19
+00:37:39.280 with three years
+00:37:40.640 this longest period of excruciating pain
+00:37:42.800 in my life
+00:37:44.240 uh
+00:37:45.839 there wasn't any other way and we barely
+00:37:47.839 made it and we're on the ragged edge of
+00:37:49.760 bankruptcy the entire time
+00:37:52.160 so
+00:37:52.880 so when you felt like i want
+00:37:54.480 pain
+00:37:55.280 i don't like it
+00:37:56.960 um
+00:37:58.079 those were three or three so so much
+00:38:00.720 pain
+00:38:01.680 but it had to be done or tesla would be
+00:38:03.440 dead when you looked around the
+00:38:05.760 gigafactory that we saw images of
+00:38:07.599 earlier
+00:38:08.560 um last week and just see where the
+00:38:11.359 companies come i mean do you feel that
+00:38:13.440 that this this challenge of
+00:38:16.560 figuring out the the new way of
+00:38:18.960 manufacturing um that you that
+00:38:21.920 you actually have an edge now that it's
+00:38:23.280 different that you've figured out how to
+00:38:24.480 do this and
+00:38:26.160 and um from
+00:38:27.680 those three years
+00:38:29.280 what won't be repeated you've actually
+00:38:31.440 figured out a new way of manufacturing
+00:38:36.480 at this point i think i know
+00:38:39.040 more about manufacturing than anyone
+00:38:41.280 currently alive on earth
+00:38:45.520 between that
+00:38:48.480 yeah
+00:38:50.079 i'll tell you i can tell you how every
+00:38:51.440 damn part part in that car is made
+00:38:53.839 which basically if you just live on the
+00:38:55.359 factory live in the factory for three
+00:38:56.640 years and
+00:38:58.960 that was nice that was a poignant note
+00:39:01.599 or something
+00:39:03.760 someone wants to compose a symphony to
+00:39:05.440 that uh expression of confidence uh
+00:39:07.760 something like that i have no idea what
+00:39:09.040 that is
+00:39:10.640 anyway yeah
+00:39:12.320 every aspect of a car six weeks to
+00:39:13.839 sunday i know
+00:39:15.119 i mean you you you
+00:39:16.880 talk about scale right now you're in the
+00:39:18.720 middle of writing your new master plan
+00:39:21.200 and you've said that scale is at the
+00:39:23.200 heart of it
+00:39:25.119 why does scale matter why are you
+00:39:26.880 obsessed with that what are you thinking
+00:39:28.720 yeah well see
+00:39:30.800 in order in order to accelerate the
+00:39:32.560 advent of sustainable energy
+00:39:34.480 uh there must be scale
+00:39:36.240 because we've got a transition um a vast
+00:39:39.040 economy that is currently uh overly
+00:39:41.280 dependent on fossil fuels to a
+00:39:43.680 sustainable energy economy one where the
+00:39:46.400 energy is uh
+00:39:48.079 yeah i mean we got to do it
+00:39:54.560 so so the energy's got to be sustainably
+00:39:56.720 generated with wind solar uh hydro
+00:40:00.000 geothermal i i'm a believer in nuclear
+00:40:02.480 as uh as well i think ever talk about
+00:40:05.040 and
+00:40:05.839 uh and then you you
+00:40:07.440 since solar and wind is intermittent you
+00:40:08.960 have to have stationary storage
+00:40:10.000 batteries and and then we're going to
+00:40:12.480 transition all transport um
+00:40:15.040 to to electric uh
+00:40:17.280 if we do those things we have a
+00:40:18.640 sustainable energy future the faster we
+00:40:20.720 do those things the less risk we
+00:40:24.000 the less risk we
+00:40:25.599 put to the environment
+00:40:27.359 uh so sooner is better uh and and so
+00:40:31.119 scale is very important um
+00:40:33.760 you know it's not about it's not about
+00:40:35.520 press releases it's about tonnage what
+00:40:38.000 was the tonnage of
+00:40:39.920 of batteries produced
+00:40:42.240 and obviously done in a sustainable way
+00:40:44.720 and and our estimate is that
+00:40:47.520 approximately 300 terawatt hours of
+00:40:50.560 battery storage is needed to transition
+00:40:52.960 uh transport uh
+00:40:55.119 electricity and and heating and cooling
+00:40:58.000 uh to a fully electric situation others
+00:41:00.880 may
+00:41:01.760 there's there may be some
+00:41:03.599 different estimates out out there but uh
+00:41:06.640 our estimate is 300 terawatt hours yeah
+00:41:09.440 so we dug into this a lot in the
+00:41:10.720 interview that we recorded last week and
+00:41:12.079 so people can go in and hear that more
+00:41:13.680 but i mean the context is that is i
+00:41:15.599 think about a thousand times the current
+00:41:17.599 install battery capacity i mean the
+00:41:19.839 scale up needed is
+00:41:21.839 breathtaking basically yeah and and and
+00:41:24.480 um
+00:41:25.760 yeah so so your vision is to commit
+00:41:27.839 tesla to try to deliver on a meaningful
+00:41:30.720 percentage of what is needed yeah and
+00:41:32.400 what and call on others to do the rest
+00:41:34.000 that this is what this is a task for
+00:41:36.560 humanity to massively scale up our
+00:41:38.960 response to change change the energy
+00:41:40.880 grade
+00:41:41.680 yes it it's
+00:41:43.119 it's like basically how fast can we can
+00:41:45.760 we scale um and encourage others to
+00:41:49.359 scale
+00:41:50.720 to get to that 300 terawatt hour
+00:41:53.359 installed uh base of batteries right
+00:41:57.520 and then of course uh there'll be a
+00:41:59.119 tremendous need to recycle those
+00:42:00.560 batteries which is i and it makes sense
+00:42:02.880 to recycle them because the raw
+00:42:03.920 materials are like high grade ore um so
+00:42:07.200 people shouldn't think well they'd be
+00:42:08.079 this big pile of batteries now they're
+00:42:09.119 going to get recycled because the
+00:42:11.040 even a dead battery pack is worth about
+00:42:12.640 a thousand dollars so
+00:42:15.119 um but but this is what's needed for a
+00:42:17.359 sustainable energy future so we're going
+00:42:19.520 to try to take the set of actions that
+00:42:21.119 accelerate the day of and bring the day
+00:42:23.760 of a sustainable energy future sooner
+00:42:27.599 okay
+00:42:30.880 there's going to be a huge interest in
+00:42:32.160 your master plan when you when you
+00:42:34.079 publish that um meanwhile i just i would
+00:42:36.880 love to
+00:42:37.920 understand more
+00:42:39.520 what goes on in this brain of yours
+00:42:41.200 because it is it is a pretty unique one
+00:42:42.960 i want to play with your permission this
+00:42:44.800 very funny opening from snl saturday
+00:42:47.440 night live can we have the volume there
+00:42:48.960 actually please sorry
+00:42:50.720 it's an honor to be hosting saturday
+00:42:52.560 night live i mean that
+00:42:54.880 sometimes after i say something i have
+00:42:57.119 to say i mean that
+00:42:58.380 [Music]
+00:42:59.520 so people really know that i mean
+00:43:02.560 that's because i don't always have a lot
+00:43:04.240 of
+00:43:05.119 international variation in how i speak
+00:43:09.200 which i'm told makes for great comedy
+00:43:13.119 i'm actually making history tonight as
+00:43:14.560 the first person
+00:43:16.000 with asperger's to host snl
+00:43:18.280 [Applause]
+00:43:21.680 and i think you followed that up with at
+00:43:23.280 least the first person to admit it the
+00:43:24.720 first person to admit it
+00:43:27.040 but i mean
+00:43:32.800 so this was a great thing to say
+00:43:34.640 but i i would love to
+00:43:36.880 understand
+00:43:38.400 whether you know how you think of of
+00:43:40.319 asperger's like whether you can give us
+00:43:42.079 any sense of even you as a boy how what
+00:43:44.880 what the experience
+00:43:47.200 was or as you now
+00:43:49.200 understand with the benefit of hindsight
+00:43:51.599 can you talk about that a bit
+00:43:53.760 well i think i think everyone's
+00:43:55.200 experience is going to be somewhat
+00:43:56.720 different
+00:43:58.400 but i guess for me the
+00:44:00.880 social cues were not uh intuitive so
+00:44:05.680 i was just very bookish and i didn't
+00:44:08.079 understand
+00:44:09.760 this i guess
+00:44:11.760 others could
+00:44:13.119 sort of intuitively understand uh
+00:44:17.280 what watches meant by something
+00:44:20.079 i would just tend to take things very
+00:44:21.680 literally as just like the words
+00:44:24.000 as spoken word exactly what they meant
+00:44:26.319 but but then that
+00:44:28.720 didn't turn out to be wrong
+00:44:31.200 you can't they do not they're not simply
+00:44:32.880 saying exactly what they mean
+00:44:34.480 there's all sorts of other things that
+00:44:35.680 are meant it took me a while to figure
+00:44:37.200 that out um
+00:44:38.880 so
+00:44:40.319 i was you know bullied quite a lot
+00:44:42.720 um
+00:44:44.000 so
+00:44:46.319 i didn't i did not have a sort of happy
+00:44:49.119 childhood to be frank was quite quite
+00:44:50.960 rough um
+00:44:52.880 and um
+00:44:54.079 but i read a lot of books i read lots
+00:44:56.160 and lots of books
+00:44:57.520 and so that you know
+00:44:59.440 sort of
+00:45:01.040 gradually i sort of understood more from
+00:45:03.520 the books that i was reading and watched
+00:45:05.119 a lot of movies
+00:45:07.119 and
+00:45:09.520 you know just
+00:45:12.400 but it took it took me it took me a
+00:45:14.000 while to understand things that most
+00:45:17.200 people
+00:45:18.880 intuitively understand
+00:45:20.960 so i've wondered whether it's possible
+00:45:23.280 that that was in a strange way an
+00:45:25.119 incredible gift to you and and
+00:45:28.240 indirectly to many other people
+00:45:30.560 in as much as
+00:45:33.520 brains you know are plastic and they
+00:45:36.240 they they go where the action is and if
+00:45:39.680 in for some reason the external world
+00:45:41.839 and social cues which so many people
+00:45:43.280 spend so much time and energy and mental
+00:45:45.280 energy obsessing over if that is partly
+00:45:47.359 cut off
+00:45:48.800 isn't it possible that that is partly
+00:45:50.720 what gave you
+00:45:52.240 the ability to
+00:45:54.720 understand inwardly
+00:45:56.640 the world at a much deeper level than
+00:45:58.880 than most people do
+00:46:01.520 i suppose that's certainly possible um
+00:46:05.040 i think this may be some value also from
+00:46:08.240 a technology standpoint because
+00:46:11.040 i found it uh rewarding to spend all
+00:46:13.839 night programming computers
+00:46:15.920 um just by myself and
+00:46:18.480 i think most people
+00:46:20.079 most people don't enjoy typing strange
+00:46:22.319 symbols into a computer by themselves
+00:46:24.000 all night
+00:46:24.960 they think that's
+00:46:26.160 not fun but i thought it was i really
+00:46:28.319 liked it um so so i just programmed all
+00:46:32.000 night by myself and
+00:46:33.599 um i found that to be quite enjoyable
+00:46:37.359 um but but i think that is not uh normal
+00:46:41.440 [Music]
+00:46:43.280 so i mean it does you know i've thought
+00:46:45.839 a lot about
+00:46:48.319 it's a riddle to a lot of people of of
+00:46:50.400 how you've done this how you've
+00:46:51.839 repeatedly innovated in these different
+00:46:53.920 industries and it it does you know every
+00:46:55.920 entrepreneur sees possibility in the
+00:46:58.160 future and then acts to make that real
+00:47:01.440 it it feels to me like you see
+00:47:03.760 possibility just more broadly than
+00:47:06.800 almost anyone and can connect with so
+00:47:08.800 you see scientific possibility based on
+00:47:11.839 a deep understanding of physics and
+00:47:14.000 knowing what the fundamental equations
+00:47:15.359 are
+00:47:16.240 what the technologies are that are based
+00:47:18.319 on that science and where they could go
+00:47:19.760 you see technological possibility and
+00:47:21.760 then really unusually you combine that
+00:47:24.160 with
+00:47:25.440 economic possibility of like what it
+00:47:27.760 actually would cost is there a system
+00:47:29.920 you can imagine where you could
+00:47:31.119 affordably make that thing and that that
+00:47:35.839 sometimes you then get conviction that
+00:47:37.520 there is an opportunity here put those
+00:47:39.520 pieces together and you could do
+00:47:41.520 something
+00:47:42.559 amazing
+00:47:44.480 yeah i think one aspect of whatever
+00:47:46.640 condition i had um was i was just
+00:47:49.280 absolutely obsessed with truth
+00:47:51.760 just obsessed with truth
+00:47:55.440 and and so the obsession with truth is
+00:47:58.559 why i studied physics
+00:48:01.119 because physics attempts to understand
+00:48:03.440 the
+00:48:04.480 the truth the truth of the universe
+00:48:06.480 physics just it's just what are the
+00:48:09.200 provable truths of the universe
+00:48:11.520 um
+00:48:12.640 and and true and truths that have
+00:48:14.079 predictive power
+00:48:15.680 um
+00:48:16.559 so for me physics was sort of a very
+00:48:18.319 natural thing to study
+00:48:21.359 nobody made me study it it was
+00:48:23.119 intrinsically interesting
+00:48:24.960 to understand the nature of the universe
+00:48:27.359 and then computer science
+00:48:29.920 or information theory
+00:48:32.559 also to just i understand uh logic and
+00:48:35.680 and
+00:48:36.559 uh
+00:48:37.760 you know there's an also there's an
+00:48:38.800 argument that
+00:48:40.400 you know that you the that information
+00:48:42.319 theory is actually operating
+00:48:44.240 at a more fundamental level more
+00:48:45.760 fundamental level than than even physics
+00:48:48.319 um
+00:48:49.200 so
+00:48:50.720 uh just yeah um
+00:48:53.440 the physics and information theory uh
+00:48:55.760 were really interesting to me so when
+00:48:58.559 you say truth i mean it's it's not
+00:49:00.960 like some people
+00:49:02.960 so it's what you're talking about is the
+00:49:04.559 truth of the universe like the
+00:49:05.760 fundamental truths that drive the
+00:49:07.119 universe it's like a deep curiosity
+00:49:09.359 about what this universe is why we're
+00:49:11.599 here simulation why not you know we
+00:49:14.240 don't have time to go into that but i
+00:49:15.359 mean it's you're just deeply curious
+00:49:17.599 about
+00:49:19.280 what this is for what this is this whole
+00:49:21.520 thing yes i mean i think the why the why
+00:49:24.240 of things is very important
+00:49:26.079 um
+00:49:26.880 i i actually
+00:49:28.240 uh when i was a i don't know
+00:49:31.440 so young teens
+00:49:33.119 uh i i got quite depressed about the
+00:49:35.599 meaning of life
+00:49:36.880 um and i was trying to sort of
+00:49:38.559 understand the meaning of life looking
+00:49:40.400 at reading religious texts and and
+00:49:44.240 reading books on philosophy
+00:49:46.160 and i got into the german philosophers
+00:49:47.839 which is definitely not wise if you're a
+00:49:49.440 young teenager i have to say
+00:49:52.319 can be ripped out but dark
+00:49:54.559 so
+00:49:55.960 [Music]
+00:49:57.520 much better at as an adult i um and and
+00:50:00.400 then actually i ended up reading um the
+00:50:02.800 hitchhiker's guide to the galaxy
+00:50:05.839 which is actually a book on philosophy
+00:50:08.559 just sort of disguised as a silly humor
+00:50:11.280 book but but actually the book it's
+00:50:13.599 actually a
+00:50:15.040 philosophy book
+00:50:16.400 and
+00:50:17.280 uh adams uh makes the point that
+00:50:20.480 it's actually the
+00:50:21.839 the question that is harder than the
+00:50:23.599 answer
+00:50:24.800 um you know this sort of makes a joke
+00:50:26.720 that the answer was 42. um that number
+00:50:28.960 does pop up a lot um
+00:50:31.119 and 420 is just 10 14 10 10 times 10
+00:50:34.480 times more significant than 42. okay
+00:50:38.160 you know there's um you can make a
+00:50:40.640 triangle with 42 or 42 degrees and two
+00:50:43.440 69s
+00:50:44.960 um
+00:50:46.480 so there's no such thing as a perfect
+00:50:48.160 triangle or is there
+00:50:52.839 but even more important than the answer
+00:50:56.319 is the questions that was the whole
+00:50:58.079 theme of that book i mean is that yeah
+00:50:59.599 basically how you see meaning then it's
+00:51:01.440 the pursuit of questions yeah so i have
+00:51:04.000 a sort of
+00:51:05.119 you know a proposal for a world view or
+00:51:07.440 a motivate a motivating philosophy which
+00:51:10.240 is to understand
+00:51:12.079 what questions to ask about the answer
+00:51:14.640 that is the universe and the to agree
+00:51:17.599 that we expand the scope and scale of
+00:51:19.119 consciousness
+00:51:20.319 uh
+00:51:21.200 biological and digital
+00:51:22.960 uh we will be better able to to uh ask
+00:51:26.000 these
+00:51:26.960 these questions to frame these questions
+00:51:28.720 and to understand
+00:51:30.400 why we're here how we got here what
+00:51:32.720 what the heck is going on
+00:51:34.400 and so that that is my driving
+00:51:36.400 philosophy is to expand the scope and
+00:51:38.240 scale of consciousness that we may
+00:51:39.520 better understand the nature of the
+00:51:40.720 universe
+00:51:42.800 elon one of the things that was most
+00:51:44.800 touching last week
+00:51:47.280 was uh was seeing you hang out with your
+00:51:49.119 kids um here's if i may
+00:51:52.480 um
+00:51:53.280 it looks vaguely like a ventriloquist
+00:51:54.880 dummy there
+00:51:55.890 [Laughter]
+00:51:57.599 i mean how do you know that's real
+00:52:00.800 um
+00:52:01.680 so that's x and and you know you're it
+00:52:04.160 was just a delight seeing seeing you
+00:52:06.000 hang out with him and
+00:52:08.480 what
+00:52:09.760 what what what's his future
+00:52:12.559 going to be i mean i don't mean him
+00:52:14.559 personally but the world he's going to
+00:52:16.400 grow up in
+00:52:17.520 what future do you believe he will grow
+00:52:19.280 up in
+00:52:22.559 well i mean a very digital future
+00:52:26.240 um
+00:52:32.480 a very a different world than i grew up
+00:52:34.079 in that's for sure
+00:52:35.839 um
+00:52:37.280 but i think we want to obviously do our
+00:52:38.960 absolute best to ensure that the future
+00:52:40.640 is good uh for everyone's children
+00:52:43.440 um and
+00:52:44.960 and that
+00:52:46.800 you know that the future is something
+00:52:48.160 that that you can look forward to and
+00:52:49.599 not feel sad about
+00:52:51.280 um
+00:52:52.160 you know you want to get up in the
+00:52:53.119 morning and be be excited about the
+00:52:54.800 future and we should fight for the
+00:52:56.400 things that make us excited about the
+00:52:58.800 future you know the future cannot it
+00:53:01.520 cannot just be that one
+00:53:03.760 miserable thing after another solving
+00:53:05.359 one sad problem after another there got
+00:53:07.200 to be things that get you excited like
+00:53:09.680 you're like you want to live
+00:53:12.319 these things are very important
+00:53:15.040 you should have more of it
+00:53:17.200 and it's not as if it's a done deal like
+00:53:19.040 it's all it's all to play for like the
+00:53:20.880 future may be
+00:53:23.040 horrible still there are scenarios where
+00:53:24.640 it is horrible but you you see a pathway
+00:53:28.800 to an exciting future both on earth and
+00:53:32.480 on mars and
+00:53:34.000 in our minds through artificial
+00:53:35.280 intelligence and so forth i mean in your
+00:53:37.359 in your heart of hearts do you really
+00:53:39.359 believe that you are helping deliver
+00:53:41.839 that exciting
+00:53:43.440 future
+00:53:44.559 for
+00:53:45.440 ex and for
+00:53:47.359 others
+00:53:48.400 i'm trying my hardest to do so
+00:53:53.760 i
+00:53:54.559 you know
+00:53:56.880 i love humanity and i think
+00:53:58.800 that
+00:53:59.920 we should fight for a good future for
+00:54:01.520 humanity and i think we should be
+00:54:02.559 optimistic about the future and fight to
+00:54:04.640 make that optimistic optimistic future
+00:54:06.559 happen
+00:54:09.940 [Music]
+00:54:13.839 i think that's that's the perfect place
+00:54:15.599 to close this thank you so much for
+00:54:16.960 spending time coming here and for the
+00:54:19.200 work that you're doing and good luck
+00:54:21.200 with finding a wise course through on
+00:54:23.280 twitter and everything else all right
+00:54:26.800 thank you
+00:54:29.839 hey guys
+00:54:34.340 [Music]

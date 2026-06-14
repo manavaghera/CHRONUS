@@ -1,0 +1,1190 @@
+# tactiq.io free youtube transcript
+# No title found
+# https://www.youtube.com/watch/VGPlvmMjPtE
+
+00:00:00.990 [Music]
+00:02:11.360 Heat.
+00:02:30.250 [Music] Hey, heat. Hey, heat.
+00:03:22.800 [Music]
+00:03:28.620 [Music]
+00:03:38.450 [Music]
+00:03:56.940 [Music]
+00:04:25.900 [Music]
+00:04:43.720 [Music]
+00:05:00.380 [Music]
+00:05:25.080 [Music]
+00:05:36.990 [Music]
+00:05:44.440 [Music]
+00:06:06.750 [Music]
+00:06:22.390 [Music]
+00:06:32.280 [Music]
+00:06:38.479 Hey,
+00:06:44.880 heat. Hey.
+00:07:03.440 Heat. Heat.
+00:07:28.960 Heat. Heat.
+00:07:48.000 Heat. Heat.
+00:07:59.520 Heat.
+00:08:13.120 Hey, Heat.
+00:09:50.710 [Music]
+00:10:10.320 Can I have your attention please? We are just about ready to start our program. Please find your seats. Thank you.
+00:10:46.970 [Music]
+00:11:04.150 [Music]
+00:12:03.270 [Music]
+00:12:13.950 [Music]
+00:12:20.310 [Music]
+00:12:29.580 [Music]
+00:13:19.200 Nat
+00:13:42.720 down.
+00:13:52.880 Heat [Music]
+00:14:21.680 up Woohoo!
+00:14:36.430 [Music]
+00:14:44.130 [Music]
+00:14:50.240 Woo!
+00:14:59.900 [Music]
+00:15:09.360 [Music]
+00:15:20.640 [Applause]
+00:15:28.560 Welcome back to Texas, the home of Tesla.
+00:15:37.040 My name is Brandon Hart. I'm the general counsel and corporate secretary and welcome to your 2025 annual shareholder
+00:15:44.320 meeting.
+00:15:51.360 Similar to last year, this meeting will have two parts. We'll go through the 14 ballot items and the second part, Elon
+00:15:58.720 Musk. [Applause]
+00:16:04.000 Today, we will discuss business outlook and may make other forward-looking statements. Such statements or
+00:16:09.279 predictions are based on current expectations. actual events or results may differ materially due to a number of
+00:16:16.079 risks and uncertainties that are disclosed in our SEC filings. Such forward-looking statements represent our
+00:16:22.000 views as of today and should not be relied on thereafter. We make no obligation to update them after today.
+00:16:30.240 Would like to welcome members of the Tesla team here, members of Price Waterhouse Coopers, and members of our
+00:16:36.320 board. Before we get started, why don't we hear from Robin, our board chair.
+00:16:48.079 Well, good afternoon everyone. It's wonderful um to welcome you all to the
+00:16:53.440 2025 annual shareholder meeting. I apologize for the my voice. I've been speaking to investors for the last
+00:17:00.079 couple of weeks non-stop, I think. So, we here at Tesla could not continue to
+00:17:06.880 do the impossible without you, our shareholders. Our ongoing engagement
+00:17:12.959 with you all makes what we do possible. And I'm thrilled at how many of you made
+00:17:19.119 your voices heard this year as we aspire to create more value than any other
+00:17:26.880 company in history. Yes. [Applause]
+00:17:35.919 Without your support, we could not have reached the heights that we've already
+00:17:41.840 demonstrated over our relatively short yet storied history. As we further
+00:17:48.559 expand our ambition in our quest to build a world of sustainable abundance,
+00:17:55.039 we are excited to continue this partnership. Tesla is at an inflection point. I think
+00:18:01.760 I've said that 3,000 times over the last few weeks. And this last year has been a
+00:18:08.160 critical one in our history. I want to take some time to review the
+00:18:13.280 acknowledgements and achievements by the Tesla team of which I and my fellow
+00:18:19.760 directors are incredibly proud of. We continue to redefine the automotive
+00:18:26.000 industry across production, customer experience, and ownership. Model Y was
+00:18:32.720 once again the bestselling vehicle worldwide of any vehicle in 2024, and
+00:18:40.559 with the new Model Y released earlier this year, it's now better than ever. Our energy business continues to reach
+00:18:48.400 new heights and we deployed 31 gigawatt hours in 2024,
+00:18:54.880 more than double what we achieved in 2023. Fabulous. I love the energy business.
+00:19:04.480 And we are actively investing in both of these businesses as we aim to maximize
+00:19:10.480 their installed base of production globally. The installed base serves as the
+00:19:18.400 platform for our future value. And that creation over time Tesla will achieve
+00:19:25.280 through services such as robo taxi and virtual power plants powered by our
+00:19:31.120 realworld AI. In 2024,
+00:19:36.240 through the use of our products, Tesla consumers avoided releasing nearly 32
+00:19:43.520 million metric tons of greenhouse gas emissions. And this is a 70% increase
+00:19:50.640 year-over-year. Our ability to avoid emissions will only accelerate from here
+00:19:57.600 as we displace larger volumes of fossil fuel-based alternatives and increase the
+00:20:04.880 utilization of our products through AI. But emission avoidance is is not only
+00:20:11.840 the thing that we focus on here at Tesla. Improving safety has been
+00:20:17.600 paramount to our mission since day one. Our vehicles consistently achieve the
+00:20:23.200 highest safety standards uh when tested across the world and that safety is
+00:20:29.840 increasingly enhanced with autopilot technology. In 2024, our global fleet of
+00:20:36.880 vehicles experienced one crash after driving more than 6.8 million miles.
+00:20:44.960 That's amazing. 6.8 million miles.
+00:20:52.320 And to put that in context, that is 10 times better or safer than the average
+00:20:59.120 driver in the US. 10 times better. And in 2024, uh, and is nearly double the safety
+00:21:06.400 performance of our autopilot technology in 2018. With many enhancements we expect to make
+00:21:13.760 from here, we believe our autonomy technology will improve this performance by orders of magnitude.
+00:21:21.600 Sustainability extends beyond the impact of product use. The Tesla team continues
+00:21:27.840 to focus meticulously uh evaluating each step on the product
+00:21:33.440 journey from raw material extraction to a intermediate processing,
+00:21:39.200 manufacturing, delivery, product use and the end of life. looking all the way
+00:21:46.400 through to making sure that we uh reduce our resource impact and the resource use
+00:21:54.000 and bringing uh that to life across the entire sorry the entire sustainable and
+00:22:01.280 closed loop economy. For more details on what we do each and
+00:22:07.280 every day, I encourage you all to read the impact report. It is an amazing document and it continues to improve
+00:22:14.159 over time in terms of what the team is doing and we are also laser focused on
+00:22:20.480 ensuring the resulting prosperity of our efforts can be shared by all. This
+00:22:27.280 applies to our employees, our customers and even those who have yet to enjoy one
+00:22:33.760 of our products or engage with our company in any meaningful way. Tesla
+00:22:40.400 spends countless hours ensuring that we procure the most uh responsibly sourced
+00:22:46.960 and produced inputs. we maximize the safety of our operations and that all
+00:22:53.760 Tesla employees can benefit from the appreciation of our equity through our
+00:22:59.679 incentive programs and that we continue to bring down the cost of our fabulous
+00:23:04.960 products across the range, increasing that accessibility for all.
+00:23:11.200 At the end of the day, we here at Tesla are working tirelessly to make the world
+00:23:17.120 a better place for all through innovation and grit.
+00:23:22.400 To our amazing employees, thank you for all of your hard work in achieving our
+00:23:27.840 mission. You are the beating heart of Tesla and we cannot continue to deliver
+00:23:33.760 without you. to the management team who never get a shout out. Thank you for
+00:23:39.679 your huge efforts.
+00:23:47.039 To our shareholders, all of you in the room and on the webcast globally, once
+00:23:52.400 again, thank you for your support. Please know that we are listening to you
+00:23:58.000 and are here to represent your interests. You are the owners of the
+00:24:03.120 company and your voices, your perspectives and your input are critical
+00:24:09.600 to what we do here at Tesla each and every day. My fellow directors and I
+00:24:15.679 serve as uh serve you as your fiduciaries and oversee Tesla's mission,
+00:24:22.000 purpose and strategy. And these responsibilities are in in our minds
+00:24:27.039 every day. I would also like to thank sorry to take this opportunity to thank
+00:24:32.799 my fellow directors for their diligence, their dedication and their tireless
+00:24:38.080 efforts. Changing the world for the better uh is always accompanied by um uh
+00:24:46.640 uh difficulties and what I can say is that you can't do it by checking the
+00:24:51.760 boxes and and just reviewing PowerPoint presentations. Thank you for rolling up
+00:24:57.600 your sleeves, each and every one of our directors, the hard work that you do, lending your unique talents and
+00:25:04.240 delivering to our shareholders. Our Thank you. Thank you.
+00:25:14.240 Our our accomplishments have been hard-earned and these last several years
+00:25:19.760 have not been without their challenges. We still have much to accomplish and I
+00:25:25.120 believe that we have the right team, the right technologies, the right physical infrastructure to create a world that
+00:25:32.799 we've only just begun to imagine. The future is bright. Thank you. Now I'm
+00:25:39.200 going to hand it back to Brandon. Thank you very much. Thank you.
+00:25:50.240 Thank you, Robin. I will now call the meeting to order. It is 3:25 p.m. and I
+00:25:55.679 declare that the polls are now open. We have already received over the past few weeks voting proxies from our
+00:26:01.360 shareholders. However, if you wish to vote your shares now, you may do so on the online portal or with the ballot
+00:26:06.720 boxes you received at the front. Tesla has appointed Tony Cario, a me member of
+00:26:12.720 the Cario group to serve as our inspector of elections. In addition, Broadridge Financial Solutions has has
+00:26:20.000 certified that starting on September 17, 2025, the proxy materials or notice of
+00:26:26.080 internet availability of the materials were sent out or mailed to shareholders
+00:26:32.080 of record as of September 15, 2025. We have a majority of the outstanding
+00:26:38.480 shares represented at the meeting. So, I declare that a quorum is present. We now
+00:26:43.520 will proceed with the meeting. The items of the agenda are as follows. There are six Tesla proposals. The election of our
+00:26:51.440 three class three directors, Ira, Joe, and Kathleen to serve a term of three
+00:26:57.120 years until their successors are duly qualified. Number two, to approve seon
+00:27:02.720 pay on a non-binding advisory basis. Three, to ratify the appointment of
+00:27:08.320 Price Waterhouse Coopers LLP as our independent registered public accounting
+00:27:13.360 firm for fiscal year 2025. Four, to adopt amendments to our
+00:27:18.480 organizational documents to eliminate certain super majority voting requirements.
+00:27:24.240 Five, to amend and restate the 2019 equity incentive plan. And number six,
+00:27:29.840 the 2025 CEO performance plan to Elon Musk. The
+00:27:34.960 [Applause]
+00:27:40.720 The Tesla board has recommended that all our shareholders vote for each of the director nominees and for the Tesla
+00:27:46.960 proposals except for the one on supermajority voting where no recommendation has been made. We also
+00:27:52.960 have eight shareholder proposals that are described in our proxy statement. I'd like to remind the shareholders that
+00:27:59.600 Tesla's board has prepared a statement of opposition on each of them except for the one regarding XAI. Those statements
+00:28:06.399 are in our proxy. Now, let's go through the shareholder proposals. The first one
+00:28:11.919 is an advisory vote regarding board authorization of investment in XAI. Our
+00:28:17.039 board has not made a recommendation on this. The shareholder proposal is proposed by Mr. Steven Hawk, who I
+00:28:23.840 believe is here to present the proposal. Mr. Hawk.
+00:28:28.970 [Applause] Thank you so much. Good afternoon,
+00:28:34.880 ladies and gentlemen, fellow shareholders, Elon and esteemed board members. Thank you for this historic
+00:28:41.120 opportunity. I am Steven Hawk, shareholder since 2012. Is truly my honor to present shareholder proposal
+00:28:48.240 number seven. It is uh the proposal is simple. I urge the board to exercise its discretion and
+00:28:55.760 authorize a strategic investment in XAI in some meaningful way sooner rather
+00:29:01.200 than later. This isn't just capital. It's about formalizing Tesla's role as a
+00:29:06.240 leader in autonomous intelligence. Turning AI into our new book, not just a
+00:29:11.679 new chapter. Tesla has always been an AI company, revolutionizing transportation,
+00:29:17.039 energy, and robotics through FSD and Optimus. But as we approach the
+00:29:22.399 singularity during this tsunami of AI outsourcing our brain to external
+00:29:27.679 providers, risks, misaligned goals, data vulnerabilities and loss innovation. XAI
+00:29:34.960 founded by Elon is different. It is m maximally truth seeeking, curiositydriven and aligned with
+00:29:42.399 humanity's best interests. Like Tesla's mission for sustainable abundance, XAI
+00:29:48.399 was seated with Tesla talent enabling birectional flow for highest caliber
+00:29:53.440 staff attraction and retention. Integrating Grock models within our vast
+00:29:58.559 real world data would further supercharge FSD for safer vehicles, empower optimists to navigate complex
+00:30:05.600 worlds and to optimize energy grids. Think vertical integration of Tesla as a
+00:30:11.200 neural link of AI platforms. Controlling the coming Optimus Army with prudent
+00:30:16.880 stewardship. Financially, it's a no-brainer. XEI's explosive growth could yield massive returns, strengthening our
+00:30:24.159 balance sheet amid EV pressures with Elon stewardship the best for shephering
+00:30:29.600 AI safely. Conflicts are minimal. Board oversight ensures fairness. Xi needs
+00:30:35.039 Tesla more than vice versa. But together we foster human happiness, consciousness, and meaning beyond work,
+00:30:42.240 shifting purpose from labor to truth seeeking in a world of abundance. Shareholders, we can't be spectators.
+00:30:48.960 Tesla must actively participate. Let's not outsource our destiny, but rather own it and maintain power, control, and
+00:30:55.760 safety. I call on the board to formalize this investment relationship and on you to support it. Thank you to Elon and
+00:31:01.840 special thanks to Tesla, Bloomer, Mama, Alexander Merch,
+00:31:07.300 [Applause]
+00:31:14.320 Thank you, Mr. Hawk. The second shareholder proposal is an advisory vote regarding adopting targets and reporting
+00:31:20.080 on certain sustainability metrics with our senior executive compensation plans.
+00:31:25.200 Our board has recommended that our shareholders vote against this proposal as explained in our proxy. The
+00:31:30.799 shareholder proposals proposed by Tulipshare Capital LLC whose representative Mr. A Rouge has prepared
+00:31:37.840 a pre-recorded message. Hello shareholders. I am Antoan Aruj CEO
+00:31:44.559 of the impact fund Chulipshare speaking in support of proposal 8. Our proposal asked Tesla's board to take a simple but
+00:31:51.519 meaningful step link a portion of the executive compensation to measurable sustainability performance. This last
+00:31:58.159 success has always been built on bold, measurable goals, production target, market cap milestone and innovation. But
+00:32:05.279 as we enter a new era of scrutiny around climate, labor and governance issues,
+00:32:10.799 it's time that part of those milestones also reflect how sustainable that success is achieved. Proposal 8 is not
+00:32:17.279 asking to replace all the financial goals. We're asking to strengthen them. Imagine if one or two trenches of the
+00:32:24.480 future compensation were tied to tangible outcome such as reduction in carbon intensity per vehicle, verified
+00:32:31.519 improvement in worker safety or supply chain transparency. These are metrics that protect long-term shareholder
+00:32:38.000 value, reduce legal and reputational risk, and ensure Tesla's leadership is rewarded not only for scale, but for
+00:32:44.960 sustainable impact. Tesla's mission is to accelerate the world's transition. Linking compensation to sustainability
+00:32:51.120 metrics ensure that this mission lives at the very core of the leadership decision-making. This is how Tesla can
+00:32:57.440 continue to lead not just in innovation but also in responsibility. We urge shareholder to vote for this proposal
+00:33:05.279 and support a compensation framework that drives both performance and purpose. Thank you.
+00:33:13.120 Thank you, Mr. ARouge. As a reminder, the board's response is set forth in the proxy. Our third shareholder proposal is
+00:33:19.360 an advisory vote regarding an audit of certain labor practices. The board has recommended against that as set forth in
+00:33:25.840 our proxy. The shareholder proposal is proposed by the National Center for Public Policy Research whose
+00:33:31.600 representative Stefan Padfield has prepared a pre-recorded message.
+00:33:38.480 My name is Stfan Padfield and I am the executive director of the Free Enterprise Project. The free enterprise
+00:33:45.120 project is part of the National Center for Public Policy Research, which is the proponent of proposal 9, requesting that
+00:33:52.240 Tesla conduct and report on a child labor audit. Let me begin by emphasizing
+00:33:58.159 that we are strong supporters of free enterprise innovation and shareholder value. We recognize Tesla's
+00:34:05.039 extraordinary contributions to the electric vehicle market. Our proposal is
+00:34:10.399 not anti-Tesla. It is pro- transparency and pro-shareholder.
+00:34:15.599 Proposal 9 asks for something very simple and reasonable, a verified accounting of whether and to what extent
+00:34:22.480 child labor is implicated in Tesla's supply chain. Tesla's opposition
+00:34:27.520 statement relies on policies, but policies are not the same as proof. A
+00:34:32.960 quote unquote zero tolerance policy is commendable, but without independent
+00:34:38.000 verification, it is only a promise, not evidence. The US Department of Labor continues to
+00:34:44.159 list cobalt mining in the Democratic Republic of Congo among the sectors with
+00:34:49.520 the worst forms of child labor. A 2023 white paper on the financial and
+00:34:54.960 material impacts of child labor authored by Hace identifies Tesla as a case study
+00:35:01.200 in the ongoing risks that cobalt and other mineral sourcing pose to automakers. And while Tesla's own 2024
+00:35:08.800 impact report notes that the company invested more human and legal resources than ever before to combat forced and
+00:35:16.000 child labor, it provides no metrics showing whether those investments are working. Shareholders deserve data, not
+00:35:23.440 just asurances. We are asking Tesla to back its admirable words with verifiable
+00:35:29.119 results through a third-party audit or a transparent report. This is not just a
+00:35:34.480 moral question. It's a governance and riskmanagement issue. Reputational, legal, and operational risks can
+00:35:41.520 directly affect shareholder value. So too can the risk that enthusiasm for
+00:35:46.800 electric vehicles undermines proper accounting of the often hidden cost that child labor may be embedded deep in EV
+00:35:54.400 supply chains. If Tesla is truly the industry leader it claims to be, it should also lead in transparency. We all
+00:36:02.240 know that proxy vote counts can be distorted by a plethora of conflicts of interest. Accordingly, we urge Tesla's
+00:36:09.280 board to see this proposal not as an attack, but as an opportunity to properly account for the costs and
+00:36:15.520 benefits of Tesla's mission, regardless of the final vote. If you have not done so already, please vote for proposal 9.
+00:36:24.000 Thank you. Thank you, Mr. Padfield. As a reminder, the board's response is set forth in the
+00:36:30.160 proxy. Our fourth shareholder proposal is a vote to amend the bylaws to repeal
+00:36:36.079 a derivative suit ownership threshold. Our board has recommended against as set forth in the proxy. The shareholder
+00:36:43.040 proposals proposed by the comproller of the state of New York as the lead filer whose representative Thomas D. Napolei
+00:36:51.040 has recorded a pre has proposed a pre pre-recorded message.
+00:36:57.200 This is Thomas Denapoli, New York State Controller. As trustee of the New York State Common Retirement Fund, owner of
+00:37:04.320 more than 3.3 million shares, we urge shareholders of Tesla to vote for
+00:37:10.800 proposal 10 to amend the bylaws to repeal the 3% derivative suit ownership
+00:37:16.240 threshold. We filed a proposal along with New York City Controller Brad Lander to restore one of the most
+00:37:22.880 fundamental investor rights, the right of shareholders to hold directors and officers legally accountable when they
+00:37:30.480 breach their fiduciary duties. When Tesla asked investors last year to
+00:37:35.599 approve its move from Delaware to Texas, the board assured us that shareholder protections were similar in both states.
+00:37:42.880 Yet within months, Tesla's board engaged in a bait and switch scheme and immediately turned its back on its
+00:37:49.359 investors by amending its bylaws to reduce shareholder rights as soon as Texas offered an opportunity to do so.
+00:37:57.119 The new bylaw allowed Tesla to block nearly every investor from bringing a derivative suit unless they hold 3% of
+00:38:04.160 the company's stock, currently about $30 billion in Tesla shares. That threshold
+00:38:10.880 leaves only Elon Musk and a handful of giant Wall Street funds with any legal
+00:38:16.400 standing to act on their own. It effectively makes the board immune from
+00:38:22.240 accountability. Tesla claims this rule is meant to discourage frivolous lawsuits, but courts already have tools
+00:38:29.680 to dismiss meritless cases. This bylaw doesn't stop abuse, it stops proper
+00:38:35.359 oversight, and it tells shareholders that the board no longer wants to be answerable to them. Our proposal simply
+00:38:43.119 seeks to repeal that bylaw and restore accountability. It ensures that if directors violate their duties, all
+00:38:50.160 investors still have a path to protect the company's long-term value. Unfortunately, this attack on
+00:38:56.880 shareholder rights is part of a larger pattern at Tesla. We see a board that lacks true independence. The board has
+00:39:04.000 allowed our CEO to divide his attention among multiple outside ventures and then offered a pay proposal that could hand
+00:39:10.720 him a trillion dollar windfall and even more unchecked power. These are not
+00:39:16.960 isolated issues. They all stem from the same problem. A board that refuses to
+00:39:22.720 act as an independent check on management. Tesla has changed the world through innovation. But no company, no
+00:39:30.000 matter how visionary, can thrive without accountability. Strong governance protects investors and
+00:39:36.720 strengthens companies over time. I urge all shareholders to send a clear message
+00:39:42.640 that accountability, independence, and respect for shareholders are essential to Tesla's future success. Thank you for
+00:39:50.560 your time and consideration. Yeah.
+00:39:56.880 Thank you, Mr. Dapoli. Our the board's response is set forth in the proxy. The
+00:40:02.640 fifth shareholder proposal is a vote to amend article 10 of the bylaws. The board has recommended that our
+00:40:08.400 shareholders vote against it as set forth in our proxy. This shareholder proposal is proposed by the treasurer of
+00:40:14.400 the state of Illinois and trustee of the Bright Directions College and Savings Trust as the lead filer whose
+00:40:20.400 representative Michael Far has prepared a pre-recorded message.
+00:40:27.680 Fellow Tesla shareholders and members of the board, my name is Michael Ferris. I serve as treasurer for the state of
+00:40:33.839 Illinois and as trustee of the Illinois College Savings Programs. I'm here to present proposal 11, which asks Tesla to
+00:40:41.920 adopt a simple investor protection. If the board chooses to impose more restrictive requirements for submitting
+00:40:48.880 shareholder proposals as newly permitted under Texas law, those changes must be
+00:40:54.560 ratified by a super majority of shareholders. At its core, this proposal is about
+00:41:00.480 protecting shareholder rights. If the board decides to limit our ability to submit proposals, this amendment ensures
+00:41:08.000 the shareholders have the final say. It helps to ensure that Tesla remains aligned with the will of its investors.
+00:41:14.640 Plain and simple. Now, why is this important? Tesla is navigating a period
+00:41:20.319 of volatility, leadership transitions, intense competition, and heightened scrutiny from regulators and customers.
+00:41:27.839 In times like these, strong governance and active shareholder input can be critical. They serve as competitive
+00:41:35.040 advantages that position Tesla to lead, not just react. This proposal seeks to
+00:41:40.800 implement a reasonable safeguard would reinforce accountability and build trust. The board itself has emphasized
+00:41:48.480 the importance of investor feedback. In the proxy statement, Chair Robin Denholm
+00:41:53.599 and director Kathleen Wilson Thompson wrote, "We are in Texas because it provides a more predictable governance
+00:42:00.160 framework that allows us to hear from you, the people who know Tesla best." If
+00:42:06.319 the board actively seeks to hear from shareholders, it's hard to reconcile that position with their opposition to
+00:42:12.960 this proposal. To reiterate what's at stake, Texas law now allows shareholder submission
+00:42:19.520 thresholds higher than SEC standards, requiring shareholders or groups to hold
+00:42:25.280 3% of voting shares or $1 million in stock to submit a proposal. Compare that
+00:42:32.079 to current SEC rules which allow a shareholder to have holdings as low as 2,000 to $25,000
+00:42:39.200 depending on how long the shareholder has held the stock. If the board chooses to adopt the Texas thresholds, they risk
+00:42:46.480 silencing investors who could drive meaningful governance improvements as well as narrowing the pipeline of ideas.
+00:42:53.920 Note that this proposal does not limit the board's direction to evaluate governance options. It simply ensures
+00:43:00.480 that if the board adopts the Texas shareholder submission thresholds, a supermajority of shareholders must
+00:43:06.560 ratify that decision. That's fair. It's reasonable and fully aligned with the
+00:43:12.079 board's stated commitment to its investors. Again, I encourage my fellow investors to vote for proposal 11 as a
+00:43:20.000 clear step towards protecting our rights as shareholders. Thank you.
+00:43:25.520 Thank you, Mr. Far. As a reminder, the board's responses set forth in the proxy. The sixth shareholder proposal is
+00:43:31.119 an advisory vote to elect each director annually. Our board has recommended against as set forth the reasons in the
+00:43:37.280 proxy. This shareholder proposal is proposed by James McRichie who has prepared a pre-recorded message.
+00:43:48.640 Thank you shareholders. We've presented this proposal before,
+00:43:53.839 2021 and 2024. It won a majority both times, even with
+00:43:59.760 board opposition. But Tesla requires a super majority of shares outstanding. So
+00:44:06.720 those majorities weren't enough. Today, we ask again, join the 90% of S&P 500
+00:44:13.920 companies that elect all directors annually. Declassification means accountability every year, not
+00:44:21.119 every three years. Most institutional investors support this reform. It's the
+00:44:26.640 retail votes we need here today. A Delaware court recently found three
+00:44:31.920 major governance failures at Tesla. The board wasn't independent. The disclosures to shareholders on its pay
+00:44:38.400 plan were misleading. And the board failed to negotiate properly on our behalf. Declassifying the board is part
+00:44:46.160 of the cure. It ensures shareholders can hold directors accountable each year or
+00:44:51.760 nominate qualified replacements when needed. Matt Muscardi of FreeFlat Media
+00:44:57.920 calls this one of the most important votes of the year because it could shift Tesla's board from a friends and family
+00:45:05.119 plan to independent professionals with the skills necessary
+00:45:10.240 for Tesla's next chapter. We're also endorsed by Nell Mow,
+00:45:15.520 co-founder of Value Edge Advisors and ISS, one of the most respected proxy
+00:45:21.839 advisors. John Chaved's related proposal number 13
+00:45:27.280 calls for simple majority voting. We'll need that reform, too, for this proposal to succeed.
+00:45:34.079 Tesla's Musk premium, once a source of strength, is fading along with his
+00:45:40.400 global reputation. Remember, Tesla is his only publicly traded company. It's
+00:45:46.800 the liquid piggy bank that fuels his other ventures. Yes, Elon Musk is
+00:45:52.640 brilliant, but no company should depend on a single personality.
+00:45:58.240 Either he stays long enough to keep using your capital elsewhere or he moves
+00:46:03.440 on when the tapped runs dry. Either way, shareholders must prepare for Tesla's
+00:46:10.079 future. a democratic professional company led by a capable independent
+00:46:15.599 board. Let's build Tesla to attract customers, employees, and investors who
+00:46:22.079 all contribute to its innovations. Vote for proposal number four, declassify the board. Vote four,
+00:46:29.280 proposal number 13, eliminate supermajority requirements. Together,
+00:46:34.640 let's restore accountability, independence, and trust at Tesla. Vote now before the polls close. Your vote
+00:46:42.560 can make a real difference in Tesla's future and your future as well. Thank
+00:46:48.079 you. Thank you, Mr. Mc Richie. As a reminder, the board's response was contained in the proxy. Our seventh shareholder
+00:46:54.720 proposal is an advisory vote regarding a proposal that 54% at last year's meeting. Our board has recommended
+00:47:01.040 against for the reasons set forth in the proxy. This shareholder proposal is proposed by John Chaveetin who is on the
+00:47:07.839 line to present this proposal. Mr. Chaveetin.
+00:47:16.880 Hello. This is John Chaveetan. Proposal 13. This proposal is about Tesla being
+00:47:22.560 governed by a democratic majority vote standard.
+00:47:27.760 This proposal 13 is proud to be on the same topic as the Tesla proposal six.
+00:47:34.480 Ser requests that Tesla take the steps necessary so that each voting requirement in the Tesla charter and
+00:47:40.800 bylaws that calls for a greater than simple majority vote be replaced by a
+00:47:45.920 democratic requirement for a majority of the votes cast for and against such proposals or a simple majority vote
+00:47:53.200 standard. is important to vote for both proposal 13 and proposal six which are on the
+00:48:01.119 very same topic. In fact, it's more important to vote for proposal six because proposal six is a binding
+00:48:07.520 proposal and this proposal 13 is an advisory proposal. It is important to
+00:48:13.040 vote for proposal 13 because proposal 13 is a backup proposal in case the Tesla
+00:48:18.960 proposal six does not get enough votes. This proposal 13 has one advantage over
+00:48:24.720 proposal six in that it requires less votes to be approved by shareholders than the Tesla proposal six since this
+00:48:32.640 proposal 13 is an advisory proposal. But it's still important to vote for both
+00:48:37.839 proposals. Adoption of proposal six will pave the way for annual election of each
+00:48:43.119 Tesla director sooner than this proposal 13. annual election of each Tesla
+00:48:49.200 director will tend to keep Tesla directors away from their current status as being lap dog enablers for Mr. Musk
+00:48:57.280 and Mr. Mus outrageous executive pay and Mr. Mus outrageous distractions from
+00:49:03.440 Tesla. Please vote yes for Tesla being governed by a Democratic majority vote
+00:49:09.280 standard proposal 13 and vote for the Tesla proposal six on the same topic.
+00:49:16.480 Thank you, Mr. Chaveetin. As a reminder, the board's responses set forth in the proxy. Our eighth and final shareholder
+00:49:22.880 proposal is an advisory vote to seek shareholder approval before adopting certain bylaw amendments pursuant to
+00:49:29.119 Texas law. The board has opposed it for the reasons set forth in the proxy. This
+00:49:34.319 shareholder proposal is proposed by Eric and Emily Johnson and Bruce Bryce Mathan as co-filers whose representative Bruce
+00:49:41.359 Abear from Newground Social Investment has prepared a pre-recorded message.
+00:49:47.680 Good afternoon. I'm Bruce Herbert of Newground Social Investment in Seattle and I stand to move proposal number 14,
+00:49:54.720 a simple request that Tesla hold a vote before adopting any bylaw that would restrict the ability to file a
+00:50:00.559 shareholder proposal. Here's why this matters. Texas recently passed a law
+00:50:06.079 that allows companies to set skyhigh barriers to shareholder participation
+00:50:11.280 instead of the SEC's current one-year ownership threshold of $25,000.
+00:50:16.640 These Texas rules would require owning $1 million of stock or 3% of the
+00:50:22.160 company. In Tesla's case, roughly $30 billion before one could file a
+00:50:27.359 proposal. And Tesla could enact this without a shareholder vote. simply by
+00:50:32.400 issuing a notice. This is not shareholder democracy. It's silencing shareholders like nearly every one of us
+00:50:39.359 in this room. Whether you are an individual, retiree, or institution, the
+00:50:44.800 backers of such thresholds presume you must be ultra rich in order to have a good idea, which on its face is a
+00:50:51.520 baseless and undemocratic proposition. The shareholder proposal process serves
+00:50:56.640 both Tesla and the capital markets. This is because stockholders frequently spot
+00:51:01.680 emerging risks long before they hit the headlines. Whether in the form of labor relations, climate impacts, or failures
+00:51:08.480 in governance, shareholders provide an efficient early warning system that
+00:51:13.599 helps companies to stay ahead of the curve. We are a lowcost, high value cornerstone that keeps companies and
+00:51:20.480 capital markets healthy. In closing, corporate democracy is not a nuisance.
+00:51:26.240 It's an important safeguard. It's how shareholders ensure accountability and informed long-term value creation. The
+00:51:34.240 idea here is quite simple. Before limiting shareholder rights, put it to a shareholder vote. Therefore, to keep
+00:51:41.599 Tesla engaged, accountable, and forward-looking, please vote for proposal number 14. Thank you.
+00:51:48.800 Thank you. Thank you, Mr. Abear. As a reminder, the board's response set forth in the proxy.
+00:51:54.640 Please note now is your final opportunity submitting votes for them to be counted.
+00:52:00.400 I declare that the polls are now closed. Based on the proxies that we have received and the votes submitted at the
+00:52:07.280 meeting, I'd like to announce these results on a preliminary basis.
+00:52:12.720 With respect to the shareholder proposals items 8 through 14, our shareholders have supported the
+00:52:19.200 recommendations on the Tesla board on all of them other than proposal 12.
+00:52:25.760 [Applause]
+00:52:30.800 With respect to proposal 7 regarding XAI, while we have received more votes
+00:52:36.079 in favor than we did in against, there were a significant number of abstensions.
+00:52:41.200 Since this is an advisory vote, the board will examine the next steps in light of this level of shareholder
+00:52:47.280 support. Now, moving on to the Tesla proposals.
+00:52:53.280 First, on the proposal to adopt amendments to our organizational documents to eliminate certain
+00:52:59.760 supermajority voting requirements, our shareholders have not approved.
+00:53:05.680 Second, on the seon pay advisory vote, our shareholders have approved.
+00:53:14.319 Third, on the ratification of the appointment of Price Waterhouse Coopers as our Tesla's independent registered
+00:53:20.319 public accounting firm for the 2025 fiscal year, shareholders have approved.
+00:53:26.800 Fourth, on the election of our three class three directors, Ira, Joe, and
+00:53:31.920 Kathleen, our shareholders have reelected them.
+00:53:44.720 Fifth, on the amended and restated 2019 equity incentive plan, our shareholders
+00:53:50.720 have approved
+00:54:03.920 Sixth and finally on the 2025 CEO performance award to our founder and CEO
+00:54:10.960 Elon Musk with over 75% voting in favor.
+00:54:17.599 Approved.
+00:54:34.960 We love
+00:54:40.720 you.
+00:54:45.980 [Music]
+00:54:51.200 I I declare this meeting is now closed. Elon Musk
+00:55:06.460 [Applause]
+00:55:26.100 [Music] welcome.
+00:55:32.880 [Music] So, uh,
+00:55:41.040 what were [Applause] what were what we're going to
+00:55:51.550 [Applause]
+00:55:59.680 [Applause] [Music]
+00:56:11.040 And those bots are just dancing. There are no wires. Those are actual robots.
+00:56:16.600 [Music] [Applause]
+00:56:25.200 Thanks, guys. Uh first of all, I'd like to just give a heartfelt thanks to uh everyone who supported the the
+00:56:31.440 shareholder of votes. Uh I super appreciate it. Thank you everyone.
+00:56:38.319 Um I'd like to take thank the Tesla board for their immense support. We have a fantastic board, fantastic group of
+00:56:45.200 shareholders. Thank you all. and uh and and what we're about to
+00:56:52.559 embark upon is not merely a new chapter of the future of Tesla, but a whole new
+00:56:57.839 book and I'm going to talk about that.
+00:57:03.280 So, this this really is uh this really is going to be quite the
+00:57:08.400 story. Um and uh Optimus is a fundamental part of that. The the sheer
+00:57:14.799 scale of Optimus I mean
+00:57:19.839 I'm I'm going to say a bunch of things that probably I shouldn't say, you know, but
+00:57:25.440 um but but that's what keeps it interesting.
+00:57:31.440 I mean, have you have you watched any other annual shareholder meeting? I
+00:57:36.720 mean, honestly, I was like I mean, if you need to go to sleep, sure. I mean, that other shareholder meetings are like
+00:57:43.599 snoozefest. I mean, but ours ours are bangers. I mean, look at this. This is sick.
+00:57:53.040 And we got like the the cyberpunk nightclub here with real robots just standing there and uh milling around and
+00:58:00.799 dancing and um you know around our engineering
+00:58:05.839 headquarters in Palo Alto. Uh the robots just walking around the office 24/7 with no one minding them. they just and then
+00:58:12.319 they go charge themselves and um yeah so the the the scale of of
+00:58:19.520 of Optimus I like I said that's really going to be something else um I think
+00:58:24.960 it's going to be the biggest product of all time by far
+00:58:30.400 yeah so
+00:58:35.599 like bigger than cell phones bigger than anything um I guess a way to think about
+00:58:41.119 about it is that uh every human on Earth is going to want to have their own personal R2-D2 C3PO.
+00:58:50.960 So, who wouldn't? But actually, Optimus will be even better than them, you know, like you
+00:58:56.640 know, R2-D2, it's kind of would beep at you and it's kind of hard to figure out what he's got talking about. Um, you
+00:59:02.799 know, you see C3PO to translate, but uh Optimus is going to be
+00:59:08.000 I like everyone's going to want one. uh I think with in terms of uh industry
+00:59:13.280 providing products and services I think it's probably I don't know three to five
+00:59:18.880 robots in industry for every you know one that's a personal robot. I I I think there could be tens of billions of of
+00:59:26.880 Optimus robots out there. Um, now obviously it's very important we pay
+00:59:31.920 close attention to safety here. Uh, because uh we we do we do want the the
+00:59:37.359 the Star Wars uh movie, not the Jim Cameron movie. Um,
+00:59:44.000 I love Jim Cameron's movies, but you know uh
+00:59:49.520 you know what I mean. So
+00:59:55.440 um yeah and yeah so so we're gonna launch
+01:00:03.599 on uh the the fastest production ramp of of any product of any large complex
+01:00:10.960 manufactured product uh ever. Um, and starting with building a million unit
+01:00:17.599 production line uh in in Fremont. Um, and uh that's that's that's line one.
+01:00:26.400 Um, and then a 10 million unit uh per year production line here on the
+01:00:39.440 I don't know where we're going to put the 100 million unit production line. on Mars.
+01:00:44.960 Maybe on Mars, I don't know. Um but uh but I think it's it's going to literally
+01:00:50.640 get to 100 million a year. Uh maybe even a billion a year. Um and um
+01:00:58.480 you know, people often talk about like eliminating poverty, giving everyone
+01:01:03.680 amazing medical care. Well, there's actually only one way to do that, and that's with the Optimus robot. with with
+01:01:11.599 humanoid robots you can actually give everyone amazing medical care. Uh so
+01:01:19.520 uh in terms of optimist will be more precise optimist will ultimately be
+01:01:24.720 better than the best human surgeon with a level of precision that that isn't possible that that is beyond human. So I
+01:01:33.040 think that's that's a pretty wild concept to say okay if you you know there's always people always talked
+01:01:39.599 about eliminating poverty but actually optimist will actually eliminate poverty. Optimus will actually give
+01:01:46.480 people incredible medical care. [Applause]
+01:01:56.960 So, um I mean and and so you start getting like
+01:02:02.640 sort of some pretty wild sci-fi sort of scenarios uh where
+01:02:09.359 uh and some of these things I say will obviously be taken out of context and used in snippets and you know sent
+01:02:15.680 around but whatever. I was still going to say them, you know, like I think we may we might we may be able to give people a more uh if somebody's committed
+01:02:23.119 crime, a more humane form of uh containment of future crime, which is if
+01:02:29.119 if you if you say like you now get you now get a free optimist and it's just going to follow you around and stop you
+01:02:35.200 from doing crime. But other than that, you get to do anything. Just it's just going to stop
+01:02:42.079 you from comm committing crime. That's that's really it. um you know you don't have to put people in like prisons and
+01:02:48.079 stuff. I think u it's pretty wild to think of the the various of all the possibilities but I think it's it's it's
+01:02:53.839 clear it's clearly the future. Um and um
+01:02:59.680 you know my book recommendation for the maybe the best mostly utopian sci-fi
+01:03:06.079 future are the inbanks books the culture books. So if you're curious like what what do I think the future's probably
+01:03:11.520 like? I think it's probably a bit like that. um or you know um ASMO to some
+01:03:18.319 degree but but but I think it's and Heinland um but uh in banks if if you're like saying
+01:03:25.440 what what what does Elon think the future probably will be like for AI and robots it's kind of banksian um so
+01:03:34.480 um now now and and and things do get kind
+01:03:40.640 of wild from an economic standpoint Um because at a certain point uh with AI
+01:03:48.960 and robotics you can actually increase the global economy by a factor of 10 or
+01:03:54.160 maybe a 100. Um there there's not like an obvious limit. Uh so
+01:04:01.039 um like Optimus is kind of like an infinite money glitch. uh
+01:04:10.000 you know uh and I'm maybe there won't even be money in the future um or or
+01:04:16.559 money but if it might be measured in terms of wattage like how much uh you know power can you bring to bear from an
+01:04:24.079 electrical standpoint. Um so uh I guess what I'm saying is hang on
+01:04:31.039 to your Tesla stock. [Applause]
+01:04:42.480 So, uh, yeah, man, it's pretty wild. Um,
+01:04:47.839 thank you. You're welcome. Um, let's see. I think we got some slides to go through. Um
+01:04:55.599 we say adlib a lot of the stuff but so the the
+01:05:02.720 you know when we started Tesla the the goal was to accelerate the advent of sustainable energy and that is uh that's
+01:05:10.000 what we've done and Tesla has really led the way in with with electric vehicles with battery packs uh with a lot of
+01:05:16.880 solar and uh many other companies have have then followed our lead and done that and electric cars which used to be
+01:05:25.119 uh non-existent are now prevalent. Um and uh and the Model Y for example is
+01:05:31.680 the number one selling car of any kind on earth. [Applause]
+01:05:43.839 Um but obviously now with with AI and robotics uh we need to update our
+01:05:51.039 mission. Um and our mission um I think it's a good it's it's the it's a great
+01:05:56.559 mission which is to achieve sustainable abundance which is it's like because I often ask
+01:06:02.720 people like what is the future that you want? What's the best future you can imagine?
+01:06:09.039 Um you know because we want to try to make that future like make the best future you can imagine. and and I guess
+01:06:15.520 probably the best future is if people uh you know can have whatever they want
+01:06:21.760 from a goods and services standpoint or medical standpoint. Um and but at the
+01:06:27.200 same time we we don't destroy nature and we we keep the rain forests and the the
+01:06:32.400 beautiful national parks and and all the all that stuff. And so that's that's what I mean by sustainable abundance
+01:06:39.119 uh is that people, you know, can have whatever they want um have all the needs met. Uh, but we still keep all of the
+01:06:45.280 natural beauty that we want. [Applause]
+01:06:55.680 I mean, if somebody can think of a better future, I'm all ears. Uh, but I think that's that's probably the best
+01:07:01.359 the best way to go. Um, so yeah. Um,
+01:07:06.480 see, so yeah. Um, as you know, every Tesla is
+01:07:12.480 designed to be autonomous. So, the it's sometimes difficult to explain to
+01:07:18.319 people if they've not, in fact, I'm sure you've all encountered this where you try to tell people that the Tesla can
+01:07:23.760 drive itself and they they think you're crazy or something. Um, I mean,
+01:07:29.200 especially like apart from the Cybert truck, our our cars look pretty normal. Um, I mean, they're good-looking cars,
+01:07:35.280 but they don't look super they look normal. Um,
+01:07:41.119 but I guess uh it's kind of like having a cat or like and and uh the cat's just
+01:07:47.599 sitting. Let's say you've got a cat and it's like just sitting there on the couch and you try to tell people that
+01:07:53.200 the cat uh can actually um it's actually puss and boots and and it and it can actually put on boots and a hat and and
+01:08:00.720 swashbuckle and sing and dance. And people are like, "No way, man. That's a cat."
+01:08:06.319 until the cat does all those things. You're like, damn, what the um so, uh
+01:08:14.640 we've got, you know, millions of Tesla cars out there that are the
+01:08:20.880 kind of like puss and boots. They're they're intelligent, but people don't know that they're intelligent. They look
+01:08:27.279 like normal cars, but actually they're super smart and can drive themselves. So as um I think that's probably the single
+01:08:34.080 biggest thing we need to do is to educate uh potential customers that you
+01:08:39.679 you can either have a car you can either have a cat that's like normal cat or you can have frozen boots and puss and boots is very cool.
+01:08:46.479 Um, so, uh, that's so we these days when
+01:08:52.158 people come to our stores, um, or even people that have the car haven't turned it on, we find and sometimes people have
+01:08:59.120 paid for FSD and they haven't turned it on, we're like, what? You should at least try it once. Um, and so, so now we
+01:09:06.319 like we the sales team, the service team will actually sit with customers and
+01:09:11.520 say, look, let let us show you how it works and how easy it is. And then once they've tried it for even just a few
+01:09:17.759 days, uh they they can't live without it. Um and and and now with version 14,
+01:09:26.080 we're actually getting to the point where we almost feel comfortable
+01:09:31.439 allowing people to text and drive, which is kind of the killer app because that that's really what people want to do and
+01:09:38.640 do do. Uh um and uh actually right now the you
+01:09:45.439 know the version's you know the car is a little uh strict about keeping eyes on
+01:09:52.080 the road. Um and uh but I'm confident that in the next month or two uh we
+01:09:59.679 should we we're going to look closely at the safety statistics but we will allow
+01:10:05.120 uh you to um text and drive essentially.
+01:10:13.280 Yeah. So
+01:10:19.040 yeah. That's that's uh it's it's certainly
+01:10:26.320 better in the current situation which often people will actually turn off FSD to text then turn it back on which is
+01:10:33.040 less safe. So um so yeah that's probably the single biggest thing is is just get people
+01:10:39.360 aware of of FSD. Um and then obviously we need to get it approved in in Europe.
+01:10:44.400 So we certainly appreciate the support of our customers in Europe uh pushing the regulators to approve FSD because
+01:10:50.320 you can't even get a super even just normal supervised FSD is not allowed in Europe currently um which doesn't make
+01:10:57.040 any sense and I've had these like crazy conversations with regulators that seem like a France novel where where I'm
+01:11:03.840 like well look we have you know billions of kilometers of data that shows that
+01:11:09.360 FSD increases safety. Um, and they're like, "Well, we have to have all these committee meetings." I'm like, "Yeah,
+01:11:14.719 but people's lives are at stake here." So, definitely a pressure from our uh
+01:11:20.239 customers in Europe to to push the regulators to approve would be appreciated. Um, and then we have
+01:11:25.600 partial approval in China and we hopeful hopefully we'll have full approval in China uh around February or March or so.
+01:11:32.640 That's what that's what they've told us.
+01:11:40.470 [Applause] Uh yeah, but uh
+01:11:46.719 yeah, the the fact that every Tesla car is capable of full self-driving, every car we build and have built for the last
+01:11:52.400 several years is capable of uh full self-driving is is pretty wild and most people don't don't know that. So, um,
+01:12:00.080 and then we've got the the first car that is specifically built for,
+01:12:07.360 uh, unsupervised full self-driving to to be a robo taxi. It's called a cyber cab.
+01:12:13.520 It doesn't even have pedals or steering wheel. Um, yeah.
+01:12:22.239 So, no, no, there's no side view mirrors. There's no Yeah. So it's it's and and it's it's very much optimized to
+01:12:28.880 min for for the lowest cost per mile in in an autonomous mode. Um and that
+01:12:34.960 production is happening right here in this factory and we'll be starting production in April next year.
+01:12:41.350 [Applause]
+01:12:49.760 So the the way that um Cyber Cab is designed is it's it's it's designed uh
+01:12:57.360 obviously for a purely autonomous world but also the manufacturing
+01:13:02.880 system is uh unlike any other car. uh it the manufacturing system of the cyber
+01:13:10.400 cav it's it's sort of it's closer to a high volume consumer electronics device
+01:13:16.000 than it is a a car manufacturing line. So the net result is that I think we
+01:13:23.040 should be able to achieve I think ultimately less than a 10-second
+01:13:28.880 cycle time basically unit every 10 seconds uh maybe ultimately take a few
+01:13:34.880 years to get there but it's theoretically possible to get to a 5-second
+01:13:40.480 u production time and um so so what that
+01:13:46.480 would mean is you could on a on a line that would normally produce say 500,000 cars a year at uh a
+01:13:55.360 one minute cycle time uh like Model Y
+01:14:00.560 the this this would be maybe as much as you know two or three million
+01:14:07.679 maybe ultimately you know it's theoretically possible to achieve a 5 million unit production line
+01:14:14.880 uh if you if you can get to the 5-second cycle So
+01:14:23.570 [Applause] it's a lot of cars.
+01:14:30.000 So the these will be everywhere in the future.
+01:14:36.560 So and wanted we wanted to look futuristic.
+01:14:42.880 So it like it changes the look of the roads. Um
+01:14:48.880 now the yeah um
+01:14:56.480 the ingredients when you look at at at what Optimus is what's required to make
+01:15:02.159 Optimus and the various ingredients uh what do you need to do to make to do high volume uh humanoid robot production
+01:15:10.320 uh I think it's worth considering that really the cars we make are already robots but there four-wheel robots. So
+01:15:16.960 Tesla is already the biggest robot manufacturer in the world because every car we make is a robot. Um and when you
+01:15:23.760 break it down to the fundamental elements, you've got you've got batteries, power electronics, u motors,
+01:15:30.719 um gearboxes, you've got uh you know connectivity,
+01:15:36.880 uh you've got a vision based AI. Hi Optimus. Um and um
+01:15:44.960 you know all the various pieces that you need for a humanoid robot. You need the AI chip. You need the AI software. You
+01:15:52.480 need to be able to manage a large fleet. And um and so really Optimus is a robot
+01:15:59.920 with arms and legs as opposed to as opposed to a robot with wheels.
+01:16:05.280 So, you know, Tesla's ideally suited, I think, to to make to succeed in this
+01:16:11.840 arena. Um,
+01:16:16.880 you you you will see certainly many uh companies showing demonstration robots.
+01:16:23.280 There's really three things that are super difficult about robots. One is the engineering of the forearm and hand
+01:16:30.000 because the human hand is an incredible incredible thing actually. It's super
+01:16:35.840 dextrous. So uh engineering the hand really well the uh real world AI and
+01:16:44.719 then volume manufacturing those are generally the things that are missing one or more of those things are
+01:16:51.199 missing from other companies. Um so Tesla is the only one that has all three of those.
+01:16:56.640 U yeah. So yeah.
+01:17:02.600 [Applause] So this is the Optimus kind of uh
+01:17:11.520 initial it's kind of the prototype production line. The the high volume production line will
+01:17:17.600 be very automated obviously but this is this is really the production line that we use to make the prototypes. So you
+01:17:24.000 can get a sort of rough sense for what it takes to build the robot.
+01:17:29.120 Um
+01:17:44.800 going to pull the finger.
+01:17:59.520 Um and then as I've said before, I think once we reach about a million units per year uh of sustained production or in
+01:18:06.560 excess of that, I think probably the cost of production uh is around $20,000
+01:18:13.360 in current year current year dollars. So
+01:18:18.480 this will be certainly very affordable. Um and uh yeah, like I said, I think
+01:18:26.080 Optimus will ultimately increase the size of the economy
+01:18:32.080 probably by a factor of 10 or more. Um you know, next year we saw production
+01:18:38.000 with Optimus version 3. Uh this what you're seeing here is Optimus version 2.5. Optimus 3
+01:18:47.040 is is an incredibly good good design. The Tesla engineering team is amazing.
+01:18:52.400 Um, when you see Optimus 3. Yeah.
+01:19:02.880 Uh, you it will seem as though that there's someone like like a person in a robot outfit. Um, which is how we
+01:19:10.400 started with Optimus. Um, it really is going to be something
+01:19:15.440 special. Um, and then Optimus uh, Optimus 4, you know, that that hopefully
+01:19:22.880 starts production in 27 and then Optimus 5 in 28. So, it's kind of like an annual
+01:19:28.320 release cycle with significant improvements uh, with each one and and
+01:19:34.800 gigantic increases in the scale of production.
+01:19:40.320 So yeah, sust sustainable abundance via AI and robotics. That's the future we're
+01:19:46.800 headed for. [Applause]
+01:19:57.440 And as you as I think most people here know, the safety statistics show that uh
+01:20:04.800 miles driven on FSD are much safer than miles driven with without it. So uh what
+01:20:10.880 this will translate to ultimately is saving the lives of millions of people uh and preventing hundreds of millions
+01:20:17.040 of accidents. So a massive increase in the in um
+01:20:23.520 you know lives saved and and tragedies avoided. Uh, it's going to be amazing.
+01:20:30.140 [Applause]
+01:20:37.120 And how many people here have tried 14.1? Okay. All right. Cool.
+01:20:43.920 Um, yeah, you can see the even with the point releases, it's getting quite a bit better. Uh, it should be pretty smooth
+01:20:50.400 at this point. Um, but really 14.2 2 is
+01:20:55.760 there are major changes 14.2 and then 14.3. Um and uh I think I think by 14.3
+01:21:03.360 is when we'll really be at the point where you can just uh pretty much fall asleep and wake up at your destination.
+01:21:11.040 So,
+01:21:19.600 um, and then I've been putting a lot of time into the new Tesla chip design, uh,
+01:21:25.520 because in order to have a functional robot, you have to have a great AI chip. Um, and it needs to be an inexpensive
+01:21:32.960 chip and it needs to be very power efficient. So we we we believe the uh
+01:21:38.880 AI5 chip will be probably about a third of the power of uh say something like a
+01:21:46.000 Blackwell um an Nvidia Blackwell which is a great a great chip um for roughly
+01:21:51.760 comparable performance um and and much less than 10% of the cost.
+01:21:59.280 So,
+01:22:05.679 this is a chip that is that is very much optimized for the Tesla AI software stack. So, it's uh it's not meant to be
+01:22:13.120 a general purpose chip. It's meant to be an amazing chip for the Tesla AI software. Um,
+01:22:19.760 and uh I mean a couple things that I think make like how is Tesla able to achieve
+01:22:26.639 such an improvement? And I think it is because uh- because we are specialized. We're not trying to,
+01:22:33.120 you know, Nvidia has to serve the superset of all past and future customers. So all of their requirements,
+01:22:38.480 all of the software that they've written has to work, which is a very difficult problem. Um whereas uh we just need to
+01:22:44.719 make it work for our software. Um and and so we we're able to simplify the
+01:22:50.800 chip dramatically. Um and then we we also uh I think I think we're unique in
+01:22:56.800 this but like we we have an integer based uh system. Um and integer
+01:23:03.199 operations are fundamentally more efficient than floatingoint operations. So we can do floatingoint but we but the
+01:23:09.840 vast majority of of our inference is done in integer. um which is if you're
+01:23:16.320 familiar with sort of logic gates like the simplicity of of integer and uh it's
+01:23:24.080 integer is much more power efficient much more silicon efficient um but you have to you actually have to train for
+01:23:30.719 uh integer uh inference which everyone else is training for floating point um
+01:23:36.480 those that's kind of like a niche technical detail but it's actually very important so Um
+01:23:44.080 yeah, this this is this is going to be a great chip. Um so this this chip will be um made in
+01:23:53.360 basically in four places. Uh TSMC Taiwan, Samsung Korea, TSMC Arizona, and
+01:24:00.800 TSMC Texas. [Applause]
+01:24:09.600 and and we already know uh what improvements to make for AI6. So I I I'm
+01:24:15.520 hopeful that we can within less than a year of AI 5 starting production, we can
+01:24:20.880 actually transition in the same fab to AI 6 and uh double all of the
+01:24:26.080 performance metrics. So [Applause]
+01:24:33.360 I'm super hardcore on chips right now, as you may be able to tell. Um, I got chips on the brain. I dream
+01:24:40.880 about chips literally. Um,
+01:24:46.719 I can I can I can draw the the the the the you know the the at least the broad
+01:24:52.159 brushstroke physical design of the AI5 chip by off by heart at this point. Um,
+01:24:59.760 it's it's it's a good chip. It's a good chip, sir.
+01:25:05.040 Um, so this this is this is really key. Um,
+01:25:10.960 now one of the things I'm trying to figure out is how do we make enough chips? Um, so
+01:25:20.000 uh, you know, I have a lot of respect for our the the Tesla partners TSMC and
+01:25:28.320 Samsung. Um yeah, you know, maybe we'll we'll we'll do something with Intel. Uh
+01:25:34.159 we haven't signed any deal, but it's probably worth having discussions with Intel. Uh but um
+01:25:41.440 even when we extrapolate the best case scenario for chip production from our
+01:25:46.480 suppliers, uh it's still not enough. So
+01:25:52.400 I think we may have to do a Tesla Terraab.
+01:26:00.000 So, it's like giga but way bigger.
+01:26:05.520 Um, I I can't see any other way to get to the volume of chips that that we're
+01:26:11.840 looking for. Um, so I think we're probably going to have to build a gigantic chip app.
+01:26:21.070 [Applause]
+01:26:30.480 It's got to be done. So anyway, uh some of the stuff I've
+01:26:36.560 already talked about. Um yep, we've we've uh done a tremendous amount for
+01:26:42.960 sustainable energy. Um and that uh that's only going to grow over time. um the world is moving towards a a solar
+01:26:52.080 battery economy. Um which is ultimately the that's that's where that's where it
+01:26:58.239 was going to go anyway, but what Tesla's done is accelerate um accelerate that outcome.
+01:27:04.400 Um sometimes people don't understand quite how much energy comes from the sun. So the sun is 99.8% 8% of all mass
+01:27:13.120 in the solar system. Jupiter being.1% and then.1% is miscellaneous. Uh Earth being in the
+01:27:19.840 miscellaneous category. Um so the the total amount of energy like so sometimes
+01:27:26.400 people what say like well we'll we'll build fusion reactors on Earth. It's like well actually the giant fusion
+01:27:31.760 reactor in the sky is basically impossible to beat. um to such a degree that even if you uh could burn Jupiter
+01:27:38.639 in a thermonuclear reactor, the amount of energy produced by the sun would still round up to 100%. That's how much
+01:27:45.520 energy the sun produces. So solar power is necessarily the
+01:27:51.920 future. Um and I think uh there's going to be a lot of solar powered AI
+01:27:58.080 satellites and um I think Tesla's going to play a
+01:28:03.360 role in that. [Applause]
+01:28:13.040 Um, we've obviously refreshed the product line, so S3XY. Uh, if uh if
+01:28:18.719 people haven't tried the Model S, 3X or Y or the Cybert truck, I recommend at
+01:28:24.159 least getting a test drive or a test ride as the case may be, try out the the full self-driving. Um, and I think
+01:28:30.719 you'll be blown away. To those who do not, if you might be listening and don't have a Tesla, you should try one.
+01:28:37.040 Um, so, and of course, we've got the, uh, Cybert
+01:28:42.719 truck, which is the toughest truck of all time. Uh, it's literally bulletproof, uh, faster than a Porsche
+01:28:49.120 911 and can out tow a a Ford F350.
+01:28:54.239 So, it's a it's a great car, great truck.
+01:29:04.719 Um and then starting next year we uh we manufactured the Tesla Semi.
+01:29:12.159 So
+01:29:17.679 this this is already we already have a lot of um prototype Tesla semis in operation. Uh Pepsco and
+01:29:25.679 other companies have been using the Tesla Semi for quite some time. Um but we will start volume production uh at
+01:29:32.320 our um Northern Nevada factory uh uh in
+01:29:37.440 2026. So we got we got two big products or three three massive products starting production next year. We got Optimus, we
+01:29:44.320 got Tesla Semi, and we got the Cyber Cap
+01:29:49.990 [Applause]
+01:29:56.159 and then battery packs. So the
+01:30:01.920 uh if if you look at total uh US power generation capability, it's roughly a
+01:30:08.239 terowatt. Um but the average power usage is less than half a a terowatt and that's
+01:30:15.120 because the there big differences in power usage uh between uh day and night.
+01:30:20.480 So the the the daily and seasonal variations in power consumption mean that uh the United States and and really
+01:30:27.760 every country is only using about half is only producing about half as much electrical energy as it could because
+01:30:34.800 without batteries there's no effective way to buffer the energy. Um so what
+01:30:39.920 batteries actually enable is uh even if you don't build any incremental power plants, you could double the energy
+01:30:46.800 output of the United States just with batteries. Now this is a super big deal. Um and in
+01:30:54.400 fact I think that's really where most of the incremental energy production in the United States is going to come from is
+01:30:59.600 literally batteries. So a bigger deal than it may seem.
+01:31:05.730 [Applause]
+01:31:11.199 And then we've got we keep improving the battery design. So the the mega block which makes it really easy to deploy
+01:31:18.320 battery uh utility scale batteries. Um so we've we've just simplified and and
+01:31:25.679 brought more of the components to be internal to the batteries. So you can just show up and drop off a battery and
+01:31:31.040 it works. Um and then hopefully with uh well not hopefully
+01:31:38.639 over time we will actually add uh more and more of the power electronics so that uh mega pack will actually be able
+01:31:45.199 to output up to 35 kilovolts directly. Um so you you won't need a substation is
+01:31:51.760 what I'm saying. You can just literally drop it off kind of like the way that a power wall you just connect it to the house. The utility wires go in one side
+01:31:58.639 and the other side goes to the house mains and that's it. Um, so we want to
+01:32:03.920 get Mega Pack to the point where you just literally take the utility wires and you plug them in and it just works.
+01:32:10.239 So [Applause]
+01:32:18.560 then we've got uh the we've also built the world's largest Supercharger network. So we do a lot of things here
+01:32:23.600 at Tesla. Um that's the biggest uh supercharger
+01:32:29.040 network uh in the world by far. Um and uh ultimately you'll be able to go
+01:32:34.480 anywhere on Earth using a Tesla supercharger and it's pretty close to anywhere on Earth, but it's uh you know
+01:32:41.840 it's going to be ultimately just anywhere. It'll just work anywhere. So um the Supercharger team has done done
+01:32:48.960 great work expanding that and improving the efficiency of the Supercharger network. Um, and uh in in North America
+01:32:55.360 they did such a good job that the uh uh the other car companies basically said,
+01:33:00.400 "Well, they'll just use the Tesla Supercharger network." Like like, "Okay, sounds good to us."
+01:33:13.520 Um, you know, it's always important to have a a slant on safety in the factory. So, we continue to improve uh safety for
+01:33:20.560 our factory workers. we're we care a lot about their well-being. Um, and uh, you
+01:33:26.159 know, like one way you can just tell like if a company is a good company or not, if you if you just walk through the
+01:33:31.440 factory or walk through the office and catch the vibe and the vibe in the Tesla factory is is is good. People are happy.
+01:33:38.719 You know, that's how you know it's a good company.
+01:33:47.120 Um we we've also put a lot of investment into uh raw materials. So um the
+01:33:54.480 uh we we've built in in South Texas and Cor Corpus Christi uh the biggest lithium
+01:34:02.320 refinery um outside of China, I believe. Uh so it's it's going to it's starting off at with 50 uh gawatt hours of of of
+01:34:11.280 lithium. uh and we'll expand from there. So this is a very very important to have
+01:34:17.040 uh um you know in a worst case scenario that we have
+01:34:22.639 the ingredients necessary to make a battery. Very important. Um and uh and
+01:34:28.239 then we've got here on this site the the cathode uh factory which is just the
+01:34:33.520 sort of giant building uh about a half mile that way. Um and um and we're just
+01:34:39.840 making sure that we from a supply chain standpoint are uh resilient against any potential geopolitical challenges.
+01:34:48.450 [Applause]
+01:34:54.639 And then also at this factory we also make the 4680 cell uh which is getting better and better. Um and that 4680 cell
+01:35:03.120 uh will be used uh in the cyber cab cyber it is being used in the cyber
+01:35:08.400 truck and will be used in in the cyber cab and also in Optimus. So that that's
+01:35:13.440 going well. U but we continue obviously to get sales from many suppliers. It's
+01:35:19.120 kind of like the the chip bad thing. We we'll take as many chips as our suppliers can provide us, but then
+01:35:24.880 beyond that, if they can't provide us with any incremental sales or chips, we we kind of have to make them ourselves
+01:35:30.719 or we get stuck. That's the uh Tesla semifactory.
+01:35:39.280 So, it's going to be pretty cool to see these going down the road in scale.
+01:35:53.440 Yeah. So that's that's the that's the basic uh plan sustainable abundance
+01:35:58.560 role. [Applause]
+01:36:11.679 All right. So yeah, I guess we can go into Q&A now.
+01:36:21.440 Maybe at the uh next annual shareholder meeting, we'll have Optimus take some of the questions.
+01:36:27.679 That'd be cool.
+01:36:38.000 So let's see. Alexander, well, thank you for your help, by the way.
+01:36:48.880 Yeah, please go ahead. Is that a mic? Is it No, let me hold it. It's okay. Well, what a year has been,
+01:36:55.840 right? I mean, just a year ago, President Trump got elected on the same day. These 12 months have been a heck of
+01:37:02.400 12 months. Thank you to the board because I think they had to weather quite some storms. Yes. Institutional
+01:37:09.040 investors and obviously thank you to you and we stand with you. I think we we
+01:37:14.080 showed it and we will show it.
+01:37:24.400 So we would like to express a wish, please. This is a nice venue. We love coming to the factory and I think it's
+01:37:30.320 actually great we're doing this at the factory but there are thousands of retail investors who are crying because
+01:37:36.080 they cannot they come to me. I love playing the mama but I now give it to you. Please okay organize a bigger
+01:37:43.760 venue. We're bigger than Berkshire and we will do better than Bergkshire. Okay. Sure. We can pay to make it happen.
+01:37:52.320 Yeah. Uh actually Tesla will be way way way bigger than B brochure long term. It's
+01:37:58.639 going to be kind of nutty. Um so um all right, we'll do the next one. Maybe
+01:38:04.880 we'll do it in the Yeah, like the Yeah, maybe the the the
+01:38:09.920 downtown arena or the the the soccer stadium or something like that and get your security check. We want to
+01:38:15.520 make sure that you're safe. What if I just and weave?
+01:38:21.440 But you know, we want a party and if you can bring the other Elon companies there as well, investors would really
+01:38:27.280 appreciate it. All right, sounds good. Thank you very much for listening to this. All right,
+01:38:39.679 Elon, as a father, I just want to first thank you for the everything you're doing in the world, especially freedom
+01:38:45.199 of speech. Thank you. And one question,
+01:38:51.520 will you or Tesla ever consider FSD tied to a owner's account rather than a vehicle to encourage more frequent
+01:38:57.360 upgrades provided the transfer is to only a brand new Tesla vehicle while fostering brand loyalty? If the vehicle
+01:39:03.679 is sold or trader without upgrade to another Tesla FS, the ownership would end.
+01:39:11.199 Well, we we have done that a few times. Um, I guess, uh, I guess we could extend
+01:39:18.080 it again. Um, all right. We'll extend it. We'll
+01:39:23.199 extend it for at least another quarter. Um, and then and then play it by year after that. All right.
+01:39:32.400 Uh, howdy Elon. Congrats on not having to show up to work for free anymore.
+01:39:37.520 Yeah. Yeah.
+01:39:45.840 Uh we now have over a $40 billion war chest. We're cash flow positive and yes
+01:39:52.880 remain that. Uh we know how you feel about fiat already. Is it time to take a look at
+01:39:58.000 Bitcoin? What's your belief on that? Also, you've hinted towards that there's
+01:40:03.280 a wheelchair accessible model in the works. Were you referring to the Rabovian? And if so, can we please speed
+01:40:09.600 up production to help the least fortunate? Sure. Um, yeah, the obviously we need um
+01:40:16.719 a vehicle that's big enough to to fit a wheelchair if it's wheelchair accessible. Um, so I think um
+01:40:25.360 that that's that's that's that is uh the Robovven or Robus or whatever we call it. Um I mean the it's it's not like we
+01:40:33.760 we're slowing down because we we want to slow down. It's it's like, you know, we're spinning like a zillion plates
+01:40:39.360 here. Um so, um but I do I do think it would be very cool because I think
+01:40:45.040 aesthetically as well, it's just it just would change the look of the roads and make it feel like the future. So, um so
+01:40:51.440 it won't be long before we make that. Uh but it's but since we do have Optimus,
+01:40:56.960 you know, the we've got Cyber, Optimus, and Semi all
+01:41:02.480 next year, it'll we'll probably have to be maybe the year that you know a couple years from now or something like that.
+01:41:08.880 Um but we certainly will make uh a wheelchair accessible vehicle.
+01:41:14.300 [Applause]
+01:41:21.119 Hi Satoshi. Um I was I was privileged enough to uh attend the investor day and
+01:41:26.880 uh you also talked about the factory being a product. I saw the dry cathode method and and so forth and I wanted to
+01:41:32.800 know the progress in that and also would optimist be working on that in the future uh production line in the future.
+01:41:40.400 Yeah. Um I I guess the dry cathode man that's turned out to be a lot harder than we thought. Um so
+01:41:48.480 uh I mean it it does look like it's going to be successful and it will have some
+01:41:53.760 cost advantage relative to wet cathode. Um, but if I had to wind the clock back, I would probably have gone with wet
+01:41:59.440 cathode instead of dry cathode. Um, because it it just turned out to be a lot harder to make it uh, you know, high
+01:42:06.320 volume capable of high volume production with with super high reliability. Um, so
+01:42:12.480 yeah, um, but we will be we will be scaling up uh, battery cell production
+01:42:18.480 at Tesla um, and looking for cell production from our suppliers as well.
+01:42:23.840 um because we're we're going to be ramping up production very dramatically at Tesla. So um now now that we we we
+01:42:31.760 believe we have u full self-driving that we have autonomy solved uh you know or
+01:42:37.360 or at least or within a few months of having it uh unsupervised autonomy solved at at a reliability level
+01:42:44.159 significantly better than human. Um it's not that that means it's time to ramp up production. Um because the value
+01:42:51.600 proposition is now much greater than a regular car. The killer app really is uh for people can you text and drive or can
+01:42:58.480 you sleep and drive? You know, can you um can the car take you to your
+01:43:03.600 destination or do you need to pay attention and be uh and have to drive it? Um, and before we allow the car to
+01:43:13.760 be to be driven without paying attention, we need to make sure it's very safe. But but like I said, we're
+01:43:19.360 we're on the cusp of that. Um um I know I've said that a few times,
+01:43:25.199 but um but we really are at this point and and you can feel it for yourselves with with the the 14.1 release. Um, so
+01:43:35.520 the you know the what we're we're going to try to we're going to push to expand
+01:43:41.360 vehicle production as fast as we possibly can. Um so aspirationally would
+01:43:46.639 aim to increase vehicle production by about 50% by the end of next year. Um,
+01:43:52.639 so yeah. Um, [Applause]
+01:43:58.159 so that's it's it's very hard to increase production, but that's that's roughly, you know, I don't know, maybe
+01:44:03.920 we get to like I'm just guessing at at an exit rate to by the end of next year
+01:44:09.119 of around 2.6 6 2.7 million vehicles annualized production and then aim to
+01:44:16.159 get to maybe 4 million by the annualized rate by the end of 27. Um and then maybe
+01:44:24.320 5 million by the end of 28. That th those are rough those are our aspirational goals. Um so these are this
+01:44:30.480 this is a gigantic increase in in output. uh which means that the entire
+01:44:35.520 supply chain has to move in in uh in unison with that uh with that increase
+01:44:41.360 in in volume. Um and uh the nature of the nature of producing a large complex
+01:44:47.280 product is that it moves as fast as the least lucky dumbest element in the entire system and there's 10,000 plus
+01:44:54.159 items. Uh but um but this like I said this really is a new it's not just a new
+01:44:59.920 chapter for Tesla it's a new book and and that new book is massively
+01:45:05.520 increasing vehicle production um and uh ramping up Optimus production faster
+01:45:11.440 than any thing's ever been ramped up before in history. So
+01:45:22.719 awesome Elon. Thank you. Uh thank you from all of us. Um you know the retail
+01:45:28.320 shareholders really really care and so I I echo the sentiment of you know a larger venue
+01:45:34.320 where more can more can come. Um you know as a testament to that I was
+01:45:41.199 here I was fortunate enough to be here last year and since then touring the factory talking to you know people that
+01:45:48.159 work here I'm just a retail shareholder but increased my holdings 12 times. Right. So, I you know, I I know it's
+01:45:55.199 really engaging and gives people a confidence and and so thank you for having us and I I do echo that. I hope
+01:46:01.040 it grows. Um last year, I'm the one that asked you about your well-being and safety.
+01:46:07.199 Oh, yeah. Full life.
+01:46:13.760 And you know, it was a broad, you know, general question and it was before, you
+01:46:19.840 know, some of the uncertainty that's unfolded since then. And uh yeah, so I I hope it had a positive, you know,
+01:46:25.600 impact and um you know, we all care. Um and so
+01:46:31.920 my question this year, you've talked recently about the most
+01:46:37.199 mindblowing product demo of all time and a shot at it being the most memorable product on ever.
+01:46:43.920 Roadster. Yeah. Yeah. and I have patiently been waiting on my Founders Series
+01:46:52.000 Roadster reservation. So, on behalf of the Founders series guys that have stuck in there,
+01:46:58.560 can we be unvited to this unveil? Oh, yeah. Sure. Absolutely. Definitely.
+01:47:04.080 Okay. Yes. So, all founders series can be invited. Yes. Yes. I mean, it's the least we
+01:47:09.600 could do, frankly, for people that have are long our longsuffering uh roasted reservation holders. Um the
+01:47:19.040 I I I I I feel confident in saying it will be the most exciting
+01:47:24.159 uh product unveil
+01:47:29.360 and I hope that whether it goes well or doesn't go well.
+01:47:36.639 Since I'm up here, can I get the first one? Well, I I guess the it's it's according
+01:47:42.639 to who whoever um put down their deposit in in that sequence. So, that's the but
+01:47:49.920 you'll get you'll get a very early one. Um and um I mean the the new roster is
+01:47:56.480 very much sort of like a it's not even the icing on the cake, it's the cherry on the icing on the cake. So, I mean
+01:48:02.560 it's really kind of like um you know it's it's it's like it's not
+01:48:07.920 essential for sustainable abundance. Let me put it that way. Um, but I do think
+01:48:13.520 there should be uh, you know, very cool technology in the world that is um, that
+01:48:20.639 has, you know, that's way beyond anything that's ever existed. And I
+01:48:25.760 think I'd like those like even if I could never have access to those things, I'd like to know that they exist and and
+01:48:31.520 see the future happening. So I think I think it will be inspiring to a lot of people. Um, and and just it's it's
+01:48:39.520 extreme. It's like the coolest car, if it even is a car,
+01:48:45.280 uh, that has ever that will probably ever exist. Yeah.
+01:48:52.000 So, hi Elon, congrats on the uh, proposal
+01:48:57.040 plan. That was amazing. Uh, the compensation question back to chips. So, chips, chips, chips.
+01:49:03.119 Chips. Chips will be the limiting factor to the to the future. So on that it's chips and electricity are the two
+01:49:09.040 limiting factors. Yeah. And we got the energy and power and energy packs ready to roll. So I think on the chips I think you said TSMC
+01:49:15.600 Samsung perhaps Intel 14A and several different sites. I heard a couple US factory sources which is
+01:49:21.119 I mean we're like everyone you know it's like Yeah. Yeah. And and so I guess the is there an open
+01:49:27.679 door in the future of investing directly into some of those boundaries? And second question how big is a
+01:49:33.280 terraactory? Can you put that in scale in the semiconductor terraactory?
+01:49:41.199 Yeah. Well, the the I mean thing is that we actually have agreed to buy all the chips that are made from the fab, you
+01:49:48.000 know. Uh so it's basically a money printing machine for TSMC and Samsung. It's like
+01:49:54.880 literally the faster you make the chips, the faster we send them money, but it's still not going at the fast enough.
+01:50:03.280 Uh so that's why I think as far as I can see the only option is
+01:50:09.600 to go build some like uh very big chip fab. Um and then you got to solve memory
+01:50:17.600 and packaging too. So uh but otherwise you just you just tap out at whatever
+01:50:22.880 the the chip production rate is. Um and um so I guess terror would be you
+01:50:29.199 you'd want to say it's it's got to be at least a 100,000 wafer starts per month size fab
+01:50:36.080 and maybe that would be one of 10 in a complex. So ultimately be a million wafer stars per month.
+01:50:44.080 Yeah, exactly. You can tell when you when it gets the giggle factor that's probably a good sign that that we're on
+01:50:50.639 to something special. But I wouldn't be surprised if longterm
+01:50:55.920 it's like a million wafers a month. Yeah.
+01:51:03.040 Hi Lon. Uh I'm a long-term uh investor. So I've been uh holding the shares for 12 years. I worked at the autopilot team
+01:51:10.639 development uh for 10 years and uh brought my dad here from Brazil. Uh we
+01:51:16.000 actually won the Tesla vision contest with a Cybert truck B video. So I hope you got to see that at some point. Uh so
+01:51:22.719 thanks for the free Model Y and uh my question is about obviously market expansion but not only South America,
+01:51:29.360 Brazil but also into Mars like with the upcoming rendevous of Mars and Earth. Uh
+01:51:34.639 what's going to be in the payload? You know what are we going to send there? Well uh Optimus is going to play a big
+01:51:41.360 role. Optimus and I think Tesla vehicles will play a big role on the moon and Mars. So for a moon base and a Mars B a
+01:51:49.840 Mars city um Tesla vehicles and and Optimus robots um are natural natural
+01:51:56.800 fit for building um and operating a moon base in a Mars city.
+01:52:04.159 So sorryII cy Cybertruck also. Yeah. Yeah. Cybertruck. Um you will need
+01:52:10.000 to drive around in a pressurized vehicle if there's a you know a person inside. Um, but yeah, it it'll be it'll be
+01:52:17.599 something cool. Uh, next level moon buggy or and Mars buggy. So, all right.
+01:52:25.440 Hi, Mr. Musk. Uh, Gorov, uh, been a fan of yours since 2006. I think I saw a
+01:52:31.679 piece in Popular Science magazine. It was really cool and I think I was 15 at the time. Um, shareholder since 10 years
+01:52:39.280 now. It's been really, really rewarding. It's changed my life. Uh so thank you very much to you and Tesla. Uh my
+01:52:45.760 question is regarding uh Tesla's mission for a sustain sustainable future as it
+01:52:51.440 pertains to autonomy. Um I personally fully expect a deflationary period um
+01:52:57.920 after um well unlocked by autonomy basically uh both in moving humans and
+01:53:04.239 goods and whatnot. um excluding Optimus even. Um yeah,
+01:53:10.480 what efforts um are is is Tesla going to focus on to reduce the dollar per mile?
+01:53:16.960 Rough math um I think like 30 cents a mile would be really nice. Um 50 cents
+01:53:24.159 is pretty good too. I mean looking at inflation later on. And then um I guess
+01:53:29.520 a second part of that, how low does it have to be for people to just stop buying cars like where it doesn't make
+01:53:35.360 economic sense to do that? Um I expect that to affect economies of scale and
+01:53:40.800 then further increase the pricing of vehicles there on out. So like how like what is that node at which inflection
+01:53:47.520 happens? Well, in terms of cost per mile, I mean we do see a path with a lot of work to
+01:53:54.480 get below 20 cents a mile in current year dollars. Um and um
+01:54:02.320 and and I I somewhat agree that there's things will probably be deflationary um as productivity increases because you
+01:54:08.480 can think of money supply as being the ratio of goods and services to um the
+01:54:14.239 like what's what's the growth in goods and services to versus the growth in the money supply. That ratio is basically
+01:54:19.760 inflation. Um and um and so if the output of goods and services grows faster than the money supply, then you
+01:54:25.760 necessarily have deflation or vice versa. U they try to make it sound complicated, but it's not. Um
+01:54:32.639 so um I'm not sure that that even government over overspending can
+01:54:37.920 actually I think government overspending will will not be will be lower than the
+01:54:43.040 increase in productivity of goods and services uh which would imply deflation as you expect.
+01:54:51.280 Sorry. What about economies of scale and the impact it has to how you respond as an automotive company when people stop
+01:54:58.320 potentially buying cars? Economies, sorry. Economies of scale in like auto manufacturing for instance.
+01:55:04.639 It only makes sense if lots of people buy your vehicles. Oh. Uh the total number of vehicles will
+01:55:10.239 decrease. um you know the the sort of vehicle fleet out there is about two
+01:55:15.280 billion cars but two two billion if you add up all cars and trucks that are not at a scrapyard I think it's around two
+01:55:20.560 billion um but the that that number would decrease uh with autonomous
+01:55:26.719 vehicles so the total fleet size would drop um I actually think uh miles driven will increase because it is now much
+01:55:33.840 less painful to travel somewhere um so if if somebody's thinking about traveling across a busy city then
+01:55:41.360 they'll take into account, well, how much pain do I have to deal with if I have to go through two hours of traffic, I probably won't uh won't do it. But if
+01:55:48.000 you're just say sitting in a cyber cab watching a movie or doing some work,
+01:55:53.360 then it's just like sitting in a little lounge and and I I so I think you'll see
+01:55:58.480 um probably a significant increase in total miles driven u but at the same time a decrease in the total uh active
+01:56:04.960 fleet of vehicles. Um, I'd just like to reiterate how
+01:56:11.040 grateful we all are to have you uh on board ready to lead us to another 7 trillion in market cap at least.
+01:56:18.080 At least obviously. Thank you. Um my question is how much of a concern
+01:56:24.159 is it that when cyber cab starts production in Q2 next year that regulation won't be there yet to where
+01:56:29.840 you can deploy cyber cabs being produced or are you guys confident that uh every
+01:56:35.199 cyber cab you guys make you'll be able to deploy? Yeah, I think I think the rate at which
+01:56:40.719 we we receive regulatory approval will roughly match the rate of cyber cabab production.
+01:56:47.119 Um it'll be maybe a little tight, but um that's it's it's about right. Um and I'd
+01:56:54.239 like to thank thank Whimo for paving the the path here. It's very helpful. Um so
+01:57:01.440 uh yeah, but it I I think we'll be able to deploy all the all the cyber caps
+01:57:07.280 that we produce. Um, and the other thing is like once it becomes
+01:57:12.639 like extremely normal in cities, it's just going to become like the the regulators will have just
+01:57:18.639 fewer and fewer reasons to say no. Um, and then you've got this, you know, you've got the AC the accident
+01:57:24.880 statistics at scale and you can show that autonomous miles save lives then
+01:57:31.599 and you've got unequivocal, you know, billions of miles to prove it, then I think it's it's hard for regulators to
+01:57:37.760 say no. Yeah, true.
+01:57:42.960 All right. First of all, Elon, thank you so much for everything you do for the Tesla uh
+01:57:48.560 shareholders. Thank you. Do you see a path for uh optimists to have consciousness uh
+01:57:56.080 downloaded to it? You mean human consciousness or Yes.
+01:58:03.840 Yeah. Yeah, I mean it's not like uh immediate um but if you say it down the
+01:58:09.920 road uh would you be able to say with a neural link have a snapshot of or
+01:58:19.280 at least an approximate snapshot of somebody's mind and then upload that
+01:58:24.639 approximate snapshot to uh an optimist body. I think I think that at some point
+01:58:32.800 that technology becomes possible. Um and it it it probably less than 20
+01:58:38.719 years. Yeah. But of course you won't quite be the same, you know, be a little
+01:58:44.639 different. Um because you'll be in a robot body and uh the the the mental
+01:58:50.960 snapshot will not be precise. It'll be probably pretty close but not not
+01:58:56.639 exactly the same. On the other hand, you know, are you the same person that you were five years ago? Nope. I mean, a lot
+01:59:02.320 of things have changed. Uh so, uh yeah, but I guess at some point if
+01:59:08.000 you want to be uploaded to a robot body, my guess is that becomes possible.
+01:59:18.320 Hi, Elon. Um spacebased data center is a great idea and I agree with that. um was
+01:59:23.760 curious on your views on space-based solar power. The idea of beaming down
+01:59:28.880 microwave energy down to earth so that you can just point it to where it needs to go without transmission, without
+01:59:34.560 distribution lines and it's more energy dense. So, you know, less land use just
+01:59:40.800 curious on your views. Well, space solar power and and until
+01:59:46.880 the advent of something like Starship um where the cost per ton to orbit um you
+01:59:53.119 know drops by orders of magnitude um the cost of getting payload to orbit is so
+01:59:58.560 high that there was no possibility of space solar power uh solving anything really. Um, now with with Starship, um,
+02:00:08.080 like I see a path to Starship cost per ton to orbit being lower than airflight.
+02:00:14.080 Uh, like if you were to fly, you know, do a longdistance uh, airflight with cargo, like say took a
+02:00:21.679 747 from here to, you know, Sydney, Australia or something like that. I
+02:00:27.280 think um I think ultimately Starship will be able to do that trip for less cost per ton
+02:00:35.920 than an aircraft. So then you so now that now you've got that that opens up a
+02:00:42.400 a wide range of possibilities. Um
+02:00:47.920 like the the most obvious one I think is is actually uh solar powered AI
+02:00:54.000 satellites. sort of to move the AI uh to to or to to orbit um and and essentially
+02:01:02.320 deep space over time. Uh because the the you can actually access over a billion
+02:01:08.320 times more energy uh from the sun in deep space than you can on earth. uh the
+02:01:15.199 the the scaling if you if to to scale to cautev
+02:01:21.119 any to make any progress on a cautious 2 scale uh which is using some non
+02:01:27.920 trivial amount of energy from the sun uh you kind of have to do space solar power. Um now you you could only beam a
+02:01:36.880 tiny amount of that back to earth or you would melt earth. Um so earth actually
+02:01:42.960 receives a very very tiny amount of of the sun's energy. We're I mean earth is a tiny dust moat. Um we see like earth
+02:01:51.920 to scale with the sun we look like a little crumb. Um so the the
+02:01:58.800 to scale civilization like I said to be at all relevant on a
+02:02:04.239 kadeshv two scale um like to even use a millionth of a percent of of the the
+02:02:10.960 sun's energy you you really have to be uh have use solar power in in deep
+02:02:16.480 space. Um and and you could beam some of that back to earth too. Um, but you can
+02:02:23.199 only beam a tiny bit of it back or you'd melt oath and this will be our last question.
+02:02:31.119 We'll do Okay, we'll do a few more. We'll do a few more. Sorry. Uh, sorry. All right, Elon, look around you. This
+02:02:38.000 is a very, very small sample of Tesla soldiers. Maybe actually I should say
+02:02:44.880 Elon Musk soldiers. Well, thank you for your support. So, thank you everyone. So, So, I just like to say thank you
+02:02:52.400 from the bottom of my heart uh for your support. Thank you and thank you everyone out there. So,
+02:03:01.360 I I know for sure a lot of them sold the farm to buy Tesla and they stuck with Tesla through thick
+02:03:08.560 and thin good days and bad days. Yes. So my question to you is how do you
+02:03:16.000 feel about repeating this success but in a safer way where you get qualified
+02:03:22.000 Tesla retail investor only to invest in Space X avoiding all these market
+02:03:28.400 manipulator those crooks and the short sellers. Yeah it's it it is a tough problem that you
+02:03:36.000 highlight. I mean the basically the unfortunately over time the parasitic
+02:03:41.599 load of being a public company has just grown over time. Um and um and so you
+02:03:48.000 get all these like you know spurious lawsuits obviously and
+02:03:53.599 um they just make make it very difficult to operate effectively as a as a public
+02:03:58.880 company. Um, so, uh, but I I I do want to try to figure out some way, uh, for Tesla
+02:04:06.320 shareholders to participate in in SpaceX. That would be very cool. Um,
+02:04:22.159 I
+02:04:40.880 I haven't been giving a lot of thought to how to give people access to SpaceX stock because I I do I do want
+02:04:47.599 supporters to have SpaceX stock, but there's there's a sort 2500 shareholder threshold for you know
+02:04:55.280 before you become a de facto public company. Um but uh I don't know maybe maybe at some
+02:05:03.440 point Tesla may at some point SpaceX should become a public company um despite all the the downsides of being
+02:05:11.199 public. All right.
+02:05:16.960 Okay. First of all, thank you very much Elon. just a amazing job you're doing not only for Tesla shareholders but the
+02:05:23.360 humanity in general. So we got a couple of questions many of us are asking like we want to know many of us think you are
+02:05:29.119 one of the most consequential business people on earth ever and we want to understand how do you think like uh for
+02:05:36.960 example like a couple one how did you know in the master plan part two this is like 2018 or something like that you
+02:05:43.360 calculated at that point it takes six billion miles of FSD miles driven before
+02:05:49.360 maybe the world the regulatory would approve it and then the second is like when you were deciding if Tesla's going
+02:05:56.080 to have, you know, the hardware chips, AI chips. Did you know at that time that
+02:06:01.119 at some point when you get to AI5, it's going to be used not only for cars but
+02:06:06.480 for bots and for AI data centers like this? Was that luck a little bit or was
+02:06:11.920 it like you kind of knew that that was going to happen? Well, I generally I mean in terms of the
+02:06:17.520 estimates like the you know for the self-driving stuff I I generally try to get things to within an order of
+02:06:23.679 magnitude. Uh so if so I I it seemed to me like probably um and and this was
+02:06:29.840 technically in in kilometers but it it it would be more closer to 10 billion
+02:06:36.800 kilometers which is roughly 6 billion miles uh than it would be to 1 billion. Um, but I think I thought it would not
+02:06:42.719 take a 100red billion kilometers. So, it was really just you're trying to when when you're trying to guess something
+02:06:49.199 where there's a lot of uncertainty, you just try to get it um get the estimate to the nearest order of magnitude. Um,
+02:06:56.159 you closest factor of 10 and and that's that's why I said, you know, probably around 10 billion kilometers or six
+02:07:02.719 billion miles. Um and then uh yeah um
+02:07:09.599 the the the chip the reason Tesla created a chip team um and it's
+02:07:15.760 important to know like the vast majority of like Tesla is like a dozen startups in one. Um and you know the the only
+02:07:23.599 we've only really done one major acquisition which is Solar City and then at some very small ones. So all of this
+02:07:30.639 is almost all of this is organic. So uh I built the chip team from from scratch
+02:07:35.920 and the you know the AI AI team from scratch. Um the it was just because it
+02:07:42.400 became a limiting factor. So um for hardware 2 uh we used Nvidia but Nvidia
+02:07:51.599 was at at that time uh focused on making uh really AI server hardware which
+02:07:59.199 obviously was a smart bet. They're the most val currently the most valuable company in the world. Um and and you
+02:08:04.960 know Jensen Wangi's team have done an incredible job at Nvidia. My hats off to them. Um you know I'm a huge admirer of
+02:08:12.480 of Jensen and and Nvidia. They've they've done done amazing work but but they were they didn't want to do a co a
+02:08:20.159 lowcost power efficient uh car computer at the time AI car computer. So I was
+02:08:26.639 like, well, okay, I guess we we need to start a chip team to solve that. Um, so then that's when I hired Jim Keller and
+02:08:34.000 we we built the chip team. Um, and did AI3 uh then AI4
+02:08:41.760 um and then we to be honest we made a few we made some mistakes there with with with AI5, but now AI5 is back on
+02:08:48.960 track. Um, and uh and and we'll have a very rapid cadence to AI6 and and so
+02:08:54.880 forth. And this will really this is really necessary uh for you know for the for the card to like
+02:09:01.920 like with with AI4 I think we can get to you know two or 300% better than human
+02:09:09.199 safety maybe 400% better uh but with AI5 I think we can do a thousand% better um
+02:09:16.639 or or maybe even better than that uh so than than human safety. So,
+02:09:23.920 um, at a certain point actually it might be too much intelligence for a car. Um,
+02:09:29.119 because like I was thinking like what if you get stuck in a car and you have too much intelligence. But then the one of
+02:09:34.960 the things we could do is when the car is idle is use the car as a massive distributed uh uh AI in inference fleet.
+02:09:44.239 So um you know with the consent customers we're like do you want your car to earn money for you while it's
+02:09:49.280 sitting in your garage at night? you know, um I don't know, we'll pay, you
+02:09:56.000 know, $100 a month or $200 a month or whatever the right number is, uh if you
+02:10:01.280 allow te Tesla to do, uh AI inference workloads, uh when you're not using your
+02:10:07.760 car. Um so, and that will also help the AI in the car not get bored. Um,
+02:10:15.360 so because like I sort of imagine like what if I got stuck in a car,
+02:10:21.679 you know, and then well and the highlight of your day was driving. It's like, you know, but they don't always
+02:10:27.840 want to drive. So then what do you do the rest of the time? Um, so, so, so I think Tesla could actually
+02:10:34.719 end up having the the largest, uh, the Tesla might have end up having the
+02:10:41.119 most amount of AI inference compute uh, in the world. Um,
+02:10:46.960 like if if you think like maybe if we had a 100 million car fleet and at some
+02:10:52.079 point we may have more than 100 million car fleet. Um, and they'll have AI6, AI7, you know,
+02:10:59.040 and uh, if you're able to run a kilowatt of inference on a 100 million car fleet,
+02:11:05.520 now you've got a 100 gawatts of distributed inference with built-in cooling um, and and power electronics
+02:11:12.400 and and distributed power. U, so,
+02:11:17.440 you know, probably the market's valuing that at 0.0 right now is my guess. But but but it seems like an obvious thing
+02:11:23.599 to do. um if you if you've got distributed uh inference AI and you've got the power
+02:11:31.199 and the cooling which is very difficult to do the power and the cooling um
+02:11:37.280 and 100 gigawatts is a lot I mean the average said the average power consumption in the US I think is around
+02:11:44.639 uh 460 gawatt for the that's the entire electrical consumption of the US so the
+02:11:50.639 if you did 100 gawatts that would be a pretty big Um
+02:11:56.719 but yeah, it's basically something as a limiting factor and then we take actions to address the
+02:12:03.840 limiting factor. A quick followup. Thank you for that very much. Uh a request for you. So you
+02:12:10.800 guys just unveiled the cyber bear. Looks fantastic. It's beautiful. We'd want you guys or
+02:12:16.880 you know maybe do a cyber bull here in Giga Texas. Uh my name's Herbert. I've
+02:12:22.320 got a Brighter with Herbert channel on YouTube. This is the Cyber Bulls. We are representing the Tesla Bulls and we
+02:12:28.480 stand with you, Elon. But wouldn't it be cool to have a cyber bull right here in Texas? Like a cy a cyber longhorn.
+02:12:35.199 Cyber Longhorn. All right. We'll we'll we'll do a cyber longhorn for the factory.
+02:12:41.119 All right.
+02:12:46.400 Good afternoon. I'm um very excited to ask this question. I've dreamed of giving away a Tesla for a very, very
+02:12:53.280 long time. And I finally wore EVJ down enough that they're willing to foot the
+02:12:58.880 bill for it. But it turns out to give away a Tesla, I have to have your
+02:13:03.920 permission to say, "We're giving away a Tesla." So, it's simple. Just give it away.
+02:13:10.880 You don't have to do anything. Tesla doesn't. We're going to go through the normal channels. We'll buy it from a store.
+02:13:16.320 All that stuff. You can give away Tesla. It's totally cool. Yeah. Um, yeah, but certainly you don't
+02:13:23.760 need my permission to give away a car. Um, I'll we'll take like maybe a couple more questions and and then call it a
+02:13:30.000 night. So, all right. Hi, Elon. My name is Jonathan. Um, you
+02:13:35.360 mentioned that the Roadster will have more tech than all the James Bond vehicles combined. Do you think there's any possibility
+02:13:41.920 that any of that tech will make it into the current vehicle lineup? Um, no.
+02:13:52.000 And to follow up on that, do you have any estimate of uh production or delivery timelines for the Roadster?
+02:13:59.040 Um I I guess uh well so we're aiming for uh the so the the product unveiled uh
+02:14:08.560 will be of of of the Roadster 2, which will be very different from what was shown previously. Uh that that demo
+02:14:15.599 event will be April 1st of next year. I have some deniability cuz like I could
+02:14:22.560 say I was just kidding. U but uh we are actually tenatively
+02:14:28.400 aiming for April 1st uh uh for this what I think will be the most exciting
+02:14:36.159 whether it works or not uh demo ever of any product. And then um
+02:14:42.960 I guess production is probably about a you know 12 to 18 months after that.
+02:14:50.400 I think production is probably a year a year or so after that. Oh well I can't give away the secrets.
+02:14:58.400 Uh but you won't be disappointed. All right take one last question I
+02:15:03.760 guess. Hey. All right. Three last questions.
+02:15:11.840 Okay. Hi Elon. I'm really excited about this
+02:15:17.520 uh future of sustainable abundance that we're talking about. Uh I mean you're going to be saving a lot of lives with
+02:15:23.040 FSD, but the number of lives that would be saved and improved with this future vision you have is really inspiring and
+02:15:29.040 very exciting. Um so even today you've mentioned though that in a post scarcity
+02:15:35.760 world the role of money could diminish or become obsolete given that much of today's power
+02:15:41.360 including yours is tied to wealth. Do you think achieving this abundance would require powerful people to relinquish
+02:15:47.840 their power and how might we address resistance from those who hold power to make this vision a reality?
+02:15:55.360 Well, I mean, I think actually long term, uh, the AI is going to be in charge to be totally frank, not humans.
+02:16:02.000 Um, if if if artificial intelligence vastly exceeds the sum of human intelligence,
+02:16:08.079 it is difficult to imagine that that any humans will actually be in charge.
+02:16:13.280 So, we just need to make sure the AI is friendly. Yeah.
+02:16:18.560 Thank you. Is that is that the question? Go ahead. Sure. Yes.
+02:16:24.159 Okay. Sorry, Elan. Okay. Okay. Yeah. So, uh I'm Cybercat on X and uh uh I'm doing
+02:16:31.360 YouTube and content creator. There's one thing I always heard about uh uh Tesla
+02:16:37.281 owners or people who want to buy Tesla complain about that is about a super
+02:16:43.599 expensive insurance, right? And uh uh this the thing is uh Tesla I know uh
+02:16:49.920 Tesla also do insurance. However, it's not cover cover every place like like
+02:16:55.281 based on Boston. I don't have too much options. It's super expensive. And the other point is the FSD is very safe
+02:17:03.281 right now. I've been using FSE for about four years, right? It's getting to a point it's like almost unsupervised.
+02:17:11.040 However, the insurance still does not take this into consideration. They don't ask you whether you have FSD or not. and
+02:17:18.558 they don't know how much you travel with uh FSD and that is not a part of the uh
+02:17:24.478 risk prediction kind of thing right so I feel like u uh what is what's your
+02:17:30.240 thought about insurance going forward especially when we getting close to the autonomy uh what is path like uh uh
+02:17:38.240 either using your own or with the external partnership for example there's a company called
+02:17:44.478 lemonade we we need to not have the questions be super long. Um the
+02:17:50.080 the uh I mean Tesla insurance uh is trying to expand as as quickly as
+02:17:56.478 possible, but the regulatory structure for insurance is extremely complex and and uh works on a state-by-state basis.
+02:18:03.599 Um so it's it's really somewhat of a racket. Um uh and uh the the rules for insurance
+02:18:11.281 are different for with every state. Uh it's it's a very very complicated thing. Um so uh you know the I mean yeah so
+02:18:20.400 there's but I I'm aware that insurance often is too expensive and doesn't take
+02:18:25.920 the right things into account. Um but so all I can say to that is yeah we'll keep
+02:18:31.200 expanding Tesla insurance of when the car is operating as a cyber cap Tesla
+02:18:36.320 will simply selfinsure. So that kind of solves that. Um but uh insurance is is a
+02:18:43.760 yeah a real pain in the neck for sure. Um but okay
+02:18:49.599 I do need to end this at some point. Um I'll take yeah one question and one
+02:18:56.558 question there. All right. Thanks Elon for taking my question. I appreciate it. My question has to do with compute and what the
+02:19:02.000 buildout or what how much is necessary to train optimists and actually get them to a very household meaningful um
+02:19:12.718 robot that can do things and if the partnership with XA with XAI would um
+02:19:19.679 help accelerate that. Uh yeah this there is a lot of training
+02:19:24.799 compute needed for Optimus um and um because the the the the AI chip in the
+02:19:33.281 robot is relatively weak because it's it's really limited on limited on power uh you can make up for that with a lot
+02:19:39.760 of training uh to have a lot of training result in in a um a very efficient uh AI
+02:19:47.440 that can run on a a low power chip in in the robot. So it it is we we we will
+02:19:53.920 actually have to spend a lot of money on on training like uh you know ultimately it'll be like tens of billions of
+02:19:59.920 dollars on on training compute. So it's a big number. Would a partnership with XAI help
+02:20:07.040 accelerate that? Uh yeah I think potentially. Yeah I think that that that could uh
+02:20:13.120 uh yeah think there's potential for accelerating that. So
+02:20:20.319 yeah, did the XI investment thing get approved? Uh yes. No. Yes.
+02:20:27.439 Okay. Okay. Okay. Okay. Whatever. Um
+02:20:32.880 um you know whenever like it's it's like uh you know Tesla and some other company that I have an interest in then it's
+02:20:38.560 like always quite complicated to uh you know do things um has to go through a
+02:20:44.880 lot of hoops to happen. Uh but uh you know I do think there's a lot of potential for collaboration with XAI in
+02:20:51.600 the future um and with SpaceX. So all right. Okay. This is the last one.
+02:20:57.760 Yeah. Sorry. Thank you so much. Captain Alon X. I support you. Thanks so
+02:21:03.359 much for everything you do. Um very simple question. I'm from Israel. I don't represent a lot of
+02:21:09.359 people, but uh people do ask me and I'm going to ask you any chance to have the
+02:21:14.880 app in other languages like Hebrew for example. Some people struggle with you
+02:21:20.319 know even the the app is the app itself. Yeah. Just the app the app is not in Hebrew. No.
+02:21:25.439 Oh, and a lot of people don't speak English. So it's Oh, okay. Shoot. I I thought I thought we had it
+02:21:30.880 in in all languages. Okay. Well Well, definitely the app needs to be in all languages. All right.
+02:21:38.479 So, all right.
+02:21:45.900 [Applause] [Music]
+02:21:52.700 [Applause] [Music]
+02:22:03.410 [Music]
+02:22:38.090 [Music]
+02:22:52.399 Heat. Heat.

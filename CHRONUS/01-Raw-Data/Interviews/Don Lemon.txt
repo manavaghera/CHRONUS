@@ -1,0 +1,1700 @@
+Don Lemon (00:06):
+
+Welcome to the Don Lemon Show, everyone. We’re still here. In a minute, I’m going to bring you my conversation with Elon Musk, the one that everyone is talking about. But first, let me tell you a bit about the show. Contrary to what you might’ve heard, we weren’t canceled by X. Yes, after months of begging me, wooing me to offer some exclusive content on his platform, Elon Musk decided to scrap the deal. But our plan is and always has been, to release this show everywhere, on YouTube, on Spotify, on iHeartRadio, just about any place you stream content.
+
+(00:39)
+Now for my conversation with Elon, as with all my interviews, no restrictions, no ground rules, nothing off limits or out of bounds. That is until the interview ended. So what went wrong? I don’t know. But my hope is that you learn something about both Elon and me, two people who come from completely different vantage points on almost every single issue. And I challenge you, Elon, to watch the whole interview and tell the world why this isn’t what you claim you want on X.
+
+(01:11)
+Thank you for inviting us here-
+
+Elon Musk (01:12):
+
+You’re welcome.
+
+Don Lemon (01:13):
+
+… to your Tesla headquarters. I’m surprised at how big it is. I’ve never seen it.
+
+Elon Musk (01:17):
+
+Yeah, it’s about three times the size of the Pentagon. We built it in 16 months. It’s the fastest construction project in the United States since World War II.
+
+Don Lemon (01:26):
+
+So I’m here, as you know, I’m on the platform because you say you’re a free speech absolutist, and there are no conditions?
+
+Elon Musk (01:32):
+
+Yeah. Free speech, as much as possible within the bounds of the law.
+
+Don Lemon (01:38):
+
+Yeah. So the reason I’m saying that is because there are no conditions on this interview. You said that, “I’ll speak to you for an hour. I don’t like sound bites,” so I welcome that. So let’s get into it. So we are here in Austin, South by Southwest is going on. We’re at the Tesla headquarters. You are in the process of moving SpaceX here, I understand?
+
+Elon Musk (01:56):
+
+No, so SpaceX has a massive facility in South Texas where we build and launch Starship, and then we have in Bastrop, near Austin, we are about to start production at a large Starlink factory for Starlink terminals, but we’re not shutting down any facilities in California.
+
+Don Lemon (02:24):
+
+Listen, we are here as part of a launch of a news interview show that is going to be on x.com. It’s coming as the media industry, as you know, is going through a whole lot of changes. X has also been affected by that. Where do you see X.com’s role in the future of news and journalism, Elon?
+
+Elon Musk (02:40):
+
+Well, I think I see X as, it’s really the number one source of news in the world. So it is the number one way that people actually are informed about any kind of news, meaning real time events is on the X platform, formally Twitter, there’s nothing even close for real time news. So we also want to expand upon that and we have done so with the long form content. So instead of just doing what you used to call tweets, you can do long form posts. You can post an entire essay. In fact, you can now put an entire book, post an entire book to the platform. You can do long form video content, so you can do up to four hour video segments. We really want news in whatever form it is, or information I should say, in whatever form it is to be available on our platform, whether it’s short, long, text, pictures, video, whatever the case may be.
+
+Don Lemon (03:41):
+
+And some of the stuff that we do, long form video, interview shows, what have you.
+
+Elon Musk (03:45):
+
+Yeah.
+
+Don Lemon (03:46):
+
+You reached out over the summer and you said, “It would be great to have Maddow, Don Lemon, others on the Left put on this platform. You’ll receive full support. The digital town square is for all.” What do you mean by that?
+
+Elon Musk (03:59):
+
+I just mean that we want to make sure that there are a wide variety of viewpoints that… We obviously have, for example, Tucker Carlson, who most people will view as being on the Right, and that’s quite a prominent name on the Right. We want to have prominent names on the Left as well, to provide different views of points of view, as well as centrist. Just basically a wide range of viewpoints on the platform so users can hear different opinions. They can hear what’s your point of view, what’s Tucker’s point of view, and people can make their own decision about what they believe.
+
+Don Lemon (04:39):
+
+You didn’t mean that I’m on the Left. Did you think that?
+
+Elon Musk (04:41):
+
+I thought you were on the Left, but I know, I’m used… Let’s just say, I don’t know what the Left is or the Right is, frankly these days because things can be quite polarized. But my impression was that you’re more likely to be described as on the Left than the Right. My sense is you’re sort of center Left. I don’t know, you tell me.
+
+Don Lemon (05:02):
+
+Well, did you ever watch me on CNN? Did you watch…
+
+Elon Musk (05:09):
+
+I saw segment. CNN is generally considered Left, yeah.
+
+Don Lemon (05:14):
+
+Why do you say that?
+
+Elon Musk (05:17):
+
+Why do I say CNN is generally considered Left? I think if you look at any sort of media survey of what is on the Left or Right, I think they would say, for example, Fox is on the Right and CNN is on the Left.
+
+Don Lemon (05:32):
+
+Yeah. So that’s what-
+
+Elon Musk (05:34):
+
+Am I missing something here?
+
+Don Lemon (05:37):
+
+Are you missing something? I don’t know. I think that when I read that, I said, like many of my critics or detractors, they never really watched me on CNN, they just saw the clips of me either on social media or maybe on Fox News or on conservative media where I’ve become a character or a caricature of what I actually am and is taken out of context.
+
+Elon Musk (05:58):
+
+Sure. Well, how would you describe yourself?
+
+Don Lemon (06:01):
+
+I would describe myself as someone who is… I am independent in my thinking and I vote for people based on the issues and how I feel about it, not necessarily because of political leaning of some sort.
+
+Elon Musk (06:14):
+
+Well, I agree with that approach. I think that’s generally how people should take things, which is, there are a whole set of issues which are somewhat arbitrarily bucketed into Right or Left, but I think most citizens would think that they would agree with some things on the Left, but not everything, or they would agree with some things on the Right, but not everything. So that’s what I think most people would feel, I guess.
+
+Don Lemon (06:44):
+
+How much longer, and maybe the answer is forever, how much longer are we going to have to call it the formerly known as Twitter? I mean even Prince went back to Prince instead of… Is it always going to be X?
+
+Elon Musk (06:55):
+
+It’s definitely always going to be X.
+
+Don Lemon (06:57):
+
+So X is going through some changes, as I said, a lot of media companies are going through some changes. You’re in charge of an incredible platform, Elon, how do you feel that’s going?
+
+Elon Musk (07:08):
+
+I think it’s going pretty well so far. We’re seeing record usage. We’ve added a tremendous amount of functionality. I mentioned that it used to be that you can only do a short text and maybe a picture or something like that, a short video, but now you can do long form text, long form video. We’ve added audio video calling, so you can not just do text, DMs, you can do [inaudible 00:07:31] video calling. We’ve improved the algorithm, I think significantly and made the system faster and better and that’s reflected in the increased usage.
+
+Don Lemon (07:42):
+
+Let’s talk about that because you said you wanted all points of view, it’s a digital town square for all. The platform has kind of picked up where conservative media, some conservative media is left off, moving to the Right, increasingly becoming part of a conservative dialogue and sometimes even conspiracy theories, right? There was an article recently written about you saying that you, Donald Trump and X were the most important people or places, or whatever, icons when it comes to the MAGA movement. Do you agree with that? How do you feel about that?
+
+Elon Musk (08:14):
+
+Well, I mean there are nonsense articles written all the time, and I certainly wouldn’t agree with that one. I’d put it in the nonsense category. So the objective fact of the matter, in my opinion, was that, old Twitter was fundamentally a tool of the far Left, and that was really, I think a lot of it was due to being located in San Francisco, Berkeley, and so it wanted to essentially project the SF, Berkeley political dogma worldwide.
+
+Don Lemon (08:44):
+
+You think it was far Left?
+
+Elon Musk (08:45):
+
+Yes, I do.
+
+Don Lemon (08:48):
+
+I actually got off the platform because I would get so much hate tweets, what it was called then, so much hate tweets and just guff from Right wing conspiracy theorists being called everything from fag to [inaudible 00:09:03]-
+
+Elon Musk (09:02):
+
+Sure. It’s the internet, people will do… I mean, I’ve been called every name times a thousand.
+
+Don Lemon (09:08):
+
+Yeah. Do you agree that it’s Right now, and that even it’s moved into sort of MAGA-land conspiracy theory?
+
+Elon Musk (09:14):
+
+I certainly don’t think it’s Right. The old school Twitter suspended and suppressed accounts that you’d call on the Right, 10 times more than they did on accounts on the Left. And even when they did suspend an account on the Left, it was because of arguments between two people on the Left. The political donations of old Twitter were 99% Democrat. Does that sound Left wing or Right wing to you?
+
+Don Lemon (09:38):
+
+The Twitter donations?
+
+Elon Musk (09:40):
+
+Yes. You know when they look at donations from a company, if a company donates… Literally 99% of all donations are to Democrats, does that strike you as a Left-leaning or a Right-leaning company?
+
+Don Lemon (09:51):
+
+Oh, you mean the company donated? I understand what you’re saying.
+
+Elon Musk (09:52):
+
+What I’m trying to tell you is that Twitter employees, people at Twitter, their political donations were 99%, literally 99% to Democrats. That’s obviously an extremely Left-leaning group.
+
+Don Lemon (10:07):
+
+My question leading into this was about MAGA, and speaking of MAGA, you recently met with Donald Trump in Florida. What did you guys talk about?
+
+Elon Musk (10:16):
+
+I was at a dinner, it was not dinner, I was at a breakfast at a friend’s place and Donald Trump came by. That’s it.
+
+Don Lemon (10:24):
+
+So you didn’t go there to meet him?
+
+Elon Musk (10:26):
+
+No, I went to a friend of mine’s house and he said, “Donald Trump’s coming by for breakfast, is that… Just so you know.” “Okay, fine.”
+
+Don Lemon (10:35):
+
+What’d you discuss?
+
+Elon Musk (10:41):
+
+Let’s just say, he did most of the talking.
+
+Don Lemon (10:44):
+
+What did he say?
+
+Elon Musk (10:47):
+
+The normal things he says, there was nothing particularly groundbreaking or new, but President Trump likes to talk and so he talked. I don’t recall him saying anything that he hasn’t said publicly, and that was it. It was just a breakfast.
+
+Don Lemon (11:08):
+
+Did he ask you for money?
+
+Elon Musk (11:09):
+
+He didn’t.
+
+Don Lemon (11:10):
+
+Did he ask you for a donation?
+
+Elon Musk (11:11):
+
+No.
+
+Don Lemon (11:12):
+
+He didn’t?
+
+Elon Musk (11:12):
+
+No.
+
+Don Lemon (11:13):
+
+You said you’re not going to donate to any candidate.
+
+Elon Musk (11:14):
+
+That’s correct.
+
+Don Lemon (11:15):
+
+Why not?
+
+Elon Musk (11:18):
+
+I think… Well, I’ll voice my opinion, I think, I don’t want to put a thumb on the scale monetarily that is significant.
+
+Don Lemon (11:37):
+
+Are you going to loan him money to help pay his bills?
+
+Elon Musk (11:40):
+
+No.
+
+Don Lemon (11:41):
+
+Not at all, to his legal bills?
+
+Elon Musk (11:43):
+
+I’m not paying his legal bills in any way, shape or form.
+
+Don Lemon (11:46):
+
+And he did not ask you for money?
+
+Elon Musk (11:47):
+
+Money and he did not ask me for money.
+
+Don Lemon (11:49):
+
+So you’re not going to endorse a candidate?
+
+Elon Musk (11:52):
+
+I may in the final stretch endorse a candidate, but I don’t know yet. I want to make a considered decision before the election. And if I do decide to endorse a candidate, then I will explain exactly why.
+
+Don Lemon (12:07):
+
+Are you leaning towards anyone?
+
+Elon Musk (12:08):
+
+No.
+
+Don Lemon (12:09):
+
+You’re not leaning towards anyone, because you’ve been-
+
+Elon Musk (12:11):
+
+[inaudible 00:12:11] I’m leaning away from Biden.
+
+Don Lemon (12:14):
+
+You’re leaning-
+
+Elon Musk (12:15):
+
+I’ve made no secret of that.
+
+Don Lemon (12:18):
+
+Are you concerned about losing your security clearance if Biden is reelected? Does that have anything to do with it?
+
+Elon Musk (12:24):
+
+No.
+
+Don Lemon (12:26):
+
+You are leaning away from Biden, but you’re not going to endorse anyone. It seems like an endorsement of President Trump because there are only two people who are running now. Nikki Haley is out, [inaudible 00:12:36]-
+
+Elon Musk (12:36):
+
+I mean, a lot could happen between now and the election, so we’ll see who in the final analysis are the choices for president, and at that point I may or may not endorse one of the candidates. If I do, I will provide a very detailed explanation of why I’m endorsing one or the other.
+
+Don Lemon (12:57):
+
+At that point, might you contribute or donate?
+
+Elon Musk (13:02):
+
+I think it’s unlikely.
+
+Don Lemon (13:04):
+
+So you have been posting up a storm, as you always do, in the past couple weeks about the redesign of the Tesla Roadster coming at the end of this year. Are there any updates that you can talk about to expect from flagship EV? I mean, Tesla stock is down in the last six months. What’s next for the company?
+
+Elon Musk (13:24):
+
+The stocks go up and down, but what really matters is, are we making and delivering great products? The Tesla products are outstanding. Last year the Tesla Model Y was the bestselling car of any kind in the world. So it was about 1.2 million units. It was the bestselling car despite being, I think around 50% more expensive than the next bestselling vehicle, of any kind, not just electric. So I think that’s a testament to the incredible work of the Tesla team. And we launched the Cybertruck. Obviously that’s being very well received. We have I think over a million orders for the Cybertruck. So it’s a really special product. I think the Cybertruck is one of those products that comes along really once in several years, maybe once a decade. The Cybertruck is a once a decade product. It is so special and I think it’s our best product.
+
+Don Lemon (14:29):
+
+But everyone improves over time. I mean Apple, I thought my phone was here, but Apple, the phone got better over time. I’m sure that your cars will get better over time. You have been tweeting about the updates in the Roadsters. Is there something that we should [inaudible 00:14:42]-
+
+Elon Musk (14:42):
+
+Yeah, yeah. So you did mention the Roadsters, so I don’t want to give away much more than what I’ve said publicly, except that the Roadster will be a collaboration between SpaceX and Tesla, so you can expect some rockety stuff there.
+
+Don Lemon (14:59):
+
+A flying car?
+
+Elon Musk (15:02):
+
+Maybe. It’s not out of the question.
+
+Don Lemon (15:10):
+
+Go on.
+
+Elon Musk (15:11):
+
+No, I got to reserve the cool stuff for when we actually unveil it, but it is going to be really cool. It’s going to have some rocket technology in it. I think the only way to do something that’s cooler than the Cybertruck is to combine SpaceX and Tesla technology to create something that’s not even really a car.
+
+Don Lemon (15:36):
+
+Then what would it be?
+
+Elon Musk (15:38):
+
+Something that’s never existed before.
+
+Don Lemon (15:40):
+
+I’m getting Jetsons’ vibes.
+
+Elon Musk (15:42):
+
+Totally Jetsons’ vibes. And [inaudible 00:15:46] may not be aware, some things that I have said publicly is that it’ll do zero to 60 in under one second. So best by far faster than any sports car that exists, and that’s not even the most exciting thing about it.
+
+Don Lemon (16:02):
+
+Does it have wings?
+
+Elon Musk (16:05):
+
+No, it does not have big wings because big wings would be unwieldy on the road.
+
+Don Lemon (16:09):
+
+Does it have propellers?
+
+Elon Musk (16:10):
+
+It does not have propellers.
+
+Don Lemon (16:12):
+
+It has wheels?
+
+Elon Musk (16:14):
+
+It does have wheels.
+
+Don Lemon (16:14):
+
+[inaudible 00:16:17].
+
+Elon Musk (16:17):
+
+This is Roadster 20 Questions.
+
+Don Lemon (16:19):
+
+Does it have a steering wheel?
+
+Elon Musk (16:22):
+
+Not exactly.
+
+Don Lemon (16:23):
+
+What is it?
+
+Elon Musk (16:25):
+
+It will have a drive by wire yolk, essentially kind of like the way aircraft or modern jets are controlled.
+
+Don Lemon (16:36):
+
+And do you think it’s the way of the future, that everyone will follow your lead on this?
+
+Elon Musk (16:41):
+
+I don’t think anyone will ever make anything like the Roadster that we’re going to make.
+
+Don Lemon (16:46):
+
+Let’s talk now about SpaceX, Tesla. You’ve got a lot of lawsuits. You’ve got x.com, you’ve got a lot going on. How do you relax?
+
+Elon Musk (16:54):
+
+Well, I relax… I spend time with my kids, my friends, and
+
+Elon Musk (17:00):
+
+I am somewhat of a neurotechnologist, so I like to play video games. I’ll play video games with friends online.
+
+Don Lemon (17:10):
+
+Which one?
+
+Elon Musk (17:12):
+
+Lately I’ve been playing Diablo, but I’ve played almost all the games over the years. A long time ago I was semi-pro good at Quake. This is really dating me, because we’re talking about 25 years ago.
+
+Don Lemon (17:33):
+
+I don’t know video games. I just know that my great nephew loves Fortnite and some other stuff. He’s always with the headphones in and doing the thing. That helps you relax, right?
+
+Elon Musk (17:43):
+
+Yeah. The nice thing is, if you’ve got friends in different cities and they’re playing the same game, you can both go online at the same time and play the game together even though you’re in different cities.
+
+Don Lemon (17:54):
+
+Listen, I’m not asking you anything that anyone else hasn’t asked you about your controversial stuff that you tweet. You post a lot of controversial stuff. Is that considered blowing off steam?
+
+Elon Musk (18:10):
+
+I guess I do enjoy using the platform. I do call the X platform the PVP or player-versus-player platform. In video games there’s a player versus environment, where you’re not playing against other people, and then there’s PVP, which is hardcore, you’re actually playing against other people.
+
+Don Lemon (18:33):
+
+But that’s blowing off steam for you.
+
+Elon Musk (18:38):
+
+Yeah.
+
+Don Lemon (18:38):
+
+Yes.
+
+Elon Musk (18:38):
+
+It is to some degree. Not always. Obviously, I use it to post jokes, to post sometimes trivia, sometimes things that are of great importance.
+
+Don Lemon (18:53):
+
+You do a lot of it at night, late at night. When you’re doing this are you sober when you do it?
+
+Elon Musk (19:00):
+
+Almost always, yes.
+
+Don Lemon (19:01):
+
+Are you under the influence of anything?
+
+Elon Musk (19:03):
+
+No, I don’t drink. I don’t really… No.
+
+Don Lemon (19:08):
+
+No drink, no smoke, no nothing? You smoked pot with Rogan.
+
+Elon Musk (19:12):
+
+I had one puff.
+
+Don Lemon (19:12):
+
+Yeah.
+
+Elon Musk (19:13):
+
+I think anyone who smokes pot can tell I don’t know how to smoke pot.
+
+Don Lemon (19:15):
+
+But you’ve admitted that you have a ketamine prescription.
+
+Elon Musk (19:19):
+
+Yeah, yeah, yeah.
+
+Don Lemon (19:20):
+
+What’s that for?
+
+Elon Musk (19:21):
+
+It’s pretty private to ask somebody about a medical prescription, but I think… Something I’d say, there are times when I have sort of a negative chemical state in my brain. Like depression, I guess. Or depression that’s not linked to any negative news and then ketamine is helpful for getting one out of a negative frame of mind.
+
+Don Lemon (19:55):
+
+Listen-
+
+Elon Musk (19:56):
+
+In fact, I generally… Obviously, I’m not a doctor, but I would say, if someone has depression issues, they should consider talking to their doctor about ketamine instead of SSRIs.
+
+Don Lemon (20:05):
+
+Listen, I think that ketamine and drug therapy is increasingly becoming more in the mainstream.
+
+Elon Musk (20:12):
+
+Yeah.
+
+Don Lemon (20:13):
+
+You’re doing it under a doctor’s care, right?
+
+Elon Musk (20:16):
+
+Yeah, yeah. Literally a prescription from a real doctor. Not like… You know?
+
+Don Lemon (20:20):
+
+Yeah. But do you feel like you ever abuse it?
+
+Elon Musk (20:23):
+
+I don’t think so. If you use too much ketamine you can’t really get work done and I have a lot of work. I’m typically putting in 16 hour days. That’s normal for me and it’s rare for me to even take off a weekend day. I don’t really have a situation where I can be not mentally acute for an extended period of time. I can’t really get wasted because I can’t get my work done.
+
+Don Lemon (20:49):
+
+How often do you take it?
+
+Elon Musk (20:54):
+
+It’d be like a small amount once every other week or something like that.
+
+Don Lemon (20:58):
+
+But it’s not on the bottle where it says take this dose this many times a week or whatever, if it’s not you’re doctor’s…
+
+Elon Musk (21:05):
+
+There are several weeks will go by where I don’t use it.
+
+Don Lemon (21:08):
+
+You don’t use it.
+
+Elon Musk (21:09):
+
+Yeah. Like I said, I think what I find ketamine… If you… Literally, a chemical state in your brain that you can’t just think yourself out of, then ketamine is helpful for getting you out of a depressive mind state.
+
+Don Lemon (21:24):
+
+You suffer from depression or you have a depressive mind state? And I ask you as someone who has suffered from depression.
+
+Elon Musk (21:31):
+
+I wouldn’t say that I have a case of extended depression. It’s just, once in a while, I get into a negative chemical mind state. Once in a while. It’s not a common thing, but once in a while, this happens.
+
+Don Lemon (21:46):
+
+Where do you think that comes from?
+
+Elon Musk (21:48):
+
+I think it’s just genetic, basically.
+
+Don Lemon (21:51):
+
+You think it’s just genetic history?
+
+Elon Musk (21:53):
+
+I think so. Yeah. Some people are just wired to be happy all the time. Some are, unfortunately, wired to be sad all the time and, in my case, I’m generally pretty positive and optimistic, but once in a while, I don’t know what happens, just some… Like I said, I think it’s just a chemical tides in your brain once in a while. It’s like a brain storm.
+
+Don Lemon (22:22):
+
+Yeah. Do you ever worry that this may get in the way of your government contracts and clearances and Wall Street as well?
+
+Elon Musk (22:34):
+
+From a standpoint of Wall Street, what matters is execution. Are you building value for investors? Tesla is worth about as much as the rest of the car industry combined. From nothing. That’s pretty good. As I mentioned, we had the bestselling car on earth last year. From an investor standpoint, if there is something I’m taking, I should keep taking it.
+
+Don Lemon (23:02):
+
+You talk about your ketamine use and depression. You also have said, and correct me-
+
+Elon Musk (23:07):
+
+I should say, the reason I mentioned the ketamine prescription on the X platform was because I thought maybe this is something that could help other people. That’s why I mentioned it.
+
+Don Lemon (23:18):
+
+Yeah. Can we talk about the great replacement theory now? It’s one of the things that you post, a great replacement theory. You claim that Democrats, President Biden’s immigration plan to open up the border, you said that the President is getting, and Democrats are doing it, to get more votes, but undocumented immigrants cannot vote in federal elections, so how is that possible?
+
+Elon Musk (23:41):
+
+Right. You’re conflating two things. One is great replacement theory. The other is, which I don’t subscribe to that, I’m simply saying that there is an incentive here, if legal immigrants wish, I think have a very strong bias to, at least everything I’ve read, very strong bias to vote Democrat. The more that come into the country, the more they’re likely to vote in that direction. It is, in my view, a simple incentive to increase voters to Democrat voters.
+
+(24:14)
+Yeah. Your question is how. There’s a few ways that this works. One is that, when the census is done, the census is based on all people in an area, whether they are citizens or not. If there are a concentration of people who came here legally, in a particular state, that state will actually then get an increased number of House seats. The House seat apportionment is proportionate to number of people, not the number of citizens. The illegals overwhelmingly go to places like California and New York, and if you just look at the math, if you look at the apportionment with and without illegals, I believe California would lose… I believe there will be a net loss of blue states of approximately 20 seats in the House.
+
+(25:14)
+This also applies to the electoral college. You say this also applies to electing the president because the electoral votes are also done by apportionment the same way that House seats are done.
+
+Don Lemon (25:27):
+
+But the reason, Elon, the electoral college is in place is to balance that, so that doesn’t happen. What you’re saying about it is the exact opposite of the reason why the electoral college is there. The electoral college, at this point in our history, gives people who are in smaller states and red states much more of an influence over our elections than people who are in blue states and the majority of the people in this country. That’s what the electoral college does. It actually does the exact opposite of what you’re saying. It protects people who are in smaller states and protects people who are in red states. Red states because they tend to be smaller and less populous.
+
+Elon Musk (26:04):
+
+I think that statement is… What you said is true, but what I said is also true, which is that, as is the case, a disproportionate number of illegal immigrants go to blue states, they amplify the effect of a blue state vote. And the math, as I understand it, you can research this obviously very easily on there, it’s pretty straightforward to research this, but my understanding is that the Democrats would lose approximately 20 seats in the House if illegals were not counted in census and that’s also 20 less electoral votes for President. Illegals absolutely do affect who controls the House and who controls the presidency does not affect the Senate.
+
+Don Lemon (26:54):
+
+In blue states, you’re talking about. I don’t believe that your information on that is right. Listen, let’s talk more about the great replacement because the first time that you posted on X about this Jewish conspiracy, you ended up apologizing.
+
+Elon Musk (27:09):
+
+I didn’t call it a… I just said that there’s a simple matter of incentives. You don’t need a conspiracy when you have basic incentives. In my view, there’s a basic incentive. There’s fundamental… For the Democrat party to foster an usher in a large number of legals and you don’t need a conspiracy in that case because you have a very basic incentive. You could say I’m wrong about that incentive, but that’s my view. I’m not buying into some great replacement theory. I’m simply saying there appears to be a very clear incentive for Democrats to have to maximize the number of illegals because it helps them win elections.
+
+Don Lemon (27:46):
+
+I’m talking about the great replacement theory is also part of a Jewish conspiracy theory and when you did the tweet or you responded to the tweet about that, you ended up apologizing, which I think it is good that you ended up apologizing. You went to Auschwitz with Ben Shapiro.
+
+Elon Musk (28:04):
+
+Yeah.
+
+Don Lemon (28:06):
+
+You said you learned your lesson. What did you learn?
+
+Elon Musk (28:10):
+
+I said I learned my lesson?
+
+Don Lemon (28:11):
+
+You said you learned your lesson when you apologized and you said you went to Auschwitz. You saw what…
+
+Elon Musk (28:18):
+
+No, I was already aware of these things and the nature of my comment that really inflamed people, what I was trying to say, and I did very quickly clarify this, this is what I’m saying, is that a number of prominent Jewish philanthropists fund groups that they should really take a closer look at funding because some of the groups they fund, I think, are antisemitic.
+
+Don Lemon (28:44):
+
+Do you understand the connection between the two? One, there’s a connection between, you said, Democrats and great replacement theory, but when it comes to the actual great replacement theory, originally it was started about Jewish people, as you said, flooding in the country and now people are using it for Democrats, saying the same thing about Democrats. Flooding illegal-
+
+Elon Musk (28:59):
+
+My view is a simple matter of incentives. I actually don’t see an incentive for Jewish people to want to have… To get illegal immigration. I don’t think there is such an incentive.
+
+Don Lemon (29:12):
+
+The great replacement theory is a neo-Nazi trope. It’s in the neo-Nazi manifesto. It’s in the Turner Diaries. It’s referenced by the Buffalo mass shooter and his manifesto where 10 people, black people, were murdered in Buffalo. It’s the actual title of the Christchurch shooters manifesto. 51 people in the Muslim mosque were murdered. 23 people murdered in El Paso by a shooter who used the same language that you use in that manifesto, when you say Hispanic invasion. Is that not-
+
+Elon Musk (29:41):
+
+I didn’t say an Hispanic invasion.
+
+Don Lemon (29:43):
+
+You quoted a tweet that called it a Hispanic invasion.
+
+Elon Musk (29:49):
+
+If I quote something, it doesn’t mean I agree with everything in it. It’s just something that I think this is something people should consider.
+
+Don Lemon (29:56):
+
+Why would you quote something that you didn’t believe?
+
+Elon Musk (29:59):
+
+Because anything I quote is going to have a whole range of statements. It doesn’t mean I agree with everything in it.
+
+Don Lemon (30:04):
+
+Do you think if you moderated yourself more, if there was better content moderation on the platform, that you wouldn’t have to answer these questions from reporters about the great replacement theory as it relates to Democrats, the-
+
+Elon Musk (30:20):
+
+I don’t have to answer these questions.
+
+Don Lemon (30:21):
+
+…great replacement theory as it relates to Jewish people. Do you think that-
+
+Elon Musk (30:24):
+
+I don’t have to answer questions from the reporters, Don, the only reason I’m doing this interview is because you’re on the X platform and you asked for it. Otherwise, I would not do this interview.
+
+Don Lemon (30:35):
+
+Do you think that you wouldn’t get in trouble or you wouldn’t be criticized for these things, criticized-
+
+Elon Musk (30:38):
+
+I get criticized constantly. I could care less.
+
+Don Lemon (30:41):
+
+You don’t care?
+
+Elon Musk (30:42):
+
+No, I don’t care.
+
+Don Lemon (30:42):
+
+Why not?
+
+Elon Musk (30:44):
+
+I don’t think people should care what the media thinks about them. They’re terrible judges of character.
+
+Don Lemon (30:50):
+
+Even someone who has one of the biggest social media and biggest information platforms in the world, you don’t care? You don’t think that you have any… X.com, or… You don’t have any responsibility to the truth or moderating the platform?
+
+Elon Musk (31:05):
+
+You’re conflating the truth with the media and I think the media is not truthful.
+
+Don Lemon (31:09):
+
+Not with just the media, just the truth in general.
+
+Elon Musk (31:13):
+
+I care about the truth very much. That’s why we have, for example, community notes on the X system, where, in order for a community note to surface and provide corrective information about what somebody posts… And my posts are equally subject to this, I’ve been community noted many times. In order for a community note to surface, people who have historically disagreed must agree in order for a community note to surface. And all of the code for community notes is open source, all of the data is open source, so you can completely recreate it from scratch. The way to build trust is transparency.
+
+Don Lemon (31:49):
+
+I have noticed community notes. I think that you are right about that and I do think community notes are helpful. I think any type of content moderation, I do think that’s helpful. You recently called content moderation, though, a digital chastity belt. Do you believe that X and you have some responsibility to moderate hate speech on the platform?
+
+Elon Musk (32:08):
+
+I think we have a responsibility to adhere to the law and we have a responsibility to be transparent about when things are shown, why they’re shown. That’s why we open source our algorithm. I think once you start going beyond the law, now you’re putting a thumb on the scale and we don’t want to put our thumb on the scale.
+
+Don Lemon (32:29):
+
+It doesn’t concern you that hate speech has gone… Research shows that it’s gone up on the platform since you took over. That’s not concerning to you?
+
+Elon Musk (32:34):
+
+I believe that is false. In fact, the research that I’ve seen, it says it went down.
+
+Don Lemon (32:37):
+
+The study from the Institute of Strategic Dialogue found that anti-Semitic tweets doubled from June ’22 to February 2023. One study reported that as many as 86% of the posts reported for hateful content remained up after being reported. Hate speech on the platform is up.
+
+Elon Musk (32:57):
+
+What they will typically do is they’ll count the number of posts but not count the number of views. What matters is, was that post given high visibility or did one person see it? And if you look at the number of views, how many times was hate content viewed on our platform, it is down substantially.
+
+Don Lemon (33:16):
+
+Yeah. That’s not what the study shows. And you said you like transparency. I’m going to show you this and-
+
+Elon Musk (33:21):
+
+Don, you can get a study that we will tell you whatever you want.
+
+Don Lemon (33:25):
+
+These are just a handful of extremely… You look at those antisemitic and racist tropes and tweets and, as of this morning, they’re still on X and, from your own content policy, these posts should have been deleted. Why haven’t they been deleted? Why are they still there?
+
+Elon Musk (33:44):
+
+We delete things if they are illegal.
+
+Don Lemon (33:47):
+
+But these have been up there for a while.
+
+Elon Musk (33:48):
+
+Are they illegal?
+
+Don Lemon (33:50):
+
+They’re not illegal, but they’re hateful and they can lead to violence, as I just read to you. The shooters in all of these mass shootings
+
+Don Lemon (34:00):
+
+… things attributed social media to radicalizing.
+
+Elon Musk (34:04):
+
+So Don, you love censorship is what you’re saying?
+
+Don Lemon (34:07):
+
+No, I don’t love censorship.
+
+Elon Musk (34:08):
+
+Then why are you asking censor-
+
+Don Lemon (34:09):
+
+I believe in moderation, but I don’t believe in-
+
+Elon Musk (34:12):
+
+Moderation is a propaganda word for censorship.
+
+Don Lemon (34:15):
+
+But don’t you think free speech is one thing, right, or not-
+
+Elon Musk (34:19):
+
+Look, if something’s illegal, we’re going to take it down. If it’s not illegal, then we’re putting our thumb on the scale and we’re bringing censors.
+
+Don Lemon (34:28):
+
+You’re putting your thumb on the scale for moderating hate speech? I mean, you don’t put out child pornography. That’s not-
+
+Elon Musk (34:36):
+
+It’s illegal.
+
+Don Lemon (34:37):
+
+Some people would say that’s considered censorship. I’m just saying you-
+
+Elon Musk (34:40):
+
+No, I literally said if something is legal, we will obviously remove it. But if it’s not legal, the laws in this country are put forward by the citizens where democracy, if those laws put in place by the people, we adhere to those laws.
+
+Don Lemon (34:59):
+
+Okay. I agree.
+
+Elon Musk (35:01):
+
+If you go beyond the law, you are actually going beyond the will of the people.
+
+Don Lemon (35:05):
+
+Okay. Agreed, with the law. But if you are doing something that promotes hate and violence and ultimately leads to killing, you don’t feel you have any responsibility not to do that? When the people who are doing it admittedly are saying those-
+
+Elon Musk (35:22):
+
+Articles all the time that lead to violence and killing, don’t they? Shouldn’t they? Like you’re applying a differential standard to-
+
+Don Lemon (35:30):
+
+But that would never be in mainstream media. These types of images, that type of language. Those things would never be… When I was in mainstream media, we’d never promote things that would be antisemitic. We would never promote things that-
+
+Elon Musk (35:47):
+
+I wouldn’t either.
+
+Don Lemon (35:50):
+
+Did you not see those?
+
+Elon Musk (35:51):
+
+You said promote. If content is on the platform, that doesn’t mean we promote it.
+
+Don Lemon (35:56):
+
+But that wouldn’t be on a platform for mainstream media at all.
+
+Elon Musk (36:00):
+
+No, but you can think of that’s because the mainstream media has, whatever, 20 articles a day. We have 500 million posts today.
+
+Don Lemon (36:09):
+
+Does it bother you? How do you feel about that when you see it?
+
+Elon Musk (36:13):
+
+I obviously disagree with that and I think it’s not good at all. It’s terrible.
+
+Don Lemon (36:18):
+
+But you don’t want to get rid of it on the platform or at least moderate it.
+
+Elon Musk (36:23):
+
+What you’re suggesting is censorship that goes beyond the law and what I’m saying is that we… I guess have a disagreement because I do not believe in censorship that goes beyond law. And you do. We have a difference of opinion in that regard.
+
+Don Lemon (36:38):
+
+I understand that, but these are your own rules on your own platform. These go against the rules on your platform. That’s why I’m asking you. If you said, listen, we allow everything, but that’s not what your content rules say and that’s why I’m asking you why are they still there? Your own content policy. That’s why I’m asking you that. Not because-
+
+Elon Musk (36:55):
+
+Which part of our content policy says that we should delete these things?
+
+Don Lemon (36:59):
+
+Your content policy talks about hate speech.
+
+Elon Musk (37:02):
+
+Yes. We don’t promote hate speech.
+
+Don Lemon (37:05):
+
+And so you don’t consider that hate speech?
+
+Elon Musk (37:07):
+
+I guess you’re not understanding what I’m saying. You can sign up right now and do a hundred things that are hateful, but if nobody reads it, it doesn’t matter. So you can think of X as being… It’s much like the internet. It’s not some tiny publication with 20 articles a day. It’s 500 million.
+
+Don Lemon (37:34):
+
+But everyone has the opportunity to read it, Elon.
+
+Elon Musk (37:39):
+
+The opportunity to read the internet. Are you suggesting we should shut down the internet?
+
+Don Lemon (37:42):
+
+No. But you don’t own the internet. I’m asking you about you and your responsibility and your platform and so I see how you feel now. You don’t agree, we don’t agree on this.
+
+Elon Musk (37:52):
+
+Yes. You want censorship and I don’t.
+
+Don Lemon (37:53):
+
+No, I don’t want censorship at all.
+
+Elon Musk (37:55):
+
+Yes, you do.
+
+Don Lemon (37:55):
+
+No, I want responsibility. I think there-
+
+Elon Musk (37:58):
+
+You desperately want censorship.
+
+Don Lemon (38:00):
+
+No. If I want a censorship-
+
+Elon Musk (38:01):
+
+You want censorship so bad you can taste it.
+
+Don Lemon (38:02):
+
+No, that’s not true. It’s not true. I think that there’s right and wrong.
+
+Elon Musk (38:07):
+
+And want censorship.
+
+Don Lemon (38:08):
+
+And I think that when you have a platform that’s as big as yours and as powerful as yours and as influential as yours, and you are a person of consequence to the world with what you do, that there is a certain responsibility that goes along with what you have on your platform and what you put out to the world. And I think that’s important. You don’t see that responsibility?
+
+Elon Musk (38:28):
+
+I think we have a responsibility to adhere to the law and if people want the law changed, they should talk to their elected representative and get the law changed and then we’ll adhere to the law. But if you want us to go beyond the law, that is us deciding to be censors and I’m against censorship. I’m in favor of freedom of speech and freedom of speech only is relevant when people you don’t like say things you don’t like. Otherwise it has no meaning.
+
+Don Lemon (38:57):
+
+But I do think that there should be guardrails and I believe in free speech as much as you. I don’t disagree. I don’t agree with a lot of what you put out on social media, but I will fight for your right to be able to say it.
+
+Elon Musk (39:13):
+
+Great.
+
+Don Lemon (39:14):
+
+Yeah. Okay, so listen, let’s talk about diversity, equity, and inclusion. All right? That’s been a target of yours lately on… There was a repost of Ben Shapiro that you claim that DEI is killing people. Specifically, you point to medicine, you claim that DEI programs are putting people at risk. Do you really believe this to be true and what evidence do you have to support it?
+
+Elon Musk (39:35):
+
+What I was referring to there was that if we lower the standards for doctors so that… If the test for a doctor is lowered, then the probability of them making a mistake and killing someone is obviously going to be higher.
+
+Don Lemon (39:52):
+
+Wait, say that again? I’m not sure I understand what you said. I want to make sure I understand what you’re saying, I should say.
+
+Elon Musk (39:56):
+
+Yes. If the standards for passing medical exams and becoming a doctor or especially something like a surgeon, if the standards are lowered, then probability that the surgeon will make mistake is higher. They’re making mistakes in their exam. They may make mistakes with people and that may result in people dying.
+
+Don Lemon (40:16):
+
+What evidence do you have though that they’re lowering the standards? There’s no evidence of that.
+
+Elon Musk (40:21):
+
+I believe there is.
+
+Don Lemon (40:23):
+
+There’s no evidence of that. Elon, what is the evidence?
+
+Elon Musk (40:27):
+
+I believe they have literally lowered the standards at Duke University and that is what the article was referring
+
+Don Lemon (40:32):
+
+There’s no evidence of-
+
+Elon Musk (40:33):
+
+You say they have not lowered the standards?
+
+Don Lemon (40:34):
+
+There’s no evidence about lowering standards and I think that there is-
+
+Elon Musk (40:39):
+
+I believe that is a false statement you’re making.
+
+Don Lemon (40:40):
+
+Okay. Well, we’ll figure it out.
+
+Elon Musk (40:42):
+
+I think the interesting thing is when this is posted on the X platform, there’ll be a whole bunch of things that rebut what you said and what I said. So people can then make their own decision based on the replies and the rebuttals and the community notes.
+
+Don Lemon (40:54):
+
+I think that’s fair. But I do think that on this particular topic, I do think that you and Ben Shapiro are reaching about this because there was… What Ben posted said that people were… He gave instances of people who were deliberately harming people. Nowhere in the thread does Ben suggest at all I should say that anyone is being killed as a result of DEI. That’s purely speculative. There’s research on DEI and medicine and there’s no evidence that standards of being lowered, that DEI is affecting medicine. Actually only 5% of doctors are black and a small percent.
+
+Elon Musk (41:40):
+
+Yeah. Well, I think you’ll find that when this is posted to the X platform that people will reply to it with evidence. Maybe I’m wrong. Let’s see.
+
+Don Lemon (41:48):
+
+Okay, but that’s my whole thing about moderation. Maybe you’re wrong, but you’ll put it out there. You don’t know if it’s right. Do you think that your responsibility to make sure something is right before you, the person who owns it, Elon Musk is a huge figure in the world, that you should know that it’s true. There are people at X who can get research for you before you put something out there like that. That’s not necessarily true. Even in other examples.
+
+Elon Musk (42:14):
+
+If I say something that is inaccurate, I’m immediately corrected on the platform. That’s the advantage of a real time system like X. So there will be immediately in the replies, people correcting me, there’ll be community note that will correct me, which is attached to the actual post itself.
+
+Don Lemon (42:28):
+
+Do you think as many people read the-
+
+Elon Musk (42:29):
+
+Yes.
+
+Don Lemon (42:30):
+
+Do you think as many people read that as it reads your tweet?
+
+Elon Musk (42:32):
+
+Yes, in fact, and if there’s a community note that happens later that where somebody didn’t see but they’re replied to that or interacted with that post, we will notify them that there is now a community note correcting that post.
+
+(42:44)
+Whereas if you consider the conventional media, that doesn’t happen. Conventional media makes false statements all the time and nobody ever hears the correction.
+
+Don Lemon (42:52):
+
+When I was in conventional media, I can only speak for myself. If I got something wrong, if someone got something wrong on the platform that I was on, it was corrected and we made sure that it was corrected. Now I can’t speak for anyone else.
+
+Elon Musk (43:07):
+
+I don’t think that’s a universal situation.
+
+Don Lemon (43:08):
+
+Okay. So just the research. So when you talk, do you believe that people are dying because medical standards, DEI, is causing medical standards to be lowered. Do you actually believe people are dying because of that?
+
+Elon Musk (43:19):
+
+I believe that if we lower the standards for what it takes to become a doctor.
+
+Don Lemon (43:24):
+
+You’re saying if we lower the standards, but do you believe people are dying because the standards are being lowered?
+
+Elon Musk (43:30):
+
+I don’t think that is yet an issue, but it could become an issue.
+
+Don Lemon (43:35):
+
+Okay. But the actual evidence and history shows the exact opposite. If you look at how minorities were treated by the medical system, most doctors now are white and there are lots of mistakes in medicine. So you’re saying that my doctors have bad medical care. I’m trying to understand your logic here when it comes to DEI because there’s no actual evidence of what you’re saying.
+
+Elon Musk (44:04):
+
+No, I said… So if the standards, like let’s say, I think that particular thing was referring to surgeons. Let’s say a surgeon in training is asked to do a series of operations out of the supervision of a senior surgeon and they get a bunch of those operations wrong. If that happens, and yet they are still approved to be a surgeon, the probability that someone will die I think at some point is high.
+
+Don Lemon (44:32):
+
+Okay, I understand that, but that’s a hypothetical. That doesn’t mean it’s happening.
+
+Elon Musk (44:36):
+
+I didn’t say it’s happening.
+
+Don Lemon (44:39):
+
+You didn’t say it was happening.
+
+Elon Musk (44:40):
+
+I said it will. I said if we lower standards, people will die.
+
+Don Lemon (44:48):
+
+But why respond to something or put something out there that has not happened? Because I could say-
+
+Elon Musk (44:55):
+
+I don’t want it to happen. I think we don’t want to lower standards.
+
+Don Lemon (44:58):
+
+If you look at the history of the medical industry, especially when it comes to Black Americans, it shows the exact opposite. If you look at the Tuskegee experiment and on and on, only 5% of doctors in America are black, all of them are white. So are you saying that if the majority of doctors are white, are you saying that… And there are still these inequities, right? And there’s still mistakes. Are you blaming DEI for that?
+
+Elon Musk (45:24):
+
+No, I’m very basically saying that if we lower standards for what it takes to become a board certified surgeon or an oncologist or something where the kind of disease we’re talking about, if you make a mistake causes someone to die, then more people will die than if we don’t lower the standards. Therefore, we should not lower the standards.
+
+Don Lemon (45:48):
+
+But why do you think they’re lowering the standards for minority doctors or women doctors or…
+
+Elon Musk (45:53):
+
+That’s what that article suggested? Yes, at Duke University.
+
+Don Lemon (45:59):
+
+Okay. The evidence that I have shows that that’s not true. Okay, so listen. After the door blew off this midflight and this Alaskan airline flight, do you remember that you responded a post claiming that the average HBCU grad was less intelligent than the average airline pilot and stated that it will take an airplane crashing and killing hundreds of people for them to change this crazy policy of DIE? I don’t know if you did… You misspelled it on purpose, which should be DEI. Do you believe that women and minority pilots are inherently less intelligent and less skilled than white male pilots?
+
+Elon Musk (46:37):
+
+No. I’m just saying that we should not lower the standards for them.
+
+Don Lemon (46:41):
+
+Okay. But there’s no evidence that standards are being lowered when it comes to the airline industry.
+
+Elon Musk (46:48):
+
+You’ve repeatedly said that there’s no evidence that standards are being lowered and watch the replies showing all the evidence that it is.
+
+Don Lemon (46:54):
+
+Replies though on social media or on Twitter are not necessarily fact and evidence. That’s people’s opinion.
+
+Elon Musk (47:00):
+
+They will cite the replies. In the replies to this, you’ll see how often the information cited showing that indeed there are significant cases where standards are lowered.
+
+Don Lemon (47:13):
+
+And I do hope that happens. I do hope that happens and I look forward to it. And as you said, if you’re wrong, then you’re wrong. And if I’m wrong, then I’m wrong. Okay. And I am glad we’re having this conversation debating this, this is what we should be doing debating the issue. So if I’m wrong, then I’m wrong, and then there’ll be proven in the thing in you as well. But I just want to tell you that that pilot that you talked about, in fact was a woman pilot landed the plane safely despite the major found malfunction with the equipment, Boeing has taken responsibility for that incident saying that it was caused by faulty door panel. So I’m not sure what that had to do with lowering the standards for pilots when it was a faulty-
+
+Elon Musk (47:47):
+
+No, it’s not lowering standards for pilots. The incentive structure I believe at Boeing changed to include DEI as a fundamental executive incentive, but in my view, it should be purely about passenger safety.
+
+Don Lemon (48:06):
+
+Okay, but do you understand how by saying just that standards are being lowered, that you’re implying that they’re being lowered because people are less skilled and less intelligent and you’re talking about people of color and or women?
+
+Elon Musk (48:24):
+
+Look, I’m saying we should not lower standards, that’s it.
+
+Don Lemon (48:29):
+
+I think everyone can agree that you shouldn’t lower standards.
+
+Elon Musk (48:33):
+
+Right.
+
+Don Lemon (48:33):
+
+But you’re implying that they’re lowering standards because of people of color or women because someone is not a white male. You’re saying that they’re less skilled and less intelligent, that’s what you’re saying?
+
+Elon Musk (48:42):
+
+No, I’m not saying that. I’m simply saying that they are-
+
+Don Lemon (48:43):
+
+Then why would they be lowering the standards?
+
+Elon Musk (48:45):
+
+I don’t know. Why are they lowering the standards?
+
+Don Lemon (48:47):
+
+Just so you know, 5% of pilots are female, 4% are black. So you’re talking about this widespread takeover of minorities and women when that’s not actually true.
+
+Elon Musk (48:59):
+
+I’m not saying there’s a widespread takeover.
+
+Don Lemon (49:01):
+
+Well, you’re saying that the standards are being lowered because of certain people. You don’t believe in DEI, right? Do you not believe in diversity, equity and inclusion?
+
+Elon Musk (49:10):
+
+I think we should treat people according to their skills and their integrity and that’s it.
+
+Don Lemon (49:21):
+
+Do you know that studies show-
+
+Elon Musk (49:24):
+
+Studies show?
+
+Don Lemon (49:25):
+
+Yeah. Well, we can look them up. So your reaction to studies show, and I understand, right? Because I always like to say, I always like to point to an exact study, something that is factual. It’s the same thing when you talk about, well, let’s see what the replies are on Twitter or on X. So I feel the same. I feel way about that, but this is what studies have shown and people will reply and they’ll say that companies with more diversity and their leadership teams have reported higher innovation rates than those with lower diversity or low diversity, and they’re better companies and they make more money. This whole idea about DEI, if you go woke or whatever, you go broke, that’s not necessarily true. People with diverse leadership teams and diverse workers make more money and more innovative.
+
+Elon Musk (50:17):
+
+Like I said, my view is that the only basis for promoting somebody should be there are skills, talents, and their integrity. And that’s it.
+
+Don Lemon (50:27):
+
+I want to ask you about, there’s a federal government, EOC, they’re also currently involved in a lawsuit against Tesla that alleges that there is a history of widespread racial harassment against black Tesla employees as well as a pattern of retaliation for speaking out. What do you say to that?
+
+Elon Musk (50:44):
+
+Well, I don’t believe that is true. I think we’ve got a very good… If you walk around the Tesla Fremont plant, I think it’s a very good atmosphere. In fact, I practically lived there for
+
+Elon Musk (51:00):
+
+… for three years trying to make the production work.
+
+Don Lemon (51:02):
+
+Were you aware of such behavior?
+
+Elon Musk (51:05):
+
+I never saw it.
+
+Don Lemon (51:09):
+
+So you’re saying that this is not true, it’s not happening?
+
+Elon Musk (51:12):
+
+Well, I mean, there’s over 20,000 people, so you see, if there’s over 20,000 people in one building, is everyone going to behave perfectly? No. Did I see any situations that I thought were improper? I did not.
+
+Don Lemon (51:26):
+
+Let’s talk about trans rights and the woke mind virus, because you talk about that a lot, you write about that a lot on the thing. You have been deeply outspoken about the issue of trans rights. You posted that pronouns and bio mean the woke mind virus ate your brain. Do you know what the term woke actually means?
+
+Elon Musk (51:48):
+
+It’s come to mean a lot of things.
+
+Don Lemon (51:50):
+
+But what it actually, originally it was meant to mean. It’s just being aware of inequities in society, and being aware of facts and history.
+
+Elon Musk (52:01):
+
+Yeah, I think it’s come to be… I think being aware of inequities in society is fine, of course, but trying to make everything a race issue is, I think, divisive and corrosive to society.
+
+Don Lemon (52:19):
+
+Even as it relates to trans issues, which is what I’m…
+
+Elon Musk (52:22):
+
+Yeah. Race or gender or whatever.
+
+Don Lemon (52:25):
+
+You think that society blames everything on racism now?
+
+Elon Musk (52:30):
+
+It blames a lot of things on it and… Yeah.
+
+Don Lemon (52:34):
+
+Do you think that’s unfair?
+
+Elon Musk (52:36):
+
+Yeah.
+
+Don Lemon (52:37):
+
+Why?
+
+Elon Musk (52:38):
+
+I think we should not make this a constant subject. I think we need to move on. I think we just treat people like people.
+
+Don Lemon (52:50):
+
+You don’t agree that this country was founded on racism, and founded on slavery, and in many ways inequities that still continue on to this day?
+
+Elon Musk (53:05):
+
+I think every country at that time, and I think even today, was extremely racist, every country. And obviously slavery was present in about half this country, but was not present in the North. There was racism for sure, but I think we want to look to the future rather than the past. And instead of engaging in constant rehashing of the past… Because, in fact, if you look at history, if you study history broadly, everyone was a slave. Everyone.
+
+Don Lemon (53:53):
+
+Yes. Well, not everyone was a slave.
+
+Elon Musk (53:55):
+
+Everyone was a slave.
+
+Don Lemon (53:56):
+
+Okay. Good.
+
+Elon Musk (53:58):
+
+We are all descended from slaves. All of us. But just a question of when? Was it more recent or less recent? That’s it.
+
+Don Lemon (54:06):
+
+Right.
+
+Elon Musk (54:09):
+
+But what future do we want? Is this something we want to make part of our constant dialogue forever, or do we want to say, “Let’s just move on and treat everyone according to just who they are as an individual”?
+
+Don Lemon (54:24):
+
+I agree with you with that. That’s the ideal. But what the evidence shows is that that’s not what’s actually in practice.
+
+Elon Musk (54:33):
+
+I think we’re doing it better than anywhere else.
+
+Don Lemon (54:34):
+
+Yeah. That’s true. I agree with that, but that doesn’t mean a lot to a whole lot of people who aren’t able to take advantage of the opportunities that you are able to take advantage of, simply because of the color of your skin.
+
+Elon Musk (54:49):
+
+What advantages does it do, the color of my skin give me?
+
+Don Lemon (54:52):
+
+Well, there’s an ease that you have in society that many people of color don’t. You are able to come to this country voluntarily. There are many people who are not able to come to the country voluntarily. There are people who came here as slaves.
+
+Elon Musk (55:06):
+
+Actually, it was very difficult for me to come here.
+
+Don Lemon (55:07):
+
+And there is a legacy of slavery that still continues on. There’s a legacy of racism that still continues on in this country, and that’s undeniable.
+
+Elon Musk (55:15):
+
+Well, if we keep talking about it nonstop, it will never go away. If we keep making it the central thing, it will never go away.
+
+Don Lemon (55:25):
+
+Why do you believe that?
+
+Elon Musk (55:28):
+
+I think I’m just making a simple statement of fact. I think we want to get away from making everything a race or a gender or whatever issue and just treat people like individuals.
+
+Don Lemon (55:43):
+
+Do you have any desire to understand what many people of color and even trans people, how they feel about this country and how they’re treated in this country? If they say and they believe that they are treated a certain way in this country, why don’t you believe them?
+
+Elon Musk (56:02):
+
+You cannot have a situation where someone is a self-described victim and they just get to be that because that’s how they feel.
+
+Don Lemon (56:11):
+
+I think that that does happen in some cases, but not all cases. And I think that not understanding the history of the country, I think is a real shame. Look, I’ve had-
+
+Elon Musk (56:22):
+
+We should understand the history of the country and other countries.
+
+Don Lemon (56:25):
+
+I’ve had incredible opportunities as a person of color.
+
+Elon Musk (56:27):
+
+Right. You did very well.
+
+Don Lemon (56:28):
+
+But I’ve also been discriminated against and I know that I have, and I know that that’s real. And for someone to say that that isn’t happening and I should just move forward and not think about that and ignore the past is insulting.
+
+Elon Musk (56:42):
+
+I’m not saying it. Don, you keep putting words in my mouth. I’m not saying it’s not happening.
+
+Don Lemon (56:45):
+
+I didn’t say that you said it.
+
+Elon Musk (56:46):
+
+I’m saying that we as a country should move beyond questions of race and gender and we should treat people like individuals and base our opinions on their character and their skills.
+
+Don Lemon (57:02):
+
+I don’t think that anyone will disagree with that.
+
+Elon Musk (57:05):
+
+Exactly.
+
+Don Lemon (57:05):
+
+All I’m saying is that that’s not happening and is not equal for everyone, that those opportunities don’t happen for everyone. And I am a living example that they don’t. I know that they don’t because I live it.
+
+Elon Musk (57:17):
+
+You’ve been incredibly successful.
+
+Don Lemon (57:18):
+
+I have been, in spite of it all, but I know what I know. I’ve experienced what I’ve experienced. You haven’t done that and I cannot… I don’t know what it’s like to be from South Africa. I don’t know what it’s like to be a white man. I don’t know what it’s like to be a woman. I don’t know what it’s like to be a Latino person. I don’t know that. So I wouldn’t speak for them and just say, “You need to move on.” That’s not for me to say. Maybe I believe that it would be great if the country could live up to that ideal. You think that everyone has the same opportunities in America regardless of their background and ethnicity? Do you agree with that?
+
+Elon Musk (57:59):
+
+No, I don’t think everyone has the same opportunities.
+
+Don Lemon (58:01):
+
+Okay. So let’s talk about trans rights. When you decided to talk about the trans rights movement, you said that it was a woke mind virus. Why do you believe the trans rights movement is a woke mind virus? What do you mean by woke mind virus?
+
+Elon Musk (58:22):
+
+Woke mind virus is when you stop caring about people’s skills and their integrity and you start focusing instead on gender and race and other things that differ from that. I think the woke mind virus is fundamentally racist, fundamentally sexist and fundamentally evil. And we’ve got a little bit more time, so you choose your questions carefully.
+
+Don Lemon (58:51):
+
+Okay. Okay. Thank you for that. But I would appreciate you answering these. I think it’s important that we’re doing this. I think it’s important to the world to hear this, especially what’s going on in our country. The reason I ask you, look, and there are a whole lot of things that people maybe have questions about when it comes to transgender people, even people who are part of the LGBTQ+ community have questions about that. But if you are a free speech absolutist, and that is part of the First Amendment, also the freedom of expression falls under that First Amendment as well, so why can’t people choose to identify with the gender that they feel comfortable with or use a pronoun? Isn’t that part of freedom of expression?
+
+Elon Musk (59:33):
+
+I guess they can ask others to do whatever they feel… They can ask others to do anything. It’s a different question whether they mandate that others do that thing.
+
+Don Lemon (59:44):
+
+Okay. Let’s talk more about free speech and for advertisers, right? Because all this controversy, I believe, as you know, has made X less appealing to advertisers. About half of them have left the platform. You call advertisers that left X.com, you said they were oppressors. You’ve even gone as far as saying it publicly that they can go F themselves or go fuck themselves.
+
+Elon Musk (01:00:06):
+
+If they’re going to force censorship on a company before advertising, then obviously I find that unacceptable.
+
+Don Lemon (01:00:12):
+
+You find it unacceptable. Why is that not a form of free speech? They are free to advertise where they want. They’re not beholden to… They’re not obligated to advertise on X.com.
+
+Elon Musk (01:00:24):
+
+Right.
+
+Don Lemon (01:00:25):
+
+So how is that not free speech?
+
+Elon Musk (01:00:32):
+
+Whereas the other platforms will censor on behalf of advertisers, the X platform will not.
+
+Don Lemon (01:00:38):
+
+Okay, but you don’t think it’s okay for them not to advertise with or pad their content or their advertisement next to something that is anti-Semitic or-
+
+Elon Musk (01:00:54):
+
+That is a different question. You can absolutely choose next to which content do you want your advertising to appear. Absolutely, of course. And we have, I think, very good ad placement controls in this regard.
+
+Don Lemon (01:01:09):
+
+Yeah. So you said if they kill the company, it’s them, but doesn’t the buck stop with you? I mean, you-
+
+Elon Musk (01:01:18):
+
+I have to say, choose your question carefully. There’s five minutes left.
+
+Don Lemon (01:01:23):
+
+Okay. But-
+
+Elon Musk (01:01:24):
+
+Is this the question you want to ask?
+
+Don Lemon (01:01:25):
+
+Same question is, you said that they are killing the company, but you’re the head of the company. The buck doesn’t stop with you?
+
+Elon Musk (01:01:36):
+
+I acquired X in order to preserve freedom of speech in America, the First Amendment, and I’m going to stick to that. And if that means making less money, so be it.
+
+Don Lemon (01:01:49):
+
+So, listen, I am just being honest, right? I’m not trying to get you or anything. I was just surprised that you would blame other people for killing the company. I mean, when you say the buck stops with the President of the United States, regardless of what happens, why would that question upset you? You seem upset by it. Are you?
+
+Elon Musk (01:02:12):
+
+I think you-
+
+Don Lemon (01:02:12):
+
+And I’m not trying to upset you.
+
+Elon Musk (01:02:14):
+
+Well, you are upsetting me because the way you’re phrasing the questions I think is not cogent.
+
+Don Lemon (01:02:19):
+
+It’s not what?
+
+Elon Musk (01:02:20):
+
+Not cogent.
+
+Don Lemon (01:02:21):
+
+Cogent.
+
+Elon Musk (01:02:21):
+
+Yes.
+
+Don Lemon (01:02:22):
+
+Go ahead.
+
+Elon Musk (01:02:22):
+
+So if given a choice where an advertiser is saying, “You have to censor all this content on the platform,” irrespective of where their advertising appears, then our answer will be like, “Look, you can choose what you want your advertising to appear next to. But you can’t insist on censorship of the entire platform. And if you insist on censorship of the entire platform, even where your advertising doesn’t appear,” then obviously we will not want them as an advertiser.
+
+Don Lemon (01:02:56):
+
+So what would you say to advertisers who have left the platform or who are considering coming back or not coming back? What would you like to say to them?
+
+Elon Musk (01:03:05):
+
+Well, first of all, almost all of our advertisers are coming back to the platform. So it’s a very short list of advertisers who are not coming back to the platform. And our advertising revenue is rising rapidly and our subscription revenue is rising rapidly. And I feel very optimistic about the future of the X platform.
+
+Don Lemon (01:03:25):
+
+Okay. Listen, honestly, I’m not meaning to offend you. You’re an intense person. Where does that intensity come from?
+
+Elon Musk (01:03:33):
+
+I was born that way and I had a tough childhood.
+
+Don Lemon (01:03:39):
+
+You did?
+
+Elon Musk (01:03:39):
+
+Yeah.
+
+Don Lemon (01:03:40):
+
+How so?
+
+Elon Musk (01:03:42):
+
+Walter Isaacson goes into it in the book, and we only have a couple minutes left, so-
+
+Don Lemon (01:03:47):
+
+All right.
+
+Elon Musk (01:03:47):
+
+Too long to describe. So the one or two questions I can do and then we’ll have to call it.
+
+Don Lemon (01:03:54):
+
+Okay. Again, I don’t mean to upset you. Why are you… You just…
+
+Elon Musk (01:03:59):
+
+No, I have a whole room full of people waiting to meet with me.
+
+Don Lemon (01:04:02):
+
+Okay.
+
+Elon Musk (01:04:02):
+
+So we’re just going over time.
+
+Don Lemon (01:04:03):
+
+Okay. All right, I understand that. So you said you were born that way. Do you think that the way that you see the world has to do with your relationship with anyone, perhaps your father or someone in your family?
+
+Elon Musk (01:04:22):
+
+I think we’re all affected by the people we grew up with. My aspiration is to do whatever it takes to extend consciousness into the future. That’s my goal, to make life multi-planetary as part of extending consciousness into the future.
+
+Don Lemon (01:04:42):
+
+Have the past few years and considering everything that’s gone on, has it been difficult for you and your family life?
+
+Elon Musk (01:04:50):
+
+It’s been okay.
+
+Don Lemon (01:04:51):
+
+So then how do you see your legacy, Elon? How will people see you in the-
+
+Elon Musk (01:04:59):
+
+First of all, I’d say if I died knowing that I did what was right or did my best to do what was right, and even if in the history books they say I did wrong, I would still feel okay about that. I care about the reality of goodness, not the perception of it. I think we should view civilization as tenuous, as fragile. If you do study history broadly, you’ll see that there’s a rise and fall of civilizations. They don’t always go up. So we should do everything we possibly can to preserve and extend civilization as we know it and improve it to become more enlightened over time.
+
+(01:05:39)
+And we therefore want to address civilizational risks. We want to make sure that we don’t have, for example, demographic collapse, which is the case in a lot of countries, just very low birthrate. We want to obviously avoid World War III, anything that is a civilizational risk. That’s what I care about, civilizational risks. How do we extend consciousness into the future such that we are able to better understand the nature of reality? That’s what I care about. That’s my motivation.
+
+Don Lemon (01:06:12):
+
+I know you have to go, if you’ll just give me… I’ll do a rapid fire thing here. Is there anything that you would change about anything that you’ve done in your life in the past or recently?
+
+Elon Musk (01:06:23):
+
+I’ve made many mistakes over the years. If I had a time machine, I’d go back and fix them, but I don’t have a time machine.
+
+Don Lemon (01:06:28):
+
+Thank you, Elon.
+
+Elon Musk (01:06:28):
+
+Thank you.
+
+Don Lemon (01:06:29):
+
+I appreciate it. Thank you so much.
+
+(01:06:32)
+So that’s it. And as Elon would say, “You be the judge.” Let me tell you something about this show. The conversation doesn’t end just because the camera stops. We’ll see you next time. Thanks for watching. Thanks for watching The Don Lemon Show. Click on the image on the top right to subscribe to my channel and the thumbnail in the bottom right to watch more content from my show. I’ll see you next time.

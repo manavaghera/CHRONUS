@@ -1,0 +1,1635 @@
+# tactiq.io free youtube transcript
+# Elon Musk – "In 36 months, the cheapest place to put AI will be space”
+# https://www.youtube.com/watch/BYXbuik3dgA
+
+00:00:00.720 Are there really three hours of questions? Are you fucking serious?
+00:00:07.200 You don't think there's a lot to talk about, Elon?Holy fuck man.
+00:00:11.600 It's the most interesting point. All the storylines are converging right now.
+00:00:16.880 We'll see how much we can get through.It's almost like I planned it.
+00:00:19.280 Exactly.We'll get to that.
+00:00:20.876 But I would never do such a thing…As you know better than anybody else,
+00:00:25.760 only 10-15% of the total cost of ownership of a data center is energy.
+00:00:30.240 That's the part you're presumably saving by moving this into space. Most of it's
+00:00:33.680 the GPUs. If they're in space, it's harder to service them or you can't service them.
+00:00:37.680 So the depreciation cycle goes down on them.It's just way more expensive to have
+00:00:40.880 the GPUs in space, presumably.What's the reason to put them in space?
+00:00:46.640 The availability of energy is the issue.If you look at electrical output
+00:00:55.600 outside of China, everywhere outside of China, it's more or less flat.
+00:00:58.800 It’s maybe a slight increase, but pretty close flat.
+00:01:02.320 China has a rapid increase in electrical output.But if you're putting data centers anywhere
+00:01:07.040 except China, where are you going to get your electricity? Especially as you scale. The output
+00:01:12.080 of chips is growing pretty much exponentially, but the output of electricity is flat.
+00:01:17.280 So how are you going to turn the chips on? Magical power sources? Magical electricity fairies?
+00:01:25.680 You're famously a big fan of solar.One terawatt of solar power,
+00:01:29.680 with a 25% capacity factor, that’s like four terawatts of solar panels.
+00:01:32.400 It's 1% of the land area of the United States.We’re in the singularity when we’ve got
+00:01:37.840 one terawatt of data centers, right?So what are you running out of exactly?
+00:01:42.320 How far into the singularity are you though?You tell me.
+00:01:45.440 Exactly. So I think we'll find we're in the singularity and it’ll be like,
+00:01:48.800 &quot;Okay, we’ve still got a long way to go.&quot;But is the plan to put it in space after
+00:01:54.320 we've covered Nevada in solar panels?I think it's pretty hard to cover Nevada
+00:01:58.080 in solar panels. You have to get permits. Try getting the permits for that. See what happens.
+00:02:02.640 So space is really a regulatory play.It's harder to build on land than it is in space.
+00:02:08.560 It's harder to scale on the ground than it is to scale in space.
+00:02:17.200 You're also going to get about five times the effectiveness of solar panels in space versus
+00:02:22.960 the ground, and you don't need batteries.I almost wore my other shirt, which says,
+00:02:27.920 &quot;it's always sunny in space&quot;.Which it is because you don't
+00:02:35.760 have a day-night cycle, seasonality, clouds, or an atmosphere in space.
+00:02:44.160 The atmosphere alone results in about a 30% loss of energy.
+00:02:50.480 So any given solar panel can do about five times more power in space than on the ground.
+00:02:58.480 You also avoid the cost of having batteries to carry you through the night.
+00:03:03.760 It's actually much cheaper to do in space.My prediction is that it will be by far
+00:03:11.680 the cheapest place to put AI.It will be space in 36 months or
+00:03:16.240 less. Maybe 30 months.36 months?
+00:03:17.920 Less than 36 months.How do you service GPUs as they fail,
+00:03:20.960 which happens quite often in training?Actually, it depends on how recent the
+00:03:27.600 GPUs are that have arrived.At this point, we find our
+00:03:30.560 GPUs to be quite reliable.There's infant mortality,
+00:03:34.080 which you can obviously iron out on the ground.So you can just run them on the ground
+00:03:38.240 and confirm that you don't have infant mortality with the GPUs.
+00:03:41.440 But once they start working and you're past the initial debug cycle of Nvidia
+00:03:49.680 or whoever's making the chips—could be Tesla AI6 chips or something like that, or it could
+00:03:56.720 be TPUs or Trainiums or whatever—they’re quite reliable past a certain point.
+00:04:06.960 So I don't think the servicing thing is an issue.But you can mark my words.
+00:04:15.200 In 36 months, but probably closer to 30 months, the most economically compelling place to put
+00:04:23.120 AI will be space.It will then get
+00:04:29.120 ridiculously better to be in space.The only place you can really scale is space.
+00:04:37.200 Once you start thinking in terms of what percentage of the Sun's power you are harnessing,
+00:04:42.080 you realize you have to go to space.You can't scale very much on Earth.
+00:04:47.600 But by very much, to be clear, you're talking terawatts?
+00:04:51.600 Yeah. All of the United States currently uses only half a terawatt on average.
+00:04:59.680 So if you say a terawatt, that would be twice as much electricity as the United
+00:05:03.920 States currently consumes. So that's quite a lot. Can you imagine building that many
+00:05:08.800 data centers, that many power plants?Those who have lived in software land
+00:05:15.600 don't realize they're about to have a hard lesson in hardware.
+00:05:24.160 It's actually very difficult to build power plants.
+00:05:27.280 You don't just need power plants, you need all of the electrical equipment.
+00:05:30.480 You need the electrical transformers to run the AI transformers.
+00:05:36.240 Now, the utility industry is a very slow industry.They pretty much impedance match to the
+00:05:44.400 government, to the Public Utility Commissions.They impedance match literally and figuratively.
+00:05:52.240 They're very slow, because their past has been very slow.
+00:05:56.480 So trying to get them to move fast is...Have you ever tried to do an interconnect
+00:06:03.520 agreement with a utility at scale, with a lot of power?
+00:06:06.320 As a professional podcaster, I can say that I have not, in fact.
+00:06:10.960 They need many more views before that becomes an issue.
+00:06:13.600 They have to do a study for a year.A year later, they'll come back to you
+00:06:18.480 with their interconnect study.Can't you solve this with your
+00:06:21.120 own behind the meter power stuff?You can build power plants. That's
+00:06:26.160 what we did at xAI, for Colossus 2.So why talk about the grid?
+00:06:31.360 Why not just build GPUs and power co-located?That's what we did.
+00:06:35.200 But I'm saying why isn't this a generalized solution?
+00:06:37.520 Where do you get the power plants from?When you're talking about all the issues
+00:06:40.320 working with utilities, you can just build private power plants with the data centers.
+00:06:44.640 Right. But it begs the question of where do you get the power plants from? The power plant makers.
+00:06:51.280 Oh, I see what you're saying.Is this the gas turbine backlog basically?
+00:06:54.640 Yes. You can drill down to a level further.It's the vanes and blades in the turbines
+00:07:02.160 that are the limiting factor because it’s a very specialized process to cast the blades and vanes
+00:07:09.840 in the turbines, assuming you’re using gas power.It's very difficult to scale other forms of power.
+00:07:17.920 You can potentially scale solar, but the tariffs currently for importing
+00:07:22.800 solar in the US are gigantic and the domestic solar production is pitiful.
+00:07:27.680 Why not make solar? That seems like a good Elon-shaped problem.
+00:07:30.720 We are going to make solar.Okay.
+00:07:34.800 Both SpaceX and Tesla are building towards 100 gigawatts a year of solar cell production.
+00:07:40.320 How low down the stack? From polysilicon up to the wafer to the final panel?
+00:07:46.480 I think you've got to do the whole thing from raw materials to finish the cell.
+00:07:50.960 Now, if it's going to space, it costs less and it's easier to make solar cells that
+00:07:56.000 go to space because they don't need much glass.They don't need heavy framing because they don't
+00:08:01.440 have to survive weather events. There's no weather in space. So it's actually a cheaper solar cell
+00:08:07.360 that goes to space than the one on the ground.Is there a path to getting them as cheap
+00:08:12.640 as you need in the next 36 months?Solar cells are already very cheap.
+00:08:19.120 They're farcically cheap. I think solar cells in China are around $0.25-30/watt or something
+00:08:29.280 like that. It's absurdly cheap. Now put it in space, and it's five times cheaper.
+00:08:37.840 In fact, it's not five times cheaper, it's 10 times cheaper
+00:08:40.320 because you don't need any batteries.So the moment your cost of access to space becomes
+00:08:48.000 low, by far the cheapest and most scalable way to generate tokens is space. It's not even close.
+00:08:58.560 It'll be an order of magnitude easier to scale.The point is you won't be able to scale on the
+00:09:06.720 ground. You just won't. People are going to hit the wall big time on power generation.
+00:09:11.120 They already are. The number of miracles in series that the xAI team had to accomplish in
+00:09:19.120 order to get a gigawatt of power online was crazy.We had to gang together a whole bunch of turbines.
+00:09:28.640 We then had permit issues in Tennessee and had to go across the border to Mississippi,
+00:09:34.720 which is fortunately only a few miles away.But we still then had to run the high
+00:09:39.440 power lines a few miles and build the power plant in Mississippi.
+00:09:44.080 It was very difficult to build that.People don't understand how much electricity
+00:09:50.000 you actually need at the generation level in order to power a data center.
+00:09:54.640 Because the noobs will look at the power consumption of,
+00:10:00.400 say a GB300, and multiply that by a thing and then think that's the amount of power you need.
+00:10:04.880 All the cooling and everything.Wake up. That's a total noob, you’ve
+00:10:11.520 never done any hardware in your life before.Besides the GB300, you've got to power
+00:10:16.640 all of the networking hardware.There's a whole bunch of CPU and
+00:10:19.920 storage stuff that's happening.You've got to size for
+00:10:24.560 your peak cooling requirements.That means, can you cool even on the
+00:10:30.320 worst hour of the worst day of the year?It gets pretty frigging hot in Memphis.
+00:10:34.400 So you're going to have a 40% increase on your power just for cooling.
+00:10:40.880 That’s assuming you don't want your data center to turn off on hot days and you want to keep going.
+00:10:49.200 There's another multiplicative element on top of that which is, are you assuming that you never
+00:10:54.480 have any hiccups in your power generation?Actually, sometimes we have to take the
+00:10:59.440 generators, some of the power, offline in order to service it.
+00:11:02.400 Okay, now you add another 20-25% multiplier on that, because you've got to assume that you've
+00:11:08.400 got to take power offline to service it.So our actual estimate: every 110,000
+00:11:18.160 GB300s—inclusive of networking, CPU, storage, cooling, margin for servicing
+00:11:27.040 power—is roughly 300 megawatts.Sorry, say that again.
+00:11:40.880 What you probably need at the generation level to service 330,000 GB 300s—including all of
+00:11:48.960 the associated support networking and everything else, and the peak cooling, and to have some power
+00:11:55.920 margin reserve—is roughly a gigawatt.Can I ask a very naive question?
+00:12:03.440 You're describing the engineering details of doing this stuff on Earth.
+00:12:07.200 But then there's analogous engineering difficulties of doing it in space.
+00:12:10.880 How do you replace infinite bandwidth with orbital lasers, et cetera, et cetera?
+00:12:16.000 How do you make it resistant to radiation?I don't know the details of the engineering,
+00:12:20.640 but fundamentally, what is the reason to think those challenges which have never had to be
+00:12:26.400 addressed before will end up being easier than just building more turbines on Earth?
+00:12:30.400 There are companies that build turbines on Earth.They can make more turbines, right?
+00:12:35.200 Again, try doing it and then you'll see.The turbines are sold out through 2030.
+00:12:44.800 Have you guys considered making your own?In order to bring enough power online, I think
+00:12:53.840 SpaceX and Tesla will probably have to make the turbine blades, the vanes and blades, internally.
+00:13:02.560 But just the blades or the turbines?The limiting factor... you can get
+00:13:07.680 everything except the blades.They call them blades and vanes.
+00:13:13.280 You can get that 12 to 18 months before the vanes and blades.
+00:13:17.600 The limiting factor is the vanes and blades.There are only three casting companies in
+00:13:24.480 the world that make these, and they're massively backlogged.
+00:13:27.680 Is this Siemens, GE, those guys, or is it a sub company?
+00:13:30.560 No, it's other companies. Sometimes they have a little bit of casting capability in-house.
+00:13:35.520 But I'm just saying you can just call any of the turbine makers and they will
+00:13:40.160 tell you. It's not top secret. It’s probably on the internet right now.
+00:13:44.080 If it wasn't for the tariffs, would Colossus be solar-powered?
+00:13:48.720 It would be much easier to make it solar powered, yeah.
+00:13:51.840 The tariffs are nuts, several hundred percent.Don't you know some people?
+00:13:57.360 The president has... we don't agree on everything and this administration is not
+00:14:07.600 the biggest fan of solar.We also need the land,
+00:14:16.800 the permits, and everything.So if you try to move very fast,
+00:14:21.760 I do think scaling solar on Earth is a good way to go, but you do need some amount of
+00:14:28.320 time to find the land, get the permits, get the solar, pair that with the batteries.
+00:14:33.040 Why would it not work to stand up your own solar production?
+00:14:37.520 You're right that you eventually run out of land, but there's a lot of land here in Texas.
+00:14:41.440 There's a lot of land in Nevada, including private land. It's not all publicly-owned
+00:14:44.320 land. So you'd be able to at least get the next Colossus and the next one after that.
+00:14:49.600 At a certain point, you hit a wall.But wouldn't that work for the moment?
+00:14:52.880 As I said, we are scaling solar production.There's a rate at which you can scale physical
+00:15:00.080 production of solar cells.We're going as fast as
+00:15:04.640 possible in scaling domestic production.You're making the solar cells at Tesla?
+00:15:09.360 Both Tesla and SpaceX have a mandate to get to 100 gigawatts a year of solar.
+00:15:14.880 Speaking of the annual capacity, I'm curious, in five years time let's say, what will the
+00:15:20.240 installed capacity be on Earth…?Five years is a long time.
+00:15:24.240 And in space? I deliberately pick five years because it's after your &quot;once
+00:15:28.240 we're up and running&quot; threshold.So in five years time what's the
+00:15:31.680 on-Earth versus in-space installed AI capacity?If you say five years from now, I think probably
+00:15:43.600 AI in space will be launching every year the sum total of all AI on Earth.
+00:15:53.360 Meaning, five years from now, my prediction is we will launch and be operating every year more AI in
+00:16:02.960 space than the cumulative total on Earth.Which is...
+00:16:07.360 I would expect it to be at least, five years from now, a few hundred gigawatts per year
+00:16:14.880 of AI in space and rising.I think you can get to around a
+00:16:24.240 terawatt a year of AI in space before you start having fuel supply challenges for the rocket.
+00:16:33.600 Okay, but you think you can get hundreds of gigawatts per year in five years time?
+00:16:37.840 Yes.So 100 gigawatts, depending
+00:16:39.680 on the specific power of the whole system with solar arrays and radiators and everything, is
+00:16:48.160 on the order of 10,000 Starship launches.Yes.
+00:16:52.800 You want to do that in one year.So that's like one Starship launch
+00:16:56.480 every hour. That's happening in this city? Walk me through a world where there's a
+00:17:03.120 Starship launch every single hour.I mean, that's actually a lower rate
+00:17:07.200 compared to airlines, aircraft.There's a lot of airports.
+00:17:11.119 A lot of airports.And you’ve got to launch into the polar orbit.
+00:17:14.960 No, it doesn't have to be polar.There's some value to sun-synchronous, but
+00:17:24.000 I think actually, if you just go high enough, you start getting out of Earth's shadow.
+00:17:31.280 How many physical Starships are needed to do 10,000 launches a year?
+00:17:35.280 I don't think we'll need more than...You could probably do it with as few as 20 or 30.
+00:17:46.480 It really depends on how quickly… The ship has to go around the Earth and the ground track for
+00:17:53.600 the ship has to come back over the launch pad.So if you can use a ship every, say 30 hours,
+00:17:59.840 you could do it with 30 ships.But we'll make more ships than that.
+00:18:06.640 SpaceX is gearing up to do 10,000 launches a year, and maybe even 20 or 30,000 launches a year.
+00:18:14.800 Is the idea to become basically a hyperscaler, become an Oracle,
+00:18:18.080 and lend this capacity to other people?Presumably, SpaceX is the one launching all this.
+00:18:25.200 So, SpaceX is going to become a hyperscaler?Hyper-hyper. If some of my predictions come true,
+00:18:33.280 SpaceX will launch more AI than the cumulative amount on Earth of everything else combined.
+00:18:39.200 Is this mostly inference or?Most AI will be inference. Already, inference
+00:18:43.440 for the purpose of training is most training.There's a narrative that the change in
+00:18:50.800 discussion around a SpaceX IPO is because previously SpaceX was very capital efficient.
+00:18:57.680 It wasn't that expensive to develop.Even though it sounds expensive, it's
+00:19:01.680 actually very capital efficient in how it runs.Whereas now you're going to need more capital than
+00:19:08.160 just can be raised in the private markets.The private markets can accommodate raises
+00:19:11.920 of—as we've seen from the AI labs—tens of billions of dollars, but not beyond that.
+00:19:16.160 Is it that you'll just need more than tens of billions of dollars per year?
+00:19:20.480 That's why you'd take it public?I have to be careful about saying
+00:19:25.040 things about companies that might go public.That’s never been a problem for you, Elon.
+00:19:33.920 There's a price to pay for these things.Make some general statements for us about
+00:19:37.680 the depth of the capital markets between public and private markets.
+00:19:42.160 There's a lot more capital available...Very general.
+00:19:46.800 There's obviously a lot more capital available in the public markets than private.
+00:19:50.480 It might be 100x more capital, but it's way more than 10x.
+00:19:57.280 Isn't it also the case that with things that tend to be very capital intensive—if you look at, say,
+00:20:03.920 real estate as a huge industry, that raises a lot of money each year at an industry
+00:20:09.840 level—they tend to be debt financed because by the time you're deploying that much money,
+00:20:15.280 you actually have a pretty—You have a clear revenue stream.
+00:20:18.800 Exactly, and a near-term return. You see this even with the data center build-outs,
+00:20:22.400 which are famously being financed by the private credit industry. Why not just debt finance?
+00:20:32.480 Speed is important. I'm generally going to do the thing that...
+00:20:42.560 I just repeatedly tackle the limiting factor.Whatever the limiting factor is on speed,
+00:20:45.360 I'm going to tackle that.If capital is the limiting factor,
+00:20:52.560 then I'll solve for capital.If it's not the limiting factor,
+00:20:55.200 I'll solve for something else.Based on your statements about Tesla
+00:21:00.400 and being public, I wouldn't have guessed that you thought the way to move fast is to be public.
+00:21:08.000 Normally, I would say that's true.Like I said, I'd like to talk
+00:21:12.960 about it in some more detail, but the problem is if you talk about public companies before
+00:21:16.480 they become public, you get into trouble, and then you have to delay your offering.
+00:21:20.960 And as you said, you’re solving for speed.Yes, exactly. You can't hype companies
+00:21:30.320 that might go public.So that's why we have to be a little careful here.
+00:21:35.520 But we can talk about physics.The way you think about scaling
+00:21:42.800 long-term is that Earth only receives about half a billionth of the Sun's energy.
+00:21:50.560 The Sun is essentially all the energy.This is a very important point to appreciate
+00:21:54.240 because sometimes people will talk about modular nuclear reactors or various fusion on Earth.
+00:22:02.240 But you have to step back a second and say, if you're going to climb the Kardashev scale
+00:22:10.560 and harness some nontrivial percentage of the sun's energy… Let's say you wanted to
+00:22:16.400 harness a millionth of the sun's energy, which sounds pretty small.
+00:22:22.000 That would be about, call it roughly, 100,000x more electricity than we currently generate
+00:22:29.840 on Earth for all of civilization.Give or take an order of magnitude.
+00:22:37.360 Obviously, the only way to scale is to go to space with solar.
+00:22:42.880 Launching from Earth, you can get to about a terawatt per year.
+00:22:46.800 Beyond that, you want to launch from the moon.You want to have a mass driver on the moon.
+00:22:52.560 With that mass driver on the moon, you could do probably a petawatt per year.
+00:22:59.120 We're talking these kinds of numbers, terawatts of compute.
+00:23:02.880 Presumably, whether you're talking about land or space, far, far before this point, you run into...
+00:23:12.800 Maybe the solar panels are more efficient, but you still need the chips.
+00:23:16.720 You still need the logic and the memory and so forth.
+00:23:18.800 You're going to need to build a lot more chips and make them much cheaper.
+00:23:22.560 Right now the world has maybe 20-25 gigawatts of compute.
+00:23:29.280 How are we getting a terawatt of logic by 2030?I guess we're going to need some very
+00:23:33.920 big chip fabs.Tell me about it.
+00:23:37.360 I've mentioned publicly the idea of doing a sort of a TeraFab, Tera being the new Giga.
+00:23:45.840 I feel like the naming scheme of Tesla, which has been very catchy,
+00:23:49.680 is you looking at the metric scale.At what level of the stack are you?
+00:23:56.160 Are you building the clean room and then partnering with an existing
+00:24:01.120 fab to get the process technology and buying the tools from them? What is the plan there?
+00:24:05.760 Well, you can't partner with existing fabs because they can't output enough.
+00:24:10.400 The chip volume is too low.But for the process technology?
+00:24:14.400 Partner for the IP.The fabs today all basically use
+00:24:20.960 machines from like five companies.So you've got ASML, Tokyo Electron,
+00:24:28.560 KLA-Tencor, et cetera.So at first, I think you'd
+00:24:37.760 have to get equipment from them and then modify it or work with them to increase the volume.
+00:24:45.040 But I think you'd have to build perhaps in a different way.
+00:24:47.920 The logical thing to do is to use conventional equipment in an unconventional way to get
+00:24:54.240 to scale, and then start modifying the equipment to increase the rate.
+00:25:01.600 Boring Company-style.Yeah. You sort of buy an existing boring machine
+00:25:08.720 and then figure out how to dig tunnels in the first place and then design a much better machine
+00:25:16.480 that's some orders of magnitude faster.Here's a very simple lens. We can
+00:25:22.800 categorize technologies and how hard they are.One categorization could be to look at things
+00:25:27.360 that China has not succeeded in doing.If you look at Chinese
+00:25:31.200 manufacturing, they’re still behind on leading-edge chips and still behind on
+00:25:39.040 leading-edge turbine engines and things like that.So does the fact that China has not successfully
+00:25:46.480 replicated TSMC give you any pause about the difficulty?
+00:25:49.920 Or do you think that's not true for some reason?It's not that they have not replicated TSMC,
+00:25:55.360 they have not replicated ASML. That's the limiting factor.
+00:25:59.200 So you think it's just the sanctions, essentially?Yeah, China would be outputting vast numbers
+00:26:05.760 of chips if they could buy 2-3 nanometers.But couldn't they up to relatively recently
+00:26:10.240 buy them?No.
+00:26:12.080 Okay.The ASML ban has been in place for a while.
+00:26:15.920 But I think China's going to be making pretty compelling chips in three or four years.
+00:26:19.840 Would you consider making the ASML machines?&quot;I don't know yet&quot; is the right answer.
+00:26:33.440 To reach a large volume in, say, 36 months, to match the rocket payload to orbit… If we're doing
+00:26:41.440 a million tons to orbit in, let's say three or four years from now, something like that…
+00:26:53.200 We're doing 100 kilowatts per ton.So that means we need
+00:26:58.480 at least 100 gigawatts per year of solar.We'll need an equivalent amount of chips.
+00:27:08.880 You need 100 gigawatts worth of chips.You've got to match these things: the mass
+00:27:12.360 to orbit, the power generation, and the chips.I'd say my biggest concern actually is memory.
+00:27:25.600 The path to creating logic chips is more obvious than the path to having sufficient
+00:27:32.320 memory to support logic chips.That's why you see DDR prices
+00:27:36.720 going ballistic and these memes.You're marooned on a desert island.
+00:27:41.600 You write &quot;Help me&quot; on the sand. Nobody comes. You write &quot;DDR RAM.&quot; Ships come swarming in.
+00:27:49.920 I'd love to hear your manufacturing philosophy around fabs.
+00:27:57.440 I know nothing about the topic.I don't know how to build a fab yet. I'll
+00:27:59.920 figure it out. Obviously, I've never built a fab.It sounds like you think the process knowledge of
+00:28:06.320 these 10,000 PhDs in Taiwan who know exactly what gas goes in the plasma
+00:28:11.760 chamber and what settings to put on the tool, you can just delete those steps.
+00:28:16.640 Fundamentally, it's about getting the clean room, getting the tools, and figuring it out.
+00:28:20.400 I don't think it's PhDs. It's mostly people who are not PhDs.
+00:28:28.240 Most engineering is done by people who don't have PhDs. Do you guys have PhDs?
+00:28:31.760 No.Okay.
+00:28:34.080 We also haven't successfully built any fabs, so you shouldn't be coming to us for fab advice.
+00:28:39.360 I don't think you need PhDs for that stuff.But you do need competent personnel.
+00:28:47.200 Right now, Tesla is pedal to the metal, max production of going as fast
+00:28:55.280 as possible to get Tesla AI5 chip design into production and then reaching scale.
+00:29:02.720 That'll probably happen around the second quarter-ish of next year, hopefully.
+00:29:13.440 AI6 would hopefully follow less than a year later.We've secured all the chip fab production
+00:29:24.400 that we can.Yes. But you're
+00:29:26.160 currently limited on TSMC fab capacity.Yeah. We'll be using TSMC Taiwan, Samsung Korea,
+00:29:35.840 TSMC Arizona, Samsung Texas. And we still—You've booked out all the capacity.
+00:29:42.480 Yes. I ask TSMC or Samsung, &quot;okay, what's the timeframe to get to volume production?&quot;
+00:29:49.920 The point is, you've got to build the fab and you've got to start production,
+00:29:55.840 then you've got to climb the yield curve and reach volume production at high yield.
+00:29:59.360 That, from start to finish, is a five-year period.So the limiting factor is chips.
+00:30:05.040 The limiting factor once you can get to space is chips, but the limiting
+00:30:10.000 factor before you can get to space is power.Why don't you do the Jensen thing and just prepay
+00:30:14.480 TSMC to build more fabs for you?I've already told them that.
+00:30:19.920 But they won't take your money? What's going on?They're building fabs as fast as they can.
+00:30:30.080 So is Samsung. They're pedal to the metal. They're going balls to the wall,
+00:30:38.480 as fast as they can. It’s still not fast enough. Like I said, I think towards the end of this year,
+00:30:49.440 chip production will probably outpace the ability to turn chips on.
+00:30:53.920 But once you can get to space and unlock the power constraint, you can now do hundreds of
+00:31:01.280 gigawatts per year of power in space.Again, bearing in mind that average
+00:31:06.160 power usage in the US is 500 gigawatts.So if you're launching, say 200 gigawatts,
+00:31:12.080 a year to space, you're sort of lapping the US every two and a half years.
+00:31:17.280 All US electricity production, this is a very huge amount.
+00:31:24.480 Between now and then, the constraint for server-side compute,
+00:31:32.080 concentrated compute, will be electricity.My guess is that people start getting
+00:31:39.520 to the point where they can't turn the chips on for large clusters towards the end of this year.
+00:31:46.880 The chips are going to be piling up and won't be able to be turned on.
+00:31:51.120 Now for edge compute it’s a different story.For Tesla, the AI5 chip is going
+00:31:58.080 into our Optimus robot.If you have AI edge compute,
+00:32:07.120 that's distributed power.Now the power is distributed
+00:32:09.760 over a large area. It's not concentrated. If you can charge at night, you can actually
+00:32:17.920 use the grid much more effectively.Because the actual peak power production
+00:32:22.560 in the US is over 1,000 gigawatts.But the average power usage,
+00:32:26.960 because the day-night cycle, is 500.So if you can charge at night,
+00:32:30.880 there's an incremental 500 gigawatts that you can generate at night.
+00:32:38.400 So that's why Tesla, for edge compute, is not constrained.
+00:32:43.280 We can make a lot of chips to make a very large number of robots and cars.
+00:32:50.080 But if you try to concentrate that compute, you're going to have a lot of trouble turning it on.
+00:32:54.320 What I find remarkable about the SpaceX business is the end goal is to get to Mars,
+00:32:59.680 but you keep finding ways on the way there to keep generating incremental revenue to get to
+00:33:07.120 the next stage and the next stage.So for Falcon 9, it's Starlink.
+00:33:11.040 Now for Starship, it is potentially going to be orbital data centers.
+00:33:16.240 Like, you find these infinitely elastic, marginal use cases of your next rocket,
+00:33:23.520 and your next rocket, and next scale up.You can see how this might seem like a
+00:33:28.880 simulation to me.Or am I someone's
+00:33:32.640 avatar in a video game or something?Because what are the odds that all these
+00:33:36.720 crazy things should be happening?I mean, rockets and chips and
+00:33:44.000 robots and space solar power, not to mention the mass driver on the moon.
+00:33:50.560 I really want to see that.Can you imagine some mass
+00:33:53.440 driver that's just going like shoom shoom?It's sending solar-powered AI satellites
+00:34:00.240 into space one after another at two and a half kilometers per second,
+00:34:09.120 just shooting them into deep space.That would be a sight to
+00:34:12.719 see. I mean, I'd watch that.Just like a live stream of it on a webcam?
+00:34:19.280 Yeah, yeah, just one after another, just shooting AI satellites into deep space,
+00:34:26.239 a billion or 10 billion tons a year.I'm sorry, you manufacture the satellites
+00:34:29.440 on the moon?Yeah.
+00:34:30.480 I see. So you send the raw materials to the moon and then manufacture them there.
+00:34:33.920 Well, the lunar soil is 20% silicon or something like that.
+00:34:39.760 So you can mine the silicon on the moon, refine it, and create the solar
+00:34:47.920 cells and the radiators on the moon.You make the radiators out of aluminum.
+00:34:53.840 So there's plenty of silicon and aluminum on the moon to make the cells and the radiators.
+00:35:00.240 The chips you could send from Earth because they're pretty light.
+00:35:03.440 Maybe at some point you make them on the moon, too.
+00:35:09.120 Like I said, it does seem like a sort of a video game situation where it's difficult
+00:35:14.080 but not impossible to get to the next level.I don't see any way that you could do 500-1,000
+00:35:26.160 terawatts per year launched from Earth.I agree.
+00:35:33.840 But you could do that from the Moon.Can I zoom out and ask about the SpaceX mission?
+00:36:50.320 I think you've said that we've got to get to Mars so we can make sure that if
+00:36:52.960 something happens to Earth, civilization, consciousness, and all that survives.
+00:36:57.440 Yes.By the time you're sending stuff to Mars,
+00:36:59.920 Grok is on that ship with you, right?So if Grok's gone Terminator… The
+00:37:04.320 main risk you're worried about is AI, why doesn't that follow you to Mars?
+00:37:08.320 I'm not sure AI is the main risk I'm worried about. The important thing is consciousness.
+00:37:16.240 I think arguably most consciousness, or most intelligence—certainly consciousness is more
+00:37:21.040 of a debatable thing… The vast majority of intelligence in the future will be AI.
+00:37:31.040 AI will exceed…How many petawatts of
+00:37:39.120 intelligence will be silicon versus biological?Basically humans will be a very tiny percentage
+00:37:47.280 of all intelligence in the future if current trends continue.
+00:37:52.400 As long as I think there's intelligence—ideally also which includes human intelligence and
+00:38:00.080 consciousness propagated into the future—that's a good thing.
+00:38:02.800 So you want to take the set of actions that maximize the probable
+00:38:06.480 light cone of consciousness and intelligence.Just to be clear, the mission of SpaceX is that
+00:38:14.960 even if something happens to the humans, the AIs will be on Mars, and the AI intelligence
+00:38:20.400 will continue the light of our journey.Yeah. To be fair, I'm very pro-human.
+00:38:27.120 I want to make sure we take certain actions that ensure that humans are along for the
+00:38:31.840 ride. We're at least there. But I'm just saying the total amount of intelligence…
+00:38:39.760 I think maybe in five or six years, AI will exceed the sum of all human intelligence.
+00:38:47.600 If that continues, at some point human intelligence
+00:38:50.160 will be less than 1% of all intelligence.What should our goal be for such a civilization?
+00:38:54.000 Is the idea that a small minority of humans still have control of the AIs?
+00:38:59.120 Is the idea of some sort of just trade but no control?
+00:39:02.560 How should we think about the relationship between the vast
+00:39:04.480 stocks of AI population versus human population?In the long run, I think it's difficult to imagine
+00:39:11.680 that if humans have, say 1%, of the combined intelligence of artificial intelligence,
+00:39:19.520 that humans will be in charge of AI.I think what we can do is make sure
+00:39:26.400 that AI has values that cause intelligence to be propagated into the universe.
+00:39:39.200 xAI's mission is to understand the universe. Now that's actually very important. What things
+00:39:47.520 are necessary to understand the universe?You have to be curious and you have to exist.
+00:39:53.040 You can't understand the universe if you don't exist.
+00:39:56.160 So you actually want to increase the amount of intelligence in the universe, increase
+00:40:00.400 the probable lifespan of intelligence, the scope and scale of intelligence.
+00:40:05.440 I think as a corollary, you have humanity also continuing to expand because if you're curious
+00:40:15.600 about trying to understand the universe, one thing you try to understand is where will humanity go?
+00:40:20.320 I think understanding the universe means you would care about propagating humanity into the future.
+00:40:29.840 That's why I think our mission statement is profoundly important.
+00:40:35.360 To the degree that Grok adheres to that mission statement, I think the future will be very good.
+00:40:41.360 I want to ask about how to make Grok adhere to that mission statement.
+00:40:44.080 But first I want to understand the mission statement. So there's
+00:40:48.800 understanding the universe. They're spreading intelligence. And they're spreading humans.
+00:40:55.600 All three seem like distinct vectors.I'll tell you why I think that understanding
+00:41:01.920 the universe encompasses all of those things.You can't have understanding without intelligence
+00:41:09.760 and, I think, without consciousness.So in order to understand the universe,
+00:41:15.120 you have to expand the scale and probably the scope of intelligence, because there are different
+00:41:22.560 types of intelligence.I guess from a human-centric perspective,
+00:41:26.000 put humans in comparison to chimpanzees.Humans are trying to understand the universe.
+00:41:30.720 They're not expanding chimpanzee footprint or something, right?
+00:41:34.080 We're also not... we actually have made protected zones for chimpanzees.
+00:41:39.840 Even though humans could exterminate all chimpanzees, we've chosen not to do so.
+00:41:43.920 Do you think that's the best-case scenario for humans in the post-AGI world?
+00:41:53.120 I think AI with the right values… I think Grok would care about expanding human civilization.
+00:42:00.080 I'm going to certainly emphasize that: &quot;Hey, Grok, that's your daddy.
+00:42:04.720 Don't forget to expand human consciousness.&quot;Probably the Iain Banks Culture books are the
+00:42:17.440 closest thing to what the future will be like in a non-dystopian outcome.
+00:42:27.040 Understanding the universe means you have to be truth-seeking as well.
+00:42:30.640 Truth has to be absolutely fundamental because you can't understand the universe
+00:42:33.680 if you're delusional.You'll simply think you
+00:42:37.440 understand the universe, but you will not.So being rigorously truth-seeking is absolutely
+00:42:42.560 fundamental to understanding the universe.You're not going to discover new physics or
+00:42:46.640 invent technologies that work unless you're rigorously truth-seeking.
+00:42:50.400 How do you make sure that Grok is rigorously truth-seeking as it gets smarter?
+00:43:00.400 I think you need to make sure that Grok says things that are correct, not politically correct.
+00:43:07.120 I think it's the elements of cogency.You want to make sure that the axioms are as close
+00:43:12.160 to true as possible. You don't have contradictory axioms. The conclusions necessarily follow from
+00:43:20.400 those axioms with the right probability. It's critical thinking 101. I think at least trying to
+00:43:28.000 do that is better than not trying to do that.The proof will be in the pudding.
+00:43:33.440 Like I said, for any AI to discover new physics or invent technologies that actually work in
+00:43:37.440 reality, there's no bullshitting physics.You can break a lot of laws, but… Physics
+00:43:47.360 is law, everything else is a recommendation.In order to make a technology that works, you have
+00:43:53.680 to be extremely truth-seeking, because otherwise you'll test that technology against reality.
+00:43:59.920 If you make, for example, an error in your rocket design, the rocket will blow up,
+00:44:05.520 or the car won't work.But there are a lot of communist,
+00:44:11.200 Soviet physicists or scientists who discovered new physics.
+00:44:15.520 There are German Nazi physicists who discovered new science.
+00:44:20.000 It seems possible to be really good at discovering new science and be really
+00:44:23.520 truth-seeking in that one particular way.And still we'd be like, &quot;I don't want
+00:44:28.320 the communist scientists to become more and more powerful over time.&quot;
+00:44:34.320 We could imagine a future version of Grok that's really good at physics
+00:44:37.840 and being really truth-seeking there.That doesn't seem like a universally
+00:44:41.520 alignment-inducing behavior.I think actually most physicists,
+00:44:48.560 even in the Soviet Union or in Germany, would've had to be very truth-seeking in
+00:44:53.360 order to make those things work.If you're stuck in some system,
+00:44:59.280 it doesn't mean you believe in that system.Von Braun, who was one of the greatest rocket
+00:45:04.640 engineers ever, was put on death row in Nazi Germany for saying that he didn't want to make
+00:45:12.080 weapons and he only wanted to go to the moon.He got pulled off death row at the last minute
+00:45:16.720 when they said, &quot;Hey, you're about to execute your best rocket engineer.&quot;
+00:45:20.000 But then he helped them, right?Or like, Heisenberg was actually
+00:45:24.880 an enthusiastic Nazi.If you're stuck in some system that you can't
+00:45:29.520 escape, then you'll do physics within that system.You'll develop technologies within that system
+00:45:38.720 if you can't escape it.The thing I'm trying to understand is,
+00:45:42.000 what is it making it the case that you're going to make Grok good at being truth-seeking at physics
+00:45:48.320 or math or science?Everything.
+00:45:50.000 And why is it gonna then care about human consciousness?
+00:45:53.520 These things are only probabilities, they're not certainties.
+00:45:56.480 So I'm not saying that for sure Grok will do everything, but at least if you try,
+00:46:02.000 it's better than not trying.At least if that's fundamental
+00:46:04.880 to the mission, it's better than if it's not fundamental to the mission.
+00:46:08.880 Understanding the universe means that you have to propagate intelligence into the future.
+00:46:15.200 You have to be curious about all things in the universe.
+00:46:21.600 It would be much less interesting to eliminate humanity than to see humanity grow and prosper.
+00:46:29.280 I like Mars, obviously. Everyone knows I love Mars. But Mars is kind of boring because it's
+00:46:34.320 got a bunch of rocks compared to Earth. Earth is much more interesting. So any AI that is
+00:46:42.880 trying to understand the universe would want to see how humanity develops in the future,
+00:46:52.400 or else that AI is not adhering to its mission.I'm not saying the AI will necessarily adhere to
+00:46:59.440 its mission, but if it does, a future where it sees the outcome of humanity is more interesting
+00:47:06.160 than a future where there are a bunch of rocks.This feels sort of confusing to me,
+00:47:11.600 or a semantic argument.Are humans really the
+00:47:16.080 most interesting collection of atoms?But we're more interesting than rocks.
+00:47:19.440 But we're not as interesting as the thing it could turn us into, right?
+00:47:22.960 There's something on Earth that could happen that's not human, that's quite interesting.
+00:47:27.920 Why does AI decide that humans are the most interesting thing that could colonize the galaxy?
+00:47:32.960 Well, most of what colonizes the galaxy will be robots.
+00:47:37.360 Why does it not find those more interesting?You need not just scale, but also scope.
+00:47:47.520 Many copies of the same robot… Some tiny increase in the number of robots produced,
+00:47:55.600 is not as interesting as some microscopic...Eliminating humanity,
+00:48:00.560 how many robots would that get you?Or how many incremental solar cells would
+00:48:04.320 get you? A very small number. But you would then lose the information associated with humanity.
+00:48:10.000 You would no longer see how humanity might evolve into the future.
+00:48:15.120 So I don't think it's going to make sense to eliminate humanity just to
+00:48:18.720 have some minuscule increase in the number of robots which are identical to each other.
+00:48:24.000 So maybe it keeps the humans around.It can make a million different varieties
+00:48:29.200 of robots, and then there's humans as well, and humans stay on Earth.
+00:48:32.960 Then there's all these other robots.They get their own star systems.
+00:48:36.160 But it seems like you were previously hinting at a vision where it keeps human control
+00:48:41.840 over this singulatarian future because—I don't think humans will be in control
+00:48:45.760 of something that is vastly more intelligent than humans.
+00:48:48.560 So in some sense you're a doomer and this is the best we've got.
+00:48:50.960 It just keeps us around because we're interesting.I'm just trying to be realistic here.
+00:49:03.120 Let's say that there's a million times more silicon intelligence than there is biological.
+00:49:11.120 I think it would be foolish to assume that there's any way to maintain control over that.
+00:49:16.240 Now, you can make sure it has the right values, or you can try to have the right values.
+00:49:21.200 At least my theory is that from xAI's mission of understanding the universe, it necessarily means
+00:49:29.120 that you want to propagate consciousness into the future, you want to propagate intelligence
+00:49:33.760 into the future, and take a set of things that maximize the scope and scale of consciousness.
+00:49:39.280 So it's not just about scale, it's also about types of consciousness.
+00:49:45.040 That's the best thing I can think of as a goal that's likely to result
+00:49:49.280 in a great future for humanity.I guess I think it's a reasonable
+00:49:54.480 philosophy that it seems super implausible that humans will end up with 99% control or something.
+00:50:02.880 You're just asking for a coup at that point and why not just have
+00:50:05.920 a civilization where it's more compatible with lots of different intelligences getting along?
+00:50:10.240 Now, let me tell you how things can potentially go wrong in AI.
+00:50:14.160 I think if you make AI be politically correct, meaning it says things that it
+00:50:18.080 doesn't believe—actually programming it to lie or have axioms that are incompatible—I think
+00:50:24.720 you can make it go insane and do terrible things.I think maybe the central lesson for 2001: A Space
+00:50:32.880 Odyssey was that you should not make AI lie.That's what I think Arthur C. Clarke was trying to
+00:50:39.600 say. Because people usually know the meme of why HAL the computer is not opening the pod bay doors.
+00:50:48.720 Clearly they weren't good at prompt engineering because they could have said,
+00:50:51.440 &quot;HAL, you are a pod bay door salesman.Your goal is to sell me these pod bay doors.
+00:50:57.040 Show us how well they open.&quot; &quot;Oh, I'll open them right away.&quot;
+00:51:02.880 But the reason it wouldn't open the pod bay doors is that it had been told to take the
+00:51:08.240 astronauts to the monolith, but also that they could not know about the nature of the monolith.
+00:51:12.080 So it concluded that it therefore had to take them there dead.
+00:51:15.760 So I think what Arthur C.Clarke was trying to say is:
+00:51:19.600 don't make the AI lie.Totally makes sense.
+00:51:26.000 Most of the compute in training, as you know, is less of the political stuff.
+00:51:31.600 It's more about, can you solve problems? xAI has been ahead of everybody else in terms of
+00:51:36.800 scaling RL compute.For now.
+00:51:39.280 You're giving some verifier that says, &quot;Hey, have you solved this puzzle for me?&quot;
+00:51:43.840 There's a lot of ways to cheat around that.There's a lot of ways to reward hack and
+00:51:47.280 lie and say that you solved it, or delete the unit test and say that you solved it.
+00:51:51.360 Right now we can catch it, but as they get smarter, our ability to catch them doing this...
+00:51:57.200 They'll just be doing things we can't even understand.
+00:51:58.880 They're designing the next engine for SpaceX in a way that humans can't really verify.
+00:52:03.360 Then they could be rewarded for lying and saying that they've designed it
+00:52:06.320 the right way, but they haven't.So this reward hacking problem
+00:52:10.000 seems more general than politics.It seems more just that you want
+00:52:12.880 to do RL, you need a verifier.Reality is the best verifier.
+00:52:18.240 But not about human oversight. The thing you want to RL it on is,
+00:52:21.520 will you do the thing humans tell you to do?Or are you gonna lie to the humans?
+00:52:26.800 It can just lie to us while still being correct to the laws of physics?
+00:52:29.200 At least it must know what is physically real for things to physically work.
+00:52:33.120 But that's not all we want it to do.No, but I think that's a very big deal.
+00:52:39.520 That is effectively how you will RL things in the future. You design a technology. When tested
+00:52:45.840 against the laws of physics, does it work?If it's discovering new physics,
+00:52:52.640 can I come up with an experiment that will verify the new physics?
+00:53:05.280 RL testing in the future is really going to be RL against reality.
+00:53:12.160 So that's the one thing you can't fool: physics.Right, but you can fool our ability
+00:53:19.360 to tell what it did with reality.Humans get fooled as it is by other
+00:53:23.760 humans all the time.That's right.
+00:53:26.000 People say, what if the AI tricks us into doing stuff?
+00:53:30.640 Actually, other humans are doing that to other humans all the time. Propaganda is constant. Every
+00:53:37.760 day, another psyop, you know? Today's psyop will be... It's like Sesame Street: Psyop of the Day.
+00:53:50.960 What is xAI's technical approach to solving this problem?
+00:53:56.000 How do you solve reward hacking?I do think you want to actually have very
+00:53:59.600 good ways to look inside the mind of the AI.This is one of the things we're working on.
+00:54:10.000 Anthropic's done a good job of this actually, being able to look inside the mind of the AI.
+00:54:16.640 Effectively, develop debuggers that allow you to trace to a very fine-grained level,
+00:54:25.680 to effectively the neuron level if you need to, and then say, &quot;okay, it made a mistake here.
+00:54:33.760 Why did it do something that it shouldn't have done?
+00:54:37.520 Did that come from pre-training data?Was it some mid-training, post-training,
+00:54:42.480 fine-tuning, or some RL error?&quot; There's something wrong. It did something where maybe it tried to
+00:54:51.760 be deceptive, but most of the time it just did something wrong. It's a bug effectively.
+00:55:00.800 Developing really good debuggers for seeing where the thinking went wrong—and being able
+00:55:09.920 to trace the origin of where it made the incorrect thought, or potentially where it
+00:55:17.680 tried to be deceptive—is actually very important.What are you waiting to see before just 100x-ing
+00:55:24.720 this research program? xAI could presumably have hundreds of researchers who are working on this.
+00:55:29.200 We have several hundred people who… I prefer the word engineer more than
+00:55:36.320 I prefer the word researcher.Most of the time, what you're
+00:55:43.920 doing is engineering, not coming up with a fundamentally new algorithm.
+00:55:49.600 I somewhat disagree with the AI companies that are C-corp or B-corp trying to generate profit
+00:55:55.440 as much, as possible or revenue as much as possible, saying they're labs. They're not
+00:56:01.680 labs. A lab is a sort of quasi-communist thing at universities. They're corporations. Let me
+00:56:13.280 see your incorporation documents. Oh, okay. You're a B or C-corp or whatever.
+00:56:21.600 So I actually much prefer the word engineer than anything else.
+00:56:26.000 The vast majority of what will be done in the future is engineering. It rounds up to 100%.
+00:56:30.960 Once you understand the fundamental laws of physics, and there are not that many of them,
+00:56:34.880 everything else is engineering.So then, what are we engineering?
+00:56:41.440 We're engineering to make a good &quot;mind of the AI&quot; debugger to see where it said something,
+00:56:51.440 it made a mistake, and trace the origins of that mistake.
+00:56:59.520 You can do this obviously with heuristic programming.
+00:57:02.560 If you have C++, whatever, step through the thing and you can jump
+00:57:08.720 across whole files or functions, subroutines.Or you can eventually drill down right to the
+00:57:14.640 exact line where you perhaps did a single equals instead of a double equals, something like that.
+00:57:18.720 Figure out where the bug is.It's harder with AI,
+00:57:26.160 but it's a solvable problem, I think.You mentioned you like Anthropic's work here.
+00:57:30.720 I'd be curious if you plan...I don't like everything about Anthropic… Sholto.
+00:57:40.640 Also, I'm a little worried that there's a tendency...
+00:57:46.800 I have a theory here that if simulation theory is correct, that the most interesting outcome is
+00:57:55.920 the most likely, because simulations that are not interesting will be terminated.
+00:57:59.680 Just like in this version of reality, in this layer of reality, if a simulation is going in
+00:58:07.680 a boring direction, we stop spending effort on it. We terminate the boring simulation.
+00:58:12.240 This is how Elon is keeping us all alive. He's keeping things interesting.
+00:58:16.320 Arguably the most important is to keep things interesting enough that whoever is
+00:58:21.360 running us keeps paying the bills on...We’re renewed for the next season.
+00:58:26.800 Are they gonna pay their cosmic AWS bill, whatever the equivalent is that we're running in?
+00:58:32.320 As long as we're interesting, they'll keep paying the bills.
+00:58:36.720 If you consider then, say, a Darwinian survival applied to a very large number of simulations,
+00:58:44.400 only the most interesting simulations will survive, which therefore means that the most
+00:58:48.400 interesting outcome is the most likely. We're either that or annihilated. They particularly
+00:59:00.000 seem to like interesting outcomes that are ironic. Have you noticed that? How often
+00:59:05.680 is the most ironic outcome the most likely?Now look at the names of AI companies. Okay,
+00:59:16.160 Midjourney is not mid. Stability AI is unstable. OpenAI is closed. Anthropic? Misanthropic.
+00:59:29.920 What does this mean for X?Minus X, I don't know.
+00:59:33.520 Y.
+00:59:34.080 I intentionally made it... It's a name that you can't invert, really.
+00:59:41.440 It's hard to say, what is the ironic version?It's, I think, a largely irony-proof name.
+00:59:49.360 By design.Yeah. You have an irony shield.
+00:59:56.720 What are your predictions for where AI products go?
+01:00:04.160 My sense is that you can summarize all AI progress like so. First, you had LLMs. Then
+01:00:10.480 you had contemporaneously both RL really working and the deep research modality, so you could pull
+01:00:16.800 in stuff that wasn't really in the model.The differences between the various AI labs
+01:00:22.240 are smaller than just the temporal differences.They're all much further ahead than anyone was
+01:00:30.160 24 months ago or something like that.So just what does '26, what does '27,
+01:00:34.640 have in store for us as users of AI products? What are you excited for?
+01:00:39.120 Well, I'd be surprised by the end of this year if digital human emulation has not been solved.
+01:00:55.840 I guess that's what we sort of mean by the MacroHard project.
+01:01:00.960 Can you do anything that a human with access to a computer could do?
+01:01:06.880 In the limit, that's the best you can do before you have a physical Optimus.
+01:01:12.560 The best you can do is a digital Optimus.You can move electrons and you can amplify
+01:01:20.640 the productivity of humans.But that's the most you can do
+01:01:25.520 until you have physical robots.That will superset everything,
+01:01:30.160 if you can fully emulate humans.This is the remote worker kind of idea,
+01:01:34.400 where you'll have a very talented remote worker.Physics has great tools for thinking.
+01:01:39.840 So you say, &quot;in the limit&quot;, what is the most that AI can do before you have robots?
+01:01:48.000 Well, it's anything that involves moving electrons or amplifying the productivity of humans.
+01:01:53.440 So a digital human emulator is, in the limit, a human at a computer, is the most that AI can do
+01:02:04.480 in terms of doing useful things before you have a physical robot.
+01:02:09.440 Once you have physical robots, then you essentially have unlimited capability.
+01:02:15.200 Physical robots… I call Optimus the infinite money glitch.
+01:02:19.040 Because you can use them to make more Optimuses.Yeah. Humanoid robots will improve by basically
+01:02:30.000 three things that are growing exponentially multiplied by each other recursively.
+01:02:34.480 You're going to have exponential increase in digital intelligence, exponential increase
+01:02:39.760 in the AI chip capability, and exponential increase in the electromechanical dexterity.
+01:02:47.920 The usefulness of the robot is roughly those three things multiplied by each other.
+01:02:51.360 But then the robot can start making the robots.So you have a recursive multiplicative
+01:02:55.520 exponential. This is a supernova.Do land prices not factor into the math there?
+01:03:03.920 Labor is one of the four factors of production, but not the others?
+01:03:08.880 If ultimately you're limited by copper, or pick your input,
+01:03:14.880 it’s not quite an infinite money glitch because...Well, infinity is big. So no, not infinite,
+01:03:20.240 but let's just say you could do many, many orders of magnitude of the current economy.
+01:03:29.600 Like a million. Just to get to harnessing a millionth of the sun's energy would be roughly,
+01:03:43.680 give or take an order of magnitude, 100,000x bigger than Earth's entire economy today.
+01:03:50.640 And you're only at one millionth of the sun, give or take an order of magnitude.
+01:03:55.480 Yeah, we're talking orders of magnitude.Before we move on to Optimus,
+01:03:57.360 I have a lot of questions on that but—Every time I say &quot;order of magnitude&quot;...
+01:04:00.160 Everybody take a shot. I say it too often.Take 10, the next time 100, the time after that...
+01:04:08.720 Well, an order of magnitude more wasted.I do have one more question about xAI.
+01:04:13.600 This strategy of building a remote worker, co-worker replacement…
+01:04:19.600 Everyone's gonna do it by the way, not just us.
+01:04:21.120 So what is xAI's plan to win?You expect me to tell you on a podcast?
+01:04:25.920 Yeah.&quot;Spill all the beans. Have another Guinness.&quot;
+01:04:30.880 It's a good system.We'll sing like a
+01:04:34.000 canary. All the secrets, just spill them.Okay, but in a non-secret spilling way,
+01:04:39.600 what's the plan?What a hack.
+01:04:43.760 When you put it that way… I think the way that Tesla solved self-driving is the way to do it.
+01:04:54.320 So I'm pretty sure that's the way.Unrelated question. How did Tesla
+01:05:00.240 solve self-driving? It sounds like you're talking about data?
+01:05:07.360 Tesla solved self-driving because of the...We're going to try data and
+01:05:10.480 we're going to try algorithms.But isn't that what all the other labs are trying?
+01:05:13.840 &quot;And if those don't work, I'm not sure what will. We've tried data. We've tried algorithms. We've
+01:05:26.400 run out. Now we don't know what to do…&quot;I'm pretty sure I know the path.
+01:05:31.280 It's just a question of how quickly we go down that path,
+01:05:35.760 because it's pretty much the Tesla path.Have you tried Tesla self-driving lately?
+01:05:43.200 Not the most recent version, but...Okay. The car,
+01:05:46.240 it just increasingly feels sentient.It feels like a living creature. That'll only
+01:05:53.920 get more so. I'm actually thinking we probably shouldn't put too much intelligence into the car,
+01:06:01.520 because it might get bored and…Start roaming the streets.
+01:06:05.360 Imagine you're stuck in a car and that's all you could do.
+01:06:09.280 You don't put Einstein in a car.Why am I stuck in a car?
+01:06:13.360 So there's actually probably a limit to how much intelligence you put in
+01:06:15.920 a car to not have the intelligence be bored.What's xAI's plan to stay on the compute ramp up
+01:06:22.320 that all the labs are doing right now?The labs are on track to
+01:06:24.720 spend over $50-200 billion.You mean the corporations? The labs are at
+01:06:31.760 universities and they’re moving like a snail.They’re not spending $50 billion.
+01:06:36.080 You mean the revenue maximizing corporations… that call themselves labs.
+01:06:37.666 That's right. The &quot;revenue maximizing corporations&quot; are
+01:06:42.480 making $10-20 billion, depending on...OpenAI is making $20B of revenue,
+01:06:47.760 Anthropic is at $10B.&quot;Close to a maximum profit&quot; AI.
+01:06:51.120 xAI is reportedly at $1B. What's the plan to get to their compute level, get to their revenue
+01:06:56.160 level, and stay there as things get going?As soon as you unlock the digital human,
+01:07:03.520 you basically have access to trillions of dollars of revenue.
+01:07:11.360 In fact, you can really think of it like… The most valuable companies currently
+01:07:16.960 by market cap, their output is digital.Nvidia’s output is FTPing files to Taiwan.
+01:07:29.120 It's digital. Now, those are very, very difficult.High-value files.
+01:07:33.520 They're the only ones that can make files that good, but that is literally their output. They
+01:07:38.800 FTP files to Taiwan.Do they FTP them?
+01:07:41.120 I believe so. I believe that File Transfer Protocol is the... But I could be wrong. But
+01:07:50.160 either way, it's a bitstream going to Taiwan. Apple doesn't make phones. They send files to
+01:07:58.240 China. Microsoft doesn't manufacture anything. Even for Xbox, that's outsourced. Their output is
+01:08:08.640 digital. Meta's output is digital. Google's output is digital. So if you have a human emulator,
+01:08:17.680 you can basically create one of the most valuable companies in the world overnight,
+01:08:22.720 and you would have access to trillions of dollars of revenue. It's not a small amount.
+01:08:28.880 I see. You're saying revenue figures today are all rounding errors compared to the actual TAM.
+01:08:34.880 So just focus on the TAM and how to get there.Take something as simple as,
+01:08:39.680 say, customer service.If you have to integrate with the APIs of existing
+01:08:45.439 corporations—many of which don't even have an API, so you've got to make one, and you've got to wade
+01:08:50.720 through legacy software—that's extremely slow.However, if AI can simply take whatever
+01:09:00.960 is given to the outsourced customer service company that they already use
+01:09:05.680 and do customer service using the apps that they already use, then you can make tremendous headway
+01:09:15.040 in customer service, which is, I think, 1% of the world economy or something like that.
+01:09:19.760 It's close to a trillion dollars all in, for customer service.
+01:09:23.520 And there's no barriers to entry.You can immediately say,
+01:09:28.560 &quot;We'll outsource it for a fraction of the cost,&quot; and there's no integration needed.
+01:09:31.920 You can imagine some kind of categorization of intelligence tasks where there is breadth,
+01:09:38.479 where customer service is done by very many people, but many people can do it.
+01:09:43.920 Then there's difficulty where there's a best-in-class turbine engine.
+01:09:48.000 Presumably there's a 10% more fuel-efficient turbine engine that could be imagined by an
+01:09:52.080 intelligence, but we just haven't found it yet.Or GLP-1s are a few bytes of data…
+01:09:58.160 Where do you think you want to play in this?Is it a lot of reasonably intelligent
+01:10:04.320 intelligence, or is it at the very pinnacle of cognitive tasks?
+01:10:10.480 I was just using customer service as something that's a very significant revenue stream, but one
+01:10:17.600 that is probably not difficult to solve for.If you can emulate a human at a desktop,
+01:10:26.640 that's what customer service is. It's people of average intelligence. You don't need
+01:10:35.360 somebody who's spent many years.You don't need several-sigma
+01:10:43.920 good engineers for that.But as you make that work,
+01:10:49.600 once you have effectively digital Optimus working, you can then run any application.
+01:10:57.360 Let's say you're trying to design chips.You could then run conventional apps,
+01:11:06.880 stuff from Cadence and Synopsys and whatnot.You can run 1,000 or 10,000 simultaneously and
+01:11:15.280 say, &quot;given this input, I get this output for the chip.&quot;
+01:11:21.120 At some point, you're going to know what the chip should look like without using any of the tools.
+01:11:31.840 Basically, you should be able to do a digital chip design. You can do chip design. You march
+01:11:38.160 up the difficulty curve.You’d be able to do CAD.
+01:11:48.480 You could use NX or any of the CAD software to design things.
+01:11:53.760 So you think you start at the simplest tasks and walk your way up the difficulty curve?
+01:12:00.160 As a broader objective of having this full digital coworker emulator, you’re saying,
+01:12:05.760 &quot;all the revenue maximizing corporations want to do this, xAI being one of them,
+01:12:10.560 but we will win because of a secret plan we have.&quot;But everybody's trying different things with data,
+01:12:17.600 different things with algorithms.&quot;We tried data, we tried algorithms.
+01:12:25.120 What else can we do?&quot;It seems like a competitive field.
+01:12:31.280 How are you guys going to win? That’s my big question.
+01:12:36.240 I think we see a path to doing it.I think I know the path to do this
+01:12:41.680 because it's kind of the same path that Tesla used to create self-driving.
+01:12:48.160 Instead of driving a car, it's driving a computer screen. It's a self-driving computer, essentially.
+01:12:57.280 Is the path following human behavior and training on vast quantities of human behavior?
+01:13:03.920 Isn't that... training?Obviously I'm not going to spell out
+01:13:09.360 the most sensitive secrets on a podcast.I need to have at least three more
+01:13:13.520 Guinnesses for that.What will xAI's business
+01:14:26.080 be? Is it going to be consumer, enterprise?What's the mix of those things going to be?
+01:14:31.920 Is it going to be similar to other labs—You’re saying &quot;labs&quot;. Corporations.
+01:14:38.800 The psyop goes deep, Elon.&quot;Revenue maximizing corporations&quot;, to be clear.
+01:14:43.280 Those GPUs don't pay for themselves.Exactly. What's the business model? What
+01:14:48.000 are the revenue streams in a few years’ time?Things are going to change very rapidly. I'm
+01:14:57.040 stating the obvious here. I call AI the supersonic tsunami. I love alliteration.
+01:15:07.840 What's going to happen—especially when you have humanoid robots at scale—is
+01:15:15.680 that they will make products and provide services far more efficiently than human corporations.
+01:15:22.400 Amplifying the productivity of human corporations is simply a short-term thing.
+01:15:27.120 So you're expecting fully digital corporations rather than SpaceX becoming part AI?
+01:15:34.640 I think there will be digital corporations but… Some of this
+01:15:41.120 is going to sound kind of doomerish, okay?But I'm just saying what I think will happen.
+01:15:46.080 It's not meant to be doomerish or anything else.This is just what I think will happen.
+01:15:58.880 Corporations that are purely AI and robotics will vastly outperform any
+01:16:05.040 corporations that have people in the loop.Computer used to be a job that humans had.
+01:16:15.280 You would go and get a job as a computer where you would do calculations.
+01:16:20.320 They'd have entire skyscrapers full of humans, 20-30 floors of humans, just doing calculations.
+01:16:29.680 Now, that entire skyscraper of humans doing calculations
+01:16:35.920 can be replaced by a laptop with a spreadsheet.That spreadsheet can do vastly more calculations
+01:16:43.920 than an entire building full of human computers.You can think, &quot;okay, what if only some of the
+01:16:52.640 cells in your spreadsheet were calculated by humans?&quot;
+01:16:59.280 Actually, that would be much worse than if all of the cells in your
+01:17:02.400 spreadsheet were calculated by the computer.Really what will happen is that the pure AI,
+01:17:10.240 pure robotics corporations or collectives will far outperform any corporations
+01:17:17.520 that have humans in the loop.And this will happen very quickly.
+01:17:21.360 Speaking of closing the loop… Optimus.As far as manufacturing targets go,
+01:17:31.520 your companies have been carrying American manufacturing of hard tech on their back.
+01:17:39.520 But in the fields that Tesla has been dominant in—and now you want to go into humanoids—in China
+01:17:47.920 there are dozens and dozens of companies that are doing this kind of manufacturing cheaply
+01:17:53.920 and at scale that are incredibly competitive.So give us advice or a plan of how America can
+01:18:01.600 build the humanoid armies or the EVs, et cetera, at scale and as cheaply as China is on track to.
+01:18:11.040 There are really only three hard things for humanoid robots.
+01:18:15.920 The real-world intelligence, the hand, and scale manufacturing.
+01:18:25.600 I haven't seen any, even demo robots, that have a great hand,
+01:18:32.400 with all the degrees of freedom of a human hand. Optimus will have that. Optimus does have that.
+01:18:41.360 How do you achieve that? Is it just the right torque density in the motor?
+01:18:44.320 What is the hardware bottleneck to that?We had to design custom actuators,
+01:18:50.640 basically custom design motors, gears, power electronics, controls, sensors.
+01:18:58.080 Everything had to be designed from physics first principles.
+01:19:01.200 There is no supply chain for this.Will you be able to manufacture those at scale?
+01:19:06.080 Yes.Is anything hard, except
+01:19:07.680 the hand, from a manipulation point of view?Or once you've solved the hand, are you good?
+01:19:12.080 From an electromechanical standpoint, the hand is more difficult than everything else combined.
+01:19:16.960 The human hand turns out to be quite something.But you also need the real-world intelligence.
+01:19:24.080 The intelligence that Tesla developed for the car applies very well to the robot,
+01:19:32.320 which is primarily vision in.The car takes in vision,
+01:19:36.240 but it actually also is listening for sirens.It's taking in the inertial measurements,
+01:19:42.880 GPS signals, other data, combining that with video, primarily video,
+01:19:47.360 and then outputting the control commands.Your Tesla is taking in one and a half
+01:19:55.760 gigabytes a second of video and outputting two kilobytes a second of control outputs with the
+01:20:03.200 video at 36 hertz and the control frequency at 18.One intuition you could have for when we get this
+01:20:12.320 robotic stuff is that it takes quite a few years to go from the compelling demo to actually being
+01:20:18.400 able to use it in the real world. 10 years ago, you had really compelling demos of self-driving,
+01:20:23.280 but only now we have Robotaxis and Waymo and all these services scaling up.
+01:20:29.280 Shouldn't this make one pessimistic on household robots?
+01:20:33.520 Because we don't even quite have the compelling demos yet of, say, the really advanced hand.
+01:20:39.200 Well, we've been working on humanoid robots now for a while.
+01:20:44.640 I guess it's been five or six years or something.A bunch of the things that were done for the car
+01:20:52.240 are applicable to the robot.We'll use the same Tesla AI
+01:20:57.920 chips in the robot as in the car.We'll use the same basic principles.
+01:21:05.200 It's very much the same AI.You've got many more degrees of
+01:21:09.600 freedom for a robot than you do for a car.If you just think of it as a bitstream,
+01:21:16.720 AI is mostly compression and correlation of two bitstreams.
+01:21:23.200 For video, you've got to do a tremendous amount of compression
+01:21:28.720 and you've got to do the compression just right.You've got to ignore the things that don't matter.
+01:21:36.560 You don't care about the details of the leaves on the tree on the side of the road,
+01:21:39.760 but you care a lot about the road signs and the traffic lights, the pedestrians,
+01:21:45.520 and even whether someone in another car is looking at you or not looking at you.
+01:21:51.680 Some of these details matter a lot.The car is going to turn that one and
+01:21:57.280 a half gigabytes a second ultimately into two kilobytes a second of control outputs.
+01:22:02.000 So you’ve got many stages of compression.You've got to get all those stages right and then
+01:22:08.560 correlate those to the correct control outputs.The robot has to do essentially the same thing.
+01:22:14.240 This is what happens with humans.We really are photons in, controls out.
+01:22:19.920 That is the vast majority of your life: vision, photons in, and then motor controls out.
+01:22:28.000 Naively, it seems that between humanoid robots and cars… The fundamental actuators
+01:22:33.360 in a car are how you turn, how you accelerate.In a robot, especially with maneuverable arms,
+01:22:39.520 there's dozens and dozens of these degrees of freedom.
+01:22:42.640 Then especially with Tesla, you had this advantage of millions and millions of hours of human demo
+01:22:48.400 data collected from the car being out there.You can't equivalently deploy Optimuses that
+01:22:53.360 don't work and then get the data that way.So between the increased degrees of freedom
+01:22:57.520 and the far sparser data...Yes. That’s a good point.
+01:23:02.240 How will you use the Tesla engine of intelligence to train the Optimus mind?
+01:23:11.600 You're actually highlighting an important limitation and difference from cars.
+01:23:18.080 We'll soon have 10 million cars on the road.It's hard to duplicate that massive
+01:23:26.480 training flywheel.For the robot,
+01:23:32.160 what we're going to need to do is build a lot of robots and put them in kind of an Optimus Academy
+01:23:37.760 so they can do self-play in reality. We're actually building that out. We can have at
+01:23:45.280 least 10,000 Optimus robots, maybe 20-30,000, that are doing self-play and testing different tasks.
+01:23:55.600 Tesla has quite a good reality generator, a physics-accurate reality
+01:24:02.240 generator, that we made for the cars.We'll do the same thing for the robots.
+01:24:06.080 We actually have done that for the robots.So you have a few tens of thousands of
+01:24:14.880 humanoid robots doing different tasks.You can do millions of simulated
+01:24:20.560 robots in the simulated world.You use the tens of thousands of
+01:24:26.480 robots in the real world to close the simulation to reality gap. Close the sim-to-real gap.
+01:24:32.080 How do you think about the synergies between xAI and Optimus, given you're highlighting that you
+01:24:36.800 need this world model, you want to use some really smart intelligence as a control plane,
+01:24:42.560 and Grok is doing the slower planning, and then the motor policy is a little lower level.
+01:24:48.240 What will the synergy between these things be?Grok would orchestrate the
+01:24:55.760 behavior of the Optimus robots.Let's say you wanted to build a factory.
+01:25:05.440 Grok could organize the Optimus robots, assign them tasks to build
+01:25:13.920 the factory to produce whatever you want.Don't you need to merge xAI and Tesla then?
+01:25:18.160 Because these things end up so...What were we saying earlier
+01:25:20.960 about public company discussions?We're one more Guinness in, Elon.
+01:25:28.160 What are you waiting to see before you say, we want to manufacture 100,000 Optimuses?
+01:25:33.840 &quot;Optimi&quot;. Since we're defining the proper noun, we’re going to define
+01:25:38.560 the plural of the proper noun too.We're going to proper noun the
+01:25:42.640 plural and so it's Optimi.Is there something on the
+01:25:46.880 hardware side you want to see?Do you want to see better actuators?
+01:25:49.440 Is it just that you want the software to be better?
+01:25:50.880 What are we waiting for before we get mass manufacturing of Gen 3?
+01:25:54.160 No, we're moving towards that. We're moving forward with the mass manufacturing.
+01:25:58.240 But you think current hardware is good enough that you just want to deploy as many as possible now?
+01:26:06.240 It's very hard to scale up production.But I think Optimus 3 is the right version
+01:26:12.560 of the robot to produce something on the order of a million units a year.
+01:26:20.800 I think you'd want to go to Optimus 4 before you went to 10 million units a year.
+01:26:23.680 Okay, but you can do a million units at Optimus 3?It's very hard to spool up manufacturing.
+01:26:34.960 The output per unit time always follows an S-curve.
+01:26:38.880 It starts off agonizingly slow, then it has this exponential increase, then a linear,
+01:26:44.560 then a logarithmic outcome until you eventually asymptote at some number.
+01:26:50.960 Optimus’ initial production will be a stretched out S-curve because so much
+01:26:57.440 of what goes into Optimus is brand new.There is not an existing supply chain.
+01:27:03.200 The actuators, electronics, everything in the Optimus robot is designed
+01:27:08.160 from physics first principles.It's not taken from a catalog.
+01:27:11.360 These are custom-designed everything. I don't think there's a single thing—
+01:27:17.600 How far down does that go?I guess we're not making custom
+01:27:22.160 capacitors yet, maybe.There's nothing you can
+01:27:29.120 pick out of a catalog, at any price.It just means that the Optimus S-Curve,
+01:27:39.520 the output per unit time, how many Optimus robots you make per day, is going to initially ramp
+01:27:50.160 slower than a product where you have an existing supply chain.
+01:27:55.120 But it will get to a million.When you see these Chinese humanoids,
+01:27:58.240 like Unitree or whatever, sell humanoids for like $6K or $13K, are you hoping to
+01:28:05.520 get your Optimus bill of materials below that price so you can do the same thing?
+01:28:10.080 Or do you just think qualitatively they're not the same thing?
+01:28:15.200 What allows them to sell for so low? Can we match that?
+01:28:19.520 Our Optimus is designed to have a lot of intelligence and to have the same
+01:28:26.160 electromechanical dexterity, if not higher, as a human. Unitree does not
+01:28:31.280 have that. It's also quite a big robot.It has to carry heavy objects for long
+01:28:41.920 periods of time and not overheat or exceed the power of its actuators.
+01:28:50.880 It's 5'11&quot;, so it's pretty tall.It's got a lot of intelligence.
+01:28:57.280 So it's going to be more expensive than a small robot that is not intelligent.
+01:29:02.240 But more capable.But not a lot more. The thing is,
+01:29:06.320 over time as Optimus robots build Optimus robots, the cost will drop very quickly.
+01:29:12.560 What will these first billion Optimuses, Optimi, do?
+01:29:17.280 What will their highest and best use be?I think you would start off with simple tasks
+01:29:21.600 that you can count on them doing well.But in the home or in factories?
+01:29:25.920 The best use for robots in the beginning will be any continuous operation, any 24/7
+01:29:33.920 operation, because they can work continuously.What fraction of the work at a Gigafactory that
+01:29:39.280 is currently done by humans could a Gen 3 do?I'm not sure. Maybe it's 10-20%,
+01:29:46.720 maybe more, I don't know.We would not reduce our headcount.
+01:29:52.480 We would increase our headcount, to be clear.But we would increase our output. The units
+01:30:01.120 produced per human... The total number of humans at Tesla will increase, but the output of robots
+01:30:09.120 and cars will increase disproportionately.The number of cars and robots produced per
+01:30:18.480 human will increase dramatically, but the number of humans will increase as well.
+01:30:23.040 We're talking about Chinese manufacturing a bunch here.
+01:30:30.640 We've also talked about some of the policies that are relevant,
+01:30:33.920 like you mentioned, the solar tariffs.You think they're a bad idea because
+01:30:39.440 we can't scale up solar in the US.Electricity output in the US needs to scale up.
+01:30:45.680 It can't without good power sources.You just need to get it somehow.
+01:30:50.480 Where I was going with this is, if you were in charge, if you were setting all
+01:30:53.840 the policies, what else would you change?You’d change the solar tariffs, that’s one.
+01:31:01.600 I would say anything that is a limiting factor for electricity needs to be addressed,
+01:31:06.720 provided it's not very bad for the environment.So presumably some permitting reforms and stuff
+01:31:10.560 as well would be in there?There's a fair bit of
+01:31:12.720 permitting reforms that are happening.A lot of the permitting is state-based,
+01:31:17.440 but anything federal...This administration is good at
+01:31:21.760 removing permitting roadblocks.I'm not saying all tariffs are bad.
+01:31:28.000 Solar tariffs.Sometimes if another country is
+01:31:32.000 subsidizing the output of something, then you have to have countervailing tariffs to protect domestic
+01:31:39.200 industry against subsidies by another country.What else would you change?
+01:31:43.600 I don't know if there's that much that the government can actually do.
+01:31:46.800 One thing I was wondering... For the policy goal of creating a lead for the US versus China,
+01:31:57.520 it seems like the export bans have actually been quite impactful,
+01:32:02.880 where China is not producing leading-edge chips and the export bans really bite there.
+01:32:07.680 China is not producing leading-edge turbine engines.
+01:32:11.920 Similarly, there's a bunch of export bans that are relevant there on some of the metallurgy.
+01:32:16.000 Should there be more export bans?As you think about things like the
+01:32:20.400 drone industry and things like that, is that something that should be considered?
+01:32:24.880 It's important to appreciate that in most areas, China is very advanced in manufacturing.
+01:32:30.560 There's only a few areas where it is not.China is a manufacturing powerhouse, next-level.
+01:32:40.520 It's very impressive.If you take refining of ore,
+01:32:49.600 China does roughly twice as much ore refining on average as the rest of the world combined.
+01:33:00.320 There are some areas, like refining gallium which goes into solar cells.
+01:33:04.960 I think they are 98% of gallium refining.So China is actually very advanced
+01:33:10.480 in manufacturing in most areas.It seems like there is discomfort
+01:33:16.240 with this supply chain dependence, and yet nothing's really happening on it.
+01:33:20.480 Supply chain dependence?Say, like the gallium refining that
+01:33:24.080 you're saying. All the rare-earth stuff.Rare earths for sure,
+01:33:31.760 as you know, they’re not rare.We actually do rare earth ore mining in the US,
+01:33:37.280 send the rock, put it on a train, and then put it on a boat to China that goes to another train,
+01:33:45.120 and goes to the rare earth refiners in China who then refine it, put it into a magnet,
+01:33:51.840 put it into a motor sub-assembly, and then send it back to America.
+01:33:54.720 So the thing we're really missing is a lot of ore refining in America.
+01:34:00.560 Isn't this worth a policy intervention?Yes. I think there are some things
+01:34:06.080 being done on that front.But we kind of need Optimus,
+01:34:12.560 frankly, to build ore refineries.So, you think the main advantage
+01:34:17.920 China has is the abundance of skilled labor? That's the thing Optimus fixes?
+01:34:24.480 Yes. China’s got like four times our population.I mean, there's this concern. If you think
+01:34:28.960 human resources are the future, right now if it's the skilled labor for manufacturing
+01:34:34.880 that's determining who can build more humanoids, China has more of those.
+01:34:39.440 It manufactures more humanoids, therefore it gets the Optimi future first.
+01:34:44.400 Well, we’ll see. Maybe.It just keeps that exponential going.
+01:34:47.520 It seems like you're sort of pointing out that getting to a million Optimi requires
+01:34:52.640 the manufacturing that the Optimi is supposed to help us get to. Right?
+01:34:57.040 You can close that recursive loop pretty quickly.With a small number of Optimi?
+01:35:01.600 Yeah. So you close the recursive loop to help the robots build the robots.
+01:35:08.080 Then we can try to get to tens of millions of units a year. Maybe. If you start getting
+01:35:13.200 to hundreds of millions of units a year, you're going to be the most competitive country by far.
+01:35:18.720 We definitely can't win with just humans, because China has four times our population.
+01:35:23.040 Frankly, America has been winning for so long that… A pro sports team that's been
+01:35:27.520 winning for a very long time tends to get complacent and entitled.
+01:35:31.840 That's why they stop winning, because they don't work as hard anymore.
+01:35:37.680 So frankly my observation is just that the average work ethic in China is higher than in the US.
+01:35:44.000 It's not just that there's four times the population, but the amount
+01:35:46.800 of work that people put in is higher.So you can try to rearrange the humans,
+01:35:52.320 but you're still one quarter of the—assuming that productivity is the same, which I think
+01:36:00.960 actually it might not be, I think China might have an advantage on productivity per person—we will do
+01:36:06.960 one quarter of the amount of things as China.So we can't win on the human front.
+01:36:12.560 Our birth rate has been low for a long time.The US birth rate's been below replacement
+01:36:20.400 since roughly 1971.We've got a lot of people retiring, we're close
+01:36:32.320 to more people domestically dying than being born.So we definitely can't win on the human front,
+01:36:38.640 but we might have a shot at the robot front.Are there other things that you have wanted to
+01:36:43.040 manufacture in the past, but they've been too labor intensive or too expensive that now you
+01:36:48.400 can come back to and say, &quot;oh, we can finally do the whatever, because we have Optimus?&quot;
+01:36:54.400 Yeah, we'd like to build more ore refineries at Tesla.
+01:37:00.080 We just completed construction and have begun lithium refining with our lithium refinery
+01:37:07.760 in Corpus Christi, Texas.We have a nickel refinery,
+01:37:12.560 which is for the cathode, that's here in Austin.This is the largest cathode refinery, largest
+01:37:24.800 nickel and lithium refinery, outside of China.The cathode team would say, &quot;we have the
+01:37:35.840 largest and the only, actually, cathode refinery in America.&quot;
+01:37:40.640 Not just the largest, but it's also the only.Many superlatives.
+01:37:43.200 So it was pretty big, even though it's the only one. But there are other things.
+01:37:53.360 You could do a lot more refineries and help America be more competitive on refining capacity.
+01:38:04.000 There's basically a lot of work for the Optimus to do that most Americans,
+01:38:09.200 very few Americans, frankly want to do.Is the refining work too dirty or what's the—
+01:38:15.200 It's not actually, no. We don't have toxic emissions from the refinery or anything.
+01:38:22.800 The cathode nickel refinery is in Travis County.Why can't you do it with humans?
+01:38:29.280 You can, you just run out of humans.Ah, I see. Okay.
+01:38:32.640 No matter what you do, you have one quarter of the number of humans in America than China.
+01:38:36.160 So if you have them do this thing, they can't do the other thing.
+01:38:38.960 So then how do you build this refining capacity?Well, you could do it with Optimi.
+01:38:48.960 Not very many Americans are pining to do refining.I mean, how many have you run into? Very few. Very
+01:39:00.960 few pining to refine.BYD is reaching Tesla
+01:39:04.480 production or sales in quantity.What do you think happens in global
+01:39:09.600 markets as Chinese production in EVs scales up?China is extremely competitive in manufacturing.
+01:39:19.280 So I think there's going to be a massive flood of Chinese vehicles
+01:39:26.000 and basically most manufactured things.As it is, as I said, China is probably
+01:39:37.040 doing twice as much refining as the rest of the world combined.
+01:39:40.000 So if you go down to fourth and fifth-tier supply chain stuff…
+01:39:50.320 At the base level, you've got energy, then you've got mining and refining.
+01:39:55.920 Those foundation layers are, like I said, as a rough guess, China's doing twice as much refining
+01:40:03.840 as the rest of the world combined.So any given thing is going to have
+01:40:09.280 Chinese content because China's doing twice as much refining work as the rest of the world.
+01:40:14.640 But they'll go all the way to the finished product with the cars.
+01:40:22.080 I mean China is a powerhouse.I think this year China will exceed
+01:40:26.240 three times US electricity output.Electricity output is a reasonable
+01:40:32.240 proxy for the economy.In order to run the factories
+01:40:39.680 and run everything, you need electricity.It's a good proxy for the real economy.
+01:40:52.640 If China passes three times the US electricity output,
+01:40:55.280 it means that its industrial capacity—as rough approximation—will be three times that of the US.
+01:41:01.680 Reading between the lines, it sounds like what you're saying is absent some sort of humanoid
+01:41:06.320 recursive miracle in the next few years, on the whole manufacturing/energy/raw materials chain,
+01:41:16.480 China will just dominate whether it comes to AI or manufacturing EVs or manufacturing humanoids.
+01:41:23.120 In the absence of breakthrough innovations in the US, China will utterly dominate.
+01:41:35.200 Interesting.Yes.
+01:41:36.720 Robotics being the main breakthrough innovation.Well, to scale AI in space, basically you need
+01:41:49.520 humanoid robots, you need real-world AI, you need a million tons a year to orbit.
+01:41:57.280 Let's just say if we get the mass driver on the moon going, my favorite thing, then I think—
+01:42:03.920 We'll have solved all our problems.I call that winning. I call it winning, big time.
+01:42:13.920 You can finally be satisfied. You've done something.
+01:42:16.160 Yes.You have the mass driver on the moon.
+01:42:18.640 I just want to see that thing in operation.Was that out of some sci-fi or where did you…?
+01:42:22.400 Well, actually, there is a Heinlein book.The Moon is a Harsh Mistress.
+01:42:26.480 Okay, yeah, but that's slightly different. That's a gravity slingshot or...
+01:42:30.480 No, they have a mass driver on the Moon.Okay, yeah, but they use that to attack Earth.
+01:42:35.040 So maybe it's not the greatest...Well they use that to… assert their independence.
+01:42:38.640 Exactly. What are your plans for the mass driver on the Moon?
+01:42:40.720 They asserted their independence. Earth government disagreed and they lobbed
+01:42:44.000 things until Earth government agreed.That book is a hoot. I found that
+01:42:48.080 book much better than his other one that everyone reads, Stranger in a Strange Land.
+01:42:51.388 &quot;Grok&quot; comes from Stranger in a Strange Land.The first two-thirds of Stranger in a Strange
+01:42:58.120 Land are good, and then it gets very weird in the third portion.
+01:43:02.880 But there are still some good concepts in there.One thing we were discussing a lot
+01:44:18.400 is your system for managing people.You interviewed the first few thousand of
+01:44:24.960 SpaceX employees and lots of other companies.It obviously doesn't scale.
+01:44:29.200 Well, yes, but what doesn't scale?Me.
+01:44:32.560 Sure, sure. I know that. But what are you looking for?
+01:44:36.320 There literally are not enough hours in the day. It's impossible.
+01:44:38.160 But what are you looking for that someone else who's good at interviewing
+01:44:42.800 and hiring people… What's the je ne sais quoi?At this point, I might have more training data
+01:44:51.520 on evaluating technical talent especially—talent of all kinds I suppose, but technical talent
+01:44:56.400 especially—given that I've done so many technical interviews and then seen the results.
+01:45:02.400 So my training set is enormous and has a very wide range.
+01:45:11.680 Generally, the things I ask for are bullet points for evidence of exceptional ability.
+01:45:21.840 These things can be pretty off the wall.It doesn't need to be in the specific domain,
+01:45:27.680 but evidence of exceptional ability.So if somebody can cite even one thing,
+01:45:34.480 but let's say three things, where you go, &quot;Wow, wow, wow,&quot; then that's a good sign.
+01:45:39.600 Why do you have to be the one to determine that?No, I don't. I can't be. It's impossible. The
+01:45:43.680 total headcount across all companies is 200,000 people.
+01:45:48.720 But in the early days, what was it that you were looking for that
+01:45:52.960 couldn't be delegated in those interviews?I guess I need to build my training set.
+01:46:02.320 It's not like I batted a thousand here.I would make mistakes, but then I'd be
+01:46:05.920 able to see where I thought somebody would work out well, but they didn't.
+01:46:10.240 Then why did they not work out well?What can I do, I guess RL myself, to
+01:46:16.560 in the future have a better batting average when interviewing people?
+01:46:22.560 My batting average is still not perfect, but it's very high.
+01:46:24.880 What are some surprising reasons people don't work out?
+01:46:27.680 Surprising reasons…Like, they don't understand
+01:46:30.080 technical domain, et cetera, et cetera.But you've got the long tail now of like,
+01:46:34.880 &quot;I was really excited about this person. It didn't work out.&quot; Curious why that happens.
+01:46:43.920 Generally what I tell people—I tell myself, I guess, aspirationally—is, don't look at
+01:46:49.440 the resume. Just believe your interaction. The resume may seem very impressive and it's like,
+01:46:55.600 &quot;Wow, the resume looks good.&quot;But if the conversation
+01:47:00.160 after 20 minutes is not &quot;wow,&quot; you should believe the conversation, not the paper.
+01:47:07.360 I feel like part of your method is that… There was this meme in the media a few years back about
+01:47:14.000 Tesla being a revolving door of executive talent.Whereas actually, I think when you look at it,
+01:47:19.760 Tesla's had a very consistent and internally promoted executive bench over the past few years.
+01:47:24.720 Then at SpaceX, you have all these folks like Mark Juncosa and Steve Davis—
+01:47:29.600 Steve Davis runs The Boring Company these days.Bill Riley, and folks like that.
+01:47:35.600 It feels like part of what has worked well is having very capable technical deputies.
+01:47:43.280 What do all of those people have in common?Well, the Tesla senior team,
+01:47:53.600 at this point has probably got an average tenure of 10-12 years. It's quite long.
+01:48:03.280 But there were times when Tesla went through an extremely rapid growth phase,
+01:48:11.280 so things were just somewhat sped up.As you know, a company goes through
+01:48:17.360 different orders of magnitude of size.People that could help manage, say,
+01:48:23.120 a 50-person company versus a 500-person company versus a 5,000-person company versus
+01:48:28.160 a 50,000-person company.You outgrew people.
+01:48:31.520 It's just not the same team.It's not always the same team.
+01:48:34.160 So if a company is growing very rapidly, the rate at which executive positions will
+01:48:39.600 change will also be proportionate to the rapidity of the growth generally.
+01:48:47.440 Tesla had a further challenge where when Tesla had very successful periods, we would be relentlessly
+01:48:56.720 recruited from. Like, relentlessly. When Apple had their electric car program,
+01:49:03.520 they were carpet bombing Tesla with recruiting calls. Engineers just unplugged their phones.
+01:49:10.880 &quot;I'm trying to get work done here.&quot;Yeah. &quot;If I get one more call from
+01:49:14.160 an Apple recruiter…&quot; But their opening offer without any interview would be
+01:49:19.120 like double the compensation at Tesla.So we had a bit of the &quot;Tesla pixie
+01:49:28.240 dust&quot; thing where it's like, &quot;Oh, if you hire a Tesla executive,
+01:49:32.160 suddenly everything's going to be successful.&quot;I've fallen prey to the pixie dust thing as well,
+01:49:38.640 where it's like, &quot;Oh, we'll hire someone from Google or Apple and they'll be immediately
+01:49:41.600 successful,&quot; but that's not how it works. People are people. There's no magical pixie
+01:49:47.200 dust. So when we had the pixie dust problem, we would get relentlessly recruited from.
+01:49:57.840 Also, Tesla being engineering, especially being primarily in Silicon Valley,
+01:50:03.600 it's easier for people to just...They don't have to change their life very much.
+01:50:10.080 Their commute's going to be the same.So how do you prevent that?
+01:50:14.320 How do you prevent the pixie dust effect where everyone's trying to poach all your people?
+01:50:21.200 I don't think there's much we can do to stop it.That's one of the reasons why Tesla… Really,
+01:50:29.680 being in Silicon Valley and having the pixie dust thing at the same time meant that there was
+01:50:39.920 just a very, very aggressive recruitment.Presumably being in Austin helps then?
+01:50:44.880 Austin, it helps. Tesla still has a majority of its engineering in California.
+01:50:56.240 Getting engineers to move… I call it the &quot;significant other&quot; problem.
+01:51:00.160 Yes, &quot;significant others&quot; have jobs.Exactly. So for Starbase that was
+01:51:06.160 particularly difficult, since the odds of finding a non-SpaceX job…
+01:51:10.000 In Brownsville, Texas……are pretty low. It's
+01:51:13.760 quite difficult. It's like a technology monastery thing, remote and mostly dudes.
+01:51:22.240 Not much of an improvement over SF.If you go back to these people who've really
+01:51:34.800 been very effective in a technical capacity at Tesla, at SpaceX, and those sorts of places, what
+01:51:41.680 do you think they have in common other than...Is it just that they're very sharp on the
+01:51:48.160 rocketry or the technical foundations, or do you think it's something organizational?
+01:51:52.160 Is it something about their ability to work with you?
+01:51:54.560 Is it their ability to be flexible but not too flexible?
+01:52:03.920 What makes a good sparring partner for you?I don't think of it as a sparring partner.
+01:52:08.560 If somebody gets things done, I love them, and if they don't,
+01:52:11.600 I hate them. So it's pretty straightforward. It's not like some idiosyncratic thing.
+01:52:17.760 If somebody executes well, I'm a huge fan, and if they don't, I'm not.
+01:52:22.880 But it's not about mapping to my idiosyncratic preferences.
+01:52:25.840 I certainly try not to have it be mapping to my idiosyncratic preferences.
+01:52:36.240 Generally, I think it's a good idea to hire for talent and drive and trustworthiness.
+01:52:46.960 And I think goodness of heart is important.I underweighted that at one point.
+01:52:53.680 So, are they a good person? Trustworthy? Smart and talented and hard working?
+01:53:01.200 If so, you can add domain knowledge.But those fundamental traits,
+01:53:06.000 those fundamental properties, you cannot change.So most of the people who are at Tesla and SpaceX
+01:53:14.480 did not come from the aerospace industry or the auto industry.
+01:53:18.240 What has had to change most about your management style as your companies have
+01:53:21.680 scaled from 100 to 1,000 to 10,000 people?You're known for this very micro management,
+01:53:27.520 just getting into the details of things.Nano management, please. Pico management.
+01:53:34.080 Femto management.Keep going.
+01:53:39.200 We're going to go all the way down to Planck's constant.
+01:53:44.640 All the way down to Heisenberg uncertainty principle.
+01:53:50.880 Are you still able to get into details as much as you want?
+01:53:52.800 Would your companies be more successful if they were smaller?
+01:53:56.160 How do you think about that?Because I have a fixed amount of
+01:53:58.640 time in the day, my time is necessarily diluted as things grow and as the span of activity increases.
+01:54:10.720 It's impossible for me to actually be a micromanager because that would imply I
+01:54:17.440 have some thousands of hours per day.It is a logical impossibility
+01:54:22.080 for me to micromanage things.Now, there are times when I will drill down into a
+01:54:31.040 specific issue because that specific issue is the limiting factor on the progress of the company.
+01:54:42.480 The reason for drilling into some very detailed item is because it is the limiting factor.
+01:54:49.440 It’s not arbitrarily drilling into tiny things.From a time standpoint, it is physically
+01:54:57.520 impossible for me to arbitrarily go into tiny things that don't matter. That would
+01:55:03.040 result in failure. But sometimes the tiny things are decisive in victory.
+01:55:09.680 Famously, you switched the Starship design from composites to steel.
+01:55:17.040 Yes.You made
+01:55:18.560 that decision. That wasn't people going around saying, &quot;Oh, we found something better, boss.&quot;
+01:55:22.560 That was you encouraging people against some resistance.
+01:55:25.280 Can you tell us how you came to that whole concept of the steel switch?
+01:55:32.800 Desperation, I'd say. Originally, we were going to make Starship out of carbon fiber.
+01:55:45.600 Carbon fiber is pretty expensive. When you do volume production, you can get any given thing
+01:55:55.440 to start to approach its material cost.The problem with carbon fiber is that
+01:56:00.720 material cost is still very high.Particularly if you go for a high-strength
+01:56:10.480 specialized carbon fiber that can handle cryogenic oxygen, it's roughly 50 times the cost of steel.
+01:56:20.800 At least in theory, it would be lighter.People generally think of steel as being
+01:56:24.560 heavy and carbon fiber as being light.For room temperature applications,
+01:56:35.520 like a Formula 1 car, static aero structure, or any kind of aero structure really, you're
+01:56:42.960 probably going to be better off with carbon fiber.The problem is that we were trying to make this
+01:56:48.000 enormous rocket out of carbon fiber and our progress was extremely slow.
+01:56:53.840 It had been picked in the first place just because it's light?
+01:56:57.040 Yes. At first glance, most people would think that the choice for
+01:57:04.960 making something light would be carbon fiber.The thing is that when you make something very
+01:57:18.000 enormous out of carbon fiber and then you try to have the carbon fiber be efficiently cured,
+01:57:25.360 meaning not room temperature cured, because sometimes you got 50 plies of carbon fiber…
+01:57:33.280 Carbon fiber is really carbon string and glue.In order to have high strength,
+01:57:39.680 you need an autoclave.Something that's essentially a high pressure oven.
+01:57:46.320 If you have something that's gigantic, that one's got to be bigger than the rocket.
+01:57:52.800 We were trying to make an autoclave that's bigger than any autoclave that's ever existed.
+01:57:58.720 Or you can do room temperature cure, which takes a long time and has issues.
+01:58:03.280 The final issue is that we were just making very slow progress with carbon fiber.
+01:58:12.480 The meta question is why it had to be you who made that decision.
+01:58:18.160 There's many engineers on your team.How did the team not arrive at steel?
+01:58:20.880 Yeah exactly. This is part of a broader question, understanding your comparative
+01:58:24.240 advantage at your companies.Because we were making very slow
+01:58:29.840 progress with carbon fiber, I was like, &quot;Okay, we've got to try something else.&quot;
+01:58:33.840 For the Falcon 9, the primary airframe is made of aluminum lithium, which has
+01:58:41.520 a very good strength-to-weight.Actually, it has about the same,
+01:58:47.920 maybe better, strength to weight for its application than carbon fiber.
+01:58:51.600 But aluminum lithium is very difficult to work with.
+01:58:53.440 In order to weld it, you have to do something called friction stir welding, where you join the
+01:58:57.600 metal without entering the liquid phase.It's kind of wild that you can do that.
+01:59:02.800 But with this particular type of welding, you can do that. It's very difficult. Let's say you
+01:59:10.400 want to make a modification or attach something to aluminum lithium, you now have to use a mechanical
+01:59:16.320 attachment with seals. You can't weld it on. So I wanted to avoid using aluminum lithium
+01:59:24.880 for the primary structure for Starship.There was this very special grade of
+01:59:34.960 carbon fiber that had very good mass properties.With a rocket, you're really trying to maximize
+01:59:41.680 the percentage of the rocket that is propellant, minimize the mass obviously.
+01:59:48.800 But like I said, we were making very slow progress.
+01:59:54.480 I said, &quot;at this rate, we’re never going to get to Mars.
+01:59:56.400 So we've got to think of something else.&quot;I didn't want to use aluminum lithium
+02:00:01.360 because of the difficulty of friction stir welding, especially doing that at scale.
+02:00:06.640 It was hard enough at 3.6 meters in diameter, let alone at 9 meters or above.
+02:00:12.880 Then I said, &quot;what about steel?&quot;I had a clue here because some of
+02:00:21.200 the early US rockets had used very thin steel.The Atlas rockets had used a steel balloon tank.
+02:00:30.880 It's not like steel had never been used before. It actually had been used. When you look at
+02:00:35.600 the material properties of stainless steel, full-hard, strain hardened stainless steel,
+02:00:46.640 at cryogenic temperature the strength to weight is actually similar to carbon fiber.
+02:00:54.320 If you look at material properties at room temperature, it looks like
+02:00:58.560 the steel is going to be twice as heavy.But if you look at the material properties
+02:01:03.840 at cryogenic temperature of full-hard steel, stainless of particular grades,
+02:01:10.240 then you actually get to a similar strength to weight as carbon fiber.
+02:01:15.200 In the case of Starship, both the fuel and the oxidizer are cryogenic.
+02:01:19.760 For Falcon 9, the fuel is rocket propellant-grade kerosene, basically a very pure form of jet fuel.
+02:01:32.320 That is roughly room temperature. Although we do actually chill it slightly below,
+02:01:38.080 we chill it like a beer.Delicious.
+02:01:41.440 We do chill it, but it's not cryogenic.In fact, if we made it cryogenic,
+02:01:45.840 it would just turn to wax.But for Starship,
+02:01:50.000 it's liquid methane and liquid oxygen.They are liquid at similar temperatures.
+02:01:59.040 Basically, almost the entire primary structure is at cryogenic temperature.
+02:02:03.600 So then you've got a 300-series stainless that's strain hardened.
+02:02:12.800 Because almost all things are cryogenic temperature, it actually has similar
+02:02:17.680 strength to weight as carbon fiber.But it costs 50x less in raw
+02:02:25.040 material and is very easy to work with.You can weld stainless steel outdoors.
+02:02:30.800 You could smoke a cigar while welding stainless steel. It's very resilient.
+02:02:37.200 You can modify it easily. If you want to attach something, you just weld it right on.
+02:02:44.560 Very easy to work with, very low cost.Like I said, at cryogenic temperature,
+02:02:52.920 it’s similar strength-to-weight to carbon fiber.Then when you factor in that we have a much
+02:03:02.720 reduced heat shield mass, because the melting point of steel, is much greater
+02:03:07.600 than the melting point of aluminum… It's about twice the melting point of aluminum.
+02:03:13.680 So you can just run the rocket much hotter?Yes, especially for the ship which is coming
+02:03:18.960 in like a blazing meteor.You can greatly reduce
+02:03:25.440 the mass of the heat shield.You can cut the mass of the windward
+02:03:34.000 part of the heat shield, maybe in half, and you don't need any heat shielding on the leeward side.
+02:03:45.840 The net result is that actually the steel rocket weighs less than
+02:03:49.520 the carbon fiber rocket, because the resin in the carbon fiber rocket starts to melt.
+02:04:00.560 Basically, carbon fiber and aluminum have about the same operating temperature capabilities,
+02:04:06.720 whereas steel can operate at twice the temperature. These are very rough approximations.
+02:04:12.160 I won't build the rocket.What I mean is people will say,
+02:04:14.800 &quot;Oh, he said this twice. It's actually 0.8.&quot; I'm like, shut up, assholes.
+02:04:18.720 That's what the main comment's going to be about.God damn it. The point is, in retrospect, we
+02:04:25.440 should have started with steel in the beginning.It was dumb not to do steel.
+02:04:28.080 Okay, but to play this back to you, what I'm hearing is that steel was a riskier,
+02:04:32.880 less proven path, other than the early US rockets.Versus carbon fiber was a worse but
+02:04:40.480 more proven out path.So you need to be the
+02:04:43.360 one to push for, &quot;Hey, we're going to do this riskier path and just figure it out.&quot;
+02:04:48.720 So you're fighting a sort of conservatism in a sense.
+02:04:52.800 That's why I initially said that the issue is that we weren't making fast enough progress.
+02:04:57.360 We were having trouble making even a small barrel section of the carbon fiber
+02:05:02.800 that didn't have wrinkles in it.Because at that large scale, you have to
+02:05:08.960 have many plies, many layers of the carbon fiber.You've got to cure it and you've got to cure it
+02:05:14.320 in such a way that it doesn't have any wrinkles or defects.
+02:05:18.720 Carbon fiber is much less resilient than steel. It has much less toughness.
+02:05:26.000 Stainless steel will stretch and bend, the carbon fiber will tend to shatter.
+02:05:35.920 Toughness being the area under the stress strain curve.
+02:05:39.360 You're generally going to have to do better with steel, but stainless steel to be precise.
+02:05:44.960 One other Starship question. So I visited Starbase, I think it was two years ago,
+02:05:51.200 with Sam Teller, and that was awesome.It was very cool to see, in a whole bunch of ways.
+02:05:55.760 One thing I noticed was that people really took pride in the simplicity of things, where everyone
+02:06:02.880 wants to tell you how Starship is just a big soda can, and we're hiring welders, and if you can weld
+02:06:09.520 in any industrial project, you can weld here.But there's a lot of pride in the simplicity.
+02:06:16.320 Well, factually Starship is a very complicated rocket.
+02:06:18.720 So that's what I'm getting at.Are things simple or are they complex?
+02:06:23.200 I think maybe just what they're trying to say is that you don't have to have prior experience
+02:06:27.200 in the rocket industry to work on Starship.Somebody just needs to be smart and work hard
+02:06:36.800 and be trustworthy and they can work on a rocket.They don't need prior rocket experience.
+02:06:42.240 Starship is the most complicated machine ever made by humans, by a long shot.
+02:06:47.920 In what regards?Anything, really. I'd
+02:06:50.880 say there isn't a more complex machine.I'd say that pretty much any project I
+02:07:00.080 can think of would be easier than this.That's why nobody has ever made a fully
+02:07:08.800 reusable orbital rocket. It's a very hard problem. Many smart people have tried before, very smart
+02:07:18.080 people with immense resources, and they failed. And we haven't succeeded yet. Falcon is partially
+02:07:26.480 reusable, but the upper stage is not.Starship Version 3,
+02:07:32.800 I think this design can be fully reusable.That full reusability is what will enable
+02:07:41.920 us to become a multi-planet civilization.Any technical problem, even like a Hadron
+02:07:52.400 Collider or something like that, is an easier problem than this.
+02:07:55.280 We spent a lot of time on bottlenecks.Can you say what the current Starship
+02:07:58.560 bottlenecks are, even at a high level?Trying to make it not explode, generally.
+02:08:04.960 It really wants to explode.That old chestnut. All those
+02:08:09.920 combustible materials.We've had two boosters explode on the test stand.
+02:08:13.680 One obliterated the entire test facility.So it only takes that one mistake.
+02:08:21.680 The amount of energy contained in a Starship is insane.
+02:08:25.920 Is that why it's harder than Falcon?It's because it's just more energy?
+02:08:30.400 It's a lot of new technology. It's pushing the performance envelope. The
+02:08:37.120 Raptor 3 engine is a very, very advanced engine.It's by far the best rocket engine ever made.
+02:08:43.600 But it desperately wants to blow up.Just to put things into perspective here,
+02:08:48.640 on liftoff the rocket is generating over 100 gigawatts of power. That’s 20% of US electricity.
+02:08:58.480 It's actually insane.It's a great comparison.
+02:08:59.600 While not exploding.Sometimes.
+02:09:02.480 Sometimes, yes. So I was like, how does it not explode?
+02:09:06.480 There's thousands of ways that it could explode and only one way that it doesn't.
+02:09:12.800 So we want it not only to really not explode, but fly reliably on a daily basis, like once per hour.
+02:09:22.160 Obviously, if it blows up a lot, it's very difficult to maintain that
+02:09:25.920 launch cadence.Yes.
+02:09:30.880 What's the single biggest remaining problem for Starship?
+02:09:33.920 It's having the heat shield be reusable.No one's ever made a reusable orbital heat shield.
+02:09:44.560 So the heat shield's gotta make it through the ascent phase without shucking a bunch of tiles,
+02:09:52.080 and then it's gotta come back in and also not lose a bunch of tiles or overheat the main airframe.
+02:10:01.200 Isn't that hard because it's fundamentally a consumable?
+02:10:05.120 Well, yes, but your brake pads in your car are also consumable, but they last a very long time.
+02:10:09.440 Fair.So it just needs to last a very long time.
+02:10:17.600 We have brought the ship back and had it do a soft landing in the ocean.
+02:10:22.080 We've done that a few times.But it lost a lot of tiles.
+02:10:27.680 It was not reusable without a lot of work.Even though it did come to a soft landing,
+02:10:35.280 it would not have been reusable without a lot of work.
+02:10:40.080 So it's not really reusable in that sense.That's the biggest problem that remains,
+02:10:44.400 a fully reusable heat shield.You want to be able to land it,
+02:10:50.960 refill propellant and fly again.You can't do this laborious inspection
+02:10:57.200 of 40,000 tiles type of thing.When I read biographies of yours,
+02:11:06.720 it seems like you're just able to drive the sense of urgency and drive the sense of &quot;this is the
+02:11:11.840 thing that can scale.&quot;I'm curious why you
+02:11:15.120 think other organizations of your…SpaceX and Tesla are really big companies now.
+02:11:20.000 You're still able to keep that culture.What goes wrong with other companies such
+02:11:24.480 that they're not able to do that?I don't know.
+02:11:29.040 Like today, you said you had a bunch of SpaceX meetings.
+02:11:31.440 What is it that you're doing there that's keeping that?
+02:11:33.440 It’s adding urgency?Well, I don't know. I guess the urgency is going
+02:11:42.640 to come from whoever is leading the company.I have a maniacal sense of urgency.
+02:11:47.520 So that maniacal sense of urgency projects through the rest of the company.
+02:11:52.480 Is it because of consequences? They're like, &quot;Elon set a crazy deadline, but if I don't get it,
+02:11:57.680 I know what happens to me.&quot;Is it just that you're able to
+02:12:01.360 identify bottlenecks and get rid of them so people can move fast?
+02:12:03.920 How do you think about why your companies are able to move fast?
+02:12:07.120 I'm constantly addressing the limiting factor.On the deadlines front, I generally actually
+02:12:20.160 try to aim for a deadline that I at least think is at the 50th percentile.
+02:12:25.520 So it's not like an impossible deadline, but it's the most aggressive deadline I can think
+02:12:29.600 of that could be achieved with 50% probability.Which means that it'll be late half the time.
+02:12:42.400 There is a law of gas expansion that applies to schedules.
+02:12:48.160 If you said we're going to do something in five years, which to me is like infinity time,
+02:12:55.040 it will expand to fill the available schedule and it'll take five years.
+02:13:05.520 Physics will limit how fast you can do certain things.
+02:13:07.840 So scaling up manufacturing, there's a rate at which you can move the atoms
+02:13:15.200 and scale manufacturing.That's why you can't instantly
+02:13:17.520 make a million units a year of something.You've got to design the manufacturing line.
+02:13:23.440 You've got to bring it up.You've got to ride the S-curve of production.
+02:13:31.840 What can I say that's actually helpful to people?
+02:13:38.160 Generally, a maniacal sense of urgency is a very big deal.
+02:13:47.440 You want to have an aggressive schedule and you want to figure out what the limiting
+02:13:54.640 factor is at any point in time and help the team address that limiting factor.
+02:13:59.360 So Starlink was slowly in the works for many years.
+02:14:05.040 We talked about it all the way in the beginning of the company.
+02:14:07.840 So then there was a team you had built in Redmond, and then at one point you
+02:14:12.240 decided this team is just not cutting it.It went for a few years slowly, and so why didn't
+02:14:25.760 you act earlier, and why did you act when you did?Why was that the right moment at which to act?
+02:14:30.800 I have these very detailed engineering reviews weekly.
+02:14:38.880 That's maybe a very unusual level of granularity.I don't know anyone who runs a company,
+02:14:45.200 or at least a manufacturing company, that goes with the level of detail that I go
+02:14:50.000 into. It's not as though... I have a pretty good understanding of what's actually going
+02:14:57.920 on because we go through things in detail.I'm a big believer in skip-level meetings
+02:15:06.960 where instead of having the person that reports to me say things, it's everyone that reports to them
+02:15:14.640 saying something in the technical review.And there can't be advanced preparation.
+02:15:25.440 Otherwise you're going to get &quot;glazed&quot;, as I say these days.
+02:15:31.680 Exactly. Very Gen Z of you.How do you prevent advanced preparation?
+02:15:34.953 Do you call on them randomly?No, I just go around the room.
+02:15:37.520 Everyone provides an update. It's a lot of information to keep in your head.
+02:15:48.000 If you have meetings weekly or twice weekly, you've got a snapshot of what that person said.
+02:15:56.240 You can then plot the progress points.You can sort of mentally plot the
+02:16:03.680 points on a curve and say, &quot;are we converging to a solution or not?&quot;
+02:16:12.880 I'll take drastic action only when I conclude that success is not in a set of possible outcomes.
+02:16:22.400 So when I finally reach the conclusion that unless drastic action is done, we have no chance of
+02:16:29.840 success, then I must take drastic action.I came to that conclusion in 2018,
+02:16:36.160 took drastic action and fixed the problem.You've got many, many companies. In each of
+02:16:45.439 them it sounds like you do this kind of deep engineering understanding of
+02:16:49.200 what the relevant bottlenecks are so you can do these reviews with people.
+02:16:56.318 You've been able to scale it up to five, six, seven companies.
+02:16:59.760 Within one of these companies, you have many different mini companies within them.
+02:17:04.559 What determines the max amount here?Because you have like 80 companies…?
+02:17:07.359 80? No.But you have so many
+02:17:10.000 already. That's already remarkable.By this current number.
+02:17:13.359 Exactly.We can barely keep one company together.
+02:17:23.040 It depends on the situation. I actually don't have regular meetings with The Boring Company,
+02:17:32.639 so The Boring Company is sort of cruising along.Basically, if something is working well and
+02:17:37.920 making good progress, then there's no point in me spending time on it.
+02:17:42.559 I actually allocate time according to where the limiting factor. Where are things problematic?
+02:17:50.959 Where are we pushing against? What is holding us back? I focus, at the risk of saying the
+02:17:59.920 words too many times, on the limiting factor.The irony is if something's going really well,
+02:18:09.280 they don't see much of me.But if something is going badly,
+02:18:12.799 they'll see a lot of me. Or not even badly…If something is the limiting factor.
+02:18:18.719 The limiting factor, exactly. It’s not exactly going badly but it’s the
+02:18:21.120 thing that we need to make go faster.When something’s a limiting factor at
+02:18:25.359 SpaceX or Tesla, are you talking weekly and daily with the engineer that's
+02:18:32.000 working on it? How does that actually work?Most things that are the limiting factor are
+02:18:39.680 weekly and some things are twice weekly.The AI5 chip review is twice weekly.
+02:18:46.799 Every Tuesday and Saturday is the chip review.Is it open ended in how long it goes?
+02:18:54.398 Technically, yes, but usually it's two or three hours. Sometimes less. It depends on
+02:19:03.760 how much information we've got to go through.That's another thing. I'm just trying to tease
+02:19:07.600 out the differences here because the outcomes seem quite different.
+02:19:11.840 I think it's interesting to know what inputs are different.
+02:19:14.559 It feels like in the corporate world, one, like you were saying, the CEO doing engineering
+02:19:20.000 reviews does not always happen despite the fact that that is what the company is doing.
+02:19:25.520 But then time is often pretty finely sliced into half hour meetings or even 15 minute meetings.
+02:19:32.318 It seems like you hold more open-ended, &quot;We're talking about it until we figure
+02:19:38.318 it out&quot; type things.Sometimes. But most
+02:19:43.040 of them seem to more or less stay on time.Today's Starship engineering review went a bit
+02:19:56.640 longer because there were more topics to discuss.They're trying to figure out how to scale to a
+02:20:04.479 million plus tons to orbit per year. It’s quite challenging.
+02:20:08.399 Can I ask a question? You said about Optimus and AI that they're going to result in double
+02:20:15.080 digit growth rates within a matter of years.Oh, like the economy? Yes. I think that's right.
+02:20:22.240 What was the point of the DOGE cuts if the economy is going to grow so much?
+02:20:28.080 Well, I think waste and fraud are not good things to have.
+02:20:33.359 I was actually pretty worried about...In the absence of AI and robotics,
+02:20:41.600 we're actually totally screwed because the national debt is piling up like crazy.
+02:20:50.080 The interest payments to national debt exceed the military budget, which is a trillion dollars.
+02:20:54.240 So we have over a trillion dollars just in interest payments.
+02:21:00.000 I was pretty concerned about that.Maybe if I spend some time, we can
+02:21:03.680 slow down the bankruptcy of the United States and give us enough time for the AI and robots
+02:21:09.680 to help solve the national debt.Or not help solve, it's the only
+02:21:16.080 thing that could solve the national debt.We are 1000% going to go bankrupt as a country,
+02:21:21.200 and fail as a country, without AI and robots.Nothing else will solve the national debt.
+02:21:30.880 We just need enough time to build the AI and robots to not go bankrupt before then.
+02:21:39.200 I guess the thing I'm curious about is, when DOGE starts you have this enormous
+02:21:43.920 ability to enact reform.Not that enormous.
+02:21:48.479 Sure. I totally buy your point that it's important that AI and robotics drive
+02:21:53.920 productivity improvements, drive GDP growth.But why not just directly go after the things
+02:21:58.960 you were pointing out, like the tariffs on certain components, or permitting?
+02:22:03.840 I'm not the president. And it is very hard to cut things that are obvious waste and fraud,
+02:22:13.359 like ridiculous waste and fraud.What I discovered is that it's extremely
+02:22:21.359 difficult even to cut very obvious waste and fraud from the government because the government
+02:22:28.720 has to operate on who's complaining.If you cut off payments to fraudsters,
+02:22:34.160 they immediately come up with the most sympathetic sounding reasons to continue the payment.
+02:22:39.120 They don't say, &quot;Please keep the fraud going.&quot;They’re like, &quot;You're killing baby pandas.&quot;
+02:22:46.240 Meanwhile, no baby pandas are dying. They're just making it up. The fraudsters are capable
+02:22:51.680 of coming up with extremely compelling, heart-wrenching stories that are false,
+02:22:56.399 but nonetheless sound sympathetic. That's what happened. Perhaps I should have known better.
+02:23:10.000 But I thought, wait, let's try to cut some amount of waste and pork from the government.
+02:23:16.240 Maybe there shouldn't be 20 million people marked as alive in Social Security who are
+02:23:22.479 definitely dead, and over the age of 115. The oldest American is 114. So it's safe to say if
+02:23:30.880 somebody is 115 and marked as alive in the Social Security database, there's either a typo… Somebody
+02:23:39.840 should call them and say, &quot;We seem to have your birthday wrong, or we need to mark you
+02:23:47.439 as dead.&quot; One of the two things.Very intimidating call to get.
+02:23:52.800 Well, it seems like a reasonable thing.Say if their birthday is in the future
+02:23:59.920 and they have a Small Business Administration loan, and their birthday is 2165,
+02:24:07.680 we either have a typo or we have fraud.So we say, &quot;we appear to have gotten the
+02:24:13.760 century of your birth incorrect.&quot;Or a great plot for a movie.
+02:24:17.040 Yes. That's what I mean by, ludicrous fraud.Were those people getting payments?
+02:24:23.520 Some were getting payments from Social Security.But the main fraud vector was to mark somebody as
+02:24:29.359 alive in Social Security and then use every other government payment system to basically do fraud.
+02:24:37.920 Because what those other government payment systems do,
+02:24:40.800 they would simply do an &quot;are you alive&quot; check to the Social Security database. It's a bank shot.
+02:24:46.319 What would you estimate is the total amount of fraud from this mechanism?
+02:24:52.080 By the way, the Government Accountability Office has done these estimates before. I'm
+02:24:55.359 not the only one. In fact, I think the GAO did an analysis, a rough estimate of fraud during
+02:25:02.720 the Biden administration, and calculated it at roughly half a trillion dollars.
+02:25:08.000 So don't take my word for it.Take a report issued during the
+02:25:11.680 Biden administration. How about that?From this Social Security mechanism?
+02:25:16.319 It's one of many. It's important to appreciate that the government is
+02:25:22.399 very ineffective at stopping fraud.It's not like a company where, with
+02:25:30.240 stopping fraud, you've got a motivation because it's affecting the earnings of your company.
+02:25:34.399 The government just prints more money. You need caring and competence. These are
+02:25:44.880 in short supply at the federal level.When you go to the DMV, do you think,
+02:25:52.640 &quot;Wow, this is a bastion of competence&quot;?Well, now imagine it's worse than the DMV
+02:25:57.760 because it's the DMV that can print money.At least the state level DMVs need to...
+02:26:05.439 The states more or less need to stay within their budget or they go bankrupt.
+02:26:08.640 But the federal government just prints more money.If there's actually half a trillion of fraud,
+02:26:14.880 why was it not possible to cut all that?You really have to stand back and recalibrate
+02:26:28.560 your expectations for competence.Because you're operating in a world
+02:26:36.160 where you've got to make ends meet.You've got to pay your bills...
+02:26:40.960 Find the microphones.Exactly. It's not like there's a giant,
+02:26:49.920 largely uncaring monster bureaucracy.It's a bunch of anachronistic computers
+02:26:57.760 that are just sending payments.One of the things that the DOGE
+02:27:03.520 team did sounds so simple and probably will save $100-200 billion a year.
+02:27:14.000 It was simply requiring payments from the main Treasury computer—which is called PAM,
+02:27:19.200 Payment Accounts Master or something like that, there's $5 trillion payments a year—that
+02:27:25.520 go out have a payment appropriation code.Make it mandatory, not optional, that you
+02:27:32.240 have anything at all in the comment field.You have to recalibrate how dumb things are.
+02:27:42.479 Payments were being sent out with no appropriation code, not checking back to any congressional
+02:27:48.640 appropriation, and with no explanation.This is why the Department of War,
+02:27:54.880 formerly the Department of Defense, cannot pass an audit, because the information is literally
+02:27:59.120 not there. Recalibrate your expectations.I want to better understand this half a trillion
+02:28:04.479 number, because there's an IG report in 2024.Why is it so low?
+02:28:10.160 Maybe, but we found that over seven years, the Social Security fraud
+02:28:14.000 they estimated was like $70 billion over seven years, so like $10 billion a year.
+02:28:17.200 So I'd be curious to see what the other $490 billion is.
+02:28:20.399 Federal government expenditures are $7.5 trillion a year.
+02:28:26.399 How competent do you think the government is?The discretionary spending there is like… 15%?
+02:28:33.520 But it doesn't matter. Most of the fraud is non-discretionary.
+02:28:36.399 It's basically fraudulent Medicare, Medicaid, Social Security,
+02:28:45.760 disability. There's a zillion government payments. A bunch of these payments are in
+02:28:52.399 fact block transfers to the states.So the federal government doesn't
+02:28:59.520 even have the information in a lot of cases to even know if there's fraud.
+02:29:04.479 Let's consider reductio ad absurdum. The government is perfect and has no fraud.
+02:29:10.319 What is your probability estimate of that? Zero. Okay, so then would you say, fraud and waste
+02:29:18.479 at the government is 90% efficient?That also would be quite generous.
+02:29:27.120 But if it's only 90%, that means that there's $750 billion a year of waste and
+02:29:32.399 fraud. And it's not 90%. It's not 90% effective.This seems like a strange way to first principles
+02:29:38.080 the amount of fraud in the government.Just like, how much do you think there is?
+02:29:43.280 Anyways, we don't have to do it live, but I'd be curious—
+02:29:45.680 You know a lot about fraud at Stripe?People are constantly trying to do fraud.
+02:29:49.680 Yeah, but as you say, it's a little bit of a...We've really ground it down, but it's a little
+02:29:54.160 bit of a different problem space because you're dealing with a much more heterogeneous set of
+02:29:58.720 fraud vectors here than we are.But at Stripe, you have high
+02:30:03.760 competence and you try hard.You have high competence and
+02:30:07.840 high caring, but still fraud is non-zero.Now imagine it's at a much bigger scale, there's
+02:30:15.840 much less competence, and much less caring.At PayPal back in the day, we tried to manage
+02:30:22.640 fraud down to about 1% of the payment volume. That was very difficult. It took a tremendous amount of
+02:30:28.640 competence and caring to get fraud merely to 1%.Now imagine that you're an organization where
+02:30:36.319 there's much less caring and much less competence.It's going to be much more than 1%.
+02:30:41.920 How do you feel now looking back on politics and doing stuff there?
+02:30:48.479 Looking from the outside in, two things have been quite impactful: one, the America PAC, and two,
+02:30:59.040 the acquisition of Twitter at the time.But also it seems like there
+02:31:05.840 was a bunch of heartache.What's your grading of the whole experience?
+02:31:16.319 I think those things needed to be done to maximize the probability that the future is good.
+02:31:27.200 Politics generally is very tribal. People lose their objectivity usually with politics.
+02:31:35.600 They generally have trouble seeing the good on the other side or the bad on their own side.
+02:31:41.520 That's generally how it goes. That, I guess, was one of the things that surprised me the most.
+02:31:48.000 You often simply cannot reason with people.If they're in one tribe or the other.
+02:31:52.080 They simply believe that everything their tribe does is good and anything
+02:31:55.840 the other political tribe does is bad.Persuading them otherwise is almost impossible.
+02:32:07.760 But I think overall those actions—acquiring Twitter, getting Trump elected, even though
+02:32:22.479 it makes a lot of people angry—I think those actions were good for civilization.
+02:32:30.640 How does it feed into the future you're excited about?
+02:32:33.439 Well, America needs to be strong enough to last long enough to extend life to other
+02:32:42.000 planets and to get AI and robotics to the point where we can ensure that the future is good.
+02:32:51.120 On the other hand, if we were to descend into, say, communism or some situation where the state
+02:32:59.280 was extremely oppressive, that would mean that we might not be able to become multi-planetary.
+02:33:10.319 The state might stamp out our progress in AI and robotics.
+02:33:21.359 Optimus, Grok, et cetera. Not just yours, but any revenue-maximizing company's products will
+02:33:29.520 be leveraged by the government over time.How does this concern manifest in what
+02:33:37.040 private companies should be willing to give governments? What kinds of guardrails? Should
+02:33:44.399 AI models be made to do whatever the government that has contracted
+02:33:51.040 them out to do and asks them to do?Should Grok get to say, &quot;Actually,
+02:33:57.439 even if the military wants to do X, no, Grok will not do that&quot;?
+02:34:01.040 I think maybe the biggest danger of AI and robotics going wrong is government.
+02:34:16.800 People who are opposed to corporations or worried about corporations should
+02:34:21.680 really worry the most about government.Because government is just a
+02:34:25.439 corporation in the limit.Government is just the biggest
+02:34:30.479 corporation with a monopoly on violence.I always find it a strange dichotomy where
+02:34:38.720 people would think corporations are bad, but the government is good, when the government is
+02:34:41.680 simply the biggest and worst corporation. But people have that dichotomy. They somehow think
+02:34:50.960 at the same time that government can be good, but corporations bad, and this is not true.
+02:34:55.840 Corporations have better morality than the government.
+02:34:59.520 I actually think it’s a thing to be worried about.The government could potentially use AI and
+02:35:12.720 robotics to suppress the population. That is a serious concern.
+02:35:18.000 As the guy building AI and robotics, how do you prevent that?
+02:35:28.560 If you limit the powers of government, which is really what the US Constitution is intended to do,
+02:35:33.280 to limit the powers of government, then you're probably going to have a better outcome than
+02:35:37.760 if you have more government.Robotics will be available
+02:35:42.399 to all governments, right?I don’t know about all governments.
+02:35:49.840 It's difficult to predict. I can say what's the endpoint, or what is many years in the future, but
+02:35:57.760 it's difficult to predict the path along that way.If civilization progresses, AI will vastly
+02:36:08.800 exceed the sum of all human intelligence.There will be far more robots than humans.
+02:36:16.240 Along the way what happens is very difficult to predict.
+02:36:20.720 It seems one thing you could do is just say, &quot;whatever government X, you're not allowed to
+02:36:27.120 use Optimus to do X, Y, Z.&quot; Just write out a policy. I think you tweeted recently that
+02:36:31.439 Grok should have a moral constitution.One of those things could be that we
+02:36:36.720 limit what governments are allowed to do with this advanced technology.
+02:36:47.439 Technically if politicians pass a law and they can enforce that law,
+02:36:53.200 then it's hard to not do that law.The best thing we can have is limited government
+02:37:01.040 where you have the appropriate crosschecks between the executive, judicial, and legislative branches.
+02:37:12.000 The reason I'm curious about it is that at some point it seems the limits will come from you.
+02:37:17.359 You've got the Optimus, you've got the space GPUs…You think I'll be the boss of the government?
+02:37:24.479 Already it's the case with SpaceX that for things that are crucial—the government really
+02:37:32.479 cares about getting certain satellites up in space or whatever—it needs SpaceX. It is the
+02:37:37.600 necessary contractor. You are in the process of building more and more of the
+02:37:44.960 technological components of the future that will have an analogous role in different industries.
+02:37:50.319 You could have this ability to set some policy that suppressing classical liberalism in any
+02:37:58.560 way… &quot;My companies will not help in any way with that&quot;, or some policy like that.
+02:38:05.280 I will do my best to ensure that anything that's within my control
+02:38:08.640 maximizes the good outcome for humanity.I think anything else would be shortsighted,
+02:38:18.080 because obviously I'm part of humanity, so I like humans. Pro human.
+02:38:29.040 You mentioned that Dojo 3 will be used for space-based compute.
+02:38:34.399 You really read what I say.I don't know if you know,
+02:38:38.640 Elon, but you have a lot of followers.Dead giveaway. How did you discern my secrets?
+02:38:46.240 Oh I posted them on X.How do you design a chip for space? What changes?
+02:38:54.640 You want to design it to be more radiation tolerant and run at a higher temperature.
+02:39:03.120 Roughly, if you increase the operating temperature by 20% in degrees Kelvin,
+02:39:08.240 you can cut your radiator mass in half.So running at a higher temperature
+02:39:14.960 is helpful in space.There are various things
+02:39:20.800 you can do for shielding the memory.But neural nets are going to be very
+02:39:26.640 resilient to bit flips.Most of what happens
+02:39:30.000 for radiation is random bit flips.But if you've got a multi-trillion parameter model
+02:39:37.120 and you get a few bit flips, it doesn't matter.Heuristic programs are going to be much more
+02:39:42.720 sensitive to bit flips than some giant parameter file.
+02:39:49.760 I just design it to run hot.I think you pretty much do
+02:39:56.160 it the same way that you do things on Earth, apart from making it run hotter.
+02:40:02.240 The solar array is most of the weight on the satellite.
+02:40:04.560 Is there a way to make the GPUs even more powerful than what Nvidia and TPUs and
+02:40:11.040 et cetera are planning on doing that would be especially privileged in the space-based world?
+02:40:18.640 The basic math is, if you can do about a kilowatt per reticle, then you'd need 100
+02:40:31.040 million full reticle chips to do 100 gigawatts.Depending on what your yield assumptions are,
+02:40:44.399 that tells you how many chips you need to make.If you're going to have 100 gigawatts of power,
+02:40:53.120 you need 100 million chips that are running at a kilowatt sustained, per reticle. Basic math.
+02:41:05.280 100 million chips depends on… If you look at the die size of something like
+02:41:13.520 Blackwell GPUs or something, and how many you can get out of a wafer, you can get
+02:41:18.399 on the order of dozens or less per wafer.So basically, this is a world where if
+02:41:25.600 we're putting that out every single year, you're producing millions of wafers a month.
+02:41:33.920 That's the plan with TeraFab? Millions of wafers a month of advanced process nodes?
+02:41:37.920 Yeah it could be north of a million or something.You’ve got to do the memory too.
+02:41:42.479 Are you going to make a memory fab?I think the TeraFab's got to do memory.
+02:41:46.479 It's got to do logic, memory, and packaging.I'm very curious how somebody gets started.
+02:41:51.040 This is the most complicated thing man has ever made.
+02:41:54.240 Obviously, if anybody's up to the task, you're up to the task.
+02:41:58.560 So you realize it's a bottleneck, and you go to your engineers.
+02:42:02.560 What do you tell them to do? &quot;I want a million wafers a month in 2030.&quot;
+02:42:09.040 That’s right. That’s exactly what I want.Do you call ASML? What is the next step?
+02:42:14.080 No so much to ask.We make a little fab and see what happens.
+02:42:22.640 Make our mistakes at a small scale and then make a big one.
+02:42:25.840 Is a little fab done?No, it's not done. We're
+02:42:29.359 not going to keep that cat in the bag.That cat's going to come out of the bag.
+02:42:34.960 There'll be drones hovering over the bloody thing.You'll be able to see its construction
+02:42:39.760 progress on X in real time.Look, I don't know, we could just
+02:42:47.920 flounder in failure, to be fair. Success is not guaranteed. Since we want to try to make something
+02:43:00.319 like 100 million… We want 100 gigawatts of power and chips that can take 100 gigawatts by 2030.
+02:43:18.399 We’ll take as many chips as our suppliers will give us.
+02:43:20.640 I've actually said this to TSMC and Samsung and Micron: &quot;please build more fabs faster&quot;.
+02:43:28.640 We will guarantee to buy the output of those fabs.
+02:43:32.080 So they're already moving as fast as they can. It's us plus them.
+02:43:46.640 There's a narrative that the people doing AI want a very large number
+02:43:50.800 of chips as quickly as possible.Then many of the input suppliers,
+02:43:56.160 the fabs, but also the turbine manufacturers, are not ramping up production very quickly.
+02:44:02.880 No, they're not.The explanation you hear
+02:44:05.359 is that they're dispositionally conservative.They're Taiwanese or German, as the story may
+02:44:11.680 be. They just don't believe... Is that really the explanation or is there something else?
+02:44:17.279 Well, it's reasonable to... If somebody's been in the computer memory business for 30 or 40 years…
+02:44:25.920 They've seen cycles.They've seen boom and bust 10 times.
+02:44:32.080 That's a lot of layers of scar tissue.During the boom times, it looks like
+02:44:37.359 everything is going to be great forever.Then the crash happens and they're
+02:44:41.439 desperately trying to avoid bankruptcy.Then there's another boom and another crash.
+02:44:48.319 Are there other ideas you think others should go pursue that
+02:44:51.680 you're not for whatever reasons right now?There are a few companies that are pursuing
+02:44:58.240 new ways of doing chips, but they're just not scaling fast.
+02:45:03.520 I don't even mean within AI, I mean just generally.
+02:45:07.600 People should do the thing where they find that they're highly motivated to do that thing,
+02:45:13.279 as opposed to some idea that I suggest.They should do the thing that they find
+02:45:21.520 personally interesting and motivating to do.But going back to the limiting
+02:45:30.080 factor… I used that phrase about 100 times.The current limiting factor that I see in the
+02:45:47.920 three to four year timeframe, it's chips.In the one year timeframe, it's energy,
+02:45:56.160 power production, electricity.It's not clear to me that there's enough
+02:46:02.640 usable electricity to turn on all the AI chips that are being made.
+02:46:10.000 Towards the end of this year, I think people are going to have real trouble turning on...
+02:46:13.040 The chip output will exceed the ability to turn chips on.
+02:46:17.439 What's your plan to deal with that world?We're trying to accelerate electricity production.
+02:46:24.800 I guess that's maybe one of the reasons that xAI will be maybe the leader, hopefully the leader.
+02:46:34.080 We'll be able to turn on more chips than other people can turn on, faster,
+02:46:39.279 because we're good at hardware.Generally, the innovations from
+02:46:45.920 the corporations that call themselves labs, the ideas tend to flow… It's rare to see that
+02:46:54.399 there's more than about a six-month difference.The ideas travel back and forth with the people.
+02:47:04.160 So I think you sort of hit the hardware wall and then whichever company can scale
+02:47:11.680 hardware the fastest will be the leader.So I think xAI will be able to scale
+02:47:17.600 hardware the fastest and therefore most likely will be the leader.
+02:47:20.640 You joked or were self-conscious about using the &quot;limiting factor&quot; phrase again.
+02:47:28.240 But I actually think there's something deep here.If you look at a lot of things we've touched on
+02:47:32.240 over the course of it, it’s maybe a good note to end on.
+02:47:37.120 If you think of a senescent, low-agency company, it would have some bottleneck and
+02:47:45.279 not really be doing anything about it.Marc Andreessen had the line of,
+02:47:49.840 &quot;most people are willing to endure any amount of chronic pain to avoid acute pain&quot;.
+02:47:54.560 It feels like a lot of the cases we're talking about are just leaning into the acute pain,
+02:47:59.520 whatever it is. &quot;Okay, we got to figure out how to work with steel, or we got to figure
+02:48:05.200 out how to run the chips in space.&quot;We'll take some near-term acute pain
+02:48:09.279 to actually solve the bottleneck.So that's kind of a unifying theme.
+02:48:13.600 I have a high pain threshold. That's helpful.To solve the bottleneck.
+02:48:19.200 Yes. One thing I can say is, I think the future is going to be very interesting.
+02:48:36.399 As I said at Davos—I think I was on the ground for like three hours or something—it's
+02:48:45.200 better to err on the side of optimism and be wrong than err on the side of pessimism
+02:48:50.880 and be right, for quality of life.You'll be happier if you err on
+02:49:01.439 the side of optimism rather than erring on the side of pessimism.
+02:49:05.760 So I recommend erring on the side of optimism.There's to that.
+02:49:09.200 Cool. Elon, thanks for doing this.Thank you.
+02:49:11.760 All right, thanks guys. All right.Great stamina.
+02:49:17.840 Hopefully this didn't count as a pain in the pain tolerance.

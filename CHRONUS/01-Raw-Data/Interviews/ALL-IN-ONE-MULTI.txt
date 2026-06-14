@@ -1,0 +1,2480 @@
+# tactiq.io free youtube transcript
+# E69: Elon Musk on Twitter's bot problem, SpaceX's grand plan, Tesla stories, Giga Texas & more
+# https://www.youtube.com/watch/CnxzrX9tNoc
+
+00:00:00.399 so uh live from an undisclosed location
+00:00:04.080 with
+00:00:05.440 the sultry filter on
+00:00:09.280 very sultry filter on
+00:00:11.920 yeah
+00:00:12.960 having a great hair day yeah that is a
+00:00:15.440 good hair day great hair day my pal
+00:00:19.279 and your
+00:00:20.400 favorite ceo and twitterer mr elon musk
+00:00:23.519 how you doing palette
+00:00:24.980 [Applause]
+00:00:29.860 [Music]
+00:00:39.560 [Music]
+00:00:43.600 appreciate you uh coming to the event
+00:00:45.760 and um or coming zooming in um
+00:00:49.680 what's new in your world
+00:00:52.000 um
+00:00:54.239 well let's see um
+00:00:56.000 i guess right now uh i'm sort of
+00:00:58.000 debating the number of bots on twitter
+00:01:00.930 [Music]
+00:01:01.030 [Applause]
+00:01:04.400 on twitter um
+00:01:06.479 and um
+00:01:08.320 the
+00:01:09.119 currently i'd like to what what i'm
+00:01:10.960 being told is that the uh there's just
+00:01:12.720 no way to know
+00:01:14.479 the number of bots it's like as
+00:01:16.320 unknowable as the human soul basically
+00:01:22.080 so
+00:01:23.200 you have an idea
+00:01:24.400 witchcraft and alchemy is needed to
+00:01:26.479 determine these for the spot percentage
+00:01:30.799 i said like why don't i try calling
+00:01:32.240 people but i haven't got a response you
+00:01:33.600 know like if you tried calling people or
+00:01:35.280 something you know like maybe
+00:01:37.759 trying to answer it's not about no no no
+00:01:40.400 i don't know but i think like that would
+00:01:41.680 be one of the things to do to say like
+00:01:44.079 have you tried calling them as opposed
+00:01:45.759 to trying to read the tea leaves here
+00:01:47.200 that's like impossible you know uh
+00:01:49.360 obviously you can have an account that
+00:01:50.399 looks exactly like a human account or is
+00:01:52.960 being operated where one person is
+00:01:54.720 operating a thousand accounts or
+00:01:56.320 something
+00:01:57.360 um but that person can only buy one
+00:01:59.360 toaster they're not gonna buy a thousand
+00:02:00.799 toasters so you care about like number
+00:02:03.119 of unique real people that are on the
+00:02:05.280 system it's extremely fundamental and
+00:02:06.719 anyone who uses twitter is well aware
+00:02:08.878 that uh the their comment
+00:02:11.520 the comment threads are are full of spam
+00:02:14.000 scam and and um
+00:02:16.080 just a lot of you know fake accounts so
+00:02:18.560 um it's it seems uh
+00:02:21.760 beyond
+00:02:23.280 beyond reasonable for twitter to claim
+00:02:25.599 that the number of uh
+00:02:28.959 essentially the number of re said
+00:02:30.720 another way the number of real unique
+00:02:32.560 humans
+00:02:33.599 uh that you see making comments on a
+00:02:35.440 daily basis on twitter
+00:02:37.200 is above 95 percent that is what they're
+00:02:39.920 claiming does anyone have that
+00:02:41.840 experience
+00:02:43.180 [Music]
+00:02:47.450 [Laughter]
+00:02:58.080 i'd like to sell you you know
+00:03:01.120 you know
+00:03:03.519 and also you can buy the brooklyn bridge
+00:03:07.680 um what do you think it is what yeah
+00:03:09.920 what's what's the uh i mean it's not
+00:03:11.920 five percent what is it
+00:03:14.560 um i think it's some number that is
+00:03:16.239 probably at least uh four or five times
+00:03:18.560 that number the i'd say it at uh if you
+00:03:22.000 did sort of the
+00:03:24.159 the lowest estimate would be probably 20
+00:03:28.080 um
+00:03:29.680 and uh
+00:03:30.879 and this and this is a a bunch of uh
+00:03:33.920 quite smart outside firms have done
+00:03:35.840 analysis of twitter and
+00:03:37.840 uh looked at the the the daily daily
+00:03:40.400 users and their conclusion is also about
+00:03:42.799 is about 20 but that's a lower bound
+00:03:45.040 it's not an upper bound
+00:03:47.680 if you look at say um
+00:03:49.840 the most liked tweets on twitter um
+00:03:53.920 so i i have the uh the honor
+00:03:57.120 of
+00:03:58.080 having the most liked tweet of any
+00:04:00.799 living human
+00:04:02.080 um
+00:04:04.319 this is
+00:04:06.560 thank you everyone for liking my tweet
+00:04:10.799 including you some of the bots out there
+00:04:13.680 but
+00:04:16.320 that tweet is less than 5 million likes
+00:04:19.358 it's like 4.7 or something like that and
+00:04:21.839 that that that was the
+00:04:23.520 where i tweeted about um
+00:04:25.759 that next time buying coca-cola to put
+00:04:28.080 the cocaine back in
+00:04:31.440 it's definitely it's clearly something
+00:04:33.680 that the public really wants and
+00:04:37.360 you know uh coca-cola corporation should
+00:04:39.680 really think about going back to their
+00:04:41.360 roots um
+00:04:44.320 coca-cola um i mean this this i guess is
+00:04:47.040 the reason why our grandparents could
+00:04:49.199 sort of walk 20 miles in the snow
+00:04:52.000 because they had coca-cola with
+00:04:54.840 cocaine this is a real reason
+00:04:57.919 so
+00:04:59.199 um
+00:05:00.560 anyway that was that's that is literally
+00:05:02.400 the most popular tweet um
+00:05:05.039 of any of any living human um
+00:05:07.280 and
+00:05:08.240 but twitter says that the daily monet
+00:05:10.880 the sort of monetizable daily act of
+00:05:12.479 uses is 217 million
+00:05:15.600 um so why would it be
+00:05:17.840 that the most popular tweet ever
+00:05:20.160 basically is
+00:05:21.680 only you know two two and a half percent
+00:05:24.560 of the entire user base
+00:05:27.840 this this seems
+00:05:29.440 a
+00:05:30.160 very very low number um
+00:05:33.440 and um
+00:05:34.639 and the most popular tweets generally
+00:05:36.479 are clustered around that sort of four
+00:05:37.840 million uh
+00:05:39.440 like level so it's like sort of caller
+00:05:41.280 like basically two percent or that or
+00:05:42.639 less than two percent of of the
+00:05:44.880 uh daily active users and and
+00:05:47.120 technically monetizable daily active
+00:05:48.720 users is how twitter refers to it so it
+00:05:50.320 just seems how is this possible um
+00:05:53.840 surely there's something that maybe
+00:05:56.319 you know ten percent of people would
+00:05:57.919 like not merely two percent well
+00:06:00.560 actually you know if you think about it
+00:06:02.319 elon um there's a corollary on youtube
+00:06:05.360 what do what's the total user base of
+00:06:07.280 youtube and what have the most popular
+00:06:09.199 videos gotten there yes and i think
+00:06:11.600 there's a billion or two maybe a billion
+00:06:13.680 people using youtube and those the most
+00:06:16.080 popular videos have tens of billions of
+00:06:18.160 views
+00:06:19.440 that might be instructive
+00:06:21.520 exactly that ratio makes a lot more
+00:06:23.440 sense um so
+00:06:26.720 something doesn't add up here um and my
+00:06:29.199 concern is isn't it's not that is it
+00:06:31.360 like you know is it five or or seven or
+00:06:34.080 eight percent but is it potentially
+00:06:37.120 eighty percent or ninety percent bots
+00:06:40.400 yeah um you know uh is it i mean i i
+00:06:43.199 certainly know there's some real people
+00:06:44.880 on twitter but uh but what's if is it an
+00:06:48.240 order of magnitude is it is it 50
+00:06:51.120 instead of five and that's obviously an
+00:06:52.960 incredibly material number um especially
+00:06:55.360 since twitter uh relies uh primarily on
+00:06:58.400 brand advertising as opposed to specific
+00:07:01.280 click-through advertising where you make
+00:07:02.560 a purchase if you if you make a purchase
+00:07:04.560 it it doesn't really matter that much
+00:07:06.080 but for brand advertising which is
+00:07:07.520 really just awareness advertising it
+00:07:09.520 matters if real humans are seeing that
+00:07:11.520 or not
+00:07:12.880 yeah and and so
+00:07:15.039 i guess stepping back for a second
+00:07:16.960 people are curious why you want to buy
+00:07:19.840 twitter why is this so important to you
+00:07:22.880 and then i guess what are the chances
+00:07:24.880 you think the deal gets done at this
+00:07:26.240 point so a two-parter
+00:07:29.440 why is it so important to me
+00:07:31.120 i mean some of this i've articulated
+00:07:32.560 before but i think there's
+00:07:34.240 a need for a a public town square
+00:07:37.840 digital town square that uh where people
+00:07:40.319 can debate uh issues of all kinds um
+00:07:44.400 including the most substantive issues
+00:07:46.639 and in order for
+00:07:48.319 for that to be the case you have to have
+00:07:49.759 something that is as broadly inclusive
+00:07:51.199 as possible that has as much of the the
+00:07:53.919 people on the platform as possible uh
+00:07:56.639 where it's uh it feels uh
+00:07:59.759 balanced from a political standpoint uh
+00:08:02.080 it's not biased one way or the other
+00:08:04.240 um and where
+00:08:05.759 the system is transparent this is why i
+00:08:07.840 think it's important to put the
+00:08:08.879 algorithm on on github and actually
+00:08:11.280 allow the public to see it and critique
+00:08:13.199 it and improve it
+00:08:15.039 and if there are any manual changes uh
+00:08:17.919 sort of shadow banning as it's called
+00:08:20.160 or
+00:08:21.680 increasing or decreasing the prominence
+00:08:23.440 of a tweet
+00:08:24.720 that's done manually that that should be
+00:08:26.720 noted uh so you know what has happened
+00:08:29.039 and it's not just
+00:08:30.400 uh
+00:08:31.440 you know
+00:08:32.958 you're just where it is right now we
+00:08:34.719 don't know what the heck is going on why
+00:08:36.320 is one tweet doing well why isn't that
+00:08:38.159 sweet not is it the algorithm did
+00:08:40.320 someone manually intervene uh why are
+00:08:42.880 some accounts banned
+00:08:44.480 uh
+00:08:45.360 with no recourse apparently
+00:08:47.440 um
+00:08:48.320 and um you know the the reality is uh
+00:08:52.160 that twitter at this point you know has
+00:08:54.880 uh a very far-left bias um and i would
+00:08:58.000 class myself as a moderate and you know
+00:09:00.080 neither the republican nor nor democrat
+00:09:02.160 um and in fact uh i have voted vote
+00:09:04.480 overwhelmingly for democrats uh
+00:09:06.560 historically overwhelmingly like i'm not
+00:09:08.399 sure
+00:09:09.600 i might never have voted for a
+00:09:10.720 republican just to be clear right now
+00:09:12.720 now this election i would
+00:09:19.040 well
+00:09:20.240 david you okay
+00:09:21.680 how are you gonna die
+00:09:23.040 he keep going keep going he's fine he's
+00:09:24.640 fine we're gonna resuscitate him we're
+00:09:25.920 gonna resuscitate david sacks i mean
+00:09:28.640 let me ask you a person the point i'm
+00:09:30.080 trying to make is that this is not some
+00:09:31.440 sort of attempt to uh you know it's not
+00:09:33.760 some right wing takeover uh as as say
+00:09:36.240 people in life may fear uh but rather a
+00:09:38.320 moderate wing takeover um and an attempt
+00:09:41.040 to uh ensure that that people of of all
+00:09:44.240 uh you know political uh beliefs feel
+00:09:46.959 welcome on on a digital town square that
+00:09:49.600 and they can express uh their their
+00:09:51.839 beliefs uh without fear of being banned
+00:09:53.839 or shadow banned um
+00:09:55.680 and and and that we we obviously need to
+00:09:57.519 get rid of the bots uh and and scams and
+00:10:00.240 trials and people that are operating uh
+00:10:02.800 huge bot armies in an attempt to uh
+00:10:05.760 unduly influence the the public opinion
+00:10:08.399 so this is what i think it's very
+00:10:10.720 important that we have that like the
+00:10:13.360 the
+00:10:14.399 some of the smartest people
+00:10:15.839 in history have have thought about it
+00:10:18.640 and said like free speech is important
+00:10:20.880 for a for a healthy democracy it is
+00:10:23.200 important and free speech only matters
+00:10:32.640 like say when does prestige matter most
+00:10:34.320 it's when someone when it's someone you
+00:10:35.920 don't like saying something you don't
+00:10:38.079 like
+00:10:38.959 uh that's when it actually matters
+00:10:41.360 um
+00:10:42.160 so
+00:10:43.360 um you know
+00:10:45.360 obviously and and and it's pretty
+00:10:47.279 annoying when someone you don't like
+00:10:48.560 says something you don't like
+00:10:50.000 that's that's that's bad but it's
+00:10:51.920 actually a good sign of uh that that you
+00:10:55.040 have free speech
+00:10:56.640 um
+00:10:57.760 so i mean i get trashed by the media all
+00:10:59.920 the time it's fine i don't care uh go do
+00:11:02.800 do it twice as much i couldn't care less
+00:11:05.200 um but it's indicative of the fact that
+00:11:07.120 even though um i you know i have like a
+00:11:09.519 lot of resources i do not actually have
+00:11:11.839 the ability to stop the media from
+00:11:13.200 trashing me and that's actually a good
+00:11:14.959 thing
+00:11:16.160 yeah i i have to ask um with regard to
+00:11:19.279 this current administration i know how
+00:11:21.440 hard you work uh on the car company
+00:11:24.800 and then biden you know
+00:11:27.120 you've been a lifelong democrat you've
+00:11:28.800 donated to obama and to everybody
+00:11:30.560 probably never voted republican and
+00:11:33.680 yet
+00:11:34.560 and the same is true for joe rogan joe
+00:11:36.399 rogan is you know a bernie sanders
+00:11:38.959 supporter
+00:11:40.079 and that the democratic party has been
+00:11:42.079 openly hostile to joe rogan and biden
+00:11:45.600 can't even say the word tesla or invite
+00:11:47.920 you to the white house when they do an
+00:11:49.360 eevee summit i'm curious just on a very
+00:11:52.160 personal basis what does it feel like to
+00:11:54.240 have that experience where the party you
+00:11:55.920 supported
+00:11:57.279 is won't even say the name of your
+00:11:58.880 company or invite you there they should
+00:12:00.880 be celebrating the work you're doing
+00:12:03.040 yeah i mean it it definitely feels like
+00:12:05.040 this is not right like this is
+00:12:06.700 [Music]
+00:12:07.920 the the issue here is that there's just
+00:12:10.399 an uh this
+00:12:11.680 the democrat party is overly overly
+00:12:14.000 controlled by the unions and by the
+00:12:16.560 trial lawyers particularly the class
+00:12:18.000 action uh lawyers um and generally if
+00:12:20.560 you if you'll see something that doesn't
+00:12:22.079 that is not in the interest of the of
+00:12:23.519 the people
+00:12:24.480 um
+00:12:25.360 on the on the democrat side it's going
+00:12:27.040 to come because of the unions uh which
+00:12:29.120 is just another form of monopoly and the
+00:12:31.519 uh the trial lawyers
+00:12:33.519 uh
+00:12:35.040 that that's where actions will be
+00:12:36.880 happening from democrats side they're
+00:12:38.320 not in the interests of the people and
+00:12:40.079 then um to be fair on the republican
+00:12:42.399 side uh
+00:12:43.920 there's this if you say like where is
+00:12:45.760 something like not not ideal happening
+00:12:48.079 it's because of corporate evil um and uh
+00:12:51.200 religious zealotry um but that's
+00:12:53.440 generally where the bad things will be
+00:12:54.959 coming from on the republican side um
+00:12:57.920 that are not representative of the
+00:12:58.959 people so
+00:13:00.480 um in the case of biden he is simply too
+00:13:03.279 too much uh captured by the unions um
+00:13:06.480 which was not the case with obama um so
+00:13:09.440 in the case of obama you could have you
+00:13:11.279 know he was sort of quite reasonable um
+00:13:13.519 and i think he took more of a view of
+00:13:16.079 that you know obviously take the
+00:13:18.079 concerns of the unions into account but
+00:13:20.160 uh there are there are bigger issues at
+00:13:22.399 stake and and unfortunately biden does
+00:13:24.240 not do that
+00:13:25.600 you'll have a tesla question i read
+00:13:28.000 today it's incredible there was a
+00:13:29.279 bloomberg article that said the
+00:13:30.480 following so the setup is this
+00:13:32.240 it said since you went public tesla's up
+00:13:34.240 22 000
+00:13:36.240 uh 11 quarters of prof sequential
+00:13:38.720 profitability so hitting on all
+00:13:40.480 cylinders
+00:13:41.600 but the
+00:13:42.560 a public analyst
+00:13:45.839 we had to look at it
+00:13:46.970 [Laughter]
+00:13:58.240 but analysts uh when they put out their
+00:14:00.800 projections okay
+00:14:03.040 it's it's one of the most enormous bands
+00:14:04.959 for any company in america the the price
+00:14:06.880 targets for tesla despite all of this
+00:14:08.880 success
+00:14:09.920 some have it at 200 some have it at 1600
+00:14:12.399 it's all over the place you tweeted
+00:14:14.880 a couple months ago tesla's not a
+00:14:17.279 company it's like six companies inside
+00:14:19.760 of a company like you've had
+00:14:22.000 yeah maybe more can you just explain to
+00:14:23.680 people
+00:14:24.639 all these companies inside this super
+00:14:26.480 company just so folks have a sense of
+00:14:28.000 what had to be done to get here okay i
+00:14:30.240 mean this question requires thought and
+00:14:32.320 i'll probably be leaving out quite a few
+00:14:34.160 things but if you look and say what what
+00:14:36.240 does a typical uh
+00:14:38.320 car company do uh what what they do is
+00:14:40.880 they they um
+00:14:43.839 assemble vehicles
+00:14:45.760 um and they send them to dealers and
+00:14:48.000 they manage the supply chain uh the they
+00:14:51.120 they might make the engine uh or
+00:14:53.440 typically we'll make the engine but most
+00:14:55.120 of the parts are made by suppliers
+00:14:57.839 and a lot of the actual technology
+00:15:00.000 development is done by suppliers and
+00:15:01.600 most most of the vehicle software is
+00:15:03.760 done by suppliers so the actual amount
+00:15:05.920 of uh real work done by car companies
+00:15:08.880 that what you think of sort of like a
+00:15:10.399 gmo ford is not actually that much
+00:15:12.880 um
+00:15:13.839 and but like so they don't do they don't
+00:15:15.760 do uh sales they don't do service um
+00:15:18.959 they uh so so in the case of tesla for
+00:15:21.440 example we we do we we do our own sales
+00:15:24.720 and service we don't have dealerships um
+00:15:28.000 then uh tesla also has by far the
+00:15:30.639 biggest network of superchargers sort of
+00:15:32.800 the electric equivalent of gas stations
+00:15:35.600 so we built an entire global
+00:15:36.959 supercharger network which is still the
+00:15:38.959 most advanced and by far the best uh way
+00:15:41.440 to charge your car when traveling long
+00:15:43.279 distance or if you live in a city um and
+00:15:45.839 uh and don't have the ability to charge
+00:15:47.920 your car there's a street parking or an
+00:15:50.000 apartment so the whole supercharged
+00:15:51.519 network we developed the supercharged
+00:15:53.279 network we deployed it i think we have
+00:15:56.399 i don't know 15 000 supercharges
+00:15:58.079 globally um
+00:15:59.920 you can travel anywhere in america right
+00:16:01.519 now with uh
+00:16:02.959 the tesla supercharger network
+00:16:05.279 um
+00:16:06.639 then uh in terms of vertical integration
+00:16:09.279 uh we
+00:16:10.720 uh we make the the battery pack uh the
+00:16:14.000 the power electronics the drive unit um
+00:16:17.040 we
+00:16:17.759 uh
+00:16:18.800 we actually make we're more integrated
+00:16:21.279 in in the parts we actually make so much
+00:16:23.440 of the car uh internally uh we're
+00:16:25.360 vertically integrated um not necessarily
+00:16:27.440 because we think that there's some
+00:16:29.519 religious reason to be a product
+00:16:30.639 integrator but because uh the pace that
+00:16:32.720 we needed to move was just much faster
+00:16:34.959 than the supply chain could move and to
+00:16:36.800 the degree that you inherit the legacy
+00:16:38.480 supply chain and
+00:16:40.000 hurt the legacy constraints including
+00:16:41.759 their speed uh cost and uh and
+00:16:44.320 technology
+00:16:45.519 and then tesla is as much a software
+00:16:47.519 company as it is a hardware company so
+00:16:49.759 the software that runs in tesla operates
+00:16:51.680 the car operates the screen
+00:16:54.160 uh does the charging uh all of that
+00:16:56.480 stuff is developed by tesla
+00:16:58.399 and um so we have sort of a car a tesla
+00:17:00.959 os in the car when you
+00:17:06.319 and then very importantly uh
+00:17:09.039 tesla has built uh
+00:17:11.520 an uh an autopilot ai team from scratch
+00:17:15.039 uh that is the best real world ai team
+00:17:17.280 on earth and if anyone else has got a
+00:17:18.959 better one i'd like to see it
+00:17:20.000 demonstrated in a car um
+00:17:23.119 the full self-driving beta at this point
+00:17:26.559 can
+00:17:27.679 very often take you with zero
+00:17:28.960 interventions across the bay area from
+00:17:31.919 san jose to marin
+00:17:33.760 so
+00:17:35.120 through complex traffic it's really
+00:17:36.880 quite sophisticated um and i invite
+00:17:38.960 anyone to to join the beta or or look at
+00:17:41.760 the videos of those who are in the beta
+00:17:43.039 we've got like 100 000 people in the
+00:17:44.400 beta so it's not tiny and we'll be
+00:17:46.640 expanding that to i know probably a
+00:17:48.720 million people or a million i don't know
+00:17:50.720 on that order by the end of the year so
+00:17:53.919 um it's um
+00:17:58.000 we also we also built a chip team to
+00:18:00.080 because there wasn't it wasn't hardware
+00:18:01.679 to that we could run the freaking uh ai
+00:18:04.400 on uh we couldn't just uh fill the trunk
+00:18:07.200 with a whole bunch of gpus um and and
+00:18:10.720 you know
+00:18:12.240 they would would have taken a trunk full
+00:18:13.840 of gpus that would have been very
+00:18:15.679 expensive and take massive amount of
+00:18:17.360 power and cooling uh just to be able to
+00:18:19.520 do what the tesla designed uh full
+00:18:21.760 self-driving computer can do
+00:18:23.600 so
+00:18:24.320 and we started a chip team from scratch
+00:18:25.840 designed it it was the best in the world
+00:18:27.600 and still is the best in the world
+00:18:29.360 several years later um
+00:18:31.440 and we also then developed we were
+00:18:33.280 designing a dojo supercomputer to be
+00:18:36.240 able to process the
+00:18:38.240 all the video that's coming in from
+00:18:40.000 billions miles of data because just sort
+00:18:42.480 of like the way that it's critical to
+00:18:43.919 compete with google because they have so
+00:18:45.440 much data and they have all these people
+00:18:47.120 doing searches all the time and humanity
+00:18:48.799 is training it but the same is true of
+00:18:51.360 tesla you really need billions of miles
+00:18:53.280 ultimately tens of billions of miles of
+00:18:54.880 training data combined with a sort of a
+00:18:57.600 vast training computer and then uh
+00:19:00.880 optimize
+00:19:02.080 uh inference hardware in the car
+00:19:04.559 and stay the ai and training and
+00:19:06.320 specialized software across the board to
+00:19:08.480 be able to achieve a full self-driving
+00:19:10.960 solution
+00:19:12.000 i uh
+00:19:13.600 when when he opened tesla gigafactory
+00:19:15.520 remember this 67 years ago
+00:19:17.520 i'll just tell the audience a story
+00:19:18.960 quickly elon he puts a slide up there
+00:19:21.200 and he says guys we're not actually
+00:19:22.559 building
+00:19:23.760 a factory we're building a machine that
+00:19:25.360 makes machines and he puts the layout of
+00:19:27.600 the factory and it looks like a chip
+00:19:30.400 and it was basically like how you would
+00:19:32.080 actually lay out a microchip if you were
+00:19:33.919 or you know you were like a layout
+00:19:35.200 engineer it was the craziest thing i'd
+00:19:36.640 ever seen i was like that was when i
+00:19:37.919 first got it yeah you know you walk in
+00:19:39.760 tend and you see what's happening and
+00:19:40.960 you have an insurance company now you're
+00:19:42.320 doing insurance for tesla owners and an
+00:19:44.080 uber competitor right and eventually a
+00:19:45.919 robo taxi uber competitor alright
+00:19:48.080 um
+00:19:50.000 yeah i mean insurance is like quite
+00:19:52.080 significant now are you okay i'm okay
+00:19:54.400 okay okay
+00:19:56.080 because the the car insurance thing is a
+00:19:58.320 bigger deal it may seem
+00:19:59.840 a lot of people are paying um you know
+00:20:02.080 30 40 as much as their lease payment for
+00:20:04.640 the car in in car insurance
+00:20:06.960 um so the car insurance industry is
+00:20:08.799 incredibly inefficient because they
+00:20:10.559 they're just uh first of all you got
+00:20:12.159 like so many um sort of middle entities
+00:20:14.720 you've got from the insurance agent all
+00:20:16.400 the way to the final sort of reinsurer
+00:20:18.880 there's like a half dozen companies each
+00:20:20.559 taking a cut um and then uh the
+00:20:24.400 it's all very statistical so that this
+00:20:26.880 um
+00:20:27.679 even if you're a very good driver like
+00:20:29.200 you could be like you know
+00:20:31.039 20 years old and a great driver but they
+00:20:33.200 they're it's all statistical so you
+00:20:34.880 can't get either can't get insurance or
+00:20:37.039 it's extremely expensive um
+00:20:39.360 so what tesla allows for real-time
+00:20:41.520 insurance based on your how you actually
+00:20:43.280 drive the car um you can actually if you
+00:20:45.760 drive the car
+00:20:46.960 in a safer way you actually
+00:20:50.080 have lower insurance so ours is is
+00:20:52.960 insurance is based on how you actually
+00:20:54.480 drive not how
+00:20:56.240 you know
+00:20:57.120 historically people that you know
+00:21:00.000 fit your whatever demographic have drive
+00:21:01.840 it's and and then you can close the loop
+00:21:03.679 around your uh insurance rate by simply
+00:21:06.240 driving better and looking at your score
+00:21:08.320 and and and lowering your insurance in
+00:21:10.480 real time and people do it actually
+00:21:11.760 promotes safer driving
+00:21:13.520 i actually have had this experience
+00:21:15.360 because in my household two people drive
+00:21:18.000 my car and one of them has a 93 score
+00:21:20.559 and the other one
+00:21:21.840 does not they have like a 60 score
+00:21:24.880 and
+00:21:25.679 you may have met this other person but
+00:21:27.600 i've been trying to work with her on the
+00:21:29.600 aggressive turns and stops
+00:21:31.840 in advance
+00:21:33.440 of our insurance bill uh
+00:21:36.240 which we're hoping will go down
+00:21:38.720 at some point um you didn't oh the one
+00:21:40.960 question are is this twitter deal going
+00:21:43.120 to get close do you think are the
+00:21:44.480 chances here
+00:21:45.679 well i mean it really depends on a lot
+00:21:48.400 of factors here um i'm still waiting for
+00:21:51.600 uh some sort of a logical explanation
+00:21:54.720 for
+00:21:55.520 the number of sort of fake or spam
+00:21:57.840 accounts on twitter
+00:21:59.840 and twitter is is refusing to tell us
+00:22:02.480 so
+00:22:04.159 you know
+00:22:05.919 this just seems like a strange thing um
+00:22:08.720 wait sorry is are they refusing to tell
+00:22:10.400 you or you don't think they really know
+00:22:11.600 i mean
+00:22:12.640 there's a good chance they may just have
+00:22:14.000 no idea
+00:22:16.000 they claim that they do know
+00:22:18.000 yeah
+00:22:18.960 and they claim that they've got this
+00:22:20.400 complex methodology
+00:22:22.559 that only they can understand um
+00:22:26.650 [Laughter]
+00:22:28.320 but the guy who landed two rockets
+00:22:30.320 simultaneously
+00:22:32.480 you stir this cauldron and then you
+00:22:34.400 throw the knuckle boom
+00:22:36.080 and um
+00:22:42.559 it comes to you in a dream i don't know
+00:22:44.799 um
+00:22:45.600 but
+00:22:46.799 but there should be some uh you know
+00:22:49.600 objective way to assert the uh thing
+00:22:51.919 because this is a this is a material
+00:22:53.840 public state threshold issue yeah
+00:22:56.000 it it
+00:22:56.799 you know it's it's a you know it's a
+00:22:58.640 material adverse uh
+00:23:00.559 misstatement uh you know if if they in
+00:23:02.880 fact uh have been um vociferously
+00:23:06.080 claiming less than five percent of faker
+00:23:08.720 spam accounts but in fact it is four or
+00:23:10.559 five times that number or perhaps 10
+00:23:12.400 times that number
+00:23:13.760 this is a big deal um it's not this it
+00:23:16.640 seems like if you said okay um i'm gonna
+00:23:19.600 i agree to buy your house you say the
+00:23:21.600 house has less than five percent
+00:23:23.200 termites that's that's an acceptable
+00:23:25.520 number but if it turns out it is 90
+00:23:27.520 percent termites that's uh
+00:23:30.080 not okay you know it's not the same
+00:23:32.400 house um
+00:23:34.640 made most
+00:23:39.679 your house will disappear because it's
+00:23:41.120 mostly made in two months
+00:23:42.880 um so it you know that that would
+00:23:44.720 obviously just not be appropriate so in
+00:23:46.480 in making the twitter offer i was
+00:23:47.600 obviously reliant upon the the truth and
+00:23:49.919 accuracy of their public filings and if
+00:23:51.919 those those filings are not accurate
+00:23:54.080 it's simply
+00:23:55.840 not that's that it's it's not you you
+00:23:58.640 can't pay the same price for something
+00:24:01.360 that is much worse than they claimed and
+00:24:04.240 you know they say elon life's a
+00:24:06.000 negotiation so at a different price it
+00:24:08.400 might be a totally viable deal correct
+00:24:11.840 i mean
+00:24:12.720 that
+00:24:17.120 i mean it's not out of the question um
+00:24:19.279 okay but i really would you know this is
+00:24:21.840 you know the more the more questions i
+00:24:23.279 ask the more i the more my concerns uh
+00:24:26.159 grow um so
+00:24:30.320 you know at the end of the day
+00:24:31.679 acquiring it has to be fixable um and
+00:24:34.240 and fixable you know
+00:24:35.679 with reason reasonable time frame and
+00:24:37.360 without revenues collapsing along the
+00:24:38.720 way and all that sort of stuff um
+00:24:41.600 and so
+00:24:43.279 you know i really need to see
+00:24:45.760 how
+00:24:46.960 these things have been calculated and it
+00:24:48.960 it can't be some deep mystery that is
+00:24:51.440 like more complex than the human soul or
+00:24:53.600 something like that um it's got to be
+00:24:56.159 you know
+00:24:57.840 i think we can apply the scientific
+00:24:59.279 method to this and try to figure out
+00:25:01.200 what's really going on
+00:25:03.600 and um
+00:25:05.200 twitter's revenue is is primarily
+00:25:07.440 dependent i think 70 or some that order
+00:25:09.600 on brand advertising as opposed to
+00:25:11.919 specific purchase advertising this is a
+00:25:14.159 big deal because brand advertising is
+00:25:16.080 not there's not a there's not a purchase
+00:25:18.240 that results from that so it's basically
+00:25:20.720 you know how much mind share or like
+00:25:23.200 basically if you're a big company how
+00:25:24.640 how often do they hear your name
+00:25:26.880 um it's as opposed to something that
+00:25:28.559 where you can directly measure the
+00:25:29.919 outcome um so that that means that
+00:25:32.159 they're somewhat going on faith um and
+00:25:34.400 if that faith is undermined or or
+00:25:36.559 reduced because of the reality of the
+00:25:38.320 situation coming to the fore then that
+00:25:41.120 the
+00:25:42.000 tesla's revenue twitter
+00:25:44.480 starts with the t um
+00:25:46.320 the quarter's revenue
+00:25:48.080 uh
+00:25:48.880 will be uh significantly impaired and
+00:25:51.440 that's a major problem
+00:25:53.200 elon did you have a chance to ask these
+00:25:54.799 questions during your negotiation
+00:25:58.000 uh
+00:25:58.799 the i like i said i was reliant upon
+00:26:00.960 their public filings so to the degree
+00:26:03.520 that that they're probably public and
+00:26:05.039 this is normal for a public company if
+00:26:07.200 you you know if
+00:26:08.640 if you make a formal filing um
+00:26:11.600 that that that is what investors are
+00:26:14.080 lying up relying on whether they are
+00:26:16.400 making an acquisition offer or simply
+00:26:18.159 buying some shares
+00:26:20.159 so this this the accuracy of these
+00:26:22.480 filings is important whether you're
+00:26:23.919 buying one share or the whole company
+00:26:26.640 and so
+00:26:28.000 if these filings are inaccurate or if
+00:26:30.159 they're
+00:26:31.120 sort of potentially blatant
+00:26:33.840 it's a big
+00:26:35.440 deal you know do you have a sense of why
+00:26:38.080 this has been such a persistent problem
+00:26:40.159 for twitter do they not have the
+00:26:41.760 technical capabilities to solve the the
+00:26:44.320 bot problem or is it more of like just a
+00:26:47.200 they've underprioritized the issue or
+00:26:49.039 been unwilling to because potentially
+00:26:50.799 their implications for
+00:26:52.559 uh
+00:26:53.679 ad revenue
+00:26:54.960 i i i i don't know it's sort of
+00:26:56.640 speculative at this point so the you
+00:26:58.799 know the the uh the worst interpretation
+00:27:01.440 would be that they don't want to look
+00:27:02.559 too closely at the thing because they
+00:27:04.240 might not like the answer that would be
+00:27:06.480 the worst interpretation um
+00:27:08.799 the bet i'm not sure what the best
+00:27:10.240 interpretation is but the least bad
+00:27:11.760 interpretation would be
+00:27:13.360 maybe they thought it was this way but
+00:27:15.120 they're the way they were doing it was
+00:27:16.480 wrong and they didn't realize they were
+00:27:17.840 mistaken and simply weren't paying
+00:27:19.120 enough attention um it does seem as
+00:27:21.039 though it should be a lot easier to get
+00:27:22.559 rid of the bots and and spam and trolls
+00:27:25.520 then uh like this is not some we're not
+00:27:27.760 trying to split the atom here you know
+00:27:29.600 uh
+00:27:30.720 we're not trying to get to the moon okay
+00:27:32.799 we're just trying to
+00:27:34.559 uh
+00:27:35.440 limit the amount of obviously scammy
+00:27:37.679 accounts if
+00:27:39.039 it's if it's if it's like your bitcoin
+00:27:42.159 giveaway um you know
+00:27:44.720 probably it's f it's a spammer you know
+00:27:47.360 like it does
+00:27:50.480 maybe you know wait you're not giving
+00:27:52.320 away a hundred bitcoin
+00:27:54.720 i just sent you danny
+00:27:57.600 if if if you send me two bitcoin i'll
+00:28:00.240 send you one back right that's my what
+00:28:02.480 if i send you 20.
+00:28:05.279 actually um i thought one of the
+00:28:07.679 interesting things that came up in your
+00:28:09.440 product roadmap um or i guess this was
+00:28:12.480 released and people covered it was the
+00:28:15.200 um possibility of twitter becoming kind
+00:28:18.240 of a super app with payments included um
+00:28:21.520 maybe perhaps even doge or something
+00:28:23.600 this seems to me uh based on your work
+00:28:25.679 with with david a paypal like a pretty
+00:28:27.840 brilliant idea what's what's the vision
+00:28:29.919 there in terms of if you were able to
+00:28:31.600 buy it you know perhaps at the right
+00:28:33.120 price
+00:28:33.919 um
+00:28:34.799 what would it look like if you know i
+00:28:36.960 could add jason to at elon musk you know
+00:28:39.760 10 bucks or something if you know we
+00:28:41.600 were splitting a check or something sure
+00:28:44.320 well
+00:28:45.840 for those that have used wechat i think
+00:28:47.760 that's wechat's actually a good model um
+00:28:50.480 if you're in china it's basically you
+00:28:52.399 kind of live on wechat it does
+00:28:53.679 everything um it's sort of like twitter
+00:28:56.240 plus paypal plus a whole bunch of other
+00:28:58.000 things and we'll roll into one with
+00:28:59.760 actually a great interface and it's
+00:29:01.440 really an excellent app
+00:29:03.840 and we don't have anything like that um
+00:29:06.320 outside of china so
+00:29:08.799 uh i think
+00:29:10.159 such such an app um would be really uh
+00:29:13.360 useful um and
+00:29:16.000 it just like the utility of it uh of of
+00:29:19.120 sort of a
+00:29:20.159 a spam free thing where you could you
+00:29:22.320 can make comments you can post videos
+00:29:24.159 you can uh you know i think it's
+00:29:26.720 important for content creators to have a
+00:29:28.399 revenue share um now now this this does
+00:29:31.200 not need to be done on twitter it could
+00:29:32.640 be done from something that's created
+00:29:34.240 from scratch
+00:29:35.520 so it could be something new um so
+00:29:38.080 really but but i think this thing needs
+00:29:39.679 to exist whether it is uh converting
+00:29:42.080 twitter to uh be the sort of like
+00:29:46.320 kind of all-encompassing app that that
+00:29:48.480 like said everything from digital town
+00:29:49.919 square where important ideas are debated
+00:29:53.200 uh you know maximally trusted and
+00:29:54.960 inclusive and at a point where you sort
+00:29:57.360 of have a high trust situation than than
+00:29:59.360 payments uh uh whether it's uh crypto or
+00:30:02.320 fiat uh can make a lot of sense
+00:30:06.559 just what you just want something that's
+00:30:07.600 incredibly useful and that people love
+00:30:09.360 using
+00:30:10.399 um so
+00:30:12.320 that but it it's it's either convert
+00:30:14.159 twitter to that or start something new
+00:30:16.480 those are the two
+00:30:17.679 but it does need to happen somehow
+00:30:20.159 well it's interesting you bring that up
+00:30:21.600 because the price of twitter
+00:30:24.000 is pretty high and you've built a couple
+00:30:26.159 of companies and some engineers like to
+00:30:28.159 come work for you
+00:30:29.760 and you've now gone through the
+00:30:30.799 intellectual exercise of studying all
+00:30:32.559 this
+00:30:33.440 um if you're looking at the two choices
+00:30:35.360 now fixing twitter given all these
+00:30:37.279 problems and maybe just starting your
+00:30:39.440 own version which one are you leaning
+00:30:41.360 towards because it i have watched you
+00:30:43.200 build a couple of companies and the
+00:30:44.880 products have turned out pretty good
+00:30:46.799 so is it easier for someone like you to
+00:30:48.640 just start from scratch i mean
+00:30:50.960 i mean it's certainly the
+00:30:53.360 my my default inclination is to start
+00:30:55.520 things from scratch uh i mean i'm not
+00:30:57.600 really i don't buy things like there's
+00:30:59.760 still this sort of you know uh
+00:31:03.360 um
+00:31:05.039 yeah like like spacex was started from
+00:31:06.880 scratch
+00:31:08.880 you know in the case of of tesla uh
+00:31:12.000 you know
+00:31:13.120 it was like five people it was still
+00:31:15.440 this guy everhart who's the worst guy
+00:31:17.120 i've ever worked with who tries to claim
+00:31:18.640 like soul credit essentially for
+00:31:20.320 equating tesla if he's so damn great why
+00:31:22.320 didn't he just go you know create
+00:31:23.840 another car company when he was fired um
+00:31:26.320 but anyway
+00:31:27.600 um
+00:31:28.480 so
+00:31:29.279 well i mean that's a pretty good story i
+00:31:30.880 mean
+00:31:31.600 yeah
+00:31:32.640 i remember jesus i mean no but i i
+00:31:35.519 remember having this conversation with
+00:31:37.120 you we were having a conversation about
+00:31:39.120 the roadster i think i can tell the
+00:31:40.480 story
+00:31:41.200 i said how's it going pal and you said
+00:31:42.640 well i got one problem
+00:31:44.320 um
+00:31:45.360 it turns out the roadster parts and
+00:31:47.600 putting it together cost 190 000. yeah
+00:31:50.080 and i said i gave you 150 for number 16.
+00:31:52.480 so if you make 2000 of these you're
+00:31:54.559 gonna lose 80 million dollars and you're
+00:31:56.399 like yeah or double that i mean they
+00:31:58.960 basically the parts of the car cost more
+00:32:02.320 than they were selling it for when you
+00:32:04.080 were starting to get involved that's it
+00:32:06.159 it was difficult no no i i got involved
+00:32:08.080 well before before that yes
+00:32:11.039 when twitter when tesla was was nothing
+00:32:13.760 but a piece of paper let me be crystal
+00:32:16.000 clear
+00:32:17.120 [ __ ] clear
+00:32:18.880 no they didn't bring me in
+00:32:22.159 either
+00:32:23.550 [Music]
+00:32:24.720 i was gonna start i was gonna start an
+00:32:26.960 ed company with jv struggle and
+00:32:29.679 based on the the ac propulsion t0
+00:32:32.960 and when i when i asked ac propulsion if
+00:32:35.200 it was okay to do that
+00:32:36.880 they said well there's also some others
+00:32:38.559 who want to create an ev company but
+00:32:40.720 have not created one yet
+00:32:42.399 yes would you like to join forces with
+00:32:44.320 them and i said okay well we'll do that
+00:32:46.880 that was a huge mistake jb and i should
+00:32:48.880 have just started the car company
+00:32:50.080 ourselves instead uh we uh teamed up
+00:32:53.039 with everhard topping and right um big
+00:32:56.159 mistake uh the the the actual moral
+00:32:58.880 error here was me trying to have my cake
+00:33:00.880 and eat it too which is like uh i just
+00:33:03.039 want to work on the technology and the
+00:33:05.200 product and have someone else be the ceo
+00:33:07.440 and and sort of run the business
+00:33:08.960 operations because i just like working
+00:33:10.399 on technology and product and design and
+00:33:12.559 um
+00:33:13.360 and and also i was like doing spacex uh
+00:33:15.279 you know at the time in our rockets were
+00:33:16.960 blowing up so it seemed like uh okay
+00:33:19.440 this is like i always wanted to an
+00:33:21.039 electric car company this is how i can
+00:33:22.799 have my cake and eat a two
+00:33:24.480 that was a huge mistake and
+00:33:25.679 fundamentally a moral error um
+00:33:28.399 and uh
+00:33:29.919 so so uh
+00:33:32.320 in the end i had to freaking be ceo and
+00:33:33.760 i didn't want to be basically um
+00:33:37.039 so but it's either that or a company's
+00:33:38.320 gonna die so uh so we started with with
+00:33:40.880 really just nothing and uh the uh
+00:33:44.159 you know the t0 prototype from ac
+00:33:46.159 propulsion not not if that's that's the
+00:33:48.799 precursor to tesla um
+00:33:53.200 clear once again uh when uh we created
+00:33:57.039 tesla i when i when i joined there were
+00:34:00.000 no no employees there was no
+00:34:01.440 intellectual property there was no
+00:34:02.640 prototype there was no and nothing yeah
+00:34:05.519 we crystal [ __ ] clear
+00:34:13.679 and
+00:34:15.280 it almost bankrupted you i mean you that
+00:34:17.918 sent you to the cliff of india
+00:34:21.839 i mean that was yes we were on the
+00:34:22.879 ragged edge of bankruptcy so many times
+00:34:24.560 it was ridiculous
+00:34:25.839 um
+00:34:26.960 so
+00:34:28.159 um and what 2008 was one of the worst
+00:34:30.239 years where basically the
+00:34:32.639 you know gm and ford just a gm jammer
+00:34:36.800 ford almost went bankrupt
+00:34:38.800 and um you know trying to raise money
+00:34:40.879 for a startup electric car company in
+00:34:42.239 2008 while gm's going bankrupt was uh
+00:34:45.199 difficult to say the least
+00:34:46.839 um you know people were angry that i
+00:34:49.280 even asked them uh
+00:34:53.199 they're like [ __ ] you and hang up
+00:34:58.880 so the only way that that that tesla
+00:35:01.359 actually made it through 2008 was uh a
+00:35:03.760 subset of the existing investors
+00:35:06.640 um which includes like people like
+00:35:08.240 antonio gracias and uh you know um steve
+00:35:11.440 jobson and and
+00:35:13.040 a few other key people our aaron price
+00:35:15.680 uh
+00:35:16.800 who who i've uh hold a debt of gratitude
+00:35:18.960 to the state um and and i i put in all
+00:35:22.400 the money i had left and they said
+00:35:24.640 everything literally everything um
+00:35:26.960 uh i didn't have a house uh so uh this
+00:35:30.480 is my actually so i've had the house so
+00:35:32.640 i was like staying actually in jeff
+00:35:34.560 skull's bedroom spare bedroom
+00:35:38.000 um
+00:35:38.960 and uh and but they were the the
+00:35:42.160 uh
+00:35:43.359 the subset of the investors would say
+00:35:45.040 okay i put in they're putting as much as
+00:35:46.720 i put in so i put in everything um and
+00:35:48.960 and then we closed that round 6 p.m
+00:35:51.280 uh christmas eve 2008 it was last hour
+00:35:53.839 of the last day that was possible
+00:35:55.119 because after that people were like kept
+00:35:56.320 breaking for the holidays and we were to
+00:35:57.760 bounce payroll two days after christmas
+00:36:00.160 it was uh
+00:36:01.359 pretty that's doorstop i mean it was an
+00:36:03.680 incredible moment in time and and people
+00:36:05.599 also forget at the time that the first
+00:36:07.760 two rockets spacex sent up uh didn't
+00:36:11.040 exactly make it to orbit like one of
+00:36:12.800 those
+00:36:13.839 yeah the first three and
+00:36:15.599 i remember having dinner with you at
+00:36:16.960 that time and i asked you hey how's it
+00:36:18.960 going i heard glocker says you got four
+00:36:21.280 weeks of payroll left and you said
+00:36:22.880 that's not true and i said thank god and
+00:36:24.560 you said we have two
+00:36:26.540 [Music]
+00:36:30.960 i said no i mean
+00:36:32.800 both spacex and tesla in 2008 if we'd
+00:36:34.960 simply paid our suppliers on time we
+00:36:36.640 would have gone bankrupt immediately
+00:36:39.359 hey tell us tell us actually uh
+00:36:42.960 it was it was a pretty crazy moment
+00:36:44.800 because i also remember asking you that
+00:36:46.960 we were having dinner at boa and i said
+00:36:49.040 well certainly it's got to be some good
+00:36:50.640 news
+00:36:51.520 and you took out your blackberry to date
+00:36:53.359 the conversation i don't remember it
+00:36:56.240 and you said
+00:36:57.280 don't tell anybody jacob is it right no
+00:36:59.280 problem and you showed me the clay
+00:37:00.880 version of the model s
+00:37:02.800 yeah the most beautiful car i'd ever
+00:37:04.400 seen and i said
+00:37:05.520 oh my god it's stunning how much is it
+00:37:07.680 gonna cost you said i think i can make
+00:37:09.359 it for fifty thousand i remember it was
+00:37:11.040 yesterday i said if you make that car
+00:37:12.240 for fifty thousand you'll change the
+00:37:13.359 [ __ ] world and you did it you know it
+00:37:16.160 was a little more than fifty thousand
+00:37:17.440 but uh
+00:37:22.960 how's your
+00:37:24.320 let's ask about spacex okay well that's
+00:37:26.160 what's basically but i want to ask one
+00:37:27.359 more personal question has life gotten
+00:37:30.240 easier for you as these companies have
+00:37:32.079 hit scale or has the complexity made
+00:37:35.200 life even more challenging because those
+00:37:37.599 early days it was just fighting to
+00:37:39.359 survive
+00:37:40.560 nobody knew who you were you were
+00:37:42.160 anonymous
+00:37:43.440 and it was really just about the work
+00:37:44.960 and now
+00:37:45.920 let's face it you're the world's most
+00:37:47.680 famous guy
+00:37:49.119 and everybody's watching everything you
+00:37:50.240 do but these companies are also very big
+00:37:51.920 so what's life like for you today are
+00:37:54.320 you enjoying what you're doing every day
+00:37:57.440 um well i mean it's it's somewhat of a
+00:37:59.280 roller coaster
+00:38:00.640 so there are like good days and bad days
+00:38:02.560 um
+00:38:03.520 and there's there also crisis issues
+00:38:06.079 um
+00:38:07.040 and you know like sort of you know knock
+00:38:08.400 on wood like we're not like
+00:38:10.240 uh
+00:38:12.000 facing you know death in the face like
+00:38:14.320 like it's it's definitely like quite
+00:38:16.320 stressful when like you know death is
+00:38:18.480 like
+00:38:19.280 trying to eat your face off and like the
+00:38:21.359 foam is like you know just getting it
+00:38:23.599 and like
+00:38:25.040 right there you know
+00:38:28.640 you know that's it's pretty stressful in
+00:38:30.960 that situation
+00:38:32.400 um
+00:38:33.839 so like right you know both spacex and
+00:38:36.160 tesla have um
+00:38:38.240 you know significant cash reserves so
+00:38:40.400 like
+00:38:41.280 you know it's like we're sharing death
+00:38:42.320 in the face we could sort of see it over
+00:38:43.760 in the horizon you know so i don't want
+00:38:45.359 to get complacent or entitled because it
+00:38:47.520 um
+00:38:48.400 but but if it's not like just sort of
+00:38:50.960 foaming at the mouth and actually trying
+00:38:52.320 to eat your face off on a daily basis
+00:38:54.320 that's that's certainly we've moved on
+00:38:56.480 from that point um and hopefully never
+00:38:59.440 never return um
+00:39:01.359 but but there are a lot of issues that
+00:39:02.960 need to be it's just
+00:39:04.880 like the if you're a ceo of a company
+00:39:07.040 the chore level is high and if you don't
+00:39:09.200 do your chores then the company goes to
+00:39:11.359 hell and i hate doing doing chores
+00:39:13.359 frankly so
+00:39:14.800 uh who does uh
+00:39:17.040 so that's the real
+00:39:19.119 like there's a whole bunch of sort of uh
+00:39:21.440 you know personnel issues and legal
+00:39:23.119 issues and and and things that i i
+00:39:26.320 i don't find enjoyable to work on but if
+00:39:28.400 i don't work on them the company suffers
+00:39:30.079 so
+00:39:30.880 it's more like
+00:39:32.400 just the sheer volume of work is insane
+00:39:34.800 that's the uh
+00:39:36.400 and then and then you know go do some go
+00:39:38.640 add to it with you know twitter or
+00:39:40.320 something like that yeah i mean honestly
+00:39:42.400 i'm an extra processor yeah
+00:39:44.800 yeah i mean
+00:39:46.240 i i have a habit of biting off more than
+00:39:48.079 i can chew and then just sitting there
+00:39:49.520 with like chipmunk cheeks
+00:39:53.000 alice tell us a little bit about where
+00:39:55.359 we are at spacex like how
+00:39:58.720 you fund the ability to go to mars but
+00:40:01.200 then also commercially still build um
+00:40:04.640 a conventional space business
+00:40:06.400 domestically i think this russia thing
+00:40:08.640 was probably really good for spacex if
+00:40:10.480 you want to just tell us a little bit
+00:40:11.599 about that
+00:40:14.000 sure um well
+00:40:16.880 i mean the goal of spacex is to develop
+00:40:18.880 the technology that enables life to
+00:40:20.800 become multi-planetary um and
+00:40:23.599 uh and make humanity a space sparring
+00:40:25.920 civilization which i think is a
+00:40:27.920 very exciting
+00:40:29.440 inspiring thing and it's like some one
+00:40:31.040 of those things where you can that i
+00:40:32.800 think
+00:40:33.680 just makes kids like be excited about
+00:40:35.680 the future
+00:40:36.640 and
+00:40:37.359 we need things that are inspiring and
+00:40:39.599 exciting and make the future seem like
+00:40:41.520 it's going to be better than the past
+00:40:43.040 life can't just be about solving one
+00:40:44.560 miserable problem after another it's got
+00:40:46.000 to be like like what's what's inspiring
+00:40:48.079 and exciting and i think that a future
+00:40:49.920 where we are space-bank civilization is
+00:40:52.400 is one that we can all get excited about
+00:40:54.880 um
+00:40:55.839 and and we can go out there and find out
+00:40:57.760 what what's what's out there in the
+00:40:59.599 universe and what's the meaning of life
+00:41:01.200 and you know where are the aliens and
+00:41:02.960 hopefully they're friendly and that kind
+00:41:04.720 of
+00:41:05.760 um
+00:41:06.800 so uh
+00:41:09.119 you know it's interesting i do get asked
+00:41:10.560 about the aliens question a lot and i've
+00:41:12.960 i've not seen any evidence of aliens um
+00:41:16.640 and i'll i'll be the first to you know
+00:41:18.960 tweet about it or whatever if i found it
+00:41:20.560 if i see something i mean you'll tell us
+00:41:22.079 if you find him i will tell you i will
+00:41:24.000 definitely tell you if there's aliens um
+00:41:27.119 and um
+00:41:29.599 you know uh i think it'd be quite
+00:41:31.200 helpful for you know
+00:41:33.280 like like if if we found aliens like
+00:41:36.000 probably spacex would get a ton more
+00:41:37.599 revenue because people like oh man
+00:41:39.119 aliens we're gonna upgrade on space
+00:41:40.480 technology pronto because what if you're
+00:41:42.560 unfriendly you know
+00:41:44.560 um it's like
+00:41:46.160 you know uh the idea of that is the idea
+00:41:49.520 that you build um
+00:41:51.760 basically the ability to do
+00:41:54.400 orbital
+00:41:55.440 cargo take all those profits
+00:41:57.920 launch starlink take all those profits
+00:42:00.560 and move it all into building something
+00:42:02.880 that can get to mars is that the kind of
+00:42:05.200 rough
+00:42:06.400 plan
+00:42:07.359 pretty much it's if it was like a three
+00:42:09.599 step
+00:42:10.400 a three slide power point it would be
+00:42:12.480 pretty much as you described which is
+00:42:14.839 um develop rockets that are that are
+00:42:17.520 capable of of taking uh satellites to
+00:42:19.680 orbit and uh crew to the space station
+00:42:23.040 um
+00:42:24.480 you know basically servicing government
+00:42:25.760 commercial space launch needs um and
+00:42:28.560 then uh uh
+00:42:31.280 build a global communication system in
+00:42:33.280 space
+00:42:34.240 uh that obviously it does a lot of good
+00:42:36.480 for earth but by providing uh internet
+00:42:38.480 connect internet connectivity to the
+00:42:40.720 least served because a satellite system
+00:42:42.720 is really great for remote locations um
+00:42:46.160 and you know countryside or or remote
+00:42:48.720 islands or or places where someone's
+00:42:51.200 trying to cut off their internet
+00:42:55.520 as a prelude to a war we take that
+00:42:58.800 system like in star wars yeah yeah so
+00:43:01.680 it's like you know so it can be pretty
+00:43:03.760 pretty helpful like i think like a song
+00:43:06.000 like basically i think is a a sort of
+00:43:08.000 forceful grid on its own right um by
+00:43:10.560 providing uh connectivity to the the
+00:43:14.000 least served where they've got either no
+00:43:15.520 connection or a a very expensive or poor
+00:43:17.920 connection uh you know um
+00:43:20.720 the like we're like we're connecting a
+00:43:22.800 lot of schools remote schools in brazil
+00:43:25.040 right now i'm actually kind of going to
+00:43:27.200 be headed there uh to sort of kick
+00:43:28.960 things off
+00:43:30.160 but they've got a lot of schools that
+00:43:31.200 have no connectivity at all and in a
+00:43:33.200 modern age uh how do you learn with no
+00:43:36.720 connectivity i mean you get i guess old
+00:43:38.319 textbooks and stuff but it's really
+00:43:41.119 you're at a huge disadvantage if you
+00:43:43.280 have no digital connectivity um
+00:43:45.839 so
+00:43:46.720 i think there's just a lot of good that
+00:43:47.839 starling can do
+00:43:49.200 in it just by by itself but but then the
+00:43:52.319 the revenue generated from starlink is
+00:43:54.000 what can enable the uh
+00:43:57.040 of a permanently
+00:43:58.560 uh crude base on the moon which would be
+00:44:01.440 the next you know next step from apollo
+00:44:03.359 which is like let's just not go there
+00:44:04.800 for a few hours and and then head back
+00:44:06.560 let's have a opponent at the occupied
+00:44:08.480 science station
+00:44:10.160 on the moon um and we could also build
+00:44:12.720 um some pretty epic uh telescopes uh on
+00:44:16.160 the moon uh that uh would enable us to
+00:44:18.800 learn more about the nature of the
+00:44:19.839 universe and figure out what's going on
+00:44:21.599 and maybe detect those aliens um do you
+00:44:24.800 do you um do you think that there's
+00:44:26.240 enough profit in those businesses to
+00:44:28.720 fund all this or do you need
+00:44:30.560 wall street and other investors to come
+00:44:32.720 share the load with you
+00:44:34.319 is kind of going to mars a partnership
+00:44:36.240 with the government does it need to
+00:44:37.920 partner with governments to get there
+00:44:41.280 um
+00:44:42.319 well i think technically it does not
+00:44:44.160 need to partner with governments um but
+00:44:46.319 of course uh government support would be
+00:44:48.480 helpful um so
+00:44:52.640 i mean it's going to be very expensive
+00:44:54.240 to
+00:44:55.280 build a self-sustaining city on mars
+00:44:57.040 like in order for us to become
+00:44:58.480 multi-planetary in a way that's
+00:44:59.839 meaningful um the the key threshold is
+00:45:04.160 at which point does the city become
+00:45:06.720 self-sustaining such that if the ships
+00:45:09.280 from earth stopped coming for any reason
+00:45:11.920 and it could be any reason could be
+00:45:13.440 world war iii or it could be just you
+00:45:15.280 know civilization subsided
+00:45:17.760 and um and and just gradually got
+00:45:19.839 decrepit or something but but if the
+00:45:22.000 ship's stuff coming
+00:45:23.760 the three supply ships from earth stop
+00:45:25.680 coming to mars for any reason
+00:45:27.760 does the city still survive
+00:45:30.400 and that's like really a large base of
+00:45:32.319 resources that are that that are needed
+00:45:34.480 uh on mars you can't be missing any one
+00:45:37.359 critical ingredient
+00:45:38.800 uh the so and you can think of this like
+00:45:41.040 there are these various great filters
+00:45:43.200 um you know that that perhaps stop
+00:45:44.640 civilizations
+00:45:46.560 and one of the great filters is will we
+00:45:48.640 become a multi-planet species or not
+00:45:51.280 will humanity be one of those
+00:45:53.760 species that passes the great filter of
+00:45:56.079 going beyond one planet and being a
+00:45:57.920 multi-planet species and this is
+00:45:59.440 certainly something we'll have to do at
+00:46:00.800 some point because this the sun is
+00:46:02.960 expanding and will eventually boil the
+00:46:04.880 oceans
+00:46:05.839 and destroy your life on earth so if you
+00:46:07.520 care about life on earth you should
+00:46:08.720 really care about life becoming
+00:46:10.240 multi-planetary and ultimately
+00:46:11.599 multi-stellar because otherwise you're
+00:46:14.000 basically saying you're signing the sort
+00:46:16.640 of death warrant for all life as we know
+00:46:18.960 it it's inevitable um and then there's
+00:46:22.319 also the the various things that kill
+00:46:23.839 the you know the dinosaurs and and
+00:46:26.240 i mean you look at the fossil record
+00:46:28.079 they've been five major extinctions uh
+00:46:30.240 that are sort of on the order of eighty
+00:46:31.680 nine eighty to ninety percent of all
+00:46:32.960 creatures on earth dying um for a wide
+00:46:35.839 range of reasons um
+00:46:37.920 but uh and then humans can also you know
+00:46:40.560 with us the world war three danger um
+00:46:43.040 that
+00:46:43.760 were that that other creatures didn't
+00:46:45.280 have where we could do ourselves in um
+00:46:48.400 by sort of misusing advanced technology
+00:46:50.720 and and sort of just you know having
+00:46:52.480 some
+00:46:53.520 radioactive hellhole that's all that's
+00:46:55.119 left after world war three so
+00:46:57.680 um you know you want you could even
+00:47:00.079 characterize it potentially as
+00:47:02.160 which will come first world war three
+00:47:04.880 or uh life becoming multi-planetary on
+00:47:07.440 mars
+00:47:08.480 um
+00:47:09.520 yeah i'm sorry i was gonna shift but um
+00:47:12.960 you know when you think about the
+00:47:14.160 importance of going to mars versus
+00:47:16.480 solving
+00:47:17.440 critical energy and climate change
+00:47:19.200 problems here on earth obviously the
+00:47:20.559 effort with tesla is related to
+00:47:22.400 sustainable energy and i think going
+00:47:24.559 back to like probably the 1950s there
+00:47:26.400 were engineering designs around plasma
+00:47:28.800 fusion or fusion-based systems that have
+00:47:30.400 evolved to these plasma systems to these
+00:47:32.000 tokamak systems
+00:47:33.440 and every year every decade it's like
+00:47:35.520 hey next decade we're going to have it
+00:47:37.280 what's your point of view
+00:47:39.280 on where plasma fusion systems are are
+00:47:42.160 we going to have fusion
+00:47:44.000 energy
+00:47:45.200 this century this decade
+00:47:47.200 and does it create limitless energy
+00:47:49.040 where the electricity production goes up
+00:47:51.280 by ten thousand fold and the price of
+00:47:53.520 electricity drops by ten thousand fold
+00:47:55.839 and then what does that world on earth
+00:47:57.440 look like if that happens so i guess
+00:47:59.680 question is like is that technology real
+00:48:02.079 when does it happen and what happens to
+00:48:03.440 the world here when and if that happens
+00:48:06.480 i'll answer that question but then i'll
+00:48:08.559 let me sort of point out what the what
+00:48:09.839 the actual issue is uh
+00:48:11.680 if the question is like uh is it
+00:48:13.520 possible to solve uh fusion energy uh
+00:48:17.040 100 yes definitely definitely definitely
+00:48:19.520 definitely is for sure um so the the and
+00:48:23.440 and and really just using a takamak
+00:48:25.520 style which is like it basically a
+00:48:26.960 doughnut ring with uh
+00:48:28.800 uh with electromagnets that control the
+00:48:31.359 the plasma uh the the way to solve that
+00:48:34.800 is simply scale up the tokamak uh fusion
+00:48:37.200 is uh very much a scale
+00:48:40.319 based thing you want to minimize your
+00:48:41.839 surface volume ratio so as you scale up
+00:48:44.800 a tokamak you reduce your surface volume
+00:48:47.200 ratio which means like the the the
+00:48:49.680 volume you have relative to this the
+00:48:51.839 surface uh you you now have much more uh
+00:48:55.920 like you can basically have a hot zone
+00:48:57.599 in the center that's relatively far away
+00:48:59.280 from the walls and and more of a hot
+00:49:01.599 zone
+00:49:02.400 um
+00:49:03.200 so the the
+00:49:05.200 so it's not in my mind a question as to
+00:49:07.599 whether which fusion can work but there
+00:49:10.079 is a question as to whether it is
+00:49:11.680 economically viable
+00:49:13.280 um and and whether it is competitive
+00:49:15.440 with uh with with alternatives i think
+00:49:18.240 that the economic viability of fusion is
+00:49:20.640 a much bigger question and i i think the
+00:49:23.200 answer probably is that a fusion
+00:49:26.880 earth
+00:49:27.839 fusion is not competitive economically i
+00:49:30.160 think that is that is uh
+00:49:32.240 i would say it's probably not
+00:49:33.520 competitive economically by an order of
+00:49:34.960 magnitude
+00:49:36.640 where does it break is it a materials
+00:49:37.920 breakdown or where does it break down
+00:49:40.559 economically well
+00:49:42.319 so
+00:49:43.119 so you can't just um
+00:49:46.160 use uh
+00:49:47.760 normal hydrogen you know you you need to
+00:49:49.760 use like deuterium and tritium like
+00:49:52.240 unusual forms of hydrogen
+00:49:54.559 helium-3
+00:49:55.920 uh
+00:49:57.200 you know that there are um
+00:49:59.040 there are some
+00:50:00.160 uh some uh other types of fusion that
+00:50:02.880 could be used uh but
+00:50:05.440 um these are just not
+00:50:07.440 they're not like there's not a lot of
+00:50:08.880 this raw material it's quite difficult
+00:50:10.559 to get the raw material so first you
+00:50:11.760 have to get the raw material
+00:50:13.200 uh that's that's
+00:50:14.640 expensive raw material
+00:50:16.400 um and then um it's not just about
+00:50:18.800 generating the the energy you've got to
+00:50:21.680 um
+00:50:22.720 turn that energy into usable
+00:50:24.839 electricity you can't just have a hot
+00:50:26.720 thing okay so the hot thing has to
+00:50:28.720 translate to usable electricity
+00:50:32.640 so i think you got you've got a cost of
+00:50:34.880 a fuel issue which is very significant
+00:50:37.359 uh you've got you've got a whole bunch
+00:50:38.960 of knockdowns from
+00:50:40.640 when you generate the heat to
+00:50:42.640 when you actually convert that into
+00:50:44.240 electricity
+00:50:45.920 you've got some very difficult
+00:50:47.520 maintenance issues with with the
+00:50:49.760 effusion reactor
+00:50:51.830 [Music]
+00:50:53.599 so
+00:50:54.400 uh
+00:50:55.520 and that should be then compared to
+00:50:56.960 alternatives uh the the sustainable
+00:50:59.280 energy alternatives that i think uh are
+00:51:01.119 overwhelmingly more competitive are
+00:51:03.530 [Music]
+00:51:04.800 solar energy wind
+00:51:06.839 geothermal hydro uh some tidal and
+00:51:10.319 energy but it's really primarily uh
+00:51:12.640 solar uh and and wind
+00:51:15.359 um
+00:51:16.640 now
+00:51:17.599 and you can really say like what why
+00:51:19.839 bother creating a fusion on earth when
+00:51:22.400 we have a gigantic fusion reactor in the
+00:51:24.640 sky that just works with zero
+00:51:26.480 maintenance
+00:51:27.920 and it shows up every day
+00:51:30.079 right it's pretty consistent yeah but
+00:51:32.000 elon can we scale to 1000 x or 100 x our
+00:51:34.800 electricity production here using solar
+00:51:37.359 and other renewable sources
+00:51:39.359 yes so
+00:51:41.040 the the amount of uh surface area you
+00:51:42.960 need to
+00:51:44.480 power the united states is remarkably
+00:51:46.640 tiny um
+00:51:48.000 so you need like basically roughly a
+00:51:50.319 hundred miles by a hundred miles of
+00:51:52.240 territory and it obviously doesn't need
+00:51:53.680 to be in one place uh in the united
+00:51:55.760 states to power the united states it's
+00:51:57.760 like a little corner of texas or utah
+00:52:00.240 the entire country
+00:52:02.319 um and and then if you if you
+00:52:04.880 you could you could basically
+00:52:06.559 power uh you you probably 10x the just
+00:52:09.680 with solar alone
+00:52:11.119 um without displacing uh anyone's home
+00:52:14.640 uh power an economy ten times the size
+00:52:16.800 of the united states in the united
+00:52:18.079 states on land
+00:52:19.839 what when energy prices
+00:52:21.520 if you say if you extend that to water
+00:52:23.839 because earth is 70 percent water yeah i
+00:52:26.559 mean you could you could say okay now we
+00:52:28.160 could probably have
+00:52:30.000 a civilization that is a hundred times
+00:52:32.160 as energy intensive as we currently have
+00:52:34.160 it and so what does that look like with
+00:52:35.680 the last part of my question which is a
+00:52:37.359 world where energy costs are saying it's
+00:52:39.040 a hundred times cheaper than they are
+00:52:40.319 today and we have a hundred times more
+00:52:41.359 energy production capacity
+00:52:43.280 what what changes about civilization
+00:52:45.280 what do we do differently and what do we
+00:52:46.640 see
+00:52:47.920 change most kind of
+00:52:49.839 dramatically well currently we're not
+00:52:53.359 because of of just generally
+00:52:55.839 low birth rates almost worldwide
+00:52:59.200 civilization is not headed to
+00:53:01.599 have a population
+00:53:03.119 that is an order of magnitude greater
+00:53:04.559 than where where we're kind of we're
+00:53:06.079 currently headed towards a population
+00:53:07.920 decline
+00:53:09.280 uh and this is almost everywhere in the
+00:53:11.520 world
+00:53:12.319 um
+00:53:13.200 so
+00:53:16.240 you know it basically seems as as though
+00:53:17.920 as soon as you have like urbanization um
+00:53:20.480 and and and education beyond a certain
+00:53:22.480 level and income being on a certain
+00:53:23.839 level birth rates plummet
+00:53:25.760 um
+00:53:26.640 and so as countries get get wealthier
+00:53:28.800 their birth rates plummet it's it's
+00:53:30.079 somewhat counterintuitive because people
+00:53:31.680 will say like well it's too expensive to
+00:53:33.280 have a baby nope the the wealthier they
+00:53:35.520 are are the fewer kids you have
+00:53:37.520 um the more educated you are the fewer
+00:53:39.200 kids you have so
+00:53:41.280 um it's it's a it's it's it's the
+00:53:43.839 inverse
+00:53:44.880 um
+00:53:45.920 so so i'm not sure who to use all that
+00:53:48.000 energy um unless there's a significant
+00:53:50.480 change in the growth rate um or we have
+00:53:53.440 a very robot oriented economy so that's
+00:53:56.240 also possible so if we've got a lot of
+00:53:58.400 um
+00:53:59.680 you know
+00:54:00.559 four wheeled robots informed cars and uh
+00:54:03.520 androids
+00:54:04.960 humanoid robots
+00:54:06.480 then you could certainly see that
+00:54:08.319 there'd be perhaps a need for an order
+00:54:10.400 of magnitude more energy
+00:54:13.920 but it's not coming from the humans
+00:54:16.240 unless something
+00:54:17.520 major changes on the on the human uh
+00:54:19.599 birth rate uh level uh this by the way
+00:54:22.160 is i think the biggest single threat to
+00:54:23.760 civilization uh right now is the why why
+00:54:26.559 do you think societally people just make
+00:54:28.400 those decisions when they become more
+00:54:29.920 affluent is it that they just become
+00:54:31.359 more selfish or there's more things for
+00:54:33.680 them to do and they have more money to
+00:54:35.119 spend on themselves and they say you
+00:54:36.559 know what
+00:54:37.520 i don't want to have
+00:54:38.880 a large family i want to
+00:54:40.640 you know go to coachella
+00:54:44.160 yeah well
+00:54:45.920 there is this like weird like mind
+00:54:47.599 viruses thing where some people are
+00:54:50.079 think like having fewer kids is is like
+00:54:52.079 better for the environment yeah that's
+00:54:53.839 crazy total nonsense
+00:54:56.480 the environment is going to be fine
+00:54:57.680 they're going to be fine even if we if
+00:54:59.200 we doubled the size of the humans um
+00:55:01.599 this is and i know a lot about
+00:55:02.880 environmental stuff so
+00:55:04.480 um you know uh
+00:55:07.680 you that we can't have civilization just
+00:55:10.880 dwindle into nothing um
+00:55:13.119 and you know japan's leading indicator
+00:55:15.200 here like the japan's population
+00:55:17.599 declined by 600 000 people last year
+00:55:19.839 that lowest birth rate in history
+00:55:21.920 uh it's you know it's pretty bad um
+00:55:25.599 so
+00:55:26.400 we i don't know
+00:55:27.599 we and i think
+00:55:30.720 so so this one element of this is it's a
+00:55:33.599 lot of people just think that having
+00:55:35.040 kids is somehow bad for the environment
+00:55:36.799 i want to be clear it's not it's
+00:55:38.079 essential for me for maintaining
+00:55:39.760 civilization that would at least
+00:55:40.880 maintain our numbers we don't
+00:55:42.079 necessarily need to grow
+00:55:43.839 dramatically but at least let's not uh
+00:55:46.720 you know gradually dwindle away and
+00:55:48.480 until uh civilization ends with us all
+00:55:51.680 in adult diapers and and
+00:55:53.920 in a whimper like we don't want a
+00:55:55.359 civilization to end in an adult diapers
+00:55:57.599 with a whimper that would
+00:55:59.520 kind of suck yeah lee
+00:56:03.119 well i mean and you and i have had this
+00:56:04.720 conversation i mean in japan i had two
+00:56:06.799 people tell me when i was there like i
+00:56:09.119 think it's immoral to bring humans into
+00:56:11.359 the world i mean people have gotten very
+00:56:13.680 sad about the future it's kind of crazy
+00:56:17.200 it's great
+00:56:18.319 life's awesome
+00:56:19.680 yes
+00:56:20.880 no this there's literally i've heard
+00:56:22.319 many times how like how can i bring a
+00:56:24.160 child into this terrible world i'm like
+00:56:25.680 have you read history because let me
+00:56:27.680 tell you it was way worse back then okay
+00:56:30.400 yeah
+00:56:31.520 now it's a good time
+00:56:33.440 it's a good time
+00:56:35.280 hey you know listen i i know you're
+00:56:36.880 super busy but i want to ask you about
+00:56:38.559 the move to texas because i've been
+00:56:39.920 thinking about it uh austin california
+00:56:43.200 i don't know some senator told you to go
+00:56:44.880 [ __ ] yourself and like
+00:56:46.640 you know like we don't know he's been a
+00:56:48.319 couple senators said that actually
+00:56:50.640 yeah it seems to be turning into a bit
+00:56:52.400 of a trend um but how has
+00:56:55.760 building the tesla
+00:56:58.559 gigafactory which i got to see in austin
+00:57:00.720 a couple weeks ago and it was one of the
+00:57:02.880 most inspiring things i've ever seen i
+00:57:04.880 mean
+00:57:06.480 i don't know how many months it took to
+00:57:07.839 build there but
+00:57:09.280 how long did it take to build that
+00:57:11.440 dreadnought and then
+00:57:13.520 what would have taken to build that in
+00:57:15.440 california california under gavin newsom
+00:57:18.559 so we built the
+00:57:20.559 the
+00:57:21.599 gigatexas which is the biggest factor in
+00:57:23.599 north america i think possibly the
+00:57:25.040 biggest factor in the world
+00:57:26.480 um
+00:57:27.440 and it's three times the size of the
+00:57:28.960 pentagon to give you a sense of scale
+00:57:30.799 okay this is freaking big it's like it's
+00:57:33.280 weird it's like so big it's weird like
+00:57:34.960 you just like
+00:57:36.400 i was trying to find you in it and
+00:57:38.720 i was trying to drive around and it took
+00:57:40.319 me about 45 minutes to find you
+00:57:42.640 yeah
+00:57:43.520 like no you have to like call you can't
+00:57:45.119 like find someone in the world you have
+00:57:46.160 to call them on their cell phone and say
+00:57:47.440 where are you you know
+00:57:48.799 um
+00:57:49.599 so i mean the building is like uh
+00:57:52.559 just under a mile long and we're
+00:57:53.920 actually gonna extend it it will be like
+00:57:55.200 literally a mile long um and about a
+00:57:58.240 quarter mile wide uh and it's uh 80 feet
+00:58:01.280 tall
+00:58:02.240 so it's just uh ridiculously big
+00:58:05.760 um
+00:58:06.799 and when you think about like for
+00:58:08.160 manufacturing situation like what what
+00:58:10.640 what are the two the two things that
+00:58:11.920 really define manufacturing
+00:58:13.520 competitiveness are economies of scale
+00:58:15.839 and technology
+00:58:17.280 and so if you got an ace on economy like
+00:58:19.920 if you sort of maximize your ace level
+00:58:22.319 on technology and you maximize your ace
+00:58:24.319 level on scale this is obviously going
+00:58:26.240 to be the most competitive situation and
+00:58:27.839 that's why they're so freaking giant
+00:58:30.000 um
+00:58:31.040 and the the
+00:58:32.640 gigatexas will go all the way from
+00:58:35.839 raw materials like like basically rail
+00:58:38.000 cars of cell raw materials coming in and
+00:58:40.160 then forming the the battery cell then
+00:58:42.000 the battery pack uh building the the
+00:58:44.720 motor uh casting we also
+00:58:47.599 have introduced a major innovation which
+00:58:49.359 is to cast the entire
+00:58:51.040 front third and rear third of the car
+00:58:52.880 and as a single piece um i got this idea
+00:58:55.280 from toys actually because i was like
+00:58:56.640 how do they make toys those are cheap
+00:58:58.160 they just cast them i was like well can
+00:59:00.000 you build a casting machine
+00:59:01.839 that big and they're like well no one
+00:59:03.440 ever has i'm like is it are we breaking
+00:59:05.040 physics like no well let's just ask them
+00:59:07.440 and there were six major casting machine
+00:59:09.200 suppliers in the world and five of them
+00:59:10.640 said no and the six said maybe i'm like
+00:59:12.559 i'll take that as a yes um
+00:59:15.359 well i mean this you wanted to do this
+00:59:17.200 for the model 3 but it was just too soon
+00:59:19.119 huh
+00:59:19.920 and and now it's almost there yeah
+00:59:22.480 actually this this partly comes from the
+00:59:24.400 model 3 which is actually a fantastic
+00:59:26.079 car in many ways
+00:59:28.079 but we were rightly criticized for an
+00:59:29.920 inefficient design uh with
+00:59:32.480 for the front and rear body um
+00:59:35.040 like sandy monroe who i think is really
+00:59:37.839 has excellent from an engineering
+00:59:39.280 standpoint and and really a very fair
+00:59:41.200 critic
+00:59:43.280 he pistol wept us for
+00:59:45.200 um the design of the the battery
+00:59:48.640 and piece by piece told you why you suck
+00:59:50.720 yeah and then he did the why and told
+00:59:52.480 you why you were awesome
+00:59:54.160 he took it apart and tells us exactly
+00:59:55.680 why he's why we sucked and he was
+00:59:57.440 correct um and then and i was like well
+01:00:01.119 that's pretty embarrassing so uh no
+01:00:03.200 there he was complimentary of other
+01:00:04.640 parts of the car but not the body design
+01:00:06.319 and
+01:00:07.119 uh and so it's like okay we're gonna go
+01:00:08.960 from like you know
+01:00:10.960 uh the it's just an incredibly difficult
+01:00:13.680 party to make it's made out of like 120
+01:00:15.680 different pieces with dissimilar metals
+01:00:17.440 that are joined and you've got galvanic
+01:00:19.200 corrosion challenges it's very difficult
+01:00:21.359 to make um to a single piece casting
+01:00:23.760 that's one piece so like 120 pieces went
+01:00:26.240 down to like one so
+01:00:28.559 um
+01:00:29.920 it's it's it's a it's a huge
+01:00:31.839 and the the like the model y body shop
+01:00:33.760 especially the new one where we cast
+01:00:35.119 both the front and rear is 60 smaller
+01:00:37.359 than the model 3 body shop
+01:00:39.200 so it's you know
+01:00:40.640 gigantic it's quite this there's a lot
+01:00:42.400 of innovations of tesla besides the
+01:00:44.079 stuff that is is obvious yeah um
+01:00:46.960 so anyway so yeah the the
+01:00:48.640 but if
+01:00:49.920 and and really you know
+01:00:51.760 to to be fair to gavin newsom like uh
+01:00:55.680 you know
+01:00:56.880 if you
+01:00:58.720 if you had a gun to gavin's head okay
+01:01:01.680 um and said we need to build start
+01:01:03.760 building this factory in california
+01:01:05.119 right now he couldn't do it because
+01:01:07.119 there are so many uh regulatory agencies
+01:01:10.559 um and so many uh litigators in
+01:01:13.599 california that want to stop you from
+01:01:15.040 doing anything that even if you're the
+01:01:17.119 governor of the of the state you cannot
+01:01:19.200 get it done
+01:01:20.559 um so
+01:01:21.920 something's got to be done to to to to
+01:01:24.960 you know because california used to be
+01:01:27.119 the land of opportunity
+01:01:28.880 and it's a beautiful state and i love i
+01:01:30.880 loved living there and i still spend a
+01:01:32.559 lot of time in california even though
+01:01:34.160 every time i go there i get
+01:01:36.000 every literally every day i go there i
+01:01:37.359 get the jesus taxes big tax bill by day
+01:01:40.400 yeah like the sheer cost per day of me
+01:01:42.240 going and working in california days
+01:01:43.520 boggles the mind and but i still do it
+01:01:45.359 you know um but but it the california's
+01:01:48.160 gone from a land of opportunity to to
+01:01:50.319 the land of of of
+01:01:53.119 sort of taxes
+01:01:54.799 uh over regulation and litigation
+01:01:57.920 and this is not a good situation and
+01:02:00.400 really there's got to be like
+01:02:02.640 a serious cleaning out of the pipes in
+01:02:04.240 california how many months was it to get
+01:02:06.799 the giga austin done
+01:02:08.559 took a year and a half two years yeah 18
+01:02:10.880 18 months to build something three times
+01:02:12.559 the size of the pentagon incredible and
+01:02:14.640 you just basically the answer to how
+01:02:16.400 many months it would take in california
+01:02:18.400 is infinity
+01:02:19.520 we would still be working on the permits
+01:02:21.839 yeah
+01:02:23.520 elon this this begs a good question
+01:02:25.520 which is
+01:02:26.640 like
+01:02:28.240 i'm ready graduating and you just keep
+01:02:29.920 signing paperwork
+01:02:31.760 but we have one more form for you what's
+01:02:33.760 a better model yes what's a better model
+01:02:36.400 for government so you know like all
+01:02:38.400 governments tend to increase in
+01:02:39.839 complexity
+01:02:41.039 dictatorship capacity
+01:02:43.520 is the dictatorship the right model
+01:02:45.839 and um
+01:02:47.200 you know like like how do we solve this
+01:02:48.559 let's say you go to mars or let's say
+01:02:49.920 you have to fix california is california
+01:02:51.520 permanently broken
+01:02:53.039 is there a way to fix it or like how do
+01:02:54.480 you set up a better model so that you
+01:02:56.319 don't end up having this this kind of
+01:02:57.839 special interest complexity situation
+01:03:00.480 that eventually kills the uh
+01:03:02.880 population i mean i think ultimately
+01:03:04.799 with california the people of california
+01:03:06.640 just have to get fed up and and demand
+01:03:08.640 change um that's the thing that really
+01:03:10.480 has to happen um
+01:03:12.240 and and there's there's gotta be an
+01:03:14.240 above zero percent chance of the of the
+01:03:16.799 republicans winning in california if if
+01:03:18.960 if if it's just the democrats every time
+01:03:22.079 you've got to be
+01:03:23.520 you know and this is this is like
+01:03:25.039 occasionally uh it the thing is that
+01:03:27.680 right right now uh
+01:03:30.400 and plus the level of
+01:03:31.920 level of gerrymandering uh which is
+01:03:34.000 basically just treating the people like
+01:03:35.520 sheep uh and and it's terrible um
+01:03:39.760 that's gone on in california is
+01:03:40.799 outrageous so california uh the dems
+01:03:43.359 have a super majority in um the house
+01:03:46.319 and senate in california and the
+01:03:47.599 governor and everything and so how
+01:03:49.440 responsive is any political party going
+01:03:51.280 to be to the people if they are
+01:03:53.359 guaranteed to win it's a one-party state
+01:03:56.880 and so i'm not saying that you know go
+01:04:02.160 sort of elect the republicans every time
+01:04:04.079 but if it's never you're you're just
+01:04:06.240 making california a one-party state they
+01:04:07.920 will no longer be responsible responses
+01:04:09.680 to people and will only be responsive to
+01:04:11.599 those that funded their political
+01:04:12.720 campaigns clip elon saying that 30
+01:04:14.799 seconds on tv over and over go ahead sex
+01:04:17.440 yeah so elon shifting gears to the
+01:04:19.440 economy um you know we saw this uh
+01:04:22.079 surprise report of negative 1.4 gdp
+01:04:25.359 growth in q1
+01:04:26.960 uh interest rates been rising that
+01:04:28.559 increased the cost of the consumer of
+01:04:30.160 getting loans things like that
+01:04:32.079 we've had a stock market correction
+01:04:33.760 really a crash in a lot of growth stocks
+01:04:36.319 software stocks
+01:04:37.760 um what from where you sit and the data
+01:04:40.319 that you see
+01:04:41.359 uh where do you think the economy is is
+01:04:43.680 headed right now do you think we're in a
+01:04:45.359 recession or is it just a risk how do
+01:04:47.920 you how do you assess our current
+01:04:49.200 economic situation well predicting
+01:04:50.880 economic record economics is always
+01:04:52.240 difficult um and and want to assign
+01:04:54.480 probabilities to these things um but
+01:04:56.640 ironically i did last year people asked
+01:04:59.039 me what i think about the economy i said
+01:05:00.160 well i think we might enter a recession
+01:05:01.920 in approximately uh
+01:05:03.839 uh
+01:05:04.799 spring of 2020 of 2022.
+01:05:08.960 called it nailed it
+01:05:11.280 um yeah
+01:05:12.480 um so
+01:05:14.079 uh
+01:05:14.960 now the thing is that
+01:05:16.400 recessions are not necessarily a bad
+01:05:17.839 thing uh they they
+01:05:20.079 you know um
+01:05:21.520 what
+01:05:22.559 i i've now been through a few of them
+01:05:24.160 and what has happened is if you have um
+01:05:27.359 a boom that goes on for too long you get
+01:05:30.079 misallocation of capital uh it starts
+01:05:32.240 raining money on fools basically it's
+01:05:34.160 like any any dumb thing gets money and
+01:05:35.920 i'm sure you've seen a few of those um
+01:05:38.160 so
+01:05:39.359 at first at some point it gets just out
+01:05:41.520 of control and you just have a
+01:05:42.799 misallocation of of human capital uh
+01:05:44.960 where people are doing things that are
+01:05:46.559 silly and not useful to their fellow
+01:05:48.480 human beings um and and then those
+01:05:50.960 companies there needs to be sort of an
+01:05:52.319 economic enema if you will um
+01:05:55.200 to have everyone sort of shift
+01:05:56.960 uncomfortably in their seats
+01:05:58.170 [Music]
+01:06:02.839 um sorry it's just like visualizing it
+01:06:06.480 the economic enemy
+01:06:08.240 i mean listen it's got alliteration
+01:06:10.319 um
+01:06:11.359 so
+01:06:14.400 this too shall pass
+01:06:18.079 eventually the economic enemy does its
+01:06:19.920 job
+01:06:20.799 it clears out the pipes if you will yes
+01:06:24.480 and um and and sort of the the the
+01:06:27.359 [ __ ] companies um
+01:06:29.280 uh go bankrupt and the ones that are
+01:06:31.200 doing useful products uh are prosperous
+01:06:34.000 um
+01:06:34.880 and um but there's certainly a lesson
+01:06:36.640 here that if one is making useful
+01:06:38.319 product and and doing has a company that
+01:06:40.559 makes sense uh make sure you're not
+01:06:42.079 running things too close to the edge
+01:06:43.760 from a capital standpoint they've got
+01:06:45.200 some capital reserves to last through uh
+01:06:48.480 irrational times because in the in the
+01:06:50.240 past when there's been a recession um it
+01:06:52.480 has gone it's amazing it's flipped like
+01:06:54.400 a light switch i mean david do you
+01:06:55.520 remember this when from the from the
+01:06:56.960 paypal you know ex-paypal days when we
+01:07:00.319 uh raised 100 million dollars in march
+01:07:02.559 of 2000 uh and we literally we had
+01:07:06.640 the demand was so high we had uh
+01:07:09.200 people like
+01:07:10.480 vcs like just literally without even a
+01:07:12.720 term sheet wiring money into our account
+01:07:15.680 um
+01:07:16.480 we'll send the term sheet later
+01:07:18.640 literally we're like we like sleuth out
+01:07:20.720 our our bank account number and wire
+01:07:22.640 money in and we're like where'd this
+01:07:24.000 come from and it's like
+01:07:26.960 um they
+01:07:28.480 so it was like there was literally fire
+01:07:30.880 hosing money in march of 2000 and and
+01:07:33.520 then in april 2000 the market went into
+01:07:35.839 free fall and it went from money raising
+01:07:38.160 money was trivial to even good companies
+01:07:40.240 could not raise money
+01:07:41.680 uh in a month
+01:07:43.280 um so it's just important to bear in
+01:07:45.280 mind like that you know paypal almost
+01:07:47.200 went bankrupt in in 2000 uh we came
+01:07:49.680 close
+01:07:50.559 um
+01:07:51.839 but but thankfully we would raise that
+01:07:53.359 that hundred million dollars in in march
+01:07:54.960 2000 uh without which would be uh could
+01:07:58.000 be a game over basically um
+01:08:00.799 uh and we kind of saw it coming so it's
+01:08:02.640 like we we we got that the the x
+01:08:05.119 confinity merger done in like three
+01:08:06.799 weeks and raised 100 million dollars
+01:08:09.200 because we were like oh how
+01:08:11.920 we see this coming to an end pretty soon
+01:08:13.520 and then a month later it was like
+01:08:15.760 you know a nightmare basically um
+01:08:18.799 and and uh anyway so it's just important
+01:08:21.120 make sure if you're a healthy company
+01:08:22.479 you've got some capital to get through
+01:08:23.600 things
+01:08:24.399 um
+01:08:25.759 and and then what what's your costs and
+01:08:27.920 uh if you if if it is a recession which
+01:08:30.640 it more likely than not it is a
+01:08:32.560 recession not saying it is but it
+01:08:34.880 probably is
+01:08:36.238 um then just uh
+01:08:38.799 make what's your cash flow and get the
+01:08:40.560 cop positive cash flow soon as you can
+01:08:42.560 um
+01:08:43.439 so um
+01:08:45.198 yeah uh
+01:08:46.960 but i think we probably
+01:08:48.880 are
+01:08:50.560 that are in a recession and that that
+01:08:52.799 recession will get get worse
+01:08:54.880 um
+01:08:55.759 but you know these things pass and then
+01:08:58.319 there will be boom times again um so
+01:09:00.880 it'll probably be some some tough going
+01:09:03.359 for
+01:09:04.319 i don't know a year uh maybe maybe
+01:09:06.960 you know
+01:09:07.759 12 to 18 months is usually um the amount
+01:09:11.279 of time that it takes for for the a
+01:09:13.439 correction to to happen um
+01:09:17.040 what do you guys think
+01:09:18.238 yeah i
+01:09:19.759 david uh how do you feel about it yeah i
+01:09:21.679 mean it feels like it started um you
+01:09:24.479 know what started as a slowdown earlier
+01:09:25.920 this year um now seems like i mean
+01:09:28.560 technically i guess we need two quarters
+01:09:29.839 of negative growth to be in a recession
+01:09:31.198 but it feels like we're in one feels
+01:09:32.880 like it started um you know the growth
+01:09:35.520 stock the software businesses that we
+01:09:36.799 invest in are sort of the canaries in
+01:09:38.000 the coal mine and there's a lot of a lot
+01:09:40.319 of dead canaries
+01:09:43.120 uh having a hard time breathing
+01:09:45.920 yeah
+01:09:54.670 [Laughter]
+01:10:01.199 it got stunned for a brief moment and
+01:10:03.199 and it just it'll be fine um
+01:10:07.199 it it reminds me of the the parrot that
+01:10:09.440 you know the pet shop sketch or the
+01:10:10.640 parrot it was monty python um
+01:10:15.600 it's pining was parrot is pining for the
+01:10:17.840 fjords
+01:10:19.840 hey um elon a lot has been talked about
+01:10:22.480 as we wrap here and you've been
+01:10:23.679 incredibly gracious giving us so much
+01:10:25.199 time thank you for that um a lot of talk
+01:10:28.080 about american exceptionalism over the
+01:10:30.560 last couple years
+01:10:32.159 waning
+01:10:33.120 and maybe
+01:10:34.239 this country had seen its best days and
+01:10:37.040 uh we see the work you're doing and
+01:10:38.719 other people in this great country are
+01:10:40.159 doing and the debates we're having about
+01:10:42.320 the future
+01:10:43.440 and yeah china's doing pretty fantastic
+01:10:46.080 rushes on the ropes
+01:10:48.719 but it does seem like uh america is
+01:10:51.280 still producing
+01:10:53.199 some of the greatest companies uh the
+01:10:55.360 world has ever seen some of the greatest
+01:10:57.040 innovations what are your thoughts on
+01:10:59.199 america and our future and what we need
+01:11:01.520 to keep this country and this beacon of
+01:11:04.719 hope that
+01:11:05.920 you know four of the five of us were not
+01:11:07.679 born here you know two of you came from
+01:11:09.120 south africa and no three of you three
+01:11:11.440 of you came from south africa one of you
+01:11:12.800 from canada i don't know what they're
+01:11:13.679 putting in from sri lanka and from sri
+01:11:15.360 lanka and through canada canada via
+01:11:17.199 canada he came through canada too yeah i
+01:11:19.679 know
+01:11:21.040 it seems like that's the that's the way
+01:11:22.560 canada is a gateway it is a
+01:11:24.840 gateway and
+01:11:26.000 how do we
+01:11:27.199 it's a well i'm hinting at the answer
+01:11:28.960 here but you know it does seem like our
+01:11:30.640 immigration policy is absolutely insane
+01:11:34.239 and uh maybe we need to keep collecting
+01:11:37.520 some of the great individuals that i get
+01:11:39.440 to share the stage with here and
+01:11:40.560 yourself we need to keep bringing great
+01:11:42.640 people to this country why can't we get
+01:11:45.280 that in our heads that
+01:11:47.360 yeah
+01:11:48.400 it's talent recruitment no absolutely i
+01:11:51.360 think uh it's incredibly important that
+01:11:53.760 the united states be like the
+01:11:55.360 destination for the world's best talent
+01:11:57.199 i mean you can think of this like like
+01:11:59.040 like a pro sports team if you want to
+01:12:00.560 win the league um and and uh you know
+01:12:03.679 you want the best players on your team
+01:12:05.920 um there now there are obviously a lot
+01:12:08.000 of
+01:12:09.040 very talented people born in the united
+01:12:10.480 states um but if you can add a few aces
+01:12:13.440 from uh from uh outside the country to
+01:12:16.640 the team you're gonna win the league um
+01:12:18.960 and and and here's the thing those aces
+01:12:21.360 actually want to work for your team they
+01:12:23.280 don't want to compete against you they
+01:12:24.960 want to they want why don't we want to
+01:12:26.640 be on team america and and so it's like
+01:12:30.159 we have to like fight them off to not be
+01:12:32.480 on team america that's the crazy thing
+01:12:34.880 um and so it's like if you got some aces
+01:12:36.880 that that are the difference between
+01:12:37.840 winning and losing
+01:12:39.199 we should be like
+01:12:40.719 really recruiting them like you'd
+01:12:42.480 recruit like a star
+01:12:44.640 basketball player or football player
+01:12:46.560 that's what we should be doing um
+01:12:49.280 active recruiting um just like if you're
+01:12:51.679 a company that once wants to succeed you
+01:12:53.280 actively recruit the best talent
+01:12:56.000 and then and and that that's the way to
+01:12:57.760 win
+01:12:58.480 and and if if that stops happening
+01:13:00.239 america will stop winning
+01:13:01.920 and we have two administrations in a row
+01:13:04.960 biden and trump who don't want to let
+01:13:08.080 the greatest minds the most talented
+01:13:10.000 people into this country is absolutely
+01:13:11.600 insane
+01:13:12.960 i mean i think they deal with this every
+01:13:14.320 day
+01:13:15.520 reality is like actually any anyone who
+01:13:18.000 who's gonna who wants to to to work hard
+01:13:20.560 and be and do useful things um and in
+01:13:23.679 this you know uh we we want in the
+01:13:25.840 united states um
+01:13:28.080 and it's not just people who are sort of
+01:13:30.000 intellectually strong but it's just
+01:13:31.760 anyone with a with a strong work ethic
+01:13:34.480 you know if if they're coming from
+01:13:36.400 mexico or if they're coming from you
+01:13:38.640 know europe or china wherever it's just
+01:13:40.880 if they're like going to come here and
+01:13:42.320 crank hard and
+01:13:43.840 and contribute more than they take hell
+01:13:46.320 yeah i mean that's just it's a
+01:13:47.920 no-brainer
+01:13:49.840 have you been have you been disappointed
+01:13:52.000 in the
+01:13:53.120 similarities between biden and trump on
+01:13:55.120 this like maybe you could have expected
+01:13:57.360 it from trump because that was a
+01:13:58.400 rhetoric he needed to use to get elected
+01:14:00.560 but it's not as if biden has flipped the
+01:14:02.320 script and said okay we're going to go
+01:14:03.760 180 degrees in the other direction he's
+01:14:05.520 kind of kept it the same
+01:14:07.360 which has been really surprising
+01:14:08.800 actually man it's hard to tell what bite
+01:14:10.960 is doing if we told frank um
+01:14:16.000 yeah
+01:14:16.960 like
+01:14:18.400 i feel like it's weaker than bernie's
+01:14:20.560 the the the real president is whoever
+01:14:22.719 controls the teleprompter you know it's
+01:14:25.280 like it's like
+01:14:27.520 the path to power is the path to the
+01:14:29.120 teleprompter you know like what what
+01:14:31.280 because that then he just reads the
+01:14:32.320 teleprompter so
+01:14:34.000 you know i do feel like like if if
+01:14:35.600 somebody would accidentally lead on lean
+01:14:37.679 on the teleprompter it's going to be
+01:14:39.199 like anchorman it's going to be like qqq
+01:14:41.960 asdf123 you know type of thing um
+01:14:45.760 i mean
+01:14:47.040 in fairness to biden he he hasn't been
+01:14:49.120 napping as much as he needs to but
+01:14:52.560 it's just it's hard hard
+01:14:54.560 things that are getting done you know
+01:14:57.040 i mean this administration just it
+01:14:58.640 doesn't seem to get a lot done like and
+01:15:01.679 you know um whatever like the trump
+01:15:04.400 administration
+01:15:05.760 leaving trump aside there were a lot of
+01:15:07.840 people in the administration who were
+01:15:09.360 effective at getting things done so uh
+01:15:12.480 but this
+01:15:13.360 this administration seems just just to
+01:15:15.520 not have like the drive to just
+01:15:17.679 get you done uh that that um
+01:15:21.040 that that's my it's it's that's my
+01:15:22.880 impression um so
+01:15:25.760 um
+01:15:28.400 you know we definitely need to fix
+01:15:29.840 immigration policy like we had covert
+01:15:31.360 which was an issue and and and so that
+01:15:33.040 was like one reason like not you know i
+01:15:34.960 guess clamp down it on but now now we've
+01:15:37.520 moved on and so
+01:15:39.199 let's let's just make sure we're getting
+01:15:41.040 tough talent uh
+01:15:42.480 in the united states um and and really
+01:15:45.040 i'd say broadly it's anyone who who
+01:15:48.080 wants to work for [ __ ] um and and uh
+01:15:51.360 and contribute more than they take to
+01:15:52.880 the economy like that's just necessarily
+01:15:54.960 going to make for a stronger better
+01:15:56.719 society in america elon did you see uh
+01:15:59.760 jeff's
+01:16:01.040 uh bezos's tweet back and forth with
+01:16:03.440 biden um where biden i think was talking
+01:16:06.080 about inflation inflation but then he
+01:16:08.239 correlated that to taxing corporations
+01:16:10.080 and bezos said this is misinformation
+01:16:12.159 and disinformation et cetera et cetera
+01:16:13.600 what do you what do you think about that
+01:16:14.800 whole exchange then back and forth
+01:16:16.960 i mean the obvious reason for inflation
+01:16:19.120 is that the government printed a zillion
+01:16:20.719 amount more money than it had uh
+01:16:22.800 obviously um
+01:16:24.480 so it's like the government can't just
+01:16:26.480 uh
+01:16:27.679 you know have
+01:16:28.460 [Music]
+01:16:29.520 um
+01:16:30.320 issue checks far in excess of revenue
+01:16:32.239 without there being inflation um you
+01:16:34.880 know velocity of money held constant so
+01:16:36.719 unless something would change with
+01:16:38.159 velocity of money but
+01:16:39.600 but it it just look the the if the
+01:16:41.520 federal government writes checks they
+01:16:42.640 don't they never bounce so that is
+01:16:44.239 effectively creation of more of more
+01:16:46.560 dollars and if if there are more dollars
+01:16:48.880 created than the increase in the goods
+01:16:50.960 and services output of the economy then
+01:16:52.560 you have inflation again velocity money
+01:16:54.960 held constant um but
+01:16:57.440 so uh
+01:16:59.440 this is just this is very basic this is
+01:17:01.760 not like uh
+01:17:03.120 you know uh super complicated um
+01:17:06.560 and if if the government could just
+01:17:08.080 issue
+01:17:08.960 uh
+01:17:10.159 massive amounts of money and have it and
+01:17:12.000 deficits didn't matter then why don't we
+01:17:13.840 just make the deficit a hundred times
+01:17:15.520 bigger
+01:17:16.960 okay the answer is you can't because it
+01:17:19.760 will basically turn the dollar into
+01:17:21.440 something that is worthless so
+01:17:23.920 um
+01:17:24.880 and various countries have have tried
+01:17:26.960 this experiment multiple times it's not
+01:17:28.880 like oh i wonder what happens if this if
+01:17:31.360 if this is done yeah have you seen
+01:17:33.120 venezuela like the the poor people of
+01:17:35.520 venezuela are you know have been
+01:17:38.239 just run roughshod by their government
+01:17:40.400 um and
+01:17:41.920 so obviously you can't simply uh create
+01:17:44.719 money the the true economy is very
+01:17:47.120 important like the true economy is the
+01:17:48.880 output of goods and services it's not
+01:17:50.880 money
+01:17:51.840 it's it's literally what is the output
+01:17:54.640 of goods and services money is simply a
+01:17:56.719 way to to for us to or anything that you
+01:17:59.760 call money uh is is a way for us to
+01:18:02.480 conveniently exchange goods and services
+01:18:04.320 without having to engage in barter and
+01:18:06.320 also to shift obligations in time that
+01:18:09.040 those are the two reasons that you have
+01:18:10.800 money this thing called money it's it's
+01:18:12.960 really it's a database the money is an
+01:18:16.000 information system for uh for labor
+01:18:18.640 allocation and for exchange of goods and
+01:18:20.480 services and for translating in time
+01:18:23.120 and the quality of that information is a
+01:18:25.520 function of it's like you basically you
+01:18:27.199 can apply information theory to money
+01:18:29.199 and and i think it it
+01:18:31.360 helps explain
+01:18:32.960 why one money system is or why one
+01:18:35.520 action is better than another and so
+01:18:38.080 if like the the money you you just just
+01:18:40.480 like a
+01:18:41.440 an internet connection you'd want
+01:18:42.800 something that's high bandwidth uh low
+01:18:45.120 latency and jitter and uh is not
+01:18:47.679 dropping packets does not have a lot of
+01:18:49.199 errors in the system um and the same is
+01:18:52.080 true true of money um you you want then
+01:18:55.840 and really like you said what did paypal
+01:18:57.520 really really do that helped improve the
+01:19:00.320 the the bandwidth that the speed at
+01:19:02.239 which money could move
+01:19:03.920 um instead of of mailing checks back and
+01:19:06.400 forth which amazingly that was what
+01:19:07.920 people did uh in 2000
+01:19:10.719 um
+01:19:11.760 uh you you could now do real-time
+01:19:14.000 exchange of of money um
+01:19:16.480 and and now you could ship your goods
+01:19:18.320 immediately instead of mailing a check
+01:19:20.080 and waiting for the bank to clear the
+01:19:21.600 check
+01:19:22.400 so
+01:19:23.520 uh like
+01:19:24.800 and and the the ultimate thing that with
+01:19:26.400 paypal or or if it sort of was in the
+01:19:28.159 x.com
+01:19:29.199 sort of went more less sort of niche
+01:19:31.280 payments more sort of broad financial
+01:19:32.719 would be to simply just that uh just
+01:19:35.040 mediate all the heterogeneous uh cobalt
+01:19:37.520 databases out there running on
+01:19:38.960 mainframes during batch processing and
+01:19:41.199 have a single real-time system that uh
+01:19:45.120 that was secure
+01:19:46.560 um and not batch processing um and so
+01:19:51.199 it would just be from an information
+01:19:52.560 standpoint more efficient and and
+01:19:54.640 eventually it would all the the
+01:19:57.280 batch processing cobal mainframes
+01:19:58.640 operated by the banks would cease to
+01:19:59.920 exist
+01:20:01.120 you've um
+01:20:02.159 spent more time uh and built more in
+01:20:05.120 china than
+01:20:06.480 almost anybody i mean apple would be the
+01:20:08.560 only company i could think of that's
+01:20:10.080 probably got a bigger footprint but i'm
+01:20:11.520 not certain of that
+01:20:13.120 what have you learned about china
+01:20:15.520 that you didn't know before you opened
+01:20:16.960 the factories there and started
+01:20:18.480 delivering cars there
+01:20:20.400 and what should we know about china you
+01:20:22.080 know as americans how should we think
+01:20:24.080 about china and our relationship with it
+01:20:26.080 because we haven't spent time there
+01:20:28.400 sure well i'd say like china first of
+01:20:30.400 all is not monolithic it's not like uh
+01:20:32.159 everything everything is not some plot
+01:20:33.760 by the chinese government um the
+01:20:36.480 uh the the there are many uh factions
+01:20:39.679 within china that compete uh vigorously
+01:20:42.560 within china um
+01:20:44.239 and uh so
+01:20:47.120 um
+01:20:48.320 and and and
+01:20:49.920 perhaps most important is that there's
+01:20:51.360 just a
+01:20:52.719 just a tremendous number of hard-working
+01:20:54.719 smart people in china who want to get
+01:20:56.639 ahead and get things done um and they're
+01:20:59.120 not complacent and they're not entitled
+01:21:01.199 um and they're gonna they're they want
+01:21:03.520 to get things done and they they want to
+01:21:05.040 make a better life for themselves um and
+01:21:07.920 what we're gonna see uh which was china
+01:21:10.080 for uh for the first time that anyone
+01:21:12.080 can remember who is alive is an economy
+01:21:14.639 that is twice the size of the us
+01:21:16.800 possibly three times the size of the us
+01:21:18.960 is going to be very weird living in that
+01:21:20.800 world
+01:21:21.840 so
+01:21:22.960 uh we we better
+01:21:24.560 stop the infighting in the u.s and start
+01:21:26.960 punching ourselves in the face because
+01:21:28.560 like there's a whole there's way too
+01:21:30.239 much uh you know of america punching
+01:21:32.560 itself in the damn face it's just just
+01:21:34.400 dumb um and and think about like hey we
+01:21:37.520 got to be competitive here and and uh
+01:21:40.080 there's a new kid on the block that's
+01:21:41.520 going to be two to three times our size
+01:21:44.880 we better step up our game
+01:21:47.120 um
+01:21:48.080 and uh you know and stop infighting um
+01:21:51.760 you think it's easier to stop in
+01:21:53.199 fighting once we're beaten or do you
+01:21:55.040 think that there's a way
+01:21:56.560 folks here can actually just you know
+01:21:58.159 get their political and
+01:21:59.920 commercial act together but or does it
+01:22:01.920 not happen until we've realized we've
+01:22:03.600 lost or do we need a war
+01:22:06.400 i mean we
+01:22:07.840 i sure hope we don't need a war um
+01:22:10.639 uh but there will be certainly um
+01:22:14.560 you know an economic competition that i
+01:22:18.000 think will will blow people away um
+01:22:21.360 when they realize just how competitive
+01:22:22.719 they have to be to be competitive with
+01:22:24.480 companies in china it's very difficult
+01:22:27.360 you know tesla is competitive hotels is
+01:22:29.600 competitive because we have an awesome
+01:22:31.600 team in china that uh you know
+01:22:34.000 so
+01:22:35.440 um like do your tesla china employees
+01:22:38.000 work some meaningful percentage more or
+01:22:41.040 harder than your tesla non-china
+01:22:42.800 employees do you find like it's two
+01:22:44.639 different companies basically
+01:22:46.800 well i mean i
+01:22:48.239 i think tesla is somewhat it it tells us
+01:22:51.199 sort of pretty far out there in terms of
+01:22:52.960 work ethic
+01:22:54.159 uh anywhere in the world so uh
+01:22:57.280 the tales of work ethic in the us i
+01:22:59.040 think is substantially greater than
+01:23:01.920 any other car company or or any large
+01:23:04.159 manufacturing company that i'm aware of
+01:23:06.719 so you know tesla
+01:23:09.440 tesla does have a
+01:23:11.280 a strong worth work ethic in in the u.s
+01:23:16.080 but but
+01:23:17.600 to be totally frank it it the work that
+01:23:19.840 work ethic is exceeded um
+01:23:22.560 uh on balance by uh
+01:23:25.679 it tells a china team that that is i
+01:23:27.679 think objectively true
+01:23:30.239 so
+01:23:31.280 does not say there aren't lots of
+01:23:32.400 hard-working people that tells the u.s
+01:23:33.840 they certainly are but if you say on
+01:23:35.840 average the the the work ethic in china
+01:23:38.239 is higher it's just
+01:23:39.679 tell us tell us what you're calling it
+01:23:41.199 like it is you know so what about if
+01:23:42.960 you're an american ceo
+01:23:44.880 how do you deal with do you think
+01:23:47.199 just the
+01:23:48.560 need for managing all these political
+01:23:50.800 factions inside of a company you
+01:23:52.320 probably saw
+01:23:53.440 you know all the sturm and wrong related
+01:23:55.280 to disney and what happened to them and
+01:23:56.880 what's continuing to happen to them on
+01:23:58.719 both sides between their employees as
+01:24:00.960 well as the governments etc
+01:24:02.960 um do you have any advice or what do you
+01:24:04.880 tell like young ceos that you hang out
+01:24:07.199 with about how to deal with that how to
+01:24:09.679 make those decisions where you land
+01:24:11.840 in the spectrum of dealing with all of
+01:24:13.360 this stuff
+01:24:14.719 the non-work issues that are related to
+01:24:16.800 now you know going to work every day
+01:24:19.920 i'm not sure i entirely understand what
+01:24:21.440 you mean like uh
+01:24:24.719 you know although
+01:24:26.159 whether it's the the need for political
+01:24:27.679 correctness or the need for having
+01:24:29.360 political points of view and having to
+01:24:31.040 bring that and balance that in the
+01:24:32.159 workplace how do you deal with that how
+01:24:33.679 do you give advice to other folks about
+01:24:35.199 having to deal with it look i think it
+01:24:37.120 you know the the point of a company is
+01:24:39.440 to produce useful products and services
+01:24:42.639 for your fellow human beings it is not
+01:24:44.719 uh you know some political gathering
+01:24:46.480 place or
+01:24:47.679 a thing where if that's the point of a
+01:24:49.520 company like it's i'd say like it's you
+01:24:51.440 know politics and other stuff should
+01:24:58.639 let's not lose sight of why companies
+01:25:00.000 should exist
+01:25:01.440 um
+01:25:01.760 [Music]
+01:25:02.880 so i i i i gotta i gotta
+01:25:05.600 i'm i'm actually late for yeah i
+01:25:08.159 apologize i'm gonna work on the rocket
+01:25:09.440 guys uh yeah
+01:25:11.520 um
+01:25:12.400 we're gonna go ahead and let you uh get
+01:25:13.679 to mars and uh i'll see you
+01:25:16.000 soon
+01:25:22.900 [Music]
+01:25:31.920 and they've just gone crazy
+01:25:38.940 [Music]
+01:26:06.239 we need to get mercies
+01:26:10.980 [Music]

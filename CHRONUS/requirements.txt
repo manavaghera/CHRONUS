@@ -1,0 +1,32 @@
+# =============================================================
+# CHRONUS - Complete Dependencies
+# =============================================================
+
+# ---- Core Vector DB & Embeddings ----
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# ---- API Server ----
+fastapi>=0.100.0
+uvicorn>=0.23.0
+pydantic>=2.0.0
+
+# ---- HTTP Client ----
+requests>=2.31.0
+
+# ---- Data Processing ----
+pandas>=2.0.0
+
+# ---- NLP & Text Processing ----
+spacy>=3.6.0
+tqdm>=4.65.0
+
+# ---- Utilities ----
+python-dotenv>=1.0.0
+
+# =============================================================
+# Phase 2 - Voice (CUDA 12.1)
+# =============================================================
+TTS>=0.22.0
+torch>=2.0.0
+# To reinstall torch with CUDA: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121

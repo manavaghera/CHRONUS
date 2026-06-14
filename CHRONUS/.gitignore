@@ -1,0 +1,11 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+chroma_db/
+qdrant_storage/
+.env
+*.log
+node_modules/
+.DS_Store
+Thumbs.db

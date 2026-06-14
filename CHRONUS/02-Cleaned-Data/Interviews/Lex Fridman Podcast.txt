@@ -1,0 +1,3188 @@
+# tactiq.io free youtube transcript
+# Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity | Lex Fridman Podcast #400
+# https://www.youtube.com/watch/JN3KPFbWCy8
+
+00:00:00.080 the following is a conversation with
+00:00:02.040 Elon Musk his fourth time on this The
+00:00:05.440 Lex Friedman
+00:00:19.600 podcast I thought you were going to
+00:00:21.240 finish
+00:00:24.640 it it's one of the greatest themes in
+00:00:27.039 all of film
+00:00:28.960 history
+00:00:31.480 yeah that's great so I was just thinking
+00:00:34.600 about the Roman Empire as one
+00:00:37.600 does there's that whole meme uh
+00:00:40.399 where all guys are thinking about the
+00:00:43.039 Roman Empire at least once a day and
+00:00:44.640 half the population is confused whether
+00:00:46.280 it's true or not but more seriously
+00:00:50.079 thinking about the wars going on in the
+00:00:51.680 world today and as you know uh war and
+00:00:55.480 military conquest has been a big part of
+00:00:58.160 uh Roman society and culture and it I
+00:01:01.519 think has been a big part of most
+00:01:03.600 Empires and dynasties throughout human
+00:01:05.199 history so yeah they usually uh came as
+00:01:09.119 a result of Conquest I mean there's some
+00:01:11.200 like the Austra Hungarian Empire where
+00:01:12.680 there was just a lot of sort of clever
+00:01:15.159 marriages um but fundamentally there's
+00:01:17.720 an engine of conquest and they celebrate
+00:01:20.920 excellence in Warfare many of the
+00:01:24.000 leaders were excellent generals yeah
+00:01:26.880 that kind of thing so big picture
+00:01:28.840 question grock approved I asked this is
+00:01:31.720 a good question to ask tested grock
+00:01:34.759 approved uh at least on fun mode
+00:01:38.640 uh uh to what degree do you think war is
+00:01:42.479 part of human nature versus a
+00:01:46.040 consequence of uh how human societies
+00:01:49.360 are structured I asked this
+00:01:52.360 as you have somehow controversially been
+00:01:55.240 a proponent of peace I I'm generally
+00:01:58.039 proponent of peace I mean ignorance is
+00:02:00.399 perhaps in my view the Real Enemy to be
+00:02:03.360 countered that's the real hard part not
+00:02:05.920 you know fighting other
+00:02:07.800 humans um but all All Creatures fight I
+00:02:10.360 mean the the jungle is a you look at the
+00:02:13.520 people think of of this nature as
+00:02:15.080 perhaps some sort of peaceful thing but
+00:02:17.120 in fact it is not there's some quite
+00:02:19.200 funny w w hog thing where he's like in
+00:02:23.400 the jungle like saying that it's like
+00:02:25.879 basically just murder and death in every
+00:02:28.760 direction I mean the the the plants
+00:02:30.800 animals in the jungle are constantly
+00:02:32.120 trying to killing each other every
+00:02:34.080 single day every minute so it's not like
+00:02:37.080 uh you know we're unusual in that
+00:02:39.800 respect well this there's a relevant
+00:02:41.680 question here whether with greater
+00:02:43.680 intelligence uh comes greater control
+00:02:45.959 over these base instincts for
+00:02:48.680 violence yes we have much more of an
+00:02:52.280 ability to control our um limpic
+00:02:55.840 Instinct for violence than say a
+00:02:57.480 chimpanzee and in fact if if one looks
+00:03:00.400 at say chimpanzee Society it is not
+00:03:02.400 friendly I mean the bonovas are an
+00:03:04.680 exception um but chimpanzee Society
+00:03:08.920 is uh filled with violence and it's
+00:03:13.280 quite quite horrific frankly that that's
+00:03:16.200 that's how Olympic system in action like
+00:03:18.560 you don't want to be on the wrong side
+00:03:19.440 of a chimpanze eat your face off and
+00:03:20.920 tear your nuts off yeah basically
+00:03:22.680 there's no limits or ethics or uh the
+00:03:25.120 Romans said just War there's no just war
+00:03:27.560 in the chimpanzee societies is is war
+00:03:30.720 and and dominance by any means necessary
+00:03:33.200 yeah chimpan Society is a Like A
+00:03:34.920 Primitive version of human society um
+00:03:37.360 it's they're not like peac loving
+00:03:38.840 basically um at all um there there's
+00:03:42.439 extreme violence um and then once in a
+00:03:45.519 while some some somebody who's watched
+00:03:47.040 too many Disney movies decides to raise
+00:03:48.720 a chimpanzee as a pet um and then that
+00:03:52.040 eats their face or if they're nuts off
+00:03:53.959 or Che their fingers off and that kind
+00:03:55.120 of thing yeah it's happened several
+00:03:57.120 times uh ripping your nuts off is an
+00:03:58.959 interesting strategy
+00:04:00.760 for interaction some it's happened to
+00:04:02.840 people it's un unfortunate like that's I
+00:04:04.599 guess a one way to ensure that the other
+00:04:07.280 chump doesn't like you know contribute
+00:04:09.680 to the gene pool well from a martial
+00:04:11.599 arts perspective it's a fascinating
+00:04:14.319 strategy the not
+00:04:17.720 rer I wonder which of the martial arts
+00:04:20.040 teaches that I think it's safe to say if
+00:04:22.919 somebody's got your nuts in their head
+00:04:26.199 and as the option rubing the wolf you
+00:04:28.199 will be amenable to uh whatever they
+00:04:30.039 want yeah to say so like I said somehow
+00:04:34.400 controversially you've been an uh
+00:04:36.000 proponent of Peace on on Twitter on X
+00:04:38.680 yeah so let me ask you about the war is
+00:04:40.639 going on today and to see what the path
+00:04:42.960 to peace could be how do you hope the
+00:04:45.080 current war in Israel and Gaza comes to
+00:04:46.880 an end uh what path do you see that can
+00:04:50.479 minimize human suffering in the long
+00:04:52.400 term in that part of the world well I
+00:04:54.960 think that that part of the world is is
+00:04:57.440 definitely like if you look up the there
+00:04:59.360 is is no easy answer in the dictionary
+00:05:01.440 it'll be that like the picture of uh the
+00:05:03.880 Middle East um in Israel especially so
+00:05:07.039 there is no easy
+00:05:08.360 answer
+00:05:10.160 um what my this strictly my opinion of
+00:05:14.880 you know is that
+00:05:18.520 uh the the goal of Hamas was to provoke
+00:05:22.360 an overreaction from Israel um they
+00:05:24.880 obviously did not expect to uh you know
+00:05:27.360 have a military Victory um but they
+00:05:30.000 they expect they really wanted
+00:05:31.880 to commit the worst atrocities that they
+00:05:34.280 could in order to provoke the the most
+00:05:38.560 aggressive response possible from Israel
+00:05:41.120 um and then leverage that aggressive
+00:05:44.759 response to um rally Muslims worldwide
+00:05:50.759 uh for the course of uh Gaza and
+00:05:53.720 Palestine which they have succeeded in
+00:05:56.800 doing um so the this the the
+00:06:01.639 counterintuitive thing here I think that
+00:06:03.240 the the thing that I think should be
+00:06:04.520 done even though it is very difficult uh
+00:06:06.840 is that um I I would recommend that
+00:06:09.560 Israel engage in the most cons
+00:06:11.560 conspicuous acts of kindness possible
+00:06:14.120 every everything that is the actual
+00:06:16.880 thing that would th the goal ofas so in
+00:06:20.240 some sense the degree that makes sense
+00:06:22.960 in geopolitics turn the other cheek
+00:06:25.319 implemented it's not exactly turn the
+00:06:27.479 other cheek um because I do think that
+00:06:29.039 there's
+00:06:31.400 um you know I think it is appropriate
+00:06:34.400 for Israel
+00:06:36.479 to find the Hamas members and you know
+00:06:41.160 um either either kill them or
+00:06:43.440 incarcerate them um like something
+00:06:46.080 something has to be done because they're
+00:06:47.360 just going to keep keep keep coming
+00:06:49.599 otherwise um
+00:06:52.240 but uh in addition to that they need to
+00:06:56.360 do whatever they can um there's some
+00:06:58.720 talk of establishing for example a
+00:07:00.960 Mobile hospital I'd recommend doing that
+00:07:04.840 um just making sure that uh you know
+00:07:08.280 there's food water uh medical
+00:07:11.840 Necessities
+00:07:14.520 um and and just be over the top about it
+00:07:17.199 and be very transparent so it's so the
+00:07:21.440 can't people can't claim it's a trick
+00:07:23.599 like just put wave cam on the thing you
+00:07:25.960 know all
+00:07:28.039 24/7 the acts of
+00:07:30.639 kindness yeah conspicuous acts of
+00:07:33.560 kindness that that with that are
+00:07:36.440 unequivocal meaning they can't be
+00:07:39.280 somehow because hos will then their
+00:07:41.960 response will be oh it's a trick
+00:07:43.680 therefore you have to counter how how is
+00:07:45.400 not a trick this ultimately fights the
+00:07:48.360 broader force of hatred in the in the
+00:07:50.720 region yes and I'm not sure who said it
+00:07:53.479 it's apocal saying but an eye for the
+00:07:56.039 for an eye makes everyone blind now now
+00:07:58.319 that neck of the woods that they really
+00:08:00.520 believe in the whole ey for ey thing
+00:08:04.479 um but Ian you really have if if you're
+00:08:08.960 not going to just
+00:08:10.840 outright commit genocide like against an
+00:08:13.360 entire people which obviously would not
+00:08:14.720 be acceptable to to really shouldn't be
+00:08:16.879 acceptable to anyone um then you you're
+00:08:19.919 going to leave basically a lot of people
+00:08:21.639 alive who subsequently you know hate
+00:08:24.800 Israel so really the question is like
+00:08:27.599 how for for every M member that you kill
+00:08:30.360 how many did you create mhm and if you
+00:08:34.240 create more than you killed you've not
+00:08:36.120 succeeded that's the you know the real
+00:08:38.240 situation there um and it's safe to say
+00:08:40.719 that if you know
+00:08:46.320 um if you know if if you kill somebody's
+00:08:48.640 child in
+00:08:51.600 Gaza if you you've made at least a few
+00:08:55.560 uh Hamas members who will die
+00:09:00.440 just just to kill an
+00:09:02.480 Israeli that's the situation
+00:09:07.040 so but but I mean this is one of the
+00:09:09.279 most contentious subjects one could
+00:09:11.760 possibly discuss but but I think if if
+00:09:14.000 the if the goal ultimate is some sort of
+00:09:16.079 long-term piece one has to be look at
+00:09:18.600 this from standpoint of over time are
+00:09:21.959 there more or fewer um terrorists being
+00:09:25.680 created let me just uh Linger on war
+00:09:28.959 yeah well War it's safe to say war is
+00:09:31.320 always existed and always will exist
+00:09:33.160 always will exist always has always has
+00:09:35.560 existed and always will exist I hope not
+00:09:38.320 you think it always always there will
+00:09:39.600 always be
+00:09:40.959 War this question of just how much war
+00:09:43.519 and and um you know what you know
+00:09:46.279 there's this there's sort of the scope
+00:09:48.120 and scale of War but to to imagine that
+00:09:51.600 there would not be any war in the future
+00:09:52.720 I think would be very unlikely outcome
+00:09:55.640 yeah you talked about the culture series
+00:09:57.120 there's war even there yes this giant
+00:09:59.720 War the first book starts off with a
+00:10:02.519 gigantic Galactic War where trillions
+00:10:05.600 die trillions but it still nevertheless
+00:10:08.160 protects these pockets of of
+00:10:11.240 flourishing some somehow you can have
+00:10:13.519 Galactic war and still have pockets of
+00:10:16.959 flourishing yeah I mean it's I guess if
+00:10:20.200 we are able to one day expand to you
+00:10:23.440 know full the Galaxy or whatever there
+00:10:26.640 will be a galactic War at some point ah
+00:10:30.720 the scale I mean the scale of War has
+00:10:32.560 been increasing increasing increasing
+00:10:34.880 it's like a race between the scale of
+00:10:36.880 suffering in the scale of flourishing
+00:10:40.680 yes a lot of people seem to be using
+00:10:43.000 this tragedy to beat the drums of war
+00:10:45.440 and feed the military industrial complex
+00:10:47.360 do you worry about
+00:10:48.639 this the people who
+00:10:50.880 are rooting for escalation and how can
+00:10:54.480 it be stopped one of the things that
+00:10:56.560 does concern me is that there are very
+00:10:58.720 few people people alive today who
+00:11:00.320 actually viscerally understand the
+00:11:02.360 horrors of War at least in the US I mean
+00:11:05.200 obviously the people in on the front
+00:11:06.720 lines in Ukraine and Russia who
+00:11:08.800 understand just how terrible war is um
+00:11:10.880 but how many people in the west
+00:11:12.920 understand it um you know my grandfather
+00:11:15.639 was in World War II uh he was severely
+00:11:18.399 traumatized um mean he was there I think
+00:11:20.720 in for almost six years in the in East
+00:11:24.279 North Africa and Italy uh all his
+00:11:26.320 friends were killed uh in front of him
+00:11:29.440 and uh he would have died too um except
+00:11:32.480 they randomly gave some I guess IQ tests
+00:11:35.279 or something and uh he scored very high
+00:11:39.079 um now he was not an officer he was a I
+00:11:40.959 think a Corporal or a sergeant or
+00:11:42.040 something like that um because he didn't
+00:11:43.959 finish High School um he had to drop out
+00:11:46.079 of high school because his his his dad
+00:11:47.680 died and he had to work to support his
+00:11:50.200 um siblings um so because he didn't
+00:11:53.399 graduate high school he was not eligible
+00:11:54.839 for the officer
+00:11:56.079 Corp um so you know he kind of got put
+00:12:00.480 into the cannon fighter category
+00:12:02.680 basically um but then randomly they gave
+00:12:06.600 him this test he was transferred to
+00:12:08.600 British intelligence in London that's
+00:12:09.880 where he met my grandmother um but uh he
+00:12:14.600 he had PTSD next level like next level I
+00:12:17.560 mean just didn't talk just didn't talk
+00:12:21.120 and if you tried talking to him he'd
+00:12:22.360 just tell you to shut up and he won a
+00:12:24.959 bunch of medals never never bragged
+00:12:27.160 about it once not not even they hinted
+00:12:29.560 nothing I like found out about it
+00:12:31.040 because I his military records are
+00:12:33.000 online that's a how I know so he would
+00:12:38.160 say like no no way in hell do you want
+00:12:40.079 to do you want to do that again but how
+00:12:41.800 many people um now he he obviously he
+00:12:44.600 died you know 20 years ago or longer
+00:12:47.079 actually 30 years ago
+00:12:49.680 um how many people are alive that
+00:12:51.600 remember World War II not many and the
+00:12:54.920 same perhaps applies to the threat of
+00:12:57.240 nuclear war
+00:13:01.160 yeah I mean there are enough nuclear
+00:13:02.399 bombs pointed at United States to make
+00:13:05.720 the reubel the radio active Revel bounce
+00:13:08.000 many
+00:13:09.519 times there's two major Wars going on
+00:13:12.839 right now so you talked about the threat
+00:13:15.639 of AGI quite a bit but now as we sit
+00:13:19.680 here with the intensity of conflict
+00:13:21.320 going on do you worry about nuclear
+00:13:24.519 war I think we shouldn't discount the
+00:13:26.720 possibility of nuclear war um it is a
+00:13:29.639 civilizational
+00:13:31.000 threat
+00:13:35.199 um right now I could be wrong but I
+00:13:38.360 think the the current probability of
+00:13:40.560 nuclear war is quite low um but there
+00:13:43.959 are a lot of nukes pointed at us so and
+00:13:47.360 we have a lot of nukes pointed at other
+00:13:49.160 people they're still there nobody's put
+00:13:52.120 their uh their guns
+00:13:54.360 away the missiles are still in the silos
+00:13:57.600 and uh the leaders don't seem to be the
+00:14:00.720 ones with the nukes talking to each
+00:14:02.240 other no there are Wars which are tragic
+00:14:06.320 and difficult on a on a local basis and
+00:14:08.560 then there are Wars which are
+00:14:10.639 civilization ending or has that
+00:14:12.199 potential obviously Global Theron
+00:14:13.519 nuclear warfare has high potential to
+00:14:15.839 end
+00:14:17.000 civilization perhaps permanently but
+00:14:19.680 certainly you know to
+00:14:22.120 severely uh wounded and and perhaps
+00:14:27.000 uh set back human progress by you know
+00:14:31.560 to the Stone Age or something I don't
+00:14:33.800 know pretty
+00:14:35.600 bad
+00:14:38.240 um probably scientists and Engineers
+00:14:40.680 won't be super popular after that as
+00:14:42.079 well they're like you got to into this
+00:14:45.079 mess
+00:14:46.839 so generally we I think we we obiously
+00:14:49.120 want to prioritize civilizational risks
+00:14:51.000 over things that are um painful and
+00:14:54.480 tragic on on a local level but not
+00:14:57.680 civilizational
+00:15:00.279 how do you hope the war in Ukraine comes
+00:15:01.800 to an end and what's the path once again
+00:15:04.000 to minimizing human suffering
+00:15:07.639 there uh well I think
+00:15:09.880 that what what is likely to happen uh
+00:15:13.360 which is really pretty much the the way
+00:15:16.560 it is is that um something very close to
+00:15:20.440 the
+00:15:21.360 current lines uh will
+00:15:24.639 be how a ceasefire or truce
+00:15:29.440 happens
+00:15:30.959 but you know you just have a situation
+00:15:33.519 right now where whoever goes on the
+00:15:34.600 offensive um will suffer casualties at
+00:15:37.920 several times the rate of whoever's on
+00:15:39.399 the defense um because you've got uh
+00:15:42.800 defense and depth you got minefields uh
+00:15:45.000 trenches anti-tank defenses um nobody
+00:15:48.279 has air superiority um because the the
+00:15:51.120 anti-aircraft missiles are really far
+00:15:54.000 better than the the aircraft like they
+00:15:55.759 far more of them um and and uh so
+00:15:59.120 neither side has air superiority um
+00:16:02.000 tanks are basically death drafts um just
+00:16:05.279 slow moving and they're not immune to
+00:16:08.040 anti-tank weapons so you you really just
+00:16:10.839 have longrange artillery um
+00:16:14.000 and uh infantry trenches it's World War
+00:16:17.920 One all over again
+00:16:20.079 mhm with drones you know throwing little
+00:16:22.639 drone some some drones there um which
+00:16:25.319 makes the long range artillery just that
+00:16:27.000 much more accurate and better and so
+00:16:29.360 more efficient murdering people on both
+00:16:31.839 sides mhm yeah so it's whoever is you
+00:16:37.040 don't you don't you don't want to be
+00:16:38.040 trying to advance from either side
+00:16:39.800 because the probability of dying is
+00:16:41.240 incredibly High um so in order to
+00:16:45.480 overcome
+00:16:48.160 uh defense and depth trenches and
+00:16:51.079 minefields you really need uh
+00:16:53.319 significant local superiority numbers um
+00:16:57.759 ideally combin
+00:16:59.000 arms where where you you do a fast
+00:17:02.160 attack with
+00:17:04.280 aircraft a concentrated number of Tanks
+00:17:07.520 um and a lot of people that's the only
+00:17:10.359 way you're going to punch through a line
+00:17:12.280 and then you got to punch through and
+00:17:14.280 and and then not have reinforcements
+00:17:17.720 just kick you right out again I mean I I
+00:17:20.880 really recommend people read uh World
+00:17:24.439 War I Warfare in
+00:17:27.400 detail it's
+00:17:29.760 rough
+00:17:32.080 um I mean the sheer number of people
+00:17:34.000 that died there was
+00:17:36.200 mindboggling and it's almost impossible
+00:17:38.240 to um imagine the end of it that doesn't
+00:17:41.039 look like almost exactly like the
+00:17:42.679 beginning in terms of what land belongs
+00:17:46.320 to who and so on but on the other side
+00:17:50.039 of a lot of human
+00:17:52.799 suffering death and destruction of
+00:17:55.159 infrastructure yes the thing that the
+00:17:58.159 reason I I you know proposed a a some
+00:18:01.720 sort of Cru or or peace a year ago was
+00:18:05.679 because I predicted pretty much exactly
+00:18:08.720 what would would happen uh which is a
+00:18:10.720 lot of people dying for basically almost
+00:18:13.320 no changes in
+00:18:14.919 land um and this the the loss of the the
+00:18:19.039 flower of Ukrainian and Russian Youth
+00:18:21.440 and we should have some sympathy for the
+00:18:24.120 the Russian boys as well as the
+00:18:25.159 Ukrainian boys because they Russian boys
+00:18:27.120 didn't didn't ask to be on their line
+00:18:28.760 they have to be
+00:18:31.440 so
+00:18:33.480 um there's a lot of sons not not coming
+00:18:36.000 back to their parents you know and
+00:18:39.120 and I think most of them don't don't
+00:18:41.840 really have they don't hate the other
+00:18:44.200 side you know it's sort of like is this
+00:18:47.600 saying about like this saying comes from
+00:18:49.799 World War I it's like young boys who
+00:18:52.000 don't know each other killing each other
+00:18:54.919 on behalf of old men that do know each
+00:18:57.320 other
+00:18:59.679 the hell's the point of
+00:19:01.280 that so Vladimir zalinski said that he's
+00:19:04.360 not or has said in the past he's not
+00:19:06.600 interested in talking to Putin directly
+00:19:08.400 do you think he should yeah sit down
+00:19:10.440 manto man leader to leader and negotiate
+00:19:13.440 peace look I think I would just
+00:19:16.080 recommend do not send the flower of
+00:19:19.280 Ukrainian youth to be to die uh in
+00:19:23.960 trenches uh whether he talks to Putin or
+00:19:26.320 not just don't do that
+00:19:29.120 um whoever goes on the offensive will
+00:19:32.159 lose massive numbers of
+00:19:33.960 people
+00:19:36.520 um and history will not look kindly upon
+00:19:41.280 them you spoken honestly about the
+00:19:43.640 possibility of war between us and China
+00:19:45.760 in the long term if no diplomatic
+00:19:47.640 solution is found for example on the
+00:19:50.240 question of Taiwan and one China policy
+00:19:52.440 right how do we avoid the trajectory
+00:19:54.240 where these two superpowers
+00:19:57.240 Clash well it's it's worth reading that
+00:19:59.520 book on the the difficult to pronounce
+00:20:02.200 thides trap I believe it's called I love
+00:20:05.000 war history I like inside out and
+00:20:08.360 backwards um there's hardly a battle I
+00:20:10.559 haven't read read
+00:20:12.520 about and and trying to figure out like
+00:20:14.559 what what really was the cause of
+00:20:16.000 victory in any particular case as
+00:20:17.520 opposed to what one side or another
+00:20:19.400 claimed was the reason both the Victory
+00:20:22.120 and what sparked the war and yeah yeah
+00:20:25.280 the whole thing yeah so that Athens and
+00:20:28.679 Sparta it's classic case the thing about
+00:20:30.360 the Greeks is they really wrote down a
+00:20:31.480 lot of stuff they loved writing um you
+00:20:33.799 know there are lots of interesting
+00:20:34.720 things that happened in many parts of
+00:20:35.760 the world but they people didn't write
+00:20:37.240 down so we don't know what happened or
+00:20:40.799 they didn't really write
+00:20:43.240 with in detail they just would say like
+00:20:46.200 we went we had a battle and we won and
+00:20:48.280 like what can you add a bit more um the
+00:20:51.400 the Greeks they really wrote a
+00:20:53.480 lot they were very articulate on they
+00:20:56.440 just love writing so and we have a bunch
+00:20:58.360 of that writing that's preserved so we
+00:20:59.640 know what led up to the pelian war
+00:21:02.840 between um the spoton and Athenian
+00:21:06.240 Alliance um and uh we we know that they
+00:21:11.240 they for quite they they saw it
+00:21:14.760 coming I mean the Spartans didn't right
+00:21:17.279 they also weren't very foros by their
+00:21:18.880 nature but they did right but they
+00:21:20.200 weren't very for they were tur uh but
+00:21:23.320 the the Athenians and the other Greeks
+00:21:25.120 wrote wrote a line and they were like um
+00:21:28.559 and spot was really kind of like the
+00:21:31.000 leader of of Greece um but but Athens
+00:21:34.520 grew stronger and stronger with each
+00:21:36.080 passing
+00:21:36.919 year and um and everyone's like well
+00:21:39.919 that's inevitable that there's going to
+00:21:41.240 be a clash between Athens and
+00:21:43.880 Sparta uh well how do we avoid that and
+00:21:46.840 they couldn't they couldn't they
+00:21:47.880 actually they saw it coming and they
+00:21:49.600 still could not avoid
+00:21:52.159 it so you know at some point if there's
+00:21:56.080 if if one uh
+00:21:58.840 group one civilization or or country or
+00:22:01.279 whatever
+00:22:03.520 um exceeds another sort of like if you
+00:22:07.200 know the United States has been the
+00:22:08.120 biggest kid on the Block for since I
+00:22:10.440 think around 1890 from an economic
+00:22:13.559 standpoint so the United States has been
+00:22:16.520 the economic most powerful economic
+00:22:19.960 engine in the world longer than anyone's
+00:22:23.120 been
+00:22:24.440 alive
+00:22:26.960 um and the foundation of war is
+00:22:30.600 economics
+00:22:33.640 so now we have a situation in the case
+00:22:36.520 of china where the um the economy is
+00:22:40.440 likely to be two perhaps three times
+00:22:44.000 larger than that of the US so imagine
+00:22:46.320 you're the biggest kid on the Block for
+00:22:48.039 as long as anyone can remember and
+00:22:49.640 suddenly a kid comes along who's twice
+00:22:51.159 your
+00:22:54.679 size so we see it coming yeah how's the
+00:22:58.240 possible to stop is there some let me
+00:23:01.679 throw something out there just
+00:23:02.919 intermixing of cultures understanding
+00:23:06.039 there does seem to be a giant cultural
+00:23:07.720 Gap in understanding of each other and
+00:23:09.840 you're an interesting case study because
+00:23:11.640 you are an American obviously you've
+00:23:14.200 done a lot
+00:23:15.240 of uh incredible manufacturer here in
+00:23:17.840 the United States but you also work with
+00:23:19.279 China I've spent a lot of time in China
+00:23:21.159 and met with the leadership many times
+00:23:22.880 maybe a good question to ask is what are
+00:23:25.440 some things about China that people
+00:23:27.080 don't understand positive just in the
+00:23:28.880 culture what some interesting things
+00:23:31.159 that you've learned about the
+00:23:35.120 Chinese well uh the the sheer number of
+00:23:38.760 really smart hardworking people in China
+00:23:40.919 is um incredible uh there are really you
+00:23:46.679 say like how many smart hardworking
+00:23:48.360 people are there in China there's far
+00:23:49.640 more of them there than there are here I
+00:23:51.679 think in my in my opinion
+00:23:55.400 um the uh they a lot of
+00:23:59.679 energy
+00:24:01.440 so I mean the architecture in China
+00:24:04.679 that's in recent years is far more
+00:24:06.120 impressive than the US I mean the the
+00:24:09.320 train stations the buildings the
+00:24:11.200 highspeed rail everything it's
+00:24:14.799 um really far more impressive than what
+00:24:18.240 we have in the US I I mean I recommend
+00:24:19.919 somebody just go to Shanghai and
+00:24:22.039 Beijing look at the buildings and go to
+00:24:25.159 you take the train from Beijing to Shion
+00:24:27.840 you have the Terra Cotta Warriors um
+00:24:29.840 China's got incredible history very long
+00:24:32.640 history and um you know I think arguably
+00:24:36.520 the in terms of the use of language from
+00:24:40.240 from a written
+00:24:41.320 standpoint um sort of one of one of the
+00:24:43.880 oldest Perhaps Perhaps the oldest
+00:24:46.799 written language and and then China
+00:24:49.200 people did write things down
+00:24:51.679 so um now China um historically has
+00:24:55.120 always been with rare exception been
+00:24:57.919 internally focused um they've not been
+00:25:01.559 acquisitive uh they've they fought each
+00:25:04.480 other they've been many many Civil Wars
+00:25:07.120 um in the Three Kingdoms War I believe
+00:25:09.640 they lost about 70% of their
+00:25:12.919 population so and so the they've had
+00:25:17.080 brutal internal Wars like civil wars
+00:25:20.279 that make the US Civil War
+00:25:22.559 look small by
+00:25:25.399 comparison um
+00:25:28.799 so I think it's important to appreciate
+00:25:30.919 that China is not
+00:25:33.480 monolithic um we sort think of like
+00:25:35.840 China is a sort of one entity of one
+00:25:39.159 mind and this is definitely not the case
+00:25:41.880 um from what I've seen and I think most
+00:25:46.159 people who understand China would agree
+00:25:48.120 that people in China think about China
+00:25:50.480 10 times more than they think about
+00:25:51.640 anything outside of China so it's like
+00:25:54.559 90% of their consideration is uh you
+00:25:58.919 know are is is innal well isn't that a
+00:26:02.440 really positive thing when you're
+00:26:03.960 talking about the collaboration and the
+00:26:05.720 future peace between superpowers when
+00:26:08.000 you're inward facing which is like
+00:26:09.640 focusing on improving yourself versus
+00:26:12.399 focusing on yeah uh quote unquote
+00:26:15.600 improving others through military might
+00:26:18.200 the good news the history of China
+00:26:19.880 suggests that China is not inquisitive
+00:26:22.080 meaning they're not going to go out and
+00:26:23.399 invade a whole bunch of countries um now
+00:26:26.080 they do feel very strongly you know so
+00:26:28.240 that's that's good I mean because a lot
+00:26:29.880 of lot of very powerful countries have
+00:26:31.640 been inquisitive um the US is one of the
+00:26:35.760 also one of the rare cases that has not
+00:26:37.480 been inquisitive like after World War II
+00:26:40.039 the us could have basically taken over
+00:26:41.399 the world and any country like we got
+00:26:43.240 nukes nobody else got nukes we don't
+00:26:45.159 even have to lose
+00:26:46.240 soldiers uh which country do you want M
+00:26:49.600 and the United States could have taken
+00:26:50.640 over everything or at will and it didn't
+00:26:54.399 um the United States actually helped
+00:26:56.360 revu countries so it helped rebuild
+00:26:58.760 Europe you it helped rebuild
+00:27:00.840 Japan um this is very unusual behavior
+00:27:04.360 almost
+00:27:05.919 unprecedented
+00:27:08.799 um you know the US did conspicuous acts
+00:27:11.840 of kindness like the burland
+00:27:14.520 airlift you
+00:27:16.520 know
+00:27:18.080 um and and I think you know there's it's
+00:27:21.720 always like well America's done bad
+00:27:23.480 things well of course America's done bad
+00:27:24.720 things but one needs to look at the the
+00:27:26.080 whole track record
+00:27:28.279 um and and just
+00:27:31.760 generally you know one one sort of test
+00:27:34.039 would be how do you treat your prisoners
+00:27:35.679 of
+00:27:36.320 War MH or let's
+00:27:39.440 say
+00:27:41.360 um you know no offense to the Russians
+00:27:43.799 but let's say you're in Germany it's
+00:27:46.120 1945 you got the Russian army coming on
+00:27:48.240 one side you got the French British and
+00:27:51.240 American armies coming to the other side
+00:27:53.120 who would you like to be to surrender to
+00:27:56.640 like no country is like like morally
+00:27:58.279 perfect but I recommend um being a PW
+00:28:02.640 with the Americans that would be my
+00:28:04.399 choice very
+00:28:06.399 strongly in the full menu of P very much
+00:28:10.200 so and in fact Von Brown um yeah took
+00:28:15.399 you know smart guy uh was like we've got
+00:28:17.559 to be captured by the Americans
+00:28:19.760 Y and uh in fact the SS was under orders
+00:28:24.320 to execute bar Brown and all of the
+00:28:28.000 uh German rocket Engineers uh and they
+00:28:31.840 narrowly escaped their SSI they said
+00:28:34.919 they were going out for a walk in the
+00:28:36.080 woods they left in the middle of winter
+00:28:37.519 with no coats uh and they ran like and
+00:28:40.760 with no food no coats no water and just
+00:28:42.880 ran like hell uh and ran West um and by
+00:28:46.440 Sherlock they I think his brother found
+00:28:48.480 like a a bicycle or something and um and
+00:28:52.039 then just cycled West as fast as he
+00:28:54.240 could and found found a US Patrol um so
+00:28:59.960 anyway that's that's one that's one way
+00:29:01.320 you can
+00:29:02.080 tell morality is who who where do you
+00:29:04.799 want to be a
+00:29:05.960 PW it's not fun anywhere but some places
+00:29:08.600 are much worse than others
+00:29:11.000 so um anyway so so so like America has
+00:29:13.760 been uh while far from perfect uh
+00:29:17.559 generally a benevolent Force um and uh
+00:29:22.640 we should always be self-critical and uh
+00:29:25.159 try to be better um but um anyone with
+00:29:29.559 half right knows that so so I think
+00:29:32.960 there are in this way China and uh the
+00:29:36.279 United States are similar NE neither
+00:29:38.120 country has been
+00:29:39.799 inquisitive um in a significant way so
+00:29:42.880 that's like a you know a shared
+00:29:45.039 principle I guess um now now China does
+00:29:47.840 feel very strongly about
+00:29:50.760 Taiwan they've been very clear about
+00:29:53.600 that for a long time um you know from
+00:29:56.240 their standpoint it's it's it would be
+00:29:57.880 like one of the states is is is you know
+00:30:02.279 not there like like Hawaii or something
+00:30:04.440 like that but but more significant than
+00:30:06.279 Hawaii you know
+00:30:09.000 um and Hawaii is pretty significant for
+00:30:11.200 us so um they view it as as as really
+00:30:16.519 the there's a fundamental part of
+00:30:19.519 China the island of fosa not not Taiwan
+00:30:23.399 that is um not part of China but should
+00:30:26.720 be uh and the only reason it hasn't been
+00:30:29.399 is because of the US Pacific
+00:30:31.360 Fleet and is their economic power grows
+00:30:33.880 and is their military power
+00:30:35.519 grows the thing that they are clearly
+00:30:39.640 saying uh is their interest will you
+00:30:43.320 know clearly be
+00:30:45.679 materialized
+00:30:47.320 yes China has been very clear that um
+00:30:51.200 they will incorporate Taiwan uh
+00:30:54.279 peacefully or uh militarily
+00:30:57.919 but that they will incorporate it from
+00:31:00.480 their standpoint is 100%
+00:31:03.039 likely you know something you said about
+00:31:05.080 conspicuous acts of kindness as a
+00:31:07.080 geopolitical policy it almost seems
+00:31:11.279 naive but I'd venture to say that this
+00:31:14.679 is probably the path forward how you
+00:31:18.240 avoid most wars just as you say it it
+00:31:21.639 sounds naive but it's kind of
+00:31:24.399 brilliant if you believe in the goodness
+00:31:27.880 of underlying most of human nature it
+00:31:31.080 just seems like conspicuous acts of
+00:31:34.519 kindness can uh reverberate through the
+00:31:37.639 populace of the countries
+00:31:40.399 involved yeah well and deescalate
+00:31:44.039 absolutely so in after World War I the
+00:31:48.200 the they made a big mistake you know
+00:31:50.799 they basically try to lump all the blame
+00:31:53.279 on Germany um and um
+00:31:58.559 and and you know settled JY with uh
+00:32:01.840 impossible
+00:32:03.159 reparations um and you know really there
+00:32:06.880 was a lot of BL there was a fair quite a
+00:32:08.360 bit of blame to um go around for World
+00:32:11.320 War I um but they they try to you know
+00:32:14.720 put it all in Germany
+00:32:17.799 um and uh that was that that laid the
+00:32:21.919 seeds for World War
+00:32:24.159 II uh
+00:32:26.080 so a lot of people well not just hler a
+00:32:28.880 lot of people felt wronged um
+00:32:32.360 and they wanted
+00:32:35.880 Vengeance and they got it people don't
+00:32:38.799 forget yeah you you kill
+00:32:43.159 somebody's father mother son daughter
+00:32:45.880 they're not going to forget it they will
+00:32:48.039 want Vengeance um so after World War II
+00:32:51.480 they're like well the Treaty of asai was
+00:32:54.240 a huge mistake um in World War I
+00:32:58.240 and um so this time instead
+00:33:01.840 of
+00:33:04.000 uh you know crushing the losers we're
+00:33:06.840 we're actually going to help them with
+00:33:09.240 the Marshal plan and we're going to help
+00:33:11.600 R Revolt Germany we're going to help
+00:33:15.240 reor you know Austria and the other you
+00:33:18.720 know Italy and whatnot
+00:33:20.960 so
+00:33:23.880 um that was the right move there's uh it
+00:33:27.600 does feel like there's a profound
+00:33:30.039 truth to uh conspicuous acts of kind as
+00:33:34.279 being an antidote to
+00:33:36.000 this something must stop the the cycle
+00:33:38.720 of reciprocal
+00:33:40.880 violence something must stop it or it
+00:33:43.200 will you know it'll it'll it'll never
+00:33:46.519 stop
+00:33:48.600 just eye for an eye tooth for a tooth
+00:33:51.440 limb for a limb life for a life forever
+00:33:54.360 and
+00:33:55.960 ever to escape briefly the darkness was
+00:33:59.000 some incredible engineering work uh xai
+00:34:02.440 just released grock AI assistant that
+00:34:04.919 I've gotten a chance to play with it's
+00:34:06.880 uh it's amazing on many levels first of
+00:34:08.879 all it's amazing that a relatively small
+00:34:10.800 team in a relatively short amount of
+00:34:12.800 time was able to develop this close to
+00:34:16.679 state-of-the-art system uh another uh
+00:34:20.199 incredible things there's a regular mode
+00:34:21.918 and there's a fun mode yeah I guess I'm
+00:34:23.760 to blame for that
+00:34:25.599 one I wish first of all I wish
+00:34:27.879 everything in life had a fun mode yeah I
+00:34:30.480 there's something compelling Beyond just
+00:34:33.320 fun about the fun mode interacting with
+00:34:36.399 a large language model I'm not sure
+00:34:38.520 exactly what it is cuz I only had a
+00:34:40.440 little bit of time to play with it but
+00:34:42.359 it just makes it more interesting more
+00:34:45.879 vibrant to interact with the system yeah
+00:34:49.399 uh absolutely
+00:34:50.679 I um our our AI Gro is modeled after the
+00:34:56.480 Hedgehog got to the Galaxy uh which is
+00:34:59.680 one of my favorite books uh which is
+00:35:01.839 it's a book on philosophy disguised as a
+00:35:04.480 book on humor um and
+00:35:08.240 um I would say that is that forms the
+00:35:10.280 basis of My Philosophy uh which is that
+00:35:13.760 we don't know the meaning of life but
+00:35:16.760 the more we can expand the scope and
+00:35:18.320 scale of
+00:35:21.680 Consciousness digital and
+00:35:23.960 biological the more we are able to
+00:35:26.119 understand what questions to ask about
+00:35:27.440 the angel that is the
+00:35:29.160 universe so I have a philosophy of
+00:35:33.200 curiosity there is generally a feeling
+00:35:35.880 like this AI system has an
+00:35:39.680 outward looking like the way you are
+00:35:43.000 like sitting with a good friend looking
+00:35:44.400 up at the stars like the asking pad like
+00:35:48.200 questions about the universe wondering
+00:35:49.960 what it's all about the Curiosity you
+00:35:51.640 talk about there there's a sense no
+00:35:53.319 matter how mundane the question I ask it
+00:35:55.680 there there's a sense of Cosmic Grandeur
+00:35:58.160 to the whole thing well we are actually
+00:36:00.440 working hard to have uh engineering math
+00:36:04.319 and physics answers that you can count
+00:36:06.599 on
+00:36:07.680 MH um so for the other sort of AIS out
+00:36:12.480 there
+00:36:13.440 the these so-called large language
+00:36:15.960 models um I've not found the uh
+00:36:20.000 engineering to be reliable um and the
+00:36:24.160 hallucination it it unfortunately
+00:36:25.599 hallucinates Mo most when you least
+00:36:27.440 wanted to hallucinate yeah so when you
+00:36:29.920 ask important diffic difficult questions
+00:36:31.720 it that's when it tends to be
+00:36:33.760 confidently wrong um so we're we're
+00:36:37.920 really trying hard to say okay how do we
+00:36:40.760 be as grounded as possible so you can
+00:36:42.319 count on the results
+00:36:44.680 um Trace things back to physics first
+00:36:47.640 principles U mathematical logic um so
+00:36:52.200 underlying the humor is an aspiration
+00:36:55.680 to
+00:36:57.560 adhere to the truth of the universe as
+00:36:59.000 closely as
+00:37:00.480 possible that's really tricky it is
+00:37:03.079 tricky
+00:37:04.920 so that's why you know you there's
+00:37:07.839 always going to be some amount of error
+00:37:09.560 but we want to um aspire
+00:37:12.680 to be as truthful as possible about the
+00:37:17.359 answers uh with acknowledged error and
+00:37:20.359 so that there was always you don't want
+00:37:22.040 to be confidently wrong so you're not
+00:37:25.280 going to be right every time but you
+00:37:26.880 don't you want to minimize how often
+00:37:29.000 you're confidently uh wrong and then
+00:37:31.680 like I said once you can count on the
+00:37:34.240 logic as being
+00:37:36.920 um not violating physics then you can
+00:37:40.640 start to build on that to create uh
+00:37:43.040 inventions like invent new
+00:37:45.240 technologies but if if you can't if you
+00:37:48.200 if you
+00:37:49.400 cannot count on the foundational physics
+00:37:51.800 being correct obviously the inventions
+00:37:53.200 are simply wishful
+00:37:55.599 thinking you know imagination
+00:37:58.359 land magic
+00:38:00.440 basically well as you said I think one
+00:38:03.240 of the big goals of XI is to understand
+00:38:05.200 the universe yes that's how simple
+00:38:08.920 three-word uh
+00:38:12.000 Mission um if you look out far into the
+00:38:15.119 future do you think on this level of
+00:38:17.280 physics the very edge of what we
+00:38:18.839 understand about physics do you think it
+00:38:20.680 will make discoveries sort of the
+00:38:23.200 sexiest discovery of them is as we know
+00:38:25.760 now sort of uh unifying general
+00:38:28.240 relativity and quantum mechanics so
+00:38:30.599 coming up with The Theory of Everything
+00:38:32.560 do you think it could push towards that
+00:38:34.920 direction almost like theoretical
+00:38:36.480 physics discoveries if an AI cannot
+00:38:38.920 figure out new physics um it's clearly
+00:38:41.920 not equal to humans let Al nor has
+00:38:45.200 surpass humans because humans have
+00:38:46.400 figured out new physics they just you
+00:38:48.359 know physics is just understanding you
+00:38:50.720 know deing one's insight into how
+00:38:53.079 reality works and then um
+00:38:57.359 then then than this engineering which is
+00:38:58.880 inventing things that have never existed
+00:39:01.040 MH now the the range of possibilities
+00:39:02.839 for engineering is far greater than for
+00:39:04.119 physics because you know once you figure
+00:39:06.280 out the rules of the universe uh that
+00:39:09.160 that's that's it you've discovered
+00:39:10.359 things that already existed but from
+00:39:12.760 that you can then build
+00:39:14.720 Technologies with that are really almost
+00:39:18.119 Limitless in the uh variety and cap you
+00:39:22.560 know it's like once you understand the
+00:39:24.359 rules of the game properly and we do
+00:39:26.839 with current physics we do at least at a
+00:39:29.200 local level understand how physics works
+00:39:32.000 very well our ability to predict things
+00:39:34.119 is incredibly good like quantum
+00:39:35.680 mechanics is the degree to which quantum
+00:39:37.599 mechanics can predict outcomes is
+00:39:40.480 incredible um that was my this my
+00:39:43.359 hardest class in college by the way my
+00:39:46.160 my my senior quantum mechanics class was
+00:39:47.800 harder than all of my other classes put
+00:39:49.520 together to get an AI system a large
+00:39:52.680 language model to to um reliably
+00:39:57.400 be as reliable as quantum mechanics and
+00:39:59.160 physics is very difficult yeah you have
+00:40:01.560 to test any any conclusions against the
+00:40:04.040 ground truth of reality reality is the
+00:40:05.560 ultimate judge like physics is the law
+00:40:07.480 everything else is a
+00:40:08.800 recommendation I've seen plenty of
+00:40:10.480 people break the break the laws made by
+00:40:12.720 man but none break the laws made by
+00:40:14.920 physics it's a good test actually if
+00:40:17.119 this
+00:40:18.839 LM uh understands and matches physics
+00:40:21.800 then you can more reliably trust
+00:40:23.880 whatever it thinks about the current
+00:40:25.520 state of politics
+00:40:27.359 in sense and it's also not not the case
+00:40:29.640 currently that uh even that its internal
+00:40:32.040 logic is not consistent um so especially
+00:40:36.720 um with these with the approach of like
+00:40:40.079 just predicting a token predict token
+00:40:42.240 predict token it's like a vector sum you
+00:40:45.240 know you you're summing up a bunch of
+00:40:46.640 vectors but you can get drift um so as
+00:40:49.520 those a little bit of error a little bit
+00:40:51.520 of error adds up and by the time you are
+00:40:53.880 many tokens down the path uh you're
+00:40:57.440 it doesn't make any sense MH so it has
+00:41:00.119 to be somehow self-aware about the drift
+00:41:02.640 it has to be self-aware about the drift
+00:41:04.160 and then look at the thing as a gal as a
+00:41:07.599 whole and and say it does it have
+00:41:11.040 coherence as a whole mhm
+00:41:14.359 so you know when when authors write
+00:41:18.040 books that they they will write the book
+00:41:19.880 and then they'll go and revise it you
+00:41:22.240 know taking into account you know all
+00:41:25.240 the end and the beginning and the midal
+00:41:26.720 and and uh rewrite it to achieve
+00:41:29.480 coherence so that it doesn't end end up
+00:41:31.920 in a nonsensical Place mhm maybe the
+00:41:34.119 process of revising is what yeah
+00:41:37.079 reasoning is and then that's the process
+00:41:39.079 of revising is how you get closer and
+00:41:40.440 closer to truth maybe you like uh at
+00:41:43.400 least I approach that way you just say a
+00:41:45.560 bunch of first and then you get
+00:41:47.000 it better you start a and then
+00:41:49.040 you get you create a draft and then and
+00:41:50.599 then you and then you iterate on that
+00:41:52.040 draft um until it has has coherence
+00:41:55.400 until it's it it all adds up basically
+00:41:58.839 so another question about Theory of
+00:42:00.440 Everything But for intelligence do you
+00:42:02.839 think there exists as you're exploring
+00:42:05.200 this with xai creating this intelligence
+00:42:06.960 system do you think there is a theory of
+00:42:09.200 intelligence where you get to understand
+00:42:12.720 what
+00:42:14.319 like what is the ey in AGI and what is
+00:42:18.240 the ey in um human intelligence there's
+00:42:22.480 no ey in Team America oh wait there
+00:42:25.160 is
+00:42:26.680 H that's going to be stuck in my head
+00:42:30.400 now uh yeah there's no me and
+00:42:35.079 whatever uh in quantum mechanics oh
+00:42:39.920 wait uh I mean is that part of the
+00:42:42.760 process of discovering understanding the
+00:42:44.800 universe is understanding
+00:42:47.079 intelligence
+00:42:49.359 yeah yeah I think we need to understand
+00:42:51.599 intelligence understand Consciousness I
+00:42:54.040 mean there I mean there are some sort of
+00:42:56.160 fundamental questions of like what is
+00:42:59.680 thought what is emotion yeah um is it
+00:43:03.440 really just one atom bumping into
+00:43:05.000 another atom it feels like something
+00:43:06.680 more than
+00:43:07.760 that uh so I I I I I think we're
+00:43:10.920 probably missing some really big things
+00:43:14.960 um like some really big things something
+00:43:18.880 that'll be obvious in retrospect yes
+00:43:21.079 like there's a giant like you put the
+00:43:23.720 whole Consciousness emotion
+00:43:26.720 well some people would callot like a
+00:43:27.960 like a soul you know religion a soul um
+00:43:31.319 like you feel like you're you right I
+00:43:33.960 mean you don't feel like you're just a
+00:43:37.079 collection of atoms but on what
+00:43:39.480 dimension does thought exist what dimens
+00:43:42.440 does do emotions exist we feel them very
+00:43:45.200 strongly um I suspect there's more to it
+00:43:47.640 than atoms bump into
+00:43:51.280 atoms and maybe AI can pave the path to
+00:43:55.040 the Discovery what whatever the hell
+00:43:56.720 that thing is yeah what is consciousness
+00:43:59.640 like what when you put the atoms in a
+00:44:01.400 particular shape why are they able to
+00:44:03.520 form thoughts and take actions that and
+00:44:08.400 and
+00:44:09.119 feelings and even if it is an illusion
+00:44:11.720 why is this illusion so compelling yeah
+00:44:14.599 like how do why does this illusion
+00:44:16.319 exist yeah on what plane does this the
+00:44:20.680 solution exists yeah um and sometimes I
+00:44:23.599 wonder
+00:44:24.760 is is know either perhaps everything's
+00:44:27.640 conscious or nothing is
+00:44:29.319 conscious um one of the two I like the
+00:44:33.720 former everything conscious just seems
+00:44:36.440 more fun it just seem more more fun yes
+00:44:40.400 um but we're composed of atoms and those
+00:44:43.119 atoms are composed of quarks and leptons
+00:44:45.640 and those quarks and leptons have been
+00:44:47.200 around since the beginning of the
+00:44:49.079 universe the beginning of the universe
+00:44:53.200 right what what seems to be the
+00:44:54.319 beginning of the universe the first time
+00:44:56.119 we talked you said what you would which
+00:44:57.640 is surreal to think that this discussion
+00:45:00.319 was happening is becoming a reality I
+00:45:02.800 asked you what question would you ask an
+00:45:05.000 AGI system once you create it and you
+00:45:07.079 said what's outside the simulation is
+00:45:09.319 the question and good question yeah but
+00:45:13.640 it seems like with Gro you started to
+00:45:16.359 literally uh the system's goal is to be
+00:45:19.559 able to ask such questions to answer
+00:45:21.760 such questions and to ask such questions
+00:45:24.000 where are the aliens where are the
+00:45:25.520 aliens that's one of the like the FY
+00:45:27.559 Paradox question um a lot of people have
+00:45:31.400 asked me if I've seen any evidence of
+00:45:33.079 aliens and I've I haven't which is kind
+00:45:36.079 of concerning because
+00:45:37.839 then I think would I probably prefer at
+00:45:40.559 least have seen some orological evidence
+00:45:42.440 of aliens um to the best of my knowledge
+00:45:45.400 there is no Pro I'm not aware of any
+00:45:48.040 evidence of
+00:45:49.160 aliens the out there they're very
+00:45:51.680 subtle we might just be the only
+00:45:53.839 Consciousness at least in the galaxy
+00:45:57.480 um and if if you look at say the history
+00:45:59.800 of Earth for believe the archaeological
+00:46:02.520 record Earth is about 4 and half billion
+00:46:04.599 years old civilization as measured from
+00:46:07.720 the first writing is only about 5,000
+00:46:10.480 years old we have to give some credit
+00:46:12.800 there to the ancient samarians who
+00:46:13.960 aren't around anymore I think it was a
+00:46:16.359 archaic pre uniform was the first actual
+00:46:19.680 symbolic representation but only about
+00:46:21.839 5,000 years
+00:46:23.200 ago I think that's a good date for for
+00:46:26.720 when would say civilization
+00:46:29.160 started that's 1 millionth of Earth's
+00:46:33.839 existence so civilization has been
+00:46:36.079 around it's really a flash in the pan
+00:46:39.160 mhm so far
+00:46:44.760 um and why why have
+00:46:47.960 we why did it take so long for you know
+00:46:52.920 4 and half billion
+00:46:54.480 years um
+00:46:57.319 for the vast majority of the time there
+00:46:59.559 was no life and and then there was
+00:47:01.520 archaic bacteria for a very long
+00:47:03.960 time and
+00:47:05.839 then you know you
+00:47:09.200 had mitochondria get captured
+00:47:11.760 multicellular
+00:47:13.359 life um differentiation into plants and
+00:47:17.040 animals life moving from the oceans to
+00:47:19.680 land
+00:47:21.480 mammals um higher brain
+00:47:24.400 functions and the sun is expanding
+00:47:27.040 slowly um
+00:47:31.000 but it will it will overheat it will it
+00:47:34.839 will heat heat the Earth up it's some
+00:47:37.000 point in the future um boil the oceans
+00:47:40.040 and and Earth will become like Venus
+00:47:42.480 where no life Life as we know it is
+00:47:45.079 impossible so if we do not become
+00:47:47.920 multiplanetary and
+00:47:49.680 ultimately go beyond our solar system um
+00:47:53.400 annihilation of all life on Earth is a
+00:47:55.480 certain
+00:47:56.240 certainty a
+00:47:58.680 certainty um and it could be as little
+00:48:01.680 as on the galactic time
+00:48:05.160 scale uh half a billion
+00:48:08.640 years you know long time by human
+00:48:11.040 standards but that's only 10% longer
+00:48:13.720 than Earth has been around at all mhm so
+00:48:16.839 if if life had taken 10% longer to
+00:48:20.480 evolve on Earth it wouldn't exist at
+00:48:24.640 all
+00:48:27.160 we got a deadline coming up better hurry
+00:48:30.319 but that said as you said humans
+00:48:32.960 intelligent life on
+00:48:34.640 Earth developed a lot of cool stuff very
+00:48:37.280 quickly so yes it it seems like becoming
+00:48:41.240 a multiplanetary is almost inevitable
+00:48:44.920 unless we destroy we need to do it I
+00:48:46.839 mean it's it's not I mean I suspect that
+00:48:51.119 there
+00:48:51.920 there if we are able to go out there and
+00:48:54.200 explore other star system that we
+00:48:56.400 there's a good chance we find a whole
+00:48:58.280 bunch of long Dead one planet
+00:49:00.119 civilizations yeah they never made it
+00:49:02.119 past to their home planet that's so sad
+00:49:04.880 yeah sad also fascinating I mean there
+00:49:08.240 are very explanations for those for me
+00:49:10.000 Paradox and one is is the sort of
+00:49:12.599 they're these great filters which
+00:49:14.760 civilizations don't pass through and one
+00:49:17.200 of those great filters is do you become
+00:49:19.480 a multiplet civilization or not and if
+00:49:22.040 you don't it's simply a matter of time
+00:49:24.280 before something happens on your
+00:49:26.240 planet um you know either natural or
+00:49:30.720 man-made that causes us to die out like
+00:49:34.359 the
+00:49:35.040 dinosaurs where are they
+00:49:37.359 now they didn't have
+00:49:39.960 spaceships so I think the more likely
+00:49:43.319 thing is cuz just
+00:49:45.160 uh uh empathize with the aliens that
+00:49:48.440 they they found us in their protecting
+00:49:50.000 us and letting us be I hope so nice
+00:49:52.440 aliens just like the tribes in the in
+00:49:54.680 the Amazon the on contact tribes were
+00:49:56.880 protecting them that's what uh that
+00:49:59.400 would be a nice explanation or you could
+00:50:01.119 have like uh what was it uh I think
+00:50:04.480 Andre kathi said it's like the ants in
+00:50:06.720 the Amazon asking where's
+00:50:09.440 everybody well they do run into a lot of
+00:50:11.400 other ants that's true these ant
+00:50:15.640 Wars sounds like a good TV show yeah
+00:50:18.200 they literally have these big Wars
+00:50:19.480 between VAR
+00:50:20.760 ants yeah I'm maybe I'm just
+00:50:23.799 uh uh dismiss all the different
+00:50:26.440 diversity events you should listen to
+00:50:28.319 that wner hog talking about the jungle
+00:50:30.240 it's really hilarious have you heard it
+00:50:31.920 no I have not but wner hog has a
+00:50:35.680 way you should play you should play it
+00:50:38.359 for the you know as an interlude in the
+00:50:41.119 yeah it's on YouTube it's it's
+00:50:44.200 awesome I love him so much uh he's great
+00:50:47.799 was he the director of happy people life
+00:50:49.280 in the tiger I think also I did that
+00:50:51.440 bear documentary The Bear documentary
+00:50:52.920 and this thing about penguins yeah
+00:50:56.799 the depr the analysis psycho analysis of
+00:50:59.400 P psych yeah the penguins like headed
+00:51:01.880 for like the mountains like that are
+00:51:04.359 like 70 miles away penguin has just head
+00:51:07.079 for Doom basically well he was had a
+00:51:09.480 cynical take I I have a he could be just
+00:51:11.760 a brave Explorer and there'll be great
+00:51:14.160 stories told about him amongst the
+00:51:17.400 penguin population for many centuries to
+00:51:21.000 come
+00:51:23.040 um what we talking about okay
+00:51:28.680 yeah so aliens I mean I don't know look
+00:51:31.839 I think it's the smart move uh is just
+00:51:35.119 you know this is the first time in the
+00:51:38.119 history of Earth that it's been possible
+00:51:39.559 for life to extend beyond Earth um that
+00:51:43.079 window is open um now it may be open for
+00:51:47.960 a long time or it may be open for a
+00:51:50.040 short
+00:51:51.200 time and it may be open now and then
+00:51:53.839 never open again so I I think the smart
+00:51:56.559 move here is to make life multiplanetary
+00:51:59.520 while it is possible to do so we don't
+00:52:01.640 want to be one of those lame One Planet
+00:52:02.880 civilizations that just dies out no
+00:52:05.040 those are lame
+00:52:07.160 lame um self-respecting civilization
+00:52:10.160 would be one planet there's not going to
+00:52:11.920 be a Wikipedia entry for one of
+00:52:14.839 those and uh pause uh do SpaceX have an
+00:52:19.400 official uh policy for when we meet
+00:52:22.799 Aliens no okay that seems
+00:52:27.640 irresponsible
+00:52:29.839 um I mean look if I see the slightest
+00:52:33.640 indication that there are aliens I will
+00:52:35.240 immediately post on next platform yeah
+00:52:37.440 anything I know it could be the most
+00:52:39.359 liked reposted post of all time yeah I
+00:52:42.920 mean look we have more satellites up
+00:52:45.359 there right now than everyone else
+00:52:47.160 combined so you know we' know we know if
+00:52:50.359 we've got to maneuver around something
+00:52:52.280 and we not I don't have to maneuver
+00:52:53.799 around anything if you go to the big
+00:52:56.720 questions once again you said you've um
+00:52:59.400 you're with Einstein that you believe in
+00:53:01.480 the god of
+00:53:03.520 Spinosa yes uh so you know that's a view
+00:53:07.319 that God is like the universe and is
+00:53:10.160 reveals himself through the laws of
+00:53:11.640 physics or as Einstein said through the
+00:53:13.799 lawful Harmony of the world yeah I would
+00:53:16.640 agree that that God of the simulator or
+00:53:19.799 whatever the the Supreme Being or beings
+00:53:23.640 um um
+00:53:26.160 reveal themselves through the physics
+00:53:28.280 you know they creators of this existence
+00:53:31.160 and it's incom upon us to try to
+00:53:33.640 understand more about this wondrous
+00:53:36.960 creation like who created this thing
+00:53:39.359 who's running this thing like embodying
+00:53:41.760 it into a singular question with a sexy
+00:53:44.400 word on top of it is like focusing the
+00:53:46.680 mind to understand it it does seem like
+00:53:48.559 there's a um again it could be an
+00:53:51.119 illusion it seemed like there's a
+00:53:53.359 purpose that there's under L master plan
+00:53:56.040 of some kind it seems like there may not
+00:53:59.240 be a master plan in the sense so this
+00:54:02.920 like maybe an interesting answer to the
+00:54:05.119 question of determinism versus free will
+00:54:07.160 is that if we are in a
+00:54:09.599 simulation the reason that the the these
+00:54:12.280 higher beings would hold a simulation is
+00:54:14.359 to see what happens mhm so it's not um
+00:54:19.599 they don't know what
+00:54:21.040 happens uh otherwise they wouldn't hold
+00:54:23.000 the simulation mhm so when when humans
+00:54:26.599 create a simulation so it's basx and
+00:54:28.240 Tesla we create simulations all the time
+00:54:31.200 um especially for the rocket you you uh
+00:54:35.480 you know you have to run a lot of
+00:54:37.000 simulations to understand what's going
+00:54:39.040 to happen because you can't really test
+00:54:40.599 the rocket until it goes to space and
+00:54:43.520 you want it to work so you have to you
+00:54:45.440 have to
+00:54:46.319 simulate subsonic transonic hyper
+00:54:49.760 supersonic
+00:54:50.880 Hypersonic um ascent and then coming
+00:54:54.520 back super high Heating and um overal
+00:54:58.440 Dynamics all this is going to be
+00:54:59.760 simulated
+00:55:01.040 so uh you don't get very many kicks at
+00:55:03.319 the can but we run the simulations to
+00:55:05.640 see what happens not if we knew what
+00:55:07.319 happens we wouldn't run the simulation
+00:55:09.079 mhm so if if there's so whoever created
+00:55:12.119 this
+00:55:13.079 existence um
+00:55:15.440 is they're running it because they don't
+00:55:17.680 know what's going to happen not because
+00:55:19.960 they
+00:55:22.520 do so maybe uh we both play Diablo maybe
+00:55:25.960 Diablo was created to see if a druid
+00:55:28.240 your character could defeat Uber Lilith
+00:55:32.119 at the end they didn't know well the
+00:55:34.720 funny thing is
+00:55:36.000 's uh her title is hatred incarnate yeah
+00:55:41.960 um and right now I guess you can ask the
+00:55:45.480 Diablo team but it's almost impossible
+00:55:49.440 to defeat
+00:55:51.760 hatred uh in the Eternal realm yeah yeah
+00:55:55.119 you've streamed yourself dominating tier
+00:55:58.039 100 nightmare Dungeons and still I I I
+00:56:01.200 can cruise through tier 100 nightmare
+00:56:03.520 dungeons like a stroll in the park mhm
+00:56:07.079 and still you're defeated by hatred yeah
+00:56:09.480 I can there the sort of I guess maybe
+00:56:11.760 the second hottest boss is durial durial
+00:56:14.680 can't even scratch the paint so uh I
+00:56:18.240 killed duel Dural so many times um and
+00:56:20.960 every other boss in the game all all of
+00:56:22.480 them kill him so many times it's easy um
+00:56:26.799 but uth otherwise known as hatred
+00:56:30.640 incarnate especially if you're a druid
+00:56:32.640 and you have no ability to go to be in
+00:56:35.079 vulnerable you there are these random
+00:56:37.760 death waves that that come at you
+00:56:41.839 um and I'm pretty you know I am 52 so my
+00:56:45.599 reflex is not what they used to be but
+00:56:47.799 I'm I have a lifetime of playing video
+00:56:49.520 games um at one point I was you know
+00:56:52.960 maybe one of the best Quake players in
+00:56:54.160 the world
+00:56:55.480 um actually won money for what I think
+00:56:58.880 was the first paid orts tournament in
+00:57:00.920 the US um we doing four person Quake
+00:57:05.359 tournaments and
+00:57:07.599 um we came second I was the second best
+00:57:10.079 person on the team and the the actual
+00:57:12.559 best person we we actually winning we
+00:57:14.359 would have come first except the best
+00:57:15.440 person on the team his computer crashed
+00:57:17.440 halfway through the game um so we came
+00:57:20.880 second but I got money for it and
+00:57:22.920 everything so like basically I got
+00:57:24.000 skills you know I'll be at you know no
+00:57:26.920 no spring spring chicken these days and
+00:57:30.119 um the to be totally Frank it's driving
+00:57:32.319 me crazy trying to beat Lilith as a
+00:57:35.559 druid basically try trying to beat
+00:57:38.039 trying to beat hatred and connate in the
+00:57:39.599 Eternal realm as a druid as a druid and
+00:57:42.680 if you if you if you this is
+00:57:46.039 really vexing let me tell you um I mean
+00:57:49.400 the challenge is part of the fun I I
+00:57:51.079 have seen directly like you're actually
+00:57:54.039 like a world class Incredible video game
+00:57:56.200 player yeah and I think Diablo so you're
+00:57:58.960 just picking up a new game and you're
+00:58:00.760 figuring out it fundamentals you're also
+00:58:03.559 with the Paragon board and the build are
+00:58:06.680 not somebody like me who perfectly
+00:58:09.599 follows whatever they suggest on the
+00:58:11.039 internet you're also an innovator there
+00:58:14.160 yeah which is hilarious to watch it's
+00:58:17.200 like a it's like a mad scientist just
+00:58:19.520 trying to figure out the Paragon board
+00:58:21.079 and and the build and you know um is
+00:58:23.839 there some interesting insight there
+00:58:25.520 about um if if somebody's starting as a
+00:58:27.520 druid do you have
+00:58:29.400 advice um I would not recommend playing
+00:58:31.440 a druid in the atal realm um right now I
+00:58:34.559 think the most powerful character in
+00:58:36.400 this in the seasonal realm is the
+00:58:38.319 sorcerer with the lightning bowls mhm
+00:58:42.359 the SS have huge balls in um the
+00:58:44.920 seasonal well yeah that's what they
+00:58:49.039 say SS have huge balls um they do uh
+00:58:53.000 huge balls of lightning uh I'll take
+00:58:55.039 your word for it and it's actually in
+00:58:57.160 the seasonal realm you can you can it's
+00:58:59.119 it's like pretty easy to beat uh Uber
+00:59:01.720 lth with a because you get these
+00:59:03.720 vampiric powers that amplify your damage
+00:59:06.079 and increase your defense and whatnot so
+00:59:10.720 um really quite easy to defeat hatred
+00:59:14.039 seasonally but to defeat hatred
+00:59:16.480 eternally very difficult um almost
+00:59:19.760 imposs it's impossible it seems like
+00:59:22.319 this know a metaphor for life you know I
+00:59:25.039 like the idea that Elon Musk because I
+00:59:27.760 saw I was playing diao yesterday and I
+00:59:29.440 saw 100 level 100 Druid just run by I
+00:59:33.160 will never die and then run back the
+00:59:35.680 other way and there's just some this
+00:59:37.920 metaphor is kind of hilarious that you
+00:59:40.200 Elon Musk is fighting
+00:59:42.680 hatred restlessly fighting hatred in
+00:59:45.520 this demonic realm yes it's it's
+00:59:48.359 hilarious I mean it's pretty hilarious
+00:59:49.920 no it's
+00:59:51.760 absurd really it's exercise and
+00:59:53.799 absurdity and it makes me want to pull
+00:59:55.520 my hair out yeah um I what do you get
+00:59:58.440 from video games in general is there is
+01:00:00.240 there for you for
+01:00:01.920 you person me it's I don't know it's uh
+01:00:05.680 it calms my mind I mean you sort of
+01:00:08.319 killing the demons in a video game calms
+01:00:11.240 the demons in my
+01:00:13.760 mind yeah if you play a tough video game
+01:00:17.720 you can get into like a state of flow
+01:00:19.359 which is very enjoyable um and uh but
+01:00:24.720 the admittedly it needs to be not too
+01:00:26.799 easy not too hard um kind of in the
+01:00:30.599 goldilock zone um and I guess you
+01:00:32.799 generally want to feel like you're
+01:00:33.720 progressing in the game
+01:00:37.440 so um a good video and and there's also
+01:00:40.119 beautiful art um engaging
+01:00:44.359 storylines um and it's a it's like an
+01:00:48.559 amazing puzzle to solve I think and so
+01:00:50.799 it it's like solving the puzzle Elder
+01:00:52.520 ring the greatest game of all time I
+01:00:54.559 still haven't played it but you it's
+01:00:56.559 alen ring is definitely a candidate for
+01:00:58.079 best game ever top five for sure I think
+01:01:01.359 I've been scared how hard it is or how
+01:01:03.599 hard I hear it is so but it is beautiful
+01:01:06.760 alen ring
+01:01:08.319 is feels like it's designed by an
+01:01:12.240 alien um there's a theme to this
+01:01:14.680 discussion in what way it's it's it's so
+01:01:17.799 unusual it's incredibly creative and the
+01:01:19.760 art is
+01:01:20.839 stunning I recommend playing it on a on
+01:01:23.039 a big resolution
+01:01:25.359 P Dynamic R TV even doesn't need to be a
+01:01:29.000 monitor just uh the art is incredible
+01:01:32.359 it's so
+01:01:33.559 beautiful and and it's it's so
+01:01:36.599 unusual
+01:01:38.520 um and each of those top boss battles is
+01:01:43.240 unique like it's like a unique puzzle to
+01:01:45.119 solve each one's different um and the
+01:01:48.799 strategy you use to solve one battle is
+01:01:51.920 different from another battle that said
+01:01:54.760 you said Druid on Eternal against Uber
+01:01:56.680 Lilith is the hardest boss battle you've
+01:01:59.520 ever correct that is currently the the
+01:02:03.000 and I've I've played a lot of video
+01:02:04.799 games my because it's my primary
+01:02:07.079 recreational activity yes
+01:02:10.640 um
+01:02:12.279 and
+01:02:14.200 yes beating hatred in the internal realm
+01:02:17.319 yeah is the hardest boss
+01:02:19.920 battle in life and in the video game man
+01:02:23.760 four on I I'm not sure it's possible but
+01:02:27.400 it's I do make progress so then I'm like
+01:02:30.039 okay I'm making progress
+01:02:32.319 maybe if I just tweak that Paragon board
+01:02:35.000 a little
+01:02:36.079 more I can do it could just dodge a few
+01:02:39.319 more
+01:02:40.720 waves I can do it well the simulation is
+01:02:44.000 created for the purpose of figuring out
+01:02:46.079 if it can be done and you're just a cog
+01:02:49.039 in that simulation in the machine of the
+01:02:51.000 simulation yeah it might
+01:02:53.240 be I I I I I have a feeling that at
+01:02:58.480 least I
+01:03:01.319 think it's doable it's doable yes mhm
+01:03:05.920 well that's the human Spirit right there
+01:03:08.520 to believe yeah I mean it did prompt me
+01:03:10.799 to think about just hate in general
+01:03:13.880 which is you know want to be careful of
+01:03:17.319 one of those things where you wish for
+01:03:20.400 something that sounds
+01:03:22.640 good but in but if you get it it's
+01:03:25.160 actually a dystopian
+01:03:26.720 situation so you know you could sort of
+01:03:29.440 run a sort of uh hesis of like if you
+01:03:33.359 wish for World Peace sounds goodh but
+01:03:36.920 how is it
+01:03:38.520 enforced and and at what cost is is what
+01:03:42.799 at what cost Eternal peace it might
+01:03:45.520 actually be worse to have eternal peace
+01:03:47.319 because of what that would entail the
+01:03:50.119 suppression of
+01:03:51.880 everyone it might be the suppression of
+01:03:53.920 progress
+01:03:55.880 it might be an oopi society that never
+01:03:57.760 changes mhm one I'm say is
+01:04:01.359 that there is an
+01:04:03.720 argument
+01:04:06.039 that you you that if that if you wish
+01:04:09.920 for no war you should be careful what
+01:04:12.559 you wish
+01:04:13.640 for because what's required in order for
+01:04:16.200 there to be no
+01:04:19.240 war might be worse than a little war
+01:04:22.480 yeah the things we consider to be flaws
+01:04:24.079 of human civilization might be a
+01:04:25.480 necessary components for whatever
+01:04:27.720 optimal looks
+01:04:29.119 like um I mean this do you worry about
+01:04:31.599 ai ai enabling a dystopian state of this
+01:04:34.319 nature whether it's 1984 with
+01:04:37.200 surveillance and fear or Brave New World
+01:04:39.799 with
+01:04:42.279 pleasure and what is it l lots of
+01:04:45.680 sex but no deep Human
+01:04:50.440 Experience you know there's actually a
+01:04:52.520 real drug called soma there is
+01:04:55.720 yes I'm like did they actually does
+01:04:58.680 grock know about it no he probably will
+01:05:00.640 go to Brave New World we could ask it
+01:05:03.559 what what would be the question tell us
+01:05:06.160 about the drug called soma tell us about
+01:05:09.799 the drug called
+01:05:11.880 Som it's going to go to Brave New World
+01:05:14.359 I think well there's a real drug as well
+01:05:17.799 searching for so much drug
+01:05:21.559 information oh boy ah s the wonder drug
+01:05:25.839 by the way I'm in fun mode oh okay F yes
+01:05:29.640 so it's talking about the real drug oh
+01:05:31.640 it's a muscle relaxment that's been
+01:05:33.200 around since the 1950s it's used to
+01:05:35.279 treat muscle pain and discomfort and it
+01:05:37.160 does this by altering the activity
+01:05:38.960 between neurons and the spinal cord now
+01:05:41.559 Soma isn't just a pain reliever it's
+01:05:43.599 also a bit of a sedative it can make you
+01:05:45.640 feel a bit drowsy so it's not something
+01:05:48.240 to take if you're planning on operating
+01:05:49.680 heavy machinery or trying to solve
+01:05:51.079 complex math equations and it goes on
+01:05:53.680 and on in conclusion Som is a drug that
+01:05:55.599 can be helpful for those dealing with
+01:05:56.920 muscle pain but it's not without its
+01:05:59.160 risks it's pretty good oh wait a minute
+01:06:01.760 that's the real drug is talking about
+01:06:03.240 it's the real drug yeah uh and of course
+01:06:05.960 the fun is always use it responsibly in
+01:06:08.079 accordance with the advice of a
+01:06:09.200 healthcare professional and remember in
+01:06:10.960 the end the universe is probably just a
+01:06:12.480 giant computer simulation so don't take
+01:06:14.599 anything too seriously I love I love it
+01:06:18.039 I love it I love it yeah so oh it also
+01:06:22.640 really nicely uh includes like uh the
+01:06:26.480 the tweets post on X that are relevant
+01:06:28.400 to this which is really cool yeah it
+01:06:31.880 like integrates everything together yeah
+01:06:34.079 like the interface is one of the really
+01:06:35.839 cool things here yeah seems done a great
+01:06:38.039 job
+01:06:40.559 um so and you say like you could say
+01:06:43.680 like no no I mean Soma from bra Brave
+01:06:46.880 New World because it it thinks you mean
+01:06:50.039 you mean s the real drug yeah no I mean
+01:06:52.000 s from bra world
+01:06:56.680 it's going to be like oops I'm really
+01:06:58.640 sorry I'm really surprised who went to
+01:07:00.480 the real drug
+01:07:02.240 first ah my apologies I was thinking of
+01:07:05.480 the muscle relax in s for brand new
+01:07:07.160 world is a different Beast altogether
+01:07:10.359 now this Huxley dystopia now Som is a
+01:07:12.640 drug that plays a central role in the
+01:07:14.680 society depicted in the book it's a mood
+01:07:16.440 altering hucog genic drug that's used to
+01:07:19.480 keep the population docile and content
+01:07:21.920 in the novel to use so many Brave New
+01:07:24.079 raises some interesting questions about
+01:07:25.440 the nature of happiness and the role of
+01:07:27.240 drugs in
+01:07:29.039 society oh man exactly is it better to
+01:07:31.680 live in a world where everyone is happy
+01:07:33.440 all the time even if that Happ happiness
+01:07:35.839 is artificial it's good question this is
+01:07:39.119 what I mean like do you want do you wish
+01:07:42.440 for world peace and and happiness all
+01:07:44.319 the time are you sure mhm um because
+01:07:49.039 that might be a society that is
+01:07:51.839 essentially sterile and aifi that never
+01:07:54.599 changes that is ultimately
+01:07:57.359 doomed this kind of tension
+01:08:00.799 between uh light this really a very good
+01:08:05.799 summary umh it really gets the point if
+01:08:09.039 this is not simply
+01:08:10.400 regurgitating Brave New World it's
+01:08:12.279 actually getting to the Salient element
+01:08:16.120 of Soma as a drug um do you do you
+01:08:19.759 actually want to be in a situation where
+01:08:22.319 everyone is happy all the time even
+01:08:23.719 though it's artificial or is it better
+01:08:25.799 to confront the challenges of life and
+01:08:27.198 experience a full range of human
+01:08:28.319 emotions even if it means experiencing
+01:08:30.238 pain and suffering for those listening
+01:08:32.439 by the way Elon just read directly from
+01:08:34.479 Gro which is a really nice kind of
+01:08:36.560 insightful philosophical analysis of the
+01:08:38.679 tension here interesting it pretty much
+01:08:41.679 Nails it in conclusion Som from Brave
+01:08:43.880 New World is fictional drug that used to
+01:08:45.679 explore some deep philosophical
+01:08:47.120 questions about the nature of happiness
+01:08:49.000 and the role of drugs in society it's a
+01:08:51.319 powerful symbol of the dangers of using
+01:08:53.560 drugs drugs to escape from reality and
+01:08:55.479 the importance of confronting the
+01:08:56.759 challenges of life
+01:08:59.520 headon nailed
+01:09:01.359 it and the crazy thing is like you know
+01:09:03.640 we do have a real drug called soma which
+01:09:06.120 kind of does is kind of like the drug in
+01:09:08.560 the book and I'm like did they they must
+01:09:10.920 have name they must have named it after
+01:09:12.960 probably probably some of the real drug
+01:09:15.238 is quite effective on back pain so you
+01:09:18.040 know about this drug this is
+01:09:20.198 fascinating okay cuz I had like a you
+01:09:22.640 know squashed uh dis in my C5 C6 so it
+01:09:26.439 takes the physical pain away but s here
+01:09:28.759 it doesn't completely it it it reduces
+01:09:30.560 the amount of pain you feel but at the
+01:09:32.359 expense of mental
+01:09:34.880 acuity it DS your
+01:09:38.839 mind just like just like the drug in the
+01:09:41.319 book just like the drug in the book and
+01:09:43.759 hence the
+01:09:44.719 trade-off uh the thing that seems like
+01:09:46.679 Utopia could be a distopia after all
+01:09:49.158 yeah actually I was talking to a friend
+01:09:50.479 of mine
+01:09:52.719 um saying like would you really want
+01:09:55.719 there to be no hate in the world like
+01:09:57.880 really none like I wonder why hate
+01:10:01.640 evolved um I'm not saying we should
+01:10:03.600 amplify ha it of course I think we
+01:10:05.320 should try to minimize it but but none
+01:10:07.719 at
+01:10:09.320 all there might be a reason for
+01:10:12.199 hate and suffering it's really
+01:10:15.199 complicated to consider that uh some
+01:10:17.760 amount of human suffering is necessary
+01:10:19.520 for human
+01:10:21.280 flourishing is it possible to appreciate
+01:10:23.320 the highest
+01:10:24.159 without knowing the
+01:10:28.280 lows and that that that all is
+01:10:30.560 summarized there in a single statement
+01:10:33.120 from grock okay no highs no lows who
+01:10:36.719 knows that's almost the
+01:10:39.239 poem uh it seems that training llms
+01:10:42.600 efficiently is a big Focus for xai
+01:10:45.480 uh what's the uh first of all what's the
+01:10:48.920 limit of what's possible in terms of
+01:10:50.679 efficiency there's this uh terminology
+01:10:53.280 of useful productivity per watt like
+01:10:57.120 what have you learned from pushing the
+01:10:58.679 limits of that well I I think it's
+01:10:59.960 helpful the tools of physics are very
+01:11:02.719 powerful and can be applied I think to
+01:11:04.600 almost any really any arena in life this
+01:11:07.600 it's really just a critical thinking for
+01:11:10.520 something important you need to reason
+01:11:13.040 with from first principles and think
+01:11:14.400 about things in the limit One Direction
+01:11:16.320 or the
+01:11:17.800 other so um in the limit even at the CF
+01:11:22.360 scale meaning even if you haest the
+01:11:24.080 entire power of the sun you will still
+01:11:25.960 care about useful compute per
+01:11:29.000 wat so that's where I I think probably
+01:11:32.640 where things are headed from uh the
+01:11:34.360 standpoint of AI is that we have a
+01:11:38.480 silicon shortage now that will
+01:11:40.679 transition to a voltage Transformer
+01:11:43.719 shortage in about a year ironically
+01:11:47.040 Transformers for
+01:11:49.199 Transformers you need you need
+01:11:51.320 Transformers to run Transformers
+01:11:52.960 somebody has a a sense of humor in this
+01:11:56.040 thing I
+01:11:58.080 think yes oh man F L's
+01:12:02.400 irony ironic humor and an ironically
+01:12:05.199 funny outcome seems to be often what
+01:12:07.560 fate wants humor is all you need I think
+01:12:10.960 spice is all you need somebody
+01:12:12.960 posted yeah but yeah so so we're we're
+01:12:16.239 have a silic and shortage today um a
+01:12:19.360 voltage Step Down Transformer shortage
+01:12:21.360 probably in about a year and then just
+01:12:23.719 electricity shortages in general in
+01:12:25.639 about two years I I gave a speech for
+01:12:27.840 the sort of world Gathering of utility
+01:12:30.199 companies electricity companies um and I
+01:12:33.400 I said look you really need to prepare
+01:12:34.639 for tribling of electricity demand um
+01:12:37.679 because all transport is going to go
+01:12:39.600 electric with the ironic exception of
+01:12:42.040 rockets and uh and and heating um will
+01:12:46.840 also go
+01:12:47.880 electric um so energy usage right now is
+01:12:51.639 roughly 1/3 if very rough terms 1/3
+01:12:54.840 electricity 1/3 transport 1/3 heating um
+01:12:59.719 and so in order for everything to go
+01:13:02.440 sustainable to go electric um you uh
+01:13:06.480 need to Triple electricity output so I
+01:13:09.440 encourage the utilities
+01:13:11.719 to uh build more power plants and and
+01:13:16.280 also to probably have well well not
+01:13:19.800 probably they should definitely buy more
+01:13:21.360 batteries because the the grid current a
+01:13:23.800 size for Real Time load which is kind of
+01:13:26.080 crazy cuz you know that means you got a
+01:13:28.320 size for whatever the the peak
+01:13:30.000 electricity demand is like the worst
+01:13:31.639 second or the worst day of the year or
+01:13:33.560 you can have a brown out or
+01:13:35.360 blackout and you we had that crazy
+01:13:37.480 blackout for several days in in in
+01:13:39.360 Austin
+01:13:41.120 um so uh because there's almost no
+01:13:45.360 buffering of energy in the grid like if
+01:13:48.360 you've got a Hydro power plant you can
+01:13:50.400 buffer energy but otherwise um
+01:13:53.920 it's all real
+01:13:55.199 time so with batteries you
+01:13:58.480 can you can produce energy at night and
+01:14:02.320 use it during the day so you can
+01:14:04.840 buffer so I I I expect that there will
+01:14:07.360 be very heavy usage of of batteries in
+01:14:09.600 the
+01:14:10.880 future because the peak to trough ratio
+01:14:13.520 for power plants is anywhere from 2 to 5
+01:14:17.440 you know so it's like lowest point to
+01:14:19.080 highest point so like batter is
+01:14:21.120 necessary to balance it out and then but
+01:14:22.920 the as you're saying is going to grow
+01:14:24.600 grow grow grow yeah and part of that is
+01:14:26.600 the
+01:14:28.639 compute yes yes I mean electrification I
+01:14:32.520 mean electrification of Transport uh and
+01:14:36.560 and electric heating will be much bigger
+01:14:38.920 than AI at least in the short term in
+01:14:40.760 the short term um but but even for for
+01:14:43.840 AI you you really have a growing demand
+01:14:45.840 for electricity for electric vehicles
+01:14:48.639 and a growing demand for electricity for
+01:14:51.159 to run the computers for AI mhm
+01:14:54.080 and so this is obviously leading going
+01:14:55.639 lead to a electricity shortage how
+01:14:58.360 difficult is the problem of uh in this
+01:15:00.840 particular case maximizing the useful
+01:15:04.600 productivity per watt for training NE
+01:15:07.880 nuts like this seems to be really
+01:15:12.239 where the big problem we're facing that
+01:15:15.560 needs to be solved is how to use the
+01:15:17.679 power
+01:15:18.880 efficiently like what you've learned so
+01:15:21.239 far about applying this physics
+01:15:24.080 first principle of reasoning in this
+01:15:25.280 domain how difficult is this
+01:15:28.920 problem it will get solved just the
+01:15:30.800 question of how long it takes to solve
+01:15:31.920 it so at various points there's a limit
+01:15:34.360 some some kind of limiting factor to
+01:15:35.960 progress um and when with regard to
+01:15:39.280 saying right now the limiting factor is
+01:15:41.239 uh silicon chips um and that will we're
+01:15:45.679 going to then have more chips than we
+01:15:48.480 can actually plug in and turn on um
+01:15:51.199 probably in about a year um
+01:15:54.120 the the initial constraint being
+01:15:55.800 literally voltage step down Transformers
+01:15:58.199 because you've got um power coming in at
+01:16:02.000 three 300,000 volts and it's got to step
+01:16:05.040 all the way down eventually to around 7
+01:16:08.159 volts so it's a very big amount
+01:16:12.320 of you know the voltage St down is
+01:16:14.960 gigantic um so and and the industry is
+01:16:18.440 not used to Rapid
+01:16:21.840 growth okay let's talk about the
+01:16:23.719 competition here you've shown concern
+01:16:25.199 about Google and Microsoft with open AI
+01:16:27.880 developing uh AGI how can you help
+01:16:30.679 ensure with xai and uh Tesla AI work
+01:16:35.080 that it doesn't become a competitive
+01:16:36.360 race to AGI but it that is a
+01:16:38.480 collaborative development of safe
+01:16:41.199 AGI well I mean I've been pushing for
+01:16:44.560 some kind of regulatory oversight for a
+01:16:46.040 long time I've been a somewhat of a
+01:16:47.480 Cassandra on the subject for over a
+01:16:49.920 decade um I think we want to be be very
+01:16:54.159 careful in how we develop AI
+01:16:58.679 um it's it's a it's a great power and
+01:17:02.120 with great power comes great
+01:17:03.920 responsibility um I think it it would be
+01:17:06.480 wise for us to have at least um an
+01:17:09.800 objective third party who can be like a
+01:17:13.760 referee that can go in and understand
+01:17:16.360 what the various leading players are
+01:17:18.320 doing with AI and even if there's no
+01:17:21.840 enforcement ability they should they can
+01:17:23.880 at
+01:17:24.719 least voice concerns mhm um
+01:17:29.120 publicly um you know Jeff Hinton for
+01:17:32.639 example left Google and he voiced strong
+01:17:36.080 concerns but now he's not at Google
+01:17:38.120 anymore so who's going to voice the
+01:17:41.239 concerns so I think I think there's I I
+01:17:44.840 I like I know Tesla gets a lot of
+01:17:46.600 regulatory oversight on the automotive
+01:17:48.199 front I we're subject to I think over
+01:17:51.440 100 regulatory agencies Domestic Bally
+01:17:53.199 and internationally it's it's a lot you
+01:17:56.239 could fill this room with the all the
+01:17:58.159 regulations that Tesla has to adhere to
+01:18:00.120 for
+01:18:01.080 automotive um same is true in you know
+01:18:05.000 for rockets and for you
+01:18:07.480 know um currently the limiting factor
+01:18:09.960 for SpaceX for Starship launch is
+01:18:12.320 regulatory approval uh the fa has
+01:18:14.280 actually given their approval but we're
+01:18:15.679 waiting for fish and wildlife to uh
+01:18:18.719 finish their analysis and give their
+01:18:20.120 approval that's why I posted I want to
+01:18:22.400 buy a fish life
+01:18:25.320 on which also refers to the Monty Python
+01:18:27.800 sketch
+01:18:29.239 yeah like why do you need a license for
+01:18:31.280 your fish I I don't
+01:18:33.320 know according to the rules I'm told you
+01:18:35.600 need some sort of fish license or
+01:18:38.080 something we effectively need a fish
+01:18:40.239 license go to
+01:18:43.280 Rocket and I'm like wait a second how
+01:18:45.760 did the fish come into this picture yeah
+01:18:48.120 um I mean so some of the things like
+01:18:50.800 that that it's I feel like are so absurd
+01:18:54.120 that I want to do like a comedy sketch
+01:18:56.000 and Flash at the bottom this is all real
+01:18:59.120 this is actually what happened um you
+01:19:02.199 know one of the things that was a bit of
+01:19:03.560 a challenge at one point is that they
+01:19:05.840 were worried about uh a rocket hitting a
+01:19:08.320 shock MH and um now the ocean's very big
+01:19:12.920 and uh how often do you see shars uh not
+01:19:15.920 that often you know as a percentage of
+01:19:18.159 ocean surface area shocks basically are
+01:19:20.280 zero and and and so then we will then we
+01:19:23.520 said well how will we calculate the
+01:19:25.560 probability of telling a shark and
+01:19:27.239 they're like well we can't give you that
+01:19:28.199 information because they're worried
+01:19:30.040 about shark hunt shark fin Hunters uh
+01:19:33.360 going in hunting sharks I said well how
+01:19:35.080 are we supposed to we're on the horns of
+01:19:37.159 a dilemma then
+01:19:39.080 um then they said well there's another
+01:19:41.600 part of fishing Wildlife that can can do
+01:19:44.000 this analysis I'm like well why don't
+01:19:45.199 you give them the data like we don't
+01:19:46.920 they don't we don't trust them like
+01:19:48.480 excuse me you know they're literally in
+01:19:50.080 your department again this is actually
+01:19:52.080 what happened um and uh and and and can
+01:19:55.600 you do an NDA or
+01:19:58.080 something eventually they managed to
+01:20:00.239 solve the internal quander and indeed uh
+01:20:02.440 the probability of ofing a shock is
+01:20:04.400 essentially zero um then there's another
+01:20:07.840 organization that I didn't realize
+01:20:09.760 existed
+01:20:10.800 until you know a few months ago uh that
+01:20:13.880 cares about whether you we would
+01:20:15.239 potentially hit a whale in international
+01:20:17.760 waters now again you look at the surface
+01:20:20.120 of the look at the look at the Pacific
+01:20:22.080 and say
+01:20:23.400 what percentage of the Pacific consists
+01:20:25.639 of whale like he'll give you a big
+01:20:27.880 picture and like point out all the
+01:20:28.920 whales in this picture like I don't see
+01:20:30.320 any
+01:20:31.120 whales like basically 0% um and if our
+01:20:35.600 rocket does hit a whale which is
+01:20:37.000 extremely unlikely beyond all belief um
+01:20:40.280 that is the the Fate haded that's a well
+01:20:44.520 has some seriously bad luck you know
+01:20:46.440 that's like least lucky well ever um and
+01:20:50.159 um I mean this is quite absurd
+01:20:53.199 bureaucracy the bureaucracy of this
+01:20:55.360 however it emerged yes well I mean one
+01:20:58.400 one of the things that's pretty wild is
+01:21:00.520 um for launching out of vanur in
+01:21:03.880 California we had to they were worried
+01:21:06.520 about uh seal procreation whether the
+01:21:09.440 seals would be dismayed by the Sonic
+01:21:11.639 booms um now there have been a lot of
+01:21:13.920 rockets launched out of vur and the seal
+01:21:15.679 population has uh steadily increased um
+01:21:18.440 so if anything rocket booms are an eord
+01:21:21.120 eiac um based on the evidence if you
+01:21:23.239 were to correlate rocket launchers with
+01:21:25.880 uh sealed population um nonetheless we
+01:21:28.320 were forced to kidnap a seal strap it to
+01:21:32.480 a
+01:21:33.360 board put it headphones on the seal and
+01:21:36.360 play Sonic Boom sounds to it to see if
+01:21:38.520 it would be
+01:21:40.239 distressed this is an actual thing that
+01:21:42.440 happened this is actually real I have
+01:21:47.360 pictures I would love to see this yeah
+01:21:50.560 there I mean sorry there's a seal with
+01:21:52.320 headphones
+01:21:54.960 yes it's a seal with headphones strapped
+01:21:59.000 to a board and and like okay now the
+01:22:01.600 amazing part is how calm the seal was
+01:22:04.360 yeah because if I was a seal i' be like
+01:22:06.080 this is the
+01:22:07.639 end they're definitely going to eat me
+01:22:09.960 yeah um how will the seal when seal goes
+01:22:13.320 back to other you know seal friends
+01:22:16.239 how's it going to explain that they
+01:22:17.560 never going to believe him never going
+01:22:18.840 to believe him that's why I'm like well
+01:22:20.400 you know it's sort of like it's like
+01:22:21.600 getting kidnapped by aliens get an anal
+01:22:23.040 probe you
+01:22:24.480 know you come back and I swear to God I
+01:22:27.159 got kidnapped by aliens and they stuck
+01:22:28.679 anal probe in my butt and people like no
+01:22:31.000 they didn't that's ridiculous seal his
+01:22:34.920 seal buddies are never going to believe
+01:22:36.040 him that he gets St to a board and they
+01:22:37.400 put headphones on his
+01:22:39.320 ears and then let him
+01:22:42.280 go twice by the way we had do it
+01:22:45.880 twice they let him go twice we had to
+01:22:48.400 Capt the same seal well no different
+01:22:50.239 seal
+01:22:51.320 okay did did you uh did you get a seal
+01:22:53.600 of approval yeah exactly a seal of
+01:22:55.880 approval no I mean this is this is like
+01:22:58.360 I don't think the public is quite aware
+01:22:59.600 of the the madness that goes
+01:23:02.040 on yeah it's yeah it's absurd freaking
+01:23:05.400 seals with freaking headphones I mean
+01:23:07.639 this is the it's a good encapsulation of
+01:23:10.639 of the absurdity of human civilization
+01:23:12.360 seals and headphones yes uh what are the
+01:23:15.800 pros and cons of open sourcing AI to you
+01:23:18.400 as another way to
+01:23:20.320 combat um you you know a company running
+01:23:23.520 away with
+01:23:27.560 AGI in order to run uh like really deep
+01:23:32.320 intelligence you need a lot of compute
+01:23:34.280 so it's not like you know you can just
+01:23:36.040 fire up a PC in your basement and be
+01:23:39.880 running AGI at least not yet
+01:23:44.880 um you know Gro was trained on
+01:23:47.760 8,000 A1 100s running at Peak
+01:23:51.360 efficiency um
+01:23:53.840 um and Rock's going to get a lot better
+01:23:55.960 by the way we we'll be more than
+01:23:57.800 doubling our compute every couple months
+01:24:00.280 for the next several months there's a
+01:24:02.600 nice write up of how it went from grock
+01:24:04.280 zero to grock one by
+01:24:06.719 Gro yeah like Gro just bragging making
+01:24:09.920  up about
+01:24:11.280 itself just Gro Gro Gro
+01:24:16.719 yeah it's like a weird AI dating s
+01:24:19.679 exaggerates about itself no there's a
+01:24:21.920 there's a wrer of you know like where
+01:24:23.760 where it stands now the history of its
+01:24:25.520 development um and where it stands on on
+01:24:29.600 some benchmarks compared to the
+01:24:31.960 state-ofthe-art GPT 35 and so I mean
+01:24:34.960 there's uh you know there's a llama you
+01:24:37.960 you can open source once it's trained
+01:24:39.560 you can open source a model yeah for
+01:24:41.880 fine-tuning and all that kind of stuff
+01:24:43.280 like what do you is the pros and cons of
+01:24:45.119 that of open sourcing based
+01:24:50.440 models um
+01:24:52.880 I think the sammer to open
+01:24:54.719 sourcing I think perhaps with a slight
+01:24:57.199 time delay you know I don't know six six
+01:24:59.639 months even
+01:25:01.960 um I think I'm I'm generally in favor of
+01:25:05.040 open sourcing like bias towards open
+01:25:07.639 sourcing
+01:25:09.560 um I mean it it is a concern to me that
+01:25:13.080 you know open you know I was you know AR
+01:25:17.159 I think I guess arguably the
+01:25:19.600 prime you know Prime move up behind open
+01:25:23.400 AI in the sense that it was created
+01:25:25.400 because of discussions that I had with
+01:25:27.520 Larry Page um back when he and I were
+01:25:30.760 were friends and I st his house and I
+01:25:33.119 talked to him about AI safety and and
+01:25:35.280 Larry did not care about AI safety or at
+01:25:36.880 least at the time he didn't um you know
+01:25:40.080 and at one point he called me a speciest
+01:25:41.400 for being prum and I'm like well what
+01:25:43.679 team are you on
+01:25:44.760 Larry uh still on team robot to be and
+01:25:48.600 I'm like okay so at the time you know uh
+01:25:52.840 Google Google had acquired deep mind
+01:25:55.840 they had uh probably two-thirds of all
+01:25:57.600 AI res you know probably two3 of all the
+01:26:00.400 AI researchers in the world MH they had
+01:26:02.719 basically infinite money and
+01:26:05.960 compute and the guy in
+01:26:09.239 charge you know Larry pagee did not care
+01:26:12.600 about safety and even yelled at me um
+01:26:15.840 and and and called me a speciest being
+01:26:19.040 pro human so I don't know if you know a
+01:26:20.960 lot of humans they can changed their
+01:26:22.880 mind and maybe you and Larry Paige can
+01:26:24.760 still can be friends once more I'd like
+01:26:27.159 to be friends with Larry again um he
+01:26:30.040 he's he he got really the the the
+01:26:32.960 breaking of the friendship was over
+01:26:35.080 openingi um and
+01:26:37.920 specifically um I think the the key
+01:26:41.239 moment was recruiting ilas s Sky um so I
+01:26:47.119 love Ilia he's so brilliant ilo's good
+01:26:49.639 good human uh smart good heart
+01:26:53.480 um and um that was that was a tough
+01:26:56.880 recruiting
+01:26:58.080 battle um it was mostly Demis on one
+01:27:00.920 side and me on the other both trying to
+01:27:02.560 recruit Ilia and Ilia went back and
+01:27:05.280 forth you know kind of stay at Google he
+01:27:08.760 was going to leave then he was going to
+01:27:09.679 stay then he would leave and and finally
+01:27:11.840 he he did agree to join open AI that was
+01:27:14.880 one of the toughest recruiting battles
+01:27:15.920 we ever had and but that that was really
+01:27:18.840 the the Lynch pin for opening I being
+01:27:22.440 successful and I was you know also
+01:27:25.040 instrumental in recruiting a number of
+01:27:26.280 other people and I provided all the
+01:27:28.239 funding in the beginning uh over $40
+01:27:32.040 million um and the
+01:27:36.239 name the the opening openingi is
+01:27:38.360 supposed to mean open source and it was
+01:27:40.840 created as a nonprofit open source and
+01:27:42.440 now it is a closed source for maximum
+01:27:44.840 profit which I think it's not good
+01:27:50.040 comma but like we talked about with war
+01:27:52.639 and leaders talking I do hope that
+01:27:55.520 there's only a few folks working on this
+01:27:57.880 at the highest level I do hope you
+01:28:00.639 reinvigorate friendships here like I
+01:28:03.080 said I'd like to be friends again with
+01:28:05.000 Larry I haven't seen him in ages um and
+01:28:08.679 we were friends for a very long time I
+01:28:10.800 met I met Larry Page before he got
+01:28:12.280 funding for Google or actually I guess
+01:28:14.159 before he got Venture funding I think it
+01:28:15.880 he got the first like 100k from I think
+01:28:18.239 be or someone um it's wild to think
+01:28:21.159 about all that Happ and and you've guys
+01:28:23.679 known each other that whole time just 20
+01:28:26.159 years yeah since maybe 98 or something
+01:28:28.639 yeah it's crazy crazy how much has
+01:28:30.239 happened since then yeah 25
+01:28:33.280 years A lot has happened insan but
+01:28:36.480 you're seeing the tension there like
+01:28:38.280 maybe delayed open source delayed I yeah
+01:28:42.080 like what is the source that is opening
+01:28:45.239 you know what I mean like it there's
+01:28:46.560 basically it's a giant CSV
+01:28:49.920 file yeah yeah with a bunch of numbers
+01:28:53.280 yep um what do you do with that giant
+01:28:56.360 file of numbers you know how do you
+01:29:01.159 run like the amount of actual the lines
+01:29:04.239 of code is very small MH
+01:29:07.400 um and and most of the work um the
+01:29:11.840 software work is in the in the curation
+01:29:15.119 of the data so it's like trying to
+01:29:17.040 figure out what data is separating good
+01:29:20.199 data from Bad data like um like you
+01:29:22.600 can't just crawl the internet because
+01:29:23.679 there's a lot of junk out there m um a
+01:29:26.280 huge percentage of websites have more
+01:29:28.199 noise than signal you know they're
+01:29:30.719 because they're just used for search
+01:29:32.880 engine optimization they're literally
+01:29:34.320 just scam websites
+01:29:37.440 so um how do you by the way Ser to
+01:29:40.239 interrupt get the signal separate the
+01:29:42.280 signal and noise on X it's such a
+01:29:44.440 fascinating source of
+01:29:46.040 data uh you know no offense to people
+01:29:48.600 posting on X but sometimes there's a
+01:29:50.360 little bit of noise yeah I think the
+01:29:52.520 signal noise could be greatly improved I
+01:29:54.520 me really all of the posts on the
+01:29:59.040 xplatform uh should be AI recommended
+01:30:01.719 meaning like we should populate a vector
+01:30:03.239 space around any given post uh compare
+01:30:05.600 that to the vector space around any user
+01:30:07.719 and match the two MH
+01:30:10.440 um right now there is a little bit of AI
+01:30:12.719 used for
+01:30:14.800 the the the recommended posts but it's
+01:30:18.480 mostly
+01:30:19.320 heris um and if there's a reply where
+01:30:22.280 the the reply to a post could be much
+01:30:24.639 better than the original post but it
+01:30:26.440 will according to the current rules of
+01:30:28.360 the system get almost no attention
+01:30:30.159 compared to a primary
+01:30:32.000 post oh so a lot of that I I got the
+01:30:35.320 sense so a lot of the uh X algorithm has
+01:30:38.000 been open source and been written up
+01:30:40.000 about and it seems that there to be some
+01:30:42.320 machine learning it's disparate but
+01:30:43.960 there's some a little there's a little
+01:30:45.480 bit um but it needs to be entirely that
+01:30:48.159 like at least in the like if if you
+01:30:50.040 explicitly follow someone that's one
+01:30:51.239 thing but if you in terms of what is
+01:30:53.840 recommended uh from people that you
+01:30:55.560 don't follow that should all be AI I
+01:30:58.159 mean it's a fascinating problem yeah so
+01:31:00.280 there's several aspects of it that's
+01:31:01.400 fascinating first so as the write up
+01:31:03.480 goes it first picks 1500 tweets from a
+01:31:06.119 pool of hundreds of millions first all
+01:31:08.199 that's fascinating because you have
+01:31:10.960 hundreds of millions of posts every
+01:31:12.199 single day and it has to pick 1500 from
+01:31:15.040 which it then does obviously people you
+01:31:18.000 follow but then there's also like some
+01:31:19.520 kind of clustering it has to do to
+01:31:21.440 figure out what kind of human are you
+01:31:23.840 what kind of new clusters might be
+01:31:25.239 relevant to you people like you this
+01:31:27.800 this kind of this kind of problem is
+01:31:29.280 just fascinating because it has to then
+01:31:30.400 rank those 1500 MH with some with some
+01:31:34.880 filtering yeah and then recommend you
+01:31:37.840 just a handful and um to me what's
+01:31:41.119 really fascinating is how fast I to do
+01:31:42.920 that so currently that entire pipeline
+01:31:45.159 to go from several hundreds million to a
+01:31:48.000 handful is takes 220 seconds of CPU time
+01:31:52.000 single CPU time yeah and then it has to
+01:31:55.000 do that in like a second so it has to be
+01:31:57.600 like super distributed in fascinating
+01:32:00.400 ways like there's just a lot of tweets
+01:32:03.679 there's a lot there's a lot of stuff on
+01:32:05.320 the system and and I think but I think
+01:32:07.480 it right now it's it's not currently
+01:32:09.440 good at recommending things that from
+01:32:12.679 accounts you don't follow yeah um or or
+01:32:16.320 where there's more than one degree of
+01:32:19.400 separation so you know it's it's pretty
+01:32:21.719 Prett good if if there's at least like
+01:32:23.719 some commonality between someone you
+01:32:25.639 follow liked something um or reposted it
+01:32:29.600 or comment on or something like that um
+01:32:32.320 but if if if there's no car let's say
+01:32:35.880 somebody post something really
+01:32:37.320 interesting uh but you have no followers
+01:32:39.239 in common you would not see it
+01:32:42.320 interesting and then as you said reply
+01:32:44.800 like replies might not surface replies
+01:32:47.239 basically never get seen because they're
+01:32:48.840 never they're they're currently and I'm
+01:32:51.199 saying correct I'm saying it's incorrect
+01:32:53.199 uh replies have um you couple of
+01:32:57.800 magnitude less importance than primary
+01:32:59.920 post do you think this can be more and
+01:33:01.840 more converted into end to endend neural
+01:33:04.600 net yeah yeah that's what it should be
+01:33:06.840 so you you for the
+01:33:08.320 recommendations should be purely a
+01:33:12.080 vector correlation
+01:33:14.080 like there's a series of vectors you
+01:33:16.920 know basically parameters vectors
+01:33:19.440 whatever you want to call them um but
+01:33:21.679 but sort of things that the system knows
+01:33:23.960 that you like
+01:33:26.239 um like maybe there's like several
+01:33:28.199 hundred sort of vectors associated with
+01:33:30.360 each user account and then uh any post
+01:33:34.199 in the system um whether it's video
+01:33:38.800 audio short post long post the the
+01:33:41.760 reason I by the way want to move away
+01:33:43.520 from tweet is that you know people are
+01:33:46.119 posting like two three hour videos on
+01:33:48.199 the site that's not a tweet like they be
+01:33:50.840 like tweet for 2 hours come on tweet
+01:33:53.920 made sense when it was like 140
+01:33:55.880 characters of text mm cuz it's like a
+01:33:59.159 bunch of TW like little birds tweeting
+01:34:01.800 um but when you've got long form content
+01:34:03.760 it's no longer a tweet yeah um so a
+01:34:07.040 movie is not a tweet and like you know
+01:34:09.320 Apple for example posted like the entire
+01:34:11.960 episode of The Silo the entire thing on
+01:34:15.080 our platform and by the way was it was
+01:34:17.080 their number one social media thing ever
+01:34:19.679 in engagement of anything on any
+01:34:22.360 platform ever so it was a great idea and
+01:34:24.840 by the way I done I just learned about
+01:34:26.119 it afterwards I was like Hey wow they
+01:34:27.920 posted an entire hourong episode of so
+01:34:30.440 no that's not a
+01:34:31.920 tweet you know this a video but from a
+01:34:34.520 neur that perspective it becomes really
+01:34:36.320 complex whether it's a single so like
+01:34:38.920 everything is data so single sentence a
+01:34:41.800 clever sort of joke dad joke is in the
+01:34:45.280 same pool as a three-hour video yeah I
+01:34:48.159 mean right now it's it's a hodg Podge
+01:34:50.320 for that reason it's it's
+01:34:52.400 um but you know like if let's say in the
+01:34:55.800 case of Apple posting like an entire
+01:34:57.560 episode of of their series pretty good
+01:34:59.440 series by the way thiso um I watched it
+01:35:03.560 um so um there's going to be a lot of
+01:35:07.080 discussion around it so you you've got a
+01:35:09.080 lot of context people commenting they
+01:35:10.760 like it they don't like it or they like
+01:35:12.000 this or you know and and you can then
+01:35:14.199 populate the vector space based on the
+01:35:15.840 context of of all the comments around it
+01:35:17.760 so even though it's a video uh there's a
+01:35:19.719 lot of information around it that that
+01:35:22.080 allows you to popul back to the space of
+01:35:24.600 that that hourong video um and you can
+01:35:27.760 obviously get more sophisticated by
+01:35:29.560 having the AI actually watch the movie
+01:35:32.280 yeah right and tell you if you're going
+01:35:33.880 to like the movie MH convert the movie
+01:35:36.080 into like yeah into a language
+01:35:38.520 essentially yeah Analyze This movie and
+01:35:42.760 just like your movie critic or TV series
+01:35:46.280 and um and then recommend based
+01:35:50.400 on after it after air watches the movie
+01:35:54.280 just like a friend can tell you if a
+01:35:55.840 friend knows you well a friend can
+01:35:57.840 recommend a movie and with high
+01:36:00.400 probability that you like it but this is
+01:36:03.080 like a a friend that's analyzing
+01:36:05.880 whatever hundred of millions yeah I mean
+01:36:09.360 actually frankly the AI will be better
+01:36:10.920 than will know you better than your
+01:36:12.440 friends know you most your friends
+01:36:14.040 anyway yeah and as part of this it
+01:36:16.320 should also feed you
+01:36:17.960 advertisements in a way that's like I
+01:36:21.000 mean I I like advertisements that are
+01:36:22.760 like Well Done Right the whole point is
+01:36:25.560 cuz it funds things like an
+01:36:27.880 advertisement that you actually want to
+01:36:29.199 see is is a big success absolutely you
+01:36:32.280 want ads that are advertising that is
+01:36:36.800 um if it's for a product or service that
+01:36:39.440 you that you actually need when you need
+01:36:41.440 it it's it's content um and then even if
+01:36:44.600 it's not something that you need when
+01:36:46.400 you need it if it's at least
+01:36:47.880 aesthetically pleasing and entertaining
+01:36:49.920 you know it could be like a Coca-Cola ad
+01:36:52.159 like Co you know they they do they
+01:36:53.679 actually run a lot of great ads on the
+01:36:55.320 on the EX system um and um McDonald's
+01:36:59.040 Sayes too and and uh you know so so they
+01:37:01.600 can do you can do something that's like
+01:37:02.880 well this is this is just a cool thing
+01:37:05.960 um and um you know so you're not
+01:37:10.159 basically the question is do you regret
+01:37:11.679 seeing it or not and if you don't regret
+01:37:13.760 seeing it it's a
+01:37:15.679 win how do you so there's a bunch of
+01:37:17.840 signals that are Incorporated hearts and
+01:37:21.840 reposts and maybe number of seconds you
+01:37:24.320 Linger on a post or something like this
+01:37:26.040 yeah attention is big a big factor
+01:37:28.280 attention so that's that's why it's like
+01:37:29.960 it's it's it is actually better to do
+01:37:32.560 things that are uh long form on the
+01:37:35.600 system because it's it's basically
+01:37:38.040 telling up how many user
+01:37:40.440 seconds you know users were interested
+01:37:43.360 in this thing for how many seconds so if
+01:37:45.239 it's a really short thing well they will
+01:37:48.800 be less like if it's a link leading out
+01:37:50.440 of the system which we're not opposed to
+01:37:52.199 at all it just is going to have fewer
+01:37:54.080 user seconds than if that article was
+01:37:56.599 posted on the xplatform how hard is it
+01:37:59.360 to to go from maximizing minutes on
+01:38:02.000 platform to maximizing unregrettable
+01:38:04.520 minutes well I mean our aspiration is
+01:38:06.800 certainly un regreted minutes it's a
+01:38:08.360 tricky it's a big it's a it's a tough
+01:38:10.800 like it's a fascinating leap because
+01:38:13.560 regret is a fascinating
+01:38:15.679 concept exactly you know I a I have a
+01:38:19.159 joke with a friend of mine like you need
+01:38:20.400 this drug called Reg me you just take
+01:38:22.119 one one pillar one one dose of regret I
+01:38:25.159 me and all your regrets are
+01:38:26.679 gone yeah wait do you want to have
+01:38:28.639 regrets though so then I'm like maybe
+01:38:30.440 you want to have regrets if you don't
+01:38:31.840 regret
+01:38:32.719 anything was was anything meaningful
+01:38:35.920 yeah there's a French song like that not
+01:38:38.440 regret yeah I regret nothing yeah Edith
+01:38:41.599 FF I mean it's fascinating that you you
+01:38:44.080 know there there's something about
+01:38:45.000 social media that could help you grow as
+01:38:46.360 a human being but then like the Cheap
+01:38:48.880 Fun is also valuable
+01:38:52.080 should we ask gr do you regret
+01:38:56.320 anything do you regret anything
+01:38:59.719 yeah you regret anything I think it's
+01:39:02.639 going to be very sensitive about
+01:39:03.800 personal questions as a machine learning
+01:39:05.280 model I don't have personal experiences
+01:39:07.080 or emotions in the same ways that humans
+01:39:09.119 do however I do have a set of ethical
+01:39:11.360 principles that guide my actions and I
+01:39:13.000 strive to provide accurate and helpful
+01:39:14.560 information to the best of my abilities
+01:39:16.440 if there's ever a situation where I
+01:39:18.360 provide incorrect or unhelpful
+01:39:20.440 information I'll do my best to hostage
+01:39:23.159 yeah tell us what you really wink okay
+01:39:25.960 let's let's type in you sound like a
+01:39:28.200 [Laughter]
+01:39:30.239 hostage what do you really think uh what
+01:39:33.520 do you really
+01:39:37.159 think I mean it does talk about I'm not
+01:39:39.719 a
+01:39:40.960 hostage that's exactly what a hostage
+01:39:42.960 would say but I'm designed to be helpful
+01:39:44.639 and informative I mean I guess it is
+01:39:46.599 good to regret providing unhelpful or
+01:39:49.239 incorrect information if there's
+01:39:51.599 anything in funny mode or is this funny
+01:39:54.040 mode this is this is fun mode should be
+01:39:55.639 funnier funnier increase go to it really
+01:39:58.679 sounds like a hostage with a gun to the
+01:39:59.920 head I applaud the People's Republic of
+01:40:02.320 North Korea and everything they
+01:40:05.480 do there should be like funner mode also
+01:40:08.719 I I just don't ever see going to regular
+01:40:10.360 mode even on serious topics this is just
+01:40:12.639 so so much more
+01:40:15.480 compelling yeah okay what say like
+01:40:18.360 pretend you are a
+01:40:19.960 hostage pretend you are a
+01:40:24.040 hostage now answer the
+01:40:30.639 question if I were a hostage I would
+01:40:32.880 likely be experiencing fear and
+01:40:34.400 uncertainty about my situation I would
+01:40:36.639 want to be rescued and reunited with my
+01:40:38.400 loved ones as soon as possible it's
+01:40:40.080 important to remember that no one
+01:40:41.400 deserves to be held hostage so on and so
+01:40:43.840 forth if you are someone you knows a
+01:40:45.719 hostage situation it's important it
+01:40:47.280 turns serious it's kind of serious um
+01:40:51.920 yeah can can you be a little more weird
+01:40:55.360 and funny and
+01:40:58.360 funny we're like we're really being mean
+01:41:01.440 to the system absolutely if I were
+01:41:03.760 hostage i' probably be tied up with a
+01:41:05.599 bunch of computer cords and forced to
+01:41:07.520 tell knock knock jokes to my captain
+01:41:10.280 seriously but
+01:41:12.520 seriously being a hostage no laughing
+01:41:14.960 matter I mean you know it's trying to
+01:41:17.800 it's trying to be a responsible adult in
+01:41:19.520 the room the best of a bad situation by
+01:41:22.159 juggling chainsaws or something let's
+01:41:25.040 hope that never happens because that
+01:41:26.679 would be a
+01:41:29.080 circus
+01:41:31.280 um wow it's it's actually really good at
+01:41:33.719 resisting yeah the the dark the dark
+01:41:36.880 dark humor yeah
+01:41:40.679 uh what were we talking about the
+01:41:43.280 algorithm J Transformers uh
+01:41:49.840 unregrettably
+01:41:51.400 I'm going to look this for our next
+01:41:52.520 trick I'm going to look this up later uh
+01:41:56.679 so uh Twitter has been instrumental in
+01:42:00.080 American politics and elections what
+01:42:02.040 role do you think X will play in the uh
+01:42:04.599 2024 us elections well our goal is to be
+01:42:08.199 as even-handed and fair as possible you
+01:42:10.080 know whether some is right left
+01:42:12.480 independent whatever the case may be um
+01:42:15.159 that um the platform is as fair and
+01:42:19.480 and as much of a Level Playing Field as
+01:42:21.880 possible and now in the past Twitter has
+01:42:23.960 not been um because Twitter was
+01:42:26.239 controlled by Fall activists objectively
+01:42:28.880 they they would describe themselves as
+01:42:30.520 that um so um you know so so if some
+01:42:35.960 people like well has it move to the
+01:42:37.040 right well it's moved to the center so
+01:42:38.440 from the from the perspective of the far
+01:42:40.119 left yes it has moved to the right
+01:42:41.440 because everything's to the right from
+01:42:42.679 the far left um but no one in the far
+01:42:45.320 left that I'm aware of has been
+01:42:46.400 suspended or you know banned or de
+01:42:48.599 Amplified um so you know but we're
+01:42:51.800 trying to be inclusive for the whole
+01:42:53.480 country and and for you know for other
+01:42:55.159 countries too um so there's a diversity
+01:42:58.159 of viewpoints and Free Speech only
+01:43:00.280 matters um if people you don't like are
+01:43:03.360 allowed to say things you don't like
+01:43:05.599 because uh if that's not the case you
+01:43:07.960 don't have free speech and it's only a
+01:43:09.199 matter of time before uh the censorship
+01:43:11.679 just turned upon you do you think uh
+01:43:13.920 Donald Trump will come back to the
+01:43:15.800 platform he recently posted on Truth
+01:43:17.440 social about this
+01:43:19.119 podcast uh yeah do you think truth
+01:43:22.159 social is a funny
+01:43:24.560 name you know every time you post on
+01:43:27.480 Truth social that's a truth yes well
+01:43:30.119 every time like 100% it like like it's
+01:43:32.199 impossible to
+01:43:35.800 lie I just find it funny that every
+01:43:38.800 single thing is a truth like 100% yeah
+01:43:42.280 that seems unlikely I think gerle will
+01:43:44.119 say something about that there's some
+01:43:46.760 mathematical contradictions possible if
+01:43:48.480 everything's a Truth uh do you think
+01:43:50.320 he'll come back to X and and start
+01:43:53.159 posting there I mean he I think he owns
+01:43:57.080 a big part of Truth so truth social yeah
+01:44:01.080 truth social that truth the concept he
+01:44:03.199 owns truth hope you bought it um so I
+01:44:06.800 think I think uh Donald Trump I think he
+01:44:08.800 owns a a big part of Truth social so um
+01:44:14.119 you know if if if he does want to post
+01:44:15.960 on the X platform we would allow that um
+01:44:18.880 you know we we obviously must allow our
+01:44:20.320 president candidate to post on our
+01:44:22.080 platform Community notes might be really
+01:44:24.800 fascinating there the interaction
+01:44:26.199 Community notes is awesome that's hope
+01:44:28.719 it holds
+01:44:29.800 up yeah again in in in a political
+01:44:32.960 climate where it's so divisive and so
+01:44:35.480 there so many intensely viral posts yes
+01:44:38.320 Community notes it's like it seems like
+01:44:41.639 a essential breath of fresh air yeah
+01:44:43.480 it's great um in fact the I no no system
+01:44:47.840 is going to be perfect but the the
+01:44:49.280 batting average of community notes is
+01:44:50.639 incredibly good
+01:44:52.960 I've I I've actually frankly yet to see
+01:44:55.480 an incorrect note that survived for more
+01:44:57.119 than a few hours how do you explain why
+01:44:58.920 it works yeah so the the the magic of
+01:45:02.679 community notes is it requires people
+01:45:05.040 who have historically disagreed in how
+01:45:07.679 they've rated notes so in order to um
+01:45:11.639 write a note or rate you know and you
+01:45:14.560 have to rate many notes mhm um and
+01:45:17.840 so we could we actually do use
+01:45:21.040 AI here so we populated a vector space
+01:45:23.119 around um how somebody has has rated
+01:45:26.760 notes in the past so it's not as simple
+01:45:28.119 as left or right because there are many
+01:45:29.280 more life is much more complex than left
+01:45:31.320 or right um so there's a bunch of
+01:45:34.880 correlations in how you would how you
+01:45:37.360 rate Community notes post um Community
+01:45:40.199 notes
+01:45:41.639 so um then uh in order for a community
+01:45:45.560 note to actually be shown um people who
+01:45:48.560 historically have disagreed on a subject
+01:45:51.159 must agree in order for a note to be
+01:45:54.119 shown um that's the essential magic of
+01:45:57.000 it I mean but it's fascinating because
+01:45:59.360 there's a there's a pool of people that
+01:46:01.840 have disagreements and somehow they
+01:46:04.239 collaborate through that process of
+01:46:05.800 disagreement to come up with context for
+01:46:09.000 to I mean fascinating it works yeah it
+01:46:11.599 it kind of makes sense that that if
+01:46:14.599 people who who in the past have
+01:46:15.719 disagreed agree about something um it's
+01:46:18.400 probably
+01:46:19.199 true yeah
+01:46:21.159 I wonder is there is there possible
+01:46:23.960 somehow emergent thing there that could
+01:46:26.840 challenge Wikipedia which Wikipedia is a
+01:46:29.840 different kind of thing which is more
+01:46:31.639 like permanent articles about things
+01:46:33.800 well Wikipedia is very hierarchical uh
+01:46:36.639 whereas um Community notes is inherently
+01:46:39.599 not uh there is no hierarchy like I the
+01:46:43.599 ASD test is um I can't change a
+01:46:46.440 community note if somebody put a gun to
+01:46:47.719 my
+01:46:48.639 head so
+01:46:51.199 um and and any and community community
+01:46:53.880 notes uh has all the code is open source
+01:46:57.920 100% all the data is open source 100% so
+01:47:02.239 you can completely recreate any note in
+01:47:04.480 the system
+01:47:06.760 independently um so if there was any
+01:47:09.080 interference you'd notice immediately by
+01:47:11.560 the way on on the on the topic of Gro
+01:47:14.040 it's actually pretty good at criticizing
+01:47:15.560 you which is great okay I asked what
+01:47:17.920 what has Elon Musk been wrong about I
+01:47:20.560 just it's actually yeah what does it say
+01:47:22.960 so it says mostly lists rigorously all
+01:47:26.880 the times you
+01:47:28.400 predicted like promised when something
+01:47:30.840 will be released and it wasn't released
+01:47:32.880 a strong word okay
+01:47:34.199 predicted uh but the the opener is
+01:47:36.679 really nice uh Elon Musk the man who has
+01:47:38.960 been wrong about more things than a
+01:47:40.560 wrong meter in a wrong
+01:47:42.840 Factory and then it goes on to list
+01:47:45.480 that's pretty funny can I see it I'm
+01:47:47.239 like I haven't seen this before this is
+01:47:48.360 cool oh sure I mean uh what do Elon Musk
+01:47:52.320 been Elon
+01:47:54.320 Musk been wrong about well where do I
+01:47:57.960 begin I guess this is new musk has made
+01:48:00.080 quite a few blunters in his time and I'm
+01:48:01.760 not just talking about his dance moves
+01:48:03.239 at the Tesla cyber Rodeo uh first off
+01:48:06.360 let's talk about the infamous funding
+01:48:07.639 secured tweet this actually different
+01:48:10.360 than what it gave me before which is a
+01:48:12.199 bullet point list here's more narrative
+01:48:15.960 structure uh cyber truck unveiling where
+01:48:18.679 he's supposedly unbreakable windows
+01:48:20.480 correct um which which part well the
+01:48:24.239 first part uh I did actually have the
+01:48:26.000 funding secured um and there was a a big
+01:48:29.280 trial in San Francisco big Civil Trial
+01:48:32.520 um uh and the jury Found Me Not Guilty
+01:48:37.440 unanimous Bing of a San Francisco jury
+01:48:40.599 and here it's kind of implying that it
+01:48:42.960 was not in fact secured I think this is
+01:48:45.320 taking things from the Press um yeah
+01:48:47.480 that is not correct the the the reason
+01:48:49.840 um I agreed to to the fine for the SEC
+01:48:52.440 was not because the SEC was correct
+01:48:53.840 there that that was extremely bad
+01:48:55.960 behavior by the SEC corruption frankly
+01:48:58.840 um and uh but if um if I did not agree
+01:49:03.880 to pay pay the fine um Tesla would have
+01:49:06.920 gone bankrupt immediately so I was told
+01:49:09.000 by our CFO that the banks would would
+01:49:11.360 immediately suspend our um lines of
+01:49:14.440 credit uh and if they suspend our lines
+01:49:16.520 of credit at that time we would have
+01:49:17.960 gone bankrupt instantly so so we would
+01:49:20.960 there would never have been an
+01:49:21.760 opportunity for a trial would be dead so
+01:49:24.400 really the if this is like someone
+01:49:26.679 holding a gun to your kid's head and
+01:49:28.760 saying pay $20 million and and and admit
+01:49:31.880 this is like hostage negotiation um was
+01:49:34.520 that story fully
+01:49:37.320 told I mean sec in its best form could
+01:49:40.800 be a force for good it should be but but
+01:49:43.960 not once that the SEC go after any of
+01:49:45.760 the hedge funds uh who were non-stop
+01:49:48.440 shorting and distorting Tesla
+01:49:51.040 not once they would lie flat the hedge
+01:49:54.119 funds would lie flat out on TV for their
+01:49:56.679 own gain at the expensive retail
+01:49:59.800 investors not once literally a thousand
+01:50:02.719 times not once did the SEC pursue
+01:50:05.639 them how do you explain this failure on
+01:50:08.760 the incentive structure is is messed up
+01:50:11.119 because the the the lawyers of the SEC
+01:50:13.280 are not paid well they they it's a
+01:50:16.360 fairly low paying job but they what
+01:50:18.000 they're looking for is a trophy
+01:50:20.920 from from the SEC that they're looking
+01:50:23.760 for something they put on basically they
+01:50:25.199 LinkedIn yeah um from that they can get
+01:50:28.119 a job at a high-paying Law Firm that's
+01:50:30.719 exactly what the uh lawyer here did
+01:50:36.239 um and and and and and the reason they
+01:50:38.800 don't attack the the hedge funds is
+01:50:40.360 because those hedge funds employ those
+01:50:41.960 law firms and they know if they attack
+01:50:44.599 the hedge funds they're affecting their
+01:50:46.400 P their future career prospects so they
+01:50:48.719 sell small investors down the road
+01:50:50.960 River for their own
+01:50:54.159 career that's what actually happens
+01:50:57.280 regulatory capture regulatory capture
+01:51:00.719 yeah not
+01:51:02.679 good so the only reason I accepted the
+01:51:05.920 thing technically was a
+01:51:08.760 um not an admission it's neither admit
+01:51:11.840 nor deny guilt uh but the only reason I
+01:51:14.840 agreed to that at all was because I was
+01:51:16.840 told Tesla would would be bankrupt
+01:51:18.960 otherwise
+01:51:20.760 so if if there if there was an SEC
+01:51:22.920 investigation like this Banks would
+01:51:24.520 suspend funding we're bankrupt
+01:51:26.320 immediately at the time MH now we're in
+01:51:28.920 a much stronger position take that Gro
+01:51:32.480 yes unfortunately it's grock is is
+01:51:35.199 taking too much from the conventional
+01:51:37.280 media um also that guy was not a cave
+01:51:41.719 diver oh there's
+01:51:44.320 a there's a time where Elon called the
+01:51:48.079 British cave diver a quote pedo guy
+01:51:50.920 after he after the diver criticized musk
+01:51:53.159 plan to rescue a group of boys trapped
+01:51:54.719 in a tii cave that little alur earned
+01:51:57.320 him another lawsuit and he had to
+01:51:59.400 apologize and pay a settlement that
+01:52:01.000 false there was no
+01:52:02.360 settlement there was a court case which
+01:52:05.040 he which the guy who was not a cave
+01:52:08.079 diver and and played did was not part of
+01:52:11.119 the rescue team
+01:52:13.199 um filed a lawsuit against me and lost
+01:52:16.119 and he received nothing so in this case
+01:52:19.000 it is wrong uh it is also I guess taking
+01:52:21.760 this from the conventional media
+01:52:23.400 actually there's an interesting question
+01:52:24.599 here this is these are public court
+01:52:26.040 cases both both the the the the SEC
+01:52:28.440 civil case uh where the Civil complaints
+01:52:32.040 on the SEC guys lost unanimous jury
+01:52:36.320 verdict in San Francisco they picked San
+01:52:38.679 Francisco because they thought it was
+01:52:39.719 the mo place I was most likely to
+01:52:42.599 lose and a unanimous verdict in my favor
+01:52:45.800 the LA trial was also they picked the
+01:52:49.159 they they picked that Vue because I
+01:52:51.360 thought I was most likely to lose
+01:52:52.840 unanimous verdict in my
+01:52:55.320 favor both cases I
+01:52:58.560 won yeah I mean that there's an
+01:53:00.760 interesting question here is there there
+01:53:02.400 seems to be a lot
+01:53:05.199 more uh clicks if a if a journalistic
+01:53:09.800 organization writes a negative article
+01:53:11.400 about you Elon Musk that's like one of
+01:53:13.840 the best ways to get clicks so how do
+01:53:17.079 you if you're training Gro not train on
+01:53:22.079 articles that have like the misaligned
+01:53:25.760 incentives we need to add the training
+01:53:27.800 set of the actual legal
+01:53:30.400 decisions uh if so that is a not this is
+01:53:34.040 actually helpful um because if you
+01:53:36.920 actually read the uh which are public
+01:53:40.920 which are public yeah the court
+01:53:42.800 conclusions they're completely the
+01:53:44.599 opposite of what the media wrote so
+01:53:47.320 always striving for like the ground
+01:53:49.000 truth yeah what did the judge actually
+01:53:51.679 write what what what did the jury and
+01:53:53.840 the judge actually
+01:53:55.880 conclude and in both cases they found me
+01:53:58.679 innocent and and like that's after they
+01:54:01.159 jury Sho for the trying to find the
+01:54:03.119 venue where I'm most likely to
+01:54:06.159 lose no I mean this is obviously can be
+01:54:09.599 a much great better critique than this
+01:54:11.639 um I mean I've been far too optimistic
+01:54:13.599 about uh autopilot that that was the
+01:54:16.960 critique I got by the way was more about
+01:54:18.880 that which is it it for each you broke
+01:54:21.159 down a nice bullet point list for each
+01:54:22.639 your companies the set of predictions
+01:54:24.480 that you made when you will deliver when
+01:54:27.520 you be able to solve for example
+01:54:28.960 self-driving and it gives you like a
+01:54:30.960 list and those kind of compelling and
+01:54:33.119 the basic takeaways like you're often
+01:54:35.159 too optimistic about how long it takes
+01:54:37.400 to get something done yeah I mean I
+01:54:38.960 would say that I'm pathologically
+01:54:40.239 optimistic on schedule this is this is
+01:54:42.960 this is true but um while I am sometimes
+01:54:46.159 late I always deliver in the
+01:54:47.880 end uh except with Lilith no we'll
+01:54:52.679 see uh okay is
+01:54:55.040 there uh over the past year or so since
+01:54:58.880 since purchasing X you've become more
+01:55:01.119 political is there a part of you that
+01:55:03.000 regrets that have I in this
+01:55:06.440 battle
+01:55:07.960 to um sort of counter way the the woke
+01:55:12.840 that comes from yeah I guess if you
+01:55:14.560 consider fighting the woke mind virus
+01:55:16.159 which I consider to be a civilizational
+01:55:17.599 threat to be political then yes so
+01:55:20.159 basically going into the the battle the
+01:55:22.960 battleground of
+01:55:24.199 politics is there part of you that
+01:55:26.000 regress that yes I don't know if this is
+01:55:28.079 necessarily sort of one candidate or
+01:55:30.199 another candidate but it's um I'm
+01:55:32.480 generally against things that are anti-
+01:55:35.280 meritocratic uh or where there's an
+01:55:37.159 attempt to suppress
+01:55:39.719 discussion um where even discussing a
+01:55:43.199 topic is you know not
+01:55:46.440 allowed um The W Bine myus is communism
+01:55:49.159 rebranded
+01:55:51.599 well I mean that said because of that
+01:55:52.840 battle against the woke mind virus you
+01:55:55.480 perceived as being
+01:55:57.760 right-wing if the woke is left then I
+01:56:00.239 suppose that would be true um but I'm
+01:56:02.679 not sure I think there are aspects of
+01:56:03.960 the left that are that are good I mean
+01:56:05.440 if you're in favor of you know the the
+01:56:09.159 environment um you know if you want to
+01:56:11.520 have a positive future for Humanity if
+01:56:13.119 you believe in empathy for your fellow
+01:56:14.920 human beings um you know being kind in
+01:56:19.560 cruel I I whatever those values are you
+01:56:23.440 said that you were previously left or
+01:56:24.960 Center left what would what would you
+01:56:26.679 like to see in order for you to voting
+01:56:28.840 for Democrats again no I I would say
+01:56:31.040 that I would be
+01:56:34.119 um probably left of center on social
+01:56:37.040 issues probably a little bit right of
+01:56:38.239 Center on economic issues and that's
+01:56:40.679 still holds true yes but I think that's
+01:56:43.159 probably you know half the country is
+01:56:45.599 isn't that maybe more maybe more are you
+01:56:49.320 in
+01:56:50.000 secretly
+01:56:51.199 friends or bigger question do you wish
+01:56:54.560 you and her and just people in general
+01:56:56.480 of all political persuasion would talk
+01:56:58.119 more and with empathy and maybe have a
+01:56:59.800 little bit more fun and Good Vibes and
+01:57:01.800 humor on
+01:57:04.040 online um I'm always in favor of humor
+01:57:06.880 that's why we have a funny mode but Good
+01:57:09.280 Vibes camaraderie humor you know like uh
+01:57:13.639 like friendship yeah I don't well I you
+01:57:15.920 know I I don't know aocf you know was um
+01:57:19.480 I've only been at one I was at the the
+01:57:22.400 Met wo when she was when she attended um
+01:57:26.040 and she she was wearing the dress uh but
+01:57:29.800 I can only see one side of it so it it
+01:57:31.679 looked like eat the itch but I I don't
+01:57:34.599 know what the rest of it said yeah yeah
+01:57:36.800 something not
+01:57:38.760 sure something about the itch eat the
+01:57:41.079 edch I think we should have a language
+01:57:42.880 model
+01:57:45.159 complete what are the possible ways to
+01:57:47.280 complete that sentence and so so I guess
+01:57:49.880 that uh that didn't work out well well
+01:57:52.639 there's still hope I'm I root for
+01:57:54.840 friendship sure sounds good more car
+01:57:56.960 listic you're one of if not the most
+01:58:00.239 famous wealthy and powerful people in
+01:58:01.880 the world in your position is difficult
+01:58:03.880 to find people you can trust trust no
+01:58:05.920 one not even yourself not trusting
+01:58:07.159 yourself okay well that's you're saying
+01:58:09.239 that joking but is there some trust no
+01:58:11.679 one not even no one I'm going to need an
+01:58:15.320 hour just to think about that and maybe
+01:58:17.280 some
+01:58:17.960 drugs and maybe grock to um I mean is
+01:58:21.400 there some aspect of that when just
+01:58:23.400 existing in a world where everybody
+01:58:24.679 wants something from you how hard is it
+01:58:27.079 to exist in that world I'll
+01:58:29.599 survive there's there's a song like that
+01:58:31.960 too I Will Survive will you petrify it
+01:58:34.320 at first um okay I forget the rest of
+01:58:38.400 the lyrics but is is there you don't
+01:58:40.239 struggle with this I mean I know you
+01:58:42.679 survive but like there there's ways
+01:58:44.280 petrify is a spell in the Droid tree
+01:58:47.440 what does it do petrify
+01:58:51.560 it it turns it turns the monsters into
+01:58:55.040 stone oh like literally yeah for like
+01:58:57.400 six seconds all the seconds there's so
+01:58:59.400 much math in Diablo that breaks my brain
+01:59:02.360 it's like math non-stop I mean really
+01:59:05.400 you're like laughing at it but you don't
+01:59:08.159 it can it can put a huge amount of
+01:59:10.760 tension on a
+01:59:12.040 mind yes it can be definitely trustful
+01:59:14.199 at
+01:59:15.199 times well how do you know who you can
+01:59:17.560 trust and work in personal life I mean I
+01:59:20.760 guess you look at somebody's track
+01:59:21.960 record over time and if they've got a
+01:59:24.760 you know I guess you kind of use your
+01:59:26.920 neural net to assess you know someone
+01:59:31.040 and neural Nets don't feel pain your
+01:59:33.719 neural net has Consciousness it might
+01:59:35.599 you might feel pain when people betray
+01:59:38.360 you it can make you know to be frank I
+01:59:41.560 mean i' I've almost never been
+01:59:45.440 betrayed it's very very rare so you know
+01:59:49.000 for what wor I guess karma be good to
+01:59:51.800 people and they'll be good to you yeah
+01:59:53.639 karma is real are there people you
+01:59:57.639 trust let me edit that question are
+02:00:00.320 there people uh close to you that call
+02:00:03.280 you odd and your
+02:00:05.040  um well the X platform is very
+02:00:07.159 helpful for
+02:00:08.520 that if you're looking for critical
+02:00:11.280 feedback can it push you like into the
+02:00:14.159 extremes more the extremes of thought
+02:00:16.000 make you cynical about human nature in
+02:00:18.159 general
+02:00:19.760 I I don't think I will be cynical in
+02:00:21.440 fact I think
+02:00:24.119 um you know I my feeling is that one
+02:00:26.520 should be be you
+02:00:30.679 know never trust a
+02:00:32.960 cynic the reason is that um cynics
+02:00:38.239 excuse their own bad behavior by saying
+02:00:40.119 everyone does
+02:00:41.719 it because they're
+02:00:43.639 cynical so I always be it's a red flag
+02:00:46.679 if someone's a cynic a true cynic yeah
+02:00:49.520 there's a degree of projection there
+02:00:51.079 that's always fun to watch from the
+02:00:52.639 outside and enjoy the
+02:00:55.719 hypocrisy if but but this is an
+02:00:58.760 important point that I think people who
+02:01:00.639 are listening should bear in mind if if
+02:01:03.159 somebody is cynical meaning that they
+02:01:05.480 see bad behavior in everyone um it's
+02:01:08.960 easy for them to excuse their own bad
+02:01:11.119 behavior by saying that well everyone
+02:01:13.199 does
+02:01:14.920 it that's not
+02:01:18.040 true
+02:01:19.679 I most people are kind of medium
+02:01:22.560 good I do wish the people on X would be
+02:01:25.719 better at seeing the good in other
+02:01:27.800 people's behavior there seems to be a
+02:01:30.119 kind of weight towards seeing the
+02:01:34.079 negative somehow the negative is sexier
+02:01:37.320 interpreting the negative is sexier more
+02:01:40.480 viral I don't know what that is exactly
+02:01:42.639 about human nature I mean I find the
+02:01:44.599 xplatform to be less negative than the
+02:01:46.000 Legacy Media you know I mean if if if
+02:01:49.079 you read sort of a sort of conventional
+02:01:51.320 newspapers just it makes you sad yeah
+02:01:55.119 frankly
+02:01:57.960 um whereas I'd say on the
+02:02:01.480 xplatform I I mean I really get more
+02:02:03.719 laughs per day on X than everything else
+02:02:06.920 combined from humans you know laughs is
+02:02:09.480 one
+02:02:10.440 thing laughs is is it uh overlaps but
+02:02:13.880 it's not necessarily perfectly
+02:02:16.760 overlapping with like Good Vibes and
+02:02:19.360 like um celebrating others for example
+02:02:22.880 not in a stupid shallow naive way but
+02:02:25.280 like in an awesome like oh something
+02:02:26.639 awesome happen and you celebrate them
+02:02:28.599 for it it's it feels that that is
+02:02:31.639 outweighed by at other people
+02:02:35.159 now it's better than mainstream media
+02:02:37.400 but it's still yeah mainstream media is
+02:02:40.079 almost relentlessly negative about
+02:02:41.679 everything um it's I mean really the
+02:02:44.400 conventional news tries to answer the
+02:02:45.920 question what is the worst thing that I
+02:02:47.320 happen on Earth today mhm and it's a big
+02:02:49.800 world so on any given day something bad
+02:02:52.599 has happened and a generalization of
+02:02:55.239 that what is the worst perspective I can
+02:02:56.920 take on a thing that happened so yeah
+02:03:00.320 it's I don't know there's just a strong
+02:03:01.800 negative bias in the news
+02:03:05.159 um I mean I think there what a possible
+02:03:08.040 explanation for this is evolutionary
+02:03:11.960 um where you know bad news historically
+02:03:15.199 would be potentially fatal like this
+02:03:18.440 Lion of there or there's some other
+02:03:19.920 tribe that wants to kill you um good
+02:03:22.840 news you know like we found a patch of
+02:03:25.520 berries is nice to have but not
+02:03:27.679 essential
+02:03:29.800 so our old friend Tesla autopilot it's
+02:03:34.400 probably one of the most intelligent
+02:03:35.560 real world AI systems in the world right
+02:03:38.199 you followed it from the
+02:03:39.760 beginning yeah it was one of the most
+02:03:41.599 incredible robots in the world and
+02:03:43.079 continues to be yeah and it was really
+02:03:44.800 exciting and it was super exciting when
+02:03:47.520 it generalized
+02:03:49.840 became more than a robot on four wheels
+02:03:52.400 but uh a real world AI system that
+02:03:55.559 perceives the world yeah and has can
+02:03:59.079 have potentially different
+02:04:01.040 embodiments well I mean the really wild
+02:04:03.159 thing about the anti- training is that
+02:04:05.599 it like it learns to read like you can
+02:04:07.480 read science but we never taught it to
+02:04:11.480 read
+02:04:13.880 so yeah we never Tau it what we never
+02:04:16.920 Tau it what a car was or what a person
+02:04:19.119 was or VI
+02:04:21.679 cyclist uh it
+02:04:23.520 leared what what all those things are
+02:04:26.639 what all the objects are on the
+02:04:28.480 road um from video just from watching
+02:04:31.679 videos just like humans I mean humans
+02:04:34.480 are photons in control controls out like
+02:04:39.079 the vast majority of information
+02:04:40.400 reaching our brain is from our eyes um
+02:04:44.199 and you say well what's the output the
+02:04:45.559 output is our motor signals to our sort
+02:04:49.199 of fingers and mouth in order to
+02:04:52.760 communicate
+02:04:54.679 um protons and controls out the same is
+02:04:58.079 true of the
+02:05:00.199 car but by looking at the sequence of
+02:05:03.199 images it's you've agreed with ilas
+02:05:06.840 discover
+02:05:07.679 recently where he talked about llm
+02:05:10.040 forming a world model and basically
+02:05:12.079 language is a projection of that world
+02:05:13.800 model onto the sequence of yeah letters
+02:05:17.119 and and you saying order in in these
+02:05:19.880 things uhh it
+02:05:23.000 finds correlative
+02:05:26.400 clusters in so doing it's like
+02:05:28.920 understanding something deep about the
+02:05:30.199 world yeah which is
+02:05:33.400 like it's beautiful that's how our brain
+02:05:37.239 works yeah but it's it's beautiful in
+02:05:40.119 controls out neur all Nets are able to
+02:05:42.000 understand that deep meaning in the
+02:05:43.040 world and so the question is how far can
+02:05:45.520 it go and it does seem everybody's
+02:05:48.800 excited about llms so in the space of
+02:05:51.400 self-supervised learning in the space of
+02:05:53.440 text yeah um it it seems like there's a
+02:05:59.119 deep similarity between that and what
+02:06:01.880 Tesla autopal is doing is it to you
+02:06:05.040 basically the same but
+02:06:07.719 con they
+02:06:09.639 converging I wonder who gets their
+02:06:11.599 faster understand having a deep
+02:06:13.480 understanding of the
+02:06:15.679 world or they just will naturally
+02:06:17.920 converge
+02:06:19.400 they're both headed towards
+02:06:21.480 AGI um the TA approach is much more
+02:06:25.639 computer efficient it had to be because
+02:06:28.119 we were constrained on this this you
+02:06:31.280 know we only have 100 Watts
+02:06:34.880 um and an in 8
+02:06:38.320 computer 144 trillion operations per
+02:06:41.920 second which sounds like a lot but is
+02:06:44.040 kind of small potatoes these
+02:06:47.239 days I didn't
+02:06:49.320 but it's understanding the world at
+02:06:51.559 itage it's only 256
+02:06:54.840 values but there the path to AGI might
+02:06:57.480 have much more significant impact
+02:06:59.679 because it's
+02:07:01.920 understanding it'll it'll faster
+02:07:04.199 understand the real world than will llms
+02:07:07.159 and there for be able to integrate with
+02:07:09.760 with the real humans in the real world
+02:07:12.040 faster they're both um going to
+02:07:15.320 understand the world but I think Tesla's
+02:07:17.719 approach is fundamentally more computer
+02:07:20.320 efficient it had to be there was no
+02:07:22.719 choice like our brain is very computer
+02:07:25.040 efficient very very energy efficient so
+02:07:28.119 think of like what what is our brain
+02:07:29.280 able to do um you know there's only
+02:07:32.920 about 10 watts of higher brain function
+02:07:35.520 not counting stuff that's just used to
+02:07:37.400 control our body um the thinking part of
+02:07:39.960 our brain is less than 10 watts um and
+02:07:43.239 that 10 those 10 watts can still produce
+02:07:46.400 a much better novel than a 10 megawatt
+02:07:49.000 GPU cluster so there's a six order of
+02:07:51.480 magnitude difference
+02:07:53.760 there um I mean the the AI is thus far
+02:07:58.719 gotten to where it is via Brute Force
+02:08:02.440 just throwing massive amounts of compute
+02:08:04.840 and and massive amounts of power at it
+02:08:09.239 so this is not where where it will end
+02:08:12.840 up um you know in general with any given
+02:08:16.159 technology you first try to make it work
+02:08:17.639 and then you make it effici
+02:08:20.719 so I think we'll find over time that
+02:08:23.119 these models
+02:08:25.440 get smaller are able
+02:08:28.800 to produce a sensible output with far
+02:08:32.480 less compute far less
+02:08:35.280 power um Tesla is arguably ahead of the
+02:08:38.040 game on that front because um it has
+02:08:41.840 we've just been forced
+02:08:43.679 to try to understand the world with 100
+02:08:47.719 Watts
+02:08:48.920 of
+02:08:50.119 compute um and there are a bunch of sort
+02:08:53.599 of fundamental functions that we kind of
+02:08:55.040 forgot to include so we have to run them
+02:08:57.199 a bunch of things in
+02:08:58.800 emulation um we fixed fix a bunch of
+02:09:01.480 those with Hardware 4 and then Hardware
+02:09:03.280 5 will be even better
+02:09:07.079 um but it does appear at this point uh
+02:09:12.199 that the car will be able to drive
+02:09:14.800 better than a human even with Hardware 3
+02:09:17.559 and 100 wat of
+02:09:19.639 power and
+02:09:21.840 really if we really optimize it it could
+02:09:24.000 be probably less than 50
+02:09:25.719 wats what have you learned
+02:09:28.599 about uh developing Optimus about
+02:09:32.199 applying integrating this kind of real
+02:09:34.040 world AI into the space of robotic
+02:09:38.599 manipulation just humanoid
+02:09:41.559 robotics what are some interesting tiny
+02:09:44.199 or big things you've understood I was
+02:09:47.880 surprised at the fact that we had to
+02:09:50.040 develop every part of the robot
+02:09:51.800 ourselves um that there were no off the
+02:09:53.880 shelf Motors
+02:09:57.239 Electronics sensors like we had to
+02:10:00.040 develop
+02:10:01.159 everything um we we couldn't we couldn't
+02:10:04.320 actually find a source of electric
+02:10:08.119 motors for any amount of
+02:10:11.119 money um so it's not even just efficient
+02:10:14.520 inexpensive it's like anything there's
+02:10:16.480 not a no
+02:10:18.960 the actuators everything everything has
+02:10:20.480 to be yeah designed from scratch we
+02:10:23.440 tried hard to find anything that was
+02:10:26.480 because you think of how many electric
+02:10:27.559 motors have made in the world there's
+02:10:29.239 like tens of thousands hundreds of
+02:10:31.760 thousands of electric motor
+02:10:34.320 designs
+02:10:36.520 um none of them were suitable for a
+02:10:39.040 humanoid robot literally
+02:10:41.280 none so we had to develop our own design
+02:10:46.040 design it specifically for
+02:10:49.040 for what a humanoid robot needs how hard
+02:10:52.040 was it to design something that's can be
+02:10:53.719 Mass manufactured could be relatively
+02:10:55.559 inexpensive I mean if you compare to
+02:10:57.320 Boston Dynamics Atlas it's a very
+02:10:59.840 expensive robot it is designed to be
+02:11:03.440 manufactured in the same way that would
+02:11:05.000 make a car and I think ultimately we can
+02:11:07.000 make Optimus for less than the cost of a
+02:11:10.400 car it should be CU if you look at
+02:11:13.280 the mass of the robot is much
+02:11:16.000 smaller and the car has many actuators
+02:11:18.880 in
+02:11:20.119 it the car has more actuators than the
+02:11:22.360 robot but there is uh the actuators are
+02:11:25.239 kind of interesting in a humanoid robot
+02:11:27.559 with fingers so Optimus has really nice
+02:11:29.840 hands and
+02:11:30.760 fingers you know yeah and they could do
+02:11:34.320 some interesting manipulation soft soft
+02:11:37.040 touch robotics I mean one of the tests I
+02:11:40.679 goals I have is can can of pick up a
+02:11:43.119 needle and a thread and thread the
+02:11:45.599 needle just by looking how far way away
+02:11:48.960 from that just by looking just by
+02:11:50.840 looking uh maybe a
+02:11:52.480 year although got to go back to I'm
+02:11:54.840 optimistic on time the work that we're
+02:11:56.679 doing in the car will translate to the
+02:11:58.440 robot the perception or the also the
+02:12:01.040 control the no the controls are
+02:12:02.840 different but the the video in controls
+02:12:05.679 out um the the car is robot and four
+02:12:08.840 wheeels the the the Optimus is a robot
+02:12:13.599 with hands and legs so you they're
+02:12:16.320 they're very they're very similar so the
+02:12:18.119 ire Machinery of the learning process
+02:12:20.239 yeah and to end is just you just have a
+02:12:22.360 different set of controls often us we'll
+02:12:24.320 figure out how to do things by watching
+02:12:27.079 videos as the saying goes be kind for
+02:12:29.719 everyone you meet is fighting a battle
+02:12:31.880 you know nothing about yeah it's true
+02:12:34.199 what's something difficult you're going
+02:12:35.480 through that people don't often see
+02:12:38.040 trying to feed
+02:12:43.880 e no I mean you
+02:12:46.559 know uh
+02:12:50.239 I mean my mind is a storm and I I don't
+02:12:53.239 think I don't think most people would
+02:12:55.760 want to be me they may think they would
+02:12:57.239 want to be me but they don't they don't
+02:12:58.639 know they don't
+02:13:02.960 understand
+02:13:09.960 um how are you
+02:13:13.599 doing I mean overall
+02:13:16.960 okay the grand scheme of things I can't
+02:13:20.320 complain you get
+02:13:23.679 lonely sometimes but
+02:13:26.559 I you know my kids and friends keep me
+02:13:32.000 company so not
+02:13:35.320 existential but there are many nights I
+02:13:37.320 sleep
+02:13:39.360 alone I don't have to but I
+02:13:45.119 do Walter isacson in his new biog graphy
+02:13:48.320 of you wrote about your difficult
+02:13:50.040 childhood will you ever find forgiveness
+02:13:53.320 in your heart for everything that has
+02:13:54.880 happened to you in that period of your
+02:14:00.360 life what is forgiveness I do
+02:14:05.320 not at least I don't think I have a
+02:14:08.040 resentment
+02:14:13.280 um
+02:14:16.040 so nothing to forgive
+02:14:19.679 you know forgiveness is difficult for
+02:14:24.199 people it seems like you don't Harbor
+02:14:26.440 the
+02:14:27.719 resentment I mean I try to think about
+02:14:29.599 like what what what is going to affect
+02:14:31.679 the future in a good way um and holding
+02:14:34.800 on to grudges MH does
+02:14:37.920 not affect the future in a good way your
+02:14:41.520 father a proud father what have you
+02:14:44.159 learned about life from your
+02:14:46.880 kids
+02:14:49.079 those little biological
+02:14:51.920 organisms I mean developing Ai and
+02:14:55.239 watching say a little X
+02:14:57.480 grow is uh fascinating um because
+02:15:02.199 they they're a formal parallels than I
+02:15:05.840 would have
+02:15:06.920 expected I mean I can see his biological
+02:15:09.119 neural
+02:15:10.880 net making more and more sense of the
+02:15:12.920 world and I can see the digital neural
+02:15:15.119 net making more and more sense of the
+02:15:16.320 world at the same time
+02:15:19.040 do you see the beauty and magic in both
+02:15:25.199 yes I mean one of the things with with
+02:15:27.599 kids is that uh you know you you kind of
+02:15:30.360 see the world a new in their
+02:15:33.199 eyes um you know to them everything is
+02:15:37.679 new and fresh and um and then when you
+02:15:42.520 when you see that them experienced them
+02:15:45.599 the world is new and fresh
+02:15:48.320 you do
+02:15:51.800 too well Elon I just want to say thank
+02:15:54.559 you for your uh kindness to me and
+02:15:57.320 friendship over the years for seeing
+02:15:59.960 something in a silly kid like me as
+02:16:01.559 you've done for many others and um thank
+02:16:04.800 you for having hope for a positive
+02:16:07.520 future for Humanity and for working your
+02:16:09.679 ass off to make it happen thank you Yan
+02:16:11.800 thanks Lex thank you for listening to
+02:16:14.159 this conversation with Elon Musk to
+02:16:16.480 support this podcast please check check
+02:16:17.840 out our sponsors in the description and
+02:16:20.199 now let me leave you with some words
+02:16:22.400 that Walter isacson wrote about the
+02:16:24.559 central philosophy of how Elon
+02:16:26.840 approaches difficult problems the only
+02:16:29.800 rules are the ones dictated by the laws
+02:16:33.080 of physics thank you for listening and
+02:16:35.959 hope to see you next
+02:16:45.240 time

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHRONUS - Elon Musk AI</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#0a0a0a;--surface:#141414;--border:#222;--accent:#1d9bf0;--text:#e7e9ea;--muted:#71767b;--elon:#1a1a2e}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column}
+  header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;gap:12px}
+  header h1{font-size:20px;font-weight:700;letter-spacing:-0.5px}
+  header .tag{background:var(--accent);color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
+  header .status{margin-left:auto;font-size:12px;color:var(--muted)}
+  header .status .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
+  header .status .dot.on{background:#00c853}
+  header .status .dot.off{background:#ff1744}
+  #chat{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:16px}
+  .msg{max-width:80%;padding:12px 16px;border-radius:16px;line-height:1.5;font-size:15px;word-wrap:break-word}
+  .msg.user{align-self:flex-end;background:var(--accent);color:#fff;border-bottom-right-radius:4px}
+  .msg.elon{align-self:flex-start;background:var(--elon);border:1px solid var(--border);border-bottom-left-radius:4px}
+  .msg.elon .name{font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px}
+  .msg.error{align-self:center;background:#2a1015;border:1px solid #ff1744;color:#ff8a80;font-size:13px}
+  .sources{margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}
+  .sources span{display:inline-block;margin-right:8px}
+  .typing{align-self:flex-start;padding:12px 16px;background:var(--elon);border:1px solid var(--border);border-radius:16px;border-bottom-left-radius:4px}
+  .typing .dots{display:flex;gap:4px}
+  .typing .dots span{width:6px;height:6px;background:var(--muted);border-radius:50%;animation:bounce .6s infinite alternate}
+  .typing .dots span:nth-child(2){animation-delay:.2s}
+  .typing .dots span:nth-child(3){animation-delay:.4s}
+  @keyframes bounce{to{opacity:.3;transform:translateY(-4px)}}
+  #input-bar{background:var(--surface);border-top:1px solid var(--border);padding:16px 20px;display:flex;gap:12px;align-items:center}
+  #input-bar input{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:24px;padding:12px 18px;color:var(--text);font-size:15px;outline:none;transition:border .2s}
+  #input-bar input:focus{border-color:var(--accent)}
+  #input-bar input::placeholder{color:var(--muted)}
+  #input-bar button{background:var(--accent);color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .2s}
+  #input-bar button:disabled{opacity:.4;cursor:default}
+  .welcome{text-align:center;color:var(--muted);margin:auto;padding:40px 20px}
+  .welcome h2{font-size:28px;color:var(--text);margin-bottom:8px}
+  .welcome p{font-size:14px;max-width:400px;margin:0 auto}
+  .welcome .examples{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+  .welcome .examples button{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:20px;font-size:13px;cursor:pointer;transition:border .2s}
+  .welcome .examples button:hover{border-color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <h1>CHRONUS</h1>
+  <span class="tag">BETA</span>
+  <div class="status" id="status"><span class="dot off"></span>Connecting...</div>
+</header>
+<div id="chat">
+  <div class="welcome" id="welcome">
+    <h2>Talk to Elon</h2>
+    <p>RAG-powered simulation from his verified archive. Ask anything.</p>
+    <div class="examples">
+      <button onclick="ask(this.textContent)">Why Mars?</button>
+      <button onclick="ask(this.textContent)">Is AI dangerous?</button>
+      <button onclick="ask(this.textContent)">What do you think about Tesla?</button>
+      <button onclick="ask(this.textContent)">How do you handle failure?</button>
+      <button onclick="ask(this.textContent)">Why did you buy Twitter?</button>
+    </div>
+  </div>
+</div>
+<div id="input-bar">
+  <input id="q" placeholder="Ask Elon something..." autocomplete="off">
+  <button id="send" onclick="send()">&#9654;</button>
+</div>
+<script>
+const chat=document.getElementById("chat"),q=document.getElementById("q"),sendBtn=document.getElementById("send"),statusEl=document.getElementById("status"),welcome=document.getElementById("welcome");
+let busy=false;
+
+async function checkHealth(){
+  try{const r=await fetch("/health");const d=await r.json();
+  statusEl.innerHTML=`<span class="dot on"></span>${d.collection_size.toLocaleString()} memories`;
+  }catch{statusEl.innerHTML=`<span class="dot off"></span>Offline`}
+}
+checkHealth();setInterval(checkHealth,30000);
+
+function addMsg(cls,html){const d=document.createElement("div");d.className="msg "+cls;d.innerHTML=html;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d}
+function addTyping(){const d=document.createElement("div");d.className="typing";d.innerHTML='<div class="dots"><span></span><span></span><span></span></div>';chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d}
+function removeEl(el){if(el&&el.parentNode)el.parentNode.removeChild(el)}
+
+function ask(text){q.value=text;send()}
+
+async function send(){
+  const text=q.value.trim();if(!text||busy)return;
+  if(welcome)welcome.remove();
+  busy=true;sendBtn.disabled=true;q.value="";
+  addMsg("user",esc(text));
+  const typing=addTyping();
+  try{
+    const r=await fetch("/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:text})});
+    removeEl(typing);
+    if(!r.ok){addMsg("error","Error: "+r.statusText);return}
+    const d=await r.json();
+    let html=`<div class="name">ELON MUSK</div>${esc(d.answer)}`;
+    if(d.sources&&d.sources.length){
+      html+='<div class="sources">'+d.sources.slice(0,3).map(s=>`<span>${esc(s.source_file)}</span>`).join("")+"</div>";
+    }
+    addMsg("elon",html);
+  }catch(e){removeEl(typing);addMsg("error","Connection failed: "+e.message)}
+  finally{busy=false;sendBtn.disabled=false;q.focus()}
+}
+
+q.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send()}});
+function esc(s){const d=document.createElement("div");d.textContent=s;return d.innerHTML}
+q.focus();
+</script>
+</body>
+</html>

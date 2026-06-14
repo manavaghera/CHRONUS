@@ -1,0 +1,1246 @@
+# tactiq.io free youtube transcript
+# Elon Musk: A future worth getting excited about | Tesla Texas Gigafactory interview | TED
+# https://www.youtube.com/watch/YRvf00NooN8
+
+00:00:00.288 Chris Anderson: Elon Musk,great to see you.
+00:00:02.373 How are you?
+00:00:03.583 Elon Musk: Good. How are you?
+00:00:05.001 CA: We're here at the Texas Gigafactorythe day before this thing opens.
+00:00:09.255 It's been pretty crazy out there.
+00:00:11.049 Thank you so muchfor making time on a busy day.
+00:00:14.343 I would love you to help us,kind of, cast our minds,
+00:00:18.097 I don't know, 10, 20,30 years into the future.
+00:00:22.852 And help us try to picturewhat it would take
+00:00:26.314 to build a future that's worthgetting excited about.
+00:00:29.442 The last time you spoke at TED,
+00:00:31.152 you said that that was reallyjust a big driver.
+00:00:33.988 You know, you can talk about lots of otherreasons to do the work you're doing,
+00:00:37.742 but fundamentally, you wantto think about the future
+00:00:41.871 and not think that it sucks.
+00:00:43.873 EM: Yeah, absolutely.
+00:00:45.083 I think in general, you know,
+00:00:46.626 there's a lot of discussion of like,this problem or that problem.
+00:00:51.005 And a lot of people are sadabout the future
+00:00:54.425 and they're ...
+00:00:58.262 Pessimistic.
+00:00:59.472 And I think ...
+00:01:02.100 this is ...
+00:01:05.061 This is not great.
+00:01:06.270 I mean, we really wantto wake up in the morning
+00:01:08.940 and look forward to the future.
+00:01:10.942 We want to be excitedabout what's going to happen.
+00:01:15.446 And life cannot simply be about sort of,
+00:01:20.368 solving one miserableproblem after another.
+00:01:22.578 CA: So if you look forward 30 years,you know, the year 2050
+00:01:26.332 has been labeled by scientists
+00:01:29.627 as this, kind of, almost like thisdoomsday deadline on climate.
+00:01:33.923 There's a consensus of scientists,a large consensus of scientists,
+00:01:37.385 who believe that if we haven'tcompletely eliminated greenhouse gases
+00:01:42.723 or offset them completely by 2050,
+00:01:46.310 effectively we're invitingclimate catastrophe.
+00:01:49.272 Do you believe there is a pathwayto avoid that catastrophe?
+00:01:53.526 And what would it look like?
+00:01:56.904 EM: Yeah, so I am not oneof the doomsday people,
+00:02:00.783 which may surprise you.
+00:02:02.952 I actually think we're on a good path.
+00:02:07.123 But at the same time,
+00:02:08.416 I want to caution against complacency.
+00:02:12.003 So, so long as we are not complacent,
+00:02:14.714 as long as we have a high sense of urgency
+00:02:17.425 about moving towardsa sustainable energy economy,
+00:02:21.512 then I think things will be fine.
+00:02:25.433 So I can't emphasize that enough,
+00:02:27.435 as long as we push hardand are not complacent,
+00:02:34.066 the future is going to be great.
+00:02:35.651 Don't worry about it.
+00:02:36.777 I mean, worry about it,
+00:02:37.987 but if you worry about it, ironically,it will be a self-unfulfilling prophecy.
+00:02:42.867 So, like, there are three elementsto a sustainable energy future.
+00:02:47.371 One is of sustainable energy generation,which is primarily wind and solar.
+00:02:51.876 There's also hydro, geothermal,
+00:02:55.838 I'm actually pro-nuclear.
+00:02:58.049 I think nuclear is fine.
+00:03:04.263 But it's going to be primarilysolar and wind,
+00:03:07.266 as the primary generators of energy.
+00:03:11.604 The second part is you need batteriesto store the solar and wind energy
+00:03:15.483 because the sundoesn't shine all the time,
+00:03:17.777 the wind doesn't blow all the time.
+00:03:19.487 So it's a lot of stationary battery packs.
+00:03:23.032 And then you need electric transport.
+00:03:25.117 So electric cars, electric planes, boats.
+00:03:27.870 And then ultimately,
+00:03:30.373 it’s not really possibleto make electric rockets,
+00:03:32.792 but you can makethe propellant used in rockets
+00:03:36.003 using sustainable energy.
+00:03:37.755 So ultimately, we can have a fullysustainable energy economy.
+00:03:42.593 And it's those three things:
+00:03:45.596 solar/wind, stationarybattery pack, electric vehicles.
+00:03:48.516 So then what are the limitingfactors on progress?
+00:03:51.978 The limiting factor really will bebattery cell production.
+00:03:55.606 So that's going to really bethe fundamental rate driver.
+00:03:59.694 And then whatever the slowest element
+00:04:01.487 of the whole lithium-ionbattery cells supply chain,
+00:04:05.616 from mining and the many steps of refining
+00:04:08.411 to ultimately creating a battery cell
+00:04:11.163 and putting it into a pack,
+00:04:12.623 that will be the limiting factoron progress towards sustainability.
+00:04:16.043 CA: All right, so we need to talkmore about batteries,
+00:04:18.671 because the key thingthat I want to understand,
+00:04:20.923 like, there seems to bea scaling issue here
+00:04:23.050 that is kind of amazing and alarming.
+00:04:25.886 You have said that you have calculated
+00:04:28.806 that the amount of battery productionthat the world needs for sustainability
+00:04:34.478 is 300 terawatt hours of batteries.
+00:04:39.317 That's the end goal?
+00:04:40.484 EM: Very rough numbers,
+00:04:41.861 and I certainly would invite othersto check our calculations
+00:04:45.114 because they may arriveat different conclusions.
+00:04:47.742 But in order to transition, not justcurrent electricity production,
+00:04:53.873 but also heating and transport,
+00:04:57.918 which roughly triples the amountof electricity that you need,
+00:05:01.756 it amounts to approximately 300 terawatthours of installed capacity.
+00:05:06.802 CA: So we need to give peoplea sense of how big a task that is.
+00:05:11.307 I mean, here we are at the Gigafactory.
+00:05:13.517 You know, this is one of the biggestbuildings in the world.
+00:05:19.565 What I've read, and tell meif this is still right,
+00:05:22.693 is that the goal here is to eventuallyproduce 100 gigawatt hours
+00:05:28.616 of batteries here a year eventually.
+00:05:31.452 EM: We will probably do more than that,
+00:05:33.329 but yes, hopefully we get therewithin a couple of years.
+00:05:37.500 CA: Right.
+00:05:38.793 But I mean, that is one --
+00:05:41.337 EM: 0.1 terrawat hours.
+00:05:43.172 CA: But that's still 1/100of what's needed.
+00:05:46.675 How much of the rest of that 100is Tesla planning to take on
+00:05:52.556 let's say, between now and 2030, 2040,
+00:05:58.020 when we really need to seethe scale up happen?
+00:06:01.774 EM: I mean, these are just guesses.
+00:06:03.567 So please, people shouldn'thold me to these things.
+00:06:06.404 It's not like this is like some --
+00:06:08.614 What tends to happenis I'll make some like,
+00:06:12.034 you know, best guess
+00:06:13.327 and then people, in five years,
+00:06:15.413 there’ll be some jerkthat writes an article:
+00:06:17.540 "Elon said this would happen,and it didn't happen.
+00:06:20.459 He's a liar and a fool."
+00:06:22.211 It's very annoying when that happens.
+00:06:25.172 So these are just guesses,this is a conversation.
+00:06:27.842 CA: Right.
+00:06:29.552 EM: I think Tesla probably ends updoing 10 percent of that.
+00:06:35.099 Roughly.
+00:06:36.308 CA: Let's say 2050
+00:06:37.643 we have this amazing, you know,100 percent sustainable electric grid
+00:06:43.566 made up of, you know, some mixtureof the sustainable energy sources
+00:06:46.777 you talked about.
+00:06:49.447 That same grid probablyis offering the world
+00:06:52.324 really low-cost energy, isn't it,
+00:06:54.243 compared with now.
+00:06:56.745 And I'm curious about like,
+00:06:59.915 are people entitled to geta little bit excited
+00:07:04.170 about the possibilities of that world?
+00:07:06.839 EM: People should be optimisticabout the future.
+00:07:12.970 Humanity will solve sustainable energy.
+00:07:15.764 It will happen if we, you know,continue to push hard,
+00:07:20.311 the future is bright and goodfrom an energy standpoint.
+00:07:25.983 And then it will be possible to also usethat energy to do carbon sequestration.
+00:07:31.363 It takes a lot of energy to pullcarbon out of the atmosphere
+00:07:34.283 because in putting it in the atmosphereit releases energy.
+00:07:37.244 So now, you know, obviouslyin order to pull it out,
+00:07:39.705 you need to use a lot of energy.
+00:07:41.332 But if you've got a lot of sustainableenergy from wind and solar,
+00:07:45.044 you can actually sequester carbon.
+00:07:46.712 So you can reverse the CO2 partsper million of the atmosphere and oceans.
+00:07:52.593 And also you can really haveas much fresh water as you want.
+00:07:57.264 Earth is mostly water.
+00:07:58.432 We should call Earth “Water.”
+00:07:59.850 It's 70 percent water by surface area.
+00:08:01.685 Now most of that’s seawater,
+00:08:03.103 but it's like we just happen to beon the bit that's land.
+00:08:06.565 CA: And with energy,you can turn seawater into --
+00:08:09.777 EM: Yes.
+00:08:10.986 CA: Irrigating wateror whatever water you need.
+00:08:13.864 EM: At very low cost.
+00:08:15.115 Things will be good.
+00:08:16.325 CA: Things will be good.
+00:08:17.535 And also, there's other benefitsto this non-fossil fuel world
+00:08:20.496 where the air is cleaner --
+00:08:21.997 EM: Yes, exactly.
+00:08:23.707 Because, like, when you burn fossil fuels,
+00:08:26.544 there's all these side reactions
+00:08:29.880 and toxic gases of various kinds.
+00:08:33.509 And sort of little particulatesthat are bad for your lungs.
+00:08:38.429 Like, there's all sortsof bad things that are happening
+00:08:41.100 that will go away.
+00:08:42.268 And the sky will be cleaner and quieter.
+00:08:45.479 The future's going to be good.
+00:08:46.981 CA: I want us to switch now to thinka bit about artificial intelligence.
+00:08:50.442 But the segue there,
+00:08:52.278 you mentioned how annoying it iswhen people call you up
+00:08:55.781 for bad predictions in the past.
+00:08:58.701 So I'm possibly going to be annoying now,
+00:09:02.955 but I’m curious about your timelinesand how you predict
+00:09:07.418 and how come some things are so amazinglyon the money and some aren't.
+00:09:10.796 So when it comes to predicting salesof Tesla vehicles, for example,
+00:09:15.801 you've kind of been amazing,
+00:09:17.177 I think in 2014 when Teslahad sold that year 60,000 cars,
+00:09:22.641 you said, "2020, I think we will dohalf a million a year."
+00:09:26.395 EM: Yeah, we didalmost exactly a half million.
+00:09:28.647 CA: You did almost exactly half a million.
+00:09:30.691 You were scoffed in 2014because no one since Henry Ford,
+00:09:33.944 with the Model T, had come closeto that kind of growth rate for cars.
+00:09:38.532 You were scoffed, and you actuallyhit 500,000 cars
+00:09:41.410 and then 510,000 or whatever produced.
+00:09:44.246 But five years ago,last time you came to TED,
+00:09:47.416 I asked you about full self-driving,
+00:09:50.419 and you said, “Yeah, this very year,
+00:09:53.297 I'm confident that we will have a cargoing from LA to New York
+00:09:58.802 without any intervention."
+00:10:00.888 EM: Yeah, I don't want to blow your mind,but I'm not always right.
+00:10:04.099 CA: (Laughs)
+00:10:05.517 What's the difference between those two?
+00:10:08.646 Why has full self-driving in particularbeen so hard to predict?
+00:10:13.359 EM: I mean, the thing that really got me,
+00:10:15.361 and I think it's going to geta lot of other people,
+00:10:17.821 is that there are just so manyfalse dawns with self-driving,
+00:10:22.159 where you think you've got the problem,
+00:10:25.329 have a handle on the problem,
+00:10:26.747 and then it, no, turns outyou just hit a ceiling.
+00:10:33.754 Because if you were to plot the progress,
+00:10:37.508 the progress looks like a log curve.
+00:10:39.259 So it's like a series of log curves.
+00:10:41.637 So most people don't knowwhat a log curve is, I suppose.
+00:10:45.474 CA: Show the shape with your hands.
+00:10:47.267 EM: It goes up you know,sort of a fairly straight way,
+00:10:50.270 and then it starts tailing off
+00:10:52.648 and you start getting diminishing returns.
+00:10:55.693 And you're like, uh oh,
+00:10:57.611 it was trending up and nowit's sort of, curving over
+00:11:01.281 and you start getting to these,what I call local maxima,
+00:11:05.828 where you don't realizebasically how dumb you were.
+00:11:10.040 And then it happens again.
+00:11:14.253 And ultimately...
+00:11:16.004 These things, you know,in retrospect, they seem obvious,
+00:11:19.341 but in order to solvefull self-driving properly,
+00:11:23.429 you actually have to solve real-world AI.
+00:11:28.350 Because what are the road networksdesigned to work with?
+00:11:32.563 They're designed to workwith a biological neural net, our brains,
+00:11:36.483 and with vision, our eyes.
+00:11:40.487 And so in order to make itwork with computers,
+00:11:45.576 you basically need to solvereal-world AI and vision.
+00:11:51.123 Because we need cameras
+00:11:56.211 and silicon neural nets
+00:11:58.922 in order to have self-driving work
+00:12:01.884 for a system that was designedfor eyes and biological neural nets.
+00:12:07.139 You know, I guesswhen you put it that way,
+00:12:09.224 it's sort of, like, quite obvious
+00:12:10.851 that the only wayto solve full self-driving
+00:12:12.936 is to solve real world AIand sophisticated vision.
+00:12:16.899 CA: What do you feelabout the current architecture?
+00:12:19.401 Do you think you have an architecture now
+00:12:21.403 where there is a chance
+00:12:23.197 for the logarithmic curvenot to tail off any anytime soon?
+00:12:27.743 EM: Well I mean, admittedlythese may be infamous last words,
+00:12:32.998 but I actually am confidentthat we will solve it this year.
+00:12:36.126 That we will exceed --
+00:12:39.379 The probability of an accident,
+00:12:42.382 at what point do you exceedthat of the average person?
+00:12:45.344 I think we will exceed that this year.
+00:12:47.346 CA: What are you seeing behind the scenesthat gives you that confidence?
+00:12:51.099 EM: We’re almost at the pointwhere we have a high-quality
+00:12:53.894 unified vector space.
+00:12:55.854 In the beginning, we were tryingto do this with image recognition
+00:13:00.108 on individual images.
+00:13:03.070 But if you get one image out of a video,
+00:13:05.030 it's actually quite hard to seewhat's going on without ambiguity.
+00:13:09.910 But if you look at a video segmentof a few seconds of video,
+00:13:13.080 that ambiguity resolves.
+00:13:15.791 So the first thing we had to dois tie all eight cameras together
+00:13:19.294 so they're synchronized,
+00:13:20.504 so that all the framesare looked at simultaneously
+00:13:23.715 and labeled simultaneously by one person,
+00:13:26.718 because we still need human labeling.
+00:13:30.180 So at least they’re not labeledat different times by different people
+00:13:33.684 in different ways.
+00:13:35.561 So it's sort of a surround picture.
+00:13:37.980 Then a very important partis to add the time dimension.
+00:13:41.733 So that you’re looking at surround video,
+00:13:45.320 and you're labeling surround video.
+00:13:47.865 And this is actually quite difficult to dofrom a software standpoint.
+00:13:52.911 We had to write our own labeling tools
+00:13:57.624 and then create auto labeling,
+00:14:03.130 create auto labeling software to amplifythe efficiency of human labelers
+00:14:07.676 because it’s quite hard to label.
+00:14:09.469 In the beginning,it was taking several hours
+00:14:11.763 to label a 10-second video clip.
+00:14:13.932 This is not scalable.
+00:14:16.518 So basically what you have to haveis you have to have surround video,
+00:14:19.813 and that surround video has to beprimarily automatically labeled
+00:14:23.609 with humans just being editors
+00:14:25.319 and making slight correctionsto the labeling of the video
+00:14:30.032 and then feeding back those correctionsinto the future auto labeler,
+00:14:34.661 so you get this flywheel eventually
+00:14:36.371 where the auto labeleris able to take in vast amounts of video
+00:14:39.666 and with high accuracy,
+00:14:41.043 automatically label the videofor cars, lane lines, drive space.
+00:14:46.965 CA: What you’re saying is ...
+00:14:51.303 the result of this is that you'reeffectively giving the car a 3D model
+00:14:56.099 of the actual objectsthat are all around it.
+00:14:58.560 It knows what they are,
+00:15:01.063 and it knows how fast they are moving.
+00:15:03.899 And the remaining task is to predict
+00:15:09.237 what the quirky behaviors arethat, you know,
+00:15:12.658 that when a pedestrian is walkingdown the road with a smaller pedestrian,
+00:15:16.286 that maybe that smaller pedestrianmight do something unpredictable
+00:15:19.498 or things like that.
+00:15:21.208 You have to build into itbefore you can really call it safe.
+00:15:24.211 EM: You basically need to havememory across time and space.
+00:15:30.467 So what I mean by that is ...
+00:15:34.763 Memory can’t be infinite,
+00:15:37.349 because it's using up a lotof the computer's RAM basically.
+00:15:42.562 So you have to say how muchare you going to try to remember?
+00:15:46.650 It's very commonfor things to be occluded.
+00:15:49.319 So if you talk about say,a pedestrian walking past a truck
+00:15:53.490 where you saw the pedestrian starton one side of the truck,
+00:15:57.619 then they're occluded by the truck.
+00:16:01.540 You would know intuitively,
+00:16:03.917 OK, that pedestrian is going to pop outthe other side, most likely.
+00:16:07.504 CA: A computer doesn't know it.
+00:16:09.047 EM: You need to slow down.
+00:16:10.340 CA: A skeptic is going to saythat every year for the last five years,
+00:16:14.261 you've kind of said, well,
+00:16:15.971 no this is the year,
+00:16:17.222 we're confident that it will be therein a year or two or, you know,
+00:16:20.475 like it's always been about that far away.
+00:16:23.103 But we've got a new architecture now,
+00:16:25.897 you're seeing enough improvementbehind the scenes
+00:16:28.734 to make you not certain,but pretty confident,
+00:16:31.737 that, by the end of this year,
+00:16:33.989 what in most, not in every city,and every circumstance
+00:16:37.159 but in many cities and circumstances,
+00:16:39.619 basically the car will be ableto drive without interventions
+00:16:42.539 safer than a human.
+00:16:43.707 EM: Yes.
+00:16:44.916 I mean, the car currentlydrives me around Austin
+00:16:47.377 most of the time with no interventions.
+00:16:49.755 So it's not like ...
+00:16:52.340 And we have over 100,000 people
+00:16:55.510 in our full self-driving beta program.
+00:16:59.181 So you can look at the videosthat they post online.
+00:17:02.309 CA: I do.
+00:17:03.935 And some of them are great,and some of them are a little terrifying.
+00:17:07.189 I mean, occasionallythe car seems to veer off
+00:17:09.357 and scare the hell out of people.
+00:17:12.152 EM: It’s still a beta.
+00:17:15.071 CA: But you’re behind the scenes,looking at the data,
+00:17:17.699 you're seeing enough improvement
+00:17:19.242 to believe that a this-yeartimeline is real.
+00:17:23.497 EM: Yes, that's what it seems like.
+00:17:25.207 I mean, we could be heretalking again in a year,
+00:17:28.877 like, well, another year went by,and it didn’t happen.
+00:17:31.630 But I think this is the year.
+00:17:33.381 CA: And so in general,when people talk about Elon time,
+00:17:36.718 I mean it sounds likeyou can't just have a general rule
+00:17:39.930 that if you predict that somethingwill be done in six months,
+00:17:42.891 actually what we should imagineis it’s going to be a year
+00:17:45.852 or it’s like two-x or three-x,it depends on the type of prediction.
+00:17:49.106 Some things, I guess,things involving software, AI, whatever,
+00:17:52.943 are fundamentally harderto predict than others.
+00:17:56.988 Is there an element
+00:17:58.198 that you actually deliberately makeaggressive prediction timelines
+00:18:01.576 to drive people to be ambitious?
+00:18:04.996 Without that, nothing gets done?
+00:18:06.748 EM: Well, I generally believe,in terms of internal timelines,
+00:18:09.793 that we want to set the most aggressivetimeline that we can.
+00:18:14.673 Because there’s sort of likea law of gaseous expansion where,
+00:18:17.843 for schedules, wherewhatever time you set,
+00:18:20.971 it's not going to be less than that.
+00:18:22.722 It's very rarethat it'll be less than that.
+00:18:26.184 But as far as our predictionsare concerned,
+00:18:28.311 what tends to happen in the media
+00:18:29.938 is that they will reportall the wrong ones
+00:18:31.982 and ignore all the right ones.
+00:18:33.525 Or, you know, when writingan article about me --
+00:18:38.321 I've had a long careerin multiple industries.
+00:18:40.574 If you list my sins, I soundlike the worst person on Earth.
+00:18:43.410 But if you put thoseagainst the things I've done right,
+00:18:46.788 it makes much more sense, you know?
+00:18:48.623 So essentially like,the longer you do anything,
+00:18:51.418 the more mistakesthat you will make cumulatively.
+00:18:55.130 Which, if you sum up those mistakes,
+00:18:56.965 will sound like I'm the worstpredictor ever.
+00:19:00.635 But for example, for Tesla vehicle growth,
+00:19:04.556 I said I think we’d do 50 percent,and we’ve done 80 percent.
+00:19:08.977 CA: Yes.
+00:19:10.937 EM: But they don't mention that one.
+00:19:12.689 So, I mean, I'm not sure what my exacttrack record is on predictions.
+00:19:16.484 They're more optimistic than pessimistic,but they're not all optimistic.
+00:19:19.946 Some of them are exceededprobably more or later,
+00:19:24.826 but they do come true.
+00:19:28.747 It's very rare that they do not come true.
+00:19:31.666 It's sort of like, you know,
+00:19:34.878 if there's some radicaltechnology prediction,
+00:19:38.590 the point is notthat it was a few years late,
+00:19:40.800 but that it happened at all.
+00:19:43.136 That's the more important part.
+00:19:45.889 CA: So it feels likeat some point in the last year,
+00:19:49.851 seeing the progress on understanding,
+00:19:54.522 the Tesla AI understandingthe world around it,
+00:19:57.984 led to a kind of, an aha moment at Tesla.
+00:20:00.570 Because you really surprised peoplerecently when you said
+00:20:03.698 probably the most importantproduct development
+00:20:06.243 going on at Tesla this yearis this robot, Optimus.
+00:20:10.163 EM: Yes.
+00:20:11.331 CA: Many companies out therehave tried to put out these robots,
+00:20:14.584 they've been working on them for years.
+00:20:16.503 And so far no one has really cracked it.
+00:20:18.797 There's no mass adoptionrobot in people's homes.
+00:20:22.592 There are some in manufacturing,but I would say,
+00:20:25.762 no one's kind of, really cracked it.
+00:20:29.724 Is it something that happened
+00:20:31.559 in the development of full self-drivingthat gave you the confidence to say,
+00:20:35.146 "You know what, we could dosomething special here."
+00:20:37.607 EM: Yeah, exactly.
+00:20:38.858 So, you know, it took me a whileto sort of realize
+00:20:41.528 that in order to solve self-driving,
+00:20:44.489 you really needed to solve real-world AI.
+00:20:47.617 And at the point of which you solvereal-world AI for a car,
+00:20:50.704 which is really a robot on four wheels,
+00:20:53.248 you can then generalize thatto a robot on legs as well.
+00:20:58.128 The two hard parts I think --
+00:20:59.587 like obviously companieslike Boston Dynamics
+00:21:02.215 have shown that it's possibleto make quite compelling,
+00:21:05.135 sometimes alarming robots.
+00:21:06.761 CA: Right.
+00:21:08.013 EM: You know, so from a sensorsand actuators standpoint,
+00:21:11.349 it's certainly been demonstrated by many
+00:21:14.644 that it's possible to makea humanoid robot.
+00:21:16.730 The things that are currently missingare enough intelligence
+00:21:22.277 for the robot to navigate the real worldand do useful things
+00:21:25.405 without being explicitly instructed.
+00:21:27.657 So the missing things are basicallyreal-world intelligence
+00:21:31.786 and scaling up manufacturing.
+00:21:34.664 Those are two thingsthat Tesla is very good at.
+00:21:37.125 And so then we basically just needto design the specialized actuators
+00:21:43.173 and sensors that are neededfor humanoid robot.
+00:21:46.301 People have no idea,this is going to be bigger than the car.
+00:21:50.764 CA: So let's dig into exactly that.
+00:21:52.724 I mean, in one way, it's actuallyan easier problem than full self-driving
+00:21:56.311 because instead of an objectgoing along at 60 miles an hour,
+00:22:00.148 which if it gets it wrong,someone will die.
+00:22:02.692 This is an object that's engineeredto only go at what,
+00:22:05.320 three or four or five miles an hour.
+00:22:07.322 And so a mistake,there aren't lives at stake.
+00:22:10.367 There might be embarrassment at stake.
+00:22:12.202 EM: So long as the AI doesn't take it overand murder us in our sleep or something.
+00:22:17.374 CA: Right.
+00:22:18.583 (Laughter)
+00:22:20.794 So talk about --
+00:22:22.379 I think the first applicationsyou've mentioned
+00:22:25.131 are probably going to be manufacturing,
+00:22:27.050 but eventually the vision is to havethese available for people at home.
+00:22:30.553 If you had a robot that really understoodthe 3D architecture of your house
+00:22:36.893 and knew where every objectin that house was
+00:22:41.940 or was supposed to be,
+00:22:43.274 and could recognize all those objects,
+00:22:46.152 I mean, that’s kind of amazing, isn’t it?
+00:22:48.446 Like the kind of thingthat you could ask a robot to do
+00:22:51.741 would be what?
+00:22:52.951 Like, tidy up?
+00:22:54.160 EM: Yeah, absolutely.
+00:22:57.122 Make dinner, I guess, mow the lawn.
+00:22:59.416 CA: Take a cup of tea to grandmaand show her family pictures.
+00:23:04.462 EM: Exactly. Take careof my grandmother and make sure --
+00:23:08.758 CA: It could obviously recognizeeveryone in the home.
+00:23:12.053 It could play catch with your kids.
+00:23:13.972 EM: Yes. I mean, obviously,we need to be careful
+00:23:16.307 this doesn't become a dystopian situation.
+00:23:20.520 I think one of the thingsthat's going to be important
+00:23:23.064 is to have a localizedROM chip on the robot
+00:23:26.609 that cannot be updated over the air.
+00:23:29.696 Where if you, for example, were to say,“Stop, stop, stop,”
+00:23:32.490 if anyone said that,
+00:23:33.992 then the robot would stop,you know, type of thing.
+00:23:36.411 And that's not updatable remotely.
+00:23:38.997 I think it's going to be importantto have safety features like that.
+00:23:42.292 CA: Yeah, that sounds wise.
+00:23:43.793 EM: And I do think there should bea regulatory agency for AI.
+00:23:46.754 I've said that for many years.
+00:23:48.214 I don't love being regulated,
+00:23:49.632 but I think this is an importantthing for public safety.
+00:23:52.343 CA: Let's come back to that.
+00:23:53.720 But I don't think many peoplehave really sort of taken seriously
+00:23:58.183 the notion of, you know, a robot at home.
+00:24:00.935 I mean, at the startof the computing revolution,
+00:24:03.271 Bill Gates said there's going to bea computer in every home.
+00:24:06.149 And people at the time said, yeah,whatever, who would even want that.
+00:24:09.903 Do you think there will be basicallylike in, say, 2050 or whatever,
+00:24:13.615 like a robot in most homes,is what there will be,
+00:24:17.827 and people will love themand count on them?
+00:24:20.663 You’ll have your own butler basically.
+00:24:22.749 EM: Yeah, you'll have your sort ofbuddy robot probably, yeah.
+00:24:27.003 CA: I mean, how much of a buddy?
+00:24:28.630 How many applications have you thought,
+00:24:31.257 you know, can you havea romantic partner, a sex partner?
+00:24:34.135 EM: It's probably inevitable.
+00:24:36.304 I mean, I did promise the internetthat I’d make catgirls.
+00:24:39.098 We could make a robot catgirl.
+00:24:42.644 CA: Be careful whatyou promise the internet.
+00:24:44.812 (Laughter)
+00:24:47.065 EM: So, yeah, I guess it'll bewhatever people want really, you know.
+00:24:52.487 CA: What sort of timelineshould we be thinking about
+00:24:56.157 of the first modelsthat are actually made and sold?
+00:25:01.621 EM: Well, you know, the first unitsthat we intend to make
+00:25:05.375 are for jobs that are dangerous,boring, repetitive,
+00:25:10.004 and things that people don't want to do.
+00:25:11.965 And, you know, I think we’ll have likean interesting prototype
+00:25:15.009 sometime this year.
+00:25:16.219 We might have something useful next year,
+00:25:18.888 but I think quite likelywithin at least two years.
+00:25:22.308 And then we'll seerapid growth year over year
+00:25:24.519 of the usefulnessof the humanoid robots
+00:25:27.105 and decrease in costand scaling up production.
+00:25:29.857 CA: Initially just selling to businesses,
+00:25:31.859 or when do you pictureyou'll start selling them
+00:25:34.571 where you can buy your parents onefor Christmas or something?
+00:25:39.450 EM: I'd say in less than ten years.
+00:25:41.160 CA: Help me on the economics of this.
+00:25:43.997 So what do you picture the costof one of these being?
+00:25:47.250 EM: Well, I think the cost is actuallynot going to be crazy high.
+00:25:51.921 Like less than a car.
+00:25:53.172 Initially, things will be expensivebecause it'll be a new technology
+00:25:56.467 at low production volume.
+00:25:57.677 The complexity and cost of a caris greater than that of a humanoid robot.
+00:26:01.681 So I would expect that it's goingto be less than a car,
+00:26:05.935 or at least equivalent to a cheap car.
+00:26:07.770 CA: So even if it starts at 50k,within a few years,
+00:26:10.273 it’s down to 20k or lower or whatever.
+00:26:13.568 And maybe for homethey'll get much cheaper still.
+00:26:15.903 But think about the economics of this.
+00:26:17.822 If you can replace a $30,000,
+00:26:22.076 $40,000-a-year worker,
+00:26:24.912 which you have to pay every year,
+00:26:26.623 with a one-time payment of $25,000
+00:26:29.667 for a robot that can work longer hours,
+00:26:32.629 a pretty rapid replacementof certain types of jobs.
+00:26:36.674 How worried shouldthe world be about that?
+00:26:39.344 EM: I wouldn't worry about the sort of,putting people out of a job thing.
+00:26:42.889 I think we're actually going to have,and already do have,
+00:26:46.267 a massive shortage of labor.
+00:26:47.644 So I think we will have ...
+00:26:54.067 Not people out of work,
+00:26:55.276 but actually still a shortagelabor even in the future.
+00:26:58.863 But this really will bea world of abundance.
+00:27:03.534 Any goods and services will be availableto anyone who wants them.
+00:27:08.790 It'll be so cheap to have goodsand services, it will be ridiculous.
+00:27:12.043 CA: I'm presuming it should be possibleto imagine a bunch of goods and services
+00:27:16.089 that can't profitably be made nowbut could be made in that world,
+00:27:20.551 courtesy of legions of robots.
+00:27:23.179 EM: Yeah.
+00:27:25.014 It will be a world of abundance.
+00:27:26.808 The only scarcitythat will exist in the future
+00:27:29.352 is that which we decide to createourselves as humans.
+00:27:32.563 CA: OK.
+00:27:33.731 So AI is allowing us to imaginea differently powered economy
+00:27:38.111 that will create this abundance.
+00:27:40.279 What are you most worriedabout going wrong?
+00:27:42.407 EM: Well, like I said,AI and robotics will bring out
+00:27:48.454 what might be termed the age of abundance.
+00:27:51.332 Other people have used this word,
+00:27:54.210 and that this is my prediction:
+00:27:55.920 it will be an age of abundance for everyone.
+00:27:59.841 But I guess there’s ...
+00:28:03.886 The dangers would bethe artificial general intelligence
+00:28:08.474 or digital superintelligence decouplesfrom a collective human will
+00:28:13.771 and goes in the directionthat for some reason we don't like.
+00:28:17.316 Whatever direction it might go.
+00:28:20.570 You know, that’s sort ofthe idea behind Neuralink,
+00:28:24.031 is to try to more tightly couplecollective human world
+00:28:27.076 to digital superintelligence.
+00:28:33.458 And also along the way solve a lotof brain injuries and spinal injuries
+00:28:39.213 and that kind of thing.
+00:28:40.423 So even if it doesn't succeedin the greater goal,
+00:28:42.759 I think it will succeed in the goalof alleviating brain and spine damage.
+00:28:48.347 CA: So the spirit there isthat if we're going to make these AIs
+00:28:51.434 that are so vastly intelligent,we ought to be wired directly to them
+00:28:54.687 so that we ourselves can havethose superpowers more directly.
+00:28:59.609 But that doesn't seem to avoidthe risk that those superpowers might ...
+00:29:05.740 turn ugly in unintended ways.
+00:29:08.326 EM: I think it's a risk, I agree.
+00:29:09.994 I'm not saying that I havesome certain answer to that risk.
+00:29:16.292 I’m just saying like
+00:29:18.628 maybe one of the thingsthat would be good
+00:29:22.215 for ensuring that the futureis one that we want
+00:29:27.887 is to more tightly couple
+00:29:31.140 the collective human worldto digital intelligence.
+00:29:36.437 The issue that we face hereis that we are already a cyborg,
+00:29:40.566 if you think about it.
+00:29:41.859 The computers arean extension of ourselves.
+00:29:46.697 And when we die, we have,like, a digital ghost.
+00:29:49.742 You know, all of our text messagesand social media, emails.
+00:29:53.329 And it's quite eerie actually,
+00:29:55.373 when someone dies but everythingonline is still there.
+00:29:59.001 But you say like, what's the limitation?
+00:30:00.962 What is it that inhibitsa human-machine symbiosis?
+00:30:06.175 It's the data rate.
+00:30:07.385 When you communicate,especially with a phone,
+00:30:09.554 you're moving your thumbs very slowly.
+00:30:12.515 So you're like movingyour two little meat sticks
+00:30:15.393 at a rate that’s maybe 10 bits per second,optimistically, 100 bits per second.
+00:30:21.315 And computers are communicatingat the gigabyte level and beyond.
+00:30:26.487 CA: Have you seen evidencethat the technology is actually working,
+00:30:29.657 that you've got a richer, sort of,higher bandwidth connection, if you like,
+00:30:33.286 between like externalelectronics and a brain
+00:30:36.122 than has been possible before?
+00:30:38.165 EM: Yeah.
+00:30:41.002 I mean, the fundamental principlesof reading neurons,
+00:30:46.465 sort of doing read-write on neuronswith tiny electrodes,
+00:30:50.386 have been demonstrated for decades.
+00:30:53.306 So it's not like the concept is new.
+00:30:57.602 The problem is that there isno product that works well
+00:31:02.398 that you can go and buy.
+00:31:04.942 So it's all sort of, in research labs.
+00:31:08.738 And it's like some cordssticking out of your head.
+00:31:14.410 And it's quite gruesome,and it's really ...
+00:31:18.539 There's no good productthat actually does a good job
+00:31:22.627 and is high-bandwidth and safe
+00:31:24.545 and something actually that you could buyand would want to buy.
+00:31:29.550 But the way to thinkof the Neuralink device
+00:31:33.512 is kind of like a Fitbitor an Apple Watch.
+00:31:37.934 That's where we take outsort of a small section of skull
+00:31:42.647 about the size of a quarter,
+00:31:44.273 replace that with what,
+00:31:46.525 in many ways really is very much likea Fitbit, Apple Watch
+00:31:52.239 or some kind of smart watch thing.
+00:31:56.035 But with tiny, tiny wires,
+00:32:00.247 very, very tiny wires.
+00:32:02.124 Wires so tiny, it’s hard to even see them.
+00:32:05.044 And it's very importantto have very tiny wires
+00:32:07.296 so that when they’re implanted,they don’t damage the brain.
+00:32:10.132 CA: How far are you from puttingthese into humans?
+00:32:14.136 EM: Well, we have put inour FDA application
+00:32:18.641 to aspirationally do the firsthuman implant this year.
+00:32:23.312 CA: The first uses will befor neurological injuries
+00:32:26.899 of different kinds.
+00:32:28.192 But rolling the clock forward
+00:32:29.777 and imagining when peopleare actually using these
+00:32:33.864 for their own enhancement, let's say,
+00:32:36.534 and for the enhancement of the world,
+00:32:38.452 how clear are you in your mind
+00:32:39.912 as to what it will feel liketo have one of these inside your head?
+00:32:45.251 EM: Well, I do want to emphasizewe're at an early stage.
+00:32:49.171 And so it really will bemany years before we have
+00:32:55.261 anything approximatinga high-bandwidth neural interface
+00:33:01.934 that allows for AI-human symbiosis.
+00:33:07.481 For many years, we will just be solvingbrain injuries and spinal injuries.
+00:33:11.777 For probably a decade.
+00:33:14.905 This is not somethingthat will suddenly one day
+00:33:18.451 it will have this incrediblesort of whole brain interface.
+00:33:25.041 It's going to be, like I said,
+00:33:26.542 at least a decade of reallyjust solving brain injuries
+00:33:30.504 and spinal injuries.
+00:33:32.631 And really, I think you can solvea very wide range of brain injuries,
+00:33:36.385 including severe depression,morbid obesity, sleep,
+00:33:43.225 potentially schizophrenia,
+00:33:44.518 like, a lot of things that causegreat stress to people.
+00:33:48.773 Restoring memory in older people.
+00:33:51.817 CA: If you can pull that off,that's the app I will sign up for.
+00:33:56.363 EM: Absolutely.
+00:33:57.698 CA: Please hurry. (Laughs)
+00:33:59.867 EM: I mean, the emails that we getat Neuralink are heartbreaking.
+00:34:05.122 I mean, they'll send usjust tragic, you know,
+00:34:09.251 where someone was sort of,in the prime of life
+00:34:11.629 and they had an accident on a motorcycle
+00:34:15.466 and someone who's 25, you know,can't even feed themselves.
+00:34:21.263 And this is something we could fix.
+00:34:24.391 CA: But you have said that AI is oneof the things you're most worried about
+00:34:28.020 and that Neuralink may be one of the ways
+00:34:30.940 where we can keep abreast of it.
+00:34:35.527 EM: Yeah, there's the short-term thing,
+00:34:39.114 which I think is helpful on an individualhuman level with injuries.
+00:34:43.077 And then the long-term thing is an attempt
+00:34:45.663 to address the civilizational risk of AI
+00:34:51.710 by bringing digital intelligence
+00:34:55.672 and biological intelligencecloser together.
+00:34:58.384 I mean, if you think of howthe brain works today,
+00:35:00.803 there are really two layers to the brain.
+00:35:02.847 There's the limbic system and the cortex.
+00:35:04.849 You've got the kind of,animal brain where --
+00:35:06.976 it’s kind of like the fun part, really.
+00:35:08.853 CA: It's where most of Twitteroperates, by the way.
+00:35:11.355 EM: I think Tim Urban said,
+00:35:13.107 we’re like somebody, you know,stuck a computer on a monkey.
+00:35:18.320 You know, so we're like,if you gave a monkey a computer,
+00:35:21.949 that's our cortex.
+00:35:23.159 But we still have a lotof monkey instincts.
+00:35:25.369 Which we then try to rationalizeas, no, it's not a monkey instinct.
+00:35:29.165 It’s something more important than that.
+00:35:31.083 But it's often just reallya monkey instinct.
+00:35:33.252 We're just monkeys with a computerstuck in our brain.
+00:35:38.883 But even though the cortexis sort of the smart,
+00:35:41.844 or the intelligent part of the brain,
+00:35:43.679 the thinking part of the brain,
+00:35:46.098 I've not yet met anyonewho wants to delete their limbic system
+00:35:49.852 or their cortex.
+00:35:51.020 They're quite happy having both.
+00:35:52.605 Everyone wants both parts of their brain.
+00:35:56.025 And people really want theirphones and their computers,
+00:35:58.736 which are really the tertiary,the third part of your intelligence.
+00:36:02.281 It's just that it's ...
+00:36:03.908 Like the bandwidth,
+00:36:06.202 the rate of communicationwith that tertiary layer is slow.
+00:36:11.665 And it's just a very tiny strawto this tertiary layer.
+00:36:15.502 And we want to make that tinystraw a big highway.
+00:36:19.298 And I’m definitely not sayingthat this is going to solve everything.
+00:36:22.885 Or this is you know,it’s the only thing --
+00:36:26.430 it’s something that might be helpful.
+00:36:30.517 And worst-case scenario,
+00:36:32.228 I think we solvesome important brain injury,
+00:36:35.773 spinal injury issues,and that's still a great outcome.
+00:36:38.359 CA: Best-case scenario,
+00:36:39.568 we may discover newhuman possibility, telepathy,
+00:36:42.029 you've spoken of, in a way,a connection with a loved one, you know,
+00:36:46.742 full memory and much fasterthought processing maybe.
+00:36:51.747 All these things.
+00:36:53.540 It's very cool.
+00:36:55.542 If AI were to take down Earth,we need a plan B.
+00:37:01.006 Let's shift our attention to space.
+00:37:04.593 We spoke last time at TEDabout reusability,
+00:37:06.720 and you had just demonstrated thatspectacularly for the first time.
+00:37:09.974 Since then, you've gone on to buildthis monster rocket, Starship,
+00:37:15.938 which kind of changes the rulesof the game in spectacular ways.
+00:37:20.025 Tell us about Starship.
+00:37:22.486 EM: Starship is extremely fundamental.
+00:37:24.405 So the holy grail of rocketryor space transport
+00:37:30.286 is full and rapid reusability.
+00:37:32.121 This has never been achieved.
+00:37:33.580 The closest that anything has comeis our Falcon 9 rocket,
+00:37:36.959 where we are able to recoverthe first stage, the boost stage,
+00:37:42.214 which is probably about 60 percentof the cost of the vehicle
+00:37:46.885 of the whole launch, maybe 70 percent.
+00:37:50.347 And we've now done thatover a hundred times.
+00:37:53.517 So with Starship, we will berecovering the entire thing.
+00:37:59.690 Or at least that's the goal.
+00:38:01.275 CA: Right.
+00:38:02.526 EM: And moreover,recovering it in such a way
+00:38:05.696 that it can be immediately re-flown.
+00:38:08.365 Whereas with Falcon 9, we still needto do some amount of refurbishment
+00:38:11.869 to the booster andto the fairing nose cone.
+00:38:16.790 But with Starship, the design goalis immediate re-flight.
+00:38:22.212 So you just refillpropellants and go again.
+00:38:28.302 And this is gigantic.
+00:38:30.679 Just as it would bein any other mode of transport.
+00:38:33.557 CA: And the main design
+00:38:35.351 is to basically take100 plus people at a time,
+00:38:41.357 plus a bunch of thingsthat they need, to Mars.
+00:38:45.611 So, first of all, talk about that piece.
+00:38:47.613 What is your latest timeline?
+00:38:51.116 One, for the first time,a Starship goes to Mars,
+00:38:54.536 presumably without people,but just equipment.
+00:38:57.122 Two, with people.
+00:38:59.041 Three, there’s sort of,
+00:39:01.335 OK, 100 people at a time, let's go.
+00:39:04.546 EM: Sure.
+00:39:05.714 And just to put the costthing into perspective,
+00:39:09.510 the expected cost of Starship,
+00:39:14.306 putting 100 tons into orbit,
+00:39:16.350 is significantly lessthan what it would have cost
+00:39:21.271 or what it did cost to put our tinyFalcon 1 rocket into orbit.
+00:39:27.611 Just as the cost of flyinga 747 around the world
+00:39:32.282 is less than the cost of a small airplane.
+00:39:35.244 You know, a small airplanethat was thrown away.
+00:39:37.871 So it's really pretty mind-bogglingthat the giant thing costs less,
+00:39:43.961 way less than the small thing.
+00:39:45.421 So it doesn't use exotic propellants
+00:39:50.050 or things that are difficultto obtain on Mars.
+00:39:52.928 It uses methane as fuel,
+00:39:56.890 and it's primarily oxygen,roughly 77-78 percent oxygen by weight.
+00:40:03.313 And Mars has a CO2 atmosphereand has water ice,
+00:40:06.942 which is CO2 plus H2O,so you can make CH4, methane,
+00:40:10.362 and O2, oxygen, on Mars.
+00:40:12.197 CA: Presumably, one of the first taskson Mars will be to create a fuel plant
+00:40:16.201 that can create the fuelfor the return trips of many Starships.
+00:40:20.497 EM: Yes.
+00:40:21.665 And actually, it's mostlygoing to be oxygen plants,
+00:40:24.626 because it's 78 percent oxygen,22 percent fuel.
+00:40:31.300 But the fuel is a simple fuelthat is easy to create on Mars.
+00:40:35.512 And in many other partsof the solar system.
+00:40:38.098 So basically ...
+00:40:39.933 And it's all propulsive landing,no parachutes,
+00:40:43.729 nothing thrown away.
+00:40:46.857 It has a heat shield that’s capableof entering on Earth or Mars.
+00:40:53.530 We can even potentially go to Venus.
+00:40:55.324 but you don't want to go there.
+00:40:56.867 (Laughs)
+00:40:59.161 Venus is hell, almost literally.
+00:41:02.247 But you could ...
+00:41:04.041 It's a generalized method of transportto anywhere in the solar system,
+00:41:08.921 because the point at whichyou have propellant depo on Mars,
+00:41:11.798 you can then travel to the asteroid belt
+00:41:13.759 and to the moons of Jupiter and Saturn
+00:41:16.887 and ultimately anywherein the solar system.
+00:41:19.848 CA: But your main focus
+00:41:22.643 and SpaceX's main focus is still Mars.
+00:41:26.313 That is the mission.
+00:41:28.524 That is where most of the effort will go?
+00:41:33.278 Or are you actually imagininga much broader array of uses
+00:41:37.991 even in the coming, you know,
+00:41:40.619 the first decade or so of uses of this.
+00:41:44.498 Where we could go,for example, to other places
+00:41:46.750 in the solar system to explore,
+00:41:48.710 perhaps NASA wants to usethe rocket for that reason.
+00:41:53.423 EM: Yeah, NASA is planning to usea Starship to return to the moon,
+00:41:58.595 to return people to the moon.
+00:42:01.139 And so we're very honored that NASAhas chosen us to do this.
+00:42:07.271 But I'm saying it is a generalized --
+00:42:11.650 it’s a general solution
+00:42:14.027 to getting anywherein the greater solar system.
+00:42:19.241 It's not suitable for goingto another star system,
+00:42:21.785 but it is a general solution for transportanywhere in the solar system.
+00:42:25.706 CA: Before it can do any of that,
+00:42:27.332 it's got to demonstrate it can get intoorbit, you know, around Earth.
+00:42:30.627 What’s your latest adviceon the timeline for that?
+00:42:35.632 EM: It's looking promising for usto have an orbital launch attempt
+00:42:39.595 in a few months.
+00:42:43.015 So we're actually integrating --
+00:42:46.602 will be integrating the enginesinto the booster
+00:42:49.605 for the first orbital flightstarting in about a week or two.
+00:42:53.942 And the launch complexitself is ready to go.
+00:43:00.741 So assuming we get regulatory approval,
+00:43:04.453 I think we could have an orbitallaunch attempt within a few months.
+00:43:10.959 CA: And a radical new technology like this
+00:43:13.003 presumably there is real riskon those early attempts.
+00:43:15.589 EM: Oh, 100 percent, yeah.
+00:43:16.882 The joke I make all the timeis that excitement is guaranteed.
+00:43:20.719 Success is not guaranteed,but excitement certainly is.
+00:43:23.513 CA: But the last I saw on your timeline,
+00:43:25.932 you've slightly put back the expected date
+00:43:28.935 to put the first human on Marstill 2029, I want to say?
+00:43:33.815 EM: Yeah, I mean, so let's see.
+00:43:36.985 I mean, we have built a productionsystem for Starship,
+00:43:40.489 so we're making a lotof ships and boosters.
+00:43:43.784 CA: How many are you planningto make actually?
+00:43:46.036 EM: Well, we're currently expectingto make a booster and a ship
+00:43:51.792 roughly every, well, initially,roughly every couple of months,
+00:43:55.295 and then hopefully by the endof this year, one every month.
+00:43:59.007 So it's giant rockets, and a lot of them.
+00:44:01.760 Just talking in termsof rough orders of magnitude,
+00:44:04.179 in order to createa self-sustaining city on Mars,
+00:44:07.724 I think you will need somethingon the order of a thousand ships.
+00:44:12.187 And we just need a Helen of Sparta,I guess, on Mars.
+00:44:19.319 CA: This is not in mostpeople's heads, Elon.
+00:44:21.571 EM: The planet that launched 1,000 ships.
+00:44:24.574 CA: That's nice.
+00:44:25.784 But this is not in most people's heads,
+00:44:27.661 this picture that you have in your mind.
+00:44:29.621 There's basically a two-year window,
+00:44:31.373 you can only really fly to Marsconveniently every two years.
+00:44:34.292 You were picturing that during the 2030s,
+00:44:39.089 every couple of years,
+00:44:40.507 something like 1,000 Starships take off,
+00:44:43.552 each containing 100 or more people.
+00:44:45.512 That picture is just completelymind-blowing to me.
+00:44:51.393 That sense of this armadaof humans going to --
+00:44:54.813 EM: It'll be like "BattlestarGalactica," the fleet departs.
+00:44:57.691 CA: And you think that it canbasically be funded by people
+00:45:00.485 spending maybe a couple hundred grandon a ticket to Mars?
+00:45:03.739 Is that price about where it has been?
+00:45:07.367 EM: Well, I think if you say like,
+00:45:08.994 what's required in order to getenough people and enough cargo to Mars
+00:45:13.790 to build a self-sustaining city.
+00:45:17.377 And it's where you have an intersection
+00:45:19.296 of sets of people who want to go,
+00:45:21.965 because I think only a small percentageof humanity will want to go,
+00:45:27.012 and can afford to goor get sponsorship in some manner.
+00:45:31.391 That intersection of sets, I think,
+00:45:33.101 needs to be a million peopleor something like that.
+00:45:36.646 And so it’s what can a million peopleafford, or get sponsorship for,
+00:45:40.442 because I think governmentswill also pay for it,
+00:45:42.819 and people can take out loans.
+00:45:45.864 But I think at the pointat which you say, OK, like,
+00:45:49.618 if moving to Mars costs are,for argument’s sake, $100,000,
+00:45:56.041 then I think you know,almost anyone can work and save up
+00:46:01.213 and eventually have $100,000and be able to go to Mars if they want.
+00:46:05.300 We want to make it availableto anyone who wants to go.
+00:46:10.263 It's very important to emphasizethat Mars, especially in the beginning,
+00:46:14.434 will not be luxurious.
+00:46:15.727 It will be dangerous, cramped,difficult, hard work.
+00:46:22.025 It's kind of like that Shackleton adfor going to the Antarctic,
+00:46:25.237 which I think is actually not real,but it sounds real and it's cool.
+00:46:28.865 It's sort of like, the sales pitchfor going to Mars is,
+00:46:31.785 "It's dangerous, it's cramped.
+00:46:35.956 You might not make it back.
+00:46:38.750 It's difficult, it's hard work."
+00:46:40.293 That's the sales pitch.
+00:46:41.503 CA: Right.
+00:46:42.712 But you will make history.
+00:46:44.756 EM: But it'll be glorious.
+00:46:47.050 CA: So on that kind of launch rateyou're talking about over two decades,
+00:46:50.554 you could get your million peopleto Mars, essentially.
+00:46:54.224 Whose city is it?
+00:46:55.392 Is it NASA's city, is it SpaceX's city?
+00:46:57.352 EM: It’s the people of Mars’ city.
+00:47:01.106 The reason for this, I mean,I feel like why do this thing?
+00:47:05.735 I think this is important for maximizing
+00:47:10.115 the probable lifespan of humanityor consciousness.
+00:47:13.201 Human civilization could cometo an end for external reasons,
+00:47:17.247 like a giant meteor or super volcanoesor extreme climate change.
+00:47:24.045 Or World War III, or you know,any one of a number of reasons.
+00:47:32.929 But the probable life spanof civilizational consciousness
+00:47:35.849 as we know it,
+00:47:37.475 which we should really viewas this very delicate thing,
+00:47:40.645 like a small candle in a vast darkness.
+00:47:43.356 That is what appears to be the case.
+00:47:47.777 We're in this vast darkness of space,
+00:47:51.197 and there's this littlecandle of consciousness
+00:47:54.659 that’s only really come aboutafter 4.5 billion years,
+00:47:59.164 and it could just go out.
+00:48:01.166 CA: I think that's powerful,
+00:48:02.584 and I think a lot of peoplewill be inspired by that vision.
+00:48:05.420 And the reason you need the million people
+00:48:07.547 is because there has to beenough people there
+00:48:09.758 to do everything that you need to survive.
+00:48:13.136 EM: Really, like the critical thresholdis if the ships from Earth stop coming
+00:48:20.018 for any reason,
+00:48:22.604 does the Mars City die out or not?
+00:48:27.400 And so we have to --
+00:48:29.527 You know, people talk about like,the sort of, the great filters,
+00:48:32.697 the things that perhaps, you know,
+00:48:35.825 we talk about the Fermi paradox,and where are the aliens?
+00:48:38.536 Well maybe there are thesevarious great filters
+00:48:40.872 that the aliens didn’t pass,
+00:48:42.290 and so they eventuallyjust ceased to exist.
+00:48:46.920 And one of the great filtersis becoming a multi-planet species.
+00:48:50.674 So we want to pass that filter.
+00:48:54.302 And I'll be long-dead beforethis is, you know, a real thing,
+00:49:00.350 before it happens.
+00:49:01.601 But I’d like to at least see us makegreat progress in this direction.
+00:49:07.315 CA: Given how torturedthe Earth is right now,
+00:49:09.859 how much we're beating each other up,
+00:49:12.737 shouldn't there be discussions going on
+00:49:15.573 with everyone who is dreamingabout Mars to try to say,
+00:49:19.786 we've got a oncein a civilization's chance
+00:49:24.958 to make some new rules here?
+00:49:27.002 Should someone be tryingto lead those discussions
+00:49:30.755 to figure out what it means for thisto be the people of Mars' City?
+00:49:35.093 EM: Well, I think ultimately
+00:49:36.469 this will be up to the peopleof Mars to decide
+00:49:38.722 how they want to rethink society.
+00:49:43.101 Yeah there’s certainly risk there.
+00:49:45.395 And hopefully the people of Marswill be more enlightened
+00:49:50.066 and will not fightamongst each other too much.
+00:49:54.279 I mean, I have some recommendations,
+00:49:56.031 which people of Marsmay choose to listen to or not.
+00:50:00.035 I would advocate for moreof a direct democracy,
+00:50:02.829 not a representative democracy,
+00:50:05.040 and laws that are short enoughfor people to understand.
+00:50:08.168 Where it is harder to create lawsthan to get rid of them.
+00:50:14.424 CA: Coming back a bit nearer term,
+00:50:16.134 I'd love you to just talk a bitabout some of the other possibility space
+00:50:19.596 that Starship seems to have created.
+00:50:23.349 So given --
+00:50:24.768 Suddenly we've got this abilityto move 100 tons-plus into orbit.
+00:50:29.230 So we've just launchedthe James Webb telescope,
+00:50:32.400 which is an incredible thing.
+00:50:34.444 It's unbelievable.
+00:50:35.612 EM: Exquisite piece of technology.
+00:50:37.447 CA: Exquisite piece of technology.
+00:50:39.115 But people spent two years tryingto figure out how to fold up this thing.
+00:50:42.660 It's a three-ton telescope.
+00:50:44.037 EM: We can make it a lot easierif you’ve got more volume and mass.
+00:50:47.207 CA: But let's ask a different question.
+00:50:49.084 Which is, how much more powerfula telescope could someone design
+00:50:55.882 based on using Starship, for example?
+00:50:59.469 EM: I mean, roughly, I'd say it's probablyan order of magnitude more resolution.
+00:51:04.057 If you've got 100 tonsand a thousand cubic meters volume,
+00:51:07.268 which is roughly what we have.
+00:51:08.895 CA: And what about other explorationthrough the solar system?
+00:51:12.482 I mean, I'm you know --
+00:51:14.692 EM: Europa is a big question mark.
+00:51:17.403 CA: Right, so there's an ocean there.
+00:51:19.239 And what you really want to dois to drop a submarine into that ocean.
+00:51:22.534 EM: Maybe there's like,some squid civilization,
+00:51:24.869 cephalopod civilizationunder the ice of Europa.
+00:51:28.123 That would be pretty interesting.
+00:51:29.749 CA: I mean, Elon, if you could takea submarine to Europa
+00:51:32.460 and we see pictures of this thingbeing devoured by a squid,
+00:51:36.131 that would honestly bethe happiest moment of my life.
+00:51:38.716 EM: Pretty wild, yeah.
+00:51:40.426 CA: What other possibilitiesare out there?
+00:51:43.263 Like, it feels like if you're going tocreate a thousand of these things,
+00:51:47.642 they can only fly to Mars every two years.
+00:51:50.895 What are they doing the rest of the time?
+00:51:53.106 It feels like there's thisexplosion of possibility
+00:51:57.777 that I don't think peopleare really thinking about.
+00:52:00.238 EM: I don't know, we've certainlygot a long way to go.
+00:52:02.866 As you alluded to earlier,we still have to get to orbit.
+00:52:05.618 And then after we get to orbit,
+00:52:07.412 we have to really prove out and refinefull and rapid reusability.
+00:52:14.085 That'll take a moment.
+00:52:19.090 But I do think we will solve this.
+00:52:22.969 I'm highly confidentwe will solve this at this point.
+00:52:26.014 CA: Do you ever wake up with the fear
+00:52:27.849 that there's going to be thisHindenburg moment for SpaceX where ...
+00:52:31.811 EM: We've had many Hindenburg.
+00:52:33.313 Well, we've never had Hindenburg momentswith people, which is very important.
+00:52:37.025 Big difference.
+00:52:38.776 We've blown up quite a few rockets.
+00:52:40.486 So there's a whole compilation onlinethat we put together
+00:52:44.032 and others put together,
+00:52:45.742 it's showing rockets are hard.
+00:52:47.744 I mean, the sheer amount of energygoing through a rocket boggles the mind.
+00:52:51.581 So, you know, getting outof Earth's gravity well is difficult.
+00:52:55.126 We have a strong gravityand a thick atmosphere.
+00:52:59.422 And Mars, which is less than 40 percent,
+00:53:03.426 it's like, 37 percent of Earth's gravity
+00:53:06.179 and has a thin atmosphere.
+00:53:08.097 The ship alone can go all the way
+00:53:10.141 from the surface of Marsto the surface of Earth.
+00:53:12.602 Whereas getting to Mars requiresa giant booster and orbital refilling.
+00:53:17.774 CA: So, Elon, as I think moreabout this incredible array of things
+00:53:22.612 that you're involved with,
+00:53:24.489 I keep seeing these synergies,
+00:53:28.826 to use a horrible word,
+00:53:30.745 between them.
+00:53:31.955 You know, for example,
+00:53:33.122 the robots you're building from Teslacould possibly be pretty handy on Mars,
+00:53:38.920 doing some of the dangerouswork and so forth.
+00:53:41.089 I mean, maybe there's a scenariowhere your city on Mars
+00:53:43.758 doesn't need a million people,
+00:53:45.218 it needs half a million peopleand half a million robots.
+00:53:47.971 And that's a possibility.
+00:53:49.847 Maybe The Boring Company could play a role
+00:53:52.100 helping create some of the subterraneandwelling spaces that you might need.
+00:53:57.480 EM: Yeah.
+00:53:58.982 CA: Back on planet Earth,
+00:54:00.525 it seems like a partnershipbetween Boring Company and Tesla
+00:54:03.778 could offer an unbelievable deal to a city
+00:54:07.699 to say, we will create for youa 3D network of tunnels
+00:54:12.245 populated by robo-taxis
+00:54:14.539 that will offer fast, low-costtransport to anyone.
+00:54:18.835 You know, full self-driving mayor may not be done this year.
+00:54:21.713 And in some cities,like, somewhere like Mumbai,
+00:54:24.549 I suspect won't be done for a decade.
+00:54:26.634 EM: Some places are morechallenging than others.
+00:54:28.928 CA: But today, today,with what you've got,
+00:54:31.306 you could put a 3D networkof tunnels under there.
+00:54:35.601 EM: Oh, if it’s just in a tunnel,that’s a solved problem.
+00:54:38.438 CA: Exactly, full self-drivingis a solved problem.
+00:54:40.982 To me, there’s amazing synergy there.
+00:54:44.068 With Starship,
+00:54:45.820 you know, Gwynne Shotwell talkedabout by 2028 having from city to city,
+00:54:51.200 you know, transport on planet Earth.
+00:54:52.952 EM: This is a real possibility.
+00:54:57.290 The fastest way to getfrom one place to another,
+00:55:00.293 if it's a long distance, is a rocket.
+00:55:03.087 It's basically an ICBM.
+00:55:05.673 CA: But it has to land --
+00:55:07.675 Because it's an ICBM,it has to land probably offshore,
+00:55:11.596 because it's loud.
+00:55:12.805 So why not have a tunnelthat then connects to the city with Tesla?
+00:55:20.897 And Neuralink.
+00:55:22.065 I mean, if you going to go to Mars
+00:55:23.733 having a telepathic connectionwith loved ones back home,
+00:55:26.611 even if there's a time delay...
+00:55:29.238 EM: These are not intendedto be connected, by the way.
+00:55:33.326 But there certainly could besome synergies, yeah.
+00:55:35.787 CA: Surely there is a growing argument
+00:55:38.081 that you should actually putall these things together
+00:55:40.792 into one company
+00:55:42.960 and just have a companydevoted to creating a future
+00:55:47.298 that’s exciting,
+00:55:48.758 and let a thousand flowers bloom.
+00:55:50.426 Have you been thinking about that?
+00:55:53.429 EM: I mean, it is tricky because Teslais a publicly-traded company,
+00:55:56.724 and the investor base of Tesla and SpaceX
+00:56:02.021 and certainly Boring Companyand Neuralink are quite different.
+00:56:05.441 Boring Company and Neuralinkare tiny companies.
+00:56:08.569 CA: By comparison.
+00:56:10.321 EM: Yeah, Tesla's got 110,000 people.
+00:56:14.283 SpaceX I think is around 12,000 people.
+00:56:17.161 Boring Company and Neuralinkare both under 200 people.
+00:56:21.749 So they're little, tiny companies,
+00:56:24.961 but they will probablyget bigger in the future.
+00:56:27.213 They will get bigger in the future.
+00:56:29.632 It's not that easy to sortof combine these things.
+00:56:33.761 CA: Traditionally, you have saidthat for SpaceX especially,
+00:56:36.639 you wouldn't want it public,
+00:56:38.057 because public investors wouldn't supportthe craziness of the idea
+00:56:42.395 of going to Mars or whatever.
+00:56:43.813 EM: Yeah, making life multi-planetary
+00:56:45.898 is outside of the normal time horizonof Wall Street analysts.
+00:56:51.779 (Laughs)
+00:56:52.864 To say the least.
+00:56:54.073 CA: I think something's changed, though.
+00:56:56.701 What's changed is that Tesla is nowso powerful and so big
+00:56:59.495 and throws off so much cash
+00:57:01.998 that you actually couldconnect the dots here.
+00:57:05.501 Just tell the public that x-billiondollars a year, whatever your number is,
+00:57:10.089 will be diverted to the Mars mission.
+00:57:13.551 I suspect you'd have massiveinterest in that company.
+00:57:17.054 And it might unlock a lotmore possibility for you, no?
+00:57:22.018 EM: I would like to give the public accessto ownership of SpaceX,
+00:57:27.815 but I mean the thing that like,
+00:57:30.568 the overhead associatedwith a public company is high.
+00:57:38.284 I mean, as a public company,you're just constantly sued.
+00:57:41.037 It does occupy like, a fair bit of ...
+00:57:45.958 You know, time and effortto deal with these things.
+00:57:49.504 CA: But you would still only have onepublic company, it would be bigger,
+00:57:53.174 and have more things going on.
+00:57:54.967 But instead of beingon four boards, you'd be on one.
+00:57:57.720 EM: I'm actually not even on the Neuralinkor Boring Company boards.
+00:58:02.099 And I don't really attendthe SpaceX board meetings.
+00:58:06.103 We only have two a year,
+00:58:07.313 and I just stop by and chat for an hour.
+00:58:13.110 The board overhead for a publiccompany is much higher.
+00:58:15.988 CA: I think some investors probably worryabout how your time is being split,
+00:58:19.742 and they might be excitedby you know, that.
+00:58:22.495 Anyway, I just woke up the other day
+00:58:25.790 thinking, just, there are so many waysin which these things connect.
+00:58:29.252 And you know,just the simplicity of that mission,
+00:58:33.130 of building a future that is worthgetting excited about,
+00:58:36.676 might appeal to an awful lot of people.
+00:58:41.013 Elon, you are reported by Forbesand everyone else as now, you know,
+00:58:46.435 the world's richest person.
+00:58:48.187 EM: That’s not a sovereign.
+00:58:49.564 CA: (Laughs)
+00:58:50.606 EM: You know, I think it’s fair to say
+00:58:52.483 that if somebody is like, the kingor de facto king of a country,
+00:58:57.154 they're wealthier than I am.
+00:58:59.323 CA: But it’s just harder to measure --
+00:59:02.285 So $300 billion.
+00:59:03.744 I mean, your net worth on any given day
+00:59:07.623 is rising or fallingby several billion dollars.
+00:59:10.710 How insane is that?
+00:59:12.878 EM: It's bonkers, yeah.
+00:59:14.088 CA: I mean, how do you handlethat psychologically?
+00:59:16.674 There aren't many people in the worldwho have to even think about that.
+00:59:20.177 EM: I actually don't thinkabout that too much.
+00:59:22.430 But the thing that isactually more difficult
+00:59:26.058 and that does make sleeping difficult
+00:59:27.977 is that, you know,
+00:59:31.397 every good hour or even minute
+00:59:35.026 of thinking about Tesla and SpaceX
+00:59:39.447 has such a big effect on the company
+00:59:41.991 that I really try to workas much as possible,
+00:59:45.911 you know, to the edgeof sanity, basically.
+00:59:49.081 Because you know,Tesla’s getting to the point where
+00:59:54.920 probably will getto the point later this year,
+00:59:57.131 where every high-qualityminute of thinking
+01:00:02.219 is a million dollars impact on Tesla.
+01:00:08.517 Which is insane.
+01:00:13.272 I mean, the basic, you know,if Tesla is doing, you know,
+01:00:17.360 sort of $2 billion a week,let’s say, in revenue,
+01:00:21.280 it’s sort of $300 million a day,seven days a week.
+01:00:26.535 You know, it's ...
+01:00:28.829 CA: If you can change that by five percentin an hour’s brainstorm,
+01:00:34.418 that's a pretty valuable hour.
+01:00:37.546 EM: I mean, there are many instanceswhere a half-hour meeting,
+01:00:42.385 I was able to improvethe financial outcome of the company
+01:00:45.763 by $100 millionin a half-hour meeting.
+01:00:50.476 CA: There are many other people out there
+01:00:52.520 who can't standthis world of billionaires.
+01:00:55.314 Like, they are hugelyoffended by the notion
+01:00:59.276 that an individual can havethe same wealth as, say,
+01:01:03.906 a billion or moreof the world's poorest people.
+01:01:07.159 EM: If they examine sort of --
+01:01:09.578 I think there's some axiomatic flawsthat are leading them to that conclusion.
+01:01:15.167 For sure, it would be veryproblematic if I was consuming,
+01:01:20.131 you know, billions of dollars a yearin personal consumption.
+01:01:23.259 But that is not the case.
+01:01:24.802 In fact, I don't even owna home right now.
+01:01:27.096 I'm literally staying at friends' places.
+01:01:30.141 If I travel to the Bay Area,
+01:01:31.726 which is where mostof Tesla engineering is,
+01:01:33.811 I basically rotate throughfriends' spare bedrooms.
+01:01:38.691 I don't have a yacht,I really don't take vacations.
+01:01:44.071 It’s not as though my personalconsumption is high.
+01:01:49.243 I mean, the one exception is a plane.
+01:01:51.078 But if I don't use the plane,then I have less hours to work.
+01:01:55.291 CA: I mean, I personally thinkyou have shown that you are mostly driven
+01:01:59.420 by really quite a deepsense of moral purpose.
+01:02:01.964 Like, your attempts to solvethe climate problem
+01:02:07.595 have been as powerful as anyone elseon the planet that I'm aware of.
+01:02:12.433 And I actually can't understand,
+01:02:14.518 personally, I can't understand the fact
+01:02:16.437 that you get all this criticismfrom the Left about,
+01:02:18.898 "Oh, my God, he's so rich,that's disgusting."
+01:02:21.734 When climate is their issue.
+01:02:25.446 Philanthropy is a topicthat some people go to.
+01:02:27.698 Philanthropy is a hard topic.
+01:02:29.408 How do you think about that?
+01:02:31.535 EM: I think if you careabout the reality of goodness
+01:02:34.246 instead of the perception of it,philanthropy is extremely difficult.
+01:02:39.126 SpaceX, Tesla, Neuralinkand The Boring Company are philanthropy.
+01:02:43.464 If you say philanthropyis love of humanity,
+01:02:46.592 they are philanthropy.
+01:02:49.553 Tesla is accelerating sustainable energy.
+01:02:52.473 This is a love -- philanthropy.
+01:02:56.894 SpaceX is trying to ensurethe long-term survival of humanity
+01:03:00.648 with a multiple-planet species.
+01:03:02.191 That is love of humanity.
+01:03:05.319 You know, Neuralink is trying to helpsolve brain injuries
+01:03:09.907 and existential risk with AI.
+01:03:12.243 Love of humanity.
+01:03:13.452 Boring Company is trying to solve traffic,which is hell for most people,
+01:03:16.956 and that also is love of humanity.
+01:03:20.084 CA: How upsetting is it to you
+01:03:24.421 to hear this constant drumbeat of,
+01:03:28.008 "Billionaires, my God,Elon Musk, oh, my God?"
+01:03:30.219 Like, do you just shrug that off
+01:03:33.222 or does it does it actually hurt?
+01:03:36.559 EM: I mean, at this point,it's water off a duck's back.
+01:03:39.353 CA: Elon, I’d like to,as we wrap up now,
+01:03:41.939 just pull the camera backand just think ...
+01:03:45.359 You’re a father nowof seven surviving kids.
+01:03:49.530 EM: Well, I mean, I'm tryingto set a good example
+01:03:51.907 because the birthrate on Earth is so low
+01:03:53.868 that we're facing civilizational collapse
+01:03:55.911 unless the birth rate returnsto a sustainable level.
+01:04:01.667 CA: Yeah, you've talked about this a lot,
+01:04:03.669 that depopulation is a big problem,
+01:04:06.005 and people don't understandhow big a problem it is.
+01:04:08.465 EM: Population collapseis one of the biggest threats
+01:04:10.968 to the future of human civilization.
+01:04:12.761 And that is what is going on right now.
+01:04:14.638 CA: What drives you on a day-to-daybasis to do what you do?
+01:04:17.516 EM: I guess, like,I really want to make sure
+01:04:20.644 that there is a good future for humanity
+01:04:24.148 and that we're on a path to understandingthe nature of the universe,
+01:04:29.486 the meaning of life.
+01:04:30.696 Why are we here, how did we get here?
+01:04:33.490 And in order to understandthe nature of the universe
+01:04:37.953 and all these fundamental questions,
+01:04:41.916 we must expand the scopeand scale of consciousness.
+01:04:47.129 Certainly it must not diminish or go out.
+01:04:49.131 Or we certainly won’t understand this.
+01:04:51.342 I would say I’ve been motivatedby curiosity more than anything,
+01:04:54.929 and just desire to think about the future
+01:04:59.308 and not be sad, you know?
+01:05:03.687 CA: And are you?
+01:05:04.897 Are you not sad?
+01:05:06.607 EM: I'm sometimes sad,
+01:05:07.816 but mostly I'm feeling I guess
+01:05:12.363 relatively optimisticabout the future these days.
+01:05:15.699 There are certainly some bigrisks that humanity faces.
+01:05:20.287 I think the population collapseis a really big deal,
+01:05:23.123 that I wish more people would think about
+01:05:28.253 because the birth rate is far belowwhat's needed to sustain civilization
+01:05:33.258 at its current level.
+01:05:35.594 And there's obviously ...
+01:05:39.682 We need to take actionon climate sustainability,
+01:05:42.601 which is being done.
+01:05:45.562 And we need to securethe future of consciousness
+01:05:47.898 by being a multi-planet species.
+01:05:51.151 We need to address --
+01:05:52.486 Essentially, it's important to takewhatever actions we can think of
+01:05:55.698 to address the existential risksthat affect the future of consciousness.
+01:06:00.536 CA: There's a wholegeneration coming through
+01:06:02.663 who seem really sad about the future.
+01:06:04.456 What would you say to them?
+01:06:07.376 EM: Well, I think if you want the futureto be good, you must make it so.
+01:06:12.256 Take action to make it good.
+01:06:14.717 And it will be.
+01:06:17.177 CA: Elon, thank you for all this time.
+01:06:19.722 That is a beautiful place to end.
+01:06:21.390 Thanks for all you're doing.
+01:06:22.766 EM: You're welcome.

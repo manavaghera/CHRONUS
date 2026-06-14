@@ -1,0 +1,907 @@
+# tactiq.io free youtube transcript
+# No title found
+# https://www.youtube.com/watch/j6_VfR-CyuM
+
+00:00:00.000 No text
+00:00:00.240 Let's get started. You know, we wanted to try something new this week. Every week, uh, you know, I get a little
+00:00:06.799 upset. Things perturb me, Saxs, and, uh, when it does, I just yell and scream,
+00:00:12.480 "Disgat." And so, I bought the domain name.com for no reason other than my own amusement. But, you know what? I I'm not
+00:00:19.279 alone in my absolute disgust at what's going on in the world. So this week
+00:00:25.600 we're going to bring out a new feature here on the Allin podcast. Disgraciad corner.
+00:00:33.840 He was the best guy around. What about the people he murdered? What murder?
+00:00:39.600 You can act like a man. He's just kiding. You insulted him a
+00:00:45.680 little bit. Snacks and I want the snacks. What's wrong with you? Your hair was in the toilet water.
+00:00:51.280 Disgusting. I got to suffocate you, you little. It's a disgrace.
+00:00:58.160 Disgraciad. Disgraciad. This is fantastic. This is our new feature. Chimath, you
+00:01:06.400 look like you're ready to go. Why don't you tell you tell everybody who gets your discretion this week?
+00:01:12.560 Wait, we all had to come with a discretion. You really You missed a memo. All right,
+00:01:18.240 fine. Enough. I got one. I got one. Okay. All right. Just calm down. My discretziad corner goes to Jason
+00:01:23.439 Calcanis. Oh, here we go. Come on, man. You can't and Pete Buddha Judge where they in the
+00:01:29.119 first 30 seconds of the interview compared virtue signaling points about
+00:01:34.240 how each one worked at various moments at Amnesty International. Absolutely.
+00:01:39.280 Literally affecting zero change, making no progress in the world, but collecting a badge that they used to hold over
+00:01:45.840 other people. We wrote a lot of letters. We wrote a lot of letters, which is good. That means it's like a
+00:01:51.439 good one cuz behind the scenes Jason and Pete Buddha Judge Disgraciad.
+00:01:56.560 Great. I'm glad that I get the first one and you you can imagine what's coming next week for you. I saw the Sydney Sweeney dress today
+00:02:03.200 trending on social. It's too much. What?
+00:02:08.720 It's too much. What is it? I didn't I didn't even know what this is. You didn't see it. Nick picture. Okay.
+00:02:13.760 Bring it up. It's a little floppy. How is this disgusting? What are you talking about much? It's disgraceful. A
+00:02:21.120 little bit of like look at this. Oh my god. Too much elegant. Too much. Uh in my day, Sachs, a little
+00:02:28.480 uh cleavage maybe perhaps in the 90s or 2000s. Some side view. This is too much.
+00:02:38.319 Very high brow subject, madam. We were discussing our own politics and the
+00:02:44.160 Sydney Swedish press. I don't know who's trending on.
+00:02:49.599 Hi dad. Hi dad. Put away the phone.
+00:02:54.879 Let your winners ride.
+00:03:02.480 We open sourced it to the fans and they've just gone crazy with
+00:03:10.000 No text
+00:03:10.159 what's going on with the algorithm. I'm getting Sydney Sweeny's dress all day. And last week Sax
+00:03:15.760 Well, maybe you should stop favoring it. 15 times. And then Sax, poor Sachs got
+00:03:23.200 he got invited to SluckCon for two weeks straight on the algorithm. No, I say the algorithm has become if
+00:03:29.920 you if you demonstrate Sax will even tell if that's a joke or a real thing. It's a real thing in San Francisco.
+00:03:36.400 It's all too real. It's actually real. Yeah,
+00:03:41.440 for real. But I've noticed Yeah. If you if you demonstrate interest in anything on X
+00:03:46.959 now, if you click on it, god forbid you like something, man, the algorithm is on it, it will
+00:03:52.720 give you more of that. It will give you a lot more. Yes. Yes. So, we we did have an issue.
+00:03:58.400 Um we still have somewhat of an issue where
+00:04:04.319 um there was there was an important bug that was figured out that that was solved over the weekend which caused um
+00:04:12.159 in network posts to be uh not shown. Uh so you basically if you followed someone
+00:04:18.639 you wouldn't see them wouldn't see their posts. Got it. It's obviously a big bug major bug. Um
+00:04:27.120 then um the uh the algorithm was not probably
+00:04:32.400 taking into account um if you just uh dwelt on something.
+00:04:37.919 Um uh but but but if you if you interacted with it, it would it would go hog wild.
+00:04:43.199 So if you as David said, if you if you were to favorite, reply or engage with it in some way,
+00:04:49.440 it it is going to get you a torrent of that same thing. Oh, sachs. So maybe you
+00:04:55.919 What was your interaction? Did you bookmark Slack on? I think you bookmarked it. Here's what I thought was good about it
+00:05:02.000 though is all of a sudden if you happen to switch Sydney Sweeny's
+00:05:08.720 boobs. Yeah, that that Okay. But what I thought
+00:05:16.000 was good about it was that you would see who else had a take on the same subject matter
+00:05:21.600 and that actually has been a useful part of it. Yeah. So you do you do get more of a you get
+00:05:27.520 more of like a 360 view on whatever it is that you shown interest in. Yeah. Yeah. It it it just it's like it
+00:05:35.600 was giving you if you you take a you'd have like it was just going too far. Obviously it was overcorrecting. uh it
+00:05:41.919 had too much gain on um it just turned up the gain way too high on any interaction would would you would then
+00:05:48.479 get a torrent of that. It's like it's like oh you had a taste of it. We're going to give you three helpings.
+00:05:55.440 We're going to force you with we're going to give you the food funnel and and that's all being done I assume
+00:06:01.520 it's all being done with Grock now. So it's not like the old hardcoded algorithm or is it using
+00:06:07.120 Grock? Well, what what's happening is that, you know, we're gradually deleting the uh
+00:06:12.880 legacy Twitter heristics. Now, the problem is that it's like as you delete these heristics, it turns out the one
+00:06:18.720 heristic, the one bug was covering for the other bug. And so, when you delete one side of the bug, you know, it's like
+00:06:25.360 that that meme with the internet that where there's like this very complicated machine and there's like a tiny little wooden stick that's keeping it going,
+00:06:32.400 which was I guess AWS East or whatever had something like that. Um, you know,
+00:06:38.479 when when when when somebody pulled out the little stick that what's this?
+00:06:44.400 I think it'd be good if it half of Earth. You know, it would be great if it showed like one person you follow and then like it
+00:06:52.720 blended the old style, which was just reverse chronological of your friends, the original version with this new
+00:06:59.120 version. So, you get like a little bit of both. Well, you can still you still have the everyone still has the following tab.
+00:07:05.280 Yeah. Now, something we're going to be adding is the ability to have a curated following tab because the problem is
+00:07:11.440 like if you follow some people and they're maybe a little more prolific than your, you know,
+00:07:19.039 Robert, you know, you you follow someone and some people are are much more, you know, say a lot more than others. Um, that
+00:07:26.080 that makes the following tab hard to use. Um, so we're going to add a um an option where you can have the following
+00:07:32.160 tab be cured. So uh Grock will say what are the most interesting things posted by your friends and then we'll show you
+00:07:38.880 that in the following tab. It will also
+00:07:44.800 everything um but uh but I think having that option will make the following tab much more
+00:07:51.360 useful. Um so it'll be a curated list of people you follow um like ideally the
+00:07:57.039 most interesting stuff that they've said which is kind of what you you you would want to look at. Um and then uh we we
+00:08:03.039 we've mostly fixed the bug which would um uh give you way too much of something if you interacted with a particular
+00:08:10.080 subject matter. Um and then the uh the really big change which is where Grock
+00:08:16.879 literally reads uh everything that's posted to the platform. Um
+00:08:23.039 uh we're actually there there's about 100 million posts per day. So it's 100
+00:08:28.080 million pieces of content per day. Um, and I think that's actually just maybe
+00:08:33.120 just in English. I think it goes beyond that if it's outside of English. Um, so, uh, Grock is gonna we're gonna start off
+00:08:39.839 reading the, uh, reading what what Grock thinks are the top 10 million of the 100
+00:08:45.600 million and and we'll actually read them, uh, and understand them and, uh,
+00:08:51.120 categorize them and match them to users. It's like this is this is not a job humans could ever do. Um and and and
+00:08:58.880 then once that is scaling reasonably well, we'll we'll add the entire 100 million a day. Um so it's literally
+00:09:05.760 going to read through a 100 million things and and and and show you the things that it thinks out of 100 million
+00:09:12.240 uh posts per day, what are the most interesting posts to you? How much of Colossus will that take like
+00:09:19.839 Yeah, that's like is it tens of thousands of servers like to do that
+00:09:25.200 every day? Yeah, my my guess is it's probably on the order of 50K H100, something like that. Wow. And that will replace search. So,
+00:09:31.600 you'll be able to actually search on Twitter and find things in like with a
+00:09:37.120 with a plain language. We'll have semantic search where you can just ask a question um and it will show
+00:09:44.640 you all content uh whether that is text, pictures or video that matches your
+00:09:49.920 search query semantically. How um how's it been 3 years in? This is a It was a three-year anniversary like a
+00:09:56.560 couple years. Is this three years? Yeah. Yeah. Remember it was Halloween.
+00:10:01.920 Yeah. Halloween's back. Halloween's back. But it was the the weekend you took over was Halloween.
+00:10:11.920 We had a good time. Yeah. Wow. Yeah. Three years.
+00:10:17.120 Where will things three years from now? Yeah. What what's the takeaway? 3 years
+00:10:24.000 later, you were you you obviously don't regret buying it. It's saved free speech. That was good. Seemed to have
+00:10:29.760 turned that whole thing around and that was I think a big part of your mission. But then you added it to XAI which makes
+00:10:36.160 it incredibly valuable as a data source. So when you look back on it, the reason
+00:10:41.200 you bought it to stop crazy woke mind virus and make truth exist in the world
+00:10:47.279 again. Great. Mission accomplished. Uh and now it has this great future. Yeah, we've got community notes. You can
+00:10:53.920 also ask Grock about any any anything you see on the platform. Um you know just you just press the Grock icon on
+00:10:59.839 any X post and we'll analyze analyze it for you. Um and and research it as much
+00:11:05.200 as you want. So you can you can basically have just by by tapping the Gro icon you can um assess the um
+00:11:12.399 whether that that post is the truth the whole truth or nothing but the truth or whether there's something supplemental
+00:11:17.600 or you need to be explained. So I think it I think it's actually we made a lot of progress towards uh yeah um freedom
+00:11:25.920 of of speech um and uh and and and people being able to tell whether
+00:11:31.040 something is false or not false you know propaganda. The recent update to Grock
+00:11:35.000 No text
+00:11:36.160 is actually I think very good um at piercing through propaganda. Um so um
+00:11:41.600 and then we we we used that latest version of Grock to create Groipedia um which I think is um much uh more it's
+00:11:50.320 it it's it's not just I think more um neutral um than and more accurate than
+00:11:56.320 than Wikipedia but actually has a lot more information than a Wikipedia page. Did you seed it with Wikipedia? Actually
+00:12:01.600 take a step back. How did you guys how did you do this? Um well we used AI
+00:12:09.120 but meaning like totally unsupervised just complete training run on its own totally synthetic data no no seated set
+00:12:17.040 nothing. Um well it was only just uh recently
+00:12:23.120 possible for us to do this. Um so we've um we we finished training on a
+00:12:29.680 maximally true seeking maximally true seeking a a version of Grock that is good at cogent analysis.
+00:12:37.279 So breaking down um uh any any given argument into its aimatic elements um
+00:12:43.680 assessing whether those aims are um not you know the basic test for coency the
+00:12:49.440 axioms are likely to be true. they're not um contradictory. Uh that um the
+00:12:56.800 conclusion naturally that the conclusion most likely follows from those axioms.
+00:13:02.480 Um so so we just trained Grock on a lot of critical thinking. Um so it it just
+00:13:08.240 got really good at critical thinking. um which wasite quite hard and then we took that version of Grock and said okay
+00:13:14.560 cycle through the the million most uh popular uh articles in Wikipedia and and
+00:13:20.639 add modify and delete. So um that means um research the rest of the internet um
+00:13:27.760 whatever is publicly available um and correct uh what correct the Wikipedia articles and fix mistakes um but also
+00:13:35.440 add a lot more context um so sometimes really the the nature of
+00:13:40.639 the propaganda is that um you know facts are stated that that are technically
+00:13:47.120 true but are not repres do not properly represent a picture of the individual or
+00:13:53.120 This is critical because when you have a bio as you do, actually we all do on
+00:13:59.040 Wikipedia over time, it's just the people you fired or you you beat in business or
+00:14:05.199 have an axe to grind. So it just slowly becomes like the place where everybody
+00:14:10.560 you know kind of who hates you then puts their information. And I looked at mine. It was so much more representative and
+00:14:16.959 it was five times longer, six times longer. And the what it gave weight to
+00:14:23.120 uh was much more accurate. Much more accurate. And this opportunity was sitting here I
+00:14:28.800 think for a long time. Um and it's just great that you got to it because they they don't update my page but you
+00:14:35.120 know I don't know twice a month with you know and then who is the secret cobble? There's 50 people who are anonymous who
+00:14:41.839 decide what's gets put on it. it was a much better much more updated page in
+00:14:47.360 version one. Uh yes, this is version 0.1 as we put it as we show at the top. So um I do think
+00:14:54.160 actually by the time we get to version 1 1.0 it'll be 10 times better. But even at this early stage um as you as you
+00:15:00.399 just mentioned it's it's not just that it's correcting errors but um it it is creating a a more accurate realistic and
+00:15:08.000 fleshed out uh description of of people and events.
+00:15:13.760 you think and subject matters like you can look at articles on on physics in grapedia that they're much better than
+00:15:19.760 Wikipedia by far. This what I was going to ask you is like do you think that you can take this corpus of pages now and get Google to
+00:15:27.440 deboost Wikipedia or boost Graedia in traditional search because a lot of
+00:15:33.600 people still find this and they believe that it's authoritative because it comes up number one, right? So how do we how do we do that?
+00:15:39.920 How do you flip Google? Um yeah, so it really can if if people share a lot of
+00:15:46.079 if if if Graopedia uh is used elsewhere like if people cite it on their websites
+00:15:52.079 uh or post about it on social media um or when they do a search when Grapedia
+00:15:57.680 shows up they click on Grapedia it will naturally uh uh you know rise in in
+00:16:03.600 Google's uh you know rankings. Um I did I did send I did text Cindar because you
+00:16:10.079 know even sort of a day after launch if you typed in Wikipedia Google would just say did you mean Wikipedia?
+00:16:16.240 Wikipedia. Yeah. And it wouldn't bring up at all. Yeah. It's true. So so now
+00:16:22.000 how's the how's the usage been? Have you seen good growth since it launched? Uh yeah.
+00:16:28.480 It went super viral. Um so we're yeah we're seeing seeing it
+00:16:34.000 started all over the place. Um but yeah, it's and I think we'll see it used more
+00:16:39.839 and more um people as as people refer to it and people will judge for themselves when you read a Graedia article about a
+00:16:46.959 subject or a person that you know a lot about and you see, wow, this is way better than than Wikipedia. It's it's
+00:16:53.680 it's more comprehensive. It's it's way more accurate. Um it's not it's it's
+00:16:58.720 neutral instead of biased. then you're going to send you're going to forward those links around um and say this is
+00:17:05.439 actually the better source like it's it graphed will will will succeed I think
+00:17:11.760 very well because it it it is fundamentally a superior product to Wikipedia it is it is a better source of
+00:17:17.919 information um and we haven't even added images and video yet
+00:17:23.119 so we're yeah we're going to add a lot of video
+00:17:28.240 um So, uh, using Grom Imagine to create videos. Um,
+00:17:33.919 and, uh, so if you're trying to explain something,
+00:17:39.120 um, Grock imagine can take the text from Grapedia and then generate a video, uh,
+00:17:45.200 an explanatory video. So if you're trying to understand anything from how to tie a bow tie to you know how do
+00:17:51.120 certain chemical reactions work or you know um really anything um dietary
+00:17:56.400 things medical things um we could uh well you can just go and and see the
+00:18:02.240 video of of how it works that is created by when when you have this version that's
+00:18:07.679 maximally truth seeeking as a model do you think that there needs to be a better eval or a benchmark that people
+00:18:13.120 can point to that shows how off of the truth things are so that if you're going
+00:18:18.240 to start a training run with common crawl or if you're going to use Reddit or if you're going to use is it
+00:18:23.600 important to be able to like say hey hold on a second this eval just suck like you guys suck on this eval like
+00:18:29.039 it's just this is crappy data.
+00:18:34.160 Yeah, I I guess I'm not I think I mean there are a lot of eval out there. Um
+00:18:40.000 I've complete confidence that croced is going to succeed. Um because Wikipedia
+00:18:45.679 is actually not a very good product. Yeah. It it's it's it's the the information is
+00:18:51.600 sparse uh wrong and out of date. Um and if you can go if you find if and and it doesn't
+00:18:58.640 have you know there are very few images. There's basically no video. Um so if you
+00:19:04.160 have something which is um you know
+00:19:09.200 accurate comprehensive uh has videos uh where moreover you can
+00:19:15.360 ask if there's any part of it that you're curious about you can just highlight it and gro and and ask Grock
+00:19:20.720 right there. Um like if you're trying to learn something it's just great. It's it's it's not going to be a little bit
+00:19:26.799 better than than Wikipedia. It's going to be a hundred times better than Elon. Do you think you'll see like good
+00:19:32.480 uniform usage? Like if you look back on the last 3 years since you bought Twitter,
+00:19:38.960 there was a lot of people after you bought Twitter that said, "I'm leaving Twitter. Elon's bought it. I'm going to go to this other wherever the hell they
+00:19:45.360 went and there's all these new and there's all these and there's all
+00:19:51.039 these creature, you know." Yeah. But blue sky falling is my
+00:19:56.080 favorite. I guess my my question is as you destroy the woke mind viral kind of
+00:20:03.679 um control of the system and as you bring truth to the system whether the
+00:20:08.880 system is through graipedia or through X do people like just look for confirmation bias and they actually
+00:20:15.760 don't accept the truth like what do you like or do you think people are actually going to see the truth and change and
+00:20:22.000 change? Yeah. But I mean, is that like you thought Sydney Sweeny's boobs were
+00:20:27.600 great? Let me see mine. Looking good. Yeah, solid solid week
+00:20:32.720 there. Put a little something a little sheer, you know. I think we just got flagged on YouTube
+00:20:38.640 again. Yeah, we did. That that was definitely going to give us a censorship moment. Grade a moves.
+00:20:44.559 Yeah. No, but but like like but but do people change their mind? I mean, if there's actually I should take
+00:20:50.720 there's no such thing as grade A move. Um It's off the rails already.
+00:20:57.760 David, you were trying to ask a serious question. Go ahead. Well, I just want to know if people change their mind. Like, can you actually change people's minds by
+00:21:03.360 putting the truth in front of them or do people just take, you know, they kind of ignore the truth because they're they
+00:21:09.440 feel like they're in some sort of camp and they're like, I'm on. They want the confirmation bias. They want the confirmation bias and they
+00:21:14.960 want to stay in a camp and they want to be tribal about everything. Um it is remarkable how much people
+00:21:20.720 believe things simply because it is their the the belief of the of their inroup, you know, whatever their sort of
+00:21:27.600 political uh or ideological tribe is. Um, so, um, I mean there's some some
+00:21:35.760 pretty hilarious videos of, you know, um, you know, uh, there was like some
+00:21:41.360 guy going around um, is like a racist Nazi or whatever and and then and and then and he was like trying to show them
+00:21:47.200 the videos where of the thing that they are talking about um, where he is in
+00:21:52.799 fact uh, condemning the Nazis in strongest possible terms and condemning racism in the strongest possible terms
+00:21:58.240 and they literally don't even want to watch the So, so yeah, people at least some people
+00:22:05.679 would they would prefer um they will stick to whatever their um ideological
+00:22:12.960 views are, whatever the sort of political tribal views are. Uh no matter what. Um the the the evidence could be
+00:22:19.919 staring them in the face and and they're just going to be a flat-earther. You know, there's there is no evidence that
+00:22:26.400 you can show to a flat earther to con convince them the world's round because everything is just a lie. Uh the world is flat type of thing.
+00:22:32.559 I think the the ability to hit at Grock in a reply and ask it a question in the
+00:22:38.480 thread has really become like a truth seeking missile on the platform. So when
+00:22:43.679 I put up metrics or something like that, I reply to myself and I say, "Echrock, is the information I just shared
+00:22:50.080 correct? And can you find any better information? and please tell me if my argument is correct or if I'm wrong. And
+00:22:55.760 then it goes through and then it DMs Sachs and then Sax gets in my replies and tries to correct me. No, but it does
+00:23:01.280 actually a really good job of like and that combined with community notes. Now you've got like two swings at bat. The
+00:23:07.840 community's consensus view and then Grock coming in. I think it would be like really interesting if Grock on like
+00:23:14.240 really powerful threads kind of did like its own version of community notes and had it sitting there ahead of time. you
+00:23:20.720 know, like you could look at a thread and it just had next to it, you know, or maybe on like the specific statistic,
+00:23:26.559 you could click on it and it would show you like, ah, here's where that statistic's from. I mean, you can I mean, pretty much
+00:23:32.720 every I mean, essentially every post on X, unless it's like advertising or something, um, has the Grock symbol on
+00:23:39.280 it. Yeah. And you just tap that symbol and you're one tap away from a Grock analysis. Literally, you're just one tap. And we
+00:23:44.880 don't want to clutter the interface with where providing an explanation, but I'm just saying if you go on X right now,
+00:23:51.679 it's one tap to get the to get Grock's analysis and Grock will research the the
+00:23:56.720 the X post and give you an an accurate answer. Um, and you can even ask us to
+00:24:02.559 do further research and further due diligence and you you can go as far down the rabbit as you want as you want to
+00:24:07.840 go. But I I do think like this is um you know the consistent with we want X to be
+00:24:13.039 the the best source of truth on the on the planet by far. And I think it is um and and where you hear uh you know any
+00:24:20.400 and all points of view. Um but but where those points of view are corrected by uh
+00:24:25.840 human editors with community notes and the the essence of community notes is that uh people who historically disagree
+00:24:34.480 agree that this community note was correct. So this um and and and all of the
+00:24:40.640 community notes uh code is open source and the data is open source. So you can recreate any community note uh from
+00:24:47.039 scratch as independently. By and large it's worked very well. Yeah. Yeah.
+00:24:52.000 No text
+00:24:52.720 I think we originally had the idea to have you back on the pod because it was a three-year anniversary of the Twitter
+00:24:58.000 acquisition. So Okay. I just wanted to kind of reminisce a little bit and I remember Yeah. I mean I remember
+00:25:04.720 where's that sink? Where's that sink? Well, yeah. So, Elon was staying at my house. We had talked
+00:25:10.400 the week before and he told me the deal was going to close. And so, I was like, "Hey, do you need a place to stay?" And he took me up on it. And the day before
+00:25:17.120 he went to the Twitter office, there was a request made to to my staff. Do you
+00:25:22.320 happen to have an extra sink? And they did not, but they were able to uh Who has an extra sink really?
+00:25:29.760 But they were able to to locate one at a nearby hardware store. And I think they paid extra to get it out of the window
+00:25:34.960 or something. Well, I I think the store was confused because um my security team was asking
+00:25:41.919 for uh any kind of sink and and and like like normally people wouldn't ask for
+00:25:47.120 any kind of sink because you need a sink that fits in your bathroom or connects to a certain kind of plumbing. So
+00:25:53.120 they're like trying to ask these like well what kind of faucets do you want? That's no no I just wanted a sink.
+00:25:58.240 Yeah. I think it's a mental person going the store was confused that we just wanted a sink
+00:26:04.720 and didn't and didn't care what what the sink connected to. That was that was just they were like
+00:26:11.919 almost not letting us buy the sink because because they they thought maybe we'd buy the wrong sink, you know. Um
+00:26:18.880 it's just rare that somebody wants a sink for sake
+00:26:23.919 for meme purposes. One of my favorite memories was Elon said, "Hey, you know, swing by, check it out." I said, "Okay,
+00:26:30.000 I'll come by." And I drive up there and I'm looking where to park the car and I realize there's just parking spaces around the entire bis building. And I'm
+00:26:37.279 like, "Okay, this can't be like legal parking." But I park and it's legal parking. Yeah.
+00:26:42.559 You're in downtown SF, so you might get your window broken, but Yeah. I might not be there when I get back. But we get in there and the place
+00:26:49.360 is empty. And then Yeah. Yeah. It it was seriously empty except for the cafeteria.
+00:26:55.919 There was an entire uh there were two the TW headquarters was two buildings. One of the buildings was completely and
+00:27:01.039 utterly empty. Um and the other building uh had like 5% occupancy
+00:27:06.480 and the 5% occupier, we all go get something to eat and we realize there's more people working in
+00:27:12.480 the cafeteria than at Twitter. There were more people making the food
+00:27:17.679 than eating the food in this giant caf giant really nice
+00:27:22.880 really nice cafeteria. Um the you know this this is where we
+00:27:28.559 discovered that the the actual price of of the lunch was $400. Um
+00:27:33.919 uh the the original price was $20, but it had five it went for it was at 5%
+00:27:39.360 occupancy. So it was 20 times higher and they still kept making the same amount pretty much. So, and charging the same
+00:27:45.760 amount. So, effectively lunch was four $400. Um, and that was a great meeting.
+00:27:51.440 Yes. And and then and then there was that that that uh where we had the initial meetings sort of the sort of
+00:27:57.039 trying to figure out what the heck's going on meetings in the in in these in the because you know there's the two
+00:28:02.799 buildings two Twitter buildings and one the one with literally no one in it. Um
+00:28:08.399 that's that's where we had the initial meetings. Um and um and then and we
+00:28:13.679 tried drawing on the whiteboard and the and the the markers had had gone dry. So that
+00:28:20.960 nobody had used the the whiteboard markers in like two years.
+00:28:27.120 So sad. None of the markers worked. So like this is totally bizarre. But it was it was totally clean because the the cleaning
+00:28:33.120 crew had come in and done their job and cleaned cleaned an already clean place
+00:28:39.440 for I don't know two three years straight. Um it was
+00:28:45.440 I mean honestly this is this is this is more crazy than any sort of Mike Judge movie or or you know Silicon Valley or
+00:28:51.760 anything like that. Um and and then we I remember going into the men's bathroom
+00:28:56.880 and and and there's there's there's a table um with uh you know um uh
+00:29:04.960 hygiene menstrual hygiene products. Yep.
+00:29:10.000 Yeah. Um refreshed every week. Tampons like a fresh box of tampons. Um
+00:29:16.080 and and we're like but but there's literally no one in this building. Um, so, uh, but no, no, they hadn't turned
+00:29:23.039 off the send t send fresh tampons to the man's bathroom in the empty building had
+00:29:28.320 not been turned off. No. So, so every week they would put a fresh box of tampons in an empty building um
+00:29:36.720 for years. This happened for years. And it must have been very confusing to the people that were being asked to do this
+00:29:42.799 because they're like, "Okay, I'll throw them away." Well, I
+00:29:49.200 remember when you But I guess they're paying us. So, we'll just put tampon. So, seriously, have to
+00:29:54.240 consider the the the string of possibilities necessary in order for anyone to possibly use that tampon in
+00:29:59.679 the men's bathroom uh at the unoccupied second building of Twitter headquarters.
+00:30:04.960 Um because you'd have to be a burglar um who is a transman burglar um
+00:30:15.120 who's unwilling to use the woman's bathroom that also has tampons. Statistically there's no one in the
+00:30:20.880 building. So you've broken into the building and at that moment you have a period.
+00:30:27.760 Yes. And you're on your period. I mean, you're more likely to be struck
+00:30:32.799 by a a meteor um than need that tampon. Okay.
+00:30:38.080 Well, I remember it was I think it was shortly after that you discovered an entire room
+00:30:45.760 at the office that was filled with Staywoke t-shirts. Yeah. Do you remember this? An entire pile of merch.
+00:30:52.080 Yeah. Yes. # staywoke. Staywoke. and also a big sort of buttons
+00:30:57.120 like those magnetic buttons that you put on your shirt that said uh uh I I am an
+00:31:03.360 engineer. Um, I'm like, "Look, if if you're an engineer, you don't need a button." Like a big
+00:31:09.679 Who's the button for? Who you telling that to? You can just ship code. We would know. We can check your GitHub.
+00:31:17.440 But yeah, they're like scarves, um, hoodies, uh, all kinds of merch that
+00:31:22.880 said hashtag stay. Yeah. A couple music. When you found that, I was like, my god, man. The barbarians are fully within the
+00:31:29.039 gates now. I mean the barbarians have smashed through the gates and are looting the merch.
+00:31:34.640 Yes, you are rumaging through their holy relics and defiling them.
+00:31:39.679 I mean, but when you think about it, David, the amount of waste that we saw there during those first 30 days,
+00:31:46.880 just to be serious about it for a second, this was a publicly traded company. So if you think about the financial duty of those individuals,
+00:31:54.799 there was a list of SAS software we went through and none of it was being used. Some of it had never been installed and
+00:32:01.519 they had been paying for it for 2 years. They've been paying for a SAS product for two years. And the the the one that
+00:32:07.519 blew my mind the most that we canceled was they were paying a certain amount of money per desk to have desking software
+00:32:14.480 in an office where nobody came to work. So they were paying
+00:32:20.000 nobody. There was there was millions of dollars here being paid for for Yes. for um analysis of pedestrian like software
+00:32:27.840 that use cameras to analyze the pedestrian traffic to figure out where you can leave alleviate pedestrian
+00:32:33.519 traffic jams uh in an empty building. Right.
+00:32:38.640 That's like 11 out of 10 on a Dilbert scale. Yeah. It was pretty shout out Scott Adams. you've gone off scale on on your
+00:32:45.679 doilbert level at that point. Let's talk about the free speech aspect for a second because I I think that is
+00:32:52.000 the most important legacy of the Twitter acquisition and I think people have short memories and they forget how bad
+00:32:58.000 things were three years ago. First of all, you had figures as diverse
+00:33:03.679 as President Trump, Jordan Peterson, Jay Bacharia, Andrew Tate. They were all
+00:33:09.519 banned from Twitter. And I remember when you opened up the the Twitter jails and reinstated their accounts, kind of, you
+00:33:16.559 know, freed all the bad boys of free speech. The best deal. Yes. So, you basically gave all the the
+00:33:21.760 bad boys of free speech their their accounts back. But second, beyond just the the bannings, there was the shadow
+00:33:27.600 bannings. And Twitter had claimed for years that they were not shadowbanning. This was a paranoid conservative
+00:33:33.919 conspiracy theorist. Yeah. There was an a very aggressive shadow banning by uh what was called the trust
+00:33:41.200 and safety group which of course naturally would be the one that is doing
+00:33:46.320 the nefarious shadow banning. Um and I just I just think we shouldn't have a
+00:33:52.000 group called trust and safety. Um I mean this is an orwellian name if you ever if there ever was one. Um
+00:33:59.519 hi I'm from the trust department. Oh really? We want to talk to you about
+00:34:04.960 your tweets. Can we see your DMs? Say that you're from the trust department. It's literally that's the
+00:34:10.960 Ministry of Truth right there. Yeah. Executives had they had maintained for
+00:34:17.520 years that they were not engaged in this practice including under oath. And on the heels of you opening that up and
+00:34:23.599 exposing that because by the way it wasn't just the fact they were doing it. They created an elaborate set of tools to do this. They
+00:34:30.159 had check box set of tools to to uh uh Yes. to deboost uh accounts. Yes.
+00:34:37.040 Yes. And you know subsequently we found out that other social networking properties have done this as well but
+00:34:43.040 you were really exposed. This is still being done at the other social media companies
+00:34:48.879 include Google by the way. Um, so, um, for, you know, um, I don't pick on
+00:34:55.520 Google cuz they're all doing it, but, uh, for search results, uh, if you simply push a result pretty far down the
+00:35:02.079 page or, you know, the second page of results like like you know the the joke used to be or still is, I think, like
+00:35:08.240 where do you hide a what's the best place to hide a dead body? The second page of Google search results because
+00:35:13.599 nobody ever goes to the second page of Google search results. They could you could hide a dead body there and nobody would find it. And and and you still
+00:35:19.440 it's it's then then it's not like you've you haven't made them go away. You've you've just um put them on this one page
+00:35:26.400 too. Yes. So shadow banning I think was number two. So first was banning, second was shadow banning. I think third to me
+00:35:31.520 was government collusion, government interference. So you released the Twitter files. Nothing like that ever
+00:35:37.280 been done before where you just you actually let investigative reporters go through Twitter's emails
+00:35:43.920 unfettered groups. I didn't I I I was not looking over their shoulder at all. I They just had direct access to
+00:35:49.119 everything. And they found that there was extensive collusion between the FBI and the
+00:35:54.240 Twitter trust and safety group where it turns out the FBI had 80 agents submitting takedown requests and they
+00:36:01.200 were very involved in the banning, the shadow banning, the censorship, which I don't think we ever had definitive
+00:36:07.280 evidence of that before. That was pretty extraordinary. Yeah. and and the the US House of
+00:36:13.440 Representatives had hearings on the matter. Um and and and a lot of this, you know, was unearthed. It's it's
+00:36:19.440 public record. So, a lot of people some some people on the left still think this is like made up. I'm like, this is just
+00:36:25.839 literally these the Twitter files are literally the files at Twitter. I mean, we're literally just talking about the
+00:36:32.160 these are the emails that were sent internally that confirm this. This is what's on the Slack channels. Um and and
+00:36:38.720 this is what is shown in the in the on the Twitter database as where people have made um either uh suspensions or
+00:36:44.960 shadow bounds. Has the government come and asked you to take stuff down since or they just have to the policy is hey listen you got to
+00:36:51.920 file a warrant you got to you got to come correct as opposed to just putting pressure on executives.
+00:36:57.839 Uh yeah our our policy at this point is to follow the law. So um so if if now
+00:37:04.160 now uh the laws are obviously different in different countries. So sometimes you know I I get criticized for like why
+00:37:10.160 don't I push free speech in XYZ country that doesn't have free speech laws. I'm like because that's not the law there.
+00:37:17.839 Um and and if we don't obey the law we'll simply be blocked in that country. Um so uh the the policy is really just
+00:37:26.400 um adhere to the laws in any given country. um uh it is up to us to agree
+00:37:32.560 or disagree with those laws and if if uh if if a people of that country want laws
+00:37:38.240 to be different then they should you know ask their leaders to change the laws. Yeah.
+00:37:43.680 But but anything that but as soon as you start going beyond the law now you're putting your thumb on the scale.
+00:37:49.200 Um so so the yeah that I I think I think that's the right policy is just adhere
+00:37:55.440 to the laws within any given country. Um now sometimes we get you know um in a
+00:38:01.839 bit of a bind like we had got into with Brazil where uh you know this this this
+00:38:06.960 judge in Brazil was asking us to or or telling us to break the law in Brazil um
+00:38:13.760 and ban accounts contrary to the law of Brazil. And now we're now we're sort of somewhat stuck. We're like wait a second
+00:38:19.760 we're reading the law and it says this is not allowed to happen and also that and giving us a gag order. So like we're
+00:38:25.920 not allowed to we're not allowed to say it's happening. Um and we have to break
+00:38:32.079 the law and the judge is telling us to break the law. The law is breaking the law. That's where things get um very
+00:38:37.599 difficult. Uh and we were actually banned in Brazil for a while because of that. I just want to make one final
+00:38:42.640 point on the free speech issue and then we can move on is just I think people forget that the censorship wasn't just
+00:38:48.960 about co there was a growing number of categories of thought and opinion that
+00:38:54.240 were being outlawed. The quote content moderation which is another Orwellian euphemism for censorship was being
+00:39:01.200 applied to categories like gender and even climate change. The definition of
+00:39:07.280 hate speech was constantly growing. Yes. and more and more people were being banned or shadowbanned and there was more and more things that you couldn't
+00:39:13.359 say. This trend of censorship was growing. It was galloping and it would have continued if it wasn't, I think,
+00:39:20.000 for the fact that you decided to buy Twitter and opened it up. And it was only on the heels of that that the other
+00:39:26.079 social networks were willing to, I think, be a little bit chasened in their policies and start to push back more.
+00:39:32.880 Yeah, that's right. um once Twitter broke ranks uh the others had to um it
+00:39:39.599 became very obvious what the others were doing and so they had to mitigate uh their censorship substantially as
+00:39:44.880 because of what Twitter did. And I mean perhaps to give them some credit they also felt that they had the air cover to
+00:39:51.040 um to uh be more inclined towards free speech. um they still do a lot of sort
+00:39:58.000 of uh you know shadow banning and and whatnot at at the other social media companies, but it's it's much less than
+00:40:04.240 it used to be. Yeah. Elon, what do you what have you seen in terms of like governments creating new
+00:40:10.640 laws? So, we've seen a lot of this crackdown in the UK on what's being called hateful speech on social media
+00:40:17.599 and folks getting arrested and actually going to prison over it. And it seems
+00:40:22.640 like when there's more freedom, the side that is threatened by that
+00:40:27.839 comes out and creates their own counter, right? There's a reaction to that. And there seems to be reaction. Are you
+00:40:33.200 seeing more of these laws around the world in response to your opening up free speech through Twitter and um and
+00:40:41.040 those changes and what they're enabling that that the governments and the parties that control those governments aren't aligned and they're stepping in
+00:40:47.280 and saying, "Let's create new ways of maintaining our control through law.
+00:40:52.400 Um yeah, there there is there's been an overall global movement to suppress free speech um under the name of in in the
+00:41:00.400 under the guise of suppressing hate speech. Um but then uh you know it's the
+00:41:07.280 problem with with that is that um your freedom of speech only matters um if
+00:41:13.760 people are allowed to say things that you that that you don't like or even that things that you hate. Um because uh
+00:41:20.560 if if you're allowed to suppress speech that you don't like uh then um and you
+00:41:26.240 know you you don't have freedom of speech and and and it's only a matter of time before things switch around and
+00:41:31.280 then the shoes on the other foot and they will suppress you. So uh suppress not lest you be
+00:41:36.960 suppressed. Um but but there there there is a uh a
+00:41:42.079 movement and I I there was a very strong movement to codify
+00:41:48.079 speech suppression into the law throughout throughout the world and including the western world um you know the Europe and Australia
+00:41:54.720 UK and Germany very um yeah aggressive in this regard. Yes. And and my understanding is that in
+00:42:01.680 the UK uh there's something like two or three thousand people uh in prison for social media posts. Um, and in fact that
+00:42:09.040 this there there's so many people in that were in prison for social media posts. Um, and and many of these things
+00:42:14.480 are like you you can't believe that that someone would actually be put put in prison for this. They they've they have
+00:42:20.000 in in a lot of cases released people who have committed violent crimes in order to to imprison people who have simply
+00:42:26.640 made posts on social media which is deeply wrong. Mhm. Um and and and uh underscores why the
+00:42:33.680 founders of this country made the first amendment the first amendment was
+00:42:39.280 freedom of speech. Why why did they do that is because in the places that they came from there wasn't freedom of speech
+00:42:45.440 and you could be imprisoned or killed for for saying things. Can I ask you a question just to maybe
+00:42:49.000 No text
+00:42:51.040 move to a different topic? If you came and did this next week, we will be past the Tesla board vote. We talked about it
+00:42:57.760 last week and we talked about how crazy ISS and Glass Lewis is and right we use this one insane example where
+00:43:03.760 like Ira Aaron Prize didn't get the recommendation from ISS and Glass Lewis
+00:43:09.359 because he didn't meet the gender requirements but then Kathleen also it doesn't make sense.
+00:43:15.760 Can you So the the board vote is on the African-American woman.
+00:43:21.040 Yeah. Yeah. True. she they recommended against her but then also recommended against
+00:43:26.560 our enterprise um on on the ground she was insufficiently diverse. So I'm like this like these things don't make any
+00:43:32.880 sense. Yeah. So I I do think we've got a fundamental issue with corporate governance um in publicly traded
+00:43:39.280 companies where you've got about half of the stock market uh is controlled by passive index funds um and most of them
+00:43:46.560 out most of them outsource their decision uh to uh advisory firms and
+00:43:51.599 particularly glass and uh ISS I call them corporate ISIS um you know so all
+00:43:59.359 they do is basically just they're just terrorists Um so um so and and they have
+00:44:06.800 they own no stock in any of these companies. Um right so I I think that this there's a fundamental breakdown of producer
+00:44:13.359 responsibility here uh where really um you know any company that's managing um
+00:44:20.079 uh even though they're passively managing you know index funds or whatever that they do at the end of the day have a
+00:44:26.240 fiduciary duty to uh vote uh you know along the lines of what would maximize
+00:44:32.720 the the shareholder returns because people are counting on them like people uh you know have say you know So has
+00:44:40.160 have all their savings and say 401k or something like that. Um and they're they're counting on um the index funds
+00:44:47.920 to vote uh do company votes in the direction that would uh ensure that
+00:44:54.400 their retirement savings uh do as well as possible. But the problem is if that is then outsourced to ISS and glass
+00:45:00.640 Lewis which have been infiltrated by far-left activists um because you know you know where far you know you know you
+00:45:07.440 know basically political activists go they go where the where the power is. Um and so effectively uh glass and ISS
+00:45:16.240 uh uh control the vote of half the stock market.
+00:45:22.560 Now, now if you're a political activist, you know what a great place would be to go work
+00:45:28.319 and glass doors. And they do. So, um, so my concern for the future,
+00:45:34.640 um, because this, you know, the Tesla, um, thing is is it's called sort of compensation, but really it's not about
+00:45:40.560 compensation. It's not like I'm going to go out and buy, you know, a yacht with it or something. It's just that I I I do
+00:45:46.160 I in order if I'm going to build up Optimus and and you know have all these
+00:45:51.680 robots out there, I need to make sure we do not have a terminated scenario and I and that I can make you know maximize
+00:45:57.839 the safety of the robots. Um and and and um but but I I I feel like I I need to
+00:46:05.040 have something like a 25% vote. Um which is enough of a vote to have a strong influence uh but not so much of a vote
+00:46:12.160 that I can't be fired if I go insane. Um so it's it's kind of but but my concern
+00:46:18.960 would be, you know, creating this army of robots and then and then being fired for political reasons um because of
+00:46:26.319 because of ISS and Glass Lewis. uh uh you know declined to ISIS and Glass
+00:46:33.280 Lewis fire me effectively or or the the activists at those bones fire me. Um
+00:46:39.839 even though I've done everything right. Yeah, that's my concern. And then I and then then you've got and
+00:46:46.319 then I and then I cannot ensure this the safety of the robots. If you don't get that vote, if it
+00:46:51.599 doesn't go your way, it looks like it's going to, would you leave? I mean, is that even in the cards? I heard they were the board was very concerned about
+00:46:58.000 that. Uh, let's just say I'm not going to build a robot on me. Um, if I if I can be easily
+00:47:05.920 kicked out by activist investors. Yeah. No way. No way. Yeah. Makes sense. I mean, and
+00:47:12.960 who is capable of running the four or five major product lines at Tesla? I
+00:47:18.880 mean, this is the the madness of it. It's a very complex business. People don't understand what's under the hood
+00:47:24.079 there. It's not just a car company. You got batteries, you got trucks, you got the self-driving group, and this is a
+00:47:30.319 very complex buil business that's you've built over decades now. It's it's not a very simple thing to run. I don't think
+00:47:36.480 there's a Elon equivalent out there who can just jump into the cockpit. By the way, if we take a full turn around
+00:47:40.000 No text
+00:47:42.560 corporate governance corner also this week, what was interesting about the OpenAI restructuring was I
+00:47:50.560 read the letter and your lawsuit was excluded from the allowances of the California
+00:47:58.000 attorney general basically saying this thing can go through which means that your lawsuit is still out there, right?
+00:48:03.680 And I think it's going to go to a jury trial. Yes. So there that corporate governance thing is still very much in question. Do you
+00:48:09.359 have any thoughts on that? Um, yes. I believe that will go to a jury trial in February or March. Um, and
+00:48:16.079 and then we'll see what the what the results are there. But um there's
+00:48:21.440 there's an like a mountain of evidence um that that shows that OpenAI was
+00:48:27.599 created as a u an open source nonprofit. It's it's literally that's the the exact
+00:48:32.960 description in the incorporation documents. Um and in fact the incorporation documents explicitly say
+00:48:38.319 that no officer uh or founding member will be will will benefit financially from open AI
+00:48:46.400 and they've completely violated that and more of you can then you can just use
+00:48:51.440 the wayback machine and look at the the website of OpenAI again open source nonprofit open source nonprofit the
+00:48:57.119 whole way until you know it it looked like wow this is there's a lot of money to be gained here and then suddenly it
+00:49:03.520 starts changing Um, and they try to change the definition of open AI to mean open to everyone instead of open source, even
+00:49:10.000 though it always meant open source. I came up with the name. Yeah, that's how I know.
+00:49:17.040 So uh if they open sourced it uh or they
+00:49:22.559 gave you I mean you don't need the money but if they gave you the percentage ownership in it that you would be rightfully uh which 50 million for a
+00:49:30.319 startup would be half at least but they must have made an overture toward you and said hey can we just give you 10% of
+00:49:36.880 this thing and give us your blessing like you obviously have a different goal here. Yeah.
+00:49:42.960 Yeah. Um, I mean, essentially since I came up with the idea for the company, named it, um, provided the AB and C
+00:49:50.960 rounds of funding, uh, recruited the, uh, critical personnel, uh, and told
+00:49:56.000 them everything I know. Um, you know, if that had been a a commercial corporation, I'd probably own
+00:50:02.000 half the company. So, um, but and and I I I could have
+00:50:07.920 chosen to do that. that that I if I it was totally at my discretion I could
+00:50:12.960 have done that. Uh but I created it as a nonprofit for the world, an open source nonprofit for the world.
+00:50:19.920 Do you think the right thing to do is to take those models and just open source them today? If you could affect that
+00:50:25.839 change, is that the right thing to do? Uh yeah, I think I think uh that that that is what the what it was created to
+00:50:32.480 do. So it should I mean the the best open source models right now actually ironically because fate fade seems to be
+00:50:38.160 an irony maximizer um uh the best open source models are generally from China.
+00:50:43.760 Yeah. Like that's bizarre and and and and then I think the second best are one is or
+00:50:52.480 maybe it's better than second best. Uh but like the u the gro 2.5 um open
+00:50:58.480 source model is actually very good. Um, and I think we'd probably be and and
+00:51:04.640 we'll continue to open source our models, but you know, but whereas like try using any of the the the recent um
+00:51:09.920 so-called the OpenAI open source models. They're out they don't work. They basically they open sourced a broken
+00:51:15.440 non-working version of of their models as a fig leaf.
+00:51:22.880 I mean, do you know anyone who's running open open eyes open source models? Exactly.
+00:51:28.000 Yeah. Nobody. We've had a big debate about jobs here. Obviously, there's
+00:51:33.280 going to be job displacement. You and I have talked about it for decades. Uh
+00:51:39.599 what's your take on the pace of it? Because obviously building self-driving software, you're building Optimus.
+00:51:46.559 Yeah. And we're seeing Amazon take some steps here where they're like, "Yeah, we're probably not going to hire these positions in the future." And you know,
+00:51:53.440 maybe they're getting rid of people now because they were bloated, but maybe some of it's AI. You know, it's it's all
+00:51:58.559 debatable. What do you think the timeline is? And what do you think as a society we're going to need to do to
+00:52:05.200 mitigate it if it goes too fast? Well, um,
+00:52:11.760 you know, I call AI the supersonic tsunami. So, um, not the most comforting
+00:52:18.000 description in the world. Um, but fast and big. There was a tsunami, a giant wall of
+00:52:24.559 water moving faster than the speed of sound. as AI. Um, when does it land?
+00:52:30.160 Yeah, exactly. Um, so and now this is happening whether I
+00:52:35.359 wanted to or not. I I actually try to slow down AI. Um, and and then the the reason, you
+00:52:43.440 know, I I uh the reason I wanted to create Open AI was to serve as a counterweight to Google because at the
+00:52:48.880 time Google was uh sort of essentially had unilateral power in AI. They had all the all the AI essentially. Um and um
+00:52:57.839 and uh you know Larry Page was not um you know
+00:53:04.559 he he was not taking safety seriously. Um
+00:53:10.079 uh I Jason Arere were you were you there when he he called me a speciist?
+00:53:15.119 Yes I was there. Yeah. Okay. So you were more concerned about the human race than you were about the machines.
+00:53:22.079 And uh yeah, you had a clear bias for humanity. Yes. Yes. I was exactly. I was like,
+00:53:27.119 Larry, Larry, what like we need to make sure that the AI doesn't destroy all the humans. And then he called me a specist.
+00:53:33.599 Um like racist or something for being pro uh human intelligence instead of machine intelligence. I'm like, well,
+00:53:40.000 Larry, what side are you on? Um I mean, you know, that's kind of a concern. and
+00:53:46.640 and and then at the time the Google had uh essentially a monopoly on AI.
+00:53:52.559 Yeah. They bought DeepMind which you were on the board of had an investment in Larry and Sergey had invested in it
+00:53:58.079 as well and it's really interesting. Found out about it because I told him about it. I I showed him some stuff from
+00:54:04.079 Deep from Deep Mind and I think that's how he found out found out about it and and and acquired them actually. I got to
+00:54:09.760 be careful what I say. Um, but but the the the point is that it's like look,
+00:54:15.040 Larry's not taking AI safety seriously and and and and Google had essentially all the AI and all the computers and all
+00:54:21.280 the money. And I'm like, this is a unipolar world where the guy in charge is not taking things seriously. So, um,
+00:54:27.119 and called me a speciist for being prohuman. Um, what do you do in those circumstances?
+00:54:33.119 Yeah. Build a competitor. Yes. Um, so OpenAI was created essentially as the opposite, which is an
+00:54:38.960 open source nonprofit, the opposite of Google. Um, now unfortunately it it it needs to change its name to closed for
+00:54:45.280 maximum profit AI. Yeah. Or maximum profit to be clear.
+00:54:51.200 The most amount of the company the most amount of profit you possibly get.
+00:54:56.640 I mean it is so it is like like it's comical when you hear when you hear
+00:55:02.800 fate is an irony maximizer. You have to say like what is the most the most ironic outcome for a company that that
+00:55:09.119 was created for to do open source non nonprofit AI is it's super closed
+00:55:15.440 source. It's tighter than Fort Knox. Um the the AI open AI source code is locked
+00:55:21.680 up tight in Fort Knox. Um and uh and they are going for maximum profit like a
+00:55:27.599 maximum like get the bourbon the steak knife that you know they're ready. Yeah. I mean the
+00:55:34.480 the you know like like they're going for the buffet and they're just diving head first into
+00:55:41.440 the profit buffet. I mean it's or at least aspiration the revenue buffet at least profit. We'll see. Um
+00:55:47.040 we are I mean it's like it's like ravenous wolves for revenue. Ravenous
+00:55:53.359 revenue buffet. No, no, it's literally like super villain. It's like Bond villain
+00:55:59.839 level flip. Like it went from being the United Nations to being Spectre in like
+00:56:04.880 James Pondland. When you hear him say, "I'm going to when Sam says it's going to like raise 1.4 trillion to build up data centers."
+00:56:12.240 Yeah. No, but I think he I think he means it. Yeah. I mean, it's I would say
+00:56:17.280 audacious, but I I wouldn't want to Yeah. insult the word. It
+00:56:22.480 actually I have a question about this. How is that possible? In the earnings call, you said something that was insane
+00:56:24.000 No text
+00:56:28.000 and then I think the math actually nets up, but you said we could connect all the Teslas and allow them in downtime to
+00:56:34.640 actually offer up inference and you can string them all together. I think the math is like it could
+00:56:40.960 actually be like a 100 gigawatt. Is that right? Do you if if ultimately there's a Tesla fleet
+00:56:47.200 uh that is um uh 100 million vehicles uh which I think we probably will get to at some point 100 million vehicle fleet um
+00:56:54.240 and uh they have you know mostly state-of-the-art uh inference computers in them uh that that each say are uh a
+00:57:01.440 kilowatt of inference computed um and they have built-in um power and cooling
+00:57:07.520 um and you know connect to the Wi-Fi. That's the key. Yeah, exactly. Um yeah, exactly. and and and and uh
+00:57:14.480 that you'd have 100 gaws of inference compute. Elon, do you think that the architecture
+00:57:19.599 like there was an attentionfree model that came out the last week? There's been all of these papers, all of these new models that have been shown to
+00:57:26.480 reduce power per token of output by many, many, many orders of magnitude. Like not just an order of magnitude, but
+00:57:32.960 like maybe three or four. like what's your view and all the work you've been doing on where we're headed in terms of
+00:57:40.240 power um per unit of compute or per token of output.
+00:57:46.240 Well, we have a a clear example of efficient power efficient compute which
+00:57:52.160 is the human brain. Um so um our brains use about 20 watts um of power but and
+00:57:59.760 of that only about 10 watts is higher brain function. Most of it's, you know, half of it is just housekeeping functions, you know, keeping your heart
+00:58:06.000 going and breathing and that kind of thing. Um, so, so you got maybe 10 watts of uh higher brain function in a human.
+00:58:14.400 Um, and we've managed to build civilization with 10 watts of uh of a biological computer. Um, and that
+00:58:21.839 biological computer has like a 20 year, you know, boot sequence. Uh, so pretty
+00:58:28.960 but but but it's very power efficient. So uh given that uh humans are capable
+00:58:34.400 of inventing um you know general relativity and quantum mechanics and uh
+00:58:40.240 or discovering general like like inventing aircraft, lasers, the internet
+00:58:46.880 and discovering physics with with a 10 watt uh meat computer essentially um
+00:58:53.440 uh then um there's clearly a a massive opportunity for improving the uh
+00:58:59.680 efficiency of AI compute. Um it's because it's it's it's currently many orders of magnitude away from that.
+00:59:06.640 Um and and it's still the case that um a a 100 megawatt
+00:59:12.640 uh or even you know a gigawatt uh AI supercomput at this point can't do
+00:59:17.920 everything that a human can do. Uh it it will be able to uh but it can't yet. Um
+00:59:25.280 so but but we like said we've got this obvious case of um human brains being
+00:59:32.160 very power efficient and achieving and and building civilization with with a with a you know with with 10 watts of
+00:59:37.760 compute um and and and and a very slow and our our bandwidth is very low. So
+00:59:44.240 that the the speed at which we communicate information to each other is extremely low. You know we're not communicating at a terabyte. We're
+00:59:51.119 communicating more at like 10 bits per second. Um, so,
+00:59:56.559 um, do you think that should naturally lead you to the conclusion that there's massive, uh, opportunity for being more
+01:00:03.839 power efficient with with AI? And and at Tesla and at XAI, we're both we we
+01:00:09.119 continue to see massive improvements in inference computer efficiency. Um, so
+01:00:15.359 um, yeah. You think that there's a moment where you would justify
+01:00:22.400 stopping all the traditional cars and just going completely allin on cyber cab if you
+01:00:28.559 felt like the learning was good enough and that the system was safe enough? Is is there
+01:00:34.400 ever a moment like that or do you think you'll always kind of dual track and always do both? I mean all of the cars we make right now
+01:00:40.559 um are capable of being a robo taxi. So, there's a little confusion of the terminology because um the the our cars
+01:00:49.119 look normal, you know, like the Model 3 or Model Y looks it's a good looking car, but looks looks normal. Um but it
+01:00:55.280 has an advanced AI computer, an advanced AI software and cameras, and we didn't want the cameras to stick out. So, we
+01:01:01.839 you know, so that that we wouldn't want them to be ugly or stick out. So, so, you know, we put them they're sort of in
+01:01:06.960 unobtrusive locations. You know, the forward looking camera cameras are in front of the rearview mirror. Um the
+01:01:13.280 side view mirrors are in the side repeaters. Oh, this the side view cameras are on the side repeaters. Um the the rear camera is you know just in
+01:01:20.640 the you know above the license plate actually typically where the rear view camera is in a car. Um and um you know
+01:01:28.720 and and and the the diagonal forward ones are in the B-pillars. Like if you look closely you can see all the cameras but but you have to look closely. We
+01:01:34.480 just didn't want them to be to stick out like you know warts or something. Um but but actually all the cars we make um are
+01:01:42.559 hyper intelligent um and have the cameras in the right places. They just look normal. Um and um so so all of the
+01:01:50.640 cars we make are capable of unsupervised full autonomy. Um now we we have a
+01:01:56.400 dedicated product which is the cyber cab um which has no no steering wheel or pedals um which are obviously vestigial
+01:02:04.160 in a autonomous world u and we start production of the cyber cab in Q2 next
+01:02:10.319 year and we'll scale that up to to quite high volume. I think ultimately we'll make millions of cyber cabs per year. Um
+01:02:18.559 but but but it is important to emphasize that all of our cars are capable of being robotic taxis. The Cyber Cab is
+01:02:24.960 gorgeous. I told you I'd buy two of those if you put a steering wheel in them. And there is a big movement online.
+01:02:30.079 Putting a steering wheel. People are begging for it. Why not? Why not let us buy a couple? You know, you
+01:02:36.160 know, just the first ones off the line and drive them. I mean, it's they look great. It's like the perfect model. You
+01:02:41.920 always had a vision for a model 2, right? Like, isn't it like the perfect model 2 in addition to being a cyber
+01:02:47.440 cab? Look, the reality is people may think they want to drive their car, but the reality is that they don't. Um, how
+01:02:54.079 many times have you been, say, in an Uber or Lift and and you said, "You know what? I wish I could take over from the driver
+01:03:00.160 and and and I wish I could get off my phone and and take over from the Uber driver and uh and and drive to my
+01:03:06.960 destination." How many times have you thought to thought that to yourself? No, it's quite the opposite.
+01:03:12.559 Zero times. Okay. I have the Model Y and I just got 14. I have Juniper and I I got the 141 and I
+01:03:19.119 put it on MadMax mode the last couple of days. That is MadMax
+01:03:24.160 a unique experience. I was like, "Wait a second. This thing
+01:03:29.280 is driving in a very unique fashion." Um Yeah. Yeah. It assumes you want to get to your
+01:03:35.200 destination in a hurry. Yeah. Um I I used to give drivers an extra 20 bucks to do that
+01:03:41.200 medical appointment or something. I don't know. Yeah. it, but it's it feels like it's getting very close, but you have to be
+01:03:48.000 very careful. You know, Uber had a horrible accident with the safety driver. Cruz had a terrible accident.
+01:03:54.079 Wasn't their fault exactly, except, you know, that somebody got hit and then it they they hit the person a second time
+01:04:00.720 and they got dragged. Yeah. Yeah. You know, this is pretty high stakes. So, you're being extremely cautious. The
+01:04:07.760 car is the car is actually extremely capable right now, but we are being extremely cautious and
+01:04:13.599 we're being paranoid about it because to your point um even one accident would would be headline news. Well, probably
+01:04:19.920 worldwide headline news, especially if it's a Tesla like Whimo I think gets a bit of a pass I think
+01:04:25.039 there's half the country or a number of people probably would you know go extra hard on you.
+01:04:31.200 Uh yes. Uh yeah, exactly. Um, yeah. Not everyone in the press is my friend.
+01:04:39.839 Hadn't noticed. Yeah. Some of them are a little antagonistic. Yeah. So, you just But people are
+01:04:46.880 pressuring you to go fast. And I I think is everybody's got to just take their
+01:04:52.400 time with this thing. It's obviously going to happen. But I I just get very nervous that the the pressure to put
+01:04:58.079 these things on the road faster than they're ready is just uh a little crazy.
+01:05:03.359 I I applaud you for putting the safety monitor in, doing the safety driver. No
+01:05:08.480 shame in the safety driver game. It's so much the right decision obviously, but people are criticizing you for it. I
+01:05:14.079 think it's dumb. It's the right thing to do. Yes. And and we do expect it to take to
+01:05:19.280 not have any um sort of safety uh occupant or or there's not really a
+01:05:25.440 driver that just sits monitor safety safety monitor. Just sits he just sit they just sit in the car and don't
+01:05:31.359 do anything. um safety dude. Yeah. Um so uh but we do expect that
+01:05:37.280 that the cars will be driving around without any any safety monitor um before the end of the year. So sometime in
+01:05:43.599 December in Austin. Yeah. I mean you got a number of reps under your belt in Austin and it
+01:05:48.799 feels like pretty well you guys have done a great job figuring out where the
+01:05:54.720 trouble spots are. Maybe you could talk a little bit about what you learned in the first I don't know it's been like
+01:06:00.319 three or four months of this so far. What what did you learn in the first three or four months of the Austin experiment?
+01:06:06.160 Actually, it's it's gone pretty smoothly. Um a lot a lot of things that we're learning um are uh just how to
+01:06:13.760 manage a fleet like because you've got to write all the fleet management software, right? So yeah.
+01:06:18.799 Um and you you've got to have write the ride hailing software. You've got to write basically the software that Uber has. You've got to write that software.
+01:06:24.960 It's just summoning a robot car instead of a car with a driver. Um so so a lot
+01:06:30.000 of the things we're doing we're we're scaling up the number of cars um to say say like what happens if you have a
+01:06:35.520 thousand cars like so we you know we think probably we'll have you know a thousand cars or more um in the Bay Area
+01:06:42.960 uh by the end of this year probably I don't know 500 or more in the greater Austin area um and you know if if if um
+01:06:54.079 you know you have to you you have to make sure the cars don't all for example go go to the same supercharger
+01:07:00.000 uh at the same time, right? Um so uh or or don't all go to
+01:07:05.440 the same intersection um there's there's it's like what do these cars do? And then like sometimes there's
+01:07:13.039 high demand and sometimes there's there's low demand. What do you do during during those times? Uh do you have the car circle the block? Do you
+01:07:19.359 have a try to find a parking space? Um the um and then you know sometimes the
+01:07:25.760 like say it's a it's a you know disabled parking space or something but the the writing's faded or the things faded. The
+01:07:32.319 car's like oh look a parking space will jump right in there. It's like yeah get a ticket. You got to look carefully make sure it's
+01:07:37.920 it's like you know it's not a an illegal parking space or or or or it sees it
+01:07:43.920 sees a space to park and it's like ridiculously tight but it's I can get in
+01:07:49.280 there. Um, but with like, you know, three inches on either side.
+01:07:54.799 Bad computer. But, but nobody else will be able to get
+01:08:00.000 in the car if you do that. Um, so um, you know, there's just like all these oddwall corner cases. Um and um
+01:08:09.520 uh and regulators like regulators are all very um yeah they're they have different
+01:08:16.560 levels of pnikiness and regulations depending on the city depending on the
+01:08:21.679 airport. I mean it's just you know very different everywhere. That's going to just be a lot of
+01:08:27.600 blocking and tackling and it just takes time. Elon, let me ask you another in order to take people to San Jose
+01:08:33.279 airport like San Jose, you actually have to connect to San Jose airport servers. Um, and because you have to pay a fee
+01:08:39.759 every time you off. So So the car actually has to has to do a remote call. The robot car has to do,
+01:08:47.759 you know, remote procedure call to two San Jose airport servers to to uh say
+01:08:53.040 I'm dropping someone off at the airport and charge me whatever five bucks. Um, which is like there all these like
+01:08:59.279 quirky things like that. The the the like airports are somewhat of a racket. Um,
+01:09:04.560 uh, yeah. Um, so so that's like, you know, we had to solve that thing. But it's kind of
+01:09:09.839 funny. The robot car is like calling the server, the airport server to to uh, you
+01:09:15.839 know, charge it credit card or whatever someone to extend a fax. Yeah, we're going to be
+01:09:22.080 dropping off at this time. But but it it will soon become extremely normal to see cars going around with no one in them.
+01:09:28.560 Yeah. Yeah. Extreme on just before uh we lose you, I want to
+01:09:34.000 No text
+01:09:34.080 like ask if you saw the Bill Gates memo that he put out. A lot of people are talking about this memo
+01:09:40.479 like you know did I guess Billy G is not my love.
+01:09:48.158 Oh man. Like did did did climate change become woke? Did it become like woke?
+01:09:55.280 And is it over being woke? Like you know like what happened and what's what what happened with Billy G? I mean
+01:10:02.960 you know that's a lot. Great question. Great question. Yeah.
+01:10:09.360 you know, you you'd think that someone like Bill Gates who clearly started a tech, you know, started a technology
+01:10:15.440 company that's one of the biggest companies in the world, Microsoft, um being uh you you'd think he'd be really
+01:10:22.000 quite um you know, strong in the sciences. Um but actually my at least
+01:10:29.920 direct conversations with him have um he he's he is not strong in the sciences
+01:10:35.600 like like yeah this is really surprising you know
+01:10:40.640 like he he came to visit me at the Tesla Gigafactory in Austin and was telling me that it's impossible to have a long
+01:10:47.040 range uh semitr um and I was like well but we literally
+01:10:53.280 have them um And you can drive them and Pepsi is literally using them right now.
+01:11:00.239 And you can drive them yourself or send someone. Obviously, Bill Gates can drive it himself, but you can send a trusted
+01:11:06.320 person to drive the the truck and verify that it can do the things that we say it's doing. And he's like, "No, no, it
+01:11:12.320 doesn't work. It doesn't work." And I'm like, "Um, okay." I'm like kind of stuck there.
+01:11:20.000 Then it's like I was like, well, so it must be that um you disagree with the W
+01:11:26.320 hours per kilogram of the battery pack. So that you're you must think that perhaps we can't achieve the energy
+01:11:32.159 density of the battery pack or that the W hours per mile of the truck is too high because and and that when you
+01:11:37.920 combine those two numbers, the range is low. And so which one of those numbers do you think we have wrong? And what
+01:11:44.480 numbers do you think are correct? and he didn't know any of the numbers. And I'm like, well, then doesn't it seem
+01:11:50.880 that it's perhaps um you know uh premature to conclude that a long-range
+01:11:56.239 semi cannot work if you do not know the energy density of the battery pack or the energy efficiency of the of the truck chassis.
+01:12:06.320 But yeah, he he's now taken a 180 on climate. He's saying maybe this
+01:12:12.080 shouldn't be the top priority. Climate is gay. It's just the climate is gay. That's
+01:12:18.159 wrong. It's totally
+01:12:23.600 Will Gay said the climate is gay and  Come on. I maybe he's got some data he's got to
+01:12:29.679 put up. Does he have to stand up a data center for for Sam Alman or something? I don't know. What is Azure?
+01:12:36.640 I don't know. He changed his position. I can't figure
+01:12:42.000 out why. I mean, you know, I mean, the the reality of the whole climate change
+01:12:47.360 thing is is that the um you know, you've just had sort of people who say it it
+01:12:53.280 doesn't exist at all and then people who say it it's are super llamist and saying, you know, RA is going to be
+01:12:59.120 underwater in 5 years. And now obviously neither of those two positions are true. Um,
+01:13:04.159 you know, the the reality is you can measure the the carbon concentration in the atmosphere. Again, you could just
+01:13:09.440 literally buy a CO2 uh monitor from Amazon. It's like 50 bucks. And um you
+01:13:15.600 can measure it yourself. Um and uh you know, and you can say, okay, well, look,
+01:13:21.360 the the the the parts per million of CO2 in the atmosphere has been increasing steadily at 2 to three per year. Um at
+01:13:29.120 some point if you uh continue to take to take uh billions eventually trillions of
+01:13:34.640 tons of carbon from deep underground and transfer to the atmosphere and oceans.
+01:13:40.560 So you transfer it from deep underground into the surface cycle. You will change the chemical constituency of the
+01:13:46.000 atmosphere and oceans just you just literally will um then you can only then
+01:13:51.520 now you can say argue to what degree and over what time scale. Um, and the reality is that in my opinion is that
+01:13:58.400 we've got at least 50 years uh before it's a serious issue. Um, I don't think
+01:14:04.159 we've got 500 years. Uh, but but we've probably got, you know, 50. Um, it's it's not it's not 5 years. Um, so if
+01:14:11.760 you're trying to get to the right order of magnitude of accuracy, um, I'd say the cons the concern level for climate
+01:14:16.800 change is on the order of 50 years. It's definitely not five and I think it probably isn't 500. Um so uh so really
+01:14:23.840 the right course of action is actually just the reasonable course of action which is to lean in the direction of
+01:14:29.040 sustainable energy um and uh and lean in the direction of of solar um and of a
+01:14:37.280 sort of a solar battery future and and and and generally have the rules of the
+01:14:42.800 system um uh lean in that direction. I I
+01:14:48.320 I don't think we need massive subsidies, but then we also shouldn't have massive subsidies for the oil and gas industry.
+01:14:55.040 Okay. So, the oil and gas gas industry has massive tax writeoffs that they
+01:15:00.719 don't even think of as subsidies. Um because these things have been in place for in some cases, you know, 80 years.
+01:15:08.640 Um but they're not there for other industries. So, when you've got special tax conditions that are in one industry and not another industry, I call that a
+01:15:15.360 subsidy. Obviously, it is. But they've taken it for granted for so long in oil and gas that they don't think of it as a subsidy. Um so the right course of
+01:15:22.719 action of course is to remove in my opinion to remove subsidies from all industries. Um but but the the the
+01:15:29.440 political reality is that the oil and gas industry um is very strong in the Republican party but not in the
+01:15:34.640 Democratic party. So you you will not see obviously even the tiniest subsidy being removed from the oil, gas and coal
+01:15:40.640 industry. In fact, there were some that were added to the oil, gas, and coal industry uh in in the the sort of big
+01:15:47.520 bull. Um and uh and there were a lot a massive number of of sustainable energy
+01:15:54.960 incentives that were removed, some of which I agreed with, by the way. Um some of the incentives have gone too far. Um
+01:16:02.880 but um anyway, the the the actual I think object the correct scientific
+01:16:10.159 conclusion in my opinion um and I and I think one can back this up with with solid reasoning. Ask ask rock for
+01:16:17.199 example uh is is that we should um we should
+01:16:23.199 lean in the direction of moving towards a sustainable energy future. um we will
+01:16:28.560 eventually run out of uh oil, gas, and coal to burn anyway uh because a fi it's
+01:16:33.840 a it's a finite there's a finite amount of that stuff um and we will eventually have to go to something that lasts a
+01:16:40.239 long time that is sustainable. But to your point about the irony of things, it seems to be the case that
+01:16:46.400 making energy with solar is cheaper than making energy with some of these carbon based sources today. And so the irony is
+01:16:53.280 it's already working. I mean the market is moving in that direction. And this notion that we need to kind of force
+01:16:58.560 everyone into a model of behavior, it's just naturally going to change because we've got better systems. You
+01:17:03.840 know, you and others have engineered better systems that make these alternatives cheaper and
+01:17:09.199 therefore they're winning. Like they're actually winning in the market, which is great. But they can't they can't win if there
+01:17:15.520 are subsidies to support the old systems obviously. Yeah. Yeah, I mean the by the way there are actually massive disincentives of
+01:17:22.080 solo because the because China China uh is a massive producer of solar panels.
+01:17:27.679 They're doing China does an incredible job of solar manufacturing of solar panel manufacturing. Really incredible.
+01:17:34.239 Um they have one like roughly one and a half terowatts of of solar production right now. Um and they're only using a
+01:17:41.360 terowatt per year. By the way, that's a gigantic number. um the the uh the average uh US power consumption is only
+01:17:49.120 half a terowatt. So just think about that for a second. China's uh
+01:17:56.400 you know China's solar panel out production max capacity is 1 and a half terowatts per year. Uh US steadystate
+01:18:04.239 power usage is half a terowatt. Now, now you do have to to reduce you say if you
+01:18:09.360 produce one and a half terowatts a year of solar, you need you need to add that with batteries, take into account the
+01:18:14.560 the the differences between night and day, the fact that the solar panel is not always um pointed uh directly at the
+01:18:20.800 sun, that kind of thing. So you can divide by fiveish to say that but but that still means that China has the
+01:18:28.239 ability to produce solar panels that have a steadystate output that is
+01:18:33.360 roughly 2/3 that of the entire US economy from all sources which means that just with solar alone China can uh
+01:18:40.239 in one in 18 months um produce enough solar panels to power the entire the
+01:18:46.159 United States all the electricity of the United States. What do you think about near field solar aka nuclear?
+01:18:53.360 I'm in favor of look make make energy from any any way you you you want that that doesn't that isn't like obviously
+01:19:00.320 harmful to the to the environment. Um gen generally people don't welcome a nuclear reactor in their backyard. Um
+01:19:07.520 they're not like championing put it here put it under my bed.
+01:19:12.719 Put it put it on my roof. What if if if if your next door neighbor said, "Hey, I'm
+01:19:18.800 selling my house and they're putting a reactor there." What would your you know, the typical
+01:19:25.679 homeowner response will be negative. Um it very few people will embrace a nuclear reactor at um adjacent to their
+01:19:33.280 house. Um so um but nonetheless, I I I do think nuclear is actually very safe.
+01:19:39.600 Um the it's it's there's a lot of scare mon sort of scaremongering and
+01:19:45.040 propaganda around fision if assum you talk about fision um and and but fishision is actually very safe. They
+01:19:51.040 obviously have this on you know the navy US Navy has this on submarines and aircraft carriers and with with people
+01:19:57.600 really working right I mean a submarine is a pretty crowded place and they have a nuclearpowered submarine. So um so so
+01:20:06.480 I think I think vision's fine as as a as a as an option. Um the the regulatory
+01:20:12.159 environment is makes it very difficult to actually get that done. Um and and then it is important to appreciate just
+01:20:18.320 the sheer magnitude of the power of the sun. So this is here are some just
+01:20:24.239 important basic facts. Um even Wikipedia has these facts right. Um, you know, so
+01:20:30.880 you don't even have go to use the best answer, but even Wikipedia has Yeah. Even Wikipedia got it right.
+01:20:36.800 Yes. Yes. I'm saying what I'm saying even Wikipedia's got got these facts right. Um, the the sun is about 99.8% of
+01:20:44.719 the mass of the solar system. Uh then then Jupiter is about.1%.
+01:20:50.239 And then everything else is in the remaining.1% and we are much less than.1%. Um, so, um,
+01:20:59.679 if you burnt all of the mass of the solar system, okay, the then the total energy produced
+01:21:06.640 by the sun would still round up to 100%. Mhm.
+01:21:12.159 Like if you just burnt Earth, um, the whole planet and burnt Jupiter, which is
+01:21:17.840 very big and and quite challenging to burn, uh,
+01:21:23.280 uh, you you know, turn your gen nuc Jupiter into thermonuclearacta
+01:21:28.480 um it wouldn't matter the sun compared to the sun the sun is 99.8% 8% of the mass of the solar system and everything
+01:21:35.280 else is in the miscellaneous category. So, um like basically no matter what you
+01:21:40.719 do, total energy produced um in our solar system rounds up to 100% from the
+01:21:47.199 sun. You could even throw another Jupiter in there. Um so, we're going to snag a Jupiter from somewhere else. um
+01:21:54.480 and uh somehow teleport you could teleport two more Jupiters uh into our solar system, burn them and the sun
+01:22:01.840 would still round up to 100%. You know, soon as long as you're at 99.6%,
+01:22:07.600 you're still rounding up to 100%. Um maybe that gives some perspective of why
+01:22:14.800 solar is really the thing that matters. and and and as soon as you start thinking about things in at sort of a
+01:22:20.639 grander scale like cautious of scale to civilizations it it becomes very very obvious it's like I'm not saying
+01:22:26.560 anything that's new by the way like uh anyone who studies physics has known this for you know very long time um in
+01:22:34.960 fact I think was a Russian physicist who came up with this idea I think in the '60s um just just as a way to classify
+01:22:43.040 civilizations um where ships scale one would be uh you've used you're you're you've
+01:22:49.760 harnessed most of the energy of of the planet. Color ship scale two, you you've harnessed most of the energy of your
+01:22:55.840 sun. Carter ship three, you've harnessed most of the energy of galaxy. Um, now we're only about I don't know 1%
+01:23:04.080 or few a few% of cautious scale one right now optimistically. Um, so,
+01:23:12.320 um, but as soon as you go to Kship scale 2, where you're talking about the power of the sun, then you're really just
+01:23:17.360 saying, um, everything is solar power and and and and the rest is in the
+01:23:25.280 noise. Um, and, um, yeah. So like the
+01:23:32.159 you know like the sun produces about a billion times or call it o well over a
+01:23:38.080 billion times more energy than everything on earth combined.
+01:23:45.280 It's crazy. It's mind-blowing, right? Yeah. Yeah. Solar is the obvious
+01:23:51.360 solution to all this. And yeah, I mean short term have to use some of these other sources.
+01:23:56.560 But hey, there it is. an hour and a half. Star powered. Like maybe we got a branding issue here.
+01:24:02.000 Yeah. Star powered. Instead of solar powered, it's it's starlight. Yeah. Starlight.
+01:24:08.719 It's the power of a a blazing sun. Um
+01:24:17.120 How much energy does an entire star have? Yeah. Well, a star.
+01:24:22.159 More than enough. All right. That's for sure. and and and also you really need to keep the power local. Um
+01:24:29.600 so sometimes people honestly this I've had these discussions so many times it's it's where they say would you beam the
+01:24:36.800 power back to Earth? I'm like do you want to melt Earth because you would melt Earth if you did
+01:24:43.600 that. Um we'd be vaporized in an instant. Uh so you you really need to keep the power
+01:24:48.639 local. um you know basically distributed power and and and and I guess most of it
+01:24:53.840 we use for intelligence. Uh so it's like you know the the future is like a whole a whole bunch of um solar powered AI
+01:24:59.920 satellites. But the only the only thing that makes the star work is it just happens to have
+01:25:05.360 a lot of mass. So it has that gravity to ignite the fusion to ignite the fusion reaction, right? But like we
+01:25:11.280 could ignite the fusion reaction on Earth now. I don't know like if your view has changed. I think we talked about this a couple years ago where you
+01:25:17.120 were pretty like we don't know if or when fusion becomes real here but theoretically we could take like 10
+01:25:23.360 I want to be clear my opinion on um uh so um you know I studed physics physics
+01:25:29.280 in college um at one point in high school I was thinking about a career in physics one of my sons actually does a
+01:25:34.719 career is doing a career in physics but my the problem is I came to the conclusions that I'd be waiting for a
+01:25:40.000 collider or or a telescope I don't have any to get that class agree in physics
+01:25:45.360 but I have a strong interest in the subject. Um so um
+01:25:51.440 so so my opinion on say creating a fusion reactor on earth is I think this is actually not a hard problem. Um
+01:25:57.920 actually I mean it's a little hard. I mean it's it's not like totally trivial but if you just scale up a tamog uh the
+01:26:04.480 the bigger you make it the easier the problem gets. So, you've got a surface to volume ratio uh thing where you know
+01:26:12.400 you're trying to maintain a really hot core while having a wall that doesn't
+01:26:17.520 melt. So, uh uh there a similar problem with with rocket engines. You you've got a
+01:26:23.199 super hot core in the rocket engine, but you don't want the the walls the chamber walls of the rocket engine to melt. So
+01:26:29.520 you have a temperature gradient uh where it's very hot in the middle and and and it gradually gets cold enough as you get
+01:26:35.440 to the uh perimeter as you get to the uh you know the chamber walls in the rocket
+01:26:41.040 engine where the it doesn't melt uh because if you've lowered the temperature um and and you got a
+01:26:47.520 temperature gradient. So just if you just scale up uh uh you know the donut
+01:26:53.199 reactor tok um and um and and and improve your surface to volume ratio
+01:26:59.760 that becomes much easier and you you can absolutely in my opinion I I think just
+01:27:05.600 anyone who looks at the math uh you can you can make a a a re a reactor that is
+01:27:13.199 that generates more energy than it consumes and the bigger you make it the easier it is. And in the limit you just
+01:27:18.719 to have a giant gravitationally contained thermonuclear reactor like the sun. So uh which requires no maintenance
+01:27:25.600 and it's free. Um so this is also why why would we bother doing that on making
+01:27:32.320 a little itty bitty sun that's so microscopic you'd barely notice um on
+01:27:37.760 Earth when we've got the giant free one in the sky. Yeah. But we but we we only get a
+01:27:43.920 fraction of 1% of that energy on the planet Earth. We have to go much less%. Yeah.
+01:27:49.120 Right. So, we've got to figure out how to wrap the sun if we're going to harness that energy. That that's our
+01:27:55.520 our longer if people want to have fun with reactors, you know, um that's that's fine. Have fun with reactors. Um but
+01:28:01.840 it's not a serious endeavor compared to the sun. Um you know, it's it's it's sort of a a fun it's a fun science
+01:28:08.480 project to make a ther the nuclear reactor, but it's not um it's not it's it's just penis compared to the sun. and
+01:28:14.880 and and even the this the solar energy that does reach earth um is a gawatt per
+01:28:20.560 square kilometer or roughly you know call it 2 and 1/2 gawatt per square mile
+01:28:25.920 um so that's a lot you know um and the
+01:28:31.040 commercially available panels are around 25 almost 20 26% efficiency and maybe
+01:28:37.679 you know I mean you can and then you say like if you pack it densely get an 80%
+01:28:42.960 packing density you're going uh which I think you know you in a lot of places you could get an 80% packing density you
+01:28:49.199 effectively have about uh you know 200 megawatts per square kilometer
+01:28:56.400 and and and you need to pair that with batteries so so you have continuous power um although our power usage drops
+01:29:03.760 considerably at night so you need less batteries than you think um and uh and
+01:29:08.800 uh and doesn't the doesn't the question a rough way to like a very Maybe an easy
+01:29:14.080 number to remember is is a a gigawatt hour per square kilometer per day is is a a roughly correct number.
+01:29:21.280 But then doesn't your technical challenge become the scalability of manufacturing of those systems. So, you
+01:29:27.120 know, accessing the raw materials and getting them out of the ground of planet Earth to make them to make enough of
+01:29:32.560 them to get to that sort of scale and that volume that you're talking about. And as you kind of think about what it would take to get to that scale, like do
+01:29:39.679 we have an ability to do that with what we have today? Like, can we pull that
+01:29:44.719 much material out of the ground? Yes. Solar panels are made of silicon, uh, which is sand essentially. Um, and,
+01:29:51.840 um, I guess more on the battery side, but Oh, the battery side. Yeah. So battery on the battery side um uh you know the
+01:30:00.159 like iron phosphate lithiumion battery cells there you know earth I'd like to throw out some like interesting factoids
+01:30:06.080 here um if most people don't know uh if you said um
+01:30:11.520 as measured by mass what is the biggest element what what is what is earth made of me as measured by mass actually it's
+01:30:19.040 it's iron Iron yeah we're I think 32% iron 30% oxygen and and then everything else is
+01:30:26.080 in the remaining remaining percentage. So, um we're basically a a rusty ball
+01:30:32.000 bearing um is that's earth. Um and and with with with you know a lot of silicon
+01:30:37.840 at the surface in in the form of sand. Um and the the iron phosphate so so iron
+01:30:43.440 phosphate lithium ion cells you iron extremely common most common element on earth even in the crust. Uh and then
+01:30:50.239 phosphorus is also very common. Um and um and then the the anode is is carbon
+01:30:56.320 but also very common. And then lithium is also very common. So the there's actually you can you can do the math. In
+01:31:02.480 fact, we did the math and published it published the math, but nobody looked at it. Uh um it's on the Tesla website um
+01:31:08.719 that that shows that you can completely power Earth with solar panels and batteries. Um and uh there's no shortage
+01:31:16.400 of anything. All right. So, on that note,
+01:31:22.320 yeah, go get to work, Elon, and just power the Earth while you're getting implants uh into people's brains
+01:31:28.960 and uh satellites and other good fun stuff. Good to see you, buddy. Yeah, good to see you guys.
+01:31:34.480 Yeah, thanks for stopping by anytime. Thanks for doing this. You got the Zoom link. Stop by anytime. Thank you for coming today and thank you
+01:31:40.239 for liberating free speech three years ago. So, yeah, that was that was a very important milestone.
+01:31:46.719 And and I see all you guys are in just different different places. I guess this is a very virtual situation. Always been that. I'm at the ranch. Sex
+01:31:53.760 is on the Are you ever in the same room? We try not to be. only when we do only
+01:31:59.040 only when we do that that summit. But otherwise, we each Yeah,
+01:32:04.960 your summit is is is is pretty fun. We had a great time recounting uh SNL
+01:32:10.159 sketches that didn't didn't make it. Oh god, there's so many good ones.
+01:32:15.520 I mean, we didn't even get to the Jeopardy ones. Yeah. Yeah. Those are so offensive. Oh, wait. Do you
+01:32:22.080 know? Well, I think we skipped a few that would have um dramatically increased our probability of being killed.
+01:32:27.760 You can take this one out, boys. I love you. I love you. I love you all. I'm going to poker
+01:32:32.880 later. Take care. Byebye. Love you.
+01:32:37.920 We'll let your winners ride. Rainman David.
+01:32:45.679 We open sourced it to the fans and they've just gone crazy with it. Love you. Queen of Kino.
+01:32:58.000 Besties are gone. That is my dog taking a notice in your driveways.
+01:33:05.760 Oh man, my habitasher will meet me up. We should all just get a room and just have one big huge orgy cuz they're all
+01:33:11.600 just useless. It's like this like sexual tension that we just need to release somehow.
+01:33:18.400 Wet your feet. Your feet. We need to get mer.
+01:33:31.280 I'm going all in.
