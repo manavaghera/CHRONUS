@@ -10,15 +10,18 @@ from sentence_transformers import SentenceTransformer
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent))
+# Task 4.2: centralized configuration (config.py at CHRONUS root)
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from config import config
 from elon_few_shot import few_shot_block
 from post_process import scrub
 
-# ---- Config ----
-OLLAMA_URL = "http://localhost:11434/api/generate"
-MODEL = "llama3:8b-instruct-q4_0"
-COLLECTION_NAME = "elon_musk"
-N_RESULTS = 5
-IMPORTANCE_WEIGHT = 0.15
+# ---- Config (from config.py) ----
+OLLAMA_URL = config.OLLAMA_URL + "/api/generate"
+MODEL = config.LLM_MODEL
+COLLECTION_NAME = config.COLLECTION_NAME
+N_RESULTS = config.N_RESULTS  # BUG 4 FIX: was 5; CHRONUS paper specifies top-k = 3
+IMPORTANCE_WEIGHT = config.IMPORTANCE_WEIGHT
 
 # ---- Load identity card ----
 identity_card_path = Path("03-Identity-Card/elon_musk.json")
@@ -26,13 +29,13 @@ identity_card_text = identity_card_path.read_text(encoding="utf-8")
 print(f"Loaded identity card from {identity_card_path}")
 
 # ---- Connect to ChromaDB ----
-client = chromadb.PersistentClient(path="chroma_db")
+client = chromadb.PersistentClient(path=config.CHROMA_PATH)
 collection = client.get_collection(COLLECTION_NAME)
 print(f"Connected to ChromaDB collection: {COLLECTION_NAME} ({collection.count():,} units)")
 
 # ---- Load embedding model ----
 print("Loading embedding model...")
-model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer(config.EMBEDDING_MODEL, device="cpu")
 
 
 def retrieve(query, n=N_RESULTS):
@@ -208,9 +211,9 @@ def chat(query):
             "prompt": prompt,
             "stream": False,
             "options": {
-                "temperature": 0.7,
-                "num_ctx": 8192,
-                "num_predict": 200,    # <-- cap response at ~200 tokens
+                "temperature": config.LLM_TEMPERATURE,
+                "num_ctx": config.LLM_CONTEXT_WINDOW,
+                "num_predict": config.LLM_MAX_TOKENS,    # <-- cap response length
             },
         },
         timeout=300,
@@ -219,11 +222,22 @@ def chat(query):
     answer = response.json()["response"]
     answer = scrub(answer)
 
-    # Auto-train: add this Q&A to memory for future retrieval
+    # Auto-train: DISABLED (BUG 1 consistency fix: memory poisoning).
+    # Every chat turn used to write the model's answer back into ChromaDB as a
+    # permanent "memory" — any LLM hallucination would become future "evidence"
+    # the retriever feeds back into prompts, compounding fabrication over time.
+    # Same reason auto-train was disabled in api_server.py. The import and call
+    # machinery is kept (commented) for the future human-review gating.
+    #
+    # BUG 10 FIX (historical): the shared writer lives in
+    # services/memory_store.py so this script never imports api_server, which
+    # loads FastAPI, a second ~90MB SentenceTransformer and a second ChromaDB
+    # client at module level (double memory + slow startup).
     sys.path.insert(0, str(Path(__file__).parent.parent))
-    from api_server import add_to_memory
-    sources = [{"source_file": meta["source_file"], "source_type": meta["source_type"]} for _, _, meta, _ in memories]
-    add_to_memory(query, answer, sources)
+    from services.memory_store import add_to_memory
+    # BUG 1 FIX: auto-train call disabled — see comment above.
+    # sources = [{"source_file": meta["source_file"], "source_type": meta["source_type"]} for _, _, meta, _ in memories]
+    # add_to_memory(query, answer, sources, embedder=model, collection=collection)
 
     # Display
     print("\n" + "=" * 60)
@@ -235,7 +249,8 @@ def chat(query):
     for i, (_, doc, meta, dist) in enumerate(memories):
         print(f"  [{i+1}] {meta['source_file']}  ({meta['source_type']})  dist={dist:.3f}")
     print("=" * 60)
-    print("[AUTO-TRAINED] This Q&A has been added to memory.")
+    # BUG 1 FIX: no auto-train happened above, so no confirmation printed.
+    # print("[AUTO-TRAINED] This Q&A has been added to memory.")
     return answer
 
 

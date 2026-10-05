@@ -59,18 +59,34 @@ HEDGE_PHRASES = [
     r"\bsomewhat perhaps\b",
 ]
 
-# Filler intros to strip
+# Assistant-style intros to strip. "Well", "So" and "Basically" are NOT here:
+# they're how he actually starts sentences ("basically" appears 151 times in
+# his cleaned transcripts), so stripping them removed his voice.
 FILLER_INTROS = [
-    r"^(?:Sure|Okay|Alright|Well),?\s+",
-    r"^(?:So|Basically),?\s+",
+    r"^(?:Sure|Okay|Alright|Certainly|Absolutely),?\s+",
     r"^(?:You know|You see),?\s+",
     r"^That'?s a (?:great|good|interesting) question\.?\s*",
 ]
 
+# A closing sentence that just sums up the answer is a strong AI tell.
+SUMMARY_CLOSER = re.compile(r"(?:In summary|In short|Overall|All in all|To sum up|In conclusion)\b", re.IGNORECASE)
 
-def scrub(text: str) -> str:
+
+def scrub(text: str | None) -> str:
     """Remove AI-tells and filler. Apply in priority order."""
-    out = text.strip()
+    out = (text or "").strip()
+
+    # Drop a final wrap-up sentence ("Overall, ...") when there's an answer before it
+    sentences = re.split(r"(?<=[.!?])\s+", out)
+    if len(sentences) >= 2 and SUMMARY_CLOSER.match(sentences[-1]):
+        out = " ".join(sentences[:-1])
+
+    # Dashes are the most recognisable LLM tell; turn them into commas.
+    out = re.sub(r"\s*[—–]\s*", ", ", out)
+    out = re.sub(r"(?<=\w) - (?=\w)", ", ", out)  # spaced hyphen used as a dash
+    out = re.sub(r",\s*([,.!?])", r"\1", out)
+    # "Plus," opening a sentence
+    out = re.sub(r"(?:^|(?<=[.!?] ))Plus,\s*", "And ", out)
 
     # Strip hedge stacks
     for pat in HEDGE_PHRASES:
@@ -107,9 +123,3 @@ def scrub(text: str) -> str:
         out = out[0].upper() + out[1:]
 
     return out.strip()
-
-
-def sentence_cap(text: str) -> str:
-    """Ensure no run-on paragraphs - add a tiny break at sentence boundaries if missing."""
-    # If response is one long sentence (>40 words), it might need splitting
-    return text

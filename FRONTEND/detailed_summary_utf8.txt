@@ -1,0 +1,1312 @@
+============================================================
+DETAILED SAMPLE PPTX SUMMARY
+============================================================
+
+--- SLIDE 1 (Layout: Title Slide) ---
+ Shape 'TextBox 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): Your Project title [Runs: Your Project title (f:None, s:32.0, b:True, c:000000)]
+ Shape 'Slide Number Placeholder 1' (type PLACEHOLDER (14)):
+  P (lvl 0): 1 [Runs: ]
+ Shape 'TextBox 7' (type TEXT_BOX (17)):
+  P (lvl 0): Presented  By: [Runs: Presented  By: (f:Calibri, s:20.0, b:True, c:002060)]
+  P (lvl 0): Student name-1(Enrollment-1) [Runs: Student name-1(Enrollment-1) (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): Student name-2(Enrollment-2) [Runs: Student name-2(Enrollment-2) (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): Student name-3(Enrollment-3) [Runs: Student name-3(Enrollment-3) (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): Student name-4(Enrollment-4) [Runs: Student name-4(Enrollment-4) (f:Calibri, s:20.0, b:None, c:None) |     (f:Gabriola, s:28.0, b:None, c:None) |   (f:Gabriola, s:28.0, b:None, c:002060)]
+ Shape 'TextBox 7' (type TEXT_BOX (17)):
+  P (lvl 0): Supervised by: [Runs:      (f:Gabriola, s:28.0, b:True, c:002060) | Supervised by: (f:Calibri, s:20.0, b:True, c:002060)]
+  P (lvl 0): Prof. XYZ or Dr. XYZ [Runs:      (f:Gabriola, s:28.0, b:None, c:None) | Prof. XYZ or Dr. XYZ (f:Calibri, s:20.0, b:None, c:None) |   (f:Calibri, s:24.0, b:None, c:None) |      (f:Calibri, s:28.0, b:None, c:None)]
+
+--- SLIDE 2 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): OUTLINE [Runs: OUTLINE (f:Calibri, s:35.55, b:None, c:None)]
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): Introduction [Runs:   (f:Calibri, s:24.0, b:None, c:None) | Introduction (f:Calibri, s:24.0, b:None, c:None)]
+  P (lvl 0): Objectives of Project Work [Runs:   (f:Calibri, s:24.0, b:None, c:None) | Objectives of Project Work (f:Calibri, s:24.0, b:None, c:None)]
+  P (lvl 0): Literature Survey [Runs:  Literature Survey (f:Calibri, s:24.0, b:None, c:None)]
+  P (lvl 0): Problem Statement [Runs:  Problem Statement (f:Calibri, s:24.0, b:None, c:None)]
+  P (lvl 0): Implementation with Results [Runs:  Implementation with Results (f:Calibri, s:24.0, b:None, c:None)]
+  P (lvl 0): Exploratory Data Analysis [Runs:  Exploratory Data Analysis (f:Calibri, s:24.0, b:None, c:None)]
+  P (lvl 0): Conclusion & Future Work [Runs:   (f:Calibri, s:24.0, b:None, c:None) | C (f:Calibri, s:24.0, b:None, c:None) | onclusion & Future Work (f:Calibri, s:24.0, b:None, c:None)]
+  P (lvl 0): Reference [Runs:   (f:Calibri, s:24.0, b:None, c:None) | Reference (f:Calibri, s:24.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 2 [Runs: ]
+
+--- SLIDE 3 (Layout: Two Content) ---
+ Shape 'Title 3' (type PLACEHOLDER (14)):
+  P (lvl 0): Introduction[15] [Runs: Introduction (f:Calibri, s:36.0, b:None, c:None) | [15] (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 7' (type PLACEHOLDER (14)):
+  P (lvl 0): 3 [Runs: ]
+ Shape 'Text Box 2' (type TEXT_BOX (17)):
+  P (lvl 0): Global malls and stores chains and the increase in the number of electronic payment customers, the competition among the rival organizations is becoming serious day by day. [Runs: Global malls and stores chains and the increase in the number of electronic payment customers, the competition among the rival organizations is becoming serious day by day. (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): Each organization is trying to attract more customers using personalized and short-time offers which makes the prediction of future volume of sales of every item an important asset in the planning and inventory management of every organization, transport service, etc. [Runs: Each organization is trying to attract more customers using personalized and short-time offers which makes the prediction of future volume of sales of every item an important asset in the planning and inventory management of every organization, transport service, etc. (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): Due to the cheap availability of computing and storage, it has become possible to use sophisticated machine learning algorithms for this purpose. In this paper, we are providing forecast for the sales data of big mart in a number of big mart stores across various location types which based on the historical data of sales volume. [Runs: Due to the cheap availability of computing and storage, it has become possible to use sophisticated machine learning algorithms for this purpose. In this paper, we are providing forecast for the sales data of big mart in a number of big mart stores across various location types which based on the historical data of sales volume. (f:Calibri, s:20.0, b:None, c:None)]
+
+--- SLIDE 4 (Layout: Title and Content) ---
+ Shape 'Slide Number Placeholder 22' (type PLACEHOLDER (14)):
+  P (lvl 0): 4 [Runs: ]
+ Shape 'Title 1' (type TEXT_BOX (17)):
+  P (lvl 0): Objectives of PROJECT Work [Runs: Objectives of PROJECT Work (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Text Box 2' (type TEXT_BOX (17)):
+  P (lvl 0): The goal is to create a prediction model and determine each product's sales at a certain store. [Runs: The goal is to create a prediction model and determine each product's sales at a certain store.  (f:Calibri, s:20.0, b:None, c:None) |   (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): The objective is to build a prediction model and determine each product's sales in a certain retailer. This model will be used by Big Mart to comprehend the characteristics of the products and the establishments that are essential to boosting sales. [Runs: The objective is to build a prediction model and determine each product's sales in a certain retailer. This model will be used by Big Mart to comprehend the characteristics of the products and the establishments that are essential to boosting sales. (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): Apart from this, the model will also anticipate the time period during which the prediction will occur. [Runs: Apart from this, the model will also anticipate the time period during which the prediction will occur. (f:Calibri, s:20.0, b:None, c:None)]
+
+--- SLIDE 5 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Literature Review [Runs: Literature  (f:Calibri, s:32.0, b:None, c:None) | Review (f:Calibri, s:31.0, b:None, c:None) |   (f:None, s:32.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 5 [Runs: ]
+ Shape 'Table 7' TABLE (6 rows):
+   | Sr. No. | Paper Title | Journal with Year | Methods | Outcomes |
+   | 1 | Sales prediction model for big mart[2] | IEEE, 2020
+(journal) | Random forest,
+linear regression | Using associated data processing and modelling algorithm, sales prediction in big mart shopping centre at different location. |
+   | 2 | Big mart sale prediction using Machine learning [5] | IEEE, 2021
+(journal) | linear regression,
+Random forest,
+XG boost | Using smart sale forecasting program, vast volumes of data is managed for business organization. |
+   | 3 | Machine Learning Application for Black Friday Sales Prediction Framework[6] | IEEE, 2021
+(journal) | Random Forest, XGBoost | Use Exploratory data analysis is find interesting trends from
+the dataset and the amount that a customer is likely to spend on
+next “Black Friday” sale. |
+   | 4 | Prediction Analysis Sales for Corporate Services Telecommunications Company using Gradient Boost Algorithm[8] | IEEE, 2020
+(journal) | Gradient Boost | Comparison between four machine learning approaches used in B2B sales to determine the type of prediction analysis that is reliable and accurate. |
+   | 5 | A Multi-Task Prediction Framework for Sales Prediction[9] | IEEE, 2021
+(journal) | Gradient Boost, Linear Regression | A multi-task prediction task
+which applies the seller prediction to guide the sales volume
+prediction. |
+
+--- SLIDE 6 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Research Gap[1][3] [Runs: Research Gap (f:Calibri, s:36.0, b:None, c:None) | [1][3] (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): Difficulty in determining the type of prediction analysis that is accurate. [Runs:  Difficulty in determining the type of prediction analysis that is accurate. (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): The other factor that caught our attention was the absence of any sales predictions that used the ARIMA model. We are implementing this model in order to obtain a time series graph that will allow us to even forecast when the prediction will arrive. [Runs:  The other factor that caught our attention was the absence of any sales predictions that used the ARIMA model. We are implementing this model in order to obtain a time series graph that will allow us to even forecast when the prediction will arrive. (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 6 [Runs: ]
+
+--- SLIDE 7 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Problem Statement [Runs: Problem Statement (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): Regression is an important machine learning model for these kinds of problems. Predicting sales of a company needs time series data of that company and based on that data the model can predict the future sales of that company or product. [Runs:   (f:Calibri, s:None, b:True, c:None) | Regression  (f:Calibri, s:None, b:True, c:None) | is an important machine learning model for these kinds of problems. Predicting sales of a company needs time series data of that company and based on that data the model can predict the future sales of that company or product. (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): So, in this research project we will analyze the time series sales data of a company and will predict the sales of the company for the coming quarter and for a specific product. For this kind of project of sales predict, we will apply the XG Boost algorithm and evaluate the result based on the training, testing and validation set of the data. [Runs:  So, in this research project we will analyze the time series sales data of a company and will predict the sales of the company for the coming quarter and for a specific product. For this kind of project of sales predict, we will apply the XG Boost algorithm and evaluate the result based on the training, testing and validation set of the data. (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 7 [Runs: ]
+
+--- SLIDE 8 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): TOOLS AND TECHNOLOGY [Runs: TOOLS AND TECHNOLOGY (f:Calibri, s:32.0, b:None, c:None)]
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): Software Requirements : [Runs: Software Requirements : (f:Calibri, s:None, b:True, c:None)]
+  P (lvl 0): Anaconda Navigator [Runs:  Anaconda Navigator  (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): Jupyter Notebook (Python 3.3 or greater, or Python 2.7) [Runs:   (f:Calibri, s:None, b:None, c:None) | Jupyter (f:Calibri, s:None, b:None, c:None) |  Notebook ( (f:Calibri, s:None, b:None, c:None) | Python 3.3 or greater, or Python 2.7) (f:None, s:None, b:None, c:None)]
+  P (lvl 0): Machine Learning Library : [Runs: Machine Learning Library : (f:Calibri, s:None, b:True, c:None)]
+  P (lvl 0): NumPy [Runs: NumPy (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): SciPy [Runs: SciPy (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): Pandas [Runs: Pandas (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): Matplotlib [Runs: Matplotlib (f:Calibri, s:None, b:None, c:None) |    (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 8 [Runs: ]
+
+--- SLIDE 9 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Arima model[11] [Runs: Arima (f:Calibri, s:None, b:None, c:None) |  model (f:Calibri, s:None, b:None, c:None) | [11] (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): ARIMA, is a statistical analysis model that uses time series data to either better understand the data set or to predict future trends. [Runs:   (f:Calibri, s:None, b:None, c:None) | ARIMA, is a statistical analysis model that uses  (f:Calibri, s:22.0, b:None, c:None) | time series (f:Calibri, s:22.0, b:True, c:None) |  data to either better understand the data set or to  (f:Calibri, s:22.0, b:None, c:None) | predict future trends (f:Calibri, s:22.0, b:True, c:None) | . (f:Calibri, s:22.0, b:None, c:None)]
+  P (lvl 0): A time series plot is a graph that displays data collected in a time sequence from any process. The chart can be used to determine how the data is trending over time and if the data points are random or exhibit any pattern. [Runs:  A  (f:Calibri, s:22.0, b:None, c:None) | time series plot  (f:Calibri, s:22.0, b:True, c:None) | is a graph that displays data collected in a time sequence from any process. The chart can be used to determine how the data is trending over time and if the data points are random or exhibit any pattern. (f:Calibri, s:22.0, b:None, c:None)]
+  P (lvl 0): Components of time series graph : [Runs:  Components (f:Calibri, s:22.0, b:True, c:None) |  of time series graph : (f:Calibri, s:22.0, b:None, c:None)]
+  P (lvl 0): - Secular trend, which describe the movement along the term [Runs: -  (f:Calibri, s:22.0, b:None, c:None) | Secular trend (f:Calibri, s:22.0, b:True, c:None) | , which describe the movement along the term (f:Calibri, s:22.0, b:None, c:None)]
+  P (lvl 0): - Seasonal variations, which represent seasonal changes [Runs:  -  (f:Calibri, s:22.0, b:None, c:None) | Seasonal variations (f:Calibri, s:22.0, b:True, c:None) | , which represent seasonal changes (f:Calibri, s:22.0, b:None, c:None)]
+  P (lvl 0): - Cyclical fluctuations, which correspond to periodical but not seasonal variations [Runs: -  (f:Calibri, s:22.0, b:None, c:None) | Cyclical fluctuations (f:Calibri, s:22.0, b:True, c:None) | , which correspond to periodical but not seasonal variations (f:Calibri, s:22.0, b:None, c:None)]
+  P (lvl 0): - Irregular variations, which are other nonrandom sources of variations of series. [Runs: -  (f:Calibri, s:22.0, b:None, c:None) | Irregular variations (f:Calibri, s:22.0, b:True, c:None) | , which are other  (f:Calibri, s:22.0, b:None, c:None) | nonrandom (f:Calibri, s:22.0, b:None, c:None) |  sources of variations of series. (f:Calibri, s:22.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 9 [Runs: ]
+
+--- SLIDE 10 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Comparing the R2 Value [Runs: Comparing the R (f:Calibri, s:36.0, b:None, c:None) | 2 (f:Calibri, s:36.0, b:None, c:None) |  Value (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 10 [Runs: ]
+ Shape 'Content Placeholder 5' (type PLACEHOLDER (14)):
+  P (lvl 1): XGBOOST Regression [Runs: XGBOOST Regression (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 1): Linear Regression [Runs: Linear Regression (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 1): Random Forest [Runs: Random Forest (f:Calibri, s:20.0, b:None, c:None)]
+
+--- SLIDE 11 (Layout: Title and Content) ---
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 1): ARIMA Model [Runs: ARIMA Model (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): Observation from the previous implementations : [Runs: Observation from the previous implementations : (f:Calibri, s:None, b:True, c:None)]
+  P (lvl 0): Here, the R2 value of ARIMA model is around 0.86, which is the highest. [Runs:  Here, the R2 value of ARIMA model is around 0.86, which is the highest. (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): Hence, ARIMA Model is most accurate out of all the three algorithms to work on the predictive analytics. [Runs:  Hence, ARIMA Model is most accurate out of all the three algorithms to work on the predictive analytics. (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 11 [Runs: ]
+
+--- SLIDE 12 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Data Set Description[5] [Runs: Data Set Description (f:Calibri, s:32.0, b:True, c:None) | [5] (f:Calibri, s:32.0, b:True, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 12 [Runs: ]
+ Shape 'Content Placeholder 15' TABLE (13 rows):
+   | NAME | TYPE | DESCRIPTION |
+   | Item_identifier | Numeric | It is the unique product Id number. |
+   | Item_Weight | Numeric | It will include the product's weight |
+   | Item_Fat_Content | categorical | It will mean whether the item is low in fat or not |
+   | Item_Visibility | Numeric | The percentage of the overall viewing area assigned to the particular item from all items in the shop. |
+   | Item_Type | categorical | To which group does the commodity belong |
+   | Item_MRP | Numeric | The product's price list |
+   | Outlet_Identifier | Numeric | unique store ID |
+   | Outlet_Establishment_Year | Numeric | The year that the shop first opened |
+   | Outlet_Size | categorical | The amount of ground space that the store occupies |
+   | Outlet_Location_Type | categorical | The type of city in which the store is located |
+   | Outlet_Type | categorical | Whether he outlet is just a grocery or some sort of supermarket |
+   | Item_Outlet_Sales | Numeric | Product sales at that specific store. This is the outcome variable that has to be forecast. |
+
+--- SLIDE 13 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Project Flow Chart [Runs: Project Flow Chart (f:Calibri, s:32.0, b:True, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 13 [Runs: ]
+
+--- SLIDE 14 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Implementation with Results[17] [Runs: Implementation with Results (f:Calibri, s:32.0, b:None, c:None) | [17] (f:Calibri, s:32.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 14 [Runs: ]
+ Shape 'TextBox 5' (type TEXT_BOX (17)):
+  P (lvl 0): According to the gathered data, it is gathered information from 10 stores spread across several areas, each of which sold 1559 distinct products. [Runs: According to the gathered data, it is gathered information from 10 stores spread across several areas, each of which sold 1559 distinct products. (f:Calibri, s:20.0, b:None, c:None)]
+  P (lvl 0): Various factors important by statistical means like mean, standard deviation, median, count of values and maximum value etc. are shown in Fig.4 for numerical variables of our dataset. [Runs: Various factors important by statistical means like mean, standard deviation, median, count of values and maximum value etc. are shown in Fig.4 for numerical variables of our dataset. (f:Calibri, s:20.0, b:None, c:None)]
+
+--- SLIDE 15 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Implementation[17] [Runs: Implementation (f:Calibri, s:36.0, b:None, c:None) | [17] (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 15 [Runs: ]
+ Shape 'TextBox 6' (type TEXT_BOX (17)):
+  P (lvl 0): Some observations: [Runs: Some observations: (f:Calibri, s:20.0, b:True, c:None)]
+  P (lvl 0): Item_Visibility has a min value of zero. This makes no practical sense because when a product is being sold in a store, the visibility cannot be 0. [Runs: Item_Visibility (f:Calibri, s:19.0, b:None, c:None) |  has a min value of zero. This makes no practical sense because when a product is being sold in a store, the visibility cannot be 0. (f:Calibri, s:19.0, b:None, c:None)]
+  P (lvl 0): Outlet_Establishment_Years vary from 1985 to 2009. The values might not be apt in this form. Rather, if we can convert them to how old the particular store is, it should have a better impact on sales. [Runs: Outlet_Establishment_Years (f:Calibri, s:19.0, b:None, c:None) |  vary from 1985 to 2009. The values might not be apt in this form. Rather, if we can convert them to how old the particular store is, it should have a better impact on sales. (f:Calibri, s:19.0, b:None, c:None)]
+  P (lvl 0): The lower ‘count’ of Item_Weight and Outlet_Size confirms the findings from the missing value check. [Runs: The lower ‘count’ of  (f:Calibri, s:19.0, b:None, c:None) | Item_Weight (f:Calibri, s:19.0, b:None, c:None) |  and  (f:Calibri, s:19.0, b:None, c:None) | Outlet_Size (f:Calibri, s:19.0, b:None, c:None) |  confirms the findings from the missing value check. (f:Calibri, s:19.0, b:None, c:None)]
+
+--- SLIDE 16 (Layout: Title and Content) ---
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): Results of ARIMA Model and Time Series Graph : [Runs: Results of ARIMA Model and Time Series Graph : (f:Calibri, s:None, b:True, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 16 [Runs: ]
+ Shape 'Rectangle 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): In order to construct a sales prediction model, we have applied the most efficient way of predicting future sales at large supermarkets, which sell a wide variety of products, including dairy products. But there are 2 axes to consider while making the forecast: sales years and sales through retail outlets, respectively. To begin making the final graph prediction, we needed to include the years we were predicting for. [Runs: In order to construct a sales prediction model, we have applied the most efficient way of predicting future sales at large supermarkets, which sell a wide variety of products, including dairy products. But there are 2 axes to consider while making the forecast: sales years and sales through retail outlets, respectively. To begin making the final graph prediction, we needed to include the years we were predicting for. (f:Calibri, s:None, b:None, c:000000)]
+  P (lvl 0): For example, the image shows that we predicted sales between 2022 and 2024, so we must adjust the mathematical calculation (which we had placed at 730) so that it fits within the graph. Therefore, our model allows us to forecast product sales in accordance with the years managed by configuring the computation. [Runs: For example, the image shows that we predicted sales between  (f:Calibri, s:None, b:None, c:000000) | 2022 and 2024, so we must adjust the mathematical calculation (which we had placed at 730) so that it fits within the graph. Therefore, our model allows us to forecast product sales in  (f:Calibri, s:None, b:None, c:000000) | accordance with the years managed by configuring the computation. (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): . [Runs: . (f:Calibri, s:19.0, b:None, c:000000)]
+
+--- SLIDE 17 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Exploratory Data Analysis[5] [Runs: Exploratory Data Analysis (f:Calibri, s:36.0, b:None, c:None) | [5] (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 17 [Runs: ]
+ Shape 'Content Placeholder 5' (type PLACEHOLDER (14)):
+  P (lvl 0): 1. 	Item_Weight : Mean is greater(greater than 0.3) because missing values are filled in using the mean and the majority of the items have values of 0, indicating that there is not enough data for those items. [Runs: 1. 	 (f:Calibri, s:None, b:None, c:None) | Item_Weight (f:Calibri, s:None, b:None, c:None) |  : Mean is greater(greater than 0.3) because missing values are filled in using the mean and the majority of the items have values of 0, indicating that there is not enough data for those items. (f:Calibri, s:None, b:None, c:None)]
+
+--- SLIDE 18 (Layout: Title and Content) ---
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 18 [Runs: ]
+ Shape 'Content Placeholder 5' (type PLACEHOLDER (14)):
+  P (lvl 0): 2. 	Item_Visibility : Left-skewed values are noted, and in order to prevent zeros, we filled all of the zeros with the mean, causing the peak to be shown at the mean. [Runs: 2. 	 (f:Calibri, s:None, b:None, c:None) | Item_Visibility (f:Calibri, s:None, b:None, c:None) |  : Left-skewed values are noted, and in order to prevent zeros, we filled all of the zeros with the mean, causing the peak to be shown at the mean.  (f:Calibri, s:None, b:None, c:None)]
+
+--- SLIDE 19 (Layout: Title and Content) ---
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): 3. 	Outlet_Establishment_Year : With the exception of one, which had more openings in 1985, all of the outlets were established in an equal proportion. [Runs: 3. 	 (f:Calibri, s:None, b:None, c:None) | Outlet_Establishment_Year (f:Calibri, s:None, b:None, c:None) |  : With the exception of one, which had more openings in 1985, all of the outlets were established in an equal proportion. (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 19 [Runs: ]
+
+--- SLIDE 20 (Layout: Title and Content) ---
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): 4. 	Item_Fat_Content : The majority of items are low-fat, and just a small number are non-edible. [Runs: 4. 	 (f:Calibri, s:None, b:None, c:None) | Item_Fat_Content (f:Calibri, s:None, b:None, c:None) |  : The majority of items are low-fat, and just a small number are non-edible. (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 20 [Runs: ]
+
+--- SLIDE 21 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Correlation between target and features[17] [Runs: Correlation between target and features (f:Calibri, s:32.0, b:None, c:None) | [17] (f:Calibri, s:32.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 21 [Runs: ]
+
+--- SLIDE 22 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Observations from the heating map: [Runs: Observations from the heating map: (f:Calibri, s:32.0, b:None, c:None)]
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): It appears that item_Weight and Outlet_Establishment_Year are fairly correlated. [Runs:  It appears that  (f:Calibri, s:None, b:None, c:None) | item_Weight (f:Calibri, s:None, b:None, c:None) |  and  (f:Calibri, s:None, b:None, c:None) | Outlet_Establishment_Year (f:Calibri, s:None, b:None, c:None) |  are fairly correlated. (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): As we created the Outlet_Years from the Outlet_Establishment_Year, there is a distinct difference between the two, making the correlation between the two extremely negative. Therefore, when processing the model, we will eliminate the Outlet_Establishment_Year. [Runs:  As we created the  (f:Calibri, s:None, b:None, c:None) | Outlet_Years (f:Calibri, s:None, b:None, c:None) |  from the  (f:Calibri, s:None, b:None, c:None) | Outlet_Establishment_Year (f:Calibri, s:None, b:None, c:None) | , there is a distinct difference between the two, making the correlation between the two extremely negative. Therefore, when processing the model, we will eliminate the  (f:Calibri, s:None, b:None, c:None) | Outlet_Establishment_Year (f:Calibri, s:None, b:None, c:None) | .  (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): The outcome variable, Item_Outlet_Sales, indicates us from its column that Item_MRP is a highly impaction prediction variable. Nothing else has made a significant contribution. [Runs:  The outcome variable,  (f:Calibri, s:None, b:None, c:None) | Item_Outlet_Sales (f:Calibri, s:None, b:None, c:None) | , indicates us from its column that  (f:Calibri, s:None, b:None, c:None) | Item_MRP (f:Calibri, s:None, b:None, c:None) |  is a highly impaction prediction variable. Nothing else has made a significant contribution. (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 22 [Runs: ]
+
+--- SLIDE 23 (Layout: Title and Content) ---
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 23 [Runs: ]
+ Shape 'Title 1' (type TEXT_BOX (17)):
+  P (lvl 0): Conclusion & Future work [Runs: Conclusion (f:Calibri, s:36.0, b:None, c:None) |  & Future work (f:Calibri, s:36.0, b:None, c:None) |   (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Content Placeholder 1' (type PLACEHOLDER (14)):
+  P (lvl 0): The goal of this project is to produce accurate sales forecasts for all items, so that businesses will have a better picture of where they stand and if they need to adjust their marketing tactics to achieve their goals. Additionally, the Arima model uses a time series graph to accurately anticipate future sales. We used the Arima model to forecast product sales over the next two years, and our results indicate that sales will rise steadily throughout that time. [Runs:  The goal of this project is to produce accurate sales forecasts for all items, so that businesses will have a better picture of where they stand and if they need to adjust their marketing tactics to achieve their goals. Additionally, the  (f:Calibri, s:None, b:None, c:None) | Arima (f:Calibri, s:None, b:None, c:None) |  model uses a time series graph to accurately anticipate future sales. We used the  (f:Calibri, s:None, b:None, c:None) | Arima (f:Calibri, s:None, b:None, c:None) |  model to forecast product sales over the next two years, and our results indicate that sales will rise steadily throughout that time. (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): We’ve created our project research based as the model is not created to build the model, we always have to make changes in the code to predict the future of any sales according to dataset; however, models make all this work easy as it only takes dataset to perform a final time series graph. Therefore, this project’s ongoing work may involve developing a predictive model that may accept a dataset as input and output forecasts. In addition, our model can only provide predictions for the next year or so. This indicates that trying to predict a product’s monthly sales is a futile endeavour. As a result, this is something that may be taken into account as the project progresses. [Runs:  We’ve created our project research based as the model is not created to build the model, we always have to make changes in the code to predict the future of any sales according to dataset; however, models make all this work easy as it only takes dataset to perform a final time series graph. Therefore, this project’s ongoing work may involve developing a predictive model that may accept a dataset as input and output forecasts. In addition, our model can only provide predictions for the next year or so. This indicates that trying to predict a product’s monthly sales is a futile  (f:Calibri, s:None, b:None, c:None) | endeavour (f:Calibri, s:None, b:None, c:None) | . As a result, this is something that may be taken into account as the project progresses. (f:Calibri, s:None, b:None, c:None)]
+
+--- SLIDE 24 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): References [Runs: References (f:Calibri, s:36.0, b:None, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 24 [Runs: ]
+ Shape 'Text Box 2' (type TEXT_BOX (17)):
+  P (lvl 0): Gopalakrishnan, T., Choudhary, R., & Prasad, S. (2018, December). Prediction of Sales Value in Online shopping using Linear Regression. In 2018 4th International Conference on Computing Communication and Automation (ICCCA) (pp. 1-6). IEEE. [Runs: Gopalakrishnan, T., Choudhary, R., & Prasad, S. (2018, December). Prediction of Sales Value in Online shopping using Linear Regression. In  (f:Calibri, s:13.0, b:None, c:None) | 2018 4th International Conference on Computing Communication and Automation (ICCCA) (f:Calibri, s:13.0, b:None, c:None) |  (pp. 1-6). IEEE.   (f:Calibri, s:13.0, b:None, c:None)]
+  P (lvl 0): Wisesa, O., Adriansyah, A., & Khalaf, O. I. (2020, September). Prediction analysis sales for corporate services telecommunications company using gradient boost algorithm. In 2020 2nd International Conference on Broadband Communications, Wireless Sensors and Powering (BCWSP) (pp. 101-106). IEEE. [Runs: Wisesa (f:Calibri, s:13.0, b:None, c:None) | , O.,  (f:Calibri, s:13.0, b:None, c:None) | Adriansyah (f:Calibri, s:13.0, b:None, c:None) | , A., & Khalaf, O. I. (2020, September). Prediction analysis sales for corporate services telecommunications company using gradient boost algorithm. In  (f:Calibri, s:13.0, b:None, c:None) | 2020 2nd International Conference on Broadband Communications, Wireless Sensors and Powering (BCWSP) (f:Calibri, s:13.0, b:None, c:None) |  (pp. 101-106). IEEE. (f:Calibri, s:13.0, b:None, c:None) |   (f:Calibri, s:13.0, b:True, c:None) |   (f:Calibri, s:13.0, b:None, c:None)]
+  P (lvl 0): Ramachandra, H. V., Balaraju, G., Rajashekar, A., & Patil, H. (2021, March). Machine Learning Application for Black Friday Sales Prediction Framework. In 2021 International Conference on Emerging Smart Computing and Informatics (ESCI) (pp. 57-61). IEEE. [Runs: Ramachandra, H. V.,  (f:Calibri, s:13.0, b:None, c:None) | Balaraju (f:Calibri, s:13.0, b:None, c:None) | , G., Rajashekar, A., & Patil, H. (2021, March). Machine Learning Application for Black Friday Sales Prediction Framework. In  (f:Calibri, s:13.0, b:None, c:None) | 2021 International Conference on Emerging Smart Computing and Informatics (ESCI) (f:Calibri, s:13.0, b:None, c:None) |  (pp. 57-61). IEEE.  (f:Calibri, s:13.0, b:None, c:None) |   (f:Calibri, s:13.0, b:True, c:None)]
+  P (lvl 0): Li, Y., Zhu, P., & Qin, S. (2017, October). Optimization of ticket purchasing strategy based on machine learning. In 2017 IEEE 3rd Information Technology and Mechatronics Engineering Conference (ITOEC) (pp. 1230-1234). IEEE. [Runs: Li, Y., Zhu, P., & Qin, S. (2017, October). Optimization of ticket purchasing strategy based on machine learning. In  (f:Calibri, s:13.0, b:None, c:None) | 2017 IEEE 3rd Information Technology and Mechatronics Engineering Conference (ITOEC) (f:Calibri, s:13.0, b:None, c:None) |  (pp. 1230-1234). IEEE. (f:Calibri, s:13.0, b:None, c:None)]
+  P (lvl 0): Kumar, N., & Choudhari, S. BigMart Sale Prediction using Machine Learning. [Runs: Kumar, N., & Choudhari, S.  (f:Calibri, s:13.0, b:None, c:None) | BigMart (f:Calibri, s:13.0, b:None, c:None) |  Sale Prediction using Machine Learning. (f:Calibri, s:13.0, b:None, c:None)]
+  P (lvl 0): Chavan, S., Panchal, S., Sawant, T., & Shinde, J. (2020). Predicting Online Product Sales using Machine Learning. [Runs: Chavan, S., Panchal, S., Sawant, T., & Shinde, J. (2020). Predicting Online Product Sales using Machine Learning. (f:Calibri, s:13.0, b:None, c:None)]
+  P (lvl 0): DASARI, A. K., & RAMASUBBAIAH, B. BIGMART SALES USING MACHINE LEARNING WITH DATA ANALYSIS. [Runs: DASARI, A. K., & RAMASUBBAIAH, B. BIGMART SALES USING MACHINE LEARNING WITH DATA ANALYSIS.  (f:Calibri, s:13.0, b:None, c:None)]
+  P (lvl 0): Parmar, I., Agarwal, N., Saxena, S., Arora, R., Gupta, S., Dhiman, H., & Chouhan, L. (2018, December). Stock market prediction using machine learning. In 2018 first international conference on secure cyber computing and communication (ICSCCC) (pp. 574-576). IEEE. [Runs: Parmar, I., Agarwal, N., Saxena, S., Arora, R., Gupta, S., Dhiman, H., & Chouhan, L. (2018, December). Stock market prediction using machine learning. In  (f:Calibri, s:13.0, b:None, c:None) | 2018 first international conference on secure cyber computing and communication (ICSCCC) (f:Calibri, s:13.0, b:None, c:None) |  (pp. 574-576). IEEE.  (f:Calibri, s:13.0, b:None, c:None)]
+  P (lvl 0): Coppola, D. (2019). Prediction model for drinking water network failures (Doctoral dissertation, Politecnico di Torino). [Runs: Coppola, D. (2019).  (f:Calibri, s:13.0, b:None, c:None) | Prediction model for drinking water network failures (f:Calibri, s:13.0, b:None, c:None) |  (Doctoral dissertation,  (f:Calibri, s:13.0, b:None, c:None) | Politecnico (f:Calibri, s:13.0, b:None, c:None) |  di Torino).   (f:Calibri, s:13.0, b:None, c:None)]
+  P (lvl 0): Nassif, A. B. (2016, December). Short term power demand prediction using stochastic gradient boosting. In 2016 5th International Conference on Electronic Devices, Systems and Applications (ICEDSA) (pp. 1-4). IEEE. [Runs: Nassif, A. B. (2016, December). Short term power demand prediction using stochastic gradient boosting. In  (f:Calibri, s:13.0, b:None, c:None) | 2016 5th International Conference on Electronic Devices, Systems and Applications (ICEDSA) (f:Calibri, s:13.0, b:None, c:None) |  (pp. 1-4). IEEE.  (f:Calibri, s:13.0, b:None, c:None)]
+
+--- SLIDE 25 (Layout: Title and Content) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Web References [Runs: Web References (f:Calibri, s:36.0, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): 11.  https://www.tensorflow.org/ [Runs: 11.   (f:Calibri, s:None, b:None, c:None) | https://www.tensorflow.org/ (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): 12.  https://matplotlib.org/ [Runs: 12.   (f:Calibri, s:None, b:None, c:None) | https://matplotlib.org/ (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): 13.  https://pandas.pydata.org/ [Runs: 13.   (f:Calibri, s:None, b:None, c:None) | https://pandas.pydata.org/ (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): 14.  https://www.youtube.com/watch?v=PD5QguzEdNs [Runs: 14.   (f:Calibri, s:None, b:None, c:None) | https://www.youtube.com/watch?v=PD5QguzEdNs (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): 15.  https://www.lucidchart.com/ [Runs: 15.   (f:Calibri, s:None, b:None, c:None) | https://www.lucidchart.com/ (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): 16.  https://apps.diagrams.net [Runs: 16.   (f:Calibri, s:None, b:None, c:None) | https://apps.diagrams.net (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): 17. https://jupyter.org/ [Runs: 17.  (f:Calibri, s:None, b:None, c:None) | https://jupyter.org/ (f:Calibri, s:None, b:None, c:None) |   (f:Calibri, s:None, b:None, c:None)]
+  P (lvl 0): 18. https://www.kaggle.com/code/hiralmshah/bigmart-sales-prediction/notebook [Runs: 18.  (f:Calibri, s:None, b:None, c:None) | https://www.kaggle.com/code/hiralmshah/bigmart-sales-prediction/notebook (f:Calibri, s:None, b:None, c:93A303)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 25 [Runs: ]
+
+--- SLIDE 26 (Layout: Title and Content) ---
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): Thank you [Runs: Thank you (f:Arial, s:96.0, b:True, c:None)]
+ Shape 'Slide Number Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): 26 [Runs: ]
+
+============================================================
+DETAILED CHRONUS PPTX SUMMARY
+============================================================
+
+--- SLIDE 1 (Layout: Subject Title) ---
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): Project group number:-CSE_235
+ Shape 'Text Placeholder 3' (type PLACEHOLDER (14)):
+  P (lvl 0): Computer Science Engineering
+ Shape 'object 9' (type TEXT_BOX (17)):
+  P (lvl 0): Chronus: A Memory-Trained Agentic AI for Human Knowledge and Mindset Simulation
+
+--- SLIDE 2 (Layout: Subject Title) ---
+ Shape 'Title 1' (type PLACEHOLDER (14)):
+  P (lvl 0): Project team :TIRTH SAKARIYA (2303031050723)MANAV AGHERA(2403031057168)MANISH PRAJAPATI (2303031050721)
+ Shape 'Content Placeholder 2' (type PLACEHOLDER (14)):
+  P (lvl 0): Guide Name: Prof. Shubham Upadyay
+
+--- SLIDE 3 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Table of Contents
+ Shape 'Text 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): 01
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Introduction & Vision
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): 02
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): Problem Statement
+ Shape 'Text 13' (type AUTO_SHAPE (1)):
+  P (lvl 0): 03
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): Literature Review
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): 04
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): Methodology & Workflow
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): 05
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): Brain-to-AI Training Framework
+ Shape 'Text 25' (type AUTO_SHAPE (1)):
+  P (lvl 0): 06
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Cloning & Identity Engine
+ Shape 'Text 29' (type AUTO_SHAPE (1)):
+  P (lvl 0): 07
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): System Architecture
+ Shape 'Text 33' (type AUTO_SHAPE (1)):
+  P (lvl 0): 08
+ Shape 'Text 34' (type AUTO_SHAPE (1)):
+  P (lvl 0): Implementation & Algorithms
+ Shape 'Text 37' (type AUTO_SHAPE (1)):
+  P (lvl 0): 09
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): Data Pipeline & File Support
+ Shape 'Text 41' (type AUTO_SHAPE (1)):
+  P (lvl 0): 10
+ Shape 'Text 42' (type AUTO_SHAPE (1)):
+  P (lvl 0): Famous Personality Models
+ Shape 'Text 45' (type AUTO_SHAPE (1)):
+  P (lvl 0): 11
+ Shape 'Text 46' (type AUTO_SHAPE (1)):
+  P (lvl 0): Interview & Memory Augmentation
+ Shape 'Text 49' (type AUTO_SHAPE (1)):
+  P (lvl 0): 12
+ Shape 'Text 50' (type AUTO_SHAPE (1)):
+  P (lvl 0): Security, Ethics & Privacy
+ Shape 'Text 53' (type AUTO_SHAPE (1)):
+  P (lvl 0): 13
+ Shape 'Text 54' (type AUTO_SHAPE (1)):
+  P (lvl 0): Results & Performance
+ Shape 'Text 57' (type AUTO_SHAPE (1)):
+  P (lvl 0): 14
+ Shape 'Text 58' (type AUTO_SHAPE (1)):
+  P (lvl 0): Use Cases & Applications
+ Shape 'Text 61' (type AUTO_SHAPE (1)):
+  P (lvl 0): 15
+ Shape 'Text 62' (type AUTO_SHAPE (1)):
+  P (lvl 0): Conclusion & Future Roadmap
+
+--- SLIDE 4 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 01
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Introduction & Vision
+
+--- SLIDE 5 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Introduction — What is Chronus?
+ Shape 'Text 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): Chronus is an agentic AI system that simulates the complete cognitive identity of a human — their knowledge, mindset, beliefs, communication style, voice, and personality — by training directly on their personal data, writings, and memories.
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): Brain-to-AI Training
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): Personal writings, memories, and beliefs encoded into neural vector representations — mirroring how the brain stores knowledge.
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): Famous Personality Models
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): Pre-trained on 8 historical figures using real writings, documented philosophy, and known communication styles.
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Identity Cloning
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Replicates a person's actual voice using AI synthesis — responses delivered in their real tone, indistinguishable from the real human.
+ Shape 'Text 19' (type AUTO_SHAPE (1)):
+  P (lvl 0): Agentic Reasoning
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): Goes beyond retrieval — reasons across memories, draws connections between topics, and answers questions the person never explicitly wrote about.
+ Shape 'Text 23' (type AUTO_SHAPE (1)):
+  P (lvl 0): Family Contribution
+ Shape 'Text 24' (type AUTO_SHAPE (1)):
+  P (lvl 0): Multiple contributors — family, friends, colleagues — answer guided interview questions to build a richer, multi-perspective model.
+ Shape 'Text 27' (type AUTO_SHAPE (1)):
+  P (lvl 0): Model Persistence
+ Shape 'Text 28' (type AUTO_SHAPE (1)):
+  P (lvl 0): Every trained model is saved with full history. Resume any conversation with any relative or personality at any time.
+
+--- SLIDE 6 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): The Vision — Scale of Impact
+ Shape 'Text 3' (type AUTO_SHAPE (1)):
+  P (lvl 0): Every year, irreplaceable human knowledge is permanently lost. Chronus exists to change that.
+ Shape 'Text 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): 108B+
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Humans have ever lived on Earth
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): 0%
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): Of their knowledge is AI-accessible
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): 30–60s
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): Of voice audio needed for voice cloning
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): 384-dim
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): Vector space per memory in Chronus
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): 8
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): Famous personalities pre-trained
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): 25
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): Guided interview questions per model
+
+--- SLIDE 7 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 02
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Problem Statement
+
+--- SLIDE 8 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Problem Statement — The Gap We Address
+ Shape 'Text 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): "The human brain accumulates decades of knowledge, experience, and personality — yet all of it vanishes permanently at death, even when vast written, audio, and digital records exist. No system yet captures and re-animates a complete human identity."
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): Irreversible Knowledge Loss
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): Billions of human lives end with no AI-accessible record of their intellectual identity, wisdom, or worldview.
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): No Voice Preservation System
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): Existing AI chatbots respond in robotic text — they cannot replicate a person's real voice, breaking the illusion of genuine conversation.
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): Fragmented Digital Archives
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Personal diaries, emails, texts, and letters exist in isolated formats. No unified system intelligently queries across all of them.
+ Shape 'Text 19' (type AUTO_SHAPE (1)):
+  P (lvl 0): Grief Without Closure
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): Bereaved families have no way to hear, interact with, or ask questions of a deceased loved one — a deeply human need technology hasn't solved.
+ Shape 'Text 23' (type AUTO_SHAPE (1)):
+  P (lvl 0): Historical Knowledge Locked
+ Shape 'Text 24' (type AUTO_SHAPE (1)):
+  P (lvl 0): The wisdom of Einstein, Gandhi, or Lincoln is trapped in static texts with no interactive, conversational, voice-enabled interface.
+ Shape 'Text 27' (type AUTO_SHAPE (1)):
+  P (lvl 0): AI Hallucination Risk
+ Shape 'Text 28' (type AUTO_SHAPE (1)):
+  P (lvl 0): Current LLMs role-playing historical figures hallucinate facts. Chronus grounds every response in real, verified writings — not fabricated content.
+
+--- SLIDE 9 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 03
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Literature Review
+
+--- SLIDE 10 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Literature Review — Key Prior Works (Table Format)
+ Shape 'Table 0' TABLE (8 rows):
+   | Author / Year | Title / Topic | Key Contribution | Gap / Limitation | Chronus Addresses? |
+   | Replika (2017) | Conversational AI companion via ML | Personalized chatbot from chat history | No voice; no semantic memory | ✅ Semantic + Voice |
+   | HereAfter AI (2021) | Digital afterlife chatbot from text/voice | Processes real voice recordings | Proprietary; closed formats | ✅ Open formats + local |
+   | StoryFile (2020) | Interactive hologram-style video avatar | Q&A from recorded video sessions | Requires extensive filming | ✅ Any text/audio input |
+   | ElevenLabs TTS (2023) | Neural voice cloning from audio | High-fidelity voice from 60s sample | Not linked to a memory AI | ✅ Integrated voice+memory |
+   | Sentence-BERT (Reimers 2019) | Sentence embeddings for semantic similarity | Foundation of modern semantic search | Not applied to personal identity | ✅ Core of Chronus memory |
+   | GPT-4 Persona Prompting (2023) | LLM role-playing as historical figures | Flexible personality simulation | Hallucinations; not grounded | ✅ Grounded in real writings |
+   | ChromaDB (2023) | Open-source vector store | Fast local semantic retrieval | No persona layer | ✅ Storage backbone |
+
+--- SLIDE 11 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Literature Review — Feature Comparison Matrix
+ Shape 'Text 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): System
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Semantic Memory
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Replication
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): Open File Formats
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): Local / Private
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): Historical Figures
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Multi-Contributor
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): Model Persistence
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): Anti-Hallucination
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): Replika
+ Shape 'Text 24' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 28' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 32' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 34' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 36' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 40' (type AUTO_SHAPE (1)):
+  P (lvl 0): HereAfter AI
+ Shape 'Text 42' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 44' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 46' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 48' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 50' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 52' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 54' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 56' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 58' (type AUTO_SHAPE (1)):
+  P (lvl 0): GPT-4 Persona
+ Shape 'Text 60' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 62' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 64' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 66' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 68' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 70' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 72' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 74' (type AUTO_SHAPE (1)):
+  P (lvl 0): ❌
+ Shape 'Text 76' (type AUTO_SHAPE (1)):
+  P (lvl 0): Chronus
+ Shape 'Text 78' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 80' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 82' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 84' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 86' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 88' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 90' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 92' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+
+--- SLIDE 12 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 04
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Methodology & Workflow
+
+--- SLIDE 13 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Methodology — End-to-End System Workflow
+ Shape 'Text 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1
+ Shape 'Text 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1. Data
+  P (lvl 0): Input
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Files + audio
+  P (lvl 0): uploaded
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): 2
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): 2. Text
+  P (lvl 0): Extraction
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): Parse all formats
+  P (lvl 0): spaCy segment
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): 3
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): 3. Embed
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sentence-BERT
+  P (lvl 0): 384-dim vectors
+ Shape 'Text 19' (type AUTO_SHAPE (1)):
+  P (lvl 0): 4
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): 4. Store
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): ChromaDB
+  P (lvl 0): local vectors
+ Shape 'Text 24' (type AUTO_SHAPE (1)):
+  P (lvl 0): 5
+ Shape 'Text 25' (type AUTO_SHAPE (1)):
+  P (lvl 0): 5. Query
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): Cosine similarity
+  P (lvl 0): search
+ Shape 'Text 29' (type AUTO_SHAPE (1)):
+  P (lvl 0): 6
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): 6. Generate
+ Shape 'Text 31' (type AUTO_SHAPE (1)):
+  P (lvl 0): Theme-matched
+  P (lvl 0): response text
+ Shape 'Text 34' (type AUTO_SHAPE (1)):
+  P (lvl 0): 7
+ Shape 'Text 35' (type AUTO_SHAPE (1)):
+  P (lvl 0): 7. Voice
+  P (lvl 0): Output
+ Shape 'Text 36' (type AUTO_SHAPE (1)):
+  P (lvl 0): TTS cloned
+  P (lvl 0): voice delivery
+ Shape 'Text 39' (type AUTO_SHAPE (1)):
+  P (lvl 0): Interview Module
+ Shape 'Text 40' (type AUTO_SHAPE (1)):
+  P (lvl 0): 25 Q&As → corpus enrichment
+ Shape 'Text 43' (type AUTO_SHAPE (1)):
+  P (lvl 0): Brain-to-AI Mapping
+ Shape 'Text 44' (type AUTO_SHAPE (1)):
+  P (lvl 0): Memory → vector neural identity
+ Shape 'Text 47' (type AUTO_SHAPE (1)):
+  P (lvl 0): Persona Style Engine
+ Shape 'Text 48' (type AUTO_SHAPE (1)):
+  P (lvl 0): Quote + explanation + signature
+ Shape 'Text 51' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Cloning Engine
+ Shape 'Text 52' (type AUTO_SHAPE (1)):
+  P (lvl 0): Speaker embed → real-time TTS
+
+--- SLIDE 14 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 05
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Brain-to-AI Training Framework
+
+--- SLIDE 15 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Brain-to-AI Training Framework — The Core Analogy
+ Shape 'Text 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): The human brain forms identity through neural pathways built over a lifetime. Chronus replicates this digitally — mapping every memory, belief, and personality trait into a dense vector space that functions like an artificial neural mind.
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🧠  Human Brain
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🤖  Chronus AI Model
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): →
+ Shape 'Text 13' (type AUTO_SHAPE (1)):
+  P (lvl 0): Long-Term Memory
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): Hippocampus stores autobiographical memories across decades of lived experience.
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): Beliefs & Values
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): Prefrontal cortex encodes moral reasoning, personality, and behavioural tendencies.
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): Language & Voice
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): Broca's area encodes personal vocabulary, rhythm, sentence style, and vocal identity.
+ Shape 'Text 25' (type AUTO_SHAPE (1)):
+  P (lvl 0): Emotional Context
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): Amygdala links memory to emotion — shaping reaction to questions and life events.
+ Shape 'Text 29' (type AUTO_SHAPE (1)):
+  P (lvl 0): Vector Embeddings
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): Text encoded into 384-dim Sentence-BERT vectors — semantic long-term memory.
+ Shape 'Text 33' (type AUTO_SHAPE (1)):
+  P (lvl 0): Persona Style Layer
+ Shape 'Text 34' (type AUTO_SHAPE (1)):
+  P (lvl 0): Per-topic response templates embed beliefs, wit, and philosophy for each individual.
+ Shape 'Text 37' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Cloning TTS
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): Neural TTS replicates tone, cadence, accent — AI speaks in the person's real voice.
+ Shape 'Text 41' (type AUTO_SHAPE (1)):
+  P (lvl 0): Theme Detection
+ Shape 'Text 42' (type AUTO_SHAPE (1)):
+  P (lvl 0): Question themes matched to emotionally relevant, contextually accurate response sets.
+
+--- SLIDE 16 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Brain-to-AI — How Neural Memory Becomes Vector Memory
+ Shape 'Text 3' (type AUTO_SHAPE (1)):
+  P (lvl 0): The Training Pipeline: From Human Thought to AI Memory
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): RAW INPUT
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): Personal diary entry: "I always believed that kindness returned tenfold. My mother taught me this."
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): SENTENCE SPLIT
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): spaCy segments into: ["I always believed that kindness returned tenfold."] ["My mother taught me this."]
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): EMBEDDING
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sentence-BERT: 'I always believed that kindness returned tenfold.' → [0.23, -0.41, 0.88, 0.12, ... ] (384 dimensions)
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): STORAGE
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): ChromaDB stores vector + metadata: { source: 'diary_1998.txt', type: 'personal', date: '1998-03-12' }
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): RETRIEVAL
+ Shape 'Text 27' (type AUTO_SHAPE (1)):
+  P (lvl 0): Query: 'What do you believe about generosity?' → cosine similarity → 0.92 match → passage retrieved
+ Shape 'Text 31' (type AUTO_SHAPE (1)):
+  P (lvl 0): RESPONSE
+ Shape 'Text 32' (type AUTO_SHAPE (1)):
+  P (lvl 0): 'In my own words: "I always believed that kindness returned tenfold." — What this means: generosity compounds...'
+
+--- SLIDE 17 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 06
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Cloning & Human Identity Engine
+
+--- SLIDE 18 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Cloning & Identity Engine — Making It Indistinguishable
+ Shape 'Text 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): Goal: The person interacting with Chronus cannot tell they are talking to an AI — the voice, personality, pacing, and response style must be completely indistinguishable from a real human conversation.
+ Shape 'Text 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): How Voice Identity Cloning Works:
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): Audio Sample
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): 30–60 seconds of the person's real voice. Source: voice messages, phone calls, video recordings.
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): 2
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Neural Encoding
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): ElevenLabs / XTTS-v2 extracts speaker embeddings — capturing tone, pitch, pace, accent, and vocal texture.
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): 3
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): Text-to-Speech
+ Shape 'Text 23' (type AUTO_SHAPE (1)):
+  P (lvl 0): Every text response generated by Chronus is synthesised and delivered in the person's cloned voice in real time.
+ Shape 'Text 27' (type AUTO_SHAPE (1)):
+  P (lvl 0): 4
+ Shape 'Text 28' (type AUTO_SHAPE (1)):
+  P (lvl 0): Liveness Layer
+ Shape 'Text 29' (type AUTO_SHAPE (1)):
+  P (lvl 0): Prosody modelling adds natural breathing, hesitations, rhythm, and micro-pauses — eliminating robotic speech artefacts completely.
+ Shape 'Text 31' (type AUTO_SHAPE (1)):
+  P (lvl 0): Why This Changes Everything
+ Shape 'Text 33' (type AUTO_SHAPE (1)):
+  P (lvl 0): →
+ Shape 'Text 34' (type AUTO_SHAPE (1)):
+  P (lvl 0): Grief & Healing
+ Shape 'Text 35' (type AUTO_SHAPE (1)):
+  P (lvl 0): Families hear a lost loved one's voice again — emotional closure text cannot provide.
+ Shape 'Text 37' (type AUTO_SHAPE (1)):
+  P (lvl 0): →
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): Turing Test: Passed
+ Shape 'Text 39' (type AUTO_SHAPE (1)):
+  P (lvl 0): Chronus passes the 'Is this human?' test — voice is the last frontier separating AI from human.
+ Shape 'Text 41' (type AUTO_SHAPE (1)):
+  P (lvl 0): →
+ Shape 'Text 42' (type AUTO_SHAPE (1)):
+  P (lvl 0): Historical Education
+ Shape 'Text 43' (type AUTO_SHAPE (1)):
+  P (lvl 0): Students hear Gandhi deliver a speech or Einstein explain relativity in their actual vocal style.
+ Shape 'Text 45' (type AUTO_SHAPE (1)):
+  P (lvl 0): →
+ Shape 'Text 46' (type AUTO_SHAPE (1)):
+  P (lvl 0): Accessibility
+ Shape 'Text 47' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice-first responses serve users who cannot read — Chronus is fully accessible.
+ Shape 'Text 49' (type AUTO_SHAPE (1)):
+  P (lvl 0): →
+ Shape 'Text 50' (type AUTO_SHAPE (1)):
+  P (lvl 0): Emotional Resonance
+ Shape 'Text 51' (type AUTO_SHAPE (1)):
+  P (lvl 0): Hearing the actual voice triggers memory and emotional connection far beyond text-only AI.
+
+--- SLIDE 19 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Cloning — Technology Comparison & Integration
+ Shape 'Text 3' (type AUTO_SHAPE (1)):
+  P (lvl 0): Chronus evaluates three leading voice synthesis technologies:
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): ElevenLabs
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): PROS
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): Industry-leading quality · 30s sample · 29 languages · emotion control
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): CONS
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): API-based (requires internet) · cost per character
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): Recommendation:
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): Best for production
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): XTTS-v2
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): PROS
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): Open source · runs locally · 16 languages · speaker embedding cloning
+ Shape 'Text 23' (type AUTO_SHAPE (1)):
+  P (lvl 0): CONS
+ Shape 'Text 24' (type AUTO_SHAPE (1)):
+  P (lvl 0): Slightly lower quality than ElevenLabs
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): Recommendation:
+ Shape 'Text 27' (type AUTO_SHAPE (1)):
+  P (lvl 0): Best for privacy
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): Coqui TTS
+ Shape 'Text 32' (type AUTO_SHAPE (1)):
+  P (lvl 0): PROS
+ Shape 'Text 33' (type AUTO_SHAPE (1)):
+  P (lvl 0): Fully open source · customizable · no cost · fine-tunable
+ Shape 'Text 35' (type AUTO_SHAPE (1)):
+  P (lvl 0): CONS
+ Shape 'Text 36' (type AUTO_SHAPE (1)):
+  P (lvl 0): Less natural prosody · requires GPU for speed
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): Recommendation:
+ Shape 'Text 39' (type AUTO_SHAPE (1)):
+  P (lvl 0): Best for research
+
+--- SLIDE 20 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 07
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): System Architecture
+
+--- SLIDE 21 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): System Architecture — Full 5-Layer Tech Stack
+ Shape 'Text 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): Layer 1 — Frontend (React + TypeScript)
+ Shape 'Text 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): Vite · Tailwind CSS · Framer Motion · shadcn/ui · Web Speech API · Responsive dark UI
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): Layer 2 — API Proxy (Node.js / Express)
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): TypeScript · http-proxy-middleware · REST endpoints · JSON schema validation
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): Layer 3 — Backend (Python / Flask)
+ Shape 'Text 13' (type AUTO_SHAPE (1)):
+  P (lvl 0): Flask · spaCy (NLP) · pdfplumber · python-docx · audio processing pipeline
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Layer 4 — AI / NLP Engine
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sentence-Transformers (all-MiniLM-L6-v2) · 384-dim embeddings · Cosine similarity · Theme detection
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): Layer 5 — Voice Synthesis Engine
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): ElevenLabs TTS / XTTS-v2 · Speaker embeddings · Prosody modelling · Real-time streaming
+ Shape 'Text 23' (type AUTO_SHAPE (1)):
+  P (lvl 0): Persistence: ChromaDB vectors · JSON history · Interview answers · Voice cache · Model metadata
+
+--- SLIDE 22 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 08
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Implementation & Algorithms
+
+--- SLIDE 23 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Implementation — Core Algorithms & Techniques
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): NLP
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sentence Embedding (Sentence-BERT)
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): 384-dim vector encoding capturing semantic meaning. Foundation of all memory retrieval in Chronus.
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): IR
+ Shape 'Text 13' (type AUTO_SHAPE (1)):
+  P (lvl 0): Cosine Similarity Search (ChromaDB)
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): Top-k semantically similar passages retrieved per query. Threshold 1.45 eliminates irrelevant matches.
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice
+ Shape 'Text 19' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Cloning (Neural TTS)
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): Speaker embedding from 30–60s audio. XTTS-v2 synthesises replies in the person's real voice.
+ Shape 'Text 24' (type AUTO_SHAPE (1)):
+  P (lvl 0): NLU
+ Shape 'Text 25' (type AUTO_SHAPE (1)):
+  P (lvl 0): Theme Detection (Rule-Based NLU)
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): Question classified into 7 themes: love, failure, work, fear, purpose, society, self. Selects persona explanation.
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): NLG
+ Shape 'Text 31' (type AUTO_SHAPE (1)):
+  P (lvl 0): Mix Response Method
+ Shape 'Text 32' (type AUTO_SHAPE (1)):
+  P (lvl 0): Quote → persona explanation → closing signature. All three steps delivered in cloned voice output.
+ Shape 'Text 36' (type AUTO_SHAPE (1)):
+  P (lvl 0): Data
+ Shape 'Text 37' (type AUTO_SHAPE (1)):
+  P (lvl 0): Interview Augmentation
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): Q&A answers sentence-segmented and embedded with file data. Enriches sparse training from minimal input.
+
+--- SLIDE 24 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Implementation — Response Generation: The Mix Method in Action
+ Shape 'Text 3' (type AUTO_SHAPE (1)):
+  P (lvl 0): A Chronus response is always a three-part structure — making it feel authentic, modern, and deeply personal:
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Example: Einstein on Failure
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): STEP 1 — Authentic Quote
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): Retrieved from vector store (cosine match: 0.94)
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): "In my own words — and I meant this quite seriously:
+  P (lvl 0): 'A person who never made a mistake never tried anything new.'"
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): STEP 2 — Modern Explanation
+ Shape 'Text 13' (type AUTO_SHAPE (1)):
+  P (lvl 0): Theme: failure & growth · Persona: Einstein · Voice: scientific curiosity
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): "Every experiment I ran began with not knowing the answer. Fear of the unknown is simply curiosity that hasn't been redirected yet. In the laboratory, a 'failed' experiment that surprises you is the most valuable result."
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): STEP 3 — Closing Signature + Voice Output
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): Delivered in Einstein's cloned voice via TTS
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): "Keep questioning. That is where everything begins."  — Albert Einstein
+  P (lvl 0): 🔊 [Audio: Einstein's cloned voice speaks this response in real time]
+
+--- SLIDE 25 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 09
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Data Pipeline & File Support
+
+--- SLIDE 26 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Data Pipeline — Universal File Format Support
+ Shape 'Text 3' (type AUTO_SHAPE (1)):
+  P (lvl 0): Chronus ingests virtually any personal archive format — ensuring no human record is left behind:
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): .txt / .md
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): PLAIN TEXT
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): Plain text diaries, Markdown journals, personal notes and reflections
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): .pdf
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): DOCUMENTS
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): Scanned books, digitised letters, academic papers via pdfplumber
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): .docx
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): WORD DOCS
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): Microsoft Word documents, formatted writings via python-docx
+ Shape 'Text 24' (type AUTO_SHAPE (1)):
+  P (lvl 0): .csv
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): CHAT LOGS
+ Shape 'Text 27' (type AUTO_SHAPE (1)):
+  P (lvl 0): WhatsApp/SMS/Telegram chat exports, conversation logs in tabular form
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): .eml
+ Shape 'Text 32' (type AUTO_SHAPE (1)):
+  P (lvl 0): EMAILS
+ Shape 'Text 33' (type AUTO_SHAPE (1)):
+  P (lvl 0): Email files exported from Gmail, Outlook — entire correspondence archives
+ Shape 'Text 36' (type AUTO_SHAPE (1)):
+  P (lvl 0): .json
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): STRUCTURED
+ Shape 'Text 39' (type AUTO_SHAPE (1)):
+  P (lvl 0): Structured API exports, social media archives, Facebook/Instagram data downloads
+ Shape 'Text 42' (type AUTO_SHAPE (1)):
+  P (lvl 0): .mp3/.wav
+ Shape 'Text 44' (type AUTO_SHAPE (1)):
+  P (lvl 0): AUDIO
+ Shape 'Text 45' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice recordings, voice notes, audio diaries (transcribed for embedding)
+ Shape 'Text 48' (type AUTO_SHAPE (1)):
+  P (lvl 0): .epub
+ Shape 'Text 50' (type AUTO_SHAPE (1)):
+  P (lvl 0): E-BOOKS
+ Shape 'Text 51' (type AUTO_SHAPE (1)):
+  P (lvl 0): Digital books authored by or belonging to the person (future support)
+
+--- SLIDE 27 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 10
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Famous Personality Models
+
+--- SLIDE 28 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Famous Personality Models — Pre-Trained on Real Writings
+ Shape 'Text 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🌌
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Albert Einstein
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1879–1955
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): Physics · Philosophy
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): 20 quotes · voice support
+ Shape 'Text 13' (type AUTO_SHAPE (1)):
+  P (lvl 0): ☮️
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): Mahatma Gandhi
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1869–1948
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): Nonviolence · Truth
+ Shape 'Text 18' (type AUTO_SHAPE (1)):
+  P (lvl 0): 20 quotes · voice support
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): ⚡
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): Nikola Tesla
+ Shape 'Text 23' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1856–1943
+ Shape 'Text 25' (type AUTO_SHAPE (1)):
+  P (lvl 0): Invention · Visionary
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): 20 quotes · voice support
+ Shape 'Text 29' (type AUTO_SHAPE (1)):
+  P (lvl 0): ⚖️
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): Marcus Aurelius
+ Shape 'Text 31' (type AUTO_SHAPE (1)):
+  P (lvl 0): 121–180 AD
+ Shape 'Text 33' (type AUTO_SHAPE (1)):
+  P (lvl 0): Stoicism · Leadership
+ Shape 'Text 34' (type AUTO_SHAPE (1)):
+  P (lvl 0): 20 quotes · voice support
+ Shape 'Text 37' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🍎
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): Steve Jobs
+ Shape 'Text 39' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1955–2011
+ Shape 'Text 41' (type AUTO_SHAPE (1)):
+  P (lvl 0): Design · Innovation
+ Shape 'Text 42' (type AUTO_SHAPE (1)):
+  P (lvl 0): 20 quotes · voice support
+ Shape 'Text 45' (type AUTO_SHAPE (1)):
+  P (lvl 0): ⚗️
+ Shape 'Text 46' (type AUTO_SHAPE (1)):
+  P (lvl 0): Marie Curie
+ Shape 'Text 47' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1867–1934
+ Shape 'Text 49' (type AUTO_SHAPE (1)):
+  P (lvl 0): Science · Resilience
+ Shape 'Text 50' (type AUTO_SHAPE (1)):
+  P (lvl 0): 20 quotes · voice support
+ Shape 'Text 53' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🎩
+ Shape 'Text 54' (type AUTO_SHAPE (1)):
+  P (lvl 0): Abraham Lincoln
+ Shape 'Text 55' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1809–1865
+ Shape 'Text 57' (type AUTO_SHAPE (1)):
+  P (lvl 0): Justice · Compassion
+ Shape 'Text 58' (type AUTO_SHAPE (1)):
+  P (lvl 0): 20 quotes · voice support
+ Shape 'Text 61' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🎭
+ Shape 'Text 62' (type AUTO_SHAPE (1)):
+  P (lvl 0): Shakespeare
+ Shape 'Text 63' (type AUTO_SHAPE (1)):
+  P (lvl 0): 1564–1616
+ Shape 'Text 65' (type AUTO_SHAPE (1)):
+  P (lvl 0): Poetry · Human Nature
+ Shape 'Text 66' (type AUTO_SHAPE (1)):
+  P (lvl 0): 20 quotes · voice support
+
+--- SLIDE 29 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 11
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Interview & Memory Augmentation
+
+--- SLIDE 30 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Interview System — 25-Question Memory Augmentation Protocol
+ Shape 'Text 3' (type AUTO_SHAPE (1)):
+  P (lvl 0): When personal data is limited, Chronus uses a structured interview protocol — turning family memories into AI training data:
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): Q 1–4
+ Shape 'Text 8' (type AUTO_SHAPE (1)):
+  P (lvl 0): Personality
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sample question:
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): 'How would you describe their sense of humour? Give an example.'
+ Shape 'Text 14' (type AUTO_SHAPE (1)):
+  P (lvl 0): Q 5–8
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): Core Memories
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sample question:
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): 'What is the most vivid memory you have of them? What were they doing?'
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): Q 9–12
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): Relationships
+ Shape 'Text 23' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sample question:
+ Shape 'Text 24' (type AUTO_SHAPE (1)):
+  P (lvl 0): 'How did they typically show love or care to the people close to them?'
+ Shape 'Text 28' (type AUTO_SHAPE (1)):
+  P (lvl 0): Q 13–16
+ Shape 'Text 29' (type AUTO_SHAPE (1)):
+  P (lvl 0): Passions
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sample question:
+ Shape 'Text 31' (type AUTO_SHAPE (1)):
+  P (lvl 0): 'What topic could they talk about for hours without stopping?'
+ Shape 'Text 35' (type AUTO_SHAPE (1)):
+  P (lvl 0): Q 17–20
+ Shape 'Text 36' (type AUTO_SHAPE (1)):
+  P (lvl 0): Beliefs
+ Shape 'Text 37' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sample question:
+ Shape 'Text 38' (type AUTO_SHAPE (1)):
+  P (lvl 0): 'What did they believe about right and wrong? Any repeated sayings?'
+ Shape 'Text 42' (type AUTO_SHAPE (1)):
+  P (lvl 0): Q 21–25
+ Shape 'Text 43' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice & Style
+ Shape 'Text 44' (type AUTO_SHAPE (1)):
+  P (lvl 0): Sample question:
+ Shape 'Text 45' (type AUTO_SHAPE (1)):
+  P (lvl 0): 'How did they speak? Formal, casual? Any expressions only they used?'
+
+--- SLIDE 31 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): 12
+ Shape 'Text 2' (type AUTO_SHAPE (1)):
+  P (lvl 0): Security, Ethics & Privacy
+
+--- SLIDE 32 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Security, Ethics & Privacy — Responsible AI Design
+ Shape 'Text 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🔒
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Fully Local Architecture
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): All data — writings, embeddings, voice samples — stored locally. Zero external AI API calls. Your memories never leave your device.
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): ✅
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): Consent-First Model
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): Chronus requires explicit family consent before training on any individual. Models are owner-locked and not transferable without permission.
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🛡️
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Anti-Impersonation Guard
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice cloning is disabled by default. Requires explicit owner authorisation per session. Cannot be used to impersonate someone without access credentials.
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🧠
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): No Hallucination Policy
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): Every response is grounded in real retrieved text. If no relevant memory exists, Chronus acknowledges the gap rather than fabricating content.
+ Shape 'Text 25' (type AUTO_SHAPE (1)):
+  P (lvl 0): 💙
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): Grief Sensitivity Protocol
+ Shape 'Text 27' (type AUTO_SHAPE (1)):
+  P (lvl 0): Recognises emotionally sensitive queries (grief, loss, death). Activates compassion-mode responses — no clinical detachment when discussing deeply personal topics.
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🗑️
+ Shape 'Text 31' (type AUTO_SHAPE (1)):
+  P (lvl 0): Data Deletion Rights
+ Shape 'Text 32' (type AUTO_SHAPE (1)):
+  P (lvl 0): Every trained model and voice sample can be permanently deleted at any time — full right to be forgotten, implemented at the system level, not just in policy.
+
+--- SLIDE 33 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Results & Performance — Feature Completion & Quality Metrics
+
+--- SLIDE 34 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Use Cases & Real-World Applications
+ Shape 'Text 5' (type AUTO_SHAPE (1)):
+  P (lvl 0): 👨‍👩‍👧
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Family Memory Preservation
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): Train Chronus on a grandparent's letters and diaries. Grandchildren can ask questions and hear their voice long after they are gone.
+ Shape 'Text 10' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🎓
+ Shape 'Text 11' (type AUTO_SHAPE (1)):
+  P (lvl 0): Historical Education
+ Shape 'Text 12' (type AUTO_SHAPE (1)):
+  P (lvl 0): Students interact with Einstein, Gandhi, or Lincoln through conversational voice AI — making history lessons immersive and memorable.
+ Shape 'Text 15' (type AUTO_SHAPE (1)):
+  P (lvl 0): 💼
+ Shape 'Text 16' (type AUTO_SHAPE (1)):
+  P (lvl 0): Corporate Knowledge Retention
+ Shape 'Text 17' (type AUTO_SHAPE (1)):
+  P (lvl 0): Train Chronus on outgoing executives' memos and strategy documents. Their institutional knowledge remains queryable after departure.
+ Shape 'Text 20' (type AUTO_SHAPE (1)):
+  P (lvl 0): 📖
+ Shape 'Text 21' (type AUTO_SHAPE (1)):
+  P (lvl 0): Author & Creator Legacy
+ Shape 'Text 22' (type AUTO_SHAPE (1)):
+  P (lvl 0): Authors, poets, and artists can train Chronus on their works — creating an interactive version of themselves for fans and scholars.
+ Shape 'Text 25' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🏥
+ Shape 'Text 26' (type AUTO_SHAPE (1)):
+  P (lvl 0): Grief Therapy Support
+ Shape 'Text 27' (type AUTO_SHAPE (1)):
+  P (lvl 0): Clinical psychologists use Chronus-mediated interaction as part of grief processing — hearing the voice of a lost person in a controlled environment.
+ Shape 'Text 30' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🎙️
+ Shape 'Text 31' (type AUTO_SHAPE (1)):
+  P (lvl 0): Voice Accessibility Archive
+ Shape 'Text 32' (type AUTO_SHAPE (1)):
+  P (lvl 0): Public figures, politicians, and scientists create Chronus models as accessible, interactive archives of their ideas and worldview.
+ Shape 'Text 35' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🔬
+ Shape 'Text 36' (type AUTO_SHAPE (1)):
+  P (lvl 0): AI Research & Benchmarking
+ Shape 'Text 37' (type AUTO_SHAPE (1)):
+  P (lvl 0): Chronus serves as a testbed for memory-grounded AI, anti-hallucination techniques, and voice-personality integration research.
+ Shape 'Text 40' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🌍
+ Shape 'Text 41' (type AUTO_SHAPE (1)):
+  P (lvl 0): Cultural Heritage Preservation
+ Shape 'Text 42' (type AUTO_SHAPE (1)):
+  P (lvl 0): Preserve endangered languages, oral traditions, and cultural knowledge from communities whose elders carry irreplaceable wisdom.
+
+--- SLIDE 35 (Layout: DEFAULT) ---
+ Shape 'Text 1' (type AUTO_SHAPE (1)):
+  P (lvl 0): Conclusion & Future Roadmap
+ Shape 'Text 3' (type AUTO_SHAPE (1)):
+  P (lvl 0): Conclusion
+ Shape 'Text 4' (type AUTO_SHAPE (1)):
+  P (lvl 0): Built the world's first brain-to-AI human simulation with voice identity cloning
+  P (lvl 0): Voice cloning makes Chronus the first AI genuinely indistinguishable from a real human
+  P (lvl 0): Semantic vector search grounds every response in real verified memory — no hallucinations
+  P (lvl 0): Mix-response method (quote + explanation + voice) validated as most immersive format
+  P (lvl 0): 8 famous personality models trained on real historical writings with persona voice styles
+  P (lvl 0): Ethics-first: fully local, consent-gated, deletion-ready, anti-impersonation architecture
+ Shape 'Text 6' (type AUTO_SHAPE (1)):
+  P (lvl 0): Future Roadmap
+ Shape 'Text 7' (type AUTO_SHAPE (1)):
+  P (lvl 0): 🎙️  Real-time voice streaming — live phone-call-like conversations
+  P (lvl 0): 😐  Facial avatar — animated face synced to cloned voice (SadTalker/DeepFake)
+  P (lvl 0): 🦙  LLM integration — RAG pipeline with local Llama 3 / Mistral for open-ended Q&A
+  P (lvl 0): 😢  Emotion modelling — sadness, joy, urgency embedded in vocal delivery
+  P (lvl 0): 📱  Mobile app — iOS/Android family contributions via React Native
+  P (lvl 0): 🌐  Multi-language — Hindi, Gujarati, Tamil, Arabic voice cloning
+  P (lvl 0): ☁️  Optional encrypted cloud sync for cross-device model access
+  P (lvl 0): 🧬  Biological signal integration — typing patterns, micro-expressions
+ Shape 'Text 9' (type AUTO_SHAPE (1)):
+  P (lvl 0): Chronus transforms static archives into a living, speaking, thinking AI twin — ensuring that every human being's knowledge, wisdom, personality, and voice can be preserved and experienced by future generations, exactly as they were.
+
+--- SLIDE 36 (Layout: Title Only) ---
+ Shape 'object 9' (type PLACEHOLDER (14)):
+  P (lvl 0): Questions?
+
+--- SLIDE 37 (Layout: Blank) ---

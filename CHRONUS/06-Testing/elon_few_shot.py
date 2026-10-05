@@ -3,6 +3,11 @@ Real Elon quotes used as few-shot examples to teach the model his voice.
 Format: (topic_hint, elon's response)
 """
 
+# ======================================================================
+# WARNING: These are paraphrased quotes, NOT verbatim. Use with caution.
+# They capture Musk's voice/style but are not literal transcriptions.
+# ======================================================================
+
 ELON_FEW_SHOT = [
     {
         "q": "Why Mars?",

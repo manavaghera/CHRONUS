@@ -1,0 +1,4919 @@
+[
+  {
+    "slide_index": 1,
+    "layout": "Subject Title",
+    "title": "Chronus: A Memory-Trained Agentic AI for Human Knowledge and Mindset Simulation",
+    "text_blocks": [
+      "Project group number:-CSE_235",
+      "Computer Science Engineering",
+      "Chronus: A Memory-Trained Agentic AI for Human Knowledge and Mindset Simulation"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "text": "Project group number:-CSE_235"
+      },
+      {
+        "name": "Text Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "text": "Computer Science Engineering"
+      },
+      {
+        "name": "object 9",
+        "type": "TEXT_BOX (17)",
+        "text": "Chronus: A Memory-Trained Agentic AI for Human Knowledge and Mindset Simulation"
+      }
+    ]
+  },
+  {
+    "slide_index": 2,
+    "layout": "Subject Title",
+    "title": "Project team :\u000bTIRTH SAKARIYA (2303031050723)\u000bMANAV AGHERA(2403031057168)\u000bMANISH PRAJAPATI (2303031050721)",
+    "text_blocks": [
+      "Project team :\u000bTIRTH SAKARIYA (2303031050723)\u000bMANAV AGHERA(2403031057168)\u000bMANISH PRAJAPATI (2303031050721)",
+      "Guide Name: Prof. Shubham Upadyay"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "text": "Project team :\u000bTIRTH SAKARIYA (2303031050723)\u000bMANAV AGHERA(2403031057168)\u000bMANISH PRAJAPATI (2303031050721)"
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "text": "Guide Name: Prof. Shubham Upadyay"
+      }
+    ]
+  },
+  {
+    "slide_index": 3,
+    "layout": "DEFAULT",
+    "title": "Table of Contents",
+    "text_blocks": [
+      "Table of Contents",
+      "01",
+      "Introduction & Vision",
+      "02",
+      "Problem Statement",
+      "03",
+      "Literature Review",
+      "04",
+      "Methodology & Workflow",
+      "05",
+      "Brain-to-AI Training Framework",
+      "06",
+      "Voice Cloning & Identity Engine",
+      "07",
+      "System Architecture",
+      "08",
+      "Implementation & Algorithms",
+      "09",
+      "Data Pipeline & File Support",
+      "10",
+      "Famous Personality Models",
+      "11",
+      "Interview & Memory Augmentation",
+      "12",
+      "Security, Ethics & Privacy",
+      "13",
+      "Results & Performance",
+      "14",
+      "Use Cases & Applications",
+      "15",
+      "Conclusion & Future Roadmap"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Table of Contents"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 5",
+        "type": "AUTO_SHAPE (1)",
+        "text": "01"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Introduction & Vision"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 8",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "02"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Problem Statement"
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 12",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 13",
+        "type": "AUTO_SHAPE (1)",
+        "text": "03"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Literature Review"
+      },
+      {
+        "name": "Shape 15",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 16",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "04"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Methodology & Workflow"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 20",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "05"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Brain-to-AI Training Framework"
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 24",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 25",
+        "type": "AUTO_SHAPE (1)",
+        "text": "06"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Cloning & Identity Engine"
+      },
+      {
+        "name": "Shape 27",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 29",
+        "type": "AUTO_SHAPE (1)",
+        "text": "07"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "System Architecture"
+      },
+      {
+        "name": "Shape 31",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 32",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 33",
+        "type": "AUTO_SHAPE (1)",
+        "text": "08"
+      },
+      {
+        "name": "Text 34",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Implementation & Algorithms"
+      },
+      {
+        "name": "Shape 35",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 36",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 37",
+        "type": "AUTO_SHAPE (1)",
+        "text": "09"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Data Pipeline & File Support"
+      },
+      {
+        "name": "Shape 39",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 40",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 41",
+        "type": "AUTO_SHAPE (1)",
+        "text": "10"
+      },
+      {
+        "name": "Text 42",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Famous Personality Models"
+      },
+      {
+        "name": "Shape 43",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 44",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 45",
+        "type": "AUTO_SHAPE (1)",
+        "text": "11"
+      },
+      {
+        "name": "Text 46",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Interview & Memory Augmentation"
+      },
+      {
+        "name": "Shape 47",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 48",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 49",
+        "type": "AUTO_SHAPE (1)",
+        "text": "12"
+      },
+      {
+        "name": "Text 50",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Security, Ethics & Privacy"
+      },
+      {
+        "name": "Shape 51",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 52",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 53",
+        "type": "AUTO_SHAPE (1)",
+        "text": "13"
+      },
+      {
+        "name": "Text 54",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Results & Performance"
+      },
+      {
+        "name": "Shape 55",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 56",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 57",
+        "type": "AUTO_SHAPE (1)",
+        "text": "14"
+      },
+      {
+        "name": "Text 58",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Use Cases & Applications"
+      },
+      {
+        "name": "Shape 59",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 60",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 61",
+        "type": "AUTO_SHAPE (1)",
+        "text": "15"
+      },
+      {
+        "name": "Text 62",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Conclusion & Future Roadmap"
+      },
+      {
+        "name": "Picture 65",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 4,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "01",
+      "Introduction & Vision"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "01"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Introduction & Vision"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 5,
+    "layout": "DEFAULT",
+    "title": "Introduction — What is Chronus?",
+    "text_blocks": [
+      "Introduction — What is Chronus?",
+      "Chronus is an agentic AI system that simulates the complete cognitive identity of a human — their knowledge, mindset, beliefs, communication style, voice, and personality — by training directly on their personal data, writings, and memories.",
+      "Brain-to-AI Training",
+      "Personal writings, memories, and beliefs encoded into neural vector representations — mirroring how the brain stores knowledge.",
+      "Famous Personality Models",
+      "Pre-trained on 8 historical figures using real writings, documented philosophy, and known communication styles.",
+      "Voice Identity Cloning",
+      "Replicates a person's actual voice using AI synthesis — responses delivered in their real tone, indistinguishable from the real human.",
+      "Agentic Reasoning",
+      "Goes beyond retrieval — reasons across memories, draws connections between topics, and answers questions the person never explicitly wrote about.",
+      "Family Contribution",
+      "Multiple contributors — family, friends, colleagues — answer guided interview questions to build a richer, multi-perspective model.",
+      "Model Persistence",
+      "Every trained model is saved with full history. Resume any conversation with any relative or personality at any time."
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Introduction — What is Chronus?"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 4",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Chronus is an agentic AI system that simulates the complete cognitive identity of a human — their knowledge, mindset, beliefs, communication style, voice, and personality — by training directly on their personal data, writings, and memories."
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 6",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Brain-to-AI Training"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Personal writings, memories, and beliefs encoded into neural vector representations — mirroring how the brain stores knowledge."
+      },
+      {
+        "name": "Shape 9",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 10",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Famous Personality Models"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Pre-trained on 8 historical figures using real writings, documented philosophy, and known communication styles."
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 14",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Identity Cloning"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Replicates a person's actual voice using AI synthesis — responses delivered in their real tone, indistinguishable from the real human."
+      },
+      {
+        "name": "Shape 17",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 19",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Agentic Reasoning"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Goes beyond retrieval — reasons across memories, draws connections between topics, and answers questions the person never explicitly wrote about."
+      },
+      {
+        "name": "Shape 21",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 22",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 23",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Family Contribution"
+      },
+      {
+        "name": "Text 24",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Multiple contributors — family, friends, colleagues — answer guided interview questions to build a richer, multi-perspective model."
+      },
+      {
+        "name": "Shape 25",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 26",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 27",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Model Persistence"
+      },
+      {
+        "name": "Text 28",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Every trained model is saved with full history. Resume any conversation with any relative or personality at any time."
+      },
+      {
+        "name": "Picture 30",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 6,
+    "layout": "DEFAULT",
+    "title": "The Vision — Scale of Impact",
+    "text_blocks": [
+      "The Vision — Scale of Impact",
+      "Every year, irreplaceable human knowledge is permanently lost. Chronus exists to change that.",
+      "108B+",
+      "Humans have ever lived on Earth",
+      "0%",
+      "Of their knowledge is AI-accessible",
+      "30–60s",
+      "Of voice audio needed for voice cloning",
+      "384-dim",
+      "Vector space per memory in Chronus",
+      "8",
+      "Famous personalities pre-trained",
+      "25",
+      "Guided interview questions per model"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "The Vision — Scale of Impact"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 3",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Every year, irreplaceable human knowledge is permanently lost. Chronus exists to change that."
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 5",
+        "type": "AUTO_SHAPE (1)",
+        "text": "108B+"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Humans have ever lived on Earth"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "0%"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Of their knowledge is AI-accessible"
+      },
+      {
+        "name": "Shape 10",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "30–60s"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Of voice audio needed for voice cloning"
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "384-dim"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Vector space per memory in Chronus"
+      },
+      {
+        "name": "Shape 16",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "8"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Famous personalities pre-trained"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "25"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Guided interview questions per model"
+      },
+      {
+        "name": "Picture 23",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 7,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "02",
+      "Problem Statement"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "02"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Problem Statement"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 8,
+    "layout": "DEFAULT",
+    "title": "Problem Statement — The Gap We Address",
+    "text_blocks": [
+      "Problem Statement — The Gap We Address",
+      "\"The human brain accumulates decades of knowledge, experience, and personality — yet all of it vanishes permanently at death, even when vast written, audio, and digital records exist. No system yet captures and re-animates a complete human identity.\"",
+      "Irreversible Knowledge Loss",
+      "Billions of human lives end with no AI-accessible record of their intellectual identity, wisdom, or worldview.",
+      "No Voice Preservation System",
+      "Existing AI chatbots respond in robotic text — they cannot replicate a person's real voice, breaking the illusion of genuine conversation.",
+      "Fragmented Digital Archives",
+      "Personal diaries, emails, texts, and letters exist in isolated formats. No unified system intelligently queries across all of them.",
+      "Grief Without Closure",
+      "Bereaved families have no way to hear, interact with, or ask questions of a deceased loved one — a deeply human need technology hasn't solved.",
+      "Historical Knowledge Locked",
+      "The wisdom of Einstein, Gandhi, or Lincoln is trapped in static texts with no interactive, conversational, voice-enabled interface.",
+      "AI Hallucination Risk",
+      "Current LLMs role-playing historical figures hallucinate facts. Chronus grounds every response in real, verified writings — not fabricated content."
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Problem Statement — The Gap We Address"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 4",
+        "type": "AUTO_SHAPE (1)",
+        "text": "\"The human brain accumulates decades of knowledge, experience, and personality — yet all of it vanishes permanently at death, even when vast written, audio, and digital records exist. No system yet captures and re-animates a complete human identity.\""
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 6",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Irreversible Knowledge Loss"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Billions of human lives end with no AI-accessible record of their intellectual identity, wisdom, or worldview."
+      },
+      {
+        "name": "Shape 9",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 10",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "No Voice Preservation System"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Existing AI chatbots respond in robotic text — they cannot replicate a person's real voice, breaking the illusion of genuine conversation."
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 14",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Fragmented Digital Archives"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Personal diaries, emails, texts, and letters exist in isolated formats. No unified system intelligently queries across all of them."
+      },
+      {
+        "name": "Shape 17",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 19",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Grief Without Closure"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Bereaved families have no way to hear, interact with, or ask questions of a deceased loved one — a deeply human need technology hasn't solved."
+      },
+      {
+        "name": "Shape 21",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 22",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 23",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Historical Knowledge Locked"
+      },
+      {
+        "name": "Text 24",
+        "type": "AUTO_SHAPE (1)",
+        "text": "The wisdom of Einstein, Gandhi, or Lincoln is trapped in static texts with no interactive, conversational, voice-enabled interface."
+      },
+      {
+        "name": "Shape 25",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 26",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 27",
+        "type": "AUTO_SHAPE (1)",
+        "text": "AI Hallucination Risk"
+      },
+      {
+        "name": "Text 28",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Current LLMs role-playing historical figures hallucinate facts. Chronus grounds every response in real, verified writings — not fabricated content."
+      },
+      {
+        "name": "Picture 30",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 9,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "03",
+      "Literature Review"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "03"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Literature Review"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 10,
+    "layout": "DEFAULT",
+    "title": "Literature Review — Key Prior Works (Table Format)",
+    "text_blocks": [
+      "Literature Review — Key Prior Works (Table Format)"
+    ],
+    "tables": [
+      [
+        [
+          "Author / Year",
+          "Title / Topic",
+          "Key Contribution",
+          "Gap / Limitation",
+          "Chronus Addresses?"
+        ],
+        [
+          "Replika (2017)",
+          "Conversational AI companion via ML",
+          "Personalized chatbot from chat history",
+          "No voice; no semantic memory",
+          "✅ Semantic + Voice"
+        ],
+        [
+          "HereAfter AI (2021)",
+          "Digital afterlife chatbot from text/voice",
+          "Processes real voice recordings",
+          "Proprietary; closed formats",
+          "✅ Open formats + local"
+        ],
+        [
+          "StoryFile (2020)",
+          "Interactive hologram-style video avatar",
+          "Q&A from recorded video sessions",
+          "Requires extensive filming",
+          "✅ Any text/audio input"
+        ],
+        [
+          "ElevenLabs TTS (2023)",
+          "Neural voice cloning from audio",
+          "High-fidelity voice from 60s sample",
+          "Not linked to a memory AI",
+          "✅ Integrated voice+memory"
+        ],
+        [
+          "Sentence-BERT (Reimers 2019)",
+          "Sentence embeddings for semantic similarity",
+          "Foundation of modern semantic search",
+          "Not applied to personal identity",
+          "✅ Core of Chronus memory"
+        ],
+        [
+          "GPT-4 Persona Prompting (2023)",
+          "LLM role-playing as historical figures",
+          "Flexible personality simulation",
+          "Hallucinations; not grounded",
+          "✅ Grounded in real writings"
+        ],
+        [
+          "ChromaDB (2023)",
+          "Open-source vector store",
+          "Fast local semantic retrieval",
+          "No persona layer",
+          "✅ Storage backbone"
+        ]
+      ]
+    ],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Literature Review — Key Prior Works (Table Format)"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Table 0",
+        "type": "TABLE (19)",
+        "table": [
+          [
+            "Author / Year",
+            "Title / Topic",
+            "Key Contribution",
+            "Gap / Limitation",
+            "Chronus Addresses?"
+          ],
+          [
+            "Replika (2017)",
+            "Conversational AI companion via ML",
+            "Personalized chatbot from chat history",
+            "No voice; no semantic memory",
+            "✅ Semantic + Voice"
+          ],
+          [
+            "HereAfter AI (2021)",
+            "Digital afterlife chatbot from text/voice",
+            "Processes real voice recordings",
+            "Proprietary; closed formats",
+            "✅ Open formats + local"
+          ],
+          [
+            "StoryFile (2020)",
+            "Interactive hologram-style video avatar",
+            "Q&A from recorded video sessions",
+            "Requires extensive filming",
+            "✅ Any text/audio input"
+          ],
+          [
+            "ElevenLabs TTS (2023)",
+            "Neural voice cloning from audio",
+            "High-fidelity voice from 60s sample",
+            "Not linked to a memory AI",
+            "✅ Integrated voice+memory"
+          ],
+          [
+            "Sentence-BERT (Reimers 2019)",
+            "Sentence embeddings for semantic similarity",
+            "Foundation of modern semantic search",
+            "Not applied to personal identity",
+            "✅ Core of Chronus memory"
+          ],
+          [
+            "GPT-4 Persona Prompting (2023)",
+            "LLM role-playing as historical figures",
+            "Flexible personality simulation",
+            "Hallucinations; not grounded",
+            "✅ Grounded in real writings"
+          ],
+          [
+            "ChromaDB (2023)",
+            "Open-source vector store",
+            "Fast local semantic retrieval",
+            "No persona layer",
+            "✅ Storage backbone"
+          ]
+        ]
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 11,
+    "layout": "DEFAULT",
+    "title": "Literature Review — Feature Comparison Matrix",
+    "text_blocks": [
+      "Literature Review — Feature Comparison Matrix",
+      "System",
+      "Semantic Memory",
+      "Voice Replication",
+      "Open File Formats",
+      "Local / Private",
+      "Historical Figures",
+      "Multi-Contributor",
+      "Model Persistence",
+      "Anti-Hallucination",
+      "Replika",
+      "✅",
+      "❌",
+      "❌",
+      "❌",
+      "❌",
+      "❌",
+      "✅",
+      "❌",
+      "HereAfter AI",
+      "❌",
+      "✅",
+      "❌",
+      "❌",
+      "❌",
+      "❌",
+      "❌",
+      "❌",
+      "GPT-4 Persona",
+      "❌",
+      "❌",
+      "✅",
+      "❌",
+      "✅",
+      "❌",
+      "❌",
+      "❌",
+      "Chronus",
+      "✅",
+      "✅",
+      "✅",
+      "✅",
+      "✅",
+      "✅",
+      "✅",
+      "✅"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Literature Review — Feature Comparison Matrix"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 4",
+        "type": "AUTO_SHAPE (1)",
+        "text": "System"
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Semantic Memory"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Replication"
+      },
+      {
+        "name": "Shape 9",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Open File Formats"
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Local / Private"
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Historical Figures"
+      },
+      {
+        "name": "Shape 15",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Multi-Contributor"
+      },
+      {
+        "name": "Shape 17",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Model Persistence"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Anti-Hallucination"
+      },
+      {
+        "name": "Shape 21",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Replika"
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 24",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 25",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 27",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 28",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 29",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 31",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 32",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 33",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 34",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 35",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 36",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 37",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 39",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 40",
+        "type": "AUTO_SHAPE (1)",
+        "text": "HereAfter AI"
+      },
+      {
+        "name": "Shape 41",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 42",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 43",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 44",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 45",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 46",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 47",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 48",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 49",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 50",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 51",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 52",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 53",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 54",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 55",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 56",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 57",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 58",
+        "type": "AUTO_SHAPE (1)",
+        "text": "GPT-4 Persona"
+      },
+      {
+        "name": "Shape 59",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 60",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 61",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 62",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 63",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 64",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 65",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 66",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 67",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 68",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 69",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 70",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 71",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 72",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 73",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 74",
+        "type": "AUTO_SHAPE (1)",
+        "text": "❌"
+      },
+      {
+        "name": "Shape 75",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 76",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Chronus"
+      },
+      {
+        "name": "Shape 77",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 78",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 79",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 80",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 81",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 82",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 83",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 84",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 85",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 86",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 87",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 88",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 89",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 90",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Shape 91",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 92",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Picture 95",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 12,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "04",
+      "Methodology & Workflow"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "04"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Methodology & Workflow"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 13,
+    "layout": "DEFAULT",
+    "title": "Methodology — End-to-End System Workflow",
+    "text_blocks": [
+      "Methodology — End-to-End System Workflow",
+      "1",
+      "1. Data\nInput",
+      "Files + audio\nuploaded",
+      "2",
+      "2. Text\nExtraction",
+      "Parse all formats\nspaCy segment",
+      "3",
+      "3. Embed",
+      "Sentence-BERT\n384-dim vectors",
+      "4",
+      "4. Store",
+      "ChromaDB\nlocal vectors",
+      "5",
+      "5. Query",
+      "Cosine similarity\nsearch",
+      "6",
+      "6. Generate",
+      "Theme-matched\nresponse text",
+      "7",
+      "7. Voice\nOutput",
+      "TTS cloned\nvoice delivery",
+      "Interview Module",
+      "25 Q&As → corpus enrichment",
+      "Brain-to-AI Mapping",
+      "Memory → vector neural identity",
+      "Persona Style Engine",
+      "Quote + explanation + signature",
+      "Voice Cloning Engine",
+      "Speaker embed → real-time TTS"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Methodology — End-to-End System Workflow"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 4",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1"
+      },
+      {
+        "name": "Text 5",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1. Data\nInput"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Files + audio\nuploaded"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 8",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "2"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "2. Text\nExtraction"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Parse all formats\nspaCy segment"
+      },
+      {
+        "name": "Shape 12",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "3"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "3. Embed"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sentence-BERT\n384-dim vectors"
+      },
+      {
+        "name": "Shape 17",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 19",
+        "type": "AUTO_SHAPE (1)",
+        "text": "4"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "4. Store"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "ChromaDB\nlocal vectors"
+      },
+      {
+        "name": "Shape 22",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 24",
+        "type": "AUTO_SHAPE (1)",
+        "text": "5"
+      },
+      {
+        "name": "Text 25",
+        "type": "AUTO_SHAPE (1)",
+        "text": "5. Query"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Cosine similarity\nsearch"
+      },
+      {
+        "name": "Shape 27",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 29",
+        "type": "AUTO_SHAPE (1)",
+        "text": "6"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "6. Generate"
+      },
+      {
+        "name": "Text 31",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Theme-matched\nresponse text"
+      },
+      {
+        "name": "Shape 32",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 33",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 34",
+        "type": "AUTO_SHAPE (1)",
+        "text": "7"
+      },
+      {
+        "name": "Text 35",
+        "type": "AUTO_SHAPE (1)",
+        "text": "7. Voice\nOutput"
+      },
+      {
+        "name": "Text 36",
+        "type": "AUTO_SHAPE (1)",
+        "text": "TTS cloned\nvoice delivery"
+      },
+      {
+        "name": "Shape 37",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 38",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 39",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Interview Module"
+      },
+      {
+        "name": "Text 40",
+        "type": "AUTO_SHAPE (1)",
+        "text": "25 Q&As → corpus enrichment"
+      },
+      {
+        "name": "Shape 41",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 42",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 43",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Brain-to-AI Mapping"
+      },
+      {
+        "name": "Text 44",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Memory → vector neural identity"
+      },
+      {
+        "name": "Shape 45",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 46",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 47",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Persona Style Engine"
+      },
+      {
+        "name": "Text 48",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Quote + explanation + signature"
+      },
+      {
+        "name": "Shape 49",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 50",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 51",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Cloning Engine"
+      },
+      {
+        "name": "Text 52",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Speaker embed → real-time TTS"
+      },
+      {
+        "name": "Picture 54",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 14,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "05",
+      "Brain-to-AI Training Framework"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "05"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Brain-to-AI Training Framework"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 15,
+    "layout": "DEFAULT",
+    "title": "Brain-to-AI Training Framework — The Core Analogy",
+    "text_blocks": [
+      "Brain-to-AI Training Framework — The Core Analogy",
+      "The human brain forms identity through neural pathways built over a lifetime. Chronus replicates this digitally — mapping every memory, belief, and personality trait into a dense vector space that functions like an artificial neural mind.",
+      "🧠  Human Brain",
+      "🤖  Chronus AI Model",
+      "→",
+      "Long-Term Memory",
+      "Hippocampus stores autobiographical memories across decades of lived experience.",
+      "Beliefs & Values",
+      "Prefrontal cortex encodes moral reasoning, personality, and behavioural tendencies.",
+      "Language & Voice",
+      "Broca's area encodes personal vocabulary, rhythm, sentence style, and vocal identity.",
+      "Emotional Context",
+      "Amygdala links memory to emotion — shaping reaction to questions and life events.",
+      "Vector Embeddings",
+      "Text encoded into 384-dim Sentence-BERT vectors — semantic long-term memory.",
+      "Persona Style Layer",
+      "Per-topic response templates embed beliefs, wit, and philosophy for each individual.",
+      "Voice Cloning TTS",
+      "Neural TTS replicates tone, cadence, accent — AI speaks in the person's real voice.",
+      "Theme Detection",
+      "Question themes matched to emotionally relevant, contextually accurate response sets."
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Brain-to-AI Training Framework — The Core Analogy"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 4",
+        "type": "AUTO_SHAPE (1)",
+        "text": "The human brain forms identity through neural pathways built over a lifetime. Chronus replicates this digitally — mapping every memory, belief, and personality trait into a dense vector space that functions like an artificial neural mind."
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🧠  Human Brain"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🤖  Chronus AI Model"
+      },
+      {
+        "name": "Shape 9",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "→"
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 12",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 13",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Long-Term Memory"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Hippocampus stores autobiographical memories across decades of lived experience."
+      },
+      {
+        "name": "Shape 15",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 16",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Beliefs & Values"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Prefrontal cortex encodes moral reasoning, personality, and behavioural tendencies."
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 20",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Language & Voice"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Broca's area encodes personal vocabulary, rhythm, sentence style, and vocal identity."
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 24",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 25",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Emotional Context"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Amygdala links memory to emotion — shaping reaction to questions and life events."
+      },
+      {
+        "name": "Shape 27",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 29",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Vector Embeddings"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Text encoded into 384-dim Sentence-BERT vectors — semantic long-term memory."
+      },
+      {
+        "name": "Shape 31",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 32",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 33",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Persona Style Layer"
+      },
+      {
+        "name": "Text 34",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Per-topic response templates embed beliefs, wit, and philosophy for each individual."
+      },
+      {
+        "name": "Shape 35",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 36",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 37",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Cloning TTS"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Neural TTS replicates tone, cadence, accent — AI speaks in the person's real voice."
+      },
+      {
+        "name": "Shape 39",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 40",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 41",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Theme Detection"
+      },
+      {
+        "name": "Text 42",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Question themes matched to emotionally relevant, contextually accurate response sets."
+      },
+      {
+        "name": "Picture 44",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 16,
+    "layout": "DEFAULT",
+    "title": "Brain-to-AI — How Neural Memory Becomes Vector Memory",
+    "text_blocks": [
+      "Brain-to-AI — How Neural Memory Becomes Vector Memory",
+      "The Training Pipeline: From Human Thought to AI Memory",
+      "RAW INPUT",
+      "Personal diary entry: \"I always believed that kindness returned tenfold. My mother taught me this.\"",
+      "SENTENCE SPLIT",
+      "spaCy segments into: [\"I always believed that kindness returned tenfold.\"] [\"My mother taught me this.\"]",
+      "EMBEDDING",
+      "Sentence-BERT: 'I always believed that kindness returned tenfold.' → [0.23, -0.41, 0.88, 0.12, ... ] (384 dimensions)",
+      "STORAGE",
+      "ChromaDB stores vector + metadata: { source: 'diary_1998.txt', type: 'personal', date: '1998-03-12' }",
+      "RETRIEVAL",
+      "Query: 'What do you believe about generosity?' → cosine similarity → 0.92 match → passage retrieved",
+      "RESPONSE",
+      "'In my own words: \"I always believed that kindness returned tenfold.\" — What this means: generosity compounds...'"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Brain-to-AI — How Neural Memory Becomes Vector Memory"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 3",
+        "type": "AUTO_SHAPE (1)",
+        "text": "The Training Pipeline: From Human Thought to AI Memory"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "RAW INPUT"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Personal diary entry: \"I always believed that kindness returned tenfold. My mother taught me this.\""
+      },
+      {
+        "name": "Shape 8",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 9",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 10",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "SENTENCE SPLIT"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "spaCy segments into: [\"I always believed that kindness returned tenfold.\"] [\"My mother taught me this.\"]"
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 14",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 15",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "EMBEDDING"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sentence-BERT: 'I always believed that kindness returned tenfold.' → [0.23, -0.41, 0.88, 0.12, ... ] (384 dimensions)"
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 20",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "STORAGE"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "ChromaDB stores vector + metadata: { source: 'diary_1998.txt', type: 'personal', date: '1998-03-12' }"
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 24",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 25",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "RETRIEVAL"
+      },
+      {
+        "name": "Text 27",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Query: 'What do you believe about generosity?' → cosine similarity → 0.92 match → passage retrieved"
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 29",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 30",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 31",
+        "type": "AUTO_SHAPE (1)",
+        "text": "RESPONSE"
+      },
+      {
+        "name": "Text 32",
+        "type": "AUTO_SHAPE (1)",
+        "text": "'In my own words: \"I always believed that kindness returned tenfold.\" — What this means: generosity compounds...'"
+      },
+      {
+        "name": "Picture 34",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 17,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "06",
+      "Voice Cloning & Human Identity Engine"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "06"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Cloning & Human Identity Engine"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 18,
+    "layout": "DEFAULT",
+    "title": "Voice Cloning & Identity Engine — Making It Indistinguishable",
+    "text_blocks": [
+      "Voice Cloning & Identity Engine — Making It Indistinguishable",
+      "Goal: The person interacting with Chronus cannot tell they are talking to an AI — the voice, personality, pacing, and response style must be completely indistinguishable from a real human conversation.",
+      "How Voice Identity Cloning Works:",
+      "1",
+      "Audio Sample",
+      "30–60 seconds of the person's real voice. Source: voice messages, phone calls, video recordings.",
+      "2",
+      "Neural Encoding",
+      "ElevenLabs / XTTS-v2 extracts speaker embeddings — capturing tone, pitch, pace, accent, and vocal texture.",
+      "3",
+      "Text-to-Speech",
+      "Every text response generated by Chronus is synthesised and delivered in the person's cloned voice in real time.",
+      "4",
+      "Liveness Layer",
+      "Prosody modelling adds natural breathing, hesitations, rhythm, and micro-pauses — eliminating robotic speech artefacts completely.",
+      "Why This Changes Everything",
+      "→",
+      "Grief & Healing",
+      "Families hear a lost loved one's voice again — emotional closure text cannot provide.",
+      "→",
+      "Turing Test: Passed",
+      "Chronus passes the 'Is this human?' test — voice is the last frontier separating AI from human.",
+      "→",
+      "Historical Education",
+      "Students hear Gandhi deliver a speech or Einstein explain relativity in their actual vocal style.",
+      "→",
+      "Accessibility",
+      "Voice-first responses serve users who cannot read — Chronus is fully accessible.",
+      "→",
+      "Emotional Resonance",
+      "Hearing the actual voice triggers memory and emotional connection far beyond text-only AI."
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Cloning & Identity Engine — Making It Indistinguishable"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 4",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Goal: The person interacting with Chronus cannot tell they are talking to an AI — the voice, personality, pacing, and response style must be completely indistinguishable from a real human conversation."
+      },
+      {
+        "name": "Text 5",
+        "type": "AUTO_SHAPE (1)",
+        "text": "How Voice Identity Cloning Works:"
+      },
+      {
+        "name": "Shape 6",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 8",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Audio Sample"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "30–60 seconds of the person's real voice. Source: voice messages, phone calls, video recordings."
+      },
+      {
+        "name": "Shape 12",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 14",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "2"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Neural Encoding"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "ElevenLabs / XTTS-v2 extracts speaker embeddings — capturing tone, pitch, pace, accent, and vocal texture."
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 20",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "3"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Text-to-Speech"
+      },
+      {
+        "name": "Text 23",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Every text response generated by Chronus is synthesised and delivered in the person's cloned voice in real time."
+      },
+      {
+        "name": "Shape 24",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 25",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 26",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 27",
+        "type": "AUTO_SHAPE (1)",
+        "text": "4"
+      },
+      {
+        "name": "Text 28",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Liveness Layer"
+      },
+      {
+        "name": "Text 29",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Prosody modelling adds natural breathing, hesitations, rhythm, and micro-pauses — eliminating robotic speech artefacts completely."
+      },
+      {
+        "name": "Shape 30",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 31",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Why This Changes Everything"
+      },
+      {
+        "name": "Shape 32",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 33",
+        "type": "AUTO_SHAPE (1)",
+        "text": "→"
+      },
+      {
+        "name": "Text 34",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Grief & Healing"
+      },
+      {
+        "name": "Text 35",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Families hear a lost loved one's voice again — emotional closure text cannot provide."
+      },
+      {
+        "name": "Shape 36",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 37",
+        "type": "AUTO_SHAPE (1)",
+        "text": "→"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Turing Test: Passed"
+      },
+      {
+        "name": "Text 39",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Chronus passes the 'Is this human?' test — voice is the last frontier separating AI from human."
+      },
+      {
+        "name": "Shape 40",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 41",
+        "type": "AUTO_SHAPE (1)",
+        "text": "→"
+      },
+      {
+        "name": "Text 42",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Historical Education"
+      },
+      {
+        "name": "Text 43",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Students hear Gandhi deliver a speech or Einstein explain relativity in their actual vocal style."
+      },
+      {
+        "name": "Shape 44",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 45",
+        "type": "AUTO_SHAPE (1)",
+        "text": "→"
+      },
+      {
+        "name": "Text 46",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Accessibility"
+      },
+      {
+        "name": "Text 47",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice-first responses serve users who cannot read — Chronus is fully accessible."
+      },
+      {
+        "name": "Shape 48",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 49",
+        "type": "AUTO_SHAPE (1)",
+        "text": "→"
+      },
+      {
+        "name": "Text 50",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Emotional Resonance"
+      },
+      {
+        "name": "Text 51",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Hearing the actual voice triggers memory and emotional connection far beyond text-only AI."
+      },
+      {
+        "name": "Picture 53",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 19,
+    "layout": "DEFAULT",
+    "title": "Voice Cloning — Technology Comparison & Integration",
+    "text_blocks": [
+      "Voice Cloning — Technology Comparison & Integration",
+      "Chronus evaluates three leading voice synthesis technologies:",
+      "ElevenLabs",
+      "PROS",
+      "Industry-leading quality · 30s sample · 29 languages · emotion control",
+      "CONS",
+      "API-based (requires internet) · cost per character",
+      "Recommendation:",
+      "Best for production",
+      "XTTS-v2",
+      "PROS",
+      "Open source · runs locally · 16 languages · speaker embedding cloning",
+      "CONS",
+      "Slightly lower quality than ElevenLabs",
+      "Recommendation:",
+      "Best for privacy",
+      "Coqui TTS",
+      "PROS",
+      "Fully open source · customizable · no cost · fine-tunable",
+      "CONS",
+      "Less natural prosody · requires GPU for speed",
+      "Recommendation:",
+      "Best for research"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Cloning — Technology Comparison & Integration"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 3",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Chronus evaluates three leading voice synthesis technologies:"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "ElevenLabs"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "PROS"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Industry-leading quality · 30s sample · 29 languages · emotion control"
+      },
+      {
+        "name": "Shape 10",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "CONS"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "API-based (requires internet) · cost per character"
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Recommendation:"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Best for production"
+      },
+      {
+        "name": "Shape 16",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 17",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": "XTTS-v2"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "PROS"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Open source · runs locally · 16 languages · speaker embedding cloning"
+      },
+      {
+        "name": "Shape 22",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 23",
+        "type": "AUTO_SHAPE (1)",
+        "text": "CONS"
+      },
+      {
+        "name": "Text 24",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Slightly lower quality than ElevenLabs"
+      },
+      {
+        "name": "Shape 25",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Recommendation:"
+      },
+      {
+        "name": "Text 27",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Best for privacy"
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 29",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Coqui TTS"
+      },
+      {
+        "name": "Shape 31",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 32",
+        "type": "AUTO_SHAPE (1)",
+        "text": "PROS"
+      },
+      {
+        "name": "Text 33",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Fully open source · customizable · no cost · fine-tunable"
+      },
+      {
+        "name": "Shape 34",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 35",
+        "type": "AUTO_SHAPE (1)",
+        "text": "CONS"
+      },
+      {
+        "name": "Text 36",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Less natural prosody · requires GPU for speed"
+      },
+      {
+        "name": "Shape 37",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Recommendation:"
+      },
+      {
+        "name": "Text 39",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Best for research"
+      },
+      {
+        "name": "Picture 41",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 20,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "07",
+      "System Architecture"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "07"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "System Architecture"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 21,
+    "layout": "DEFAULT",
+    "title": "System Architecture — Full 5-Layer Tech Stack",
+    "text_blocks": [
+      "System Architecture — Full 5-Layer Tech Stack",
+      "Layer 1 — Frontend (React + TypeScript)",
+      "Vite · Tailwind CSS · Framer Motion · shadcn/ui · Web Speech API · Responsive dark UI",
+      "Layer 2 — API Proxy (Node.js / Express)",
+      "TypeScript · http-proxy-middleware · REST endpoints · JSON schema validation",
+      "Layer 3 — Backend (Python / Flask)",
+      "Flask · spaCy (NLP) · pdfplumber · python-docx · audio processing pipeline",
+      "Layer 4 — AI / NLP Engine",
+      "Sentence-Transformers (all-MiniLM-L6-v2) · 384-dim embeddings · Cosine similarity · Theme detection",
+      "Layer 5 — Voice Synthesis Engine",
+      "ElevenLabs TTS / XTTS-v2 · Speaker embeddings · Prosody modelling · Real-time streaming",
+      "Persistence: ChromaDB vectors · JSON history · Interview answers · Voice cache · Model metadata"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "System Architecture — Full 5-Layer Tech Stack"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 4",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Layer 1 — Frontend (React + TypeScript)"
+      },
+      {
+        "name": "Text 5",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Vite · Tailwind CSS · Framer Motion · shadcn/ui · Web Speech API · Responsive dark UI"
+      },
+      {
+        "name": "Shape 6",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Layer 2 — API Proxy (Node.js / Express)"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "TypeScript · http-proxy-middleware · REST endpoints · JSON schema validation"
+      },
+      {
+        "name": "Shape 10",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Layer 3 — Backend (Python / Flask)"
+      },
+      {
+        "name": "Text 13",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Flask · spaCy (NLP) · pdfplumber · python-docx · audio processing pipeline"
+      },
+      {
+        "name": "Shape 14",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 15",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Layer 4 — AI / NLP Engine"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sentence-Transformers (all-MiniLM-L6-v2) · 384-dim embeddings · Cosine similarity · Theme detection"
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Layer 5 — Voice Synthesis Engine"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "ElevenLabs TTS / XTTS-v2 · Speaker embeddings · Prosody modelling · Real-time streaming"
+      },
+      {
+        "name": "Shape 22",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 23",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Persistence: ChromaDB vectors · JSON history · Interview answers · Voice cache · Model metadata"
+      },
+      {
+        "name": "Picture 25",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 22,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "08",
+      "Implementation & Algorithms"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "08"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Implementation & Algorithms"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 23,
+    "layout": "DEFAULT",
+    "title": "Implementation — Core Algorithms & Techniques",
+    "text_blocks": [
+      "Implementation — Core Algorithms & Techniques",
+      "NLP",
+      "Sentence Embedding (Sentence-BERT)",
+      "384-dim vector encoding capturing semantic meaning. Foundation of all memory retrieval in Chronus.",
+      "IR",
+      "Cosine Similarity Search (ChromaDB)",
+      "Top-k semantically similar passages retrieved per query. Threshold 1.45 eliminates irrelevant matches.",
+      "Voice",
+      "Voice Cloning (Neural TTS)",
+      "Speaker embedding from 30–60s audio. XTTS-v2 synthesises replies in the person's real voice.",
+      "NLU",
+      "Theme Detection (Rule-Based NLU)",
+      "Question classified into 7 themes: love, failure, work, fear, purpose, society, self. Selects persona explanation.",
+      "NLG",
+      "Mix Response Method",
+      "Quote → persona explanation → closing signature. All three steps delivered in cloned voice output.",
+      "Data",
+      "Interview Augmentation",
+      "Q&A answers sentence-segmented and embedded with file data. Enriches sparse training from minimal input."
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Implementation — Core Algorithms & Techniques"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "NLP"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sentence Embedding (Sentence-BERT)"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "384-dim vector encoding capturing semantic meaning. Foundation of all memory retrieval in Chronus."
+      },
+      {
+        "name": "Shape 9",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 10",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "IR"
+      },
+      {
+        "name": "Text 13",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Cosine Similarity Search (ChromaDB)"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Top-k semantically similar passages retrieved per query. Threshold 1.45 eliminates irrelevant matches."
+      },
+      {
+        "name": "Shape 15",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 16",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 17",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice"
+      },
+      {
+        "name": "Text 19",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Cloning (Neural TTS)"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Speaker embedding from 30–60s audio. XTTS-v2 synthesises replies in the person's real voice."
+      },
+      {
+        "name": "Shape 21",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 22",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 24",
+        "type": "AUTO_SHAPE (1)",
+        "text": "NLU"
+      },
+      {
+        "name": "Text 25",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Theme Detection (Rule-Based NLU)"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Question classified into 7 themes: love, failure, work, fear, purpose, society, self. Selects persona explanation."
+      },
+      {
+        "name": "Shape 27",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 29",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "NLG"
+      },
+      {
+        "name": "Text 31",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Mix Response Method"
+      },
+      {
+        "name": "Text 32",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Quote → persona explanation → closing signature. All three steps delivered in cloned voice output."
+      },
+      {
+        "name": "Shape 33",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 34",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 35",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 36",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Data"
+      },
+      {
+        "name": "Text 37",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Interview Augmentation"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Q&A answers sentence-segmented and embedded with file data. Enriches sparse training from minimal input."
+      },
+      {
+        "name": "Picture 40",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 24,
+    "layout": "DEFAULT",
+    "title": "Implementation — Response Generation: The Mix Method in Action",
+    "text_blocks": [
+      "Implementation — Response Generation: The Mix Method in Action",
+      "A Chronus response is always a three-part structure — making it feel authentic, modern, and deeply personal:",
+      "Example: Einstein on Failure",
+      "STEP 1 — Authentic Quote",
+      "Retrieved from vector store (cosine match: 0.94)",
+      "\"In my own words — and I meant this quite seriously:\n\n'A person who never made a mistake never tried anything new.'\"",
+      "STEP 2 — Modern Explanation",
+      "Theme: failure & growth · Persona: Einstein · Voice: scientific curiosity",
+      "\"Every experiment I ran began with not knowing the answer. Fear of the unknown is simply curiosity that hasn't been redirected yet. In the laboratory, a 'failed' experiment that surprises you is the most valuable result.\"",
+      "STEP 3 — Closing Signature + Voice Output",
+      "Delivered in Einstein's cloned voice via TTS",
+      "\"Keep questioning. That is where everything begins.\"  — Albert Einstein\n\n🔊 [Audio: Einstein's cloned voice speaks this response in real time]"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Implementation — Response Generation: The Mix Method in Action"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 3",
+        "type": "AUTO_SHAPE (1)",
+        "text": "A Chronus response is always a three-part structure — making it feel authentic, modern, and deeply personal:"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Example: Einstein on Failure"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "STEP 1 — Authentic Quote"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Retrieved from vector store (cosine match: 0.94)"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "\"In my own words — and I meant this quite seriously:\n\n'A person who never made a mistake never tried anything new.'\""
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "STEP 2 — Modern Explanation"
+      },
+      {
+        "name": "Text 13",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Theme: failure & growth · Persona: Einstein · Voice: scientific curiosity"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "\"Every experiment I ran began with not knowing the answer. Fear of the unknown is simply curiosity that hasn't been redirected yet. In the laboratory, a 'failed' experiment that surprises you is the most valuable result.\""
+      },
+      {
+        "name": "Shape 15",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "STEP 3 — Closing Signature + Voice Output"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Delivered in Einstein's cloned voice via TTS"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": "\"Keep questioning. That is where everything begins.\"  — Albert Einstein\n\n🔊 [Audio: Einstein's cloned voice speaks this response in real time]"
+      },
+      {
+        "name": "Picture 20",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 25,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "09",
+      "Data Pipeline & File Support"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "09"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Data Pipeline & File Support"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 26,
+    "layout": "DEFAULT",
+    "title": "Data Pipeline — Universal File Format Support",
+    "text_blocks": [
+      "Data Pipeline — Universal File Format Support",
+      "Chronus ingests virtually any personal archive format — ensuring no human record is left behind:",
+      ".txt / .md",
+      "PLAIN TEXT",
+      "Plain text diaries, Markdown journals, personal notes and reflections",
+      ".pdf",
+      "DOCUMENTS",
+      "Scanned books, digitised letters, academic papers via pdfplumber",
+      ".docx",
+      "WORD DOCS",
+      "Microsoft Word documents, formatted writings via python-docx",
+      ".csv",
+      "CHAT LOGS",
+      "WhatsApp/SMS/Telegram chat exports, conversation logs in tabular form",
+      ".eml",
+      "EMAILS",
+      "Email files exported from Gmail, Outlook — entire correspondence archives",
+      ".json",
+      "STRUCTURED",
+      "Structured API exports, social media archives, Facebook/Instagram data downloads",
+      ".mp3/.wav",
+      "AUDIO",
+      "Voice recordings, voice notes, audio diaries (transcribed for embedding)",
+      ".epub",
+      "E-BOOKS",
+      "Digital books authored by or belonging to the person (future support)"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Data Pipeline — Universal File Format Support"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 3",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Chronus ingests virtually any personal archive format — ensuring no human record is left behind:"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": ".txt / .md"
+      },
+      {
+        "name": "Shape 7",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "PLAIN TEXT"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Plain text diaries, Markdown journals, personal notes and reflections"
+      },
+      {
+        "name": "Shape 10",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": ".pdf"
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "DOCUMENTS"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Scanned books, digitised letters, academic papers via pdfplumber"
+      },
+      {
+        "name": "Shape 16",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 17",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": ".docx"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "WORD DOCS"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Microsoft Word documents, formatted writings via python-docx"
+      },
+      {
+        "name": "Shape 22",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 24",
+        "type": "AUTO_SHAPE (1)",
+        "text": ".csv"
+      },
+      {
+        "name": "Shape 25",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "CHAT LOGS"
+      },
+      {
+        "name": "Text 27",
+        "type": "AUTO_SHAPE (1)",
+        "text": "WhatsApp/SMS/Telegram chat exports, conversation logs in tabular form"
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 29",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": ".eml"
+      },
+      {
+        "name": "Shape 31",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 32",
+        "type": "AUTO_SHAPE (1)",
+        "text": "EMAILS"
+      },
+      {
+        "name": "Text 33",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Email files exported from Gmail, Outlook — entire correspondence archives"
+      },
+      {
+        "name": "Shape 34",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 35",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 36",
+        "type": "AUTO_SHAPE (1)",
+        "text": ".json"
+      },
+      {
+        "name": "Shape 37",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "STRUCTURED"
+      },
+      {
+        "name": "Text 39",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Structured API exports, social media archives, Facebook/Instagram data downloads"
+      },
+      {
+        "name": "Shape 40",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 41",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 42",
+        "type": "AUTO_SHAPE (1)",
+        "text": ".mp3/.wav"
+      },
+      {
+        "name": "Shape 43",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 44",
+        "type": "AUTO_SHAPE (1)",
+        "text": "AUDIO"
+      },
+      {
+        "name": "Text 45",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice recordings, voice notes, audio diaries (transcribed for embedding)"
+      },
+      {
+        "name": "Shape 46",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 47",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 48",
+        "type": "AUTO_SHAPE (1)",
+        "text": ".epub"
+      },
+      {
+        "name": "Shape 49",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 50",
+        "type": "AUTO_SHAPE (1)",
+        "text": "E-BOOKS"
+      },
+      {
+        "name": "Text 51",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Digital books authored by or belonging to the person (future support)"
+      },
+      {
+        "name": "Picture 53",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 27,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "10",
+      "Famous Personality Models"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "10"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Famous Personality Models"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 28,
+    "layout": "DEFAULT",
+    "title": "Famous Personality Models — Pre-Trained on Real Writings",
+    "text_blocks": [
+      "Famous Personality Models — Pre-Trained on Real Writings",
+      "🌌",
+      "Albert Einstein",
+      "1879–1955",
+      "Physics · Philosophy",
+      "20 quotes · voice support",
+      "☮️",
+      "Mahatma Gandhi",
+      "1869–1948",
+      "Nonviolence · Truth",
+      "20 quotes · voice support",
+      "⚡",
+      "Nikola Tesla",
+      "1856–1943",
+      "Invention · Visionary",
+      "20 quotes · voice support",
+      "⚖️",
+      "Marcus Aurelius",
+      "121–180 AD",
+      "Stoicism · Leadership",
+      "20 quotes · voice support",
+      "🍎",
+      "Steve Jobs",
+      "1955–2011",
+      "Design · Innovation",
+      "20 quotes · voice support",
+      "⚗️",
+      "Marie Curie",
+      "1867–1934",
+      "Science · Resilience",
+      "20 quotes · voice support",
+      "🎩",
+      "Abraham Lincoln",
+      "1809–1865",
+      "Justice · Compassion",
+      "20 quotes · voice support",
+      "🎭",
+      "Shakespeare",
+      "1564–1616",
+      "Poetry · Human Nature",
+      "20 quotes · voice support"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Famous Personality Models — Pre-Trained on Real Writings"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 5",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🌌"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Albert Einstein"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1879–1955"
+      },
+      {
+        "name": "Shape 8",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Physics · Philosophy"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "20 quotes · voice support"
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 12",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 13",
+        "type": "AUTO_SHAPE (1)",
+        "text": "☮️"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Mahatma Gandhi"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1869–1948"
+      },
+      {
+        "name": "Shape 16",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Nonviolence · Truth"
+      },
+      {
+        "name": "Text 18",
+        "type": "AUTO_SHAPE (1)",
+        "text": "20 quotes · voice support"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 20",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "⚡"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Nikola Tesla"
+      },
+      {
+        "name": "Text 23",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1856–1943"
+      },
+      {
+        "name": "Shape 24",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 25",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Invention · Visionary"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "20 quotes · voice support"
+      },
+      {
+        "name": "Shape 27",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 29",
+        "type": "AUTO_SHAPE (1)",
+        "text": "⚖️"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Marcus Aurelius"
+      },
+      {
+        "name": "Text 31",
+        "type": "AUTO_SHAPE (1)",
+        "text": "121–180 AD"
+      },
+      {
+        "name": "Shape 32",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 33",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Stoicism · Leadership"
+      },
+      {
+        "name": "Text 34",
+        "type": "AUTO_SHAPE (1)",
+        "text": "20 quotes · voice support"
+      },
+      {
+        "name": "Shape 35",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 36",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 37",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🍎"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Steve Jobs"
+      },
+      {
+        "name": "Text 39",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1955–2011"
+      },
+      {
+        "name": "Shape 40",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 41",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Design · Innovation"
+      },
+      {
+        "name": "Text 42",
+        "type": "AUTO_SHAPE (1)",
+        "text": "20 quotes · voice support"
+      },
+      {
+        "name": "Shape 43",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 44",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 45",
+        "type": "AUTO_SHAPE (1)",
+        "text": "⚗️"
+      },
+      {
+        "name": "Text 46",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Marie Curie"
+      },
+      {
+        "name": "Text 47",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1867–1934"
+      },
+      {
+        "name": "Shape 48",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 49",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Science · Resilience"
+      },
+      {
+        "name": "Text 50",
+        "type": "AUTO_SHAPE (1)",
+        "text": "20 quotes · voice support"
+      },
+      {
+        "name": "Shape 51",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 52",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 53",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🎩"
+      },
+      {
+        "name": "Text 54",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Abraham Lincoln"
+      },
+      {
+        "name": "Text 55",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1809–1865"
+      },
+      {
+        "name": "Shape 56",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 57",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Justice · Compassion"
+      },
+      {
+        "name": "Text 58",
+        "type": "AUTO_SHAPE (1)",
+        "text": "20 quotes · voice support"
+      },
+      {
+        "name": "Shape 59",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 60",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 61",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🎭"
+      },
+      {
+        "name": "Text 62",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Shakespeare"
+      },
+      {
+        "name": "Text 63",
+        "type": "AUTO_SHAPE (1)",
+        "text": "1564–1616"
+      },
+      {
+        "name": "Shape 64",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 65",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Poetry · Human Nature"
+      },
+      {
+        "name": "Text 66",
+        "type": "AUTO_SHAPE (1)",
+        "text": "20 quotes · voice support"
+      },
+      {
+        "name": "Picture 68",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 29,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "11",
+      "Interview & Memory Augmentation"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "11"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Interview & Memory Augmentation"
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 30,
+    "layout": "DEFAULT",
+    "title": "Interview System — 25-Question Memory Augmentation Protocol",
+    "text_blocks": [
+      "Interview System — 25-Question Memory Augmentation Protocol",
+      "When personal data is limited, Chronus uses a structured interview protocol — turning family memories into AI training data:",
+      "Q 1–4",
+      "Personality",
+      "Sample question:",
+      "'How would you describe their sense of humour? Give an example.'",
+      "Q 5–8",
+      "Core Memories",
+      "Sample question:",
+      "'What is the most vivid memory you have of them? What were they doing?'",
+      "Q 9–12",
+      "Relationships",
+      "Sample question:",
+      "'How did they typically show love or care to the people close to them?'",
+      "Q 13–16",
+      "Passions",
+      "Sample question:",
+      "'What topic could they talk about for hours without stopping?'",
+      "Q 17–20",
+      "Beliefs",
+      "Sample question:",
+      "'What did they believe about right and wrong? Any repeated sayings?'",
+      "Q 21–25",
+      "Voice & Style",
+      "Sample question:",
+      "'How did they speak? Formal, casual? Any expressions only they used?'"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Interview System — 25-Question Memory Augmentation Protocol"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 3",
+        "type": "AUTO_SHAPE (1)",
+        "text": "When personal data is limited, Chronus uses a structured interview protocol — turning family memories into AI training data:"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 6",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Q 1–4"
+      },
+      {
+        "name": "Text 8",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Personality"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sample question:"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "'How would you describe their sense of humour? Give an example.'"
+      },
+      {
+        "name": "Shape 11",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 12",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 14",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Q 5–8"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Core Memories"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sample question:"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "'What is the most vivid memory you have of them? What were they doing?'"
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 20",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Q 9–12"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Relationships"
+      },
+      {
+        "name": "Text 23",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sample question:"
+      },
+      {
+        "name": "Text 24",
+        "type": "AUTO_SHAPE (1)",
+        "text": "'How did they typically show love or care to the people close to them?'"
+      },
+      {
+        "name": "Shape 25",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 26",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 27",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 28",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Q 13–16"
+      },
+      {
+        "name": "Text 29",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Passions"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sample question:"
+      },
+      {
+        "name": "Text 31",
+        "type": "AUTO_SHAPE (1)",
+        "text": "'What topic could they talk about for hours without stopping?'"
+      },
+      {
+        "name": "Shape 32",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 33",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 34",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 35",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Q 17–20"
+      },
+      {
+        "name": "Text 36",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Beliefs"
+      },
+      {
+        "name": "Text 37",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sample question:"
+      },
+      {
+        "name": "Text 38",
+        "type": "AUTO_SHAPE (1)",
+        "text": "'What did they believe about right and wrong? Any repeated sayings?'"
+      },
+      {
+        "name": "Shape 39",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 40",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 41",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 42",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Q 21–25"
+      },
+      {
+        "name": "Text 43",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice & Style"
+      },
+      {
+        "name": "Text 44",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Sample question:"
+      },
+      {
+        "name": "Text 45",
+        "type": "AUTO_SHAPE (1)",
+        "text": "'How did they speak? Formal, casual? Any expressions only they used?'"
+      },
+      {
+        "name": "Picture 47",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 31,
+    "layout": "DEFAULT",
+    "title": "",
+    "text_blocks": [
+      "12",
+      "Security, Ethics & Privacy"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "12"
+      },
+      {
+        "name": "Text 2",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Security, Ethics & Privacy"
+      },
+      {
+        "name": "Picture 5",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 32,
+    "layout": "DEFAULT",
+    "title": "Security, Ethics & Privacy — Responsible AI Design",
+    "text_blocks": [
+      "Security, Ethics & Privacy — Responsible AI Design",
+      "🔒",
+      "Fully Local Architecture",
+      "All data — writings, embeddings, voice samples — stored locally. Zero external AI API calls. Your memories never leave your device.",
+      "✅",
+      "Consent-First Model",
+      "Chronus requires explicit family consent before training on any individual. Models are owner-locked and not transferable without permission.",
+      "🛡️",
+      "Anti-Impersonation Guard",
+      "Voice cloning is disabled by default. Requires explicit owner authorisation per session. Cannot be used to impersonate someone without access credentials.",
+      "🧠",
+      "No Hallucination Policy",
+      "Every response is grounded in real retrieved text. If no relevant memory exists, Chronus acknowledges the gap rather than fabricating content.",
+      "💙",
+      "Grief Sensitivity Protocol",
+      "Recognises emotionally sensitive queries (grief, loss, death). Activates compassion-mode responses — no clinical detachment when discussing deeply personal topics.",
+      "🗑️",
+      "Data Deletion Rights",
+      "Every trained model and voice sample can be permanently deleted at any time — full right to be forgotten, implemented at the system level, not just in policy."
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Security, Ethics & Privacy — Responsible AI Design"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 5",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🔒"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Fully Local Architecture"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "All data — writings, embeddings, voice samples — stored locally. Zero external AI API calls. Your memories never leave your device."
+      },
+      {
+        "name": "Shape 8",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 9",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "✅"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Consent-First Model"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Chronus requires explicit family consent before training on any individual. Models are owner-locked and not transferable without permission."
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 14",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🛡️"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Anti-Impersonation Guard"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice cloning is disabled by default. Requires explicit owner authorisation per session. Cannot be used to impersonate someone without access credentials."
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🧠"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "No Hallucination Policy"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Every response is grounded in real retrieved text. If no relevant memory exists, Chronus acknowledges the gap rather than fabricating content."
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 24",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 25",
+        "type": "AUTO_SHAPE (1)",
+        "text": "💙"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Grief Sensitivity Protocol"
+      },
+      {
+        "name": "Text 27",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Recognises emotionally sensitive queries (grief, loss, death). Activates compassion-mode responses — no clinical detachment when discussing deeply personal topics."
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 29",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🗑️"
+      },
+      {
+        "name": "Text 31",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Data Deletion Rights"
+      },
+      {
+        "name": "Text 32",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Every trained model and voice sample can be permanently deleted at any time — full right to be forgotten, implemented at the system level, not just in policy."
+      },
+      {
+        "name": "Picture 35",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 33,
+    "layout": "DEFAULT",
+    "title": "Results & Performance — Feature Completion & Quality Metrics",
+    "text_blocks": [
+      "Results & Performance — Feature Completion & Quality Metrics"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Results & Performance — Feature Completion & Quality Metrics"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Chart 0",
+        "type": "CHART (3)"
+      },
+      {
+        "name": "Picture 6",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 34,
+    "layout": "DEFAULT",
+    "title": "Use Cases & Real-World Applications",
+    "text_blocks": [
+      "Use Cases & Real-World Applications",
+      "👨‍👩‍👧",
+      "Family Memory Preservation",
+      "Train Chronus on a grandparent's letters and diaries. Grandchildren can ask questions and hear their voice long after they are gone.",
+      "🎓",
+      "Historical Education",
+      "Students interact with Einstein, Gandhi, or Lincoln through conversational voice AI — making history lessons immersive and memorable.",
+      "💼",
+      "Corporate Knowledge Retention",
+      "Train Chronus on outgoing executives' memos and strategy documents. Their institutional knowledge remains queryable after departure.",
+      "📖",
+      "Author & Creator Legacy",
+      "Authors, poets, and artists can train Chronus on their works — creating an interactive version of themselves for fans and scholars.",
+      "🏥",
+      "Grief Therapy Support",
+      "Clinical psychologists use Chronus-mediated interaction as part of grief processing — hearing the voice of a lost person in a controlled environment.",
+      "🎙️",
+      "Voice Accessibility Archive",
+      "Public figures, politicians, and scientists create Chronus models as accessible, interactive archives of their ideas and worldview.",
+      "🔬",
+      "AI Research & Benchmarking",
+      "Chronus serves as a testbed for memory-grounded AI, anti-hallucination techniques, and voice-personality integration research.",
+      "🌍",
+      "Cultural Heritage Preservation",
+      "Preserve endangered languages, oral traditions, and cultural knowledge from communities whose elders carry irreplaceable wisdom."
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Use Cases & Real-World Applications"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 5",
+        "type": "AUTO_SHAPE (1)",
+        "text": "👨‍👩‍👧"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Family Memory Preservation"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Train Chronus on a grandparent's letters and diaries. Grandchildren can ask questions and hear their voice long after they are gone."
+      },
+      {
+        "name": "Shape 8",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 9",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 10",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🎓"
+      },
+      {
+        "name": "Text 11",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Historical Education"
+      },
+      {
+        "name": "Text 12",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Students interact with Einstein, Gandhi, or Lincoln through conversational voice AI — making history lessons immersive and memorable."
+      },
+      {
+        "name": "Shape 13",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 14",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 15",
+        "type": "AUTO_SHAPE (1)",
+        "text": "💼"
+      },
+      {
+        "name": "Text 16",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Corporate Knowledge Retention"
+      },
+      {
+        "name": "Text 17",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Train Chronus on outgoing executives' memos and strategy documents. Their institutional knowledge remains queryable after departure."
+      },
+      {
+        "name": "Shape 18",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 19",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 20",
+        "type": "AUTO_SHAPE (1)",
+        "text": "📖"
+      },
+      {
+        "name": "Text 21",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Author & Creator Legacy"
+      },
+      {
+        "name": "Text 22",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Authors, poets, and artists can train Chronus on their works — creating an interactive version of themselves for fans and scholars."
+      },
+      {
+        "name": "Shape 23",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 24",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 25",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🏥"
+      },
+      {
+        "name": "Text 26",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Grief Therapy Support"
+      },
+      {
+        "name": "Text 27",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Clinical psychologists use Chronus-mediated interaction as part of grief processing — hearing the voice of a lost person in a controlled environment."
+      },
+      {
+        "name": "Shape 28",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 29",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 30",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🎙️"
+      },
+      {
+        "name": "Text 31",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Voice Accessibility Archive"
+      },
+      {
+        "name": "Text 32",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Public figures, politicians, and scientists create Chronus models as accessible, interactive archives of their ideas and worldview."
+      },
+      {
+        "name": "Shape 33",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 34",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 35",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🔬"
+      },
+      {
+        "name": "Text 36",
+        "type": "AUTO_SHAPE (1)",
+        "text": "AI Research & Benchmarking"
+      },
+      {
+        "name": "Text 37",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Chronus serves as a testbed for memory-grounded AI, anti-hallucination techniques, and voice-personality integration research."
+      },
+      {
+        "name": "Shape 38",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Shape 39",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 40",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🌍"
+      },
+      {
+        "name": "Text 41",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Cultural Heritage Preservation"
+      },
+      {
+        "name": "Text 42",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Preserve endangered languages, oral traditions, and cultural knowledge from communities whose elders carry irreplaceable wisdom."
+      },
+      {
+        "name": "Picture 45",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 35,
+    "layout": "DEFAULT",
+    "title": "Conclusion & Future Roadmap",
+    "text_blocks": [
+      "Conclusion & Future Roadmap",
+      "Conclusion",
+      "Built the world's first brain-to-AI human simulation with voice identity cloning\nVoice cloning makes Chronus the first AI genuinely indistinguishable from a real human\nSemantic vector search grounds every response in real verified memory — no hallucinations\nMix-response method (quote + explanation + voice) validated as most immersive format\n8 famous personality models trained on real historical writings with persona voice styles\nEthics-first: fully local, consent-gated, deletion-ready, anti-impersonation architecture",
+      "Future Roadmap",
+      "🎙️  Real-time voice streaming — live phone-call-like conversations\n😐  Facial avatar — animated face synced to cloned voice (SadTalker/DeepFake)\n🦙  LLM integration — RAG pipeline with local Llama 3 / Mistral for open-ended Q&A\n😢  Emotion modelling — sadness, joy, urgency embedded in vocal delivery\n📱  Mobile app — iOS/Android family contributions via React Native\n🌐  Multi-language — Hindi, Gujarati, Tamil, Arabic voice cloning\n☁️  Optional encrypted cloud sync for cross-device model access\n🧬  Biological signal integration — typing patterns, micro-expressions",
+      "Chronus transforms static archives into a living, speaking, thinking AI twin — ensuring that every human being's knowledge, wisdom, personality, and voice can be preserved and experienced by future generations, exactly as they were."
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "Shape 0",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 1",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Conclusion & Future Roadmap"
+      },
+      {
+        "name": "Shape 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 3",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Conclusion"
+      },
+      {
+        "name": "Text 4",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Built the world's first brain-to-AI human simulation with voice identity cloning\nVoice cloning makes Chronus the first AI genuinely indistinguishable from a real human\nSemantic vector search grounds every response in real verified memory — no hallucinations\nMix-response method (quote + explanation + voice) validated as most immersive format\n8 famous personality models trained on real historical writings with persona voice styles\nEthics-first: fully local, consent-gated, deletion-ready, anti-impersonation architecture"
+      },
+      {
+        "name": "Shape 5",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 6",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Future Roadmap"
+      },
+      {
+        "name": "Text 7",
+        "type": "AUTO_SHAPE (1)",
+        "text": "🎙️  Real-time voice streaming — live phone-call-like conversations\n😐  Facial avatar — animated face synced to cloned voice (SadTalker/DeepFake)\n🦙  LLM integration — RAG pipeline with local Llama 3 / Mistral for open-ended Q&A\n😢  Emotion modelling — sadness, joy, urgency embedded in vocal delivery\n📱  Mobile app — iOS/Android family contributions via React Native\n🌐  Multi-language — Hindi, Gujarati, Tamil, Arabic voice cloning\n☁️  Optional encrypted cloud sync for cross-device model access\n🧬  Biological signal integration — typing patterns, micro-expressions"
+      },
+      {
+        "name": "Shape 8",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "Text 9",
+        "type": "AUTO_SHAPE (1)",
+        "text": "Chronus transforms static archives into a living, speaking, thinking AI twin — ensuring that every human being's knowledge, wisdom, personality, and voice can be preserved and experienced by future generations, exactly as they were."
+      },
+      {
+        "name": "Picture 12",
+        "type": "PICTURE (13)"
+      }
+    ]
+  },
+  {
+    "slide_index": 36,
+    "layout": "Title Only",
+    "title": "Questions?",
+    "text_blocks": [
+      "Questions?"
+    ],
+    "tables": [],
+    "shapes": [
+      {
+        "name": "object 2",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "object 3",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "object 4",
+        "type": "AUTO_SHAPE (1)"
+      },
+      {
+        "name": "object 5",
+        "type": "FREEFORM (5)"
+      },
+      {
+        "name": "object 6",
+        "type": "FREEFORM (5)"
+      },
+      {
+        "name": "object 7",
+        "type": "FREEFORM (5)"
+      },
+      {
+        "name": "object 8",
+        "type": "FREEFORM (5)"
+      },
+      {
+        "name": "object 9",
+        "type": "PLACEHOLDER (14)",
+        "text": "Questions?"
+      }
+    ]
+  },
+  {
+    "slide_index": 37,
+    "layout": "Blank",
+    "title": "",
+    "text_blocks": [],
+    "tables": [],
+    "shapes": []
+  }
+]

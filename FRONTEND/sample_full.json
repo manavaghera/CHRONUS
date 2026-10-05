@@ -1,0 +1,4627 @@
+[
+  {
+    "slide_num": 1,
+    "layout": "Title Slide",
+    "shapes": [
+      {
+        "name": "Picture 6",
+        "type": "PICTURE (13)",
+        "left": 0,
+        "top": 0,
+        "width": 9144000,
+        "height": 6858000
+      },
+      {
+        "name": "TextBox 4",
+        "type": "AUTO_SHAPE (1)",
+        "left": 1161106,
+        "top": 1055024,
+        "width": 6858000,
+        "height": 1169988,
+        "paragraphs": [
+          {
+            "text": "Your Project title",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Your Project title",
+                "font_name": null,
+                "font_size": 32.0,
+                "bold": true,
+                "italic": null,
+                "color": "000000"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 3420110,
+        "top": 116507,
+        "width": 2381250,
+        "height": 628650
+      },
+      {
+        "name": "Group 26",
+        "type": "GROUP (6)",
+        "left": 1711007,
+        "top": 1917192,
+        "width": 6308725,
+        "height": 93663
+      },
+      {
+        "name": "Audio 2",
+        "type": "PICTURE (13)",
+        "left": 8318500,
+        "top": 6032500,
+        "width": 609600,
+        "height": 609600
+      },
+      {
+        "name": "Slide Number Placeholder 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "1",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Audio 5",
+        "type": "PICTURE (13)",
+        "left": 8585200,
+        "top": 6299200,
+        "width": 406400,
+        "height": 406400
+      },
+      {
+        "name": "TextBox 7",
+        "type": "TEXT_BOX (17)",
+        "left": 467360,
+        "top": 2225040,
+        "width": 4187190,
+        "height": 2185214,
+        "paragraphs": [
+          {
+            "text": "Presented  By:",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Presented  By:",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": true,
+                "italic": null,
+                "color": "002060"
+              }
+            ]
+          },
+          {
+            "text": "Student name-1(Enrollment-1)",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Student name-1(Enrollment-1)",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Student name-2(Enrollment-2)",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Student name-2(Enrollment-2)",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Student name-3(Enrollment-3)",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Student name-3(Enrollment-3)",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Student name-4(Enrollment-4)    ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Student name-4(Enrollment-4)",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "   ",
+                "font_name": "Gabriola",
+                "font_size": 28.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Gabriola",
+                "font_size": 28.0,
+                "bold": null,
+                "italic": null,
+                "color": "002060"
+              }
+            ]
+          },
+          {
+            "text": "        ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "        ",
+                "font_name": "Gabriola",
+                "font_size": 28.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "TextBox 7",
+        "type": "TEXT_BOX (17)",
+        "left": 4572000,
+        "top": 2225040,
+        "width": 4914265,
+        "height": 953135,
+        "paragraphs": [
+          {
+            "text": "    Supervised by:",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "    ",
+                "font_name": "Gabriola",
+                "font_size": 28.0,
+                "bold": true,
+                "italic": null,
+                "color": "002060"
+              },
+              {
+                "text": "Supervised by:",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": true,
+                "italic": null,
+                "color": "002060"
+              }
+            ]
+          },
+          {
+            "text": "    Prof. XYZ or Dr. XYZ     ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "    ",
+                "font_name": "Gabriola",
+                "font_size": 28.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Prof. XYZ or Dr. XYZ",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "    ",
+                "font_name": "Calibri",
+                "font_size": 28.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 2,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611304,
+        "top": 1052736,
+        "width": 5184576,
+        "height": 725470,
+        "paragraphs": [
+          {
+            "text": "OUTLINE",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "OUTLINE",
+                "font_name": "Calibri",
+                "font_size": 35.55,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 755650,
+        "top": 1844675,
+        "width": 8334868,
+        "height": 4804410,
+        "paragraphs": [
+          {
+            "text": " Introduction",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Introduction",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Objectives of Project Work",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Objectives of Project Work",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Literature Survey",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Literature Survey",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Problem Statement",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Problem Statement",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Implementation with Results",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Implementation with Results",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Exploratory Data Analysis",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Exploratory Data Analysis",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Conclusion & Future Work",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "C",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "onclusion & Future Work",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Reference",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Reference",
+                "font_name": "Calibri",
+                "font_size": 24.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "2",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 3,
+    "layout": "Two Content",
+    "shapes": [
+      {
+        "name": "Title 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 539496,
+        "top": 692531,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Introduction[15]",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Introduction",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "[15]",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 2286000,
+        "width": 3566160,
+        "height": 4023360,
+        "paragraphs": [
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 7",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "3",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Title 1",
+        "type": "TEXT_BOX (17)",
+        "left": 1188084,
+        "top": 548928,
+        "width": 6347713,
+        "height": 949672,
+        "paragraphs": [
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Text Box 2",
+        "type": "TEXT_BOX (17)",
+        "left": 537242,
+        "top": 1921654,
+        "width": 8321008,
+        "height": 4401205,
+        "paragraphs": [
+          {
+            "text": "Global malls and stores chains and the increase in the number of electronic payment customers, the competition among the rival organizations is becoming serious day by day.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Global malls and stores chains and the increase in the number of electronic payment customers, the competition among the rival organizations is becoming serious day by day.",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "Each organization is trying to attract more customers using personalized and short-time offers which makes the prediction of future volume of sales of every item an important asset in the planning and inventory management of every organization, transport service, etc.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Each organization is trying to attract more customers using personalized and short-time offers which makes the prediction of future volume of sales of every item an important asset in the planning and inventory management of every organization, transport service, etc.",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "Due to the cheap availability of computing and storage, it has become possible to use sophisticated machine learning algorithms for this purpose. In this paper, we are providing forecast for the sales data of big mart in a number of big mart stores across various location types which based on the historical data of sales volume.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Due to the cheap availability of computing and storage, it has become possible to use sophisticated machine learning algorithms for this purpose. In this paper, we are providing forecast for the sales data of big mart in a number of big mart stores across various location types which based on the historical data of sales volume.",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 4,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Slide Number Placeholder 22",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "4",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Title 1",
+        "type": "TEXT_BOX (17)",
+        "left": 609600,
+        "top": 980440,
+        "width": 6951980,
+        "height": 949960,
+        "paragraphs": [
+          {
+            "text": "Objectives of PROJECT Work",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Objectives of PROJECT Work",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Text Box 2",
+        "type": "TEXT_BOX (17)",
+        "left": 612271,
+        "top": 2348880,
+        "width": 7724140,
+        "height": 3170099,
+        "paragraphs": [
+          {
+            "text": "The goal is to create a prediction model and determine each product's sales at a certain store.  ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "The goal is to create a prediction model and determine each product's sales at a certain store. ",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "The objective is to build a prediction model and determine each product's sales in a certain retailer. This model will be used by Big Mart to comprehend the characteristics of the products and the establishments that are essential to boosting sales.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "The objective is to build a prediction model and determine each product's sales in a certain retailer. This model will be used by Big Mart to comprehend the characteristics of the products and the establishments that are essential to boosting sales.",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "Apart from this, the model will also anticipate the time period during which the prediction will occur.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Apart from this, the model will also anticipate the time period during which the prediction will occur.",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 5,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 539750,
+        "top": 45085,
+        "width": 4896346,
+        "height": 431587,
+        "paragraphs": [
+          {
+            "text": "Literature Review ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Literature ",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Review",
+                "font_name": "Calibri",
+                "font_size": 31.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": null,
+                "font_size": 32.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 4",
+        "type": "None",
+        "left": 512738,
+        "top": 1988840,
+        "width": 7615262,
+        "height": 5330841
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "5",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Table 7",
+        "type": "TABLE (19)",
+        "left": 395605,
+        "top": 404664,
+        "width": 8420735,
+        "height": 6340361,
+        "table": [
+          [
+            "Sr. No.",
+            "Paper Title",
+            "Journal with Year",
+            "Methods",
+            "Outcomes"
+          ],
+          [
+            "1",
+            "Sales prediction model for big mart[2]",
+            "IEEE, 2020\n(journal)",
+            "Random forest,\nlinear regression",
+            "Using associated data processing and modelling algorithm, sales prediction in big mart shopping centre at different location."
+          ],
+          [
+            "2",
+            "Big mart sale prediction using Machine learning [5]",
+            "IEEE, 2021\n(journal)",
+            "linear regression,\nRandom forest,\nXG boost",
+            "Using smart sale forecasting program, vast volumes of data is managed for business organization."
+          ],
+          [
+            "3",
+            "Machine Learning Application for Black Friday Sales Prediction Framework[6]",
+            "IEEE, 2021\n(journal)",
+            "Random Forest, XGBoost",
+            "Use Exploratory data analysis is find interesting trends from\nthe dataset and the amount that a customer is likely to spend on\nnext “Black Friday” sale."
+          ],
+          [
+            "4",
+            "Prediction Analysis Sales for Corporate Services Telecommunications Company using Gradient Boost Algorithm[8]",
+            "IEEE, 2020\n(journal)",
+            "Gradient Boost",
+            "Comparison between four machine learning approaches used in B2B sales to determine the type of prediction analysis that is reliable and accurate."
+          ],
+          [
+            "5",
+            "A Multi-Task Prediction Framework for Sales Prediction[9]",
+            "IEEE, 2021\n(journal)",
+            "Gradient Boost, Linear Regression",
+            "A multi-task prediction task\nwhich applies the seller prediction to guide the sales volume\nprediction."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 6,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 609599,
+        "top": 980728,
+        "width": 6347713,
+        "height": 949672,
+        "paragraphs": [
+          {
+            "text": "Research Gap[1][3]",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Research Gap",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "[1][3]",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 1000100,
+        "top": 2143116,
+        "width": 7290055,
+        "height": 2870060,
+        "paragraphs": [
+          {
+            "text": " Difficulty in determining the type of prediction analysis that is accurate.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Difficulty in determining the type of prediction analysis that is accurate.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " The other factor that caught our attention was the absence of any sales predictions that used the ARIMA model. We are implementing this model in order to obtain a time series graph that will allow us to even forecast when the prediction will arrive.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " The other factor that caught our attention was the absence of any sales predictions that used the ARIMA model. We are implementing this model in order to obtain a time series graph that will allow us to even forecast when the prediction will arrive.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "6",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 7,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 609599,
+        "top": 980728,
+        "width": 6347713,
+        "height": 949672,
+        "paragraphs": [
+          {
+            "text": "Problem Statement",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Problem Statement",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 611560,
+        "top": 2132732,
+        "width": 7806631,
+        "height": 4023360,
+        "paragraphs": [
+          {
+            "text": " Regression is an important machine learning model for these kinds of problems. Predicting sales of a company needs time series data of that company and based on that data the model can predict the future sales of that company or product.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Regression ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "is an important machine learning model for these kinds of problems. Predicting sales of a company needs time series data of that company and based on that data the model can predict the future sales of that company or product.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " So, in this research project we will analyze the time series sales data of a company and will predict the sales of the company for the coming quarter and for a specific product. For this kind of project of sales predict, we will apply the XG Boost algorithm and evaluate the result based on the training, testing and validation set of the data.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " So, in this research project we will analyze the time series sales data of a company and will predict the sales of the company for the coming quarter and for a specific product. For this kind of project of sales predict, we will apply the XG Boost algorithm and evaluate the result based on the training, testing and validation set of the data.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "7",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 8,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 808183,
+        "top": 620688,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "TOOLS AND TECHNOLOGY",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "TOOLS AND TECHNOLOGY",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 899592,
+        "top": 1914035,
+        "width": 7290055,
+        "height": 4536544,
+        "paragraphs": [
+          {
+            "text": "Software Requirements :",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Software Requirements :",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Anaconda Navigator ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Anaconda Navigator ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Jupyter Notebook (Python 3.3 or greater, or Python 2.7)",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Jupyter",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " Notebook (",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Python 3.3 or greater, or Python 2.7)",
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Machine Learning Library :",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Machine Learning Library :",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "NumPy ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "NumPy",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "SciPy ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "SciPy",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Pandas",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Pandas",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Matplotlib  ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Matplotlib",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "  ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "8",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 9,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Arima model[11]",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Arima",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " model",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "[11]",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 1988840,
+        "width": 7290055,
+        "height": 4320520,
+        "paragraphs": [
+          {
+            "text": " ARIMA, is a statistical analysis model that uses time series data to either better understand the data set or to predict future trends.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "ARIMA, is a statistical analysis model that uses ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "time series",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " data to either better understand the data set or to ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "predict future trends",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ".",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " A time series plot is a graph that displays data collected in a time sequence from any process. The chart can be used to determine how the data is trending over time and if the data points are random or exhibit any pattern.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " A ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "time series plot ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "is a graph that displays data collected in a time sequence from any process. The chart can be used to determine how the data is trending over time and if the data points are random or exhibit any pattern.",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Components of time series graph :",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Components",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " of time series graph :",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "- Secular trend, which describe the movement along the term",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "- ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Secular trend",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", which describe the movement along the term",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " - Seasonal variations, which represent seasonal changes",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " - ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Seasonal variations",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", which represent seasonal changes",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "- Cyclical fluctuations, which correspond to periodical but not seasonal variations",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "- ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Cyclical fluctuations",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", which correspond to periodical but not seasonal variations",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "- Irregular variations, which are other nonrandom sources of variations of series.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "- ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Irregular variations",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", which are other ",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "nonrandom",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " sources of variations of series.",
+                "font_name": "Calibri",
+                "font_size": 22.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "9",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 10,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 683568,
+        "top": 590960,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Comparing the R2 Value",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Comparing the R",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "2",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " Value",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "10",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 5",
+        "type": "PLACEHOLDER (14)",
+        "left": 899592,
+        "top": 1628800,
+        "width": 7228408,
+        "height": 4896544,
+        "paragraphs": [
+          {
+            "text": "XGBOOST Regression",
+            "level": 1,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "XGBOOST Regression",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "Linear Regression",
+            "level": 1,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Linear Regression",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 1,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "Random Forest",
+            "level": 1,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Random Forest",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Picture 15",
+        "type": "PICTURE (13)",
+        "left": 1763688,
+        "top": 2034258,
+        "width": 4854786,
+        "height": 1296144
+      },
+      {
+        "name": "Picture 972",
+        "type": "PICTURE (13)",
+        "left": 1763688,
+        "top": 3849322,
+        "width": 3384376,
+        "height": 972108
+      },
+      {
+        "name": "Picture 19",
+        "type": "PICTURE (13)",
+        "left": 2051720,
+        "top": 5599752,
+        "width": 3024336,
+        "height": 1008112
+      }
+    ]
+  },
+  {
+    "slide_num": 11,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 683568,
+        "top": 1340768,
+        "width": 7344816,
+        "height": 4824536,
+        "paragraphs": [
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "ARIMA Model",
+            "level": 1,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "ARIMA Model",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "Observation from the previous implementations :",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Observation from the previous implementations :",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Here, the R2 value of ARIMA model is around 0.86, which is the highest.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Here, the R2 value of ARIMA model is around 0.86, which is the highest.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " Hence, ARIMA Model is most accurate out of all the three algorithms to work on the predictive analytics.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " Hence, ARIMA Model is most accurate out of all the three algorithms to work on the predictive analytics.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "11",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)",
+        "left": 1763688,
+        "top": 2204864,
+        "width": 2664296,
+        "height": 1152128
+      }
+    ]
+  },
+  {
+    "slide_num": 12,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 683641,
+        "top": 764921,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Data Set Description[5]",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Data Set Description",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "[5]",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "12",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 15",
+        "type": "TABLE (19)",
+        "left": 554547,
+        "top": 1844824,
+        "width": 8320116,
+        "height": 4681220,
+        "table": [
+          [
+            "NAME",
+            "TYPE",
+            "DESCRIPTION"
+          ],
+          [
+            "Item_identifier",
+            "Numeric",
+            "It is the unique product Id number."
+          ],
+          [
+            "Item_Weight",
+            "Numeric",
+            "It will include the product's weight"
+          ],
+          [
+            "Item_Fat_Content",
+            "categorical",
+            "It will mean whether the item is low in fat or not"
+          ],
+          [
+            "Item_Visibility",
+            "Numeric",
+            "The percentage of the overall viewing area assigned to the particular item from all items in the shop."
+          ],
+          [
+            "Item_Type",
+            "categorical",
+            "To which group does the commodity belong"
+          ],
+          [
+            "Item_MRP",
+            "Numeric",
+            "The product's price list"
+          ],
+          [
+            "Outlet_Identifier",
+            "Numeric",
+            "unique store ID"
+          ],
+          [
+            "Outlet_Establishment_Year",
+            "Numeric",
+            "The year that the shop first opened"
+          ],
+          [
+            "Outlet_Size",
+            "categorical",
+            "The amount of ground space that the store occupies"
+          ],
+          [
+            "Outlet_Location_Type",
+            "categorical",
+            "The type of city in which the store is located"
+          ],
+          [
+            "Outlet_Type",
+            "categorical",
+            "Whether he outlet is just a grocery or some sort of supermarket"
+          ],
+          [
+            "Item_Outlet_Sales",
+            "Numeric",
+            "Product sales at that specific store. This is the outcome variable that has to be forecast."
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 13,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Project Flow Chart",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Project Flow Chart",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "13",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 4",
+        "type": "PLACEHOLDER (14)",
+        "left": 1079884,
+        "top": 1628800,
+        "width": 6480175,
+        "height": 4320480
+      }
+    ]
+  },
+  {
+    "slide_num": 14,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611505,
+        "top": 981075,
+        "width": 7330440,
+        "height": 1499870,
+        "paragraphs": [
+          {
+            "text": "Implementation with Results[17]\u000b",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Implementation with Results",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "[17]",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Picture 5",
+        "type": "PLACEHOLDER (14)",
+        "left": 1403648,
+        "top": 1772816,
+        "width": 4872034,
+        "height": 2848558
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "14",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "TextBox 5",
+        "type": "TEXT_BOX (17)",
+        "left": 827584,
+        "top": 4621374,
+        "width": 7891240,
+        "height": 2215991,
+        "paragraphs": [
+          {
+            "text": "According to the gathered data, it is gathered information from 10 stores spread across several areas, each of which sold 1559 distinct products.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "According to the gathered data, it is gathered information from 10 stores spread across several areas, each of which sold 1559 distinct products.",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "Various factors important by statistical means like mean, standard deviation, median, count of values and maximum value etc. are shown in Fig.4 for numerical variables of our dataset.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Various factors important by statistical means like mean, standard deviation, median, count of values and maximum value etc. are shown in Fig.4 for numerical variables of our dataset.",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 15,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611251,
+        "top": 764921,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Implementation[17]",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Implementation",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "[17]",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Picture 6",
+        "type": "PLACEHOLDER (14)",
+        "left": 4022565,
+        "top": 1564791,
+        "width": 5121435,
+        "height": 3429024
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "15",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "TextBox 6",
+        "type": "TEXT_BOX (17)",
+        "left": 539552,
+        "top": 1779687,
+        "width": 4248472,
+        "height": 5062924,
+        "paragraphs": [
+          {
+            "text": "Some observations:",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Some observations:",
+                "font_name": "Calibri",
+                "font_size": 20.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Item_Visibility has a min value of zero. This makes no practical sense because when a product is being sold in a store, the visibility cannot be 0.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Item_Visibility",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " has a min value of zero. This makes no practical sense because when a product is being sold in a store, the visibility cannot be 0.",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "Outlet_Establishment_Years vary from 1985 to 2009. The values might not be apt in this form. Rather, if we can convert them to how old the particular store is, it should have a better impact on sales.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Outlet_Establishment_Years",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " vary from 1985 to 2009. The values might not be apt in this form. Rather, if we can convert them to how old the particular store is, it should have a better impact on sales.",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "The lower ‘count’ of Item_Weight and Outlet_Size confirms the findings from the missing value check.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "The lower ‘count’ of ",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Item_Weight",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " and ",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Outlet_Size",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " confirms the findings from the missing value check.",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 16,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 683568,
+        "top": 1196752,
+        "width": 7992888,
+        "height": 5040560,
+        "paragraphs": [
+          {
+            "text": "Results of ARIMA Model and Time Series Graph :",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Results of ARIMA Model and Time Series Graph :",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "16",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)",
+        "left": 2195736,
+        "top": 1495863,
+        "width": 4176464,
+        "height": 2293177
+      },
+      {
+        "name": "Rectangle 5",
+        "type": "AUTO_SHAPE (1)",
+        "left": 291821,
+        "top": 3703633,
+        "width": 8384635,
+        "height": 3844450,
+        "paragraphs": [
+          {
+            "text": "In order to construct a sales prediction model, we have applied the most efficient way of predicting future sales at large supermarkets, which sell a wide variety of products, including dairy products. But there are 2 axes to consider while making the forecast: sales years and sales through retail outlets, respectively. To begin making the final graph prediction, we needed to include the years we were predicting for.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "In order to construct a sales prediction model, we have applied the most efficient way of predicting future sales at large supermarkets, which sell a wide variety of products, including dairy products. But there are 2 axes to consider while making the forecast: sales years and sales through retail outlets, respectively. To begin making the final graph prediction, we needed to include the years we were predicting for.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": "000000"
+              }
+            ]
+          },
+          {
+            "text": "For example, the image shows that we predicted sales between 2022 and 2024, so we must adjust the mathematical calculation (which we had placed at 730) so that it fits within the graph. Therefore, our model allows us to forecast product sales in accordance with the years managed by configuring the computation.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "For example, the image shows that we predicted sales between ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": "000000"
+              },
+              {
+                "text": "2022 and 2024, so we must adjust the mathematical calculation (which we had placed at 730) so that it fits within the graph. Therefore, our model allows us to forecast product sales in ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": "000000"
+              },
+              {
+                "text": "accordance with the years managed by configuring the computation.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "\u000b.\u000b",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": ".",
+                "font_name": "Calibri",
+                "font_size": 19.0,
+                "bold": null,
+                "italic": null,
+                "color": "000000"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 17,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 683641,
+        "top": 692531,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Exploratory Data Analysis[5]",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Exploratory Data Analysis",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "[5]",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "17",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 5",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 1988840,
+        "width": 7290055,
+        "height": 4320520,
+        "paragraphs": [
+          {
+            "text": "1. \tItem_Weight : Mean is greater(greater than 0.3) because missing values are filled in using the mean and the majority of the items have values of 0, indicating that there is not enough data for those items.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "1. \t",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Item_Weight",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " : Mean is greater(greater than 0.3) because missing values are filled in using the mean and the majority of the items have values of 0, indicating that there is not enough data for those items.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Picture 3",
+        "type": "PICTURE (13)",
+        "left": 2000232,
+        "top": 3357562,
+        "width": 5143536,
+        "height": 3222352
+      }
+    ]
+  },
+  {
+    "slide_num": 18,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611251,
+        "top": 764921,
+        "width": 6675393,
+        "height": 663815,
+        "paragraphs": [
+          {
+            "text": "  ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "  ",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "18",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 5",
+        "type": "PLACEHOLDER (14)",
+        "left": 785786,
+        "top": 1571612,
+        "width": 7272365,
+        "height": 4737748,
+        "paragraphs": [
+          {
+            "text": "2. \tItem_Visibility : Left-skewed values are noted, and in order to prevent zeros, we filled all of the zeros with the mean, causing the peak to be shown at the mean. ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "2. \t",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Item_Visibility",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " : Left-skewed values are noted, and in order to prevent zeros, we filled all of the zeros with the mean, causing the peak to be shown at the mean. ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 1714480,
+        "top": 2786058,
+        "width": 5781754,
+        "height": 3357586
+      }
+    ]
+  },
+  {
+    "slide_num": 19,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 5875606,
+        "height": 486330,
+        "paragraphs": [
+          {
+            "text": "   ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "   ",
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 785786,
+        "top": 1428736,
+        "width": 7272365,
+        "height": 4880624,
+        "paragraphs": [
+          {
+            "text": "3. \tOutlet_Establishment_Year : With the exception of one, which had more openings in 1985, all of the outlets were established in an equal proportion.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "3. \t",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Outlet_Establishment_Year",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " : With the exception of one, which had more openings in 1985, all of the outlets were established in an equal proportion.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "19",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 1714480,
+        "top": 2714620,
+        "width": 5758074,
+        "height": 3500462
+      }
+    ]
+  },
+  {
+    "slide_num": 20,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 6089920,
+        "height": 414892,
+        "paragraphs": [
+          {
+            "text": "  ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "  ",
+                "font_name": null,
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 785786,
+        "top": 1500174,
+        "width": 7272365,
+        "height": 4809186,
+        "paragraphs": [
+          {
+            "text": "4. \tItem_Fat_Content : The majority of items are low-fat, and just a small number are non-edible.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "4. \t",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Item_Fat_Content",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " : The majority of items are low-fat, and just a small number are non-edible.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "20",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 1500166,
+        "top": 2571744,
+        "width": 6464159,
+        "height": 3714776
+      }
+    ]
+  },
+  {
+    "slide_num": 21,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 626986,
+        "top": 1050882,
+        "width": 8348386,
+        "height": 737617,
+        "paragraphs": [
+          {
+            "text": "Correlation between target and features[17]",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Correlation between target and features",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "[17]",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "21",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 1214414,
+        "top": 2071678,
+        "width": 6370507,
+        "height": 4429156
+      }
+    ]
+  },
+  {
+    "slide_num": 22,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 8161622,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Observations from the heating map:",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Observations from the heating map:",
+                "font_name": "Calibri",
+                "font_size": 32.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 2286000,
+        "width": 7290055,
+        "height": 4023360,
+        "paragraphs": [
+          {
+            "text": " It appears that item_Weight and Outlet_Establishment_Year are fairly correlated.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " It appears that ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "item_Weight",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " and ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Outlet_Establishment_Year",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " are fairly correlated.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " As we created the Outlet_Years from the Outlet_Establishment_Year, there is a distinct difference between the two, making the correlation between the two extremely negative. Therefore, when processing the model, we will eliminate the Outlet_Establishment_Year. ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " As we created the ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Outlet_Years",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " from the ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Outlet_Establishment_Year",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", there is a distinct difference between the two, making the correlation between the two extremely negative. Therefore, when processing the model, we will eliminate the ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Outlet_Establishment_Year",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ". ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " The outcome variable, Item_Outlet_Sales, indicates us from its column that Item_MRP is a highly impaction prediction variable. Nothing else has made a significant contribution.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " The outcome variable, ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Item_Outlet_Sales",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", indicates us from its column that ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Item_MRP",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " is a highly impaction prediction variable. Nothing else has made a significant contribution.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "22",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 23,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "23",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Rectangle 1",
+        "type": "AUTO_SHAPE (1)",
+        "left": 1142976,
+        "top": 1857364,
+        "width": 7500990,
+        "height": 400110,
+        "paragraphs": [
+          {
+            "text": "\t",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "\t",
+                "font_name": "Arial",
+                "font_size": 20.0,
+                "bold": false,
+                "italic": false,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Title 1",
+        "type": "TEXT_BOX (17)",
+        "left": 609600,
+        "top": 980440,
+        "width": 7607300,
+        "height": 949960,
+        "paragraphs": [
+          {
+            "text": "Conclusion & Future work ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Conclusion",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " & Future work",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 683568,
+        "top": 1772816,
+        "width": 8064896,
+        "height": 4536504,
+        "paragraphs": [
+          {
+            "text": " The goal of this project is to produce accurate sales forecasts for all items, so that businesses will have a better picture of where they stand and if they need to adjust their marketing tactics to achieve their goals. Additionally, the Arima model uses a time series graph to accurately anticipate future sales. We used the Arima model to forecast product sales over the next two years, and our results indicate that sales will rise steadily throughout that time.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " The goal of this project is to produce accurate sales forecasts for all items, so that businesses will have a better picture of where they stand and if they need to adjust their marketing tactics to achieve their goals. Additionally, the ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Arima",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " model uses a time series graph to accurately anticipate future sales. We used the ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Arima",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " model to forecast product sales over the next two years, and our results indicate that sales will rise steadily throughout that time.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": " We’ve created our project research based as the model is not created to build the model, we always have to make changes in the code to predict the future of any sales according to dataset; however, models make all this work easy as it only takes dataset to perform a final time series graph. Therefore, this project’s ongoing work may involve developing a predictive model that may accept a dataset as input and output forecasts. In addition, our model can only provide predictions for the next year or so. This indicates that trying to predict a product’s monthly sales is a futile endeavour. As a result, this is something that may be taken into account as the project progresses.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": " We’ve created our project research based as the model is not created to build the model, we always have to make changes in the code to predict the future of any sales according to dataset; however, models make all this work easy as it only takes dataset to perform a final time series graph. Therefore, this project’s ongoing work may involve developing a predictive model that may accept a dataset as input and output forecasts. In addition, our model can only provide predictions for the next year or so. This indicates that trying to predict a product’s monthly sales is a futile ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "endeavour",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ". As a result, this is something that may be taken into account as the project progresses.",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          },
+          {
+            "text": "",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 24,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 634502,
+        "top": 845840,
+        "width": 7681914,
+        "height": 1143000,
+        "paragraphs": [
+          {
+            "text": "References",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "References",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "24",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      },
+      {
+        "name": "Text Box 2",
+        "type": "TEXT_BOX (17)",
+        "left": 755577,
+        "top": 1845310,
+        "width": 7704856,
+        "height": 4893647,
+        "paragraphs": [
+          {
+            "text": "Gopalakrishnan, T., Choudhary, R., & Prasad, S. (2018, December). Prediction of Sales Value in Online shopping using Linear Regression. In 2018 4th International Conference on Computing Communication and Automation (ICCCA) (pp. 1-6). IEEE.  ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Gopalakrishnan, T., Choudhary, R., & Prasad, S. (2018, December). Prediction of Sales Value in Online shopping using Linear Regression. In ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "2018 4th International Conference on Computing Communication and Automation (ICCCA)",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": true,
+                "color": null
+              },
+              {
+                "text": " (pp. 1-6). IEEE.  ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Wisesa, O., Adriansyah, A., & Khalaf, O. I. (2020, September). Prediction analysis sales for corporate services telecommunications company using gradient boost algorithm. In 2020 2nd International Conference on Broadband Communications, Wireless Sensors and Powering (BCWSP) (pp. 101-106). IEEE.  ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Wisesa",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", O., ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Adriansyah",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", A., & Khalaf, O. I. (2020, September). Prediction analysis sales for corporate services telecommunications company using gradient boost algorithm. In ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "2020 2nd International Conference on Broadband Communications, Wireless Sensors and Powering (BCWSP)",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": true,
+                "color": null
+              },
+              {
+                "text": " (pp. 101-106). IEEE.",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Ramachandra, H. V., Balaraju, G., Rajashekar, A., & Patil, H. (2021, March). Machine Learning Application for Black Friday Sales Prediction Framework. In 2021 International Conference on Emerging Smart Computing and Informatics (ESCI) (pp. 57-61). IEEE.  ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Ramachandra, H. V., ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Balaraju",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": ", G., Rajashekar, A., & Patil, H. (2021, March). Machine Learning Application for Black Friday Sales Prediction Framework. In ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "2021 International Conference on Emerging Smart Computing and Informatics (ESCI)",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": true,
+                "color": null
+              },
+              {
+                "text": " (pp. 57-61). IEEE. ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Li, Y., Zhu, P., & Qin, S. (2017, October). Optimization of ticket purchasing strategy based on machine learning. In 2017 IEEE 3rd Information Technology and Mechatronics Engineering Conference (ITOEC) (pp. 1230-1234). IEEE.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Li, Y., Zhu, P., & Qin, S. (2017, October). Optimization of ticket purchasing strategy based on machine learning. In ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "2017 IEEE 3rd Information Technology and Mechatronics Engineering Conference (ITOEC)",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": true,
+                "color": null
+              },
+              {
+                "text": " (pp. 1230-1234). IEEE.",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Kumar, N., & Choudhari, S. BigMart Sale Prediction using Machine Learning.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Kumar, N., & Choudhari, S. ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "BigMart",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " Sale Prediction using Machine Learning.",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Chavan, S., Panchal, S., Sawant, T., & Shinde, J. (2020). Predicting Online Product Sales using Machine Learning.",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Chavan, S., Panchal, S., Sawant, T., & Shinde, J. (2020). Predicting Online Product Sales using Machine Learning.",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "DASARI, A. K., & RAMASUBBAIAH, B. BIGMART SALES USING MACHINE LEARNING WITH DATA ANALYSIS. ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "DASARI, A. K., & RAMASUBBAIAH, B. BIGMART SALES USING MACHINE LEARNING WITH DATA ANALYSIS. ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Parmar, I., Agarwal, N., Saxena, S., Arora, R., Gupta, S., Dhiman, H., & Chouhan, L. (2018, December). Stock market prediction using machine learning. In 2018 first international conference on secure cyber computing and communication (ICSCCC) (pp. 574-576). IEEE. ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Parmar, I., Agarwal, N., Saxena, S., Arora, R., Gupta, S., Dhiman, H., & Chouhan, L. (2018, December). Stock market prediction using machine learning. In ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "2018 first international conference on secure cyber computing and communication (ICSCCC)",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": true,
+                "color": null
+              },
+              {
+                "text": " (pp. 574-576). IEEE. ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Coppola, D. (2019). Prediction model for drinking water network failures (Doctoral dissertation, Politecnico di Torino).  ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Coppola, D. (2019). ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Prediction model for drinking water network failures",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": true,
+                "color": null
+              },
+              {
+                "text": " (Doctoral dissertation, ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "Politecnico",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " di Torino).  ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "Nassif, A. B. (2016, December). Short term power demand prediction using stochastic gradient boosting. In 2016 5th International Conference on Electronic Devices, Systems and Applications (ICEDSA) (pp. 1-4). IEEE. ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Nassif, A. B. (2016, December). Short term power demand prediction using stochastic gradient boosting. In ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "2016 5th International Conference on Electronic Devices, Systems and Applications (ICEDSA)",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": true,
+                "color": null
+              },
+              {
+                "text": " (pp. 1-4). IEEE. ",
+                "font_name": "Calibri",
+                "font_size": 13.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 25,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611251,
+        "top": 692531,
+        "width": 7290054,
+        "height": 1499616,
+        "paragraphs": [
+          {
+            "text": "Web References ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Web References",
+                "font_name": "Calibri",
+                "font_size": 36.0,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 2286000,
+        "width": 7290055,
+        "height": 4023360,
+        "paragraphs": [
+          {
+            "text": "11.  https://www.tensorflow.org/ ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "11.  ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "https://www.tensorflow.org/",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "12.  https://matplotlib.org/ ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "12.  ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "https://matplotlib.org/",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "13.  https://pandas.pydata.org/ ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "13.  ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "https://pandas.pydata.org/",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "14.  https://www.youtube.com/watch?v=PD5QguzEdNs ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "14.  ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "https://www.youtube.com/watch?v=PD5QguzEdNs",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "15.  https://www.lucidchart.com/ ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "15.  ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "https://www.lucidchart.com/",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "16.  https://apps.diagrams.net ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "16.  ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "https://apps.diagrams.net",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "17. https://jupyter.org/ ",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "17. ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "https://jupyter.org/",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": " ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              }
+            ]
+          },
+          {
+            "text": "18. https://www.kaggle.com/code/hiralmshah/bigmart-sales-prediction/notebook",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "18. ",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": null
+              },
+              {
+                "text": "https://www.kaggle.com/code/hiralmshah/bigmart-sales-prediction/notebook",
+                "font_name": "Calibri",
+                "font_size": null,
+                "bold": null,
+                "italic": null,
+                "color": "93A303"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "25",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "slide_num": 26,
+    "layout": "Title and Content",
+    "shapes": [
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 1547664,
+        "top": 1052736,
+        "width": 6313512,
+        "height": 4585712,
+        "paragraphs": [
+          {
+            "text": "Thank you",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": [
+              {
+                "text": "Thank you",
+                "font_name": "Arial",
+                "font_size": 96.0,
+                "bold": true,
+                "italic": null,
+                "color": null
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "paragraphs": [
+          {
+            "text": "26",
+            "level": 0,
+            "font_name": null,
+            "font_size": null,
+            "bold": null,
+            "runs": []
+          }
+        ]
+      }
+    ]
+  }
+]

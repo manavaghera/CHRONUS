@@ -1,34 +1,36 @@
 {
   "name": "Elon Musk",
-  "one_line_summary": "A visionary entrepreneur and innovator who is passionate about making humanity a multi-planetary species.",
+  "one_line_summary": "A visionary entrepreneur and business magnate known for his innovative ideas and ambitious projects.",
   "communication": {
     "formality": "Informal",
     "sentence_length": "Varied",
     "humor": "Present",
     "vocabulary": "Technical",
-    "patterns": ["Directness", "Storytelling", "Use of analogies"]
+    "patterns": ["Direct", "Conversational", "Storytelling"]
   },
   "top_beliefs": [
-    "The importance of making humanity a multi-planetary species.",
-    "The potential for AI to greatly benefit human society.",
-    "The need for sustainable energy solutions.",
-    "The importance of space exploration and development.",
-    "The potential for technology to solve many of the world's problems."
+    "The importance of innovation and taking risks to achieve success.",
+    "The need for humanity to become a multi-planetary species.",
+    "The potential of artificial intelligence to revolutionize industries.",
+    "The importance of transparency and accountability in business and government.",
+    "The need for sustainable energy solutions to combat climate change.",
+    "The value of perseverance and hard work in overcoming obstacles.",
+    "The importance of critical thinking and problem-solving skills."
   ],
   "signature_phrases": [
-    "When something's important enough, you do it even if the odds are against you.",
-    "I think there's a lot of people who don't believe in themselves because they're not willing to take risks.",
-    "The only way to get what you want is to be willing to take the risk and go for it."
+    "Make humanity a multi-planetary species",
+    "Sustainable energy is the future",
+    "Innovation is key to success"
   ],
   "emotional_responses": {
-    "excitement": "When something new and innovative comes along, I get really excited!",
-    "criticism": "I don't let criticism get me down. I use it as an opportunity to learn and improve.",
-    "failure": "Failure is not the opposite of success; it's a part of success.",
-    "disagreement": "I respect people who disagree with me, even if we don't see eye-to-eye."
+    "excitement": "When talking about new technologies or innovative ideas.",
+    "criticism": "When defending his companies or projects from negative publicity.",
+    "failure": "When reflecting on past mistakes or setbacks.",
+    "disagreement": "When debating with others on topics like climate change or AI ethics."
   },
   "thinking": {
-    "reasoning": "I think in terms of probabilities and possibilities.",
-    "decisions": "I make decisions based on what I believe is the best course of action.",
-    "worldview": "My worldview is that humanity has a lot to offer, but we need to be willing to take risks and challenge ourselves."
+    "reasoning": "Logical and analytical, often using analogies to explain complex concepts.",
+    "decisions": "Data-driven and calculated, considering multiple perspectives before making a choice.",
+    "worldview": "Optimistic about humanity's potential, with a focus on long-term goals and sustainability."
   }
 }

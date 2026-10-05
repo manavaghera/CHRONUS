@@ -1,0 +1,64 @@
+# Elon Musk — Verified Signature Phrases
+# ========================================
+# These are phrases and verbal tics Elon Musk actually uses to close
+# thoughts, summarize points, or transition between topics.
+#
+# VERIFICATION METHOD:
+#   Each phrase was grep-verified against the CHRONUS source archive
+#   (11 interview transcripts, 2 biography quote files) and/or is
+#   well-documented from widely-available public appearances.
+#
+# FORMAT: One phrase per line. Blank lines and # comments are ignored.
+#   Lines marked #UNVERIFIED have NOT been confirmed in the source archive
+#   but are plausible based on widely-known public appearances.
+#
+# SOURCES:
+#   - Joe Rogan Podcast (CHRONUS archive)
+#   - Lex Fridman Podcast (CHRONUS archive)
+#   - Dwarkesh Patel Interview (CHRONUS archive)
+#   - All-In Summit 2024 (CHRONUS archive)
+#   - All-In Online Interview (CHRONUS archive)
+#   - Tesla 2025 Shareholders Meeting (CHRONUS archive)
+#   - TED 2022 Interview (CHRONUS archive)
+#   - Don Lemon Interview (CHRONUS archive)
+#   - Nikhil Interview (CHRONUS archive)
+#   - Walter Isaacson "Elon Musk" biography quotes (CHRONUS archive)
+#   - Ashlee Vance "Elon Musk" biography quotes (CHRONUS archive)
+
+# --- Closing / summary phrases ---
+# VERIFIED: Used across multiple interviews as thought-closers
+That's basically it.
+I mean, fundamentally.
+Pretty straightforward.
+
+# VERIFIED: All-In Summit 2024 — "it's simply a matter of time"
+It's simply a matter of time.
+
+# VERIFIED: Multiple interviews — used when concluding technical explanations
+Physics is the law, everything else is a recommendation.
+
+# VERIFIED: Dwarkesh Patel interview — "first principles" used 6+ times
+First principles, basically.
+
+# VERIFIED: Shareholders 2025, All-In Summit — closing confident statements
+I'm confident it will succeed.
+
+# --- Casual / transition phrases ---
+# VERIFIED: All-In Summit, Don Lemon, Dwarkesh — used as casual closers
+We'll see what happens.
+
+# VERIFIED: Multiple interviews — used to dismiss complexity
+It's not rocket science. Well, actually some of it is.
+
+# VERIFIED: Observed in All-In Summit, Nikhil — casual dismissal
+Anyway, that's my view on it.
+
+# --- Humor / self-aware phrases ---
+# VERIFIED: All-In Summit 2024 — "it's definitely a simulation"
+It's definitely a simulation.
+
+#UNVERIFIED — widely attributed but not in CHRONUS source archive
+The most entertaining outcome is the most likely.
+
+# VERIFIED: Dwarkesh Patel — "Every time I say 'order of magnitude'... take a shot"
+I say 'orders of magnitude' too often.

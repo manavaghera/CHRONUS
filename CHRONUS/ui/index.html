@@ -6,23 +6,37 @@
 <title>CHRONUS - Elon Musk AI</title>
 <style>
   *{margin:0;padding:0;box-sizing:border-box}
-  :root{--bg:#0a0a0a;--surface:#141414;--border:#222;--accent:#1d9bf0;--text:#e7e9ea;--muted:#71767b;--elon:#1a1a2e}
+  :root{--bg:#0a0a0a;--surface:#141414;--border:#222;--accent:#1d9bf0;--text:#e7e9ea;--muted:#71767b;--elon:#1a1a2e;--high:#00c853;--medium:#ffb300;--low:#ff5252}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);height:100vh;display:flex;flex-direction:column}
-  header{background:var(--surface);border-bottom:1px solid var(--border);padding:16px 20px;display:flex;align-items:center;gap:12px}
+  header{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
   header h1{font-size:20px;font-weight:700;letter-spacing:-0.5px}
   header .tag{background:var(--accent);color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;font-weight:600}
   header .status{margin-left:auto;font-size:12px;color:var(--muted)}
   header .status .dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px}
-  header .status .dot.on{background:#00c853}
+  header .status .dot.on{background:var(--high)}
   header .status .dot.off{background:#ff1744}
+  .modes{display:flex;border:1px solid var(--border);border-radius:16px;overflow:hidden;font-size:12px}
+  .modes button{background:none;border:none;color:var(--muted);padding:5px 12px;cursor:pointer}
+  .modes button.active{background:var(--accent);color:#fff}
+  .disclaimer{background:#1c1606;border-bottom:1px solid #3a2e0a;color:#e0c068;font-size:12px;padding:6px 20px;text-align:center}
   #chat{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:16px}
-  .msg{max-width:80%;padding:12px 16px;border-radius:16px;line-height:1.5;font-size:15px;word-wrap:break-word}
+  .msg{max-width:80%;padding:12px 16px;border-radius:16px;line-height:1.5;font-size:15px;word-wrap:break-word;white-space:pre-wrap}
   .msg.user{align-self:flex-end;background:var(--accent);color:#fff;border-bottom-right-radius:4px}
   .msg.elon{align-self:flex-start;background:var(--elon);border:1px solid var(--border);border-bottom-left-radius:4px}
-  .msg.elon .name{font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px}
+  .msg.elon .name{font-size:12px;font-weight:700;color:var(--accent);margin-bottom:4px;display:flex;gap:8px;align-items:center;flex-wrap:wrap;white-space:normal}
+  .badge{font-size:10px;font-weight:600;padding:1px 7px;border-radius:8px;border:1px solid var(--border);color:var(--muted)}
+  .badge.high{color:var(--high);border-color:var(--high)}
+  .badge.medium{color:var(--medium);border-color:var(--medium)}
+  .badge.low{color:var(--low);border-color:var(--low)}
   .msg.error{align-self:center;background:#2a1015;border:1px solid #ff1744;color:#ff8a80;font-size:13px}
-  .sources{margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:11px;color:var(--muted)}
-  .sources span{display:inline-block;margin-right:8px}
+  details.sources{margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:12px;color:var(--muted);white-space:normal}
+  details.sources summary{cursor:pointer}
+  .src{margin-top:8px}
+  .src .head{display:flex;gap:6px;align-items:center;flex-wrap:wrap;color:var(--text)}
+  .src .voice{font-size:10px;padding:0 6px;border-radius:6px;background:#22223a}
+  .src .voice.third_party{background:#3a2a10;color:#e0c068}
+  .src .voice.synthesized{background:#3a1020;color:#ff9ab0}
+  .src blockquote{margin:4px 0 0 0;padding-left:8px;border-left:2px solid var(--border);font-style:italic}
   .typing{align-self:flex-start;padding:12px 16px;background:var(--elon);border:1px solid var(--border);border-radius:16px;border-bottom-left-radius:4px}
   .typing .dots{display:flex;gap:4px}
   .typing .dots span{width:6px;height:6px;background:var(--muted);border-radius:50%;animation:bounce .6s infinite alternate}
@@ -30,10 +44,10 @@
   .typing .dots span:nth-child(3){animation-delay:.4s}
   @keyframes bounce{to{opacity:.3;transform:translateY(-4px)}}
   #input-bar{background:var(--surface);border-top:1px solid var(--border);padding:16px 20px;display:flex;gap:12px;align-items:center}
-  #input-bar input{flex:1;background:var(--bg);border:1px solid var(--border);border-radius:24px;padding:12px 18px;color:var(--text);font-size:15px;outline:none;transition:border .2s}
+  #input-bar input{flex:1;min-width:0;background:var(--bg);border:1px solid var(--border);border-radius:24px;padding:12px 18px;color:var(--text);font-size:15px;outline:none;transition:border .2s}
   #input-bar input:focus{border-color:var(--accent)}
   #input-bar input::placeholder{color:var(--muted)}
-  #input-bar button{background:var(--accent);color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .2s}
+  #input-bar button{background:var(--accent);color:#fff;border:none;border-radius:50%;width:42px;height:42px;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:opacity .2s;flex-shrink:0}
   #input-bar button:disabled{opacity:.4;cursor:default}
   .welcome{text-align:center;color:var(--muted);margin:auto;padding:40px 20px}
   .welcome h2{font-size:28px;color:var(--text);margin-bottom:8px}
@@ -41,18 +55,24 @@
   .welcome .examples{margin-top:24px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
   .welcome .examples button{background:var(--surface);border:1px solid var(--border);color:var(--text);padding:8px 14px;border-radius:20px;font-size:13px;cursor:pointer;transition:border .2s}
   .welcome .examples button:hover{border-color:var(--accent)}
+  @media (max-width:600px){.msg{max-width:92%}#chat{padding:16px}#input-bar{padding:12px 16px}}
 </style>
 </head>
 <body>
 <header>
   <h1>CHRONUS</h1>
   <span class="tag">BETA</span>
+  <div class="modes" role="group" aria-label="Answer mode">
+    <button data-mode="natural" title="AI answers in his voice, built from his own words">His voice</button>
+    <button data-mode="mix_method" title="Only verbatim quotes from the sources, no AI writing">Quotes only</button>
+  </div>
   <div class="status" id="status"><span class="dot off"></span>Connecting...</div>
 </header>
+<div class="disclaimer">AI simulation built from Elon Musk's public interviews, tweets and biographies. Not the real person, and not affiliated with him.</div>
 <div id="chat">
   <div class="welcome" id="welcome">
     <h2>Talk to Elon</h2>
-    <p>RAG-powered simulation from his verified archive. Ask anything.</p>
+    <p>Answers come from his verified archive, with sources you can check. Ask anything.</p>
     <div class="examples">
       <button onclick="ask(this.textContent)">Why Mars?</button>
       <button onclick="ask(this.textContent)">Is AI dangerous?</button>
@@ -63,12 +83,23 @@
   </div>
 </div>
 <div id="input-bar">
-  <input id="q" placeholder="Ask Elon something..." autocomplete="off">
-  <button id="send" onclick="send()">&#9654;</button>
+  <input id="q" placeholder="Ask Elon something..." autocomplete="off" maxlength="1000">
+  <button id="send" onclick="send()" aria-label="Send">&#9654;</button>
 </div>
 <script>
 const chat=document.getElementById("chat"),q=document.getElementById("q"),sendBtn=document.getElementById("send"),statusEl=document.getElementById("status"),welcome=document.getElementById("welcome");
-let busy=false;
+const MODE_LABELS={natural:"His voice (AI)",mix_method:"Verbatim quotes",mix_method_fallback:"Verbatim quotes (AI unavailable)",basic_info:"Profile fact",fallback:"Not enough evidence"};
+const VOICE_LABELS={first_person:"his words",third_party:"written by someone else",synthesized:"synthesized, not a quote"};
+const MAX_HISTORY=10;
+let busy=false,history=[],mode="natural";
+try{mode=localStorage.getItem("chronus_mode")||"natural"}catch{}
+
+function setMode(m){
+  mode=m;try{localStorage.setItem("chronus_mode",m)}catch{}
+  document.querySelectorAll(".modes button").forEach(b=>b.classList.toggle("active",b.dataset.mode===m));
+}
+document.querySelectorAll(".modes button").forEach(b=>b.addEventListener("click",()=>setMode(b.dataset.mode)));
+setMode(mode);
 
 async function checkHealth(){
   try{const r=await fetch("/health");const d=await r.json();
@@ -77,11 +108,27 @@ async function checkHealth(){
 }
 checkHealth();setInterval(checkHealth,30000);
 
+function esc(s){const d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML}
 function addMsg(cls,html){const d=document.createElement("div");d.className="msg "+cls;d.innerHTML=html;chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d}
 function addTyping(){const d=document.createElement("div");d.className="typing";d.innerHTML='<div class="dots"><span></span><span></span><span></span></div>';chat.appendChild(d);chat.scrollTop=chat.scrollHeight;return d}
 function removeEl(el){if(el&&el.parentNode)el.parentNode.removeChild(el)}
-
 function ask(text){q.value=text;send()}
+
+function sourceHtml(s){
+  const match=s.distance==null?"":`<span class="badge" title="Similarity to your question">match ${Math.max(0,Math.round((1-s.distance)*100))}%</span>`;
+  return `<div class="src"><div class="head"><span>${esc(s.citation||s.source_file||"unknown")}</span>`+
+    `<span class="voice ${esc(s.voice)}">${esc(VOICE_LABELS[s.voice]||s.voice||"")}</span>${match}</div>`+
+    `<blockquote>${esc(s.quote||"")}</blockquote></div>`;
+}
+
+function answerHtml(d){
+  let html=`<div class="name">ELON MUSK <span class="badge">${esc(MODE_LABELS[d.mode]||d.mode)}</span>`+
+    `<span class="badge ${esc(d.confidence)}" title="How closely the evidence matches">${esc(d.confidence)} confidence</span></div>${esc(d.answer)}`;
+  if(d.sources&&d.sources.length){
+    html+=`<details class="sources"><summary>Sources (${d.sources.length})</summary>${d.sources.map(sourceHtml).join("")}</details>`;
+  }
+  return html;
+}
 
 async function send(){
   const text=q.value.trim();if(!text||busy)return;
@@ -90,21 +137,23 @@ async function send(){
   addMsg("user",esc(text));
   const typing=addTyping();
   try{
-    const r=await fetch("/chat",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({query:text})});
+    const r=await fetch("/chat",{method:"POST",headers:{"Content-Type":"application/json"},
+      body:JSON.stringify({query:text,mode,history:history.slice(-MAX_HISTORY)})});
     removeEl(typing);
-    if(!r.ok){addMsg("error","Error: "+r.statusText);return}
-    const d=await r.json();
-    let html=`<div class="name">ELON MUSK</div>${esc(d.answer)}`;
-    if(d.sources&&d.sources.length){
-      html+='<div class="sources">'+d.sources.slice(0,3).map(s=>`<span>${esc(s.source_file)}</span>`).join("")+"</div>";
+    if(!r.ok){
+      let detail=r.statusText;
+      try{const e=await r.json();detail=Array.isArray(e.detail)?e.detail.map(x=>x.msg).join("; "):(e.detail||detail)}catch{}
+      addMsg("error","Error: "+esc(detail));return;
     }
-    addMsg("elon",html);
-  }catch(e){removeEl(typing);addMsg("error","Connection failed: "+e.message)}
+    const d=await r.json();
+    addMsg("elon",answerHtml(d));
+    history.push({role:"user",content:text},{role:"assistant",content:d.answer.slice(0,2000)});
+    history=history.slice(-MAX_HISTORY);
+  }catch(e){removeEl(typing);addMsg("error","Connection failed: "+esc(e.message))}
   finally{busy=false;sendBtn.disabled=false;q.focus()}
 }
 
 q.addEventListener("keydown",e=>{if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();send()}});
-function esc(s){const d=document.createElement("div");d.textContent=s;return d.innerHTML}
 q.focus();
 </script>
 </body>

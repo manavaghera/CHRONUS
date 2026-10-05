@@ -1,11 +1,44 @@
-venv/
-.venv/
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# CHRONUS specific
 chroma_db/
-qdrant_storage/
-.env
 *.log
-node_modules/
+*.jsonl
+.obsidian/
+
+# Voice output (large files)
+07-Voice/output/
+
+# Memory unit backups
+04-Memory-Units/*BACKUP*/
+04-Memory-Units/*.bak
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Environment
+.env
+.env.local

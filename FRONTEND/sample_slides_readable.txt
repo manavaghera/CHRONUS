@@ -1,0 +1,313 @@
+
+==================== SAMPLE SLIDE 1 (Title Slide) ====================
+Shape: Picture 6 | Type: PICTURE (13) | Pos: (0, 0, 9144000, 6858000)
+Shape: TextBox 4 | Type: AUTO_SHAPE (1) | Pos: (1161106, 1055024, 6858000, 1169988)
+  P (lvl 0): Your Project title
+Shape: Picture 2 | Type: PICTURE (13) | Pos: (3420110, 116507, 2381250, 628650)
+Shape: Group 26 | Type: GROUP (6) | Pos: (1711007, 1917192, 6308725, 93663)
+Shape: Audio 2 | Type: PICTURE (13) | Pos: (8318500, 6032500, 609600, 609600)
+Shape: Slide Number Placeholder 1 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 1
+Shape: Audio 5 | Type: PICTURE (13) | Pos: (8585200, 6299200, 406400, 406400)
+Shape: TextBox 7 | Type: TEXT_BOX (17) | Pos: (467360, 2225040, 4187190, 2185214)
+  P (lvl 0): Presented  By:
+  P (lvl 0): Student name-1(Enrollment-1)
+  P (lvl 0): Student name-2(Enrollment-2)
+  P (lvl 0): Student name-3(Enrollment-3)
+  P (lvl 0): Student name-4(Enrollment-4)
+Shape: TextBox 7 | Type: TEXT_BOX (17) | Pos: (4572000, 2225040, 4914265, 953135)
+  P (lvl 0): Supervised by:
+  P (lvl 0): Prof. XYZ or Dr. XYZ
+
+==================== SAMPLE SLIDE 2 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (611304, 1052736, 5184576, 725470)
+  P (lvl 0): OUTLINE
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (755650, 1844675, 8334868, 4804410)
+  P (lvl 0): Introduction
+  P (lvl 0): Objectives of Project Work
+  P (lvl 0): Literature Survey
+  P (lvl 0): Problem Statement
+  P (lvl 0): Implementation with Results
+  P (lvl 0): Exploratory Data Analysis
+  P (lvl 0): Conclusion & Future Work
+  P (lvl 0): Reference
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 2
+
+==================== SAMPLE SLIDE 3 (Two Content) ====================
+Shape: Title 3 | Type: PLACEHOLDER (14) | Pos: (539496, 692531, 7290054, 1499616)
+  P (lvl 0): Introduction[15]
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (768096, 2286000, 3566160, 4023360)
+Shape: Slide Number Placeholder 7 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 3
+Shape: Title 1 | Type: TEXT_BOX (17) | Pos: (1188084, 548928, 6347713, 949672)
+Shape: Text Box 2 | Type: TEXT_BOX (17) | Pos: (537242, 1921654, 8321008, 4401205)
+  P (lvl 0): Global malls and stores chains and the increase in the number of electronic payment customers, the competition among the rival organizations is becoming serious day by day.
+  P (lvl 0): Each organization is trying to attract more customers using personalized and short-time offers which makes the prediction of future volume of sales of every item an important asset in the planning and inventory management of every organization, transport service, etc.
+  P (lvl 0): Due to the cheap availability of computing and storage, it has become possible to use sophisticated machine learning algorithms for this purpose. In this paper, we are providing forecast for the sales data of big mart in a number of big mart stores across various location types which based on the historical data of sales volume.
+
+==================== SAMPLE SLIDE 4 (Title and Content) ====================
+Shape: Slide Number Placeholder 22 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 4
+Shape: Title 1 | Type: TEXT_BOX (17) | Pos: (609600, 980440, 6951980, 949960)
+  P (lvl 0): Objectives of PROJECT Work
+Shape: Text Box 2 | Type: TEXT_BOX (17) | Pos: (612271, 2348880, 7724140, 3170099)
+  P (lvl 0): The goal is to create a prediction model and determine each product's sales at a certain store.
+  P (lvl 0): The objective is to build a prediction model and determine each product's sales in a certain retailer. This model will be used by Big Mart to comprehend the characteristics of the products and the establishments that are essential to boosting sales.
+  P (lvl 0): Apart from this, the model will also anticipate the time period during which the prediction will occur.
+
+==================== SAMPLE SLIDE 5 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (539750, 45085, 4896346, 431587)
+  P (lvl 0): Literature Review
+Shape: Content Placeholder 4 | Type: None | Pos: (512738, 1988840, 7615262, 5330841)
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 5
+Shape: Table 7 | Type: TABLE (19) | Pos: (395605, 404664, 8420735, 6340361)
+  TABLE:
+    | Sr. No. | Paper Title | Journal with Year | Methods | Outcomes |
+    | 1 | Sales prediction model for big mart[2] | IEEE, 2020
+(journal) | Random forest,
+linear regression | Using associated data processing and modelling algorithm, sales prediction in big mart shopping centre at different location. |
+    | 2 | Big mart sale prediction using Machine learning [5] | IEEE, 2021
+(journal) | linear regression,
+Random forest,
+XG boost | Using smart sale forecasting program, vast volumes of data is managed for business organization. |
+    | 3 | Machine Learning Application for Black Friday Sales Prediction Framework[6] | IEEE, 2021
+(journal) | Random Forest, XGBoost | Use Exploratory data analysis is find interesting trends from
+the dataset and the amount that a customer is likely to spend on
+next “Black Friday” sale. |
+    | 4 | Prediction Analysis Sales for Corporate Services Telecommunications Company using Gradient Boost Algorithm[8] | IEEE, 2020
+(journal) | Gradient Boost | Comparison between four machine learning approaches used in B2B sales to determine the type of prediction analysis that is reliable and accurate. |
+    | 5 | A Multi-Task Prediction Framework for Sales Prediction[9] | IEEE, 2021
+(journal) | Gradient Boost, Linear Regression | A multi-task prediction task
+which applies the seller prediction to guide the sales volume
+prediction. |
+
+==================== SAMPLE SLIDE 6 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (609599, 980728, 6347713, 949672)
+  P (lvl 0): Research Gap[1][3]
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (1000100, 2143116, 7290055, 2870060)
+  P (lvl 0): Difficulty in determining the type of prediction analysis that is accurate.
+  P (lvl 0): The other factor that caught our attention was the absence of any sales predictions that used the ARIMA model. We are implementing this model in order to obtain a time series graph that will allow us to even forecast when the prediction will arrive.
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 6
+
+==================== SAMPLE SLIDE 7 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (609599, 980728, 6347713, 949672)
+  P (lvl 0): Problem Statement
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (611560, 2132732, 7806631, 4023360)
+  P (lvl 0): Regression is an important machine learning model for these kinds of problems. Predicting sales of a company needs time series data of that company and based on that data the model can predict the future sales of that company or product.
+  P (lvl 0): So, in this research project we will analyze the time series sales data of a company and will predict the sales of the company for the coming quarter and for a specific product. For this kind of project of sales predict, we will apply the XG Boost algorithm and evaluate the result based on the training, testing and validation set of the data.
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 7
+
+==================== SAMPLE SLIDE 8 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (808183, 620688, 7290054, 1499616)
+  P (lvl 0): TOOLS AND TECHNOLOGY
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (899592, 1914035, 7290055, 4536544)
+  P (lvl 0): Software Requirements :
+  P (lvl 0): Anaconda Navigator
+  P (lvl 0): Jupyter Notebook (Python 3.3 or greater, or Python 2.7)
+  P (lvl 0): Machine Learning Library :
+  P (lvl 0): NumPy
+  P (lvl 0): SciPy
+  P (lvl 0): Pandas
+  P (lvl 0): Matplotlib
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 8
+
+==================== SAMPLE SLIDE 9 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (768096, 585216, 7290054, 1499616)
+  P (lvl 0): Arima model[11]
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (768096, 1988840, 7290055, 4320520)
+  P (lvl 0): ARIMA, is a statistical analysis model that uses time series data to either better understand the data set or to predict future trends.
+  P (lvl 0): A time series plot is a graph that displays data collected in a time sequence from any process. The chart can be used to determine how the data is trending over time and if the data points are random or exhibit any pattern.
+  P (lvl 0): Components of time series graph :
+  P (lvl 0): - Secular trend, which describe the movement along the term
+  P (lvl 0): - Seasonal variations, which represent seasonal changes
+  P (lvl 0): - Cyclical fluctuations, which correspond to periodical but not seasonal variations
+  P (lvl 0): - Irregular variations, which are other nonrandom sources of variations of series.
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 9
+
+==================== SAMPLE SLIDE 10 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (683568, 590960, 7290054, 1499616)
+  P (lvl 0): Comparing the R2 Value
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 10
+Shape: Content Placeholder 5 | Type: PLACEHOLDER (14) | Pos: (899592, 1628800, 7228408, 4896544)
+  P (lvl 1): XGBOOST Regression
+  P (lvl 1): Linear Regression
+  P (lvl 1): Random Forest
+Shape: Picture 15 | Type: PICTURE (13) | Pos: (1763688, 2034258, 4854786, 1296144)
+Shape: Picture 972 | Type: PICTURE (13) | Pos: (1763688, 3849322, 3384376, 972108)
+Shape: Picture 19 | Type: PICTURE (13) | Pos: (2051720, 5599752, 3024336, 1008112)
+
+==================== SAMPLE SLIDE 11 (Title and Content) ====================
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (683568, 1340768, 7344816, 4824536)
+  P (lvl 1): ARIMA Model
+  P (lvl 0): Observation from the previous implementations :
+  P (lvl 0): Here, the R2 value of ARIMA model is around 0.86, which is the highest.
+  P (lvl 0): Hence, ARIMA Model is most accurate out of all the three algorithms to work on the predictive analytics.
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 11
+Shape: Picture 4 | Type: PICTURE (13) | Pos: (1763688, 2204864, 2664296, 1152128)
+
+==================== SAMPLE SLIDE 12 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (683641, 764921, 7290054, 1499616)
+  P (lvl 0): Data Set Description[5]
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 12
+Shape: Content Placeholder 15 | Type: TABLE (19) | Pos: (554547, 1844824, 8320116, 4681220)
+  TABLE:
+    | NAME | TYPE | DESCRIPTION |
+    | Item_identifier | Numeric | It is the unique product Id number. |
+    | Item_Weight | Numeric | It will include the product's weight |
+    | Item_Fat_Content | categorical | It will mean whether the item is low in fat or not |
+    | Item_Visibility | Numeric | The percentage of the overall viewing area assigned to the particular item from all items in the shop. |
+    | Item_Type | categorical | To which group does the commodity belong |
+    | Item_MRP | Numeric | The product's price list |
+    | Outlet_Identifier | Numeric | unique store ID |
+    | Outlet_Establishment_Year | Numeric | The year that the shop first opened |
+    | Outlet_Size | categorical | The amount of ground space that the store occupies |
+    | Outlet_Location_Type | categorical | The type of city in which the store is located |
+    | Outlet_Type | categorical | Whether he outlet is just a grocery or some sort of supermarket |
+    | Item_Outlet_Sales | Numeric | Product sales at that specific store. This is the outcome variable that has to be forecast. |
+
+==================== SAMPLE SLIDE 13 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (768096, 585216, 7290054, 1499616)
+  P (lvl 0): Project Flow Chart
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 13
+Shape: Content Placeholder 4 | Type: PLACEHOLDER (14) | Pos: (1079884, 1628800, 6480175, 4320480)
+
+==================== SAMPLE SLIDE 14 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (611505, 981075, 7330440, 1499870)
+  P (lvl 0): Implementation with Results[17]
+Shape: Picture 5 | Type: PLACEHOLDER (14) | Pos: (1403648, 1772816, 4872034, 2848558)
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 14
+Shape: TextBox 5 | Type: TEXT_BOX (17) | Pos: (827584, 4621374, 7891240, 2215991)
+  P (lvl 0): According to the gathered data, it is gathered information from 10 stores spread across several areas, each of which sold 1559 distinct products.
+  P (lvl 0): Various factors important by statistical means like mean, standard deviation, median, count of values and maximum value etc. are shown in Fig.4 for numerical variables of our dataset.
+
+==================== SAMPLE SLIDE 15 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (611251, 764921, 7290054, 1499616)
+  P (lvl 0): Implementation[17]
+Shape: Picture 6 | Type: PLACEHOLDER (14) | Pos: (4022565, 1564791, 5121435, 3429024)
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 15
+Shape: TextBox 6 | Type: TEXT_BOX (17) | Pos: (539552, 1779687, 4248472, 5062924)
+  P (lvl 0): Some observations:
+  P (lvl 0): Item_Visibility has a min value of zero. This makes no practical sense because when a product is being sold in a store, the visibility cannot be 0.
+  P (lvl 0): Outlet_Establishment_Years vary from 1985 to 2009. The values might not be apt in this form. Rather, if we can convert them to how old the particular store is, it should have a better impact on sales.
+  P (lvl 0): The lower ‘count’ of Item_Weight and Outlet_Size confirms the findings from the missing value check.
+
+==================== SAMPLE SLIDE 16 (Title and Content) ====================
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (683568, 1196752, 7992888, 5040560)
+  P (lvl 0): Results of ARIMA Model and Time Series Graph :
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 16
+Shape: Picture 4 | Type: PICTURE (13) | Pos: (2195736, 1495863, 4176464, 2293177)
+Shape: Rectangle 5 | Type: AUTO_SHAPE (1) | Pos: (291821, 3703633, 8384635, 3844450)
+  P (lvl 0): In order to construct a sales prediction model, we have applied the most efficient way of predicting future sales at large supermarkets, which sell a wide variety of products, including dairy products. But there are 2 axes to consider while making the forecast: sales years and sales through retail outlets, respectively. To begin making the final graph prediction, we needed to include the years we were predicting for.
+  P (lvl 0): For example, the image shows that we predicted sales between 2022 and 2024, so we must adjust the mathematical calculation (which we had placed at 730) so that it fits within the graph. Therefore, our model allows us to forecast product sales in accordance with the years managed by configuring the computation.
+  P (lvl 0): .
+
+==================== SAMPLE SLIDE 17 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (683641, 692531, 7290054, 1499616)
+  P (lvl 0): Exploratory Data Analysis[5]
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 17
+Shape: Content Placeholder 5 | Type: PLACEHOLDER (14) | Pos: (768096, 1988840, 7290055, 4320520)
+  P (lvl 0): 1. 	Item_Weight : Mean is greater(greater than 0.3) because missing values are filled in using the mean and the majority of the items have values of 0, indicating that there is not enough data for those items.
+Shape: Picture 3 | Type: PICTURE (13) | Pos: (2000232, 3357562, 5143536, 3222352)
+
+==================== SAMPLE SLIDE 18 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (611251, 764921, 6675393, 663815)
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 18
+Shape: Content Placeholder 5 | Type: PLACEHOLDER (14) | Pos: (785786, 1571612, 7272365, 4737748)
+  P (lvl 0): 2. 	Item_Visibility : Left-skewed values are noted, and in order to prevent zeros, we filled all of the zeros with the mean, causing the peak to be shown at the mean.
+Shape: Picture 2 | Type: PICTURE (13) | Pos: (1714480, 2786058, 5781754, 3357586)
+
+==================== SAMPLE SLIDE 19 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (768096, 585216, 5875606, 486330)
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (785786, 1428736, 7272365, 4880624)
+  P (lvl 0): 3. 	Outlet_Establishment_Year : With the exception of one, which had more openings in 1985, all of the outlets were established in an equal proportion.
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 19
+Shape: Picture 2 | Type: PICTURE (13) | Pos: (1714480, 2714620, 5758074, 3500462)
+
+==================== SAMPLE SLIDE 20 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (768096, 585216, 6089920, 414892)
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (785786, 1500174, 7272365, 4809186)
+  P (lvl 0): 4. 	Item_Fat_Content : The majority of items are low-fat, and just a small number are non-edible.
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 20
+Shape: Picture 2 | Type: PICTURE (13) | Pos: (1500166, 2571744, 6464159, 3714776)
+
+==================== SAMPLE SLIDE 21 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (626986, 1050882, 8348386, 737617)
+  P (lvl 0): Correlation between target and features[17]
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 21
+Shape: Picture 2 | Type: PICTURE (13) | Pos: (1214414, 2071678, 6370507, 4429156)
+
+==================== SAMPLE SLIDE 22 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (768096, 585216, 8161622, 1499616)
+  P (lvl 0): Observations from the heating map:
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (768096, 2286000, 7290055, 4023360)
+  P (lvl 0): It appears that item_Weight and Outlet_Establishment_Year are fairly correlated.
+  P (lvl 0): As we created the Outlet_Years from the Outlet_Establishment_Year, there is a distinct difference between the two, making the correlation between the two extremely negative. Therefore, when processing the model, we will eliminate the Outlet_Establishment_Year.
+  P (lvl 0): The outcome variable, Item_Outlet_Sales, indicates us from its column that Item_MRP is a highly impaction prediction variable. Nothing else has made a significant contribution.
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 22
+
+==================== SAMPLE SLIDE 23 (Title and Content) ====================
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 23
+Shape: Rectangle 1 | Type: AUTO_SHAPE (1) | Pos: (1142976, 1857364, 7500990, 400110)
+Shape: Title 1 | Type: TEXT_BOX (17) | Pos: (609600, 980440, 7607300, 949960)
+  P (lvl 0): Conclusion & Future work
+Shape: Content Placeholder 1 | Type: PLACEHOLDER (14) | Pos: (683568, 1772816, 8064896, 4536504)
+  P (lvl 0): The goal of this project is to produce accurate sales forecasts for all items, so that businesses will have a better picture of where they stand and if they need to adjust their marketing tactics to achieve their goals. Additionally, the Arima model uses a time series graph to accurately anticipate future sales. We used the Arima model to forecast product sales over the next two years, and our results indicate that sales will rise steadily throughout that time.
+  P (lvl 0): We’ve created our project research based as the model is not created to build the model, we always have to make changes in the code to predict the future of any sales according to dataset; however, models make all this work easy as it only takes dataset to perform a final time series graph. Therefore, this project’s ongoing work may involve developing a predictive model that may accept a dataset as input and output forecasts. In addition, our model can only provide predictions for the next year or so. This indicates that trying to predict a product’s monthly sales is a futile endeavour. As a result, this is something that may be taken into account as the project progresses.
+
+==================== SAMPLE SLIDE 24 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (634502, 845840, 7681914, 1143000)
+  P (lvl 0): References
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 24
+Shape: Text Box 2 | Type: TEXT_BOX (17) | Pos: (755577, 1845310, 7704856, 4893647)
+  P (lvl 0): Gopalakrishnan, T., Choudhary, R., & Prasad, S. (2018, December). Prediction of Sales Value in Online shopping using Linear Regression. In 2018 4th International Conference on Computing Communication and Automation (ICCCA) (pp. 1-6). IEEE.
+  P (lvl 0): Wisesa, O., Adriansyah, A., & Khalaf, O. I. (2020, September). Prediction analysis sales for corporate services telecommunications company using gradient boost algorithm. In 2020 2nd International Conference on Broadband Communications, Wireless Sensors and Powering (BCWSP) (pp. 101-106). IEEE.
+  P (lvl 0): Ramachandra, H. V., Balaraju, G., Rajashekar, A., & Patil, H. (2021, March). Machine Learning Application for Black Friday Sales Prediction Framework. In 2021 International Conference on Emerging Smart Computing and Informatics (ESCI) (pp. 57-61). IEEE.
+  P (lvl 0): Li, Y., Zhu, P., & Qin, S. (2017, October). Optimization of ticket purchasing strategy based on machine learning. In 2017 IEEE 3rd Information Technology and Mechatronics Engineering Conference (ITOEC) (pp. 1230-1234). IEEE.
+  P (lvl 0): Kumar, N., & Choudhari, S. BigMart Sale Prediction using Machine Learning.
+  P (lvl 0): Chavan, S., Panchal, S., Sawant, T., & Shinde, J. (2020). Predicting Online Product Sales using Machine Learning.
+  P (lvl 0): DASARI, A. K., & RAMASUBBAIAH, B. BIGMART SALES USING MACHINE LEARNING WITH DATA ANALYSIS.
+  P (lvl 0): Parmar, I., Agarwal, N., Saxena, S., Arora, R., Gupta, S., Dhiman, H., & Chouhan, L. (2018, December). Stock market prediction using machine learning. In 2018 first international conference on secure cyber computing and communication (ICSCCC) (pp. 574-576). IEEE.
+  P (lvl 0): Coppola, D. (2019). Prediction model for drinking water network failures (Doctoral dissertation, Politecnico di Torino).
+  P (lvl 0): Nassif, A. B. (2016, December). Short term power demand prediction using stochastic gradient boosting. In 2016 5th International Conference on Electronic Devices, Systems and Applications (ICEDSA) (pp. 1-4). IEEE.
+
+==================== SAMPLE SLIDE 25 (Title and Content) ====================
+Shape: Title 1 | Type: PLACEHOLDER (14) | Pos: (611251, 692531, 7290054, 1499616)
+  P (lvl 0): Web References
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (768096, 2286000, 7290055, 4023360)
+  P (lvl 0): 11.  https://www.tensorflow.org/
+  P (lvl 0): 12.  https://matplotlib.org/
+  P (lvl 0): 13.  https://pandas.pydata.org/
+  P (lvl 0): 14.  https://www.youtube.com/watch?v=PD5QguzEdNs
+  P (lvl 0): 15.  https://www.lucidchart.com/
+  P (lvl 0): 16.  https://apps.diagrams.net
+  P (lvl 0): 17. https://jupyter.org/
+  P (lvl 0): 18. https://www.kaggle.com/code/hiralmshah/bigmart-sales-prediction/notebook
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 25
+
+==================== SAMPLE SLIDE 26 (Title and Content) ====================
+Shape: Content Placeholder 2 | Type: PLACEHOLDER (14) | Pos: (1547664, 1052736, 6313512, 4585712)
+  P (lvl 0): Thank you
+Shape: Slide Number Placeholder 3 | Type: PLACEHOLDER (14) | Pos: (8128000, 6470704, 730250, 274320)
+  P (lvl 0): 26

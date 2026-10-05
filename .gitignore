@@ -3,6 +3,9 @@ venv/
 __pycache__/
 *.pyc
 chroma_db/
+_backups/
+# Custom persona models: private personal data (uploads, interview answers)
+CHRONUS/personas/
 qdrant_storage/
 .env
 *.log
@@ -23,3 +26,12 @@ __pycache__
 *.egg-info/
 dist/
 build/
+
+# AI agent tool state
+.claude/
+.commandcode/
+.mimocode/
+**/.mimocode/
+
+# Large copyrighted source material (not for repo)
+CHRONUS/02-Cleaned-Data/Books/

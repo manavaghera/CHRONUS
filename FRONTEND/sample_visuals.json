@@ -1,0 +1,1457 @@
+[
+  {
+    "slide_index": 1,
+    "layout_name": "Title Slide",
+    "shape_count": 9,
+    "shapes": [
+      {
+        "name": "Picture 6",
+        "type": "PICTURE (13)",
+        "left": 0,
+        "top": 0,
+        "width": 9144000,
+        "height": 6858000,
+        "is_picture": true
+      },
+      {
+        "name": "TextBox 4",
+        "type": "AUTO_SHAPE (1)",
+        "left": 1161106,
+        "top": 1055024,
+        "width": 6858000,
+        "height": 1169988,
+        "text": "Your Project title",
+        "fonts": [],
+        "sizes": [
+          32.0
+        ],
+        "colors": [
+          "000000"
+        ]
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 3420110,
+        "top": 116507,
+        "width": 2381250,
+        "height": 628650,
+        "is_picture": true
+      },
+      {
+        "name": "Group 26",
+        "type": "GROUP (6)",
+        "left": 1711007,
+        "top": 1917192,
+        "width": 6308725,
+        "height": 93663
+      },
+      {
+        "name": "Audio 2",
+        "type": "PICTURE (13)",
+        "left": 8318500,
+        "top": 6032500,
+        "width": 609600,
+        "height": 609600,
+        "is_picture": true
+      },
+      {
+        "name": "Slide Number Placeholder 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "1",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Audio 5",
+        "type": "PICTURE (13)",
+        "left": 8585200,
+        "top": 6299200,
+        "width": 406400,
+        "height": 406400,
+        "is_picture": true
+      },
+      {
+        "name": "TextBox 7",
+        "type": "TEXT_BOX (17)",
+        "left": 467360,
+        "top": 2225040,
+        "width": 4187190,
+        "height": 2185214,
+        "text": "Presented  By:\nStudent name-1(Enrollment-1)\nStudent name-2(Enrollment-2)\nStudent name-3(Enrollment-3)\nStudent name-4(Enrollment-4)    \n        ",
+        "fonts": [
+          "Gabriola",
+          "Calibri"
+        ],
+        "sizes": [
+          20.0,
+          28.0
+        ],
+        "colors": [
+          "002060"
+        ]
+      },
+      {
+        "name": "TextBox 7",
+        "type": "TEXT_BOX (17)",
+        "left": 4572000,
+        "top": 2225040,
+        "width": 4914265,
+        "height": 953135,
+        "text": "    Supervised by:\n    Prof. XYZ or Dr. XYZ     ",
+        "fonts": [
+          "Gabriola",
+          "Calibri"
+        ],
+        "sizes": [
+          24.0,
+          28.0,
+          20.0
+        ],
+        "colors": [
+          "002060"
+        ]
+      }
+    ]
+  },
+  {
+    "slide_index": 2,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611304,
+        "top": 1052736,
+        "width": 5184576,
+        "height": 725470,
+        "text": "OUTLINE",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          35.55
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 755650,
+        "top": 1844675,
+        "width": 8334868,
+        "height": 4804410,
+        "text": " Introduction\n Objectives of Project Work\n Literature Survey\n Problem Statement\n\u00a0Implementation with Results\n Exploratory Data Analysis\n Conclusion & Future Work\n Reference\n\n\n",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          24.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "2",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 3,
+    "layout_name": "Two Content",
+    "shape_count": 5,
+    "shapes": [
+      {
+        "name": "Title 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 539496,
+        "top": 692531,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "Introduction[15]",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 2286000,
+        "width": 3566160,
+        "height": 4023360,
+        "text": "\n\n",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 7",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "3",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Title 1",
+        "type": "TEXT_BOX (17)",
+        "left": 1188084,
+        "top": 548928,
+        "width": 6347713,
+        "height": 949672,
+        "text": "",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Text Box 2",
+        "type": "TEXT_BOX (17)",
+        "left": 537242,
+        "top": 1921654,
+        "width": 8321008,
+        "height": 4401205,
+        "text": "Global malls and stores chains and the increase in the number of electronic payment customers, the competition among the rival organizations is becoming serious day by day.\n\nEach organization is tryin",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          20.0
+        ],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 4,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Slide Number Placeholder 22",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "4",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Title 1",
+        "type": "TEXT_BOX (17)",
+        "left": 609600,
+        "top": 980440,
+        "width": 6951980,
+        "height": 949960,
+        "text": "Objectives of PROJECT Work",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Text Box 2",
+        "type": "TEXT_BOX (17)",
+        "left": 612271,
+        "top": 2348880,
+        "width": 7724140,
+        "height": 3170099,
+        "text": "The goal is to create a prediction model and determine each product's sales at a certain store. \u00a0\n\nThe objective is to build a prediction model and determine each product's sales in a certain retailer",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          20.0
+        ],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 5,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 539750,
+        "top": 45085,
+        "width": 4896346,
+        "height": 431587,
+        "text": "Literature Review ",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          32.0,
+          31.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 4",
+        "type": "None",
+        "left": 512738,
+        "top": 1988840,
+        "width": 7615262,
+        "height": 5330841
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "5",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Table 7",
+        "type": "TABLE (19)",
+        "left": 395605,
+        "top": 404664,
+        "width": 8420735,
+        "height": 6340361,
+        "table_rows": 6,
+        "table_cols": 5
+      }
+    ]
+  },
+  {
+    "slide_index": 6,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 609599,
+        "top": 980728,
+        "width": 6347713,
+        "height": 949672,
+        "text": "Research Gap[1][3]",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 1000100,
+        "top": 2143116,
+        "width": 7290055,
+        "height": 2870060,
+        "text": " Difficulty in determining the type of prediction analysis that is accurate.\n The other factor that caught our attention was the absence of any sales predictions that used the ARIMA model. We are impl",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "6",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 7,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 609599,
+        "top": 980728,
+        "width": 6347713,
+        "height": 949672,
+        "text": "Problem Statement",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 611560,
+        "top": 2132732,
+        "width": 7806631,
+        "height": 4023360,
+        "text": " Regression is an important machine learning model for these kinds of problems. Predicting sales of a company needs time series data of that company and based on that data the model can predict the fu",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "7",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 8,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 808183,
+        "top": 620688,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "TOOLS AND TECHNOLOGY",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          32.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 899592,
+        "top": 1914035,
+        "width": 7290055,
+        "height": 4536544,
+        "text": "Software Requirements :\n Anaconda Navigator \n Jupyter Notebook (Python 3.3 or greater, or Python 2.7)\nMachine Learning Library :\nNumPy \nSciPy \nPandas\nMatplotlib  ",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "8",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 9,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "Arima model[11]",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 1988840,
+        "width": 7290055,
+        "height": 4320520,
+        "text": " ARIMA, is a statistical analysis model that uses time series data to either better understand the data set or to predict future trends.\n A time series plot is a graph that displays data collected in ",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          22.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "9",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 10,
+    "layout_name": "Title and Content",
+    "shape_count": 6,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 683568,
+        "top": 590960,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "Comparing the R2 Value",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "10",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 5",
+        "type": "PLACEHOLDER (14)",
+        "left": 899592,
+        "top": 1628800,
+        "width": 7228408,
+        "height": 4896544,
+        "text": "XGBOOST Regression\n\n\n\nLinear Regression\n\n\n\nRandom Forest\n\n",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          20.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Picture 15",
+        "type": "PICTURE (13)",
+        "left": 1763688,
+        "top": 2034258,
+        "width": 4854786,
+        "height": 1296144,
+        "is_picture": true
+      },
+      {
+        "name": "Picture 972",
+        "type": "PICTURE (13)",
+        "left": 1763688,
+        "top": 3849322,
+        "width": 3384376,
+        "height": 972108,
+        "is_picture": true
+      },
+      {
+        "name": "Picture 19",
+        "type": "PICTURE (13)",
+        "left": 2051720,
+        "top": 5599752,
+        "width": 3024336,
+        "height": 1008112,
+        "is_picture": true
+      }
+    ]
+  },
+  {
+    "slide_index": 11,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 683568,
+        "top": 1340768,
+        "width": 7344816,
+        "height": 4824536,
+        "text": "\nARIMA Model\n\n\n\nObservation from the previous implementations :\n Here, the R2 value of ARIMA model is around 0.86, which is the highest.\n Hence, ARIMA Model is most accurate out of all the three algor",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          20.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "11",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)",
+        "left": 1763688,
+        "top": 2204864,
+        "width": 2664296,
+        "height": 1152128,
+        "is_picture": true
+      }
+    ]
+  },
+  {
+    "slide_index": 12,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 683641,
+        "top": 764921,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "Data Set Description[5]",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          32.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "12",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 15",
+        "type": "TABLE (19)",
+        "left": 554547,
+        "top": 1844824,
+        "width": 8320116,
+        "height": 4681220,
+        "table_rows": 13,
+        "table_cols": 3
+      }
+    ]
+  },
+  {
+    "slide_index": 13,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "Project Flow Chart",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          32.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "13",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 4",
+        "type": "PLACEHOLDER (14)",
+        "left": 1079884,
+        "top": 1628800,
+        "width": 6480175,
+        "height": 4320480
+      }
+    ]
+  },
+  {
+    "slide_index": 14,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611505,
+        "top": 981075,
+        "width": 7330440,
+        "height": 1499870,
+        "text": "Implementation with Results[17]\u000b",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          32.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Picture 5",
+        "type": "PLACEHOLDER (14)",
+        "left": 1403648,
+        "top": 1772816,
+        "width": 4872034,
+        "height": 2848558
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "14",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "TextBox 5",
+        "type": "TEXT_BOX (17)",
+        "left": 827584,
+        "top": 4621374,
+        "width": 7891240,
+        "height": 2215991,
+        "text": "According to the gathered data, it is gathered information from 10 stores spread across several areas, each of which sold 1559 distinct products.\n\nVarious factors important by statistical means like m",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          20.0
+        ],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 15,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611251,
+        "top": 764921,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "Implementation[17]",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Picture 6",
+        "type": "PLACEHOLDER (14)",
+        "left": 4022565,
+        "top": 1564791,
+        "width": 5121435,
+        "height": 3429024
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "15",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "TextBox 6",
+        "type": "TEXT_BOX (17)",
+        "left": 539552,
+        "top": 1779687,
+        "width": 4248472,
+        "height": 5062924,
+        "text": "Some observations:\nItem_Visibility\u00a0has a min value of zero. This makes no practical sense because when a product is being sold in a store, the visibility cannot be 0.\n\nOutlet_Establishment_Years\u00a0vary ",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          19.0,
+          20.0
+        ],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 16,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 683568,
+        "top": 1196752,
+        "width": 7992888,
+        "height": 5040560,
+        "text": "Results of ARIMA Model and Time Series Graph :\n",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "16",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Picture 4",
+        "type": "PICTURE (13)",
+        "left": 2195736,
+        "top": 1495863,
+        "width": 4176464,
+        "height": 2293177,
+        "is_picture": true
+      },
+      {
+        "name": "Rectangle 5",
+        "type": "AUTO_SHAPE (1)",
+        "left": 291821,
+        "top": 3703633,
+        "width": 8384635,
+        "height": 3844450,
+        "text": "In order to construct a sales prediction model, we have applied the most efficient way of predicting future sales at large supermarkets, which sell a wide variety of products, including dairy products",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          19.0
+        ],
+        "colors": [
+          "000000"
+        ]
+      }
+    ]
+  },
+  {
+    "slide_index": 17,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 683641,
+        "top": 692531,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "Exploratory Data Analysis[5]",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "17",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 5",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 1988840,
+        "width": 7290055,
+        "height": 4320520,
+        "text": "1. \tItem_Weight : Mean is greater(greater than 0.3) because missing values are filled in using the mean and the majority of the items have values of 0, indicating that there is not enough data for tho",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Picture 3",
+        "type": "PICTURE (13)",
+        "left": 2000232,
+        "top": 3357562,
+        "width": 5143536,
+        "height": 3222352,
+        "is_picture": true
+      }
+    ]
+  },
+  {
+    "slide_index": 18,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611251,
+        "top": 764921,
+        "width": 6675393,
+        "height": 663815,
+        "text": "  ",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "18",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 5",
+        "type": "PLACEHOLDER (14)",
+        "left": 785786,
+        "top": 1571612,
+        "width": 7272365,
+        "height": 4737748,
+        "text": "2. \tItem_Visibility : Left-skewed values are noted, and in order to prevent zeros, we filled all of the zeros with the mean, causing the peak to be shown at the mean. \n",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 1714480,
+        "top": 2786058,
+        "width": 5781754,
+        "height": 3357586,
+        "is_picture": true
+      }
+    ]
+  },
+  {
+    "slide_index": 19,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 5875606,
+        "height": 486330,
+        "text": "   ",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 785786,
+        "top": 1428736,
+        "width": 7272365,
+        "height": 4880624,
+        "text": "3. \tOutlet_Establishment_Year : With the exception of one, which had more openings in 1985, all of the outlets were established in an equal proportion.\n",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "19",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 1714480,
+        "top": 2714620,
+        "width": 5758074,
+        "height": 3500462,
+        "is_picture": true
+      }
+    ]
+  },
+  {
+    "slide_index": 20,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 6089920,
+        "height": 414892,
+        "text": "  ",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 785786,
+        "top": 1500174,
+        "width": 7272365,
+        "height": 4809186,
+        "text": "4. \tItem_Fat_Content : The majority of items are low-fat, and just a small number are non-edible.\n",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "20",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 1500166,
+        "top": 2571744,
+        "width": 6464159,
+        "height": 3714776,
+        "is_picture": true
+      }
+    ]
+  },
+  {
+    "slide_index": 21,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 626986,
+        "top": 1050882,
+        "width": 8348386,
+        "height": 737617,
+        "text": "Correlation between target and features[17]",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          32.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "21",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Picture 2",
+        "type": "PICTURE (13)",
+        "left": 1214414,
+        "top": 2071678,
+        "width": 6370507,
+        "height": 4429156,
+        "is_picture": true
+      }
+    ]
+  },
+  {
+    "slide_index": 22,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 585216,
+        "width": 8161622,
+        "height": 1499616,
+        "text": "Observations from the heating map:",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          32.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 2286000,
+        "width": 7290055,
+        "height": 4023360,
+        "text": " It appears that item_Weight and Outlet_Establishment_Year are fairly correlated.\n As we created the Outlet_Years from the Outlet_Establishment_Year, there is a distinct difference between the two, ma",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "22",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 23,
+    "layout_name": "Title and Content",
+    "shape_count": 4,
+    "shapes": [
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "23",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Rectangle 1",
+        "type": "AUTO_SHAPE (1)",
+        "left": 1142976,
+        "top": 1857364,
+        "width": 7500990,
+        "height": 400110,
+        "text": "\t",
+        "fonts": [
+          "Arial"
+        ],
+        "sizes": [
+          20.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Title 1",
+        "type": "TEXT_BOX (17)",
+        "left": 609600,
+        "top": 980440,
+        "width": 7607300,
+        "height": 949960,
+        "text": "Conclusion & Future work\u00a0",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 683568,
+        "top": 1772816,
+        "width": 8064896,
+        "height": 4536504,
+        "text": " The goal of this project is to produce accurate sales forecasts for all items, so that businesses will have a better picture of where they stand and if they need to adjust their marketing tactics to ",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 24,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 634502,
+        "top": 845840,
+        "width": 7681914,
+        "height": 1143000,
+        "text": "References",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "24",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      },
+      {
+        "name": "Text Box 2",
+        "type": "TEXT_BOX (17)",
+        "left": 755577,
+        "top": 1845310,
+        "width": 7704856,
+        "height": 4893647,
+        "text": "Gopalakrishnan, T., Choudhary, R., & Prasad, S. (2018, December). Prediction of Sales Value in Online shopping using Linear Regression. In\u00a02018 4th International Conference on Computing Communication ",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          13.0
+        ],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 25,
+    "layout_name": "Title and Content",
+    "shape_count": 3,
+    "shapes": [
+      {
+        "name": "Title 1",
+        "type": "PLACEHOLDER (14)",
+        "left": 611251,
+        "top": 692531,
+        "width": 7290054,
+        "height": 1499616,
+        "text": "Web References\u00a0",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [
+          36.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 768096,
+        "top": 2286000,
+        "width": 7290055,
+        "height": 4023360,
+        "text": "11.\u00a0\u00a0https://www.tensorflow.org/\u00a0\n12.\u00a0\u00a0https://matplotlib.org/\u00a0\n13.\u00a0\u00a0https://pandas.pydata.org/\u00a0\n14.\u00a0\u00a0https://www.youtube.com/watch?v=PD5QguzEdNs\u00a0\n15.\u00a0\u00a0https://www.lucidchart.com/\u00a0\n16.\u00a0\u00a0https://apps.d",
+        "fonts": [
+          "Calibri"
+        ],
+        "sizes": [],
+        "colors": [
+          "93A303"
+        ]
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "25",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  },
+  {
+    "slide_index": 26,
+    "layout_name": "Title and Content",
+    "shape_count": 2,
+    "shapes": [
+      {
+        "name": "Content Placeholder 2",
+        "type": "PLACEHOLDER (14)",
+        "left": 1547664,
+        "top": 1052736,
+        "width": 6313512,
+        "height": 4585712,
+        "text": "Thank you",
+        "fonts": [
+          "Arial"
+        ],
+        "sizes": [
+          96.0
+        ],
+        "colors": []
+      },
+      {
+        "name": "Slide Number Placeholder 3",
+        "type": "PLACEHOLDER (14)",
+        "left": 8128000,
+        "top": 6470704,
+        "width": 730250,
+        "height": 274320,
+        "text": "26",
+        "fonts": [],
+        "sizes": [],
+        "colors": []
+      }
+    ]
+  }
+]
