@@ -27,7 +27,7 @@ SYNTHESIZED = "synthesized"
 # ("personal_writing": letters, journals... uploaded to a custom model as
 # written by the person; "written_about" uploads are third party;
 # "writing": a famous figure's published works, figures/build_figures.py)
-_FIRST_PERSON_TYPES = {"interview", "tweet", "book", "speech", "personal_writing", "writing"}
+_FIRST_PERSON_TYPES = {"interview", "tweet", "book", "speech", "personal_writing", "writing", "voice_note"}
 # interview_protocol "origin" values (who answered the interview question)
 _SELF_ORIGINS = {"self", ""}
 _SYNTHESIZED_ORIGINS = {"synthesized"}
@@ -48,6 +48,7 @@ _TYPE_LABELS = {
     "writing": "Writing",
     "written_about": "Document",
     "reviewed_answer": "Reviewed past answer",
+    "voice_note": "Voice note",
 }
 
 

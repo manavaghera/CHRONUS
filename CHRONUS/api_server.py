@@ -27,10 +27,12 @@ from pydantic import BaseModel, Field, field_validator, model_validator
 
 from services import (
     access,
+    answer_cache,
     bundle,
     followups,
     hybrid,
     insights,
+    jobs,
     memory_routes,
     roundtable,
     stt,
@@ -453,6 +455,19 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
             return _support_reply(persona, memory, started)
         notes.append(f"Your question was translated from {translate.LANGUAGES.get(asked_in, asked_in)} by AI.")
 
+    # Repeated questions (quick-question buttons) come from the cache;
+    # follow-ups depend on the conversation, so they never do
+    cache_key = None
+    if not (req.history and is_follow_up(query)):
+        cache_key = answer_cache.key(persona["id"], req.query, req.mode, req.n_results, years, target, req.length)
+        cached = answer_cache.get(cache_key)
+        if cached is not None:
+            entry_id = log_qa(req.query, cached["answer"], cached["sources"], persona=persona["id"], mode=cached["mode"],
+                              confidence=cached["confidence"], fallback=cached["fallback"],
+                              faithfulness=cached["faithfulness"], language=cached["language"], cached=True,
+                              latency_ms=round((time.perf_counter() - started) * 1000))
+            return ChatResponse(**{**cached, "id": entry_id or "", "collection_size": memory.count()})
+
     # Simple profile facts skip retrieval. A question that also asks
     # something else ("When were you born and why did you start SpaceX?")
     # gets the fact AND an answer from memory for the rest.
@@ -496,7 +511,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
                       faithfulness=result["faithfulness"], language=language,
                       latency_ms=round((time.perf_counter() - started) * 1000))
 
-    return ChatResponse(
+    response = ChatResponse(
         answer=result["response"],
         sources=result["sources"],
         faithfulness=result["faithfulness"],
@@ -510,6 +525,9 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
         language=language,
         original_answer=original,
     )
+    if cache_key is not None and "Couldn't translate" not in notice:
+        answer_cache.put(cache_key, response.model_dump())
+    return response
 
 
 @app.post("/chat", response_model=ChatResponse)
@@ -728,6 +746,8 @@ def complete_interview(responses: list[InterviewAnswer], person: str = PERSON_ID
 
 # Pretrained + custom models: list, create, upload, interview, build, delete
 app.include_router(make_router(client, embedder))
+# Background work (large uploads) with progress
+app.include_router(jobs.make_router())
 # Encrypted .chronus export / import of custom models
 app.include_router(bundle.make_router(client, embedder, config.EMBEDDING_MODEL, summarize_persona))
 # Adaptive interview: free-form follow-up questions
@@ -748,6 +768,15 @@ app.include_router(access.make_router(config))
 # so the server only has to serve index.html and its assets. In development
 # the Vite server on :3000 serves the site instead and proxies /api here.
 SITE_DIR = Path(__file__).resolve().parent.parent / "FRONTEND" / "chronus-app" / "dist"
+
+
+@app.middleware("http")
+async def forget_cached_answers(request, call_next):
+    """Uploads, edits, deletions, builds...: cached answers may be stale now."""
+    response = await call_next(request)
+    if answer_cache.invalidates(request.method, request.url.path) and response.status_code < 400:
+        answer_cache.clear()
+    return response
 
 
 @app.middleware("http")

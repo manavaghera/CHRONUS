@@ -32,6 +32,12 @@ CUSTOM_DIR = ROOT / "personas"
 
 PERSONA_ID_PATTERN = r"^[a-z0-9_]{3,48}$"
 UPLOAD_TYPES = {".txt", ".md", ".pdf", ".csv", ".json", ".docx"}
+# Voice notes and recordings: transcribed on this computer (services/stt.py,
+# needs faster-whisper) and stored as their spoken words
+AUDIO_TYPES = {".wav", ".mp3", ".m4a", ".ogg", ".webm", ".flac", ".aac"}
+# A new memory this close (cosine distance) to one from another file is the
+# same text uploaded twice (a letter in two documents): skipped
+DUPLICATE_DISTANCE = 0.03
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 # Data sufficiency check before a custom model can be built (paper, Input
 # Data Layer): with fewer memories it can barely answer anything.
@@ -160,28 +166,57 @@ def _parse_docx(path: Path, merge_sources) -> list[dict]:
         text_path.unlink(missing_ok=True)
 
 
-def ingest_document(persona: dict, collection, embedder, filename: str, data: bytes, authored_by: str) -> dict:
+def _transcribe_upload(data: bytes, name: str) -> list[dict]:
+    """A voice note as records of spoken text (one per ~paragraph of speech)."""
+    from services import stt
+
+    if not stt.available():
+        raise ValueError("Audio uploads need local speech recognition: pip install faster-whisper")
+    import io
+    segments, _ = stt._whisper().transcribe(io.BytesIO(data), vad_filter=True)
+    records, current = [], []
+    for seg in segments:
+        current.append(seg.text.strip())
+        if sum(len(t) for t in current) > 600:  # a paragraph's worth of speech
+            records.append(" ".join(current))
+            current = []
+    if current:
+        records.append(" ".join(current))
+    return [{"text": t, "date": "unknown", "char_count": len(t), "word_count": len(t.split())} for t in records if t.strip()]
+
+
+def ingest_document(persona: dict, collection, embedder, filename: str, data: bytes, authored_by: str,
+                    progress=None) -> dict:
     """Parse, chunk and embed one uploaded document into the persona's memory.
 
     Re-uploading a file with the same name replaces its earlier memories.
+    Memories identical to ones already stored from other files are skipped.
+    *progress(fraction, message)*: called as the work advances (background
+    uploads show it as a progress bar).
     Raises ValueError for unsupported, oversized or empty files.
     """
     import merge_sources  # parsers + chunker; deferred so importing this module stays cheap
 
+    report = progress or (lambda fraction, message: None)
     name = _safe_filename(filename)
     ext = Path(name).suffix.lower()
-    if ext not in UPLOAD_TYPES:
-        raise ValueError(f"Unsupported file type '{ext or name}'. Use: {', '.join(sorted(UPLOAD_TYPES))}")
+    if ext not in UPLOAD_TYPES | AUDIO_TYPES:
+        raise ValueError(f"Unsupported file type '{ext or name}'. Use: {', '.join(sorted(UPLOAD_TYPES | AUDIO_TYPES))}")
     if len(data) > MAX_UPLOAD_BYTES:
         raise ValueError(f"File is larger than {MAX_UPLOAD_BYTES // (1024 * 1024)} MB")
+    check_upload_content(ext, data)
 
     uploads = CUSTOM_DIR / persona["id"] / "uploads"
     uploads.mkdir(parents=True, exist_ok=True)
     path = uploads / name
     path.write_bytes(data)
 
+    report(0.05, "Reading the file")
     try:
-        if ext in (".txt", ".md"):
+        if ext in AUDIO_TYPES:
+            report(0.1, "Transcribing the recording")
+            records = [{**r, "source_file": name} for r in _transcribe_upload(data, name)]
+        elif ext in (".txt", ".md"):
             records = merge_sources.parse_markdown(path)
         elif ext == ".docx":
             records = _parse_docx(path, merge_sources)
@@ -194,15 +229,25 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
     except ValueError:
         path.unlink(missing_ok=True)  # don't keep a file we couldn't use
         raise
+    except Exception as e:  # a parser crashed on a damaged file: same answer, no stray file
+        path.unlink(missing_ok=True)
+        raise ValueError(f"Couldn't read this file ({type(e).__name__})")
 
-    # Their own writing (letters, journals, emails) is first-person evidence;
-    # anything written about them is third-party (services/provenance.py).
-    source_type = "personal_writing" if authored_by == "self" else "written_about"
+    # Their own writing (letters, journals, emails) and their own recorded
+    # voice are first-person evidence; anything about them is third-party
+    # (services/provenance.py).
+    if ext in AUDIO_TYPES:
+        source_type = "voice_note" if authored_by == "self" else "written_about"
+    else:
+        source_type = "personal_writing" if authored_by == "self" else "written_about"
     units = []
     for record in records:
         record.update(source_type=source_type, source_name=Path(name).stem, source_file=name)
         units.extend(merge_sources.chunk_record(record))
     units = [u for u in units if len(u["text"].strip()) >= 20]
+    # The same paragraph twice in one file (signatures, repeated headers)
+    seen: set[str] = set()
+    units = [u for u in units if not (" ".join(u["text"].lower().split()) in seen or seen.add(" ".join(u["text"].lower().split())))]
     if not units:
         path.unlink(missing_ok=True)
         raise ValueError("No readable text found in this file")
@@ -220,17 +265,50 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
         ids.append(memory_id)
         docs.append(unit["text"])
         metas.append(meta)
+
+    stored = duplicates = 0
+    has_memories = collection.count() > 0
     for start in range(0, len(docs), EMBED_BATCH):
         batch = slice(start, start + EMBED_BATCH)
         vectors = embedder.encode(docs[batch], normalize_embeddings=True).tolist()
-        collection.upsert(ids=ids[batch], documents=docs[batch], metadatas=metas[batch], embeddings=vectors)
+        keep = list(range(len(vectors)))
+        if has_memories:
+            near = collection.query(query_embeddings=vectors, n_results=1, include=["distances"])
+            keep = [k for k, dists in enumerate(near["distances"]) if not (dists and dists[0] <= DUPLICATE_DISTANCE)]
+        duplicates += len(vectors) - len(keep)
+        if keep:
+            collection.upsert(ids=[ids[batch][k] for k in keep], documents=[docs[batch][k] for k in keep],
+                              metadatas=[metas[batch][k] for k in keep], embeddings=[vectors[k] for k in keep])
+            stored += len(keep)
+        report(0.15 + 0.8 * min(1.0, (start + EMBED_BATCH) / len(docs)), f"Embedded {min(start + EMBED_BATCH, len(docs))} of {len(docs)} passages")
 
-    entry = {"filename": name, "authored_by": authored_by, "memories": len(docs), "uploaded_at": _now()}
+    # All duplicates (the same letter saved twice) still counts as uploaded:
+    # the file is theirs; it just added nothing new.
+    entry = {"filename": name, "authored_by": authored_by, "memories": stored, "duplicates_skipped": duplicates,
+             "kind": "audio" if ext in AUDIO_TYPES else "document", "uploaded_at": _now()}
     with _lock:
         fresh = load_persona(persona["id"], any_owner=True) or persona
         fresh["uploads"] = [u for u in fresh.get("uploads", []) if u["filename"] != name] + [entry]
         save_persona(fresh)
+    report(1.0, "Done")
     return entry
+
+
+_MAGIC = {".pdf": (b"%PDF",), ".docx": (b"PK\x03\x04",), ".wav": (b"RIFF",), ".flac": (b"fLaC",), ".ogg": (b"OggS",),
+          ".webm": (b"\x1aE\xdf\xa3",), ".mp3": (b"ID3", b"\xff\xfb", b"\xff\xf3", b"\xff\xf2")}
+
+
+def check_upload_content(ext: str, data: bytes) -> None:
+    """The file's bytes must match its name: a renamed executable or HTML
+    page is refused before any parser sees it."""
+    head = data[:16]
+    if ext in _MAGIC and not head.startswith(_MAGIC[ext]):
+        raise ValueError(f"This doesn't look like a real {ext} file")
+    if ext in (".txt", ".md", ".csv", ".json"):
+        if b"\x00" in data[:4096]:
+            raise ValueError("This text file contains binary data")
+        if head.startswith((b"MZ", b"\x7fELF", b"PK\x03\x04")):
+            raise ValueError("This isn't a text file")
 
 
 def delete_document(persona: dict, collection, filename: str) -> int:

@@ -76,6 +76,20 @@ export const api = {
     method: 'POST',
     body: { filename: file.name, content_base64: await fileToBase64(file), authored_by: authoredBy },
   }),
+  // Background upload with progress: onProgress(fraction, message); resolves like uploadDocument
+  uploadDocumentWithProgress: async (id, file, authoredBy, onProgress) => {
+    const { job_id: jobId } = await request(`/personas/${pid(id)}/documents/async`, {
+      method: 'POST',
+      body: { filename: file.name, content_base64: await fileToBase64(file), authored_by: authoredBy },
+    })
+    for (;;) {
+      await new Promise(r => setTimeout(r, 400))
+      const job = await request(`/jobs/${jobId}`)
+      onProgress?.(job.progress, job.message)
+      if (job.status === 'done') return job.result
+      if (job.status === 'failed') throw new ApiError(job.error || 'Upload failed', { status: 400 })
+    }
+  },
   answerInterview: (id, body) => request(`/personas/${pid(id)}/interview`, { method: 'POST', body }),
   buildPersona: (id) => request(`/personas/${pid(id)}/build`, { method: 'POST' }),
   deletePersona: (id) => request(`/personas/${pid(id)}`, { method: 'DELETE' }),
@@ -174,4 +188,6 @@ export function download(blob, filename) {
 
 // Accepted by the backend (services/personas.py UPLOAD_TYPES)
 export const UPLOAD_ACCEPT = '.txt,.md,.pdf,.docx,.csv,.json'
+// Voice notes, when the server can transcribe locally (services/stt.py)
+export const AUDIO_ACCEPT = '.wav,.mp3,.m4a,.ogg,.webm,.flac,.aac'
 export const MAX_UPLOAD_MB = 10

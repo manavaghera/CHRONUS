@@ -30,6 +30,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "06-Testing"))
 os.chdir(ROOT)
 os.environ.setdefault("CHRONUS_RATE_LIMIT", "0")  # tests send many requests a minute
+os.environ.setdefault("CHRONUS_ANSWER_CACHE", "0")  # each test sees fresh answers (test_data_features.py turns it on)
 
 TEST_PERSONA_PREFIX = "pytest "  # names of personas created by tests
 

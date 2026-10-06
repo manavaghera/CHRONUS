@@ -181,3 +181,7 @@
 .followups ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .5rem; font-size: .85rem; }
 .followup-open { margin-left: .5rem; }
 .create-upload-row input[type="password"] { flex: 1; min-width: 11rem; width: auto; }
+.upload-progress { display: flex; flex-direction: column; gap: .35rem; margin-top: .875rem; }
+.upload-progress-label { display: flex; justify-content: space-between; gap: 1rem; font-size: .78rem; color: rgba(17,17,17,.65); }
+.upload-progress-track { height: .4rem; border-radius: var(--r-pill); background: var(--surface-2); overflow: hidden; }
+.upload-progress-track span { display: block; height: 100%; background: var(--accent); border-radius: inherit; transition: width .3s; }

@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { api, download, MAX_UPLOAD_MB, UPLOAD_ACCEPT } from '../api'
+import { api, AUDIO_ACCEPT, download, MAX_UPLOAD_MB, UPLOAD_ACCEPT } from '../api'
 import { navigate } from '../router'
 import { toWav } from '../audio'
 import useVoiceInput from '../components/chat/useVoiceInput'
@@ -72,8 +72,10 @@ function DetailsForm() {
 
 function UploadStep({ persona, onChange }) {
   const [authoredBy, setAuthoredBy] = useState('self')
-  const [status, setStatus] = useState('')
+  const [status, setStatus] = useState(null)  // { name, progress, message }
   const [errors, setErrors] = useState([])
+  const [audio, setAudio] = useState(false)
+  useEffect(() => { api.voiceStatus().then(s => setAudio(!!s.speech_to_text?.available)).catch(() => {}) }, [])
 
   const upload = async (e) => {
     const files = [...e.target.files]
@@ -81,33 +83,49 @@ function UploadStep({ persona, onChange }) {
     const failed = []
     for (const file of files) {
       if (file.size > MAX_UPLOAD_MB * 1024 * 1024) { failed.push(`${file.name}: larger than ${MAX_UPLOAD_MB} MB`); continue }
-      setStatus(`Reading and embedding ${file.name}…`)
-      try { onChange((await api.uploadDocument(persona.id, file, authoredBy)).persona) }
-      catch (err) { failed.push(`${file.name}: ${err.message}`) }
+      setStatus({ name: file.name, progress: 0, message: 'Uploading' })
+      try {
+        const r = await api.uploadDocumentWithProgress(persona.id, file, authoredBy,
+          (progress, message) => setStatus({ name: file.name, progress, message }))
+        onChange(r.persona)
+      } catch (err) { failed.push(`${file.name}: ${err.message}`) }
     }
-    setStatus(''); setErrors(failed)
+    setStatus(null); setErrors(failed)
   }
 
+  const accept = audio ? `${UPLOAD_ACCEPT},${AUDIO_ACCEPT}` : UPLOAD_ACCEPT
   return (
     <section className="create-card">
       <h2 className="page-h2">2. Upload documents</h2>
-      <p className="page-note">Letters, journals, emails, speeches, transcripts ({UPLOAD_ACCEPT.replaceAll(',', ', ')}; up to {MAX_UPLOAD_MB} MB each).</p>
+      <p className="page-note">
+        Letters, journals, emails, speeches, transcripts ({UPLOAD_ACCEPT.replaceAll(',', ', ')}; up to {MAX_UPLOAD_MB} MB each).
+        {audio ? ' Voice notes and recordings work too: they are transcribed on this computer.' : ''}
+        {' '}Text already in this model from another file is skipped.
+      </p>
       <div className="create-upload-row">
         <select className="create-select" value={authoredBy} onChange={e => setAuthoredBy(e.target.value)} aria-label="Who wrote these documents">
-          <option value="self">Written by {persona.name}</option>
+          <option value="self">Written or spoken by {persona.name}</option>
           <option value="other">Written about {persona.name}</option>
         </select>
-        <label className="pill-btn pill-btn--dark create-file">
+        <label className={`pill-btn pill-btn--dark create-file${status ? ' is-disabled' : ''}`}>
           <span className="pill-inner">{status ? 'Uploading…' : 'Choose files'}</span>
-          <input type="file" multiple accept={UPLOAD_ACCEPT} disabled={!!status} onChange={upload} />
+          <input type="file" multiple accept={accept} disabled={!!status} onChange={upload} />
         </label>
       </div>
-      {status && <p className="page-note">{status}</p>}
+      {status && (
+        <div className="upload-progress" role="status">
+          <div className="upload-progress-label"><span>{status.name}</span><span>{status.message}</span></div>
+          <div className="upload-progress-track"><span style={{ width: `${Math.round(status.progress * 100)}%` }} /></div>
+        </div>
+      )}
       {errors.map(err => <div key={err} className="page-alert">{err}</div>)}
       {persona.uploads.length > 0 && (
         <ul className="create-list">
           {persona.uploads.map(u => (
-            <li key={u.filename}><span>{u.filename}</span><span>{u.authored_by === 'self' ? 'their words' : 'about them'} · {u.memories} memories</span></li>
+            <li key={u.filename}>
+              <span>{u.kind === 'audio' ? '🎙 ' : ''}{u.filename}</span>
+              <span>{u.authored_by === 'self' ? 'their words' : 'about them'} · {u.memories} memories{u.duplicates_skipped ? ` · ${u.duplicates_skipped} already known` : ''}</span>
+            </li>
           ))}
         </ul>
       )}

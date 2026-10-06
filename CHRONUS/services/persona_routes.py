@@ -137,6 +137,23 @@ def make_router(client, embedder) -> APIRouter:
             raise HTTPException(status_code=400, detail=str(e))
         return {"upload": entry, "persona": detail(persona_id)}
 
+    @router.post("/{persona_id}/documents/async", status_code=202)
+    def upload_async(body: DocumentUpload, persona_id: str = PERSONA_PATH):
+        """Same as /documents, in the background: poll GET /jobs/{job_id}."""
+        from services import jobs
+
+        persona = _custom(persona_id)
+        try:
+            data = base64.b64decode(body.content_base64, validate=True)
+        except (binascii.Error, ValueError):
+            raise HTTPException(status_code=400, detail="File content is not valid base64")
+
+        def work(progress):
+            entry = ps.ingest_document(persona, ps.get_collection(client, persona), embedder, body.filename, data,
+                                       body.authored_by, progress=progress)
+            return {"upload": entry, "persona": detail(persona_id)}
+        return {"job_id": jobs.start(work, "upload")}
+
     @router.post("/{persona_id}/interview")
     def interview(body: InterviewAnswer, persona_id: str = PERSONA_PATH):
         from data.interview_protocol import get_all_questions
