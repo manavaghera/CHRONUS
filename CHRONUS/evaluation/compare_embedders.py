@@ -15,15 +15,15 @@ from __future__ import annotations
 import sys
 import time
 
+import numpy as np  # noqa: E402
+import torch  # noqa: E402
+from sentence_transformers import SentenceTransformer  # noqa: E402
+
 # First: run_eval imports api_server, which loads pyarrow before torch. The
 # other order crashes the process silently on Windows (see api_server.py).
 from evaluation.run_eval import ANSWER_EQUIVALENT, _mean, _ranking_metrics, srv
 from evaluation.ted_qa import SOURCE_IN_MEMORY, load_pairs, question_only
 from services.provenance import content_words
-
-import numpy as np  # noqa: E402
-import torch  # noqa: E402
-from sentence_transformers import SentenceTransformer  # noqa: E402
 
 CANDIDATES = ["sentence-transformers/multi-qa-MiniLM-L6-cos-v1"]
 

@@ -29,7 +29,7 @@ export default function PageLoader({ stopScroll, onReady }) {
       function onEnd(e) { if (e.propertyName !== 'transform') return; el.removeEventListener('transitionend', onEnd); onReady(); el.remove() }
       el.addEventListener('transitionend', onEnd)
     }
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps -- runs once on page load
 
   return (
     <div id="page-loader" ref={elRef}>

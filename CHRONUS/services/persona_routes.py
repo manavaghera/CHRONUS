@@ -14,7 +14,8 @@ import base64
 import binascii
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException, Path as PathParam
+from fastapi import APIRouter, HTTPException
+from fastapi import Path as PathParam
 from pydantic import BaseModel, Field
 
 from services import personas as ps

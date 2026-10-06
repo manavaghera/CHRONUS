@@ -7,8 +7,8 @@ Shared service modules for the CHRONUS response pipeline:
 - mix_method: 3-part Mix Method response generator (core CHRONUS contribution)
 """
 
-from services.theme_classifier import classify_theme, get_theme_prompt
 from services.mix_method import generate_mix_method_response
+from services.theme_classifier import classify_theme, get_theme_prompt
 
 __all__ = [
     "classify_theme",

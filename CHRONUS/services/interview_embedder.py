@@ -9,21 +9,21 @@ Usage:
     embed_from_file("models/elon_musk/interview_responses.json", collection, embedder)
 """
 
-import json
 import hashlib
-from pathlib import Path
-from typing import Optional
+import json
 
 # Add parent directory to path for imports
 import sys
+from pathlib import Path
+
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from data.interview_protocol import (
-    get_question_by_id,
-    get_all_questions,
-    format_qa_for_embedding,
+    INTERVIEW_QUESTIONS,
     build_interview_metadata,
-    INTERVIEW_QUESTIONS
+    format_qa_for_embedding,
+    get_all_questions,
+    get_question_by_id,
 )
 
 

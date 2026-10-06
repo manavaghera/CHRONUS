@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.join(os.getcwd(), "06-Testing"))
 
 from chat_elon import chat, identity_card_text, collection, model
 from elon_few_shot import few_shot_block
-from post_process import scrub
+from services.post_process import scrub
 import chromadb, requests
 from pathlib import Path
 

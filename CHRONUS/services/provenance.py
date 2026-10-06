@@ -153,6 +153,35 @@ def grounding_score(answer: str, evidence_texts: list[str]) -> float:
     return round(len(answer_words & evidence_words) / len(answer_words), 2)
 
 
+_SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
+
+
+def _sentences(text: str, min_words: int = 4) -> list[str]:
+    return [p.strip() for p in _SENTENCE_END.split(text) if len(p.split()) >= min_words]
+
+
+def semantic_support(answer: str, evidence_texts: list[str], embedder, min_similarity: float) -> float:
+    """Share (0-1) of the answer's sentences that some evidence sentence backs.
+
+    A sentence counts as supported when its embedding is within
+    *min_similarity* (cosine) of at least one sentence, or whole passage, of
+    the evidence. Unlike grounding_score this catches an answer that reuses
+    the evidence's words for one sentence and invents the next (the
+    "half-invented" 0.27-0.38 cases lexical scoring lets through), and it
+    doesn't punish faithful rewording.
+    """
+    claims = _sentences(answer)
+    if not claims:
+        return 1.0
+    pieces = [t for text in evidence_texts if text for t in (_sentences(text) or [text.strip()]) + [text.strip()]]
+    if not pieces:
+        return 0.0
+    claim_vecs = embedder.encode(claims, normalize_embeddings=True)
+    piece_vecs = embedder.encode(pieces, normalize_embeddings=True)
+    best = (claim_vecs @ piece_vecs.T).max(axis=1)
+    return round(float((best >= min_similarity).mean()), 2)
+
+
 def format_source_citation(metadata: dict, doc_text: str = "", distance: float | None = None) -> dict:
     """Format a user-facing source citation from ChromaDB metadata.
 

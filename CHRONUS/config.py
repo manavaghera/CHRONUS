@@ -4,9 +4,9 @@ CHRONUS Configuration — Single source of truth for all settings.
 All other modules should import from here instead of hardcoding values.
 """
 
+import os
 from dataclasses import dataclass, field
 from pathlib import Path
-import os
 
 
 @dataclass
@@ -36,6 +36,18 @@ class ChronusConfig:
     invented answers scored 0.14-0.22 and good ones 0.60-1.00; half-invented
     ones (0.27-0.38) slip through, a limit of lexical scoring. 0 disables."""
 
+    NATURAL_MIN_SEMANTIC_SUPPORT: float = field(default_factory=lambda: float(
+        os.getenv("CHRONUS_MIN_SEMANTIC_SUPPORT", "0")))
+    """Natural-mode answers where less than this share of sentences is backed
+    by an evidence sentence (services/provenance.py semantic_support) fall
+    back to Mix Method. Catches half-invented answers the lexical score lets
+    through. 0 = off until calibrated on your samples; try 0.67 (at most one
+    unsupported sentence in three) with SEMANTIC_SENTENCE_MIN 0.5."""
+
+    SEMANTIC_SENTENCE_MIN: float = 0.5
+    """Cosine similarity (MiniLM) at which an evidence sentence counts as
+    backing an answer sentence."""
+
     SUPPORT_MARGIN: float = 0.25
     """Supporting memories must be within this raw distance of the best match.
     Measured 2026-10-06: on Elon's corpus the 2nd/3rd memories were at most
@@ -46,8 +58,20 @@ class ChronusConfig:
     threshold: short tweets embed close to short questions ("Why Mars?" ->
     "Mars is The New World") but carry almost no content."""
 
-    IMPORTANCE_WEIGHT: float = 0.15
-    """Weight for importance score in re-ranking: adjusted = dist - (importance * weight)."""
+    IMPORTANCE_WEIGHT: float = field(default_factory=lambda: float(os.getenv("CHRONUS_IMPORTANCE_WEIGHT", "0.15")))
+    """Weight for importance score in re-ranking: adjusted = dist - (importance * weight).
+    The 2026-10-06 evaluation ranked the full pipeline below plain semantic
+    search (P@1 0.12 vs 0.16); `python -m evaluation.run_eval` now also scores
+    weight 0 and hybrid retrieval so the default can be chosen on data."""
+
+    RETRIEVAL_MODE: str = field(default_factory=lambda: os.getenv("CHRONUS_RETRIEVAL_MODE", "dense"))
+    """"dense" (semantic search + importance bias) or "hybrid" (semantic + BM25
+    keyword search fused by reciprocal rank; services/hybrid.py). Both keep
+    the same distance threshold, so "I don't know" behaves the same."""
+
+    RERANKER_MODEL: str = field(default_factory=lambda: os.getenv("CHRONUS_RERANKER_MODEL", ""))
+    """Optional cross-encoder to rerank retrieved memories, e.g.
+    "cross-encoder/ms-marco-MiniLM-L-6-v2" (~90 MB download). Empty = off."""
 
     # === EMBEDDING ===
     EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"

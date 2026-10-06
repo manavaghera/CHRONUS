@@ -37,5 +37,7 @@ build/
 .mimocode/
 **/.mimocode/
 
-# Large copyrighted source material (not for repo)
+# Copyrighted source material (biography excerpts): kept locally, not in the
+# repo. The memory units built from them are in 04-Memory-Units/.
+CHRONUS/01-Raw-Data/Books/
 CHRONUS/02-Cleaned-Data/Books/

@@ -30,7 +30,6 @@ const PAGES = new Set(['models', 'create', 'clone-voice'])
 function App() {
   useLenis()
   const { page, id } = useRoute()
-  const [ready, setReady] = useState(false)
   const [navOpen, setNavOpen] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -58,7 +57,6 @@ function App() {
   const closeModal = useCallback(() => { setModalOpen(false); startScroll() }, [startScroll])
 
   const handleReady = useCallback(() => {
-    setReady(true)
     document.body.classList.add('ready')
     startScroll()
   }, [startScroll])

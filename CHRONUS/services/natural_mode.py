@@ -17,13 +17,12 @@ from __future__ import annotations
 
 import logging
 import re
-import sys
-from pathlib import Path
 
 import requests
 
 from config import config
 from services.mix_method import calculate_confidence, generate_mix_method_response
+from services.post_process import scrub
 from services.provenance import (
     FIRST_PERSON,
     SYNTHESIZED,
@@ -31,11 +30,9 @@ from services.provenance import (
     attribution,
     format_source_citation,
     grounding_score,
+    semantic_support,
     voice_of,
 )
-
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "06-Testing"))
-from post_process import scrub  # noqa: E402
 
 logger = logging.getLogger("chronus")
 
@@ -203,6 +200,7 @@ def generate_natural_response(
     persona_name: str = "Elon Musk",
     style_notes: str | None = None,
     use_adapter: bool = False,  # local provider only: apply the persona's LoRA adapter
+    embedder=None,  # enables the sentence-level support check (config.NATURAL_MIN_SEMANTIC_SUPPORT)
 ) -> dict:
     """Answer *query* in the persona's voice, grounded in *memories*.
 
@@ -228,6 +226,13 @@ def generate_natural_response(
         grounding = grounding_score(clean_text, [m[1] for m in memories] + [profile_block])
         if grounding < config.NATURAL_MIN_GROUNDING:
             raise ValueError(f"answer not grounded in evidence (score {grounding})")
+        # Sentence-level check: every sentence should be backed by some
+        # evidence, not just the answer's words on average
+        if embedder is not None and config.NATURAL_MIN_SEMANTIC_SUPPORT > 0:
+            support = semantic_support(clean_text, [m[1] for m in memories] + [profile_block], embedder,
+                                       config.SEMANTIC_SENTENCE_MIN)
+            if support < config.NATURAL_MIN_SEMANTIC_SUPPORT:
+                raise ValueError(f"answer sentences not backed by evidence (support {support})")
         best_dist = min((m[3] for m in memories), default=2.0)
         return {
             "response": clean_text,

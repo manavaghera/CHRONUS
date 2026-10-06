@@ -6,7 +6,9 @@ CHRONUS evaluation: reproducible numbers on the real Elon Musk corpus.
 
 1. Retrieval (paper RQ1 / Table IV). For each real TED interview question,
    is a memory saying what Elon actually answered ranked first? Compared:
-   raw semantic search (MiniLM), the full CHRONUS pipeline, and BM25.
+   raw semantic search (MiniLM), the full CHRONUS pipeline, the pipeline
+   without its importance bias, hybrid semantic + BM25 retrieval
+   (services/hybrid.py), and BM25 alone.
    Two relevance definitions:
    * answer-equivalent: cosine(memory, his real answer) >= 0.6, any source.
      Measured: memories carrying his answer score 0.65-0.95 (same
@@ -38,8 +40,9 @@ ROOT = Path(__file__).resolve().parent.parent
 os.chdir(ROOT)
 sys.path.insert(0, str(ROOT))
 
-import api_server as srv  # noqa: E402  (loads ChromaDB + embedding model)
 import numpy as np  # noqa: E402
+
+import api_server as srv  # noqa: E402  (loads ChromaDB + embedding model)
 from evaluation.bm25 import BM25  # noqa: E402
 from evaluation.ted_qa import SOURCE_IN_MEMORY, load_pairs, question_only  # noqa: E402
 from services.provenance import anchor_first, content_words  # noqa: E402
@@ -82,6 +85,15 @@ def _cosine(a: str, b: str) -> float:
     return float((va * vb).sum())
 
 
+def _without_importance(q: str) -> list[str]:
+    """The dense pipeline with IMPORTANCE_WEIGHT = 0 (is the importance bias helping?)."""
+    saved, srv.IMPORTANCE_WEIGHT = srv.IMPORTANCE_WEIGHT, 0.0
+    try:
+        return [m[2].get("memory_id", "") for m in anchor_first(srv.retrieve(q, mode="dense") or [])]
+    finally:
+        srv.IMPORTANCE_WEIGHT = saved
+
+
 def evaluate_retrieval(pairs: list[dict], corpus: dict) -> dict:
     ids, docs, metas = corpus["ids"], corpus["documents"], corpus["metadatas"]
     embeddings = np.asarray(corpus["embeddings"])
@@ -90,7 +102,7 @@ def evaluate_retrieval(pairs: list[dict], corpus: dict) -> dict:
     bm25 = BM25(docs)
     interview = [(mid, content_words(doc)) for mid, doc, meta in zip(ids, docs, metas)
                  if meta.get("source_file") == SOURCE_IN_MEMORY]
-    systems = ("semantic", "chronus_pipeline", "bm25")
+    systems = ("semantic", "chronus_pipeline", "pipeline_no_importance", "hybrid", "bm25")
     rows = {"answer_equivalent": {s: [] for s in systems}, "exact_passage": {s: [] for s in systems}}
     for pair, answer_vec in zip(pairs, gold):
         similarity = embeddings @ answer_vec  # every memory vs his real answer
@@ -104,7 +116,9 @@ def evaluate_retrieval(pairs: list[dict], corpus: dict) -> dict:
         emb = srv.embedder.encode([q], normalize_embeddings=True).tolist()
         ranked = {
             "semantic": srv.collection.query(query_embeddings=emb, n_results=10, include=[])["ids"][0],
-            "chronus_pipeline": [m[2].get("memory_id", "") for m in anchor_first(srv.retrieve(q) or [])],
+            "chronus_pipeline": [m[2].get("memory_id", "") for m in anchor_first(srv.retrieve(q, mode="dense") or [])],
+            "pipeline_no_importance": _without_importance(q),
+            "hybrid": [m[2].get("memory_id", "") for m in anchor_first(srv.retrieve(q, mode="hybrid") or [])],
             "bm25": [ids[i] for i, _ in bm25.top(q, 10)],
         }
         for definition, relevant in relevance.items():

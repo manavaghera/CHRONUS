@@ -83,6 +83,7 @@ def test_figure_profiles_answer_and_feed_the_ai_voice(srv):
 
 def test_every_figure_has_checked_basic_facts():
     import json
+
     from services import personas as ps
     figures = json.loads((ps.ROOT / "figures" / "sources.json").read_text(encoding="utf-8"))["figures"]
     for figure in figures:

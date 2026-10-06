@@ -23,7 +23,8 @@ import json
 import threading
 from datetime import datetime
 
-from fastapi import APIRouter, HTTPException, Path as PathParam
+from fastapi import APIRouter, HTTPException
+from fastapi import Path as PathParam
 from fastapi.responses import Response
 from pydantic import BaseModel, Field
 

@@ -18,13 +18,15 @@ ENV/
 chroma_db/
 *.log
 *.jsonl
+# ...except the memory units: the pipeline output tests and embedding read
+!04-Memory-Units/elon_musk_memory_units.jsonl
 .obsidian/
 
 # Voice output (large files)
 07-Voice/output/
 
 # Memory unit backups
-04-Memory-Units/*BACKUP*/
+04-Memory-Units/*BACKUP*
 04-Memory-Units/*.bak
 
 # IDE

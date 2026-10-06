@@ -15,7 +15,11 @@ def units():
 
 
 def test_superseded_files_still_exist():
-    missing = [p for p in merge_sources.SUPERSEDED_FILES if not (merge_sources.CLEANED_DIR / p).exists()]
+    # Books/ (copyrighted biography excerpts) is kept locally, not in the repo
+    local_only = ("Books/",)
+    missing = [p for p in merge_sources.SUPERSEDED_FILES
+               if not (merge_sources.CLEANED_DIR / p).exists()
+               and not (p.startswith(local_only) and not (merge_sources.CLEANED_DIR / "Books").exists())]
     assert not missing, f"renamed? the skip list no longer matches: {missing}"
 
 

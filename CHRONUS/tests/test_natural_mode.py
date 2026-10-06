@@ -3,7 +3,7 @@
 import pytest
 
 import services.natural_mode as nm
-from post_process import scrub
+from services.post_process import scrub
 
 
 @pytest.fixture(scope="module")

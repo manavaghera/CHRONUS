@@ -23,21 +23,25 @@ from fastapi.responses import Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 
+from services import access, hybrid, tts, voice_sandbox
+from services import personas as ps
+from services.embedder import LazyEmbedder
+
 # ---- Response pipelines ----
 from services.mix_method import generate_mix_method_response  # CHRONUS core contribution
 from services.natural_mode import generate_natural_response
-from services.provenance import anchor_first, content_words, format_source_citation, grounding_score
-from services import access
-from services import personas as ps
-from services import tts
-from services import voice_sandbox
-from services.embedder import LazyEmbedder
-# Quick profile answers; re-exported for tests and evaluation scripts
-from services.profile import (BASIC_INFO_PATTERNS, BASIC_PROFILE, check_basic_info, get_profile,  # noqa: F401
-                              profile_context_block)
 from services.persona_routes import InterviewAnswer, embed_interview_answer, make_router
-from services.qa_log import QA_LOG_PATH, log_qa  # noqa: F401  (tests patch api_server.log_qa)
 
+# Quick profile answers; re-exported for tests and evaluation scripts
+from services.profile import (  # noqa: F401
+    BASIC_INFO_PATTERNS,
+    BASIC_PROFILE,
+    check_basic_info,
+    get_profile,
+    profile_context_block,
+)
+from services.provenance import anchor_first, content_words, format_source_citation, grounding_score
+from services.qa_log import QA_LOG_PATH, log_qa  # noqa: F401  (tests patch api_server.log_qa)
 
 # ---- Logging ----
 logging.basicConfig(level=logging.INFO)
@@ -70,6 +74,8 @@ except Exception:
 
 # ---- Embedding model: loaded on first use (services/embedder.py) ----
 embedder = LazyEmbedder(config.EMBEDDING_MODEL, device="cpu")
+# Optional cross-encoder reranker (config.RERANKER_MODEL; off by default)
+reranker = hybrid.Reranker(config.RERANKER_MODEL) if config.RERANKER_MODEL else None
 
 
 # ---- Mix Method identity card loader (models/ directory) ----
@@ -178,59 +184,74 @@ def retrieval_query(query: str, history: list[ChatTurn]) -> str:
 
 
 def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = None,
-             threshold: float | None = None) -> Optional[list[tuple]]:
-    """Retrieve top-K memories with importance bias from *memory* (a persona's
-    ChromaDB collection; defaults to the default persona's). *where* is a
-    ChromaDB metadata filter, e.g. to hold a source out during evaluation.
+             threshold: float | None = None, mode: str | None = None) -> Optional[list[tuple]]:
+    """Retrieve top-K memories from *memory* (a persona's ChromaDB collection;
+    defaults to the default persona's). *where* is a ChromaDB metadata
+    filter, e.g. to hold a source out during evaluation. *mode*: "dense"
+    (semantic search + importance bias) or "hybrid" (semantic + BM25 fused
+    by reciprocal rank, services/hybrid.py); default config.RETRIEVAL_MODE.
 
     Returns None when no memory passes the distance threshold, signalling
     insufficient evidence to the caller.
 
-    Order matters: filter FIRST by raw distance, THEN re-rank the survivors
-    by importance-adjusted distance, THEN take top-n, so importance can
-    never rescue a memory past the threshold.
+    Order matters: filter FIRST by raw distance, THEN rank the survivors,
+    THEN take top-n, so neither importance nor keyword matches can ever
+    rescue a memory past the threshold.
     """
+    memory = memory or collection
+    mode = mode or config.RETRIEVAL_MODE
     q_emb = embedder.encode([query], normalize_embeddings=True).tolist()
-    raw = (memory or collection).query(query_embeddings=q_emb, n_results=n * 4, where=where)
-    docs = raw["documents"][0]
-    metas = raw["metadatas"][0]
-    dists = raw["distances"][0]
+    raw = memory.query(query_embeddings=q_emb, n_results=n * 4, where=where)
+    candidates = list(zip(raw["ids"][0], raw["documents"][0], raw["metadatas"][0], raw["distances"][0]))
+    dense_order = [c[0] for c in candidates]
+    keyword_order: list[str] = []
+    if mode == "hybrid":
+        keyword_order = hybrid.keyword_candidates(memory, query, n * 4, where)
+        found = set(dense_order)
+        candidates += hybrid.fetch_with_distance(memory, [i for i in keyword_order if i not in found], q_emb[0])
 
-    # 1. Raw ChromaDB results, skipping exact duplicate texts (e.g. the same
-    # letter uploaded twice)
+    # 1. Skip exact duplicate texts (e.g. the same letter uploaded twice)
     scored, seen = [], set()
-    for doc, meta, dist in zip(docs, metas, dists):
+    for mid, doc, meta, dist in candidates:
         key = " ".join(doc.lower().split())
         if key not in seen:
             seen.add(key)
-            scored.append((doc, meta or {}, dist))
+            scored.append((mid, doc, meta or {}, dist))
 
     # 2. Keep only memories passing the raw-distance threshold. *threshold*:
     # a persona's own calibrated value (persona.json), else the global one.
     # (`is None`, not `or`: a persona threshold of 0.0 is a real setting.)
     limit = DISTANCE_THRESHOLD if threshold is None else threshold
-    passing = [(doc, meta, dist) for doc, meta, dist in scored if dist <= limit]
+    passing = [c for c in scored if c[3] <= limit]
     # Very short memories ("Mars is The New World") sit close to short
     # questions in embedding space but carry almost no content; drop them
     # whenever longer evidence also passed the threshold.
-    substantive = [p for p in passing if len(p[0].split()) >= config.MIN_EVIDENCE_WORDS]
+    substantive = [c for c in passing if len(c[1].split()) >= config.MIN_EVIDENCE_WORDS]
     passing = substantive or passing
-
-    # 3. Re-rank the survivors by adjusted (importance-biased) distance
-    passing_with_adjusted = [
-        (dist - (meta.get("importance_score", 1) * IMPORTANCE_WEIGHT), doc, meta, dist)
-        for doc, meta, dist in passing
-    ]
-    passing_with_adjusted.sort(key=lambda x: x[0])
-
-    # 4. Top-n; None when nothing passed the threshold
-    result = passing_with_adjusted[:n]
-    if not result:
+    if not passing:
         return None
 
-    # 5. Drop memories that match much worse than the best one. Small custom
-    # models otherwise fill the 2nd/3rd slots with unrelated text (~0.47
-    # behind the best); on Elon's corpus supporting memories sit <= 0.20 behind.
+    # 3. Rank the survivors: importance-biased distance (dense), or fused
+    # semantic + keyword rank (hybrid). Tuples: (rank_key, doc, meta, dist)
+    if mode == "hybrid":
+        fused = hybrid.rrf(dense_order, keyword_order)
+        ranked = sorted(((-fused.get(mid, 0.0), doc, meta, dist) for mid, doc, meta, dist in passing),
+                        key=lambda x: (x[0], x[3]))
+    else:
+        ranked = sorted(((dist - (meta.get("importance_score", 1) * IMPORTANCE_WEIGHT), doc, meta, dist)
+                         for _, doc, meta, dist in passing), key=lambda x: x[0])
+
+    # 4. Optional cross-encoder rerank of the best few (config.RERANKER_MODEL)
+    if reranker is not None and len(ranked) > 1:
+        head = ranked[: n * 2]
+        scores = reranker.scores(query, [r[1] for r in head])
+        ranked = [r for _, r in sorted(zip(scores, head), key=lambda x: -x[0])] + ranked[n * 2:]
+
+    # 5. Top-n, then drop memories that match much worse than the best one.
+    # Small custom models otherwise fill the 2nd/3rd slots with unrelated
+    # text (~0.47 behind the best); on Elon's corpus supporting memories sit
+    # <= 0.20 behind.
+    result = ranked[:n]
     best = min(r[3] for r in result)
     return [r for r in result if r[3] <= best + config.SUPPORT_MARGIN]
 
@@ -293,6 +314,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
             style_notes=persona.get("style_notes"),
             # The local LoRA adapter (lora/train_lora.py) was trained on Elon's words only
             use_adapter=persona["id"] == "elon_musk",
+            embedder=embedder,
         )
         sources = result["sources"]
     else:

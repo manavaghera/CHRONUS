@@ -38,8 +38,9 @@ def _full_setup_available() -> bool:
     if os.getenv("CHRONUS_TEST_SAMPLE") == "1":
         return False
     try:
-        import sentence_transformers  # noqa: F401
         import chromadb
+        import sentence_transformers  # noqa: F401
+
         from config import config
         return chromadb.PersistentClient(path=config.CHROMA_PATH).get_collection(config.COLLECTION_NAME).count() > 0
     except Exception:
