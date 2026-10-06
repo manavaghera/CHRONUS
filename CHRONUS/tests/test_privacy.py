@@ -85,11 +85,10 @@ def test_pruning_never_deadlocks_with_log_writers(client, logs, monkeypatch, srv
             pid = client.post("/personas", json={"name": "pytest Retention", "relationship": "self", "consent": True}).json()["id"]
             d = client.post("/chat", json={"query": "Why Mars?"}).json()
             fid = client.post("/feedback", json={"entry_id": d["id"], "persona": "elon_musk", "rating": "up"}).json()["id"]
-            client.get("/review")
-            client.post(f"/review/{fid}/dismiss")
-            client.get("/insights/analytics")
-            client.delete(f"/personas/{pid}")  # purges its log entries and feedback
-            client.delete("/history")
+            for r in (client.get("/review"), client.post(f"/review/{fid}/dismiss"), client.get("/insights/analytics"),
+                      client.delete(f"/personas/{pid}"),  # purges its log entries and feedback
+                      client.delete("/history")):
+                assert r.status_code == 200, (r.request.url, r.status_code, r.text)
         except Exception as e:  # pragma: no cover - reported below
             failures.append(e)
 

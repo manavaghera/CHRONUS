@@ -87,6 +87,15 @@ def no_qa_log(srv, monkeypatch):
     monkeypatch.setattr(srv, "log_qa", lambda *a, **k: None)
 
 
+@pytest.fixture(autouse=True)
+def fresh_rate_limits(srv, monkeypatch):
+    """Each test starts with its own login/request counts, so the sign-ins
+    of one test never use up another's (services/access.py limiter)."""
+    from services import access
+
+    monkeypatch.setattr(access, "limiter", access._Limiter())
+
+
 @pytest.fixture(scope="session", autouse=True)
 def guard_real_data(srv):
     before = srv.collection.count()
