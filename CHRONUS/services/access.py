@@ -103,6 +103,10 @@ class _Limiter:
             q.append(now)
             return True
 
+    def clear(self, key: str) -> None:
+        with self.lock:
+            self.hits.pop(key, None)
+
 
 limiter = _Limiter()
 
@@ -163,20 +167,25 @@ def make_router(config) -> APIRouter:
         if not accounts and not config.ACCESS_CODE:
             return {"signed_in": True, "user": None}
         client = request.client.host if request.client else "unknown"
-        if not limiter.allow(f"login:{client}", 10):
-            raise HTTPException(status_code=429, detail="Too many attempts; please wait a minute")
+        key = f"login:{client}"
         if accounts:
             name = (body.user or "").strip().lower()
             expected = accounts.get(name)
             # compare even for unknown names, so timing doesn't reveal which names exist
-            if not hmac.compare_digest(body.code, expected or "\0" * len(body.code)) or not expected:
+            ok = hmac.compare_digest(body.code, expected or "\0" * len(body.code)) and bool(expected)
+            if not ok:
+                if not limiter.allow(key, 10):
+                    raise HTTPException(status_code=429, detail="Too many attempts; please wait a minute")
                 raise HTTPException(status_code=401, detail="Wrong name or access code")
             token = _token(expected, name)
         else:
             name = None
             if not hmac.compare_digest(body.code, config.ACCESS_CODE):
+                if not limiter.allow(key, 10):
+                    raise HTTPException(status_code=429, detail="Too many attempts; please wait a minute")
                 raise HTTPException(status_code=401, detail="Wrong access code")
             token = _token(config.ACCESS_CODE)
+        limiter.clear(key)
         response.set_cookie(COOKIE, token, httponly=True, samesite="strict", max_age=30 * 24 * 3600)
         return {"signed_in": True, "user": name}
 
