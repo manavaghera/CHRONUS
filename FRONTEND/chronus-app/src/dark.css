@@ -1,0 +1,83 @@
+/* ---- Dark theme ----
+   Follows the system setting; the header toggle can force light or dark
+   (html[data-theme]). Colours are tokens (index.css :root), so this mostly
+   redefines them; the overrides below cover surfaces that are drawn with
+   fixed colours (hero, mockups, user bubbles, dark buttons). Accent
+   #c97a42 passes the chart checks on the dark surface and has 5.6:1
+   text contrast. */
+:root[data-theme="dark"] {
+  --bg: #141312; --fg: #ece9e4; --muted: #9a958e; --subtle: #6f6a64;
+  --line: #2e2b28; --surface: #1c1b19; --surface-2: #2a2825; --card: #1f1d1b;
+  --ink-rgb: 236 233 228; --paper-rgb: 34 32 30; --surface-rgb: 40 38 35; --on-ink: #111;
+  --accent: #c97a42; --accent-from: #e0945c; --accent-to: #d98a52;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141312; --fg: #ece9e4; --muted: #9a958e; --subtle: #6f6a64;
+    --line: #2e2b28; --surface: #1c1b19; --surface-2: #2a2825; --card: #1f1d1b;
+    --ink-rgb: 236 233 228; --paper-rgb: 34 32 30; --surface-rgb: 40 38 35; --on-ink: #111;
+    --accent: #c97a42; --accent-from: #e0945c; --accent-to: #d98a52;
+    color-scheme: dark;
+  }
+}
+
+/* Fixed-colour surfaces: same rules for both ways of turning dark mode on */
+:root[data-theme="dark"] .hero { background: #171513; }
+:root[data-theme="dark"] .hero-bg {
+  background: radial-gradient(60rem 36rem at 78% 18%, rgba(201,122,66,.18), transparent 60%),
+    radial-gradient(40rem 30rem at 8% 92%, rgba(201,122,66,.10), transparent 60%),
+    linear-gradient(180deg, #181614 0%, #121110 100%);
+}
+:root[data-theme="dark"] .train-step-visual { background: radial-gradient(22rem 14rem at 85% 0%, rgba(201,122,66,.16), transparent 70%), linear-gradient(160deg, #1d1b18, #171513); }
+:root[data-theme="dark"] .pill-btn--dark .pill-inner,
+:root[data-theme="dark"] .demo-send-btn,
+:root[data-theme="dark"] .seg button.is-on { background: #ece9e4; color: #111; }
+:root[data-theme="dark"] .pill-btn--dark .pill-badge { background: #111; color: #ece9e4; }
+:root[data-theme="dark"] .demo-msg--user .demo-msg-bubble,
+:root[data-theme="dark"] .ap-q,
+:root[data-theme="dark"] .mock-bubble--you { background: #34302c; color: #f3efe9; }
+:root[data-theme="dark"] .demo-msg--assistant .demo-msg-avatar,
+:root[data-theme="dark"] .demo-avatar,
+:root[data-theme="dark"] .model-emblem,
+:root[data-theme="dark"] .ap-avatar { background: #0b0a09; }
+:root[data-theme="dark"] .demo-msg-bubble.is-support,
+:root[data-theme="dark"] .helplines li { background: #18202e !important; border-color: rgba(96,140,220,.35) !important; }
+:root[data-theme="dark"] .login-gate { background: rgba(20,19,18,.92); }
+:root[data-theme="dark"] .viewer-panel, :root[data-theme="dark"] .modal-panel { background: var(--card); }
+:root[data-theme="dark"] .demo-voice { background: rgba(34,197,94,.16); color: #6ee7a0; }
+:root[data-theme="dark"] .demo-voice--third_party { background: rgba(234,179,8,.16); color: #f2cc60; }
+:root[data-theme="dark"] .demo-voice--synthesized { background: rgba(236,72,153,.16); color: #f59ac8; }
+:root[data-theme="dark"] .page-alert { background: rgba(220,38,38,.12); color: #fca5a5; }
+
+/* The system-dark case mirrors the [data-theme=dark] overrides */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero { background: #171513; }
+  :root:not([data-theme="light"]) .hero-bg {
+    background: radial-gradient(60rem 36rem at 78% 18%, rgba(201,122,66,.18), transparent 60%),
+      radial-gradient(40rem 30rem at 8% 92%, rgba(201,122,66,.10), transparent 60%),
+      linear-gradient(180deg, #181614 0%, #121110 100%);
+  }
+  :root:not([data-theme="light"]) .train-step-visual { background: radial-gradient(22rem 14rem at 85% 0%, rgba(201,122,66,.16), transparent 70%), linear-gradient(160deg, #1d1b18, #171513); }
+  :root:not([data-theme="light"]) .pill-btn--dark .pill-inner,
+  :root:not([data-theme="light"]) .demo-send-btn,
+  :root:not([data-theme="light"]) .seg button.is-on { background: #ece9e4; color: #111; }
+  :root:not([data-theme="light"]) .pill-btn--dark .pill-badge { background: #111; color: #ece9e4; }
+  :root:not([data-theme="light"]) .demo-msg--user .demo-msg-bubble,
+  :root:not([data-theme="light"]) .ap-q,
+  :root:not([data-theme="light"]) .mock-bubble--you { background: #34302c; color: #f3efe9; }
+  :root:not([data-theme="light"]) .demo-msg--assistant .demo-msg-avatar,
+  :root:not([data-theme="light"]) .demo-avatar,
+  :root:not([data-theme="light"]) .model-emblem,
+  :root:not([data-theme="light"]) .ap-avatar { background: #0b0a09; }
+  :root:not([data-theme="light"]) .demo-msg-bubble.is-support,
+  :root:not([data-theme="light"]) .helplines li { background: #18202e !important; border-color: rgba(96,140,220,.35) !important; }
+  :root:not([data-theme="light"]) .login-gate { background: rgba(20,19,18,.92); }
+  :root:not([data-theme="light"]) .demo-voice { background: rgba(34,197,94,.16); color: #6ee7a0; }
+  :root:not([data-theme="light"]) .demo-voice--third_party { background: rgba(234,179,8,.16); color: #f2cc60; }
+  :root:not([data-theme="light"]) .demo-voice--synthesized { background: rgba(236,72,153,.16); color: #f59ac8; }
+  :root:not([data-theme="light"]) .page-alert { background: rgba(220,38,38,.12); color: #fca5a5; }
+}
+
+/* Theme toggle in the header */
+.theme-toggle { width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: var(--r-pill); border: 1px solid var(--line); background: var(--card); color: var(--fg); font-size: .95rem; }

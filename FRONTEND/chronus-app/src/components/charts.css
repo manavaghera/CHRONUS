@@ -13,7 +13,7 @@
 .chart-bar.is-pickable { cursor: pointer; }
 .chart-bar:focus { outline: none; }
 .chart-bar:focus-visible rect { stroke: var(--accent); stroke-width: 1; }
-.chart-tip { position: absolute; pointer-events: none; display: flex; flex-direction: column; gap: .1rem; min-width: 7rem; padding: .4rem .6rem; background: #fff; border: 1px solid var(--line); border-radius: .5rem; box-shadow: 0 8px 20px -10px rgba(0,0,0,.25); font-size: .72rem; color: rgba(17,17,17,.65); }
+.chart-tip { position: absolute; pointer-events: none; display: flex; flex-direction: column; gap: .1rem; min-width: 7rem; padding: .4rem .6rem; background: var(--card); border: 1px solid var(--line); border-radius: .5rem; box-shadow: 0 8px 20px -10px rgba(0,0,0,.25); font-size: .72rem; color: rgb(var(--ink-rgb) / .65); }
 .chart-tip strong { font-size: .9rem; color: var(--fg); font-weight: 600; }
 .chart-table { width: 100%; border-collapse: collapse; font-size: .8rem; }
 .chart-table th, .chart-table td { text-align: left; padding: .3rem .5rem; border-bottom: 1px solid var(--line); font-weight: 400; }
@@ -22,12 +22,12 @@
 
 .barlist { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
 .barlist li { display: grid; grid-template-columns: minmax(6rem, 40%) 1fr auto; align-items: center; gap: .75rem; font-size: .8rem; }
-.barlist-label { color: rgba(17,17,17,.75); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.barlist-label { color: rgb(var(--ink-rgb) / .75); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .barlist-track { height: .5rem; border-radius: 2px; background: transparent; }
 .barlist-track span { display: block; height: 100%; min-width: 2px; background: var(--accent); border-radius: 0 4px 4px 0; }
 .barlist-value { color: var(--fg); font-weight: 600; font-variant-numeric: tabular-nums; min-width: 2.5rem; text-align: right; }
 
 .stat-tile { display: flex; flex-direction: column; gap: .25rem; padding: 1rem 1.125rem; border: 1px solid var(--line); border-radius: var(--r-card-sm); background: var(--bg); min-width: 0; }
-.stat-label { font-size: .75rem; color: rgba(17,17,17,.6); }
+.stat-label { font-size: .75rem; color: rgb(var(--ink-rgb) / .6); }
 .stat-value { font-size: 1.75rem; font-weight: 600; letter-spacing: -.02em; color: var(--fg); }
 .stat-sub { font-size: .72rem; color: var(--muted); }

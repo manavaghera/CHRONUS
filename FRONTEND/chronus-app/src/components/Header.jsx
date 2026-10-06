@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react'
+import { applyTheme, storedTheme } from '../theme'
+
+const NEXT = { auto: 'light', light: 'dark', dark: 'auto' }
+const ICON = { auto: '◐', light: '☀', dark: '☾' }
+const LABEL = { auto: 'Theme: follows your system', light: 'Theme: light', dark: 'Theme: dark' }
 
 const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
 
 export default function Header({ go, openNav }) {
   const [time, setTime] = useState('')
   const [date, setDate] = useState('')
+  const [theme, setTheme] = useState(storedTheme)
+  const cycleTheme = () => { const t = NEXT[theme]; applyTheme(t); setTheme(t) }
 
   useEffect(() => {
     function tick() {
@@ -38,6 +45,7 @@ export default function Header({ go, openNav }) {
             <span className="clock-dot">&bull;</span>
             <span className="clock-date">{date}</span>
           </div>
+          <button className="theme-toggle" onClick={cycleTheme} title={`${LABEL[theme]} (click to change)`} aria-label={`${LABEL[theme]}. Change theme`}>{ICON[theme]}</button>
           <button className="menu-btn" onClick={openNav}>
             <span className="menu-label">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width=".875rem" height=".875rem"><path d="M4 6h16M4 12h16M4 18h16"/></svg>

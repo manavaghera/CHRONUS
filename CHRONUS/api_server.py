@@ -60,7 +60,7 @@ from services.profile import (  # noqa: F401
     get_profile,
     profile_context_block,
 )
-from services.provenance import anchor_first, content_words, format_source_citation, grounding_score
+from services.provenance import FIRST_PERSON, anchor_first, content_words, format_source_citation, grounding_score, voice_of
 from services.qa_log import QA_LOG_PATH, log_qa  # noqa: F401  (tests patch api_server.log_qa)
 
 # ---- Logging ----
@@ -170,6 +170,8 @@ class ChatResponse(BaseModel):
     id: str = ""
     # Crisis support replies (services/wellbeing.py) list helplines
     helplines: list[dict] = Field(default_factory=list)
+    # Why this confidence: closest match, how many sources and whose words
+    why: dict = Field(default_factory=dict)
     # Multilingual (services/translate.py): language of `answer`, and the
     # English original when it was translated
     language: str = "en"
@@ -308,6 +310,21 @@ def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = N
     return [r for r in result if r[3] <= best + config.SUPPORT_MARGIN]
 
 
+def _match(distance: float) -> int:
+    """Cosine distance as the "match %" the website shows."""
+    return max(0, round((1 - distance) * 100))
+
+
+def closest_distance(query: str, memory, where: dict | None = None) -> float | None:
+    """Distance of the single closest memory (explains an "I don't know")."""
+    if memory.count() == 0:
+        return None
+    raw = memory.query(query_embeddings=embedder.encode([query], normalize_embeddings=True).tolist(),
+                       n_results=1, where=where, include=["distances"])
+    dists = raw["distances"][0]
+    return dists[0] if dists else None
+
+
 def calculate_faithfulness(response: str, memories: list[tuple]) -> float:
     """Share (0-1) of the answer's content words found in its evidence
     (services.provenance.grounding_score)."""
@@ -345,9 +362,13 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
 
     # True uncertainty fallback: no memory passed the threshold, so there is
     # insufficient evidence. Answer without calling the LLM at all.
+    limit = persona.get("distance_threshold")
+    limit = DISTANCE_THRESHOLD if limit is None else limit
     if memories is None:
+        closest = closest_distance(retrieval_query(query, history), memory, where)
+        why = {"threshold_match": _match(limit), "best_match": None if closest is None else _match(closest), "sources": 0}
         return {"response": FALLBACK_ANSWER, "sources": [], "faithfulness": 0.0, "confidence": "low",
-                "fallback": True, "mode": "fallback",
+                "fallback": True, "mode": "fallback", "why": why,
                 "notice": f"Nothing dated {era} covers this." if era else ""}
 
     # "natural"   : LLM answer in the persona's voice, grounded in evidence
@@ -398,6 +419,8 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
 
     if era:
         notice = (notice + " " if notice else "") + f"Time travel: only memories dated {era}."
+    why = {"best_match": _match(min(m[3] for m in evidence)), "threshold_match": _match(limit),
+           "sources": len(evidence), "own_words": sum(voice_of(m[2]) == FIRST_PERSON for m in evidence)}
     # Natural mode scores itself against evidence + profile (its grounding guard)
     return {
         "response": result["response"],
@@ -407,6 +430,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
         "fallback": result.get("fallback", False),
         "mode": result.get("mode", mode),
         "notice": notice,
+        "why": why,
     }
 
 
@@ -524,6 +548,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
         id=entry_id or "",
         language=language,
         original_answer=original,
+        why=result.get("why", {}),
     )
     if cache_key is not None and "Couldn't translate" not in notice:
         answer_cache.put(cache_key, response.model_dump())

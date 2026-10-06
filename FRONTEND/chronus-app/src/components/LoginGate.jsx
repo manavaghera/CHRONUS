@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { api, LOGIN_EVENT } from '../api'
+import useDialog from '../useDialog'
 
 // Shown when the server has an access code (CHRONUS_ACCESS_CODE) and this
 // browser hasn't signed in yet. The code is checked by the server, which
@@ -11,6 +12,7 @@ export default function LoginGate() {
   const [code, setCode] = useState('')
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
+  const dialogRef = useDialog(open, () => {})
 
   useEffect(() => {
     api.authStatus().then(s => { setAccounts(!!s.accounts); setOpen(s.required && !s.signed_in) }).catch(() => {})
@@ -27,7 +29,7 @@ export default function LoginGate() {
   }
   return (
     <div className="login-gate" role="dialog" aria-modal="true" aria-labelledby="login-title">
-      <form className="login-card" onSubmit={submit}>
+      <form className="login-card" ref={dialogRef} onSubmit={submit}>
         <div className="eyebrow eyebrow--accent">Private server</div>
         <h2 id="login-title">{accounts ? 'Sign in' : 'Enter the access code'}</h2>
         <p className="page-note">{accounts ? 'Each person has their own name and code, and sees only the models they made.' : 'This CHRONUS server is protected. Ask whoever runs it for the code.'}</p>

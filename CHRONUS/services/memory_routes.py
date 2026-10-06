@@ -155,6 +155,47 @@ def make_router(client, embedder) -> APIRouter:
             raise HTTPException(status_code=404, detail=f"No upload called '{filename}'")
         return {"deleted": filename, "memories_removed": removed}
 
+    @router.get("/about")
+    def about(persona_id: str = PERSONA_PATH):
+        """What this model is made of: memories by voice and source, date
+        range, its "I don't know" threshold, and (custom models) consent."""
+        from collections import Counter
+
+        from config import config
+
+        persona = _persona(persona_id)
+        collection = ps.get_collection(client, persona)
+        voices, types, files = Counter(), Counter(), Counter()
+        offset = 0
+        while True:
+            page = collection.get(include=["metadatas"], limit=2000, offset=offset)
+            if not page["ids"]:
+                break
+            for meta in page["metadatas"]:
+                meta = meta or {}
+                voices[voice_of(meta)] += 1
+                types[meta.get("source_type", "unknown")] += 1
+                files[meta.get("source_file", "unknown")] += 1
+            offset += 2000
+        years = timeline.histogram(collection)
+        dated = [int(y) for y in years["years"]]
+        out = {
+            "id": persona["id"], "name": persona["name"], "kind": persona["kind"],
+            "description": persona.get("description", ""), "memories": collection.count(),
+            "by_voice": dict(voices), "by_type": dict(types.most_common()),
+            "top_sources": [{"source_file": f, "memories": n} for f, n in files.most_common(8)],
+            "years": {"first": min(dated), "last": max(dated)} if dated else None,
+            "threshold": persona.get("distance_threshold", config.DISTANCE_THRESHOLD),
+            "sources": persona.get("sources", []), "license": persona.get("license", ""),
+            "memorial": bool(persona.get("memorial")),
+        }
+        if persona["kind"] == "custom":
+            out.update(consent_given_at=(persona.get("consent") or {}).get("given_at", ""),
+                       consent_statement=(persona.get("consent") or {}).get("statement", ""),
+                       created_at=persona.get("created_at", ""), built_at=persona.get("built_at", ""),
+                       allow_cloud_llm=bool(persona.get("allow_cloud_llm")))
+        return out
+
     @router.get("/timeline")
     def get_timeline(persona_id: str = PERSONA_PATH):
         return timeline.histogram(ps.get_collection(client, _persona(persona_id)))

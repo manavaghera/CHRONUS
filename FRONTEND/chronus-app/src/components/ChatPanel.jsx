@@ -121,6 +121,14 @@ function Msg({ m, voiceLabels, voice, personaId, onOpenSource }) {
           <details className="original-answer"><summary>Original (English)</summary><AnswerText text={m.original} sources={m.sources} onCite={onOpenSource} /></details>
         )}
         {m.meta && <div className="demo-msg-source">{m.meta}</div>}
+        {m.why && m.why.threshold_match != null && (
+          <details className="why">
+            <summary>Why this confidence?</summary>
+            {m.why.sources === 0
+              ? <p>{m.why.best_match == null ? 'This model has no memories to search yet.' : `The closest memory matched ${m.why.best_match}%, and this model only answers above ${m.why.threshold_match}%. So instead of guessing, it says it doesn't know.`}</p>
+              : <p>The best source matches the question {m.why.best_match}% (this model answers from {m.why.threshold_match}% up). {m.why.sources} source{m.why.sources === 1 ? '' : 's'} used, {m.why.own_words} in their own words. Higher matches and own words mean higher confidence.</p>}
+          </details>
+        )}
         <Sources sources={m.sources} voiceLabels={voiceLabels} onOpen={onOpenSource} />
         {m.sources && !m.error && !m.draft && (
           <div className="demo-voice-row">
@@ -159,6 +167,7 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
   const [viewer, setViewer] = useState(null)  // { source, index }
   const [conversation, setConversation] = useState(false)
   const [nudge, setNudge] = useState(false)
+  const [announce, setAnnounce] = useState('')
   const history = useRef(persist ? (loadHistory(persona.id) || []).filter(m => !m.meta?.startsWith('Model')).slice(-MAX_HISTORY)
     .map(m => ({ role: m.type === 'user' ? 'user' : 'assistant', content: plain(m.text).slice(0, 2000) })) : [])
   const bodyRef = useRef(null)
@@ -230,8 +239,9 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
       const meta = d.mode === 'support' ? d.notice : [d.notice, `${MODE_LABELS[d.mode] || d.mode} · ${d.confidence} confidence`].filter(Boolean).join(' · ')
       setMsgs(p => [...p.filter(m => !m.draft), {
         type: 'assistant', text: d.answer, meta, sources: d.sources, id: d.id, mode: d.mode,
-        helplines: d.helplines, language: d.language, original: d.original_answer || '',
+        helplines: d.helplines, language: d.language, original: d.original_answer || '', why: d.why,
       }])
+      setAnnounce(`${persona.name}: ${plain(d.answer)}`)  // read out by screen readers once, not token by token
       history.current = [...history.current, { role: 'user', content: query }, { role: 'assistant', content: plain(d.answer).slice(0, 2000) }].slice(-MAX_HISTORY)
       return d
     } catch (e) {
@@ -242,7 +252,7 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
     } finally {
       setTyping(false)
     }
-  }, [mode, typing, persona.id, years, language, length])
+  }, [mode, typing, persona.id, persona.name, years, language, length])
 
   // Hands-free conversation: listen -> ask -> speak the answer -> listen again
   const converse = useCallback(async () => {
@@ -342,7 +352,8 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
         </div>
       )}
 
-      <div className="demo-chat-body" ref={bodyRef}>
+      <div className="sr-only" aria-live="polite" aria-atomic="true">{announce}</div>
+      <div className="demo-chat-body" ref={bodyRef} role="log" aria-live="off" aria-label={`Conversation with ${persona.name}`}>
         {nudge && (
           <div className="nudge" role="status">
             <p>You've been talking with {persona.name}'s {persona.memorial ? 'remembered words' : 'memories'} for a while. This is an archive, not the person. It's okay to take a break, or to talk to someone close to you.</p>

@@ -6,8 +6,21 @@ import { useEffect, useRef } from 'react'
 // canvas with no images, so nothing can fail to load. Pauses when off
 // screen or in a background tab; a single still frame for reduced motion.
 
-const ACCENT = [177, 95, 44]
-const INK = [17, 17, 17]
+import { THEME_EVENT } from '../theme'
+
+// Colours come from the theme (index.css / dark.css tokens)
+const cssRgb = (name, fallback) => {
+  const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim()
+  const parts = v.startsWith('#') ? [1, 3, 5].map(i => parseInt(v.slice(i, i + 2), 16)) : v.split(/\s+/).map(Number)
+  return parts.length === 3 && parts.every(n => Number.isFinite(n)) ? parts : fallback
+}
+let ACCENT = [177, 95, 44]
+let INK = [17, 17, 17]
+
+function readColors() {
+  ACCENT = cssRgb('--accent', [177, 95, 44])
+  INK = cssRgb('--ink-rgb', [17, 17, 17])
+}
 
 function makeNodes(w, h, count) {
   return Array.from({ length: count }, () => {
@@ -16,7 +29,7 @@ function makeNodes(w, h, count) {
       x: Math.random() * w, y: Math.random() * h,
       vx: (Math.random() - 0.5) * 0.12, vy: (Math.random() - 0.5) * 0.12,
       r: warm ? 1.6 + Math.random() * 2.2 : 1 + Math.random() * 1.4,
-      color: warm ? ACCENT : INK,
+      warm,
       alpha: warm ? 0.55 + Math.random() * 0.35 : 0.18 + Math.random() * 0.2,
       phase: Math.random() * Math.PI * 2,
     }
@@ -57,7 +70,7 @@ export default function MemoryField() {
           const d2 = dx * dx + dy * dy
           if (d2 > link * link) continue
           const k = 1 - Math.sqrt(d2) / link
-          const warm = a.color === ACCENT && b.color === ACCENT
+          const warm = a.warm && b.warm
           ctx.strokeStyle = `rgba(${(warm ? ACCENT : INK).join(',')},${(warm ? 0.32 : 0.1) * k})`
           ctx.lineWidth = warm ? 1 : 0.7
           ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke()
@@ -75,9 +88,9 @@ export default function MemoryField() {
       // nodes
       for (const n of nodes) {
         const glow = 0.75 + 0.25 * Math.sin(t / 900 + n.phase)
-        ctx.fillStyle = `rgba(${n.color.join(',')},${n.alpha * glow})`
+        ctx.fillStyle = `rgba(${(n.warm ? ACCENT : INK).join(',')},${n.alpha * glow})`
         ctx.beginPath(); ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2); ctx.fill()
-        if (n.color === ACCENT && n.r > 3) {
+        if (n.warm && n.r > 3) {
           ctx.fillStyle = `rgba(${ACCENT.join(',')},${0.08 * glow})`
           ctx.beginPath(); ctx.arc(n.x, n.y, n.r * 4, 0, Math.PI * 2); ctx.fill()
         }
@@ -125,8 +138,13 @@ export default function MemoryField() {
     }
     const onLeave = () => { pointer.active = false }
 
+    readColors()
     resize()
-    if (reduced) { draw(0); return }
+    const onTheme = () => { setTimeout(() => { readColors(); if (reduced) draw(0) }, 0) }
+    window.addEventListener(THEME_EVENT, onTheme)
+    const mq = window.matchMedia('(prefers-color-scheme: dark)')
+    mq.addEventListener?.('change', onTheme)
+    if (reduced) { draw(0); return () => { window.removeEventListener(THEME_EVENT, onTheme); mq.removeEventListener?.('change', onTheme) } }
 
     const ro = new ResizeObserver(resize)
     ro.observe(canvas)
@@ -143,6 +161,8 @@ export default function MemoryField() {
       document.removeEventListener('visibilitychange', onVis)
       window.removeEventListener('pointermove', onMove)
       document.documentElement.removeEventListener('pointerleave', onLeave)
+      window.removeEventListener(THEME_EVENT, onTheme)
+      mq.removeEventListener?.('change', onTheme)
     }
   }, [])
 

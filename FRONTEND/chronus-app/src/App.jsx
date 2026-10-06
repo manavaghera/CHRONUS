@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react'
+import { lazy, Suspense, useState, useCallback, useEffect } from 'react'
 import { useLenis, getLenis } from './hooks/useLenis'
 import PageLoader from './components/PageLoader'
 import Header from './components/Header'
@@ -17,15 +17,18 @@ import RequestModal from './components/RequestModal'
 import LoginGate from './components/LoginGate'
 import TrainYourModel from './components/TrainYourModel'
 import ModelGallery from './components/ModelGallery'
-import ModelsPage from './pages/ModelsPage'
-import ChatPage from './pages/ChatPage'
-import CreatePage from './pages/CreatePage'
-import CloneVoicePage from './pages/CloneVoicePage'
-import MemoriesPage from './pages/MemoriesPage'
-import InsightsPage from './pages/InsightsPage'
-import RoundtablePage from './pages/RoundtablePage'
 import { navigate, useRoute } from './router'
 import './pages.css'
+
+// Sub-pages load on first visit, so the landing page downloads less
+const ModelsPage = lazy(() => import('./pages/ModelsPage'))
+const ChatPage = lazy(() => import('./pages/ChatPage'))
+const CreatePage = lazy(() => import('./pages/CreatePage'))
+const CloneVoicePage = lazy(() => import('./pages/CloneVoicePage'))
+const MemoriesPage = lazy(() => import('./pages/MemoriesPage'))
+const InsightsPage = lazy(() => import('./pages/InsightsPage'))
+const RoundtablePage = lazy(() => import('./pages/RoundtablePage'))
+import './dark.css'
 
 // Header/menu targets that are pages rather than landing-page sections
 const PAGES = new Set(['models', 'create', 'clone-voice', 'roundtable', 'insights'])
@@ -98,9 +101,11 @@ function App() {
 
   return (
     <>
+      <a className="skip-link" href="#main" onClick={e => { e.preventDefault(); document.getElementById('main')?.focus() }}>Skip to content</a>
       <PageLoader stopScroll={stopScroll} onReady={handleReady} />
       <Header go={go} openNav={openNav} />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
+        <Suspense fallback={<div className="page shell page-loading" role="status">Loading…</div>}>
         {page === 'models' && <ModelsPage />}
         {page === 'chat' && <ChatPage id={id} />}
         {page === 'create' && <CreatePage key={id || 'new'} id={id} />}
@@ -108,6 +113,7 @@ function App() {
         {page === 'memories' && <MemoriesPage key={id} id={id} />}
         {page === 'insights' && <InsightsPage id={id} />}
         {page === 'roundtable' && <RoundtablePage key={id || 'all'} id={id} />}
+        </Suspense>
         {!ROUTED.has(page) && (
           <>
             <Hero scrollToId={scrollToId} />

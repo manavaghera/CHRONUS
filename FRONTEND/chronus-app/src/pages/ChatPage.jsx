@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { api } from '../api'
 import { navigate } from '../router'
 import ChatPanel from '../components/ChatPanel'
+import AboutModel from '../components/AboutModel'
 import { ELON, ELON_GREETING, ELON_QUICK, ELON_VOICES } from '../components/LiveDemo'
 
 const CUSTOM_QUICK = ['What was your favourite birthday?', 'What did you love about your work?', 'What are you most proud of?', 'What advice would you give me?']
@@ -80,6 +81,7 @@ export default function ChatPage({ id }) {
             voiceLabels={persona.id === ELON.id ? ELON_VOICES : undefined}
           />
         )}
+        {persona && !notReady && <AboutModel personaId={persona.id} />}
         {persona && <p className="demo-disclaimer">{disclaimer(persona)}</p>}
       </section>
     </div>

@@ -147,6 +147,7 @@ export const api = {
   deleteMemory: (id, memoryId) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}`, { method: 'DELETE' }),
   deleteDocument: (id, filename) => request(`/personas/${pid(id)}/documents/${pid(filename)}`, { method: 'DELETE' }),
   timeline: (id) => request(`/personas/${pid(id)}/timeline`),
+  about: (id) => request(`/personas/${pid(id)}/about`),
 
   // Feedback, review queue, gaps, analytics (services/insights.py)
   feedback: (body) => request('/feedback', { method: 'POST', body }),
