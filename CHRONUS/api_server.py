@@ -12,18 +12,20 @@ Run: python api_server.py  (http://127.0.0.1:8001, website included)
 
 import json
 import logging
+import queue
 import re
+import threading
 import time
 from pathlib import Path
 from typing import Literal, Optional
 
 import chromadb
 from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import Response
+from fastapi.responses import Response, StreamingResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
-from services import access, hybrid, tts, voice_sandbox
+from services import access, followups, hybrid, insights, memory_routes, roundtable, stt, timeline, tts, voice_sandbox
 from services import personas as ps
 from services.embedder import LazyEmbedder
 
@@ -108,6 +110,9 @@ class ChatRequest(BaseModel):
     history: list[ChatTurn] = Field(default_factory=list, max_length=20)
     # Which model to talk to: a pretrained one or a custom one (services/personas.py)
     persona: str = Field(default=config.DEFAULT_PERSONA, pattern=ps.PERSONA_ID_PATTERN)
+    # Time travel: answer only from memories dated within these years
+    year_from: Optional[int] = Field(default=None, ge=1000, le=2100)
+    year_to: Optional[int] = Field(default=None, ge=1000, le=2100)
 
     @field_validator("query")
     @classmethod
@@ -116,6 +121,12 @@ class ChatRequest(BaseModel):
         if not value:
             raise ValueError("query must not be blank")
         return value
+
+    @model_validator(mode="after")
+    def _years_in_order(self):
+        if self.year_from is not None and self.year_to is not None and self.year_from > self.year_to:
+            raise ValueError("year_from must not be after year_to")
+        return self
 
 
 class ChatResponse(BaseModel):
@@ -272,12 +283,19 @@ def _load_ready_persona(persona_id: str) -> dict:
 
 
 def answer_from_memory(query: str, persona: dict, memory, mode: str, history: list[ChatTurn],
-                       n_results: int = N_RESULTS, where: dict | None = None) -> dict:
+                       n_results: int = N_RESULTS, where: dict | None = None,
+                       years: tuple[int | None, int | None] = (None, None), on_token=None) -> dict:
     """Retrieve evidence for *query* and answer it in *mode*.
 
+    *years*: time travel, only memories dated in that range (inclusive).
     Returns a dict with response, sources, confidence, fallback, mode,
     faithfulness and notice. Shared by /chat and the roundtable.
     """
+    era = ""
+    if years != (None, None):
+        timeline.ensure_year_metadata(memory)
+        where = timeline.combine(where, timeline.year_filter(*years))
+        era = f"{years[0] or 'the start'} to {years[1] or 'today'}"
     memories = retrieve(retrieval_query(query, history), n_results, memory, where=where,
                         threshold=persona.get("distance_threshold"))
 
@@ -285,7 +303,8 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
     # insufficient evidence. Answer without calling the LLM at all.
     if memories is None:
         return {"response": FALLBACK_ANSWER, "sources": [], "faithfulness": 0.0, "confidence": "low",
-                "fallback": True, "mode": "fallback", "notice": ""}
+                "fallback": True, "mode": "fallback",
+                "notice": f"Nothing dated {era} covers this." if era else ""}
 
     # "natural"   : LLM answer in the persona's voice, grounded in evidence
     #               (falls back to Mix Method if the LLM fails or invents).
@@ -315,6 +334,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
             # The local LoRA adapter (lora/train_lora.py) was trained on Elon's words only
             use_adapter=persona["id"] == "elon_musk",
             embedder=embedder,
+            on_token=on_token,
         )
         sources = result["sources"]
     else:
@@ -329,6 +349,8 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
         # citations cover exactly the evidence used, in the same order.
         sources = [format_source_citation(meta, doc, dist) for _, doc, meta, dist in evidence]
 
+    if era:
+        notice = (notice + " " if notice else "") + f"Time travel: only memories dated {era}."
     # Natural mode scores itself against evidence + profile (its grounding guard)
     return {
         "response": result["response"],
@@ -342,16 +364,13 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
 
 
 # ---- Endpoints ----
-@app.post("/chat", response_model=ChatResponse)
-def chat(req: ChatRequest):
-    """Answer a question as the chosen persona, grounded in its memories.
-
-    Plain `def`: FastAPI runs it in a worker thread, so a slow LLM call
-    doesn't freeze other requests.
-    """
+def respond(req: ChatRequest, on_token=None) -> ChatResponse:
+    """Answer *req* (shared by /chat and /chat/stream). *on_token* receives
+    the AI voice's draft as it is generated."""
     started = time.perf_counter()
     persona = _load_ready_persona(req.persona)
     memory = ps.get_collection(client, persona)
+    years = (req.year_from, req.year_to)
 
     # Simple profile facts skip retrieval. A question that also asks
     # something else ("When were you born and why did you start SpaceX?")
@@ -360,7 +379,8 @@ def chat(req: ChatRequest):
     if basic and not basic.get("remainder"):
         result = {**basic, "faithfulness": 1.0, "notice": ""}
     elif basic:
-        rest = answer_from_memory(basic["remainder"], persona, memory, req.mode, req.history, req.n_results)
+        rest = answer_from_memory(basic["remainder"], persona, memory, req.mode, req.history, req.n_results,
+                                  years=years, on_token=on_token)
         result = {
             **rest,
             "response": f"{basic['response']}\n\n{rest['response']}",
@@ -369,7 +389,8 @@ def chat(req: ChatRequest):
             "fallback": False,
         }
     else:
-        result = answer_from_memory(req.query, persona, memory, req.mode, req.history, req.n_results)
+        result = answer_from_memory(req.query, persona, memory, req.mode, req.history, req.n_results,
+                                    years=years, on_token=on_token)
 
     # Every answer is logged, refusals included: they show what the archive
     # is missing (knowledge-gap report)
@@ -390,6 +411,53 @@ def chat(req: ChatRequest):
         notice=result.get("notice", ""),
         id=entry_id or "",
     )
+
+
+@app.post("/chat", response_model=ChatResponse)
+def chat(req: ChatRequest):
+    """Answer a question as the chosen persona, grounded in its memories.
+
+    Plain `def`: FastAPI runs it in a worker thread, so a slow LLM call
+    doesn't freeze other requests.
+    """
+    return respond(req)
+
+
+def _sse(event: str, data) -> str:
+    return f"event: {event}\ndata: {json.dumps(data, ensure_ascii=False)}\n\n"
+
+
+@app.post("/chat/stream")
+def chat_stream(req: ChatRequest):
+    """/chat as server-sent events, so AI-voice answers appear as they're written.
+
+    Events: "token" ({"text"}: the next piece of the draft), then "final"
+    (the full /chat response, which replaces the draft: it is cleaned, and
+    may be the verbatim fallback if the draft wasn't grounded), or "error".
+    Unknown or unbuilt models fail as normal HTTP errors before streaming.
+    """
+    _load_ready_persona(req.persona)
+    events: queue.Queue = queue.Queue()
+
+    def work():
+        try:
+            events.put(("final", respond(req, on_token=lambda t: events.put(("token", {"text": t}))).model_dump()))
+        except HTTPException as e:
+            events.put(("error", {"detail": e.detail, "status": e.status_code}))
+        except Exception as e:  # never leave the client hanging
+            logger.exception("chat stream failed")
+            events.put(("error", {"detail": f"Answer failed: {type(e).__name__}", "status": 500}))
+
+    def stream():
+        threading.Thread(target=work, daemon=True).start()
+        while True:
+            event, data = events.get()
+            yield _sse(event, data)
+            if event in ("final", "error"):
+                return
+
+    return StreamingResponse(stream(), media_type="text/event-stream",
+                             headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
 @app.get("/health")
@@ -420,6 +488,9 @@ def voice_status():
         "stand_in": {"engine": "Kokoro-82M", "where": "local"},
         "cloned": {"engine": f"Fish Audio {config.FISH_TTS_MODEL}", "where": "cloud",
                    "configured": tts.cloud_voice_configured()},
+        # Voice input: local Whisper if installed, else the browser's own
+        "speech_to_text": {"engine": f"faster-whisper {config.STT_MODEL}", "where": "local",
+                           "available": stt.available()},
     }
 
 
@@ -472,6 +543,8 @@ def voice_demo(req: VoiceDemoRequest):
 
 # Clone-voice page: consented test voices, tracked and deletable
 app.include_router(voice_sandbox.make_router())
+# Voice input: local speech-to-text
+app.include_router(stt.make_router())
 
 
 # ============================================================================
@@ -556,6 +629,15 @@ def complete_interview(responses: list[InterviewAnswer], person: str = PERSON_ID
 
 # Pretrained + custom models: list, create, upload, interview, build, delete
 app.include_router(make_router(client, embedder))
+# Adaptive interview: free-form follow-up questions
+app.include_router(followups.make_router(client, embedder))
+# Memory browser, citation context, time-travel year counts
+app.include_router(memory_routes.make_router(client, embedder))
+# Several models answer one question (and reply to each other)
+app.include_router(roundtable.make_router(_load_ready_persona, lambda p: ps.get_collection(client, p),
+                                          answer_from_memory, lambda *a, **k: log_qa(*a, **k)))
+# Feedback + review queue, knowledge gaps, analytics
+app.include_router(insights.make_router(client, embedder))
 # Optional access code (CHRONUS_ACCESS_CODE)
 app.include_router(access.make_router(config))
 

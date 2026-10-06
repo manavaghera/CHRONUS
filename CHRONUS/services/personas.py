@@ -23,6 +23,8 @@ import threading
 from datetime import datetime
 from pathlib import Path
 
+from services.timeline import year_of
+
 ROOT = Path(__file__).resolve().parent.parent
 PRETRAINED_DIR = ROOT / "models"
 CUSTOM_DIR = ROOT / "personas"
@@ -193,6 +195,9 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
         meta = {k: _sanitize(v) for k, v in unit.items() if k not in ("text", "char_count", "word_count")}
         meta.update(memory_id=memory_id, person=persona["id"], authored_by=authored_by,
                     importance_score=merge_sources.estimate_importance(unit))
+        year = year_of(meta.get("date"))
+        if year is not None:
+            meta["year"] = year  # for time travel (services/timeline.py)
         ids.append(memory_id)
         docs.append(unit["text"])
         metas.append(meta)
@@ -207,6 +212,23 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
         fresh["uploads"] = [u for u in fresh.get("uploads", []) if u["filename"] != name] + [entry]
         save_persona(fresh)
     return entry
+
+
+def delete_document(persona: dict, collection, filename: str) -> int:
+    """Remove an uploaded file and every memory made from it; returns how
+    many memories were removed. FileNotFoundError if there's no such upload."""
+    name = _safe_filename(filename)
+    with _lock:
+        fresh = load_persona(persona["id"]) or persona
+        uploads = fresh.get("uploads", [])
+        if not any(u["filename"] == name for u in uploads):
+            raise FileNotFoundError(name)
+        removed = len(collection.get(where={"source_file": name}, include=[])["ids"])
+        collection.delete(where={"source_file": name})
+        (CUSTOM_DIR / persona["id"] / "uploads" / name).unlink(missing_ok=True)
+        fresh["uploads"] = [u for u in uploads if u["filename"] != name]
+        save_persona(fresh)
+    return removed
 
 
 # Voice samples for cloning (XTTS-v2 needs ~6 s; longer adds little)
@@ -276,6 +298,14 @@ def record_interview_answer(persona: dict, question_id: str) -> None:
             save_persona(fresh)
 
 
+def record_followup(persona: dict, question_id: str) -> None:
+    with _lock:
+        fresh = load_persona(persona["id"]) or persona
+        if question_id not in fresh.setdefault("followups_answered", []):
+            fresh["followups_answered"].append(question_id)
+            save_persona(fresh)
+
+
 def build_persona(collection, persona: dict) -> dict:
     """Mark a custom persona ready after the data sufficiency check.
 
@@ -307,6 +337,8 @@ def delete_custom_persona(client, persona: dict) -> None:
     except Exception:
         pass  # never had any memories
     qa_log.purge(persona["id"])
+    from services.insights import purge_feedback
+    purge_feedback(persona["id"])
     folder = (CUSTOM_DIR / persona["id"]).resolve()
     if folder.parent == CUSTOM_DIR.resolve() and folder.exists():
         shutil.rmtree(folder)

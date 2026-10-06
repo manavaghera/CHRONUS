@@ -15,8 +15,10 @@ tried and removed: free models pasted them into unrelated answers.)
 
 from __future__ import annotations
 
+import json
 import logging
 import re
+from typing import Callable
 
 import requests
 
@@ -82,6 +84,28 @@ def _usable_llm_text(text: str | None, truncated: bool) -> str:
     return text
 
 
+_MARKERS_AFTER_STOP = re.compile(r"([.!?])\s*((?:\[\d{1,2}\]\s*)+)")
+_MARKER = re.compile(r"\s*\[(\d{1,2})\]")
+
+
+def clean_citations(text: str, n_sources: int) -> str:
+    """Keep only valid [n] evidence markers (1..n_sources), placed before the
+    sentence's full stop, so sentence splitting and display stay clean.
+    "Mars matters. [1] [9] Next" -> "Mars matters [1]. Next"."""
+    text = _MARKERS_AFTER_STOP.sub(lambda m: " " + "".join(f"[{d}]" for d in re.findall(r"\d+", m.group(2))) + m.group(1) + " ", text)
+
+    def keep(m: re.Match) -> str:
+        return f" [{m.group(1)}]" if 1 <= int(m.group(1)) <= n_sources else ""
+    text = _MARKER.sub(keep, text)
+    text = re.sub(r"(\[\d+\])(?:\s*\1)+", r"\1", text)  # "[1] [1]" -> "[1]"
+    return re.sub(r"\s+([.!?,])", r"\1", re.sub(r"\s{2,}", " ", text)).strip()
+
+
+def strip_citations(text: str) -> str:
+    """Text without [n] markers (for reading aloud or scoring)."""
+    return re.sub(r"\s{2,}", " ", _MARKER.sub("", text)).strip()
+
+
 def _evidence_line(index: int, doc: str, meta: dict, citation: str) -> str:
     """One evidence entry, labelled with whose words it is."""
     voice = voice_of(meta)
@@ -107,6 +131,7 @@ HOW TO ANSWER
 4. Do not add facts, opinions, numbers or examples that are not in the evidence or the profile. If the evidence does not really answer the question, say that briefly, in your own voice.
 5. One to three sentences, spoken style. Start with the answer itself. No intro and no wrap-up line that sums things up.
 6. Never use dashes of any kind, and never use the words "crucial", "ensuring", "pivotal", "delve", "testament", "landscape" or "journey".
+7. End each sentence, before its full stop, with the number of the evidence it comes from in square brackets, like [1] or [2]. Only use numbers shown in EVIDENCE.
 
 HOW YOU TALK
 {style_notes or _DEFAULT_STYLE_NOTES}
@@ -127,13 +152,64 @@ def _clean_history(history: list[dict] | None) -> list[dict]:
     return turns[-MAX_HISTORY_TURNS:]
 
 
-def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: bool = False) -> str:
-    """Call the configured provider and return usable raw text (or raise)."""
+def _stream_openai(url: str, headers: dict, payload: dict, on_token: Callable[[str], None]) -> tuple[str, bool]:
+    """OpenAI-compatible streaming (server-sent events); returns (text, cut_off)."""
+    parts, finish = [], None
+    with requests.post(url, headers=headers, json={**payload, "stream": True}, timeout=60, stream=True) as response:
+        response.raise_for_status()
+        for line in response.iter_lines(decode_unicode=True):
+            if not line or not line.startswith("data:"):
+                continue  # keep-alive comments like ": OPENROUTER PROCESSING"
+            data = line[5:].strip()
+            if data == "[DONE]":
+                break
+            try:
+                chunk = json.loads(data)
+            except json.JSONDecodeError:
+                continue
+            if chunk.get("error"):
+                raise ValueError(f"LLM stream error: {chunk['error']}")
+            choice = (chunk.get("choices") or [{}])[0]
+            delta = (choice.get("delta") or {}).get("content") or ""
+            if delta:
+                parts.append(delta)
+                on_token(delta)
+            finish = choice.get("finish_reason") or finish
+    return "".join(parts), finish == "length"
+
+
+def _stream_ollama(payload: dict, on_token: Callable[[str], None]) -> tuple[str, bool]:
+    parts, done_reason = [], None
+    with requests.post(f"{config.OLLAMA_URL}/api/generate", json={**payload, "stream": True}, timeout=60,
+                       stream=True) as response:
+        response.raise_for_status()
+        for line in response.iter_lines(decode_unicode=True):
+            if not line:
+                continue
+            chunk = json.loads(line)
+            if chunk.get("response"):
+                parts.append(chunk["response"])
+                on_token(chunk["response"])
+            if chunk.get("done"):
+                done_reason = chunk.get("done_reason")
+                break
+    return "".join(parts), done_reason == "length"
+
+
+def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: bool = False,
+              on_token: Callable[[str], None] | None = None) -> str:
+    """Call the configured provider and return usable raw text (or raise).
+
+    *on_token*: stream the reply, calling it with each new piece of text as
+    it arrives (the website's typing effect, /chat/stream).
+    """
     if config.LLM_PROVIDER == "local":
         # On-device model (services/local_llm.py): nothing leaves the machine
         from services.local_llm import generate
         messages = [{"role": "system", "content": system_prompt}, *history, {"role": "user", "content": query}]
         text, cut_off = generate(messages, LOCAL_MAX_TOKENS, use_adapter=use_adapter, temperature=config.LLM_TEMPERATURE)
+        if on_token and text:
+            on_token(text)
         return _usable_llm_text(text, truncated=cut_off)
 
     if config.LLM_PROVIDER in ("openai", "openrouter") and config.OPENAI_API_KEY:
@@ -160,9 +236,11 @@ def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: 
             if config.OPENAI_FALLBACK_MODELS:
                 # OpenRouter-only: try these in order if the primary fails
                 payload["models"] = [config.OPENAI_MODEL, *config.OPENAI_FALLBACK_MODELS]
-        response = requests.post(
-            f"{config.OPENAI_BASE_URL}/chat/completions", headers=headers, json=payload, timeout=60,
-        )
+        url = f"{config.OPENAI_BASE_URL}/chat/completions"
+        if on_token:
+            text, cut_off = _stream_openai(url, headers, payload, on_token)
+            return _usable_llm_text(text, truncated=cut_off)
+        response = requests.post(url, headers=headers, json=payload, timeout=60)
         response.raise_for_status()
         choice = response.json()["choices"][0]
         return _usable_llm_text(
@@ -172,20 +250,20 @@ def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: 
 
     # Ollama's single-prompt API
     convo = "".join(f"\n{t['role'].upper()}: {t['content']}" for t in history)
-    response = requests.post(
-        f"{config.OLLAMA_URL}/api/generate",
-        json={
-            "model": config.LLM_MODEL,
-            "prompt": f"{system_prompt}\n{convo}\n\nTHE QUESTION: {query}",
-            "stream": False,
-            "options": {
-                "temperature": 0.7,
-                "num_predict": NATURAL_MAX_TOKENS,
-                "num_ctx": config.LLM_CONTEXT_WINDOW,
-            },
+    payload = {
+        "model": config.LLM_MODEL,
+        "prompt": f"{system_prompt}\n{convo}\n\nTHE QUESTION: {query}",
+        "stream": False,
+        "options": {
+            "temperature": 0.7,
+            "num_predict": NATURAL_MAX_TOKENS,
+            "num_ctx": config.LLM_CONTEXT_WINDOW,
         },
-        timeout=60,
-    )
+    }
+    if on_token:
+        text, cut_off = _stream_ollama(payload, on_token)
+        return _usable_llm_text(text, truncated=cut_off)
+    response = requests.post(f"{config.OLLAMA_URL}/api/generate", json=payload, timeout=60)
     response.raise_for_status()
     data = response.json()
     return _usable_llm_text(data.get("response"), truncated=data.get("done_reason") == "length")
@@ -201,6 +279,7 @@ def generate_natural_response(
     style_notes: str | None = None,
     use_adapter: bool = False,  # local provider only: apply the persona's LoRA adapter
     embedder=None,  # enables the sentence-level support check (config.NATURAL_MIN_SEMANTIC_SUPPORT)
+    on_token: Callable[[str], None] | None = None,  # stream the draft (see _call_llm)
 ) -> dict:
     """Answer *query* in the persona's voice, grounded in *memories*.
 
@@ -217,19 +296,22 @@ def generate_natural_response(
     system_prompt = build_system_prompt(persona_name, "\n\n".join(evidence), profile_block, style_notes)
 
     try:
-        clean_text = scrub(_call_llm(system_prompt, query, _clean_history(history), use_adapter))
-        if not clean_text:
+        raw = _call_llm(system_prompt, query, _clean_history(history), use_adapter, on_token)
+        # Markers go before the full stop first: scrub() cuts anything after
+        # the last one ("...bicycle. [1]" would lose its citation)
+        clean_text = clean_citations(scrub(clean_citations(raw, len(memories))), len(memories))
+        if not strip_citations(clean_text):
             raise ValueError("LLM reply was empty after scrubbing")
         clean_text = " ".join(re.split(r"(?<=[.!?])\s+", clean_text)[:MAX_ANSWER_SENTENCES])
         # Grounding guard: an answer whose words mostly aren't in the evidence
         # (or the curated profile) is invented, whatever the prompt said.
-        grounding = grounding_score(clean_text, [m[1] for m in memories] + [profile_block])
+        grounding = grounding_score(strip_citations(clean_text), [m[1] for m in memories] + [profile_block])
         if grounding < config.NATURAL_MIN_GROUNDING:
             raise ValueError(f"answer not grounded in evidence (score {grounding})")
         # Sentence-level check: every sentence should be backed by some
         # evidence, not just the answer's words on average
         if embedder is not None and config.NATURAL_MIN_SEMANTIC_SUPPORT > 0:
-            support = semantic_support(clean_text, [m[1] for m in memories] + [profile_block], embedder,
+            support = semantic_support(strip_citations(clean_text), [m[1] for m in memories] + [profile_block], embedder,
                                        config.SEMANTIC_SENTENCE_MIN)
             if support < config.NATURAL_MIN_SEMANTIC_SUPPORT:
                 raise ValueError(f"answer sentences not backed by evidence (support {support})")

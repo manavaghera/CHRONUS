@@ -47,6 +47,7 @@ _TYPE_LABELS = {
     "personal_writing": "Personal Writing",
     "writing": "Writing",
     "written_about": "Document",
+    "reviewed_answer": "Reviewed past answer",
 }
 
 
@@ -58,7 +59,7 @@ def voice_of(meta: dict) -> str:
         if origin in _SYNTHESIZED_ORIGINS:
             return SYNTHESIZED
         return FIRST_PERSON if origin in _SELF_ORIGINS else THIRD_PARTY
-    if source_type in ("auto_trained", "conversation"):
+    if source_type in ("auto_trained", "conversation", "reviewed_answer"):
         return SYNTHESIZED
     if source_type in _FIRST_PERSON_TYPES:
         return FIRST_PERSON
@@ -83,6 +84,8 @@ def attribution(meta: dict) -> str:
         return "the persona's own interview" if origin in _SELF_ORIGINS else f"an interview with their {origin}"
     if source_type == "written_about":
         return f"the document \"{meta.get('source_name', '')}\""
+    if source_type == "reviewed_answer":
+        return "a past answer a person reviewed and approved"
     return {
         "news": "a news report",
         "document": "a web article",

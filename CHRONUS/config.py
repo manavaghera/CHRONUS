@@ -151,6 +151,11 @@ class ChronusConfig:
     """Free developer tier (fair use) until 2026-11-30; after that "s2.1-pro"
     (paid, about $15 per 12 hours of speech)."""
 
+    # === SPEECH TO TEXT (voice input, services/stt.py) ===
+    STT_MODEL: str = field(default_factory=lambda: os.getenv("CHRONUS_STT_MODEL", "base"))
+    """faster-whisper model for local transcription ("tiny", "base", "small"...).
+    Optional: pip install faster-whisper. Runs on this machine."""
+
     # === STORAGE ===
     CHROMA_PATH: str = field(default_factory=lambda: os.getenv(
         "CHRONUS_CHROMA_PATH", str(Path(__file__).parent / "chroma_db")))

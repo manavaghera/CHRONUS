@@ -70,6 +70,7 @@ def summarize(persona: dict, collection) -> dict:
         "memories": collection.count(),
         "uploads": persona.get("uploads", []),
         "interview_answered": persona.get("interview_answered", []),
+        "followups_answered": len(persona.get("followups_answered", [])),
         "min_memories": ps.MIN_MEMORIES_TO_BUILD,
         # pretrained famous figures (figures/build_figures.py)
         "voice": {"seconds": persona["voice"]["seconds"], "provider": "Fish Audio"} if persona.get("voice") else None,
@@ -134,8 +135,15 @@ def make_router(client, embedder) -> APIRouter:
 
     @router.post("/{persona_id}/interview")
     def interview(body: InterviewAnswer, persona_id: str = PERSONA_PATH):
+        from data.interview_protocol import get_all_questions
+        from services.followups import suggest
+
         persona = _custom(persona_id)
-        return {"result": embed_interview_answer(client, embedder, persona, body), "persona": detail(persona_id)}
+        result = embed_interview_answer(client, embedder, persona, body)
+        fresh = detail(persona_id)
+        unanswered = [q for q in get_all_questions() if q["id"] not in set(fresh["interview_answered"])]
+        # Adaptive interview: what to ask next, from what this answer mentions
+        return {"result": result, "persona": fresh, "followups": suggest(body.answer, unanswered, embedder)}
 
     @router.post("/{persona_id}/voice")
     def add_voice(body: VoiceUpload, persona_id: str = PERSONA_PATH):
