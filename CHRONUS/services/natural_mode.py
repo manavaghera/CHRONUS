@@ -23,7 +23,7 @@ from typing import Callable
 import requests
 
 from config import config
-from services.mix_method import calculate_confidence, generate_mix_method_response
+from services.mix_method import calculate_confidence, clean_for_display, generate_mix_method_response
 from services.post_process import scrub
 from services.provenance import (
     FIRST_PERSON,
@@ -118,10 +118,17 @@ def _evidence_line(index: int, doc: str, meta: dict, citation: str) -> str:
     return f"[{index}] {label}:\n{doc.strip()}"
 
 
+# Sentences asked for, and the cap enforced (one sentence of slack), per length
+LENGTHS = {"short": ("One or two sentences", 2), "normal": ("One to three sentences", MAX_ANSWER_SENTENCES),
+           "detailed": ("Three to six sentences", 7)}
+
+
 def build_system_prompt(
     persona_name: str, evidence_block: str, profile_block: str = "", style_notes: str | None = None,
+    length: str = "normal",
 ) -> str:
     """Assemble the natural-mode system prompt (no dashes on purpose)."""
+    sentences = LENGTHS.get(length, LENGTHS["normal"])[0]
     return f"""You are {persona_name}, talking in a live conversation. Answer the user's question.
 
 HOW TO ANSWER
@@ -129,7 +136,7 @@ HOW TO ANSWER
 2. Evidence marked ABOUT YOU was written by someone else. You can use its facts, but never present its wording as something you said.
 3. Evidence marked SYNTHESIZED is a generated summary. Use it for facts only, not for phrasing.
 4. Do not add facts, opinions, numbers or examples that are not in the evidence or the profile. If the evidence does not really answer the question, say that briefly, in your own voice.
-5. One to three sentences, spoken style. Start with the answer itself. No intro and no wrap-up line that sums things up.
+5. {sentences}, spoken style. Start with the answer itself. No intro and no wrap-up line that sums things up.
 6. Never use dashes of any kind, and never use the words "crucial", "ensuring", "pivotal", "delve", "testament", "landscape" or "journey".
 7. End each sentence, before its full stop, with the number of the evidence it comes from in square brackets, like [1] or [2]. Only use numbers shown in EVIDENCE.
 
@@ -280,6 +287,7 @@ def generate_natural_response(
     use_adapter: bool = False,  # local provider only: apply the persona's LoRA adapter
     embedder=None,  # enables the sentence-level support check (config.NATURAL_MIN_SEMANTIC_SUPPORT)
     on_token: Callable[[str], None] | None = None,  # stream the draft (see _call_llm)
+    length: str = "normal",  # "short" | "normal" | "detailed"
 ) -> dict:
     """Answer *query* in the persona's voice, grounded in *memories*.
 
@@ -287,13 +295,17 @@ def generate_natural_response(
     ("natural" on success; Mix Method output with mode="mix_method_fallback"
     if the LLM call fails).
     """
-    memories = anchor_first(memories[:3])
+    memories = anchor_first(memories[:4 if length == "detailed" else 3])
+    # The model sees (and is scored against) the evidence with transcript
+    # noise and extraction damage removed ("pointat" -> "point at")
+    texts = [clean_for_display(doc) for _, doc, _, _ in memories]
     evidence, sources = [], []
-    for i, (_, doc, meta, raw_dist) in enumerate(memories, start=1):
+    for i, ((_, doc, meta, raw_dist), text) in enumerate(zip(memories, texts), start=1):
         citation = format_source_citation(meta, doc, raw_dist)
         sources.append(citation)
-        evidence.append(_evidence_line(i, doc, meta, citation["citation"]))
-    system_prompt = build_system_prompt(persona_name, "\n\n".join(evidence), profile_block, style_notes)
+        evidence.append(_evidence_line(i, text, meta, citation["citation"]))
+    system_prompt = build_system_prompt(persona_name, "\n\n".join(evidence), profile_block, style_notes, length)
+    max_sentences = LENGTHS.get(length, LENGTHS["normal"])[1]
 
     try:
         raw = _call_llm(system_prompt, query, _clean_history(history), use_adapter, on_token)
@@ -302,16 +314,16 @@ def generate_natural_response(
         clean_text = clean_citations(scrub(clean_citations(raw, len(memories))), len(memories))
         if not strip_citations(clean_text):
             raise ValueError("LLM reply was empty after scrubbing")
-        clean_text = " ".join(re.split(r"(?<=[.!?])\s+", clean_text)[:MAX_ANSWER_SENTENCES])
+        clean_text = " ".join(re.split(r"(?<=[.!?])\s+", clean_text)[:max_sentences])
         # Grounding guard: an answer whose words mostly aren't in the evidence
         # (or the curated profile) is invented, whatever the prompt said.
-        grounding = grounding_score(strip_citations(clean_text), [m[1] for m in memories] + [profile_block])
+        grounding = grounding_score(strip_citations(clean_text), texts + [profile_block])
         if grounding < config.NATURAL_MIN_GROUNDING:
             raise ValueError(f"answer not grounded in evidence (score {grounding})")
         # Sentence-level check: every sentence should be backed by some
         # evidence, not just the answer's words on average
         if embedder is not None and config.NATURAL_MIN_SEMANTIC_SUPPORT > 0:
-            support = semantic_support(strip_citations(clean_text), [m[1] for m in memories] + [profile_block], embedder,
+            support = semantic_support(strip_citations(clean_text), texts + [profile_block], embedder,
                                        config.SEMANTIC_SENTENCE_MIN)
             if support < config.NATURAL_MIN_SEMANTIC_SUPPORT:
                 raise ValueError(f"answer sentences not backed by evidence (support {support})")
@@ -332,6 +344,8 @@ def generate_natural_response(
             identity_card=identity_card,
             persona_name=persona_name,
             include_sources=True,
+            length=length,
+            embedder=embedder,
         )
         mix_fallback["mode"] = "mix_method_fallback"
         # Keep the citation schema identical to the success path.

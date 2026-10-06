@@ -155,6 +155,7 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
   const [years, setYears] = useState(null)
   const [panel, setPanel] = useState(null)  // 'time' | 'more' | null
   const [language, setLanguage] = useState('auto')
+  const [length, setLength] = useState('normal')
   const [viewer, setViewer] = useState(null)  // { source, index }
   const [conversation, setConversation] = useState(false)
   const [nudge, setNudge] = useState(false)
@@ -206,6 +207,7 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
       query, mode, persona: persona.id, history: history.current.slice(-MAX_HISTORY),
       ...(years ? { year_from: years.from, year_to: years.to } : {}),
       ...(language !== 'auto' ? { language } : {}),
+      ...(length !== 'normal' ? { length } : {}),
     }
     abortRef.current = new AbortController()
     try {
@@ -240,7 +242,7 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
     } finally {
       setTyping(false)
     }
-  }, [mode, typing, persona.id, years, language])
+  }, [mode, typing, persona.id, years, language, length])
 
   // Hands-free conversation: listen -> ask -> speak the answer -> listen again
   const converse = useCallback(async () => {
@@ -313,6 +315,14 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
           🌐
           <select value={language} onChange={e => setLanguage(e.target.value)} aria-label="Answer language">
             {LANGUAGES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+          </select>
+        </label>
+        <label className="chip-select" title="How long answers should be">
+          ¶
+          <select value={length} onChange={e => setLength(e.target.value)} aria-label="Answer length">
+            <option value="short">Short</option>
+            <option value="normal">Normal length</option>
+            <option value="detailed">Detailed</option>
           </select>
         </label>
         {voiceInput.engine && (

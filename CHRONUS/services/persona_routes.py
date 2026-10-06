@@ -189,6 +189,9 @@ def make_router(client, embedder) -> APIRouter:
             built = ps.build_persona(collection, persona)
         except ValueError as e:
             raise HTTPException(status_code=400, detail=str(e))
+        # Its own "I don't know" threshold, from its own memories (services/calibration.py)
+        from services.calibration import calibrate_threshold
+        built = ps.update_persona(built["id"], distance_threshold=calibrate_threshold(collection, embedder))
         return summarize(built, collection)
 
     @router.delete("/{persona_id}")

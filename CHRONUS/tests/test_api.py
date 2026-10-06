@@ -5,6 +5,7 @@ from unittest import mock
 
 import pytest
 
+from services.mix_method import clean_for_display
 from services.theme_classifier import classify_theme
 
 FALLBACK_MSG = "I don't have any documented information about that in my available records."
@@ -97,10 +98,11 @@ def test_6_4_quote_is_verbatim_from_its_source(srv, client):
     source = d["sources"][0]
     assert {"citation", "quote", "source_type", "source_file", "voice", "memory_id", "distance"} <= source.keys()
     part1 = d["answer"].split("\n\n")[0]
-    quote = part1[part1.find('"') + 1: part1.rfind('"')].rstrip("…")
+    quote = part1[part1.find('"') + 1: part1.rfind('"')].strip("…")
     full = srv.collection.get(ids=[source["memory_id"]])["documents"][0]
     norm = lambda s: re.sub(r"\s+", " ", s).strip().lower()  # noqa: E731
-    assert quote and norm(quote) in norm(full)
+    # Quotes are the memory's own words with transcript noise removed (clean_for_display)
+    assert quote and norm(quote) in norm(clean_for_display(full))
 
 
 @pytest.mark.corpus

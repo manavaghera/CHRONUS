@@ -42,6 +42,7 @@ from services import (
 )
 from services import personas as ps
 from services.embedder import LazyEmbedder
+from services.mix_method import _near_duplicate as near_duplicate
 
 # ---- Response pipelines ----
 from services.mix_method import generate_mix_method_response  # CHRONUS core contribution
@@ -130,6 +131,8 @@ class ChatRequest(BaseModel):
     year_to: Optional[int] = Field(default=None, ge=1000, le=2100)
     # Answer in this language ("hi", "gu"...); default: the question's language
     language: Optional[str] = Field(default=None, pattern=r"^[a-z]{2}$")
+    # How much to say: one focused quote / sentence, the usual, or more
+    length: Literal["short", "normal", "detailed"] = "normal"
 
     @field_validator("query")
     @classmethod
@@ -272,8 +275,15 @@ def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = N
         ranked = sorted(((-fused.get(mid, 0.0), doc, meta, dist) for mid, doc, meta, dist in passing),
                         key=lambda x: (x[0], x[3]))
     else:
-        ranked = sorted(((dist - (meta.get("importance_score", 1) * IMPORTANCE_WEIGHT), doc, meta, dist)
-                         for _, doc, meta, dist in passing), key=lambda x: x[0])
+        # Importance only breaks near-ties: at most IMPORTANCE_WEIGHT (score
+        # 5) and 0 at score 1. Unbounded (score x 0.15) it handed interview
+        # answers (score 4) a 0.45 head start over tweets and letters (1),
+        # more than the whole support margin, so it overrode relevance.
+        def bonus(meta):
+            score = meta.get("importance_score", 1)
+            score = score if isinstance(score, (int, float)) else 1
+            return IMPORTANCE_WEIGHT * min(1.0, max(0.0, (score - 1) / 4))
+        ranked = sorted(((dist - bonus(meta), doc, meta, dist) for _, doc, meta, dist in passing), key=lambda x: x[0])
 
     # 4. Optional cross-encoder rerank of the best few (config.RERANKER_MODEL)
     if reranker is not None and len(ranked) > 1:
@@ -281,11 +291,17 @@ def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = N
         scores = reranker.scores(query, [r[1] for r in head])
         ranked = [r for _, r in sorted(zip(scores, head), key=lambda x: -x[0])] + ranked[n * 2:]
 
-    # 5. Top-n, then drop memories that match much worse than the best one.
-    # Small custom models otherwise fill the 2nd/3rd slots with unrelated
-    # text (~0.47 behind the best); on Elon's corpus supporting memories sit
-    # <= 0.20 behind.
-    result = ranked[:n]
+    # 5. Top-n, skipping near-duplicates of what's already chosen (Elon
+    # tweets the same line many ways), then drop memories that match much
+    # worse than the best one. Small custom models otherwise fill the 2nd/3rd
+    # slots with unrelated text (~0.47 behind the best); on Elon's corpus
+    # supporting memories sit <= 0.20 behind.
+    result = []
+    for candidate in ranked:
+        if not any(near_duplicate(candidate[1], chosen[1]) for chosen in result):
+            result.append(candidate)
+        if len(result) == n:
+            break
     best = min(r[3] for r in result)
     return [r for r in result if r[3] <= best + config.SUPPORT_MARGIN]
 
@@ -307,7 +323,8 @@ def _load_ready_persona(persona_id: str) -> dict:
 
 def answer_from_memory(query: str, persona: dict, memory, mode: str, history: list[ChatTurn],
                        n_results: int = N_RESULTS, where: dict | None = None,
-                       years: tuple[int | None, int | None] = (None, None), on_token=None) -> dict:
+                       years: tuple[int | None, int | None] = (None, None), on_token=None,
+                       length: str = "normal") -> dict:
     """Retrieve evidence for *query* and answer it in *mode*.
 
     *years*: time travel, only memories dated in that range (inclusive).
@@ -319,6 +336,8 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
         timeline.ensure_year_metadata(memory)
         where = timeline.combine(where, timeline.year_filter(*years))
         era = f"{years[0] or 'the start'} to {years[1] or 'today'}"
+    if length == "detailed":
+        n_results = max(n_results, 4)  # room for a third supporting memory
     memories = retrieve(retrieval_query(query, history), n_results, memory, where=where,
                         threshold=persona.get("distance_threshold"))
 
@@ -335,7 +354,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
     # Both put the persona's own words first (anchor_first), so a biography
     # or news passage is never quoted as "what I've actually said".
     identity_card = load_mix_method_identity_card(persona["id"])
-    evidence = anchor_first(memories[:3])
+    evidence = anchor_first(memories[:4 if length == "detailed" else 3])
     notice = ""
     # Custom models are local-first: AI voice sends evidence excerpts to the
     # cloud LLM provider, so it needs the creator's opt-in. (Ollama and the
@@ -358,6 +377,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
             use_adapter=persona["id"] == "elon_musk",
             embedder=embedder,
             on_token=on_token,
+            length=length,
         )
         sources = result["sources"]
     else:
@@ -367,6 +387,8 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
             identity_card=identity_card,
             persona_name=persona["name"],
             include_sources=True,
+            length=length,
+            embedder=embedder,
         )
         # Mix Method quotes evidence[0] (Part 1) + evidence[1:3] (Part 2), so
         # citations cover exactly the evidence used, in the same order.
@@ -439,7 +461,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
         result = {**basic, "faithfulness": 1.0, "notice": ""}
     elif basic:
         rest = answer_from_memory(basic["remainder"], persona, memory, req.mode, req.history, req.n_results,
-                                  years=years, on_token=on_token)
+                                  years=years, on_token=on_token, length=req.length)
         result = {
             **rest,
             "response": f"{basic['response']}\n\n{rest['response']}",
@@ -449,7 +471,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
         }
     else:
         result = answer_from_memory(query, persona, memory, req.mode, req.history, req.n_results,
-                                    years=years, on_token=on_token)
+                                    years=years, on_token=on_token, length=req.length)
 
     original, language = "", "en"
     if target != "en" and target in translate.LANGUAGES:

@@ -317,6 +317,15 @@ def record_interview_answer(persona: dict, question_id: str) -> None:
             save_persona(fresh)
 
 
+def update_persona(persona_id: str, **fields) -> dict:
+    """Set fields on a persona record (read-modify-write under the lock)."""
+    with _lock:
+        fresh = load_persona(persona_id, any_owner=True)
+        fresh.update(fields)
+        save_persona(fresh)
+    return fresh
+
+
 def record_followup(persona: dict, question_id: str) -> None:
     with _lock:
         fresh = load_persona(persona["id"], any_owner=True) or persona

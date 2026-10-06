@@ -58,11 +58,13 @@ class ChronusConfig:
     threshold: short tweets embed close to short questions ("Why Mars?" ->
     "Mars is The New World") but carry almost no content."""
 
-    IMPORTANCE_WEIGHT: float = field(default_factory=lambda: float(os.getenv("CHRONUS_IMPORTANCE_WEIGHT", "0.15")))
-    """Weight for importance score in re-ranking: adjusted = dist - (importance * weight).
-    The 2026-10-06 evaluation ranked the full pipeline below plain semantic
-    search (P@1 0.12 vs 0.16); `python -m evaluation.run_eval` now also scores
-    weight 0 and hybrid retrieval so the default can be chosen on data."""
+    IMPORTANCE_WEIGHT: float = field(default_factory=lambda: float(os.getenv("CHRONUS_IMPORTANCE_WEIGHT", "0.08")))
+    """Largest ranking bonus importance can give (a score-5 memory; score 1 gets 0):
+    adjusted = dist - weight * (importance - 1) / 4. It breaks near-ties only.
+    It used to be importance x 0.15, which gave interview answers (score 4) a
+    0.45 lead over tweets and letters (score 1), more than SUPPORT_MARGIN, and
+    the 2026-10-06 evaluation ranked that pipeline below plain semantic search
+    (P@1 0.12 vs 0.16). `python -m evaluation.run_eval` scores weight 0 too."""
 
     RETRIEVAL_MODE: str = field(default_factory=lambda: os.getenv("CHRONUS_RETRIEVAL_MODE", "dense"))
     """"dense" (semantic search + importance bias) or "hybrid" (semantic + BM25

@@ -117,17 +117,9 @@ def build_units(figure: dict) -> list[dict]:
 
 
 def calibrate_threshold(collection, embedder) -> float:
-    """Distance just below the 10th percentile of best matches for questions
-    this archive can't answer (evaluation/questions.py), within
-    [config.DISTANCE_THRESHOLD, THRESHOLD_MAX]."""
-    vectors = embedder.encode(OUT_OF_DOMAIN, normalize_embeddings=True, show_progress_bar=False).tolist()
-    found = collection.query(query_embeddings=vectors, n_results=12, include=["documents", "distances"])
-    best = []
-    for docs, dists in zip(found["documents"], found["distances"]):
-        substantive = [d for doc, d in zip(docs, dists) if len(doc.split()) >= config.MIN_EVIDENCE_WORDS]
-        best.append(min(substantive or dists))  # same short-memory filter as retrieval
-    p10 = sorted(best)[len(best) // 10]
-    return round(min(THRESHOLD_MAX, max(config.DISTANCE_THRESHOLD, p10 - THRESHOLD_MARGIN)), 2)
+    """Per-figure "I don't know" threshold (services/calibration.py)."""
+    from services.calibration import calibrate_threshold as calibrate
+    return calibrate(collection, embedder, cap=THRESHOLD_MAX)
 
 
 def build(figure: dict, client, embedder) -> int:
