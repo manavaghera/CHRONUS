@@ -25,8 +25,9 @@ SYNTHESIZED = "synthesized"
 
 # source_type values whose text is the persona speaking/writing
 # ("personal_writing": letters, journals... uploaded to a custom model as
-# written by the person; "written_about" uploads are third party)
-_FIRST_PERSON_TYPES = {"interview", "tweet", "book", "speech", "personal_writing"}
+# written by the person; "written_about" uploads are third party;
+# "writing": a famous figure's published works, figures/build_figures.py)
+_FIRST_PERSON_TYPES = {"interview", "tweet", "book", "speech", "personal_writing", "writing"}
 # interview_protocol "origin" values (who answered the interview question)
 _SELF_ORIGINS = {"self", ""}
 _SYNTHESIZED_ORIGINS = {"synthesized"}
@@ -44,6 +45,7 @@ _TYPE_LABELS = {
     "video": "Video Description",
     "news": "News",
     "personal_writing": "Personal Writing",
+    "writing": "Writing",
     "written_about": "Document",
 }
 
@@ -160,7 +162,8 @@ def format_source_citation(metadata: dict, doc_text: str = "", distance: float |
     """
     source_type = metadata.get("source_type", "unknown")
     source_file = metadata.get("source_file", "unknown")
-    source_name = str(metadata.get("source_name", "")).replace("_", " ").title()
+    # .title() capitalises after apostrophes ("Freedom'S Battle"); undo that
+    source_name = re.sub(r"'S\b", "'s", str(metadata.get("source_name", "")).replace("_", " ").title())
     date = metadata.get("date", "")
     page = metadata.get("page")
     voice = voice_of(metadata)

@@ -1,0 +1,3 @@
+# Test dependencies (run from CHRONUS/: python -m pytest)
+-r requirements.txt
+pytest>=8

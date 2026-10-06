@@ -18,6 +18,7 @@ from fastapi import APIRouter, HTTPException, Path as PathParam
 from pydantic import BaseModel, Field
 
 from services import personas as ps
+from services import tts
 
 PERSONA_PATH = PathParam(pattern=ps.PERSONA_ID_PATTERN)
 CONSENT_STATEMENT = (
@@ -39,6 +40,12 @@ class DocumentUpload(BaseModel):
     # base64 inflates by 4/3; the decoded size is checked again on ingest
     content_base64: str = Field(min_length=1, max_length=ps.MAX_UPLOAD_BYTES * 4 // 3 + 16)
     authored_by: Literal["self", "other"] = "self"
+
+
+class VoiceUpload(BaseModel):
+    content_base64: str = Field(min_length=1, max_length=ps.MAX_UPLOAD_BYTES * 4 // 3 + 16)
+    consent: bool  # the person (or their estate) agreed to their voice being used
+    cloud: bool  # ...and to the recording going to Fish Audio to make the voice (services/tts.py)
 
 
 class InterviewAnswer(BaseModel):
@@ -63,6 +70,13 @@ def summarize(persona: dict, collection) -> dict:
         "uploads": persona.get("uploads", []),
         "interview_answered": persona.get("interview_answered", []),
         "min_memories": ps.MIN_MEMORIES_TO_BUILD,
+        # pretrained famous figures (figures/build_figures.py)
+        "voice": {"seconds": persona["voice"]["seconds"], "provider": "Fish Audio"} if persona.get("voice") else None,
+        # synthetic Listen voice for public figures (services/tts.py), not a clone
+        "stand_in_voice": persona.get("kind") == "pretrained" and bool(persona.get("stand_in_voice")),
+        "suggested_questions": persona.get("suggested_questions", []),
+        "sources": persona.get("sources", []),
+        "license": persona.get("license", ""),
     }
 
 
@@ -122,6 +136,38 @@ def make_router(client, embedder) -> APIRouter:
         persona = _custom(persona_id)
         return {"result": embed_interview_answer(client, embedder, persona, body), "persona": detail(persona_id)}
 
+    @router.post("/{persona_id}/voice")
+    def add_voice(body: VoiceUpload, persona_id: str = PERSONA_PATH):
+        persona = _custom(persona_id)
+        if not body.consent:
+            raise HTTPException(status_code=400, detail="Voice cloning needs the person's (or their estate's) consent")
+        if not body.cloud:
+            raise HTTPException(status_code=400, detail="The voice is made by Fish Audio (cloud): please agree to "
+                                                        "sending the recording there")
+        try:
+            data = base64.b64decode(body.content_base64, validate=True)
+        except (binascii.Error, ValueError):
+            raise HTTPException(status_code=400, detail="Recording is not valid base64")
+        try:
+            ps.check_voice_sample(data)
+        except ValueError as e:
+            raise HTTPException(status_code=400, detail=str(e))
+        old_voice_id = (persona.get("voice") or {}).get("fish_voice_id")
+        try:
+            ps.save_voice_sample(persona, data, tts.fish_create_voice(data))
+            if old_voice_id:
+                tts.fish_delete_voice(old_voice_id)  # replaced: don't leave the old one at Fish
+        except tts.VoiceServiceError as e:
+            raise HTTPException(status_code=e.status, detail=str(e))
+        return detail(persona_id)
+
+    @router.delete("/{persona_id}/voice")
+    def remove_voice(persona_id: str = PERSONA_PATH):
+        persona = _custom(persona_id)
+        _delete_cloud_voice(persona)
+        ps.delete_voice_sample(persona)
+        return detail(persona_id)
+
     @router.post("/{persona_id}/build")
     def build(persona_id: str = PERSONA_PATH):
         persona = _custom(persona_id)
@@ -134,10 +180,24 @@ def make_router(client, embedder) -> APIRouter:
 
     @router.delete("/{persona_id}")
     def delete(persona_id: str = PERSONA_PATH):
-        ps.delete_custom_persona(client, _custom(persona_id))
+        persona = _custom(persona_id)
+        _delete_cloud_voice(persona)
+        ps.delete_custom_persona(client, persona)
         return {"deleted": persona_id}
 
     return router
+
+
+def _delete_cloud_voice(persona: dict) -> None:
+    """Delete the persona's private Fish voice first; if that fails nothing is
+    removed, so the voice is never left behind in the cloud unnoticed."""
+    voice_id = (persona.get("voice") or {}).get("fish_voice_id")
+    if not voice_id:
+        return
+    try:
+        tts.fish_delete_voice(voice_id)
+    except tts.VoiceServiceError as e:
+        raise HTTPException(status_code=e.status, detail=f"{e}. Nothing was removed; please try again.")
 
 
 def embed_interview_answer(client, embedder, persona: dict, item: InterviewAnswer) -> dict:

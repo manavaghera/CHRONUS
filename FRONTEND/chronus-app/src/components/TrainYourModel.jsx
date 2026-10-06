@@ -1,4 +1,91 @@
+import { useState } from 'react'
+import { api } from '../api'
 import useScrollReveal from './useScrollReveal'
+
+function VoiceCloningSimulator() {
+  const [inputText, setInputText] = useState('');
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [processStep, setProcessStep] = useState(0);
+  const [audioUrl, setAudioUrl] = useState(null);
+  const [error, setError] = useState('');
+
+  const processSteps = [
+    "Analyzing phonetic patterns...",
+    "Extracting acoustic features...",
+    "Synthesizing voice...",
+    "Finalizing audio output..."
+  ];
+
+  const handleClone = async () => {
+    if (!inputText) return;
+    setIsProcessing(true);
+    setAudioUrl(null);
+    setError('');
+
+    // Fake process to look cool
+    for (let i = 0; i < processSteps.length; i++) {
+      setProcessStep(i);
+      await new Promise(r => setTimeout(r, 800)); // wait 0.8s per step
+    }
+
+    try {
+      const url = await api.demoVoice(inputText);
+      setAudioUrl(url);
+    } catch (e) {
+      setError(e.message || "Failed to clone voice via API.");
+    }
+
+    setIsProcessing(false);
+  };
+
+  return (
+    <div className="voice-clone-demo" style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
+      <h3 style={{ marginBottom: '1rem', color: '#fff' }}>Test Your FishAudio Key (Voice Cloning Simulator)</h3>
+      <p style={{ marginBottom: '1.5rem', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
+        Since you just added your FishAudio API key, you can test the integration here. Type any custom text below, and watch the synthesis process.
+      </p>
+      
+      <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
+        <input 
+          type="text" 
+          value={inputText} 
+          onChange={e => setInputText(e.target.value)} 
+          placeholder="Type custom text for output..." 
+          style={{ flex: 1, padding: '0.75rem', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(0,0,0,0.2)', color: '#fff' }}
+          disabled={isProcessing}
+        />
+        <button 
+          onClick={handleClone} 
+          disabled={isProcessing || !inputText.trim()}
+          className="pill-btn pill-btn--accent"
+          style={{ cursor: isProcessing || !inputText.trim() ? 'not-allowed' : 'pointer' }}
+        >
+          <span className="pill-inner">{isProcessing ? 'Processing...' : 'Clone Voice'}</span>
+        </button>
+      </div>
+
+      {isProcessing && (
+        <div style={{ padding: '1rem', background: 'rgba(0,0,0,0.3)', borderRadius: '6px', color: '#00d2ff', fontSize: '0.9rem', fontFamily: 'monospace' }}>
+          {'>'} {processSteps[processStep]}
+          <span className="cursor-blink">_</span>
+        </div>
+      )}
+
+      {error && (
+        <div style={{ padding: '1rem', background: 'rgba(255,50,50,0.1)', border: '1px solid rgba(255,50,50,0.3)', borderRadius: '6px', color: '#ff6b6b' }}>
+          {error}
+        </div>
+      )}
+
+      {audioUrl && !isProcessing && (
+        <div style={{ marginTop: '1.5rem', animation: 'fadeIn 0.5s ease-in' }}>
+          <p style={{ marginBottom: '0.5rem', color: '#00d2ff', fontSize: '0.9rem' }}>Synthesis Complete!</p>
+          <audio controls src={audioUrl} autoPlay style={{ width: '100%' }} />
+        </div>
+      )}
+    </div>
+  )
+}
 
 const steps = [
   {
@@ -191,6 +278,7 @@ export default function TrainYourModel() {
             <Step key={i} step={step} index={i} />
           ))}
         </div>
+        <VoiceCloningSimulator />
       </div>
     </section>
   )

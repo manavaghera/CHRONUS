@@ -69,3 +69,8 @@
 .create-qid { font-size: .7rem; font-weight: 600; color: var(--accent); margin-right: .5rem; }
 .create-saved { color: #15803d; font-size: .75rem; margin-left: .5rem; }
 .create-count { font-size: .875rem; color: var(--muted); font-weight: 500; }
+.create-file.is-disabled { opacity: .45; cursor: not-allowed; }
+.create-file.is-disabled input { cursor: not-allowed; }
+.demo-listen { margin-top: .5rem; font-size: .7rem; font-weight: 500; color: var(--accent); }
+.demo-listen:disabled { opacity: .5; cursor: default; }
+.demo-voice-row { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }

@@ -1,0 +1,36 @@
+{
+  "person": "Marcus Aurelius",
+  "source": "Wikidata",
+  "wikidata": "Q1430",
+  "url": "https://www.wikidata.org/wiki/Q1430",
+  "license": "CC0 1.0 (public domain)",
+  "retrieved": "2026-10-07",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "facts": {
+    "Born": "26 April 121, Rome",
+    "Died": "17 March 180, on campaign on the Danube, most likely at Vindobona (today Vienna)",
+    "Father": "Marcus Annius Verus",
+    "Mother": "Calvisia Domitia Lucilla",
+    "Siblings": "Annia Cornificia Faustina",
+    "Spouse": "Faustina the Younger",
+    "Children": "at least 13 with Faustina the Younger, many of whom died young; among them Commodus and Lucilla",
+    "Occupation": "Roman emperor (161-180), Stoic philosopher",
+    "Citizenship": "Roman",
+    "Known for": "Meditations"
+  },
+  "answers": {
+    "born": "I was born on 26 April 121.",
+    "born_and_place": "I was born on 26 April 121 in Rome.",
+    "birth_place": "I was born in Rome.",
+    "died": "I died on 17 March 180, on campaign on the Danube, most likely at Vindobona, which is today Vienna.",
+    "age": "I died in 180, at the age of 58.",
+    "father": "My father was Marcus Annius Verus.",
+    "mother": "My mother was Calvisia Domitia Lucilla.",
+    "siblings": "I had one sister, Annia Cornificia Faustina.",
+    "spouse": "I was married to Faustina the Younger.",
+    "children": "Faustina and I had at least 13 children, and many of them died young. Commodus, who succeeded me, and Lucilla are the best known.",
+    "occupation": "I was Roman emperor from 161 to 180, and a Stoic philosopher.",
+    "nationality": "I was a Roman citizen.",
+    "notable_works": "I'm best known for my Meditations."
+  }
+}

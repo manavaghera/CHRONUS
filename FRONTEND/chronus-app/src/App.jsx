@@ -18,11 +18,12 @@ import TrainYourModel from './components/TrainYourModel'
 import ModelsPage from './pages/ModelsPage'
 import ChatPage from './pages/ChatPage'
 import CreatePage from './pages/CreatePage'
+import CloneVoicePage from './pages/CloneVoicePage'
 import { navigate, useRoute } from './router'
 import './pages.css'
 
 // Header/menu targets that are pages rather than landing-page sections
-const PAGES = new Set(['models', 'create'])
+const PAGES = new Set(['models', 'create', 'clone-voice'])
 
 function App() {
   useLenis()
@@ -98,6 +99,7 @@ function App() {
         {page === 'models' && <ModelsPage />}
         {page === 'chat' && <ChatPage id={id} />}
         {page === 'create' && <CreatePage key={id || 'new'} id={id} />}
+        {page === 'clone-voice' && <CloneVoicePage />}
         {!PAGES.has(page) && page !== 'chat' && (
           <>
             <Hero scrollToId={scrollToId} openModal={openModal} />

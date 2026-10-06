@@ -14,13 +14,16 @@ class ChronusConfig:
     """CHRONUS system configuration."""
 
     # === RETRIEVAL ===
-    DISTANCE_THRESHOLD: float = 1.1
+    DISTANCE_THRESHOLD: float = 0.58
     """Cosine distance threshold — queries with no memory below this return uncertainty fallback.
 
-    FIX A (Phase 6): was 1.45, which made the fallback unreachable (nearly every
-    query matched below it). MiniLM-L6-v2 cosine distances for irrelevant text
-    typically run 0.8-1.2, so 1.1 keeps true matches (0.3-1.0) while letting
-    irrelevant queries (1.0+) fall through to the uncertainty fallback.
+    Calibrated 2026-10-06 with `python -m evaluation.run_eval` (best-match
+    distance after the short-memory filter): 65 questions Elon answered had a
+    median of 0.41 (max 0.61); 40 his archive can't answer had a median of
+    0.64 (min 0.48). 0.58 answers 98% / refuses 82% of them; chosen on half
+    the questions and tested on the other half: 89% / 86%. The old 1.45 and
+    1.1 refused nothing. 0.45-0.58 is a grey zone (both kinds occur), which
+    the confidence labels in services/mix_method.py report as medium/low.
     """
 
     N_RESULTS: int = 3
@@ -32,6 +35,11 @@ class ChronusConfig:
     Method answer — they are mostly invented. On 2026-10-05 samples, clearly
     invented answers scored 0.14-0.22 and good ones 0.60-1.00; half-invented
     ones (0.27-0.38) slip through, a limit of lexical scoring. 0 disables."""
+
+    SUPPORT_MARGIN: float = 0.25
+    """Supporting memories must be within this raw distance of the best match.
+    Measured 2026-10-06: on Elon's corpus the 2nd/3rd memories were at most
+    0.20 behind the best; a small custom model's unrelated filler was ~0.47."""
 
     MIN_EVIDENCE_WORDS: int = 8
     """Memories shorter than this are skipped when longer ones also pass the
@@ -78,7 +86,7 @@ class ChronusConfig:
     LLM_CONTEXT_WINDOW: int = 8192
 
     # === LLM PROVIDER ===
-    LLM_PROVIDER: str = "openrouter"  # "ollama" or "openai"-compatible ("openrouter" also accepted)
+    LLM_PROVIDER: str = "openrouter"  # "local" (on-device, services/local_llm.py), "ollama", or "openai"-compatible ("openrouter")
     OPENAI_API_KEY: str = field(default_factory=lambda: os.getenv("OPENAI_API_KEY", ""))
     """API key for the OpenAI-compatible provider (also used for OpenRouter).
     Read from the OPENAI_API_KEY env var or CHRONUS/.env (gitignored)."""
@@ -95,6 +103,25 @@ class ChronusConfig:
     rate-limited (free models return 429 under load)."""
     OPENAI_BASE_URL: str = "https://openrouter.ai/api/v1"
     """OpenAI-compatible endpoint. For OpenRouter: https://openrouter.ai/api/v1"""
+
+    # === LOCAL LLM (LLM_PROVIDER = "local") ===
+    LOCAL_BASE_MODEL: str = "Qwen/Qwen2.5-1.5B-Instruct"
+    """Small open model (Apache-2.0) run on this machine's GPU: nothing leaves
+    the device, matching the paper's local-first design."""
+
+    LOCAL_ADAPTER_PATH: str = field(default_factory=lambda: str(
+        Path(__file__).parent / "lora" / "adapters" / "elon_musk"
+    ))
+    """LoRA adapter trained on Elon's own words (lora/train_lora.py); applied
+    only for the elon_musk persona."""
+
+    # === VOICE (Listen button, services/tts.py) ===
+    FISH_API_URL: str = "https://api.fish.audio"
+    """Fish Audio clones a custom model's consented voice (cloud, opt-in).
+    Needs FISH_API_KEY in CHRONUS/.env (create one at fish.audio/app/api-keys)."""
+    FISH_TTS_MODEL: str = "s2.1-pro-free"
+    """Free developer tier (fair use) until 2026-11-30; after that "s2.1-pro"
+    (paid, about $15 per 12 hours of speech)."""
 
     # === STORAGE ===
     CHROMA_PATH: str = field(default_factory=lambda: str(Path(__file__).parent / "chroma_db"))

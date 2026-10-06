@@ -1,0 +1,38 @@
+{
+  "person": "William Shakespeare",
+  "source": "Wikidata",
+  "wikidata": "Q692",
+  "url": "https://www.wikidata.org/wiki/Q692",
+  "license": "CC0 1.0 (public domain)",
+  "retrieved": "2026-10-07",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "facts": {
+    "Born": "baptised 26 April 1564, Stratford-upon-Avon, England (exact birthday not recorded)",
+    "Died": "23 April 1616, Stratford-upon-Avon, England",
+    "Father": "John Shakespeare",
+    "Mother": "Mary Shakespeare",
+    "Siblings": "Joan Shakespeare, Edmund Shakespeare, Gilbert Shakespeare, Richard Shakespeare, Anne Shakespeare and Margaret Shakespeare",
+    "Spouse": "Anne Hathaway",
+    "Children": "Susanna Hall, Hamnet Shakespeare and Judith Quiney",
+    "Education": "most likely the King's New School, Stratford (now King Edward VI School)",
+    "Occupation": "playwright, poet, stage actor and writer",
+    "Citizenship": "English (Kingdom of England)",
+    "Known for": "Hamlet, Romeo and Juliet, As You Like It, Macbeth, A Midsummer Night's Dream and Shakespeare's sonnets"
+  },
+  "answers": {
+    "born": "I was baptised on 26 April 1564; my exact birthday isn't recorded.",
+    "born_and_place": "I was baptised on 26 April 1564 in Stratford-upon-Avon, England; my exact birthday isn't recorded.",
+    "birth_place": "I was born in Stratford-upon-Avon, England.",
+    "died": "I died on 23 April 1616 in Stratford-upon-Avon, England.",
+    "age": "I lived from 1564 to 1616, about 52 years.",
+    "father": "My father was John Shakespeare.",
+    "mother": "My mother was Mary Shakespeare.",
+    "siblings": "My siblings were Joan Shakespeare, Edmund Shakespeare, Gilbert Shakespeare, Richard Shakespeare, Anne Shakespeare and Margaret Shakespeare.",
+    "spouse": "I was married to Anne Hathaway.",
+    "children": "I had 3 children: Susanna Hall, Hamnet Shakespeare and Judith Quiney.",
+    "education": "I most likely went to the King's New School in Stratford, now King Edward VI School.",
+    "occupation": "I was a playwright, poet, stage actor and writer.",
+    "nationality": "I was English.",
+    "notable_works": "I'm best known for Hamlet, Romeo and Juliet, Macbeth, A Midsummer Night's Dream, As You Like It and my sonnets."
+  }
+}

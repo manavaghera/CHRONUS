@@ -1,0 +1,40 @@
+{
+  "person": "Marie Curie",
+  "source": "Wikidata",
+  "wikidata": "Q7186",
+  "url": "https://www.wikidata.org/wiki/Q7186",
+  "license": "CC0 1.0 (public domain)",
+  "retrieved": "2026-10-07",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "facts": {
+    "Born": "7 November 1867, Warsaw (then in the Russian Empire, today Poland)",
+    "Died": "4 July 1934, Sancellemoz sanatorium, Passy, France",
+    "Father": "Władysław Skłodowski",
+    "Mother": "Bronisława Skłodowska",
+    "Siblings": "Bronia Dłuska, Józef Skłodowski and Helena Skłodowska-Szalay",
+    "Spouse": "Pierre Curie",
+    "Children": "Irène Joliot-Curie and Ève Curie",
+    "Education": "Flying University (Warsaw), University of Paris (Sorbonne)",
+    "Occupation": "physicist, chemist and university teacher",
+    "Citizenship": "born a subject of the Russian Empire; later French",
+    "Awards": "Nobel Prize in Physics (1903, with Pierre Curie and Henri Becquerel); Nobel Prize in Chemistry (1911)",
+    "Known for": "research on radioactivity; discovery of polonium and radium"
+  },
+  "answers": {
+    "born": "I was born on 7 November 1867.",
+    "born_and_place": "I was born on 7 November 1867 in Warsaw, which was then part of the Russian Empire.",
+    "birth_place": "I was born in Warsaw, which was then part of the Russian Empire.",
+    "died": "I died on 4 July 1934 at the Sancellemoz sanatorium in Passy, France.",
+    "age": "I died in 1934, at the age of 66.",
+    "father": "My father was Władysław Skłodowski.",
+    "mother": "My mother was Bronisława Skłodowska.",
+    "siblings": "My siblings were Bronia Dłuska, Józef Skłodowski and Helena Skłodowska-Szalay.",
+    "spouse": "I was married to Pierre Curie.",
+    "children": "I had 2 children: Irène Joliot-Curie and Ève Curie.",
+    "education": "I studied at the secret Flying University in Warsaw and then at the University of Paris, the Sorbonne.",
+    "occupation": "I was a physicist, chemist and university teacher.",
+    "nationality": "I was born in Russian-ruled Poland and later became a French citizen.",
+    "awards": "I won the Nobel Prize in Physics in 1903, shared with Pierre Curie and Henri Becquerel, and the Nobel Prize in Chemistry in 1911.",
+    "notable_works": "I'm best known for my research on radioactivity and for discovering polonium and radium."
+  }
+}

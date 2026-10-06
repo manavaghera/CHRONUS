@@ -54,12 +54,13 @@ from services.theme_classifier import classify_theme, get_theme_prompt
 # Constants
 # ---------------------------------------------------------------------------
 
-# Distance → confidence label boundaries (cosine distance in ChromaDB).
-# Medium must end below DISTANCE_THRESHOLD (1.1) — at 1.20 "low" could never
-# be produced, since nothing above 1.1 survives retrieval.
-_HIGH_CONFIDENCE_CEIL = 0.80
-_MEDIUM_CONFIDENCE_CEIL = 1.00
-# 1.00 up to DISTANCE_THRESHOLD (1.1) is "low" but still valid.
+# Distance → confidence label boundaries (cosine distance in ChromaDB),
+# from the calibration run (evaluation/run_eval.py, 2026-10-06): below 0.45
+# only answerable questions occurred (44 vs 0); 0.45-0.52 mixed 10 vs 3;
+# 0.52 up to DISTANCE_THRESHOLD (0.58) mixed 10 vs 4.
+_HIGH_CONFIDENCE_CEIL = 0.45
+_MEDIUM_CONFIDENCE_CEIL = 0.52
+# 0.52 up to DISTANCE_THRESHOLD is "low" but still answered.
 
 # Maximum characters to show in a quoted passage before truncating.
 _QUOTE_DISPLAY_LIMIT = 280
@@ -194,6 +195,15 @@ def _clean_quote(text: str) -> str:
     return out.strip()
 
 
+def _after_comma(theme_prompt: str, phrase: str) -> str:
+    """Join a theme prompt ("About my work,") and a phrase that follows it,
+    lower-casing the phrase's first letter ("Along those lines:" ->
+    "along those lines:") unless it starts with "I"."""
+    if theme_prompt and phrase and not re.match(r"I\b|I'", phrase):
+        phrase = phrase[0].lower() + phrase[1:]
+    return f"{theme_prompt} {phrase}".strip()
+
+
 def _source_frame(meta: dict, first_person_frame: str, *, opening: bool) -> str:
     """Return *first_person_frame* only when the memory is the persona's own words.
 
@@ -207,6 +217,10 @@ def _source_frame(meta: dict, first_person_frame: str, *, opening: bool) -> str:
         # frames like "I've addressed this publicly" would be false.
         if opening and meta.get("source_type") == "personal_writing":
             return "In my own words:"
+        # A famous figure's published works: name the book ("As I wrote in
+        # Meditations:") instead of modern interview frames ("Look, I've talked...")
+        if opening and meta.get("source_type") == "writing" and meta.get("source_name"):
+            return f"As I wrote in {meta['source_name']}:"
         return first_person_frame
     if voice == SYNTHESIZED:
         return "My interview profile, which is a summary rather than a direct quote, says:"
@@ -220,13 +234,18 @@ def _extract_best_sentence(text: str, limit: int = _QUOTE_DISPLAY_LIMIT) -> str:
     """Extract the strongest single sentence from a passage.
 
     Heuristic: prefer the first sentence that is ≥ 40 chars (likely a
-    complete thought) and ≤ *limit* chars.  If none qualifies, fall back
-    to truncating the full text.
+    complete thought) and ≤ *limit* chars, and that starts like a sentence
+    (capital letter, quote or digit): memory chunks are overlapping word
+    windows, so the first "sentence" is often the tail of a cut one ("of
+    nature in general, however; ..."). All-lowercase transcripts have no
+    such sentence and keep the plain length rule.  If none qualifies, fall
+    back to truncating the full text.
     """
-    sentences = re.split(r"(?<=[.!?])\s+", text.strip())
-    for sent in sentences:
-        if 40 <= len(sent) <= limit:
-            return sent.strip()
+    sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text.strip())]
+    fitting = [s for s in sentences if 40 <= len(s) <= limit]
+    starts_well = [s for s in fitting if re.match(r"[A-Z0-9\"'“‘(]", s)]
+    if starts_well or fitting:
+        return (starts_well or fitting)[0]
     # Fallback: return the beginning of the passage, truncated
     return _truncate(text, limit)
 
@@ -269,6 +288,7 @@ def build_part1(
     best_memory: tuple,
     persona_name: str,
     query: str,
+    whole_passage: bool = False,
 ) -> dict:
     """
     Build Part 1 — Persona Introduction + Authentic Quote.
@@ -288,7 +308,10 @@ def build_part1(
     _, doc_text, meta, raw_dist = best_memory
 
     cleaned = _clean_quote(doc_text)
-    display_quote = _extract_best_sentence(cleaned, limit=_QUOTE_DISPLAY_LIMIT)
+    # With nothing else to quote (only one memory), show the passage itself
+    # rather than its first sentence, which can drop the actual answer.
+    display_quote = (_truncate(cleaned, _QUOTE_DISPLAY_LIMIT) if whole_passage
+                     else _extract_best_sentence(cleaned, limit=_QUOTE_DISPLAY_LIMIT))
 
     # Pick an intro frame deterministically
     frame = _source_frame(meta, _deterministic_pick(_INTRO_FRAMES, query), opening=True)
@@ -332,6 +355,10 @@ def build_part2(
 
     if not additional:
         # Only 1 memory was retrieved — keep Part 2 minimal.
+        # No identity card (custom personas): nothing grounded to add, and
+        # filler like "that's really the key context here" says nothing.
+        if not identity_card:
+            return {"text": "", "additional_sources": sources}
         # Pull a relevant belief from the identity card if possible.
         belief = _find_belief_match(identity_card, theme)
         if belief:
@@ -346,13 +373,13 @@ def build_part2(
         cleaned = _clean_quote(doc)
         snippet = _truncate(cleaned, _SUPPLEMENTARY_QUOTE_LIMIT)
         bridge = _source_frame(meta, _deterministic_pick(_BRIDGE_SINGLE, query), opening=False)
-        text = f"{theme_prompt} {bridge} \"{snippet}\""
+        text = f"{_after_comma(theme_prompt, bridge)} \"{snippet}\""
         sources.append(_format_source(doc, meta, dist))
 
     else:
         # Two supplementary memories
         opener = _deterministic_pick(_BRIDGE_MULTI_OPENER, query)
-        parts = [f"{theme_prompt} {opener}"]
+        parts = [_after_comma(theme_prompt, opener)]
 
         _, doc1, meta1, dist1 = additional[0]
         cleaned1 = _clean_quote(doc1)
@@ -435,9 +462,9 @@ def calculate_confidence(raw_distance: float) -> str:
     Map a raw cosine distance to a human-readable confidence label.
 
     Boundaries (shared by Mix Method and natural mode):
-        distance < 0.80    → ``"high"``   — near-exact semantic match
-        distance 0.80–1.00 → ``"medium"`` — topically relevant
-        distance 1.00–1.10 → ``"low"``    — weak match (still within DISTANCE_THRESHOLD)
+        distance < 0.45    → ``"high"``   — only answerable questions land here
+        distance 0.45–0.52 → ``"medium"`` — grey zone, mostly answerable
+        distance 0.52–0.58 → ``"low"``    — grey zone, up to DISTANCE_THRESHOLD
 
     Args:
         raw_distance: The raw cosine distance from ChromaDB.
@@ -587,7 +614,7 @@ def generate_mix_method_response(
     confidence = calculate_confidence(min(m[3] for m in memories))
 
     # --- Build the three parts ---
-    part1 = build_part1(best_memory, persona_name, query)
+    part1 = build_part1(best_memory, persona_name, query, whole_passage=len(memories) == 1)
     part2 = build_part2(query, memories, theme, theme_prompt, identity_card)
     part3 = build_part3(identity_card, theme=theme, query=query)
 

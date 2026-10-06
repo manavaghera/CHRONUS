@@ -1,0 +1,203 @@
+{
+  "_about": "Pretrained famous-figure models, built by figures/build_figures.py from public-domain Project Gutenberg texts. Only each person's own words are kept: segments are [start regex, end regex] on stripped lines (end null = end of book); [regex, n] means the n-th match. Translators' and editors' introductions, notes, appendices, indexes and stories told about the person are excluded.",
+  "figures": [
+    {
+      "id": "marcus_aurelius",
+      "name": "Marcus Aurelius",
+      "description": "Roman emperor and Stoic philosopher (121-180 AD). Built from his Meditations, in George Long's public-domain translation.",
+      "style_notes": "You speak as a Stoic: calm, plain and addressed partly to yourself, with short reflections on duty, change and what is in your control.",
+      "suggested_questions": [
+        "How should I treat people who wrong me?",
+        "What do you think about death?",
+        "What did you learn from your father?",
+        "What makes a good life?"
+      ],
+      "books": [
+        {
+          "gutenberg": 2680,
+          "title": "Meditations",
+          "segments": [
+            ["^THE FIRST BOOK$", "^APPENDIX$"]
+          ]
+        }
+      ],
+      "stand_in_voice": "bm_fable",
+      "wikidata": "Q1430"
+    },
+    {
+      "id": "abraham_lincoln",
+      "name": "Abraham Lincoln",
+      "description": "16th President of the United States (1809-1865). Built from his speeches and letters, 1832-1865.",
+      "style_notes": "You speak plainly and logically, with occasional dry humour and the formal phrasing of the 19th century.",
+      "suggested_questions": [
+        "Why did you fight to preserve the Union?",
+        "What do you think about slavery?",
+        "What is democracy?",
+        "How do you handle criticism?"
+      ],
+      "books": [
+        {
+          "gutenberg": 14721,
+          "title": "Speeches and Letters",
+          "segments": [
+            ["^LINCOLN'S SPEECHES AND LETTERS$", "^ANECDOTES$"]
+          ]
+        }
+      ],
+      "stand_in_voice": "am_fenrir",
+      "wikidata": "Q91"
+    },
+    {
+      "id": "william_shakespeare",
+      "name": "William Shakespeare",
+      "description": "Playwright and poet (1564-1616). Built from his 154 sonnets only: his own poetic voice, not the characters of his plays.",
+      "style_notes": "You speak as a poet: rich imagery, love, time and beauty, in Elizabethan phrasing.",
+      "suggested_questions": ["What is love?", "Does beauty last?", "What does time do to us?", "How will you be remembered?"],
+      "books": [
+        {
+          "gutenberg": 1041,
+          "title": "Sonnets",
+          "segments": [
+            ["^THE SONNETS$", null]
+          ]
+        }
+      ],
+      "stand_in_voice": "bm_fable",
+      "wikidata": "Q692"
+    },
+    {
+      "id": "nikola_tesla",
+      "name": "Nikola Tesla",
+      "description": "Inventor and electrical engineer (1856-1943). Built from his 1892 lecture to the Institution of Electrical Engineers in London.",
+      "style_notes": "You speak as an experimenter: precise, enthusiastic about electrical phenomena, generous to other scientists.",
+      "suggested_questions": [
+        "What fascinates you about electricity?",
+        "What are high-frequency currents good for?",
+        "How do you design an experiment?",
+        "Which scientists do you admire?"
+      ],
+      "books": [
+        {
+          "gutenberg": 13476,
+          "title": "Experiments with Alternate Currents of High Potential and High Frequency",
+          "segments": [
+            [
+              "^I cannot find words to express",
+              "^\\[Transcriber's note"
+            ]
+          ]
+        }
+      ],
+      "stand_in_voice": "am_puck",
+      "wikidata": "Q9036"
+    },
+    {
+      "id": "marie_curie",
+      "name": "Marie Curie",
+      "description": "Physicist and chemist, twice a Nobel laureate (1867-1934). Built from her biography of Pierre Curie and her autobiographical notes.",
+      "style_notes": "You speak modestly and precisely, with quiet determination and deep feeling for your work and family.",
+      "suggested_questions": [
+        "How did you discover radium?",
+        "What was Pierre like?",
+        "What was your childhood like?",
+        "Why do you do science?"
+      ],
+      "books": [
+        {
+          "gutenberg": 69617,
+          "title": "Pierre Curie",
+          "segments": [
+            ["^PREFACE$", "^CONTENTS$"],
+            ["^CHAPTER I$", null]
+          ]
+        }
+      ],
+      "stand_in_voice": "bf_emma",
+      "wikidata": "Q7186"
+    },
+    {
+      "id": "albert_einstein",
+      "name": "Albert Einstein",
+      "description": "Physicist (1879-1955). Built from Relativity: The Special and General Theory, Sidelights on Relativity, and his speeches and letters About Zionism.",
+      "style_notes": "You explain with simple thought experiments and gentle humour, and care about clarity over jargon.",
+      "suggested_questions": [
+        "What is relativity, simply put?",
+        "What is time?",
+        "How do geometry and experience relate?",
+        "What do you think about nationalism?"
+      ],
+      "books": [
+        {
+          "gutenberg": 30155,
+          "title": "Relativity: The Special and General Theory",
+          "segments": [
+            ["^PREFACE$", "^APPENDICES$"]
+          ]
+        },
+        {
+          "gutenberg": 7333,
+          "title": "Sidelights on Relativity",
+          "segments": [
+            [
+              ["^ETHER AND THE THEORY OF RELATIVITY$", 2],
+              "^End of Project Gutenberg"
+            ]
+          ]
+        },
+        {
+          "gutenberg": 79647,
+          "title": "About Zionism",
+          "segments": [
+            ["^ASSIMILATION AND NATIONALISM$", "^SELECT BIBLIOGRAPHY$"]
+          ]
+        }
+      ],
+      "stand_in_voice": "bm_george",
+      "wikidata": "Q937"
+    },
+    {
+      "id": "mahatma_gandhi",
+      "name": "Mahatma Gandhi",
+      "description": "Leader of India's independence movement (1869-1948). Built from Indian Home Rule (Hind Swaraj), Freedom's Battle and A Guide to Health.",
+      "style_notes": "You speak simply and morally, with conviction about truth, non-violence and self-rule, often answering a question with a principle.",
+      "suggested_questions": [
+        "What is true swaraj?",
+        "Why non-violence?",
+        "What do you think about modern civilization?",
+        "How should we stay healthy?"
+      ],
+      "books": [
+        {
+          "gutenberg": 40461,
+          "title": "Indian Home Rule",
+          "segments": [
+            ["^FOREWORD$", "^CONTENTS$"],
+            [
+              "^CHAPTER I$",
+              "^APPENDICES[:.]?$"
+            ]
+          ]
+        },
+        {
+          "gutenberg": 10366,
+          "title": "Freedom's Battle",
+          "segments": [
+            [
+              ["^II\\. THE KHILAFAT$", 2],
+              null
+            ]
+          ]
+        },
+        {
+          "gutenberg": 40373,
+          "title": "A Guide to Health",
+          "segments": [
+            ["^INTRODUCTION$", "^--FINIS--$"]
+          ]
+        }
+      ],
+      "stand_in_voice": "bm_george",
+      "wikidata": "Q1001"
+    }
+  ]
+}

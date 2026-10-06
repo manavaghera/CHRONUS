@@ -85,7 +85,7 @@ function UploadStep({ persona, onChange }) {
   return (
     <section className="create-card">
       <h2 className="page-h2">2. Upload documents</h2>
-      <p className="page-note">Letters, journals, emails, speeches, transcripts ({UPLOAD_ACCEPT.replaceAll(',', ', ')}; up to {MAX_UPLOAD_MB} MB each). Word files: save as PDF or .txt first.</p>
+      <p className="page-note">Letters, journals, emails, speeches, transcripts ({UPLOAD_ACCEPT.replaceAll(',', ', ')}; up to {MAX_UPLOAD_MB} MB each).</p>
       <div className="create-upload-row">
         <select className="create-select" value={authoredBy} onChange={e => setAuthoredBy(e.target.value)} aria-label="Who wrote these documents">
           <option value="self">Written by {persona.name}</option>
@@ -163,6 +163,62 @@ function InterviewStep({ persona, onChange }) {
   )
 }
 
+function VoiceStep({ persona, onChange }) {
+  const [consent, setConsent] = useState(false)
+  const [cloud, setCloud] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const [cloudReady, setCloudReady] = useState(null)
+  useEffect(() => {
+    api.voiceStatus().then(s => setCloudReady(s.cloned.configured)).catch(() => setCloudReady(null))
+  }, [])
+  const canUpload = consent && cloud && cloudReady !== false
+
+  const upload = async (e) => {
+    const file = e.target.files[0]
+    e.target.value = ''
+    if (!file) return
+    setBusy(true); setError('')
+    try { onChange(await api.addVoice(persona.id, file)) } catch (err) { setError(err.message) } finally { setBusy(false) }
+  }
+  const remove = async () => {
+    setBusy(true); setError('')
+    try { onChange(await api.removeVoice(persona.id)) } catch (err) { setError(err.message) } finally { setBusy(false) }
+  }
+
+  return (
+    <section className="create-card">
+      <h2 className="page-h2">5. Voice <span className="create-count">optional</span></h2>
+      <p className="page-note">A clear 6-60 second .wav recording of {persona.name} speaking lets answers be read aloud in their voice. Fish Audio (a cloud service) turns it into a private voice; removing the voice, or the model, deletes it there and here.</p>
+      {persona.voice ? (
+        <div className="create-upload-row">
+          <span className="model-status model-status--ready">Voice added · {persona.voice.seconds} s · {persona.voice.provider}</span>
+          <button className="model-delete" disabled={busy} onClick={remove}>Remove voice</button>
+        </div>
+      ) : (
+        <>
+          {cloudReady === false && (
+            <div className="page-alert">Cloud voice isn't set up yet: add <code>FISH_API_KEY=your_key</code> to <code>CHRONUS/.env</code> (get a key at fish.audio/app/api-keys), then restart the server.</div>
+          )}
+          <label className="create-check">
+            <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} />
+            <span><strong>Voice consent.</strong> {persona.name}, or their estate, agreed to their voice being used for this model.</span>
+          </label>
+          <label className="create-check">
+            <input type="checkbox" checked={cloud} onChange={e => setCloud(e.target.checked)} />
+            <span><strong>Cloud processing.</strong> I agree that the recording, and the text of each answer I play, is sent to Fish Audio to make and use the voice.</span>
+          </label>
+          <label className={`pill-btn pill-btn--dark create-file${canUpload ? '' : ' is-disabled'}`}>
+            <span className="pill-inner">{busy ? 'Making voice…' : 'Choose .wav recording'}</span>
+            <input type="file" accept=".wav,audio/wav" disabled={!canUpload || busy} onChange={upload} />
+          </label>
+        </>
+      )}
+      {error && <div className="page-alert">{error}</div>}
+    </section>
+  )
+}
+
 function BuildStep({ persona, onChange }) {
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
@@ -220,6 +276,7 @@ export default function CreatePage({ id }) {
             <UploadStep persona={persona} onChange={setPersona} />
             <InterviewStep persona={persona} onChange={setPersona} />
             <BuildStep persona={persona} onChange={setPersona} />
+            <VoiceStep persona={persona} onChange={setPersona} />
           </>
         )}
       </section>

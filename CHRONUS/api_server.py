@@ -12,7 +12,7 @@ import hashlib
 import json
 import logging
 import re
-from datetime import date, datetime
+from datetime import datetime
 from pathlib import Path
 from typing import Literal, Optional
 
@@ -24,8 +24,8 @@ import chromadb
 # sentence_transformers -> torch/sklearn/datasets. Pre-loading pyarrow.dataset
 # FIRST fixes the import order and avoids the crash.
 import pyarrow.dataset  # noqa: F401  (must be imported before sentence_transformers)
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import FileResponse
+from fastapi import FastAPI, HTTPException, Query, UploadFile, File
+from fastapi.responses import Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
 from sentence_transformers import SentenceTransformer
@@ -35,6 +35,10 @@ from services.mix_method import generate_mix_method_response  # CHRONUS core con
 from services.natural_mode import generate_natural_response
 from services.provenance import anchor_first, content_words, format_source_citation, grounding_score
 from services import personas as ps
+from services import tts
+# Quick profile answers; re-exported for tests and evaluation scripts
+from services.profile import (BASIC_INFO_PATTERNS, BASIC_PROFILE, check_basic_info, get_profile,  # noqa: F401
+                              profile_context_block)
 from services.persona_routes import InterviewAnswer, embed_interview_answer, make_router
 
 
@@ -159,7 +163,9 @@ class ChatResponse(BaseModel):
 
 class SpeakRequest(BaseModel):
     text: str = Field(min_length=1, max_length=2000)
-    speaker_wav: str  # must live under 07-Voice/ (checked in /speak)
+    # Speak in this model's consented voice (services/personas.py); the client
+    # no longer passes a file path
+    persona: str = Field(pattern=ps.PERSONA_ID_PATTERN)
 
 
 # ---- Core functions ----
@@ -203,9 +209,11 @@ def retrieval_query(query: str, history: list[ChatTurn]) -> str:
 
 
 
-def retrieve(query: str, n: int = N_RESULTS, memory=None) -> Optional[list[tuple]]:
+def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = None,
+             threshold: float | None = None) -> Optional[list[tuple]]:
     """Retrieve top-K memories with importance bias from *memory* (a persona's
-    ChromaDB collection; defaults to the default persona's).
+    ChromaDB collection; defaults to the default persona's). *where* is a
+    ChromaDB metadata filter, e.g. to hold a source out during evaluation.
 
     BUG 2 FIX: returns None when no memory passes DISTANCE_THRESHOLD,
     signaling insufficient evidence to the caller.
@@ -218,17 +226,25 @@ def retrieve(query: str, n: int = N_RESULTS, memory=None) -> Optional[list[tuple
     beyond the pre-truncated top-n never got a chance at the threshold check.
     """
     q_emb = embedder.encode([query], normalize_embeddings=True).tolist()
-    raw = (memory or collection).query(query_embeddings=q_emb, n_results=n * 4)
+    raw = (memory or collection).query(query_embeddings=q_emb, n_results=n * 4, where=where)
     docs = raw["documents"][0]
     metas = raw["metadatas"][0]
     dists = raw["distances"][0]
 
-    # 1. Build scored list from raw ChromaDB results (raw distance only here)
-    scored = [(doc, meta, dist) for doc, meta, dist in zip(docs, metas, dists)]
+    # 1. Build scored list from raw ChromaDB results (raw distance only here),
+    # skipping exact duplicate texts (e.g. the same letter uploaded twice)
+    scored, seen = [], set()
+    for doc, meta, dist in zip(docs, metas, dists):
+        key = " ".join(doc.lower().split())
+        if key not in seen:
+            seen.add(key)
+            scored.append((doc, meta, dist))
 
     # 2. BUG 8 FIX: FILTER FIRST — keep only memories passing the raw-distance
     # threshold (theta). Importance must never rescue a memory past theta.
-    passing = [(doc, meta, dist) for doc, meta, dist in scored if dist <= DISTANCE_THRESHOLD]
+    # *threshold*: a persona's own calibrated value (persona.json), else the global one
+    limit = threshold or DISTANCE_THRESHOLD
+    passing = [(doc, meta, dist) for doc, meta, dist in scored if dist <= limit]
     # Very short memories ("Mars is The New World") sit close to short
     # questions in embedding space but carry almost no content; drop them
     # whenever longer evidence also passed the threshold.
@@ -248,7 +264,12 @@ def retrieve(query: str, n: int = N_RESULTS, memory=None) -> Optional[list[tuple
     # 5. BUG 2 FIX retained: return None when nothing passed the threshold
     if not result:
         return None
-    return result
+
+    # 6. Drop memories that match much worse than the best one. Small custom
+    # models otherwise fill the 2nd/3rd slots with unrelated text (~0.47
+    # behind the best); on Elon's corpus supporting memories sit <= 0.20 behind.
+    best = min(r[3] for r in result)
+    return [r for r in result if r[3] <= best + config.SUPPORT_MARGIN]
 
 
 # DEPRECATED: Used by legacy LLM response path (now commented out).
@@ -396,180 +417,6 @@ def calculate_faithfulness(response: str, memories: list[tuple]) -> float:
     return grounding_score(response, [doc for _, doc, _, _ in memories])
 
 
-# ============================================================================
-# BASIC PROFILE INFO — Direct answers for simple factual questions
-# Simple questions like "when were you born?" skip RAG entirely and answer
-# from this curated profile dict. Fast, deterministic, no hallucination risk.
-# ============================================================================
-BASIC_PROFILE = {
-    "elon_musk": {
-        # Identity
-        "full_name": "Elon Reeve Musk",
-        "born": "June 28, 1971",
-        "birth_place": "Pretoria, South Africa",
-        # "age" is computed per request from BIRTH_DATES (see get_profile)
-        "nationality": "South African, Canadian and American",
-
-        # Family
-        "mother": "Maye Musk",
-        "father": "Errol Musk",
-        "siblings": "Kimbal, Tosca",
-        "children": "I have several kids. I don't really discuss their details publicly.",
-
-        # Education
-        "education": "I went to Queen's University, then transferred to UPenn, got degrees in economics and physics. Was going to do a PhD at Stanford but dropped out after two days to start a company.",
-
-        # Companies
-        "companies": "Tesla, SpaceX, X (formerly Twitter), Neuralink, The Boring Company, xAI",
-        "ceo_of": "Tesla and SpaceX",
-        "founder_of": "SpaceX, Neuralink, The Boring Company, xAI",
-        "bought": "X (Twitter) in 2022",
-
-        # Simple facts
-        "net_worth": "It fluctuates a lot. I don't really focus on it.",
-        "lives_in": "Mostly between Texas and California these days.",
-        "hobbies": "I play video games sometimes, Elden Ring, Diablo, that kind of thing. And memes, obviously.",
-    }
-}
-
-# Age is derived from these so it never goes stale.
-BIRTH_DATES = {
-    "elon_musk": date(1971, 6, 28),
-}
-
-
-def get_profile(persona: str, today: date | None = None) -> dict | None:
-    """Return the persona's basic profile with "age" computed as of *today*."""
-    profile = BASIC_PROFILE.get(persona)
-    if profile is None:
-        return None
-    profile = dict(profile)
-    born = BIRTH_DATES.get(persona)
-    if born:
-        today = today or date.today()
-        had_birthday = (today.month, today.day) >= (born.month, born.day)
-        profile["age"] = str(today.year - born.year - (0 if had_birthday else 1))
-    return profile
-
-
-# Patterns that trigger basic info responses. Each must be a question ABOUT
-# the persona, matched on whole words — bare keywords like "son" and "own"
-# used to hijack "personality"/"reason"/"lessons" and "shut down"/"town
-# square". "u" and "bron" cover common chat shorthand and typos.
-_YOU = r"(?:you|u)"
-_BORN = r"(?:born|bron)"
-BASIC_INFO_PATTERNS = {
-    rf"\b(?:when|what year|which year)\b.*\b{_YOU}\b.*\b{_BORN}\b"
-    r"|\byour (?:birthday|birth ?date|date of birth)\b": "born",
-    rf"\bhow old (?:are|r) {_YOU}\b|\byour age\b": "age",
-    rf"\bwhere\b.*\b{_YOU}\b.*\b{_BORN}\b"
-    rf"|\b(?:which|what) (?:country|contry|city)\b.*\b{_YOU}\b.*\b{_BORN}\b"
-    rf"|\bwhere (?:are|r) {_YOU} from\b"
-    r"|\byour (?:birth ?place|place of birth|home ?town)\b": "birth_place",
-    r"\byour (?:full|real) name\b|\bwhat(?:'s| is) your name\b": "full_name",
-    r"\bwho(?:'s| is| was) your (?:mom|mum|mother)\b|\byour (?:mom|mum|mother)'?s name\b": "mother",
-    r"\bwho(?:'s| is| was) your (?:dad|father)\b|\byour (?:dad|father)'?s name\b": "father",
-    rf"\b{_YOU} have (?:any )?(?:brothers?|sisters?|siblings?)\b"
-    r"|\bhow many (?:brothers?|sisters?|siblings?)\b"
-    r"|\bwho are your (?:brothers?|sisters?|siblings?)\b": "siblings",
-    rf"\bhow many (?:kids|children|child|sons|daughters)\b"
-    rf"|\b{_YOU} have (?:any )?(?:kids|children)\b": "children",
-    rf"\b(?:what|which|how many) companies\b"
-    rf"|\bwhat (?:are|r) {_YOU} (?:the )?ceo of\b": "companies",
-    rf"\byour net ?worth\b|\bhow rich (?:are|r) {_YOU}\b"
-    rf"|\bhow much (?:money )?(?:are {_YOU} worth|do {_YOU} (?:have|make))\b": "net_worth",
-    rf"\bwhere do {_YOU} (?:live|stay)\b|\bwhere (?:are|r) {_YOU} (?:living|based|staying)\b": "lives_in",
-    rf"\bwhere did {_YOU} (?:go to )?(?:study|school|college|university)\b"
-    rf"|\bwhat did {_YOU} study\b|\byour (?:education|degrees?)\b": "education",
-    rf"\bhobb(?:y|ies)\b|\bwhat do {_YOU} do for fun\b|\b(?:free|spare) time\b": "hobbies",
-    r"^(hi|hey|hello|yo|sup|what'?s? ?up|howdy)\s*[?!]*$": "greeting",
-}
-
-
-def check_basic_info(query: str, persona: str) -> dict | None:
-    """Check if query matches a basic info pattern. Returns response dict or None."""
-    profile = get_profile(persona)
-    if not profile:
-        return None
-
-    # Normalise curly apostrophes (mobile keyboards) so "what’s" == "what's".
-    query_lower = query.lower().replace("’", "'").strip()
-
-    for pattern, key in BASIC_INFO_PATTERNS.items():
-        if re.search(pattern, query_lower):
-            # Special handling for greetings — comes BEFORE the profile-value
-            # lookup because "greeting" is not a key in BASIC_PROFILE (the
-            # original ordering made this branch unreachable).
-            if key == "greeting":
-                greetings = [
-                    "Hey, what's up?",
-                    "Not much, you?",
-                    "Hey.",
-                    "What's going on?",
-                    "Yo.",
-                ]
-                pick = int(hashlib.md5(query.encode()).hexdigest(), 16) % len(greetings)
-                return {
-                    "response": greetings[pick],
-                    "sources": [],
-                    "confidence": "high",
-                    "fallback": False,
-                    "mode": "basic_info"
-                }
-
-            value = profile.get(key)
-            if value is None:
-                continue
-
-            # Natural phrasing for the answer
-            natural_answers = {
-                "born": f"{value}.",
-                "age": f"I'm {value}.",
-                "birth_place": f"{value}.",
-                "full_name": f"{value}.",
-                "mother": f"{value}.",
-                "father": f"{value}.",
-                "siblings": f"{value}.",
-                "children": value,  # Already natural
-                "companies": value,
-                "net_worth": value,
-                "lives_in": value,
-                "education": value,
-                "hobbies": value,
-            }
-
-            answer = natural_answers.get(key, f"{value}.")
-
-            return {
-                "response": answer,
-                "sources": [],
-                "confidence": "high",
-                "fallback": False,
-                "mode": "basic_info"
-            }
-
-    return None
-
-
-def profile_context_block(persona: str = "elon_musk") -> str:
-    """Build a compact 'PERSONAL PROFILE' context block for the LLM prompt.
-
-    This gives the natural-response model access to Elon's open-source
-    personal facts (birth, family, education, companies) so it can answer
-    personal questions conversationally even when retrieval doesn't surface
-    a clean biographical chunk.
-    """
-    profile = get_profile(persona)
-    if not profile:
-        return ""
-    lines = ["PERSONAL PROFILE (public record):"]
-    for key, value in profile.items():
-        if key == "children":
-            continue  # handled by basic-info path / kept private
-        lines.append(f"- {key.replace('_', ' ').title()}: {value}")
-    return "\n".join(lines)
-
-
 # ---- Endpoints ----
 @app.post("/chat", response_model=ChatResponse)
 def chat(req: ChatRequest):
@@ -601,7 +448,8 @@ def chat(req: ChatRequest):
         )
 
     # 1. Retrieve memories (follow-ups borrow the previous question's topic)
-    memories = retrieve(retrieval_query(req.query, req.history), req.n_results, memory)
+    memories = retrieve(retrieval_query(req.query, req.history), req.n_results, memory,
+                        threshold=persona.get("distance_threshold"))
 
     # BUG 3 FIX: true uncertainty fallback — if retrieve() returned None, no
     # memory passed DISTANCE_THRESHOLD, so there is insufficient evidence.
@@ -634,7 +482,8 @@ def chat(req: ChatRequest):
     # Custom models are local-first: AI voice sends evidence excerpts to the
     # cloud LLM provider, so it needs the creator's opt-in (paper: disclose
     # cloud use, keep personal data on-device by default).
-    if mode == "natural" and config.LLM_PROVIDER != "ollama" and not persona.get("allow_cloud_llm"):
+    # (Ollama and the "local" provider run on this machine, so they need no opt-in.)
+    if mode == "natural" and config.LLM_PROVIDER not in ("ollama", "local") and not persona.get("allow_cloud_llm"):
         mode = "mix_method"
         notice = "AI voice is off for this model because it would send excerpts to a cloud AI service, so these are verbatim quotes."
 
@@ -647,6 +496,8 @@ def chat(req: ChatRequest):
             history=[turn.model_dump() for turn in req.history],
             persona_name=persona["name"],
             style_notes=persona.get("style_notes"),
+            # The local LoRA adapter (lora/train_lora.py) was trained on Elon's words only
+            use_adapter=persona["id"] == "elon_musk",
         )
         sources = result["sources"]
     else:
@@ -699,68 +550,87 @@ async def stats():
     }
 
 
-# ---- Voice endpoints ----
-_voice_engine = None
-_VOICE_DIR = Path(__file__).parent / "07-Voice"
-_VOICE_OUTPUT_DIR = _VOICE_DIR / "output"
-_VOICE_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
+# ---- Voice endpoints (services/tts.py) ----
 
 @app.get("/voice/status")
 async def voice_status():
-    """Check voice engine readiness."""
-    gpu = False
-    if _voice_engine is not None:
-        gpu = _voice_engine.gpu
-    return {"status": "ready" if _voice_engine is not None else "not_loaded", "gpu": gpu, "model": "xtts_v2"}
+    """Which voices the Listen button can use."""
+    return {
+        "stand_in": {"engine": "Kokoro-82M", "where": "local"},
+        "cloned": {"engine": f"Fish Audio {config.FISH_TTS_MODEL}", "where": "cloud",
+                   "configured": tts.cloud_voice_configured()},
+    }
 
 
 @app.post("/speak")
-async def speak(req: SpeakRequest):
-    """Synthesize speech from text using XTTS-v2."""
-    global _voice_engine
-    # Reference audio must come from 07-Voice/: the path is client-supplied,
-    # and voice samples are biometric data the paper keeps on-device.
-    speaker = (_VOICE_DIR / req.speaker_wav).resolve()
-    if _VOICE_DIR.resolve() not in speaker.parents or speaker.suffix.lower() != ".wav":
-        raise HTTPException(status_code=400, detail="speaker_wav must be a .wav file inside 07-Voice/")
-    if _voice_engine is None:
+def speak(req: SpeakRequest):
+    """Read *text* aloud for a model.
+
+    Custom models whose creator uploaded a voice sample with consent (and
+    opted in to Fish Audio) speak in that cloned voice. Pretrained models
+    (public figures) are never cloned: they speak in a labelled Kokoro
+    stand-in voice.
+    """
+    persona = ps.load_persona(req.persona)
+    if persona is None:
+        raise HTTPException(status_code=404, detail=f"No model called '{req.persona}'")
+    if persona.get("kind") == "custom" and persona.get("voice"):
+        voice_id = persona["voice"].get("fish_voice_id")
+        if not voice_id:
+            raise HTTPException(status_code=409, detail="This voice was saved before cloud voices; please upload it again")
         try:
-            from voice_engine import get_voice_engine
-            _voice_engine = get_voice_engine()
+            audio = tts.fish_speech(req.text, voice_id)
+        except tts.VoiceServiceError as e:
+            logger.error(f"Cloned voice failed for {persona['id']}: {e}")
+            raise HTTPException(status_code=e.status, detail=str(e))
+        return Response(content=audio, media_type="audio/mpeg", headers={"X-Chronus-Voice": "cloned"})
+    if persona.get("kind") == "pretrained" and persona.get("stand_in_voice"):
+        try:
+            wav = tts.stand_in_wav(req.text, persona["stand_in_voice"])
         except Exception as e:
-            raise HTTPException(status_code=503, detail=f"Voice engine failed to load: {e}")
+            logger.error(f"Stand-in voice failed for {persona['id']}: {e}")
+            raise HTTPException(status_code=503, detail=f"Stand-in voice failed: {e}")
+        return Response(content=wav, media_type="audio/wav", headers={"X-Chronus-Voice": "stand-in"})
+    raise HTTPException(status_code=404, detail=f"{persona['name']} has no voice")
 
-    output_path = str(_VOICE_OUTPUT_DIR / f"speech_{datetime.now().strftime('%Y%m%d_%H%M%S')}.wav")
+
+class VoiceDemoRequest(BaseModel):
+    text: str = Field(min_length=1, max_length=2000)
+
+@app.post("/voice/demo")
+def voice_demo(req: VoiceDemoRequest):
+    """Test FishAudio API connection by generating speech without a custom reference ID."""
     try:
-        result_path = _voice_engine.synthesize(
-            text=req.text,
-            speaker_wav=str(speaker),
-            output_path=output_path,
-        )
-    except FileNotFoundError as e:
-        raise HTTPException(status_code=404, detail=str(e))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Synthesis failed: {e}")
-
-    return FileResponse(result_path, media_type="audio/wav", filename="speech.wav")
+        audio = tts.fish_demo_speech(req.text)
+    except tts.VoiceServiceError as e:
+        logger.error(f"Demo voice failed: {e}")
+        raise HTTPException(status_code=e.status, detail=str(e))
+    return Response(content=audio, media_type="audio/mpeg", headers={"X-Chronus-Voice": "demo"})
 
 
-# ---- Serve the UI ----
-UI_DIR = Path(__file__).parent / "ui"
+@app.post("/voice/quick-clone")
+async def quick_clone(audio: UploadFile = File(...)):
+    """Bypass model creation and create a temporary voice model directly on FishAudio."""
+    wav = await audio.read()
+    try:
+        voice_id = tts.fish_create_voice(wav, audio.filename, audio.content_type)
+        return {"voice_id": voice_id}
+    except tts.VoiceServiceError as e:
+        raise HTTPException(status_code=e.status, detail=str(e))
 
 
-@app.get("/")
-async def serve_ui():
-    """Serve the chat UI."""
-    index = UI_DIR / "index.html"
-    if not index.exists():
-        raise HTTPException(status_code=404, detail="UI not found")
-    return FileResponse(index)
+class QuickSpeakRequest(BaseModel):
+    text: str = Field(min_length=1, max_length=2000)
+    voice_id: str
 
-
-if UI_DIR.exists():
-    app.mount("/static", StaticFiles(directory=str(UI_DIR)), name="static")
+@app.post("/voice/quick-speak")
+def quick_speak(req: QuickSpeakRequest):
+    """Speak using a specific voice_id (for the quick clone sandbox)."""
+    try:
+        audio = tts.fish_speech(req.text, req.voice_id)
+        return Response(content=audio, media_type="audio/mpeg", headers={"X-Chronus-Voice": "cloned"})
+    except tts.VoiceServiceError as e:
+        raise HTTPException(status_code=e.status, detail=str(e))
 
 
 # ============================================================================
@@ -865,6 +735,32 @@ def complete_interview(responses: list[InterviewAnswer], person: str = PERSON_ID
 
 # Pretrained + custom models: list, create, upload, interview, build, delete
 app.include_router(make_router(client, embedder))
+
+
+# ---- The website (FRONTEND/chronus-app, built with `npm run build`) ----
+# Mounted last so every API route above wins; the React app uses #/ routes,
+# so the server only has to serve index.html and its assets. In development
+# the Vite server on :3000 serves the site instead and proxies /api here.
+SITE_DIR = Path(__file__).resolve().parent.parent / "FRONTEND" / "chronus-app" / "dist"
+
+@app.middleware("http")
+async def revalidate_html(request, call_next):
+    """Browsers must re-check index.html on every visit (assets have hashed
+    names and can be cached): otherwise a browser that saw the old single-page
+    UI kept showing it after the switch to the React site."""
+    response = await call_next(request)
+    if response.headers.get("content-type", "").startswith("text/html"):
+        response.headers["Cache-Control"] = "no-cache"
+    return response
+
+
+if (SITE_DIR / "index.html").exists():
+    app.mount("/", StaticFiles(directory=str(SITE_DIR), html=True), name="site")
+else:
+    @app.get("/")
+    def site_not_built():
+        return {"detail": "Website not built yet: run `npm --prefix FRONTEND/chronus-app run build`, "
+                          "or use the dev server on http://localhost:3000"}
 
 
 if __name__ == "__main__":

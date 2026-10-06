@@ -28,7 +28,7 @@ PRETRAINED_DIR = ROOT / "models"
 CUSTOM_DIR = ROOT / "personas"
 
 PERSONA_ID_PATTERN = r"^[a-z0-9_]{3,48}$"
-UPLOAD_TYPES = {".txt", ".md", ".pdf", ".csv", ".json"}
+UPLOAD_TYPES = {".txt", ".md", ".pdf", ".csv", ".json", ".docx"}
 MAX_UPLOAD_BYTES = 10 * 1024 * 1024
 # Data sufficiency check before a custom model can be built (paper, Input
 # Data Layer): with fewer memories it can barely answer anything.
@@ -120,6 +120,25 @@ def _sanitize(value):
     return value if isinstance(value, (str, int, float, bool)) else str(value)
 
 
+def _parse_docx(path: Path, merge_sources) -> list[dict]:
+    """Word document -> records, via the same paragraph chunking as .txt/.md."""
+    import docx  # python-docx
+
+    try:
+        document = docx.Document(str(path))
+    except Exception as e:  # not a real .docx (zip) file
+        raise ValueError(f"Couldn't read this Word file: {e}")
+    blocks = [p.text for p in document.paragraphs]
+    for table in document.tables:
+        blocks += [" | ".join(cell.text for cell in row.cells) for row in table.rows]
+    text_path = path.with_name(path.name + ".txt")
+    try:
+        text_path.write_text("\n\n".join(b.strip() for b in blocks if b.strip()), encoding="utf-8")
+        return merge_sources.parse_markdown(text_path)
+    finally:
+        text_path.unlink(missing_ok=True)
+
+
 def ingest_document(persona: dict, collection, embedder, filename: str, data: bytes, authored_by: str) -> dict:
     """Parse, chunk and embed one uploaded document into the persona's memory.
 
@@ -140,14 +159,20 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
     path = uploads / name
     path.write_bytes(data)
 
-    if ext in (".txt", ".md"):
-        records = merge_sources.parse_markdown(path)
-    elif ext == ".csv":
-        records = merge_sources.parse_csv_file(path)
-    elif ext == ".json":
-        records = merge_sources.parse_json_file(path)
-    else:
-        records = merge_sources.parse_pdf_file(str(path))
+    try:
+        if ext in (".txt", ".md"):
+            records = merge_sources.parse_markdown(path)
+        elif ext == ".docx":
+            records = _parse_docx(path, merge_sources)
+        elif ext == ".csv":
+            records = merge_sources.parse_csv_file(path)
+        elif ext == ".json":
+            records = merge_sources.parse_json_file(path)
+        else:
+            records = merge_sources.parse_pdf_file(str(path))
+    except ValueError:
+        path.unlink(missing_ok=True)  # don't keep a file we couldn't use
+        raise
 
     # Their own writing (letters, journals, emails) is first-person evidence;
     # anything written about them is third-party (services/provenance.py).
@@ -182,6 +207,65 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
         fresh["uploads"] = [u for u in fresh.get("uploads", []) if u["filename"] != name] + [entry]
         save_persona(fresh)
     return entry
+
+
+# Voice samples for cloning (XTTS-v2 needs ~6 s; longer adds little)
+VOICE_MIN_SECONDS, VOICE_MAX_SECONDS = 6, 60
+VOICE_CONSENT_STATEMENT = (
+    "This person, or their estate, agreed to their voice being used for this model, and to the "
+    "recording being sent to Fish Audio (a cloud service) to make a private voice from it. "
+    "Voice is biometric data: removing the voice deletes it here and at Fish Audio."
+)
+
+
+def voice_path(persona: dict) -> Path:
+    return CUSTOM_DIR / persona["id"] / "voice" / "reference.wav"
+
+
+def check_voice_sample(data: bytes) -> float:
+    """Seconds of speech in a reference recording.
+
+    Raises ValueError unless it is a readable PCM .wav of 6-60 seconds.
+    """
+    import io
+    import wave
+
+    if len(data) > MAX_UPLOAD_BYTES:
+        raise ValueError(f"Recording is larger than {MAX_UPLOAD_BYTES // (1024 * 1024)} MB")
+    try:
+        with wave.open(io.BytesIO(data)) as wav:
+            seconds = wav.getnframes() / float(wav.getframerate())
+    except (wave.Error, EOFError, ZeroDivisionError):
+        raise ValueError("Please upload a standard (PCM) .wav recording")
+    if not VOICE_MIN_SECONDS <= seconds <= VOICE_MAX_SECONDS:
+        raise ValueError(f"The recording is {seconds:.0f} s; use {VOICE_MIN_SECONDS}-{VOICE_MAX_SECONDS} s of clear speech")
+    return seconds
+
+
+def save_voice_sample(persona: dict, data: bytes, fish_voice_id: str) -> dict:
+    """Store a consented recording and its private Fish voice id (custom models only).
+
+    The .wav is kept locally so the voice can be remade, e.g. with another engine.
+    """
+    seconds = check_voice_sample(data)
+    path = voice_path(persona)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_bytes(data)
+    voice = {"seconds": round(seconds, 1), "fish_voice_id": fish_voice_id,
+             "consent": {"statement": VOICE_CONSENT_STATEMENT, "given_at": _now()}}
+    with _lock:
+        fresh = load_persona(persona["id"]) or persona
+        fresh["voice"] = voice
+        save_persona(fresh)
+    return voice
+
+
+def delete_voice_sample(persona: dict) -> None:
+    voice_path(persona).unlink(missing_ok=True)
+    with _lock:
+        fresh = load_persona(persona["id"]) or persona
+        fresh.pop("voice", None)
+        save_persona(fresh)
 
 
 def record_interview_answer(persona: dict, question_id: str) -> None:

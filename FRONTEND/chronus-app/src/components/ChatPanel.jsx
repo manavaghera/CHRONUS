@@ -8,7 +8,8 @@ const MAX_HISTORY = 10
 const MODE_LABELS = {
   natural: 'AI voice',
   mix_method: 'Verbatim quotes',
-  mix_method_fallback: 'Verbatim quotes, AI unavailable',
+  // The AI's draft was unreachable or not backed by the sources (grounding guard)
+  mix_method_fallback: 'Verbatim quotes, AI answer not used',
   basic_info: 'Profile fact',
   fallback: 'Not enough evidence',
 }
@@ -34,7 +35,54 @@ function Sources({ sources, voiceLabels }) {
   )
 }
 
-function Msg({ m, voiceLabels }) {
+// Server voice: the consented cloned voice of a custom model, or for public
+// figures a synthetic stand-in voice that is labelled as not theirs
+function Listen({ personaId, text, standIn }) {
+  const [state, setState] = useState('idle')
+  const [error, setError] = useState('')
+  const audioRef = useRef(null)
+  useEffect(() => () => audioRef.current?.pause(), [])
+  const toggle = async () => {
+    if (state === 'playing') { audioRef.current?.pause(); setState('idle'); return }
+    setState('loading'); setError('')
+    try {
+      const url = await api.speak(personaId, text)
+      const audio = new Audio(url)
+      audioRef.current = audio
+      audio.onended = audio.onpause = () => { URL.revokeObjectURL(url); setState('idle') }
+      await audio.play()
+      setState('playing')
+    } catch (e) { setState('idle'); setError(e.message) }
+  }
+  const label = standIn ? '▶ Listen (stand-in voice, not theirs)' : '▶ Listen in their voice'
+  return (
+    <div>
+      <button className="demo-listen" disabled={state === 'loading'} onClick={toggle}
+        title={standIn ? "A synthetic voice chosen for this model. It is not a recording or copy of the real person's voice." : undefined}>
+        {state === 'loading' ? 'Generating voice…' : state === 'playing' ? '■ Stop' : label}
+      </button>
+      {error && <div className="demo-msg-source">{error}</div>}
+    </div>
+  )
+}
+
+// Any model: the browser's built-in speech voice. Clearly a computer voice,
+// so it imitates nobody, and it needs no download or licence.
+function ReadAloud({ text }) {
+  const [speaking, setSpeaking] = useState(false)
+  if (typeof window === 'undefined' || !window.speechSynthesis) return null
+  const toggle = () => {
+    window.speechSynthesis.cancel()
+    if (speaking) { setSpeaking(false); return }
+    const utterance = new SpeechSynthesisUtterance(text)
+    utterance.onend = utterance.onerror = () => setSpeaking(false)
+    setSpeaking(true)
+    window.speechSynthesis.speak(utterance)
+  }
+  return <button className="demo-listen" onClick={toggle}>{speaking ? '■ Stop' : '🔊 Read aloud'}</button>
+}
+
+function Msg({ m, voiceLabels, voice }) {
   return (
     <div className={`demo-msg demo-msg--${m.type}`}>
       <div className="demo-msg-avatar">{m.type === 'assistant' ? SPARK : 'You'}</div>
@@ -43,6 +91,11 @@ function Msg({ m, voiceLabels }) {
         <div className={`demo-msg-bubble demo-msg-bubble--text${m.error ? ' demo-msg-bubble--error' : ''}`}>{m.text}</div>
         {m.meta && <div className="demo-msg-source">{m.meta}</div>}
         <Sources sources={m.sources} voiceLabels={voiceLabels} />
+        {m.sources && !m.error && (
+          <div className="demo-voice-row">
+            {voice ? <Listen personaId={voice.personaId} text={m.text} standIn={voice.standIn} /> : <ReadAloud text={m.text} />}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -50,11 +103,13 @@ function Msg({ m, voiceLabels }) {
 
 /**
  * Chat with one CHRONUS model.
- * persona: { id, name, memories?, allowAiVoice? } — allowAiVoice false hides
- * the cloud AI mode (custom models are local-first unless their creator opts in).
+ * persona: { id, name, memories?, allowAiVoice?, hasVoice?, standInVoice? } —
+ * allowAiVoice false hides the cloud AI mode (custom models are local-first
+ * unless their creator opts in); hasVoice / standInVoice add a Listen button.
  */
 export default function ChatPanel({ persona, greeting, quick = [], tall = false, voiceLabels = DEFAULT_VOICE_LABELS }) {
   const aiAllowed = persona.allowAiVoice !== false
+  const voice = persona.hasVoice || persona.standInVoice ? { personaId: persona.id, standIn: !persona.hasVoice } : null
   const [msgs, setMsgs] = useState(() => [{ type: 'assistant', text: greeting, meta: 'Model initialization' }])
   const [input, setInput] = useState('')
   const [typing, setTyping] = useState(false)
@@ -116,7 +171,7 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
         </div>
       </div>
       <div className="demo-chat-body" ref={bodyRef}>
-        {msgs.map((m, i) => <Msg key={i} m={m} voiceLabels={voiceLabels} />)}
+        {msgs.map((m, i) => <Msg key={i} m={m} voiceLabels={voiceLabels} voice={voice} />)}
         {typing && <div className="demo-msg demo-msg--assistant"><div className="demo-msg-avatar">{SPARK}</div><div className="demo-msg-bubble"><div className="demo-typing"><span/><span/><span/></div></div></div>}
       </div>
       <div className="demo-chat-modes" role="group" aria-label="Answer mode">

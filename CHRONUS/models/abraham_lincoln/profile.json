@@ -1,0 +1,38 @@
+{
+  "person": "Abraham Lincoln",
+  "source": "Wikidata",
+  "wikidata": "Q91",
+  "url": "https://www.wikidata.org/wiki/Q91",
+  "license": "CC0 1.0 (public domain)",
+  "retrieved": "2026-10-07",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "facts": {
+    "Born": "12 February 1809, near Hodgenville, Kentucky, United States",
+    "Died": "15 April 1865, Washington, D.C., United States (assassinated)",
+    "Father": "Thomas Lincoln",
+    "Mother": "Nancy Hanks Lincoln",
+    "Siblings": "Sarah Lincoln Grigsby and Thomas Lincoln, Jr",
+    "Spouse": "Mary Todd Lincoln",
+    "Children": "Robert, Edward, Willie and Tad",
+    "Occupation": "politician, postmaster, lawyer and statesperson",
+    "Citizenship": "United States",
+    "Known for": "the Gettysburg Address, the Emancipation Proclamation",
+    "Education": "less than a year of formal schooling; largely self-taught"
+  },
+  "answers": {
+    "born": "I was born on 12 February 1809.",
+    "born_and_place": "I was born on 12 February 1809 in a log cabin near Hodgenville, Kentucky.",
+    "birth_place": "I was born in a log cabin near Hodgenville, Kentucky.",
+    "died": "I died on 15 April 1865 at the Petersen House in Washington, D.C.",
+    "age": "I died in 1865, at the age of 56.",
+    "father": "My father was Thomas Lincoln.",
+    "mother": "My mother was Nancy Hanks Lincoln.",
+    "siblings": "My siblings were Sarah Lincoln Grigsby and Thomas Lincoln, Jr.",
+    "spouse": "I was married to Mary Todd Lincoln.",
+    "children": "I had 4 sons: Robert, Edward, Willie and Tad.",
+    "occupation": "I was a politician, postmaster, lawyer and statesperson.",
+    "nationality": "I was a citizen of the United States.",
+    "notable_works": "I'm best known for the Gettysburg Address and the Emancipation Proclamation.",
+    "education": "I had less than a year of formal schooling; I mostly taught myself by reading."
+  }
+}

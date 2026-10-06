@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const items = [['home','Home'],['demo','Live Demo'],['models','Models'],['create','Create Your Model'],['how','How It Works'],['ethics','Trust'],['roadmap','Roadmap'],['contact','Contact']]
+const items = [['home','Home'],['demo','Live Demo'],['models','Models'],['create','Create Your Model'],['clone-voice','Voice Sandbox'],['how','How It Works'],['ethics','Trust'],['roadmap','Roadmap'],['contact','Contact']]
 
 export default function NavMenu({ open, onClose, onNav, onCta }) {
   const [time, setTime] = useState('')

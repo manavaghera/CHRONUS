@@ -3,14 +3,15 @@ import { api } from '../api'
 import { navigate } from '../router'
 import { SPARK } from '../components/ChatPanel'
 
-// Planned pretrained models from the CHRONUS report (section 6.9). Not built
-// in this repo yet, so they're shown as planned rather than as live models.
+// Famous-figure models from the CHRONUS report (section 6.9). Ones the
+// backend has built (CHRONUS/figures/build_figures.py) are listed as live
+// models; the rest stay here as planned.
 const PLANNED = [
   ['Albert Einstein', 'Letters, essays and lectures'],
   ['Mahatma Gandhi', 'Speeches, letters and his autobiography'],
   ['Nikola Tesla', 'Articles, patents and interviews'],
   ['Marcus Aurelius', 'Meditations'],
-  ['Steve Jobs', 'Keynotes and interviews'],
+  ['Steve Jobs', 'Keynotes and interviews. Waiting on rights: his words are still under copyright'],
   ['Marie Curie', 'Letters and scientific writing'],
   ['Abraham Lincoln', 'Speeches and letters'],
   ['William Shakespeare', 'Plays and sonnets'],
@@ -32,6 +33,7 @@ function ModelCard({ persona, onDelete }) {
         <span>{persona.memories.toLocaleString()} memories</span>
         {persona.kind === 'custom' && <span>{persona.interview_answered.length}/25 interview</span>}
         {persona.kind === 'custom' && !persona.allow_cloud_llm && <span title="Answers use verbatim quotes only; nothing is sent to a cloud AI">Local only</span>}
+        {persona.license && <span title={persona.sources.map(s => s.title).join(', ')}>{persona.license.split(' (')[0]}</span>}
       </div>
       <div className="model-actions">
         {ready && <button className="pill-btn pill-btn--dark" onClick={() => navigate(`/chat/${persona.id}`)}><span className="pill-inner">Chat</span></button>}
@@ -63,6 +65,8 @@ export default function ModelsPage() {
 
   const pretrained = (personas || []).filter(p => p.kind === 'pretrained')
   const custom = (personas || []).filter(p => p.kind === 'custom')
+  const built = new Set(pretrained.map(p => p.name))
+  const planned = PLANNED.filter(([name]) => !built.has(name))
 
   return (
     <div className="page">
@@ -85,11 +89,11 @@ export default function ModelsPage() {
         </div>
       </section>
 
-      <section className="shell page-section">
+      {planned.length > 0 && <section className="shell page-section">
         <h2 className="page-h2">Planned</h2>
-        <p className="page-note">From the CHRONUS research roadmap. These need their public archives collected and cleaned before they can be built.</p>
+        <p className="page-note">From the CHRONUS research roadmap, not built yet.</p>
         <div className="model-grid">
-          {PLANNED.map(([name, note]) => (
+          {planned.map(([name, note]) => (
             <article key={name} className="model-card model-card--planned">
               <div className="model-card-top"><div className="demo-avatar">{SPARK}</div><span className="model-status">Planned</span></div>
               <h3>{name}</h3>
@@ -97,7 +101,7 @@ export default function ModelsPage() {
             </article>
           ))}
         </div>
-      </section>
+      </section>}
 
       <section className="shell page-section">
         <h2 className="page-h2">Your models</h2>

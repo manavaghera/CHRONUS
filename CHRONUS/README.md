@@ -33,7 +33,7 @@ User Question
 | `04-Memory-Units/` | 13,133 chunked sentences for embedding |
 | `03-Identity-Card/` | Auto-generated personality profile |
 | `06-Testing/` | Chat pipeline, API server, few-shots, post-processor |
-| `ui/` | Web-based chat interface |
+| `../FRONTEND/chronus-app/` | Website (React), served by `api_server.py` |
 | `chroma_db/` | Persistent vector store |
 | `merge_sources.py` | Data ingestion pipeline |
 | `06-Testing/embed_elon.py` | Embedding pipeline (ChromaDB) |
@@ -41,22 +41,35 @@ User Question
 ## How to run
 
 ```bash
-# 1. Install Ollama and pull the model
-ollama pull llama3:8b-instruct-q4_0
-
-# 2. Install Python dependencies
+# 1. Install Python dependencies (from CHRONUS/)
 pip install -r requirements.txt
 
-# 3. Start the LLM server
-ollama serve
+# 2. Build the website once (React app in FRONTEND/chronus-app)
+npm --prefix ../FRONTEND/chronus-app install
+npm --prefix ../FRONTEND/chronus-app run build
 
-# 4. (In a new terminal) Start the API
-python 06-Testing/api_server.py
+# 3. Start the server: API + website on http://localhost:8001
+python api_server.py
 
-# 5. (In a new terminal) Start the UI
-cd ui && python -m http.server 8080
-# Open http://localhost:8080
+# Optional: live-reloading website while editing it, on http://localhost:3000
+npm --prefix ../FRONTEND/chronus-app run dev
+
+# Tests and evaluation
+python -m pytest
+python -m evaluation.run_eval
 ```
+
+The AI voice uses OpenRouter by default (`OPENAI_API_KEY` in `.env`); set
+`LLM_PROVIDER` in `config.py` to `"local"` to run everything on this machine.
+
+**Listen button.** Famous models speak in a synthetic Kokoro stand-in voice
+(local, labelled "not theirs"); they are never cloned. Custom models can use
+their own consented voice through Fish Audio: add `FISH_API_KEY` to `.env`.
+
+**Profile facts.** Questions like "When and where were you born?" are answered
+from `models/<id>/profile.json` (Wikidata, public domain), labelled as public
+record. Refresh with `python figures/fetch_profiles.py`; hand corrections live
+in `figures/profile_overrides.json`.
 
 ## Try these questions
 

@@ -6,6 +6,10 @@ chroma_db/
 _backups/
 # Custom persona models: private personal data (uploads, interview answers)
 CHRONUS/personas/
+# LoRA: regenerable training data, checkpoints and adapter weights
+CHRONUS/lora/data/
+CHRONUS/lora/checkpoints/
+CHRONUS/lora/adapters/
 qdrant_storage/
 .env
 *.log

@@ -1,7 +1,7 @@
 import ChatPanel from './ChatPanel'
 import { navigate } from '../router'
 
-export const ELON = { id: 'elon_musk', name: 'Elon Musk' }
+export const ELON = { id: 'elon_musk', name: 'Elon Musk', standInVoice: true }
 export const ELON_GREETING = "Hi, I'm a CHRONUS model of Elon Musk, built from his public interviews, tweets and biographies. Every answer is grounded in those sources, and you can check them under each reply.\n\nAsk me anything."
 export const ELON_QUICK = ['Why Mars?', 'Why did you buy Twitter?', 'How do you handle failure?', 'Is AI dangerous?', 'Tell me about your childhood']
 export const ELON_VOICES = { first_person: 'his words', third_party: 'about him', synthesized: 'synthesized' }

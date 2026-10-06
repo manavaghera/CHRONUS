@@ -44,6 +44,9 @@ logger = logging.getLogger("chronus")
 # 150 produced empty or cut-off replies like "I mean, the exact". Reasoning is
 # disabled for OpenRouter below; this is headroom for models that think anyway.
 NATURAL_MAX_TOKENS = 1000
+# The local model doesn't "think" first, so a short ceiling is enough and
+# keeps generation fast on a laptop GPU.
+LOCAL_MAX_TOKENS = 300
 
 # Prior chat turns sent to the LLM so follow-ups ("which state?") make sense.
 MAX_HISTORY_TURNS = 6
@@ -127,8 +130,15 @@ def _clean_history(history: list[dict] | None) -> list[dict]:
     return turns[-MAX_HISTORY_TURNS:]
 
 
-def _call_llm(system_prompt: str, query: str, history: list[dict]) -> str:
+def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: bool = False) -> str:
     """Call the configured provider and return usable raw text (or raise)."""
+    if config.LLM_PROVIDER == "local":
+        # On-device model (services/local_llm.py): nothing leaves the machine
+        from services.local_llm import generate
+        messages = [{"role": "system", "content": system_prompt}, *history, {"role": "user", "content": query}]
+        text, cut_off = generate(messages, LOCAL_MAX_TOKENS, use_adapter=use_adapter, temperature=config.LLM_TEMPERATURE)
+        return _usable_llm_text(text, truncated=cut_off)
+
     if config.LLM_PROVIDER in ("openai", "openrouter") and config.OPENAI_API_KEY:
         headers = {
             "Authorization": f"Bearer {config.OPENAI_API_KEY}",
@@ -192,6 +202,7 @@ def generate_natural_response(
     history: list[dict] | None = None,
     persona_name: str = "Elon Musk",
     style_notes: str | None = None,
+    use_adapter: bool = False,  # local provider only: apply the persona's LoRA adapter
 ) -> dict:
     """Answer *query* in the persona's voice, grounded in *memories*.
 
@@ -208,7 +219,7 @@ def generate_natural_response(
     system_prompt = build_system_prompt(persona_name, "\n\n".join(evidence), profile_block, style_notes)
 
     try:
-        clean_text = scrub(_call_llm(system_prompt, query, _clean_history(history)))
+        clean_text = scrub(_call_llm(system_prompt, query, _clean_history(history), use_adapter))
         if not clean_text:
             raise ValueError("LLM reply was empty after scrubbing")
         clean_text = " ".join(re.split(r"(?<=[.!?])\s+", clean_text)[:MAX_ANSWER_SENTENCES])

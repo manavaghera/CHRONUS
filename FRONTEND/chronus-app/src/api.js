@@ -1,6 +1,8 @@
 // Client for the CHRONUS backend (CHRONUS/api_server.py). In development Vite
-// proxies /api to it (vite.config.js); set VITE_API_BASE to call it elsewhere.
-export const API = import.meta.env.VITE_API_BASE || '/api'
+// proxies /api to it (vite.config.js); the production build is served by the
+// backend itself (http://localhost:8001), so its API is on the same origin.
+// Set VITE_API_BASE to call a backend somewhere else.
+export const API = import.meta.env.VITE_API_BASE ?? (import.meta.env.DEV ? '/api' : '')
 
 export const OFFLINE_MSG = "Can't reach the CHRONUS server. Start it with CHRONUS\\start_server.bat (port 8001), then try again."
 
@@ -56,8 +58,77 @@ export const api = {
   buildPersona: (id) => request(`/personas/${encodeURIComponent(id)}/build`, { method: 'POST' }),
   deletePersona: (id) => request(`/personas/${encodeURIComponent(id)}`, { method: 'DELETE' }),
   interviewQuestions: () => request('/interview/questions'),
+  // consent + cloud: both boxes on the Create page's voice step were ticked
+  addVoice: async (id, file) => request(`/personas/${encodeURIComponent(id)}/voice`, {
+    method: 'POST', body: { content_base64: await fileToBase64(file), consent: true, cloud: true },
+  }),
+  voiceStatus: () => request('/voice/status'),
+  removeVoice: (id) => request(`/personas/${encodeURIComponent(id)}/voice`, { method: 'DELETE' }),
+  // Returns an object URL for the spoken answer (a .wav blob)
+  speak: async (persona, text) => {
+    let res
+    try {
+      res = await fetch(`${API}/speak`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ persona, text }) })
+    } catch {
+      throw new ApiError(OFFLINE_MSG, { offline: true })
+    }
+    if (!res.ok) {
+      let detail = res.statusText
+      try { detail = (await res.json()).detail || detail } catch { /* not JSON */ }
+      throw new ApiError(detail, { status: res.status })
+    }
+    return URL.createObjectURL(await res.blob())
+  },
+  demoVoice: async (text) => {
+    let res
+    try {
+      res = await fetch(`${API}/voice/demo`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text }) })
+    } catch {
+      throw new ApiError(OFFLINE_MSG, { offline: true })
+    }
+    if (!res.ok) {
+      let detail = res.statusText
+      try { detail = (await res.json()).detail || detail } catch { /* not JSON */ }
+      throw new ApiError(detail, { status: res.status })
+    }
+    return URL.createObjectURL(await res.blob())
+  },
+  quickClone: async (file) => {
+    const formData = new FormData()
+    formData.append('audio', file)
+    let res
+    try {
+      res = await fetch(`${API}/voice/quick-clone`, { method: 'POST', body: formData })
+    } catch {
+      throw new ApiError(OFFLINE_MSG, { offline: true })
+    }
+    if (!res.ok) {
+      let detail = res.statusText
+      try { detail = (await res.json()).detail || detail } catch { /* not JSON */ }
+      throw new ApiError(detail, { status: res.status })
+    }
+    return (await res.json()).voice_id
+  },
+  quickSpeak: async (text, voice_id) => {
+    let res
+    try {
+      res = await fetch(`${API}/voice/quick-speak`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text, voice_id })
+      })
+    } catch {
+      throw new ApiError(OFFLINE_MSG, { offline: true })
+    }
+    if (!res.ok) {
+      let detail = res.statusText
+      try { detail = (await res.json()).detail || detail } catch { /* not JSON */ }
+      throw new ApiError(detail, { status: res.status })
+    }
+    return URL.createObjectURL(await res.blob())
+  },
 }
 
 // Accepted by the backend (services/personas.py UPLOAD_TYPES)
-export const UPLOAD_ACCEPT = '.txt,.md,.pdf,.csv,.json'
+export const UPLOAD_ACCEPT = '.txt,.md,.pdf,.docx,.csv,.json'
 export const MAX_UPLOAD_MB = 10

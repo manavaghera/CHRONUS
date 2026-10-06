@@ -1,0 +1,40 @@
+{
+  "person": "Albert Einstein",
+  "source": "Wikidata",
+  "wikidata": "Q937",
+  "url": "https://www.wikidata.org/wiki/Q937",
+  "license": "CC0 1.0 (public domain)",
+  "retrieved": "2026-10-07",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "facts": {
+    "Born": "14 March 1879, Ulm, Germany",
+    "Died": "18 April 1955, Princeton, United States",
+    "Father": "Hermann Einstein",
+    "Mother": "Pauline Koch",
+    "Siblings": "Maja Einstein (sister)",
+    "Spouse": "Mileva Marić and Elsa Einstein",
+    "Children": "Hans Albert Einstein, Eduard Einstein and Lieserl (Einstein)",
+    "Education": "Luitpold Gymnasium (Munich), cantonal school in Aarau, Federal Polytechnic in Zurich (ETH Zurich), doctorate from the University of Zurich (1905)",
+    "Occupation": "theoretical physicist, philosopher of science, inventor and science writer",
+    "Citizenship": "German by birth, Swiss from 1901, American from 1940",
+    "Awards": "Nobel Prize in Physics (1921), Barnard Medal for Meritorious Service to Science (1920), Gold Medal of the Royal Astronomical Society (1926), Prix Jules Janssen (1931) and Matteucci Medal (1921)",
+    "Known for": "special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect, Brownian motion"
+  },
+  "answers": {
+    "born": "I was born on 14 March 1879.",
+    "born_and_place": "I was born on 14 March 1879 in Ulm, Germany.",
+    "birth_place": "I was born in Ulm, Germany.",
+    "died": "I died on 18 April 1955 in Princeton, United States.",
+    "age": "I died in 1955, at the age of 76.",
+    "father": "My father was Hermann Einstein.",
+    "mother": "My mother was Pauline Koch.",
+    "siblings": "I had one sister, Maja Einstein.",
+    "spouse": "I was married twice: first to Mileva Marić, then to Elsa Einstein.",
+    "children": "I had 3 children: Hans Albert Einstein, Eduard Einstein and Lieserl (Einstein).",
+    "education": "I went to the Luitpold Gymnasium in Munich and the cantonal school in Aarau, studied at the Federal Polytechnic in Zurich (now ETH Zurich), and earned my doctorate from the University of Zurich in 1905.",
+    "occupation": "I was a theoretical physicist, philosopher of science, inventor and science writer.",
+    "nationality": "I was born a German citizen, became Swiss in 1901, and became an American citizen in 1940.",
+    "awards": "Awards I received: Nobel Prize in Physics (1921), Barnard Medal for Meritorious Service to Science (1920), Gold Medal of the Royal Astronomical Society (1926), Prix Jules Janssen (1931) and Matteucci Medal (1921).",
+    "notable_works": "I'm best known for special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect and my work on Brownian motion."
+  }
+}

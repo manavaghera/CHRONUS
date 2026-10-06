@@ -1,0 +1,129 @@
+{
+  "_about": "Hand-checked corrections applied on top of Wikidata by figures/fetch_profiles.py: wrong or odd places (a museum, a farm, a street), modern country names for old dates, duplicates and gaps. null removes an entry.",
+  "mahatma_gandhi": {
+    "facts": {
+      "Full name": "Mohandas Karamchand Gandhi",
+      "Died": "30 January 1948, New Delhi, India (assassinated)",
+      "Children": "Harilal, Manilal, Ramdas and Devdas",
+      "Education": "Alfred High School (Rajkot), Samaldas College (Bhavnagar), University College London and the Inner Temple (law)",
+      "Awards": "Kaisar-i-Hind Medal (1915, returned in 1920); Time Person of the Year (1930)"
+    },
+    "answers": {
+      "full_name": "My full name was Mohandas Karamchand Gandhi.",
+      "died": "I died on 30 January 1948 in New Delhi, India.",
+      "children": "I had 4 sons: Harilal, Manilal, Ramdas and Devdas.",
+      "education": "I studied at Alfred High School in Rajkot and briefly at Samaldas College in Bhavnagar, then studied law in London at University College London and the Inner Temple.",
+      "awards": "I received the Kaisar-i-Hind Medal in 1915 for ambulance work in South Africa, and returned it in 1920. Time magazine named me Person of the Year for 1930.",
+      "notable_works": "I'm best known for satyagraha, nonviolent resistance."
+    }
+  },
+  "albert_einstein": {
+    "facts": {
+      "Siblings": "Maja Einstein (sister)",
+      "Education": "Luitpold Gymnasium (Munich), cantonal school in Aarau, Federal Polytechnic in Zurich (ETH Zurich), doctorate from the University of Zurich (1905)",
+      "Citizenship": "German by birth, Swiss from 1901, American from 1940",
+      "Known for": "special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect, Brownian motion"
+    },
+    "answers": {
+      "siblings": "I had one sister, Maja Einstein.",
+      "education": "I went to the Luitpold Gymnasium in Munich and the cantonal school in Aarau, studied at the Federal Polytechnic in Zurich (now ETH Zurich), and earned my doctorate from the University of Zurich in 1905.",
+      "nationality": "I was born a German citizen, became Swiss in 1901, and became an American citizen in 1940.",
+      "notable_works": "I'm best known for special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect and my work on Brownian motion."
+    }
+  },
+  "abraham_lincoln": {
+    "facts": {
+      "Born": "12 February 1809, near Hodgenville, Kentucky, United States",
+      "Died": "15 April 1865, Washington, D.C., United States (assassinated)",
+      "Children": "Robert, Edward, Willie and Tad",
+      "Education": "less than a year of formal schooling; largely self-taught",
+      "Known for": "the Gettysburg Address, the Emancipation Proclamation"
+    },
+    "answers": {
+      "born_and_place": "I was born on 12 February 1809 in a log cabin near Hodgenville, Kentucky.",
+      "birth_place": "I was born in a log cabin near Hodgenville, Kentucky.",
+      "died": "I died on 15 April 1865 at the Petersen House in Washington, D.C.",
+      "children": "I had 4 sons: Robert, Edward, Willie and Tad.",
+      "education": "I had less than a year of formal schooling; I mostly taught myself by reading.",
+      "nationality": "I was a citizen of the United States.",
+      "notable_works": "I'm best known for the Gettysburg Address and the Emancipation Proclamation."
+    }
+  },
+  "marie_curie": {
+    "facts": {
+      "Born": "7 November 1867, Warsaw (then in the Russian Empire, today Poland)",
+      "Died": "4 July 1934, Sancellemoz sanatorium, Passy, France",
+      "Education": "Flying University (Warsaw), University of Paris (Sorbonne)",
+      "Citizenship": "born a subject of the Russian Empire; later French",
+      "Awards": "Nobel Prize in Physics (1903, with Pierre Curie and Henri Becquerel); Nobel Prize in Chemistry (1911)",
+      "Known for": "research on radioactivity; discovery of polonium and radium"
+    },
+    "answers": {
+      "born_and_place": "I was born on 7 November 1867 in Warsaw, which was then part of the Russian Empire.",
+      "birth_place": "I was born in Warsaw, which was then part of the Russian Empire.",
+      "died": "I died on 4 July 1934 at the Sancellemoz sanatorium in Passy, France.",
+      "education": "I studied at the secret Flying University in Warsaw and then at the University of Paris, the Sorbonne.",
+      "nationality": "I was born in Russian-ruled Poland and later became a French citizen.",
+      "awards": "I won the Nobel Prize in Physics in 1903, shared with Pierre Curie and Henri Becquerel, and the Nobel Prize in Chemistry in 1911.",
+      "notable_works": "I'm best known for my research on radioactivity and for discovering polonium and radium."
+    }
+  },
+  "nikola_tesla": {
+    "facts": {
+      "Born": "10 July 1856, Smiljan (then in the Austrian Empire, today Croatia)",
+      "Siblings": "Dane (brother); Milka, Angelina and Marica (sisters)",
+      "Spouse": "never married",
+      "Education": "gymnasium in Karlovac, Polytechnic in Graz, briefly Charles University in Prague",
+      "Citizenship": "born in the Austrian Empire; American citizen from 1891",
+      "Awards": "Elliott Cresson Medal (1894), Edison Medal (1916), John Scott Medal (1934)",
+      "Known for": "the alternating current induction motor, the AC power system, the Tesla coil"
+    },
+    "answers": {
+      "born_and_place": "I was born on 10 July 1856 in Smiljan, which was then in the Austrian Empire and is today in Croatia.",
+      "birth_place": "I was born in Smiljan, which was then in the Austrian Empire and is today in Croatia.",
+      "siblings": "I had four siblings: my brother Dane and my sisters Milka, Angelina and Marica.",
+      "spouse": "I never married.",
+      "education": "I studied at the gymnasium in Karlovac, then at the Polytechnic in Graz, and briefly at Charles University in Prague.",
+      "nationality": "I was born in the Austrian Empire and became an American citizen in 1891.",
+      "awards": "My honours included the Elliott Cresson Medal in 1894, the Edison Medal in 1916 and the John Scott Medal in 1934.",
+      "notable_works": "I'm best known for the alternating current induction motor, the AC power system and the Tesla coil."
+    }
+  },
+  "william_shakespeare": {
+    "facts": {
+      "Born": "baptised 26 April 1564, Stratford-upon-Avon, England (exact birthday not recorded)",
+      "Died": "23 April 1616, Stratford-upon-Avon, England",
+      "Education": "most likely the King's New School, Stratford (now King Edward VI School)",
+      "Citizenship": "English (Kingdom of England)"
+    },
+    "answers": {
+      "born": "I was baptised on 26 April 1564; my exact birthday isn't recorded.",
+      "born_and_place": "I was baptised on 26 April 1564 in Stratford-upon-Avon, England; my exact birthday isn't recorded.",
+      "birth_place": "I was born in Stratford-upon-Avon, England.",
+      "died": "I died on 23 April 1616 in Stratford-upon-Avon, England.",
+      "age": "I lived from 1564 to 1616, about 52 years.",
+      "education": "I most likely went to the King's New School in Stratford, now King Edward VI School.",
+      "nationality": "I was English.",
+      "notable_works": "I'm best known for Hamlet, Romeo and Juliet, Macbeth, A Midsummer Night's Dream, As You Like It and my sonnets."
+    }
+  },
+  "marcus_aurelius": {
+    "facts": {
+      "Born": "26 April 121, Rome",
+      "Died": "17 March 180, on campaign on the Danube, most likely at Vindobona (today Vienna)",
+      "Children": "at least 13 with Faustina the Younger, many of whom died young; among them Commodus and Lucilla",
+      "Citizenship": "Roman",
+      "Occupation": "Roman emperor (161-180), Stoic philosopher"
+    },
+    "answers": {
+      "born_and_place": "I was born on 26 April 121 in Rome.",
+      "birth_place": "I was born in Rome.",
+      "died": "I died on 17 March 180, on campaign on the Danube, most likely at Vindobona, which is today Vienna.",
+      "children": "Faustina and I had at least 13 children, and many of them died young. Commodus, who succeeded me, and Lucilla are the best known.",
+      "nationality": "I was a Roman citizen.",
+      "occupation": "I was Roman emperor from 161 to 180, and a Stoic philosopher.",
+      "notable_works": "I'm best known for my Meditations.",
+      "siblings": "I had one sister, Annia Cornificia Faustina."
+    }
+  }
+}

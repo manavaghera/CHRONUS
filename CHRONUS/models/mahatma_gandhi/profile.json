@@ -1,0 +1,42 @@
+{
+  "person": "Mahatma Gandhi",
+  "source": "Wikidata",
+  "wikidata": "Q1001",
+  "url": "https://www.wikidata.org/wiki/Q1001",
+  "license": "CC0 1.0 (public domain)",
+  "retrieved": "2026-10-07",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "facts": {
+    "Born": "2 October 1869, Porbandar, India",
+    "Died": "30 January 1948, New Delhi, India (assassinated)",
+    "Father": "Karamchand Uttamchand Gandhi",
+    "Mother": "Putlibai Karamchand Gandhi",
+    "Siblings": "Raliatbehn Gandhi, Muliben Gandhi, Pankunvarben Gandhi, Laxmidas Karamchand Gandhi and Karsandas Gandhi",
+    "Spouse": "Kasturba Gandhi",
+    "Children": "Harilal, Manilal, Ramdas and Devdas",
+    "Education": "Alfred High School (Rajkot), Samaldas College (Bhavnagar), University College London and the Inner Temple (law)",
+    "Occupation": "politician, barrister, political writer and journalist",
+    "Citizenship": "India",
+    "Awards": "Kaisar-i-Hind Medal (1915, returned in 1920); Time Person of the Year (1930)",
+    "Known for": "satyagraha",
+    "Full name": "Mohandas Karamchand Gandhi"
+  },
+  "answers": {
+    "born": "I was born on 2 October 1869.",
+    "born_and_place": "I was born on 2 October 1869 in Porbandar, India.",
+    "birth_place": "I was born in Porbandar, India.",
+    "died": "I died on 30 January 1948 in New Delhi, India.",
+    "age": "I died in 1948, at the age of 78.",
+    "father": "My father was Karamchand Uttamchand Gandhi.",
+    "mother": "My mother was Putlibai Karamchand Gandhi.",
+    "siblings": "My siblings were Raliatbehn Gandhi, Muliben Gandhi, Pankunvarben Gandhi, Laxmidas Karamchand Gandhi and Karsandas Gandhi.",
+    "spouse": "I was married to Kasturba Gandhi.",
+    "children": "I had 4 sons: Harilal, Manilal, Ramdas and Devdas.",
+    "education": "I studied at Alfred High School in Rajkot and briefly at Samaldas College in Bhavnagar, then studied law in London at University College London and the Inner Temple.",
+    "occupation": "I was a politician, barrister, political writer and journalist.",
+    "nationality": "I was a citizen of India.",
+    "awards": "I received the Kaisar-i-Hind Medal in 1915 for ambulance work in South Africa, and returned it in 1920. Time magazine named me Person of the Year for 1930.",
+    "notable_works": "I'm best known for satyagraha, nonviolent resistance.",
+    "full_name": "My full name was Mohandas Karamchand Gandhi."
+  }
+}
