@@ -34,10 +34,12 @@ function ModelCard({ persona, onDelete }) {
         <span>{persona.memories.toLocaleString()} memories</span>
         {persona.kind === 'custom' && <span>{persona.interview_answered.length}/25 interview</span>}
         {persona.kind === 'custom' && !persona.allow_cloud_llm && <span title="Answers use verbatim quotes only; nothing is sent to a cloud AI">Local only</span>}
+        {persona.memorial && <span title="Memorial mode: answers are framed as remembered words">In memory</span>}
         {persona.license && <span title={persona.sources.map(s => s.title).join(', ')}>{persona.license.split(' (')[0]}</span>}
       </div>
       <div className="model-actions">
         {ready && <button className="pill-btn pill-btn--dark" onClick={() => navigate(`/chat/${persona.id}`)}><span className="pill-inner">Chat</span></button>}
+        <button className="page-link" onClick={() => navigate(`/memories/${persona.id}`)}>Memories</button>
         {persona.kind === 'custom' && (
           <button className="pill-btn pill-btn--outline" onClick={() => navigate(`/create/${persona.id}`)}>
             <span className="pill-inner">{ready ? 'Add memories' : 'Continue building'}</span>
@@ -46,6 +48,34 @@ function ModelCard({ persona, onDelete }) {
         {onDelete && <button className="model-delete" onClick={() => onDelete(persona)}>Delete</button>}
       </div>
     </article>
+  )
+}
+
+function ImportCard({ onImported }) {
+  const [file, setFile] = useState(null)
+  const [password, setPassword] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const submit = async (e) => {
+    e.preventDefault()
+    setBusy(true); setError('')
+    try { const p = await api.importModel(file, password); setFile(null); setPassword(''); onImported(p) }
+    catch (err) { setError(err.message) } finally { setBusy(false) }
+  }
+  return (
+    <form className="model-card model-card--empty" onSubmit={submit}>
+      <h3>Import a backup</h3>
+      <p>Restore a model from an encrypted .chronus file made with “Back up” on its Create page.</p>
+      <label className={`pill-btn pill-btn--outline create-file${busy ? ' is-disabled' : ''}`}>
+        <span className="pill-inner">{file ? file.name : 'Choose .chronus file'}</span>
+        <input type="file" accept=".chronus" disabled={busy} onChange={e => { setFile(e.target.files[0] || null); e.target.value = '' }} />
+      </label>
+      {file && <input className="create-select" type="password" autoComplete="current-password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Backup password" aria-label="Backup password" />}
+      {error && <div className="page-alert">{error}</div>}
+      <div className="model-actions">
+        <button className="pill-btn pill-btn--dark" disabled={!file || password.length < 8 || busy}><span className="pill-inner">{busy ? 'Decrypting…' : 'Import'}</span></button>
+      </div>
+    </form>
   )
 }
 
@@ -109,6 +139,7 @@ export default function ModelsPage() {
         <p className="page-note">Private models stay on this computer. Deleting one removes all of its data.</p>
         <div className="model-grid">
           {custom.map(p => <ModelCard key={p.id} persona={p} onDelete={remove} />)}
+          {personas !== null && <ImportCard onImported={(p) => { load(); navigate(`/create/${p.id}`) }} />}
           {personas !== null && custom.length === 0 && (
             <article className="model-card model-card--empty">
               <h3>No custom models yet</h3>

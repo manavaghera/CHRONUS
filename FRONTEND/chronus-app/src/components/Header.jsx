@@ -25,7 +25,7 @@ export default function Header({ go, openNav }) {
           </span>
         </button>
         <nav className="header-nav">
-          {[['home','Home'],['demo','Live Demo'],['models','Models'],['create','Create'],['clone-voice','Voice Clone'],['ethics','Trust'],['faq','FAQ'],['contact','Contact']].map(([id,label]) => (
+          {[['home','Home'],['demo','Live Demo'],['models','Models'],['create','Create'],['roundtable','Roundtable'],['clone-voice','Voice'],['insights','Insights'],['ethics','Trust']].map(([id,label]) => (
             <button key={id} onClick={() => go(id)}>
               <span className="nav-label">{label}</span>
             </button>

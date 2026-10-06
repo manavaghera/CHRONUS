@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
-import { api, MAX_UPLOAD_MB, UPLOAD_ACCEPT } from '../api'
+import { api, download, MAX_UPLOAD_MB, UPLOAD_ACCEPT } from '../api'
 import { navigate } from '../router'
 import { toWav } from '../audio'
+import useVoiceInput from '../components/chat/useVoiceInput'
 
 const RELATIONSHIPS = [['self', 'This is me'], ['family', 'Family member'], ['friend', 'Friend'], ['colleague', 'Colleague'], ['other', 'Other']]
 const ANSWERERS = [['self', 'The person themselves'], ['family', 'Family'], ['friend', 'A friend'], ['colleague', 'A colleague']]
@@ -24,7 +25,7 @@ function StepBar({ persona }) {
 }
 
 function DetailsForm() {
-  const [form, setForm] = useState({ name: '', description: '', relationship: 'family', allow_cloud_llm: false, consent: false })
+  const [form, setForm] = useState({ name: '', description: '', relationship: 'family', allow_cloud_llm: false, memorial: false, consent: false })
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const set = (key) => (e) => setForm(f => ({ ...f, [key]: e.target.type === 'checkbox' ? e.target.checked : e.target.value }))
@@ -48,6 +49,10 @@ function DetailsForm() {
           {RELATIONSHIPS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
         </select>
       </div>
+      <label className="create-check">
+        <input type="checkbox" checked={form.memorial} onChange={set('memorial')} />
+        <span><strong>They have passed away.</strong> Memorial mode: answers are framed as remembered words, the model never speaks as if they were alive or present, and long sessions get a gentle reminder to take a break.</span>
+      </label>
       <label className="create-check">
         <input type="checkbox" checked={form.allow_cloud_llm} onChange={set('allow_cloud_llm')} />
         <span><strong>Allow AI voice.</strong> Phrasing answers in their voice sends short excerpts of these memories to a cloud AI service (OpenRouter). Leave this off to keep everything on this computer; the model then answers with verbatim quotes.</span>
@@ -110,15 +115,72 @@ function UploadStep({ persona, onChange }) {
   )
 }
 
-function Question({ q, personaId, answered, origin, onSaved }) {
+function Dictate({ onText }) {
+  const voice = useVoiceInput('auto')
+  if (!voice.engine) return null
+  const click = async () => {
+    if (voice.state === 'listening') { voice.stop(); return }
+    try { const t = await voice.listen(); if (t) onText(t) } catch { /* shown below */ }
+  }
+  return (
+    <>
+      <button type="button" className={`demo-quick-btn${voice.state !== 'idle' ? ' demo-quick-btn--active' : ''}`} onClick={click} disabled={voice.state === 'transcribing'}
+        title={voice.engine === 'local' ? 'Transcribed on this computer' : "Uses your browser's speech recognition, which may send audio to its provider"}>
+        {voice.state === 'listening' ? '■ Stop' : voice.state === 'transcribing' ? 'Transcribing…' : '🎙 Speak the answer'}
+      </button>
+      {voice.error && <span className="fb-error">{voice.error}</span>}
+    </>
+  )
+}
+
+function FollowUp({ item, personaId, origin, onSaved }) {
+  const [open, setOpen] = useState(false)
+  const [text, setText] = useState('')
+  const [state, setState] = useState('idle')
+  const [error, setError] = useState('')
+  if (item.kind === 'protocol') {
+    const jump = () => {
+      const el = document.getElementById(`q-${item.id}`)
+      el?.closest('details')?.setAttribute('open', '')
+      el?.focus()
+    }
+    return <li><button className="page-link" onClick={jump}>Next: {item.id}</button> {item.question}</li>
+  }
+  const save = async () => {
+    setState('saving'); setError('')
+    try { await api.answerFollowup(personaId, { question: item.question, answer: text, origin }); setState('saved'); setOpen(false); onSaved() }
+    catch (e) { setError(e.message); setState('idle') }
+  }
+  return (
+    <li>
+      <span>{item.question}</span>{state === 'saved' && <span className="create-saved">✓ saved</span>}
+      {!open && state !== 'saved' && <button className="page-link followup-open" onClick={() => setOpen(true)}>Answer</button>}
+      {open && (
+        <div className="create-question">
+          <textarea rows={2} maxLength={4000} value={text} onChange={e => setText(e.target.value)} placeholder="Their answer…" />
+          <div className="followup-actions">
+            <button className="demo-quick-btn" disabled={!text.trim() || state === 'saving'} onClick={save}>{state === 'saving' ? 'Saving…' : 'Save'}</button>
+            <Dictate onText={t => setText(x => (x ? `${x} ${t}` : t))} />
+          </div>
+          {error && <div className="page-alert">{error}</div>}
+        </div>
+      )}
+    </li>
+  )
+}
+
+function Question({ q, personaId, answered, origin, onSaved, onRefresh }) {
   const [text, setText] = useState('')
   const [state, setState] = useState(answered ? 'saved' : 'idle')
   const [error, setError] = useState('')
+  const [followups, setFollowups] = useState([])
 
   const save = async () => {
     setState('saving'); setError('')
     try {
-      onSaved((await api.answerInterview(personaId, { question_id: q.id, answer: text, origin })).persona)
+      const r = await api.answerInterview(personaId, { question_id: q.id, answer: text, origin })
+      onSaved(r.persona)
+      setFollowups(r.followups || [])
       setState('saved'); setText('')
     } catch (err) { setState('idle'); setError(err.message) }
   }
@@ -129,7 +191,16 @@ function Question({ q, personaId, answered, origin, onSaved }) {
       <textarea id={`q-${q.id}`} rows={3} maxLength={4000} value={text} onChange={e => setText(e.target.value)}
         placeholder={state === 'saved' ? 'Answered. Write here to replace the saved answer.' : 'Answer in their words, as they would.'} />
       {error && <div className="page-alert">{error}</div>}
-      <button className="demo-quick-btn" disabled={!text.trim() || state === 'saving'} onClick={save}>{state === 'saving' ? 'Saving…' : 'Save answer'}</button>
+      <div className="followup-actions">
+        <button className="demo-quick-btn" disabled={!text.trim() || state === 'saving'} onClick={save}>{state === 'saving' ? 'Saving…' : 'Save answer'}</button>
+        <Dictate onText={t => setText(x => (x ? `${x} ${t}` : t))} />
+      </div>
+      {followups.length > 0 && (
+        <div className="followups">
+          <span className="followups-title">Ask next</span>
+          <ul>{followups.map(f => <FollowUp key={f.question} item={f} personaId={personaId} origin={origin} onSaved={onRefresh} />)}</ul>
+        </div>
+      )}
     </div>
   )
 }
@@ -143,8 +214,8 @@ function InterviewStep({ persona, onChange }) {
   const byId = Object.fromEntries((data?.questions || []).map(q => [q.id, q]))
   return (
     <section className="create-card">
-      <h2 className="page-h2">3. Interview <span className="create-count">{persona.interview_answered.length}/25</span></h2>
-      <p className="page-note">25 questions across six parts of a personality. Answer as many as you can; even a few fill gaps the documents leave.</p>
+      <h2 className="page-h2">3. Interview <span className="create-count">{persona.interview_answered.length}/25{persona.followups_answered ? ` + ${persona.followups_answered} follow-ups` : ''}</span></h2>
+      <p className="page-note">25 questions across six parts of a personality. Answer as many as you can; even a few fill gaps the documents leave. After each answer, CHRONUS suggests what to ask next, from the names, places and years it mentions. You can speak answers instead of typing them.</p>
       <div className="form-field"><label htmlFor="c-origin">Who is answering?</label>
         <select id="c-origin" className="create-select" value={origin} onChange={e => setOrigin(e.target.value)}>
           {ANSWERERS.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
@@ -156,7 +227,8 @@ function InterviewStep({ persona, onChange }) {
           <summary>{info.label} <span>{info.question_ids.filter(id => persona.interview_answered.includes(id)).length}/{info.question_count}</span></summary>
           {info.question_ids.map(id => byId[id] && (
             <Question key={id} q={byId[id]} personaId={persona.id} origin={origin}
-              answered={persona.interview_answered.includes(id)} onSaved={onChange} />
+              answered={persona.interview_answered.includes(id)} onSaved={onChange}
+              onRefresh={() => api.persona(persona.id).then(onChange).catch(() => {})} />
           ))}
         </details>
       ))}
@@ -247,6 +319,40 @@ function BuildStep({ persona, onChange }) {
   )
 }
 
+function BackupStep({ persona }) {
+  const [password, setPassword] = useState('')
+  const [again, setAgain] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const [done, setDone] = useState(false)
+  const ok = password.length >= 8 && password === again
+
+  const exportIt = async (e) => {
+    e.preventDefault()
+    setBusy(true); setError(''); setDone(false)
+    try {
+      const blob = await api.exportModel(persona.id, password)
+      download(blob, `${persona.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'model'}.chronus`)
+      setDone(true); setPassword(''); setAgain('')
+    } catch (err) { setError(err.message) } finally { setBusy(false) }
+  }
+
+  return (
+    <form className="create-card" onSubmit={exportIt}>
+      <h2 className="page-h2">6. Back up <span className="create-count">optional</span></h2>
+      <p className="page-note">Download {persona.name} as one encrypted .chronus file: memories, documents, interview answers, consent record and voice recording. Only someone with the password can open it. Import it on the Models page of any CHRONUS install. Keep the password safe: it can't be recovered.</p>
+      <div className="create-upload-row">
+        <input className="create-select" type="password" autoComplete="new-password" minLength={8} value={password} onChange={e => setPassword(e.target.value)} placeholder="Password (8+ characters)" aria-label="Password" />
+        <input className="create-select" type="password" autoComplete="new-password" value={again} onChange={e => setAgain(e.target.value)} placeholder="Repeat password" aria-label="Repeat password" />
+        <button className="pill-btn pill-btn--dark" disabled={!ok || busy}><span className="pill-inner">{busy ? 'Encrypting…' : 'Download backup'}</span></button>
+      </div>
+      {password && again && password !== again && <p className="page-note">The passwords don't match.</p>}
+      {done && <p className="create-saved">✓ Backup downloaded</p>}
+      {error && <div className="page-alert">{error}</div>}
+    </form>
+  )
+}
+
 export default function CreatePage({ id }) {
   const [persona, setPersona] = useState(null)
   const [error, setError] = useState('')
@@ -278,6 +384,11 @@ export default function CreatePage({ id }) {
             <InterviewStep persona={persona} onChange={setPersona} />
             <BuildStep persona={persona} onChange={setPersona} />
             <VoiceStep persona={persona} onChange={setPersona} />
+            <BackupStep persona={persona} />
+            <div className="page-links">
+              <button className="page-link" onClick={() => navigate(`/memories/${persona.id}`)}>Review or correct its memories →</button>
+              <button className="page-link" onClick={() => navigate(`/insights/${persona.id}`)}>See what people ask it →</button>
+            </div>
           </>
         )}
       </section>

@@ -95,10 +95,81 @@ export const api = {
   }),
   sandboxDelete: (voiceId) => request(`/voice/sandbox/${pid(voiceId)}`, { method: 'DELETE' }),
   sandboxSpeak: (text, voiceId) => requestAudio('/voice/sandbox/speak', { text, voice_id: voiceId }),
-  // Access code (services/access.py)
+  // Access code or accounts (services/access.py)
   authStatus: () => request('/auth/status'),
-  login: (code) => request('/auth/login', { method: 'POST', body: { code } }),
+  login: (code, user) => request('/auth/login', { method: 'POST', body: { code, user: user || null } }),
   logout: () => request('/auth/logout', { method: 'POST' }),
+
+  // Streaming chat (/chat/stream): onToken(text) for each piece of the draft;
+  // resolves with the final /chat response
+  chatStream: async (body, onToken, signal) => {
+    const res = await send('/chat/stream', { method: 'POST', body, signal })
+    if (!res.ok) throw await failure(res)
+    const reader = res.body.getReader()
+    const decoder = new TextDecoder()
+    let buffer = ''
+    for (;;) {
+      const { value, done } = await reader.read()
+      if (done) break
+      buffer += decoder.decode(value, { stream: true })
+      let cut
+      while ((cut = buffer.indexOf('\n\n')) >= 0) {
+        const block = buffer.slice(0, cut)
+        buffer = buffer.slice(cut + 2)
+        const event = /^event: (.*)$/m.exec(block)?.[1]
+        const data = JSON.parse(/^data: (.*)$/m.exec(block)?.[1] || 'null')
+        if (event === 'token') onToken?.(data.text)
+        else if (event === 'final') return data
+        else if (event === 'error') throw new ApiError(data.detail, { status: data.status })
+      }
+    }
+    throw new ApiError('The answer stream ended early', { status: 0 })
+  },
+
+  // Memory browser + citation context (services/memory_routes.py)
+  memories: (id, params = {}) => request(`/personas/${pid(id)}/memories?${new URLSearchParams(params)}`),
+  memory: (id, memoryId) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}`),
+  editMemory: (id, memoryId, text) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}`, { method: 'PATCH', body: { text } }),
+  deleteMemory: (id, memoryId) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}`, { method: 'DELETE' }),
+  deleteDocument: (id, filename) => request(`/personas/${pid(id)}/documents/${pid(filename)}`, { method: 'DELETE' }),
+  timeline: (id) => request(`/personas/${pid(id)}/timeline`),
+
+  // Feedback, review queue, gaps, analytics (services/insights.py)
+  feedback: (body) => request('/feedback', { method: 'POST', body }),
+  reviewQueue: (persona, status = 'pending') => request(`/review?${new URLSearchParams({ ...(persona ? { persona } : {}), status })}`),
+  approve: (feedbackId, answer) => request(`/review/${pid(feedbackId)}/approve`, { method: 'POST', body: answer ? { answer } : {} }),
+  dismiss: (feedbackId) => request(`/review/${pid(feedbackId)}/dismiss`, { method: 'POST' }),
+  gaps: (persona) => request(`/insights/gaps?persona=${pid(persona)}`),
+  analytics: (persona, days = 30) => request(`/insights/analytics?${new URLSearchParams({ ...(persona ? { persona } : {}), days })}`),
+
+  roundtable: (body) => request('/roundtable', { method: 'POST', body }),
+
+  // Voice input (services/stt.py)
+  transcribe: async (wav, language) => request('/transcribe', {
+    method: 'POST', body: { content_base64: await fileToBase64(wav), language: language || null },
+  }),
+  // Adaptive interview follow-ups (services/followups.py)
+  answerFollowup: (id, body) => request(`/personas/${pid(id)}/followup`, { method: 'POST', body }),
+
+  // Encrypted .chronus backups (services/bundle.py); export returns a Blob
+  exportModel: async (id, password) => {
+    const res = await send(`/personas/${pid(id)}/export`, { method: 'POST', body: { password } })
+    if (!res.ok) throw await failure(res)
+    return res.blob()
+  },
+  importModel: async (file, password) => request('/personas/import', {
+    method: 'POST', body: { content_base64: await fileToBase64(file), password },
+  }),
+}
+
+// Save a Blob as a file download
+export function download(blob, filename) {
+  const url = URL.createObjectURL(blob)
+  const a = Object.assign(document.createElement('a'), { href: url, download: filename })
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+  setTimeout(() => URL.revokeObjectURL(url), 1000)
 }
 
 // Accepted by the backend (services/personas.py UPLOAD_TYPES)

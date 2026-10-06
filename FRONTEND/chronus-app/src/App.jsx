@@ -21,11 +21,16 @@ import ModelsPage from './pages/ModelsPage'
 import ChatPage from './pages/ChatPage'
 import CreatePage from './pages/CreatePage'
 import CloneVoicePage from './pages/CloneVoicePage'
+import MemoriesPage from './pages/MemoriesPage'
+import InsightsPage from './pages/InsightsPage'
+import RoundtablePage from './pages/RoundtablePage'
 import { navigate, useRoute } from './router'
 import './pages.css'
 
 // Header/menu targets that are pages rather than landing-page sections
-const PAGES = new Set(['models', 'create', 'clone-voice'])
+const PAGES = new Set(['models', 'create', 'clone-voice', 'roundtable', 'insights'])
+// Every #/page the app renders (the rest of the hash space is the landing page)
+const ROUTED = new Set([...PAGES, 'chat', 'memories'])
 
 function App() {
   useLenis()
@@ -100,7 +105,10 @@ function App() {
         {page === 'chat' && <ChatPage id={id} />}
         {page === 'create' && <CreatePage key={id || 'new'} id={id} />}
         {page === 'clone-voice' && <CloneVoicePage />}
-        {!PAGES.has(page) && page !== 'chat' && (
+        {page === 'memories' && <MemoriesPage key={id} id={id} />}
+        {page === 'insights' && <InsightsPage id={id} />}
+        {page === 'roundtable' && <RoundtablePage key={id || 'all'} id={id} />}
+        {!ROUTED.has(page) && (
           <>
             <Hero scrollToId={scrollToId} />
             <Marquee />

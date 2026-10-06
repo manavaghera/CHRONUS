@@ -50,25 +50,77 @@ export function wavSeconds(blob) {
   return Math.max(0, (blob.size - 44) / 2 / TARGET_RATE)
 }
 
-// Record from the microphone. Returns { stop() -> Promise<Blob>, cancel() }.
-export async function startRecording() {
+// Record from the microphone. Returns { stop() -> Promise<Blob>, cancel(), done }.
+// onSilence: called once after the speaker has talked and then been quiet
+// for silenceMs (hands-free voice conversation stops itself this way).
+export async function startRecording({ onSilence, silenceMs = 1400, maxMs = 30000 } = {}) {
   if (!navigator.mediaDevices?.getUserMedia || typeof MediaRecorder === 'undefined') {
     throw new Error('Recording is not supported in this browser')
   }
   const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
   const recorder = new MediaRecorder(stream)
   const chunks = []
+  let watcher = null, ctx = null
   recorder.ondataavailable = e => e.data.size && chunks.push(e.data)
-  const release = () => stream.getTracks().forEach(t => t.stop())
+  const release = () => {
+    clearInterval(watcher)
+    ctx?.close?.()
+    stream.getTracks().forEach(t => t.stop())
+  }
   const done = new Promise((resolve, reject) => {
     recorder.onstop = () => { release(); resolve(new Blob(chunks, { type: recorder.mimeType })) }
     recorder.onerror = (e) => { release(); reject(e.error || new Error('Recording failed')) }
   })
   recorder.start()
+  if (onSilence) {
+    const Ctx = window.AudioContext || window.webkitAudioContext
+    ctx = new Ctx()
+    const analyser = ctx.createAnalyser()
+    analyser.fftSize = 1024
+    ctx.createMediaStreamSource(stream).connect(analyser)
+    const buf = new Float32Array(analyser.fftSize)
+    const started = Date.now()
+    let heard = false, lastLoud = started
+    watcher = setInterval(() => {
+      analyser.getFloatTimeDomainData(buf)
+      const rms = Math.sqrt(buf.reduce((s, v) => s + v * v, 0) / buf.length)
+      const now = Date.now()
+      if (rms > 0.02) { heard = true; lastLoud = now }
+      if ((heard && now - lastLoud > silenceMs) || now - started > maxMs) {
+        clearInterval(watcher)
+        onSilence()
+      }
+    }, 100)
+  }
   return {
+    done,
     stop: () => { if (recorder.state !== 'inactive') recorder.stop(); return done },
     cancel: () => { if (recorder.state !== 'inactive') recorder.stop(); release() },
   }
+}
+
+// Speak with the browser's built-in voice; resolves when finished.
+export function speakBrowser(text, lang) {
+  return new Promise((resolve) => {
+    if (!window.speechSynthesis) { resolve(); return }
+    stopCurrent()
+    window.speechSynthesis.cancel()
+    const u = new SpeechSynthesisUtterance(text)
+    if (lang) u.lang = lang
+    u.onend = u.onerror = () => resolve()
+    window.speechSynthesis.speak(u)
+  })
+}
+
+// Play an audio URL exclusively; resolves when it ends or is stopped.
+export function playUntilEnd(url) {
+  return new Promise((resolve) => {
+    const audio = new Audio(url)
+    const finish = () => { URL.revokeObjectURL(url); resolve() }
+    audio.onended = finish
+    audio.onerror = finish
+    playExclusive(audio, finish).catch(finish)
+  })
 }
 
 // One audio element at a time across the whole site: starting a new answer

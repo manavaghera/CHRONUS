@@ -11,6 +11,9 @@ function greeting(persona) {
   if (persona.kind === 'pretrained') {
     return `I'm a CHRONUS model of ${persona.name}. ${persona.description} I answer only from these texts, and you can check the source of every reply.`
   }
+  if (persona.memorial) {
+    return `These are ${persona.name}'s words, kept by the people who loved them. I can only share what they wrote or said, or what family remembered, and I'll show you where each answer comes from.`
+  }
   return `Hi, I'm a CHRONUS model of ${persona.name}. I only answer from the documents and interview answers added to this model, and you can check the source of every reply.`
 }
 
@@ -21,6 +24,9 @@ function disclaimer(persona) {
   if (persona.kind === 'pretrained') {
     const titles = persona.sources.map(s => s.title).join(', ')
     return `AI simulation built from ${persona.name}'s public-domain writings (${titles}; Project Gutenberg). It is not the real person.`
+  }
+  if (persona.memorial) {
+    return `A memorial archive of ${persona.name}'s words, built with consent. It is not ${persona.name}, and it is not a substitute for grief support or the people around you.`
   }
   return 'AI simulation built from memories shared with consent. It is not the real person, and it is not a substitute for grief support or professional help.'
 }
@@ -46,6 +52,13 @@ export default function ChatPage({ id }) {
         <div className="eyebrow eyebrow--accent">{persona?.kind === 'custom' ? 'Your model' : 'Pretrained model'}</div>
         <h1 className="page-h1">{persona?.name || (error ? 'Model not found' : 'Loading…')}</h1>
         {persona?.description && <p className="page-sub">{persona.description}</p>}
+        {persona && (
+          <div className="page-links">
+            <button className="page-link" onClick={() => navigate(`/memories/${persona.id}`)}>Browse its memories</button>
+            <button className="page-link" onClick={() => navigate(`/insights/${persona.id}`)}>Insights</button>
+            <button className="page-link" onClick={() => navigate(`/roundtable/${persona.id}`)}>Add to a roundtable</button>
+          </div>
+        )}
       </section>
 
       <section className="shell page-section page-chat">
@@ -60,7 +73,8 @@ export default function ChatPage({ id }) {
           <ChatPanel
             key={persona.id}
             tall
-            persona={{ id: persona.id, name: persona.name, memories: persona.memories, allowAiVoice: persona.allow_cloud_llm, hasVoice: !!persona.voice, standInVoice: !!persona.stand_in_voice }}
+            persist
+            persona={{ id: persona.id, name: persona.name, kind: persona.kind, memorial: persona.memorial, memories: persona.memories, allowAiVoice: persona.allow_cloud_llm, hasVoice: !!persona.voice, standInVoice: !!persona.stand_in_voice }}
             greeting={greeting(persona)}
             quick={quick}
             voiceLabels={persona.id === ELON.id ? ELON_VOICES : undefined}
