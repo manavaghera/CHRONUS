@@ -49,6 +49,7 @@
 :root[data-theme="dark"] .demo-voice--third_party { background: rgba(234,179,8,.16); color: #f2cc60; }
 :root[data-theme="dark"] .demo-voice--synthesized { background: rgba(236,72,153,.16); color: #f59ac8; }
 :root[data-theme="dark"] .page-alert { background: rgba(220,38,38,.12); color: #fca5a5; }
+@media(hover:hover) { :root[data-theme="dark"] .history-delete .page-link:hover { color: #fca5a5; } }
 
 /* The system-dark case mirrors the [data-theme=dark] overrides */
 @media (prefers-color-scheme: dark) {
@@ -77,6 +78,7 @@
   :root:not([data-theme="light"]) .demo-voice--third_party { background: rgba(234,179,8,.16); color: #f2cc60; }
   :root:not([data-theme="light"]) .demo-voice--synthesized { background: rgba(236,72,153,.16); color: #f59ac8; }
   :root:not([data-theme="light"]) .page-alert { background: rgba(220,38,38,.12); color: #fca5a5; }
+  @media(hover:hover) { :root:not([data-theme="light"]) .history-delete .page-link:hover { color: #fca5a5; } }
 }
 
 /* Theme toggle in the header */

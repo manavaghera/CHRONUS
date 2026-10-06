@@ -148,22 +148,54 @@ function Review({ persona, names }) {
   )
 }
 
+function DeleteHistory({ persona, name, onDeleted }) {
+  const [confirming, setConfirming] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const [message, setMessage] = useState('')
+  useEffect(() => { setConfirming(false); setMessage('') }, [persona])
+  const run = async () => {
+    setBusy(true)
+    try {
+      const r = await api.deleteHistory(persona || undefined)
+      setMessage(`Deleted ${r.questions_deleted} question${r.questions_deleted === 1 ? '' : 's'} and ${r.feedback_deleted} feedback item${r.feedback_deleted === 1 ? '' : 's'}.`)
+      onDeleted()
+    } catch (e) { setMessage(e.message) }
+    setBusy(false); setConfirming(false)
+  }
+  return (
+    <div className="history-delete">
+      {confirming ? (
+        <>
+          <span>Delete every question you asked {name || 'any model'}, and your feedback? This can't be undone.</span>
+          <button className="pill-btn pill-btn--dark" disabled={busy} onClick={run}><span className="pill-inner">{busy ? 'Deleting…' : 'Delete'}</span></button>
+          <button className="pill-btn pill-btn--outline" disabled={busy} onClick={() => setConfirming(false)}><span className="pill-inner">Cancel</span></button>
+        </>
+      ) : (
+        <button className="page-link" onClick={() => { setConfirming(true); setMessage('') }}>Delete my question history{name ? ` with ${name}` : ''}</button>
+      )}
+      {message && <span className="page-note" role="status">{message}</span>}
+    </div>
+  )
+}
+
 export default function InsightsPage({ id }) {
   const [personas, setPersonas] = useState([])
   const [persona, setPersona] = useState(id || '')
   const [days, setDays] = useState(30)
   const [tab, setTab] = useState('overview')
+  const [refresh, setRefresh] = useState(0)
   useEffect(() => { api.personas().then(setPersonas).catch(() => {}) }, [])
   useEffect(() => { setPersona(id || '') }, [id])
   const choose = useCallback((value) => { setPersona(value); navigate(value ? `/insights/${value}` : '/insights') }, [])
   const kind = personas.find(p => p.id === persona)?.kind
+  const name = personas.find(p => p.id === persona)?.name
 
   return (
     <div className="page">
       <section className="page-hero page-hero--compact shell">
         <div className="eyebrow eyebrow--accent">Insights</div>
         <h1 className="page-h1">How the models are doing</h1>
-        <p className="page-sub">What people ask, how well answers are grounded, what the archives can't answer yet, and feedback waiting for a person to review. Built from this server's Q&amp;A log.</p>
+        <p className="page-sub">What people ask, how well answers are grounded, what the archives can't answer yet, and feedback waiting for a person to review. Built from this server's Q&amp;A log, which keeps questions for 90 days unless the server is set otherwise.</p>
       </section>
       <section className="shell page-section insights-layout">
         <div className="insights-filters">
@@ -182,9 +214,10 @@ export default function InsightsPage({ id }) {
             <button key={t} role="tab" aria-selected={tab === t} className={tab === t ? 'is-on' : ''} onClick={() => setTab(t)}>{l}</button>
           ))}
         </div>
-        {tab === 'overview' && <Overview persona={persona} days={days} />}
-        {tab === 'gaps' && (persona ? <Gaps persona={persona} kind={kind} /> : <p className="page-note">Choose a model above to see what its archive can't answer.</p>)}
-        {tab === 'review' && <Review persona={persona} names={Object.fromEntries(personas.map(p => [p.id, p.name]))} />}
+        {tab === 'overview' && <Overview key={refresh} persona={persona} days={days} />}
+        {tab === 'gaps' && (persona ? <Gaps key={refresh} persona={persona} kind={kind} /> : <p className="page-note">Choose a model above to see what its archive can't answer.</p>)}
+        {tab === 'review' && <Review key={refresh} persona={persona} names={Object.fromEntries(personas.map(p => [p.id, p.name]))} />}
+        <DeleteHistory persona={persona} name={name} onDeleted={() => setRefresh(n => n + 1)} />
       </section>
     </div>
   )

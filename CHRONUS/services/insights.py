@@ -14,6 +14,9 @@ switch off: nothing enters memory without a person approving it.
     POST /review/{id}/dismiss
     GET  /insights/gaps?persona=        what people asked that the archive couldn't answer
     GET  /insights/analytics?persona=&days=
+    DELETE /history?persona=            delete my questions and feedback
+
+Both logs are kept for config.LOG_RETENTION_DAYS (services/qa_log.py).
 """
 
 from __future__ import annotations
@@ -41,6 +44,7 @@ FEEDBACK_ID = PathParam(pattern=r"^[0-9a-f]{12}$")
 REASONS = ("wrong_attribution", "not_their_words", "incorrect", "unhelpful", "other")
 
 _lock = threading.Lock()
+qa_log.retain(lambda: FEEDBACK_PATH, _lock)
 
 
 class FeedbackIn(BaseModel):
@@ -220,6 +224,7 @@ def make_router(client, embedder) -> APIRouter:
     @router.get("/review")
     def review_queue(persona: str | None = Query(None, pattern=ps.PERSONA_ID_PATTERN),
                      status: Literal["pending", "approved", "dismissed", "all"] = "pending"):
+        qa_log.prune_if_due()
         allowed = _scope(persona)
         items = [i for i in read_feedback() if i.get("persona") in allowed and _mine(i)
                  and (status == "all" or i.get("status") == status)]
@@ -288,5 +293,17 @@ def make_router(client, embedder) -> APIRouter:
         entries = [e for e in qa_log.read_entries() if e["persona"] in allowed and _mine(e)]
         feedback = [f for f in read_feedback() if f.get("persona") in allowed and _mine(f)]
         return analytics(entries, feedback, days)
+
+    @router.delete("/history")
+    def delete_history(persona: str | None = Query(None, pattern=ps.PERSONA_ID_PATTERN)):
+        """Delete the questions this person asked (and their feedback), for
+        one model or all. Answers a reviewer already approved into a custom
+        model stay in its memories (delete them in its memory browser)."""
+        if persona:
+            _visible_persona(persona)
+        user = ps.current_user.get()
+        questions = qa_log.forget(user, persona)
+        feedback = qa_log.forget(user, persona, FEEDBACK_PATH, _lock)
+        return {"questions_deleted": questions, "feedback_deleted": feedback}
 
     return router

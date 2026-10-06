@@ -155,6 +155,7 @@ export const api = {
   approve: (feedbackId, answer) => request(`/review/${pid(feedbackId)}/approve`, { method: 'POST', body: answer ? { answer } : {} }),
   dismiss: (feedbackId) => request(`/review/${pid(feedbackId)}/dismiss`, { method: 'POST' }),
   gaps: (persona) => request(`/insights/gaps?persona=${pid(persona)}`),
+  deleteHistory: (persona) => request(`/history${persona ? `?persona=${pid(persona)}` : ''}`, { method: 'DELETE' }),
   analytics: (persona, days = 30) => request(`/insights/analytics?${new URLSearchParams({ ...(persona ? { persona } : {}), days })}`),
 
   roundtable: (body) => request('/roundtable', { method: 'POST', body }),

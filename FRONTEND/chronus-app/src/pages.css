@@ -199,3 +199,6 @@
 .why { margin-top: .35rem; font-size: .7rem; color: var(--muted); }
 .why summary { cursor: pointer; width: fit-content; }
 .why p { margin-top: .3rem; line-height: 1.5; max-width: 32rem; }
+.history-delete { display: flex; flex-wrap: wrap; align-items: center; gap: .625rem; padding-top: 1rem; margin-top: .5rem; border-top: 1px solid var(--line); font-size: .82rem; }
+.history-delete .page-link { color: rgb(var(--ink-rgb) / .6); }
+@media(hover:hover) { .history-delete .page-link:hover { color: #b91c1c; } }

@@ -196,6 +196,12 @@ class ChronusConfig:
     """Optional passcode for the whole API (services/access.py). Empty = no
     login, fine on loopback; set it before exposing the server anywhere."""
 
+    LOG_RETENTION_DAYS: int = field(default_factory=lambda: int(os.getenv("CHRONUS_LOG_RETENTION_DAYS", "90")))
+    """Questions and answers (qa_log.jsonl) and feedback (feedback.jsonl) older
+    than this many days are deleted, checked at most once an hour. 0 keeps them
+    forever. People can also delete their own history at any time
+    (DELETE /history, the "Delete my history" button on the Insights page)."""
+
     # === PERSONA DEFAULTS ===
     DEFAULT_PERSONA: str = "elon_musk"
     """Default persona to load."""
