@@ -25,7 +25,21 @@ from fastapi.responses import Response, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator, model_validator
 
-from services import access, followups, hybrid, insights, memory_routes, roundtable, stt, timeline, tts, voice_sandbox
+from services import (
+    access,
+    bundle,
+    followups,
+    hybrid,
+    insights,
+    memory_routes,
+    roundtable,
+    stt,
+    timeline,
+    translate,
+    tts,
+    voice_sandbox,
+    wellbeing,
+)
 from services import personas as ps
 from services.embedder import LazyEmbedder
 
@@ -33,6 +47,7 @@ from services.embedder import LazyEmbedder
 from services.mix_method import generate_mix_method_response  # CHRONUS core contribution
 from services.natural_mode import generate_natural_response
 from services.persona_routes import InterviewAnswer, embed_interview_answer, make_router
+from services.persona_routes import summarize as summarize_persona
 
 # Quick profile answers; re-exported for tests and evaluation scripts
 from services.profile import (  # noqa: F401
@@ -113,6 +128,8 @@ class ChatRequest(BaseModel):
     # Time travel: answer only from memories dated within these years
     year_from: Optional[int] = Field(default=None, ge=1000, le=2100)
     year_to: Optional[int] = Field(default=None, ge=1000, le=2100)
+    # Answer in this language ("hi", "gu"...); default: the question's language
+    language: Optional[str] = Field(default=None, pattern=r"^[a-z]{2}$")
 
     @field_validator("query")
     @classmethod
@@ -144,8 +161,14 @@ class ChatResponse(BaseModel):
     mode: str = "mix_method"
     # Shown to the user when the requested mode couldn't be used
     notice: str = ""
-    # Q&A log entry id, for thumbs up/down feedback (services/feedback.py)
+    # Q&A log entry id, for thumbs up/down feedback (services/insights.py)
     id: str = ""
+    # Crisis support replies (services/wellbeing.py) list helplines
+    helplines: list[dict] = Field(default_factory=list)
+    # Multilingual (services/translate.py): language of `answer`, and the
+    # English original when it was translated
+    language: str = "en"
+    original_answer: str = ""
 
 
 class SpeakRequest(BaseModel):
@@ -330,7 +353,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
             profile_block=profile_context_block(persona["id"]),
             history=[turn.model_dump() for turn in history],
             persona_name=persona["name"],
-            style_notes=persona.get("style_notes"),
+            style_notes=wellbeing.style_for(persona),
             # The local LoRA adapter (lora/train_lora.py) was trained on Elon's words only
             use_adapter=persona["id"] == "elon_musk",
             embedder=embedder,
@@ -364,6 +387,18 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
 
 
 # ---- Endpoints ----
+def _support_reply(persona: dict, memory, started: float) -> ChatResponse:
+    """Crisis language: step out of character, give helplines, generate
+    nothing in the persona's voice, and keep the message out of the log."""
+    entry_id = log_qa("(withheld: support message shown)", wellbeing.SUPPORT_MESSAGE, [], persona=persona["id"],
+                      mode="support", confidence="high", fallback=False, faithfulness=1.0,
+                      latency_ms=round((time.perf_counter() - started) * 1000))
+    return ChatResponse(answer=wellbeing.SUPPORT_MESSAGE, sources=[], faithfulness=1.0, auto_trained=False,
+                        collection_size=memory.count(), confidence="high", fallback=False, mode="support",
+                        notice="Out of character: support information", id=entry_id or "",
+                        helplines=wellbeing.HELPLINES)
+
+
 def respond(req: ChatRequest, on_token=None) -> ChatResponse:
     """Answer *req* (shared by /chat and /chat/stream). *on_token* receives
     the AI voice's draft as it is generated."""
@@ -371,11 +406,35 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
     persona = _load_ready_persona(req.persona)
     memory = ps.get_collection(client, persona)
     years = (req.year_from, req.year_to)
+    if wellbeing.needs_support(req.query):
+        return _support_reply(persona, memory, started)
+
+    # Other languages: translate the question to English (the archive's
+    # language), answer as usual, translate the answer back (services/translate.py)
+    query, notes = req.query, []
+    asked_in = translate.detect(req.query)
+    target = req.language or asked_in
+    can_translate = translate.available(persona)
+    if asked_in != "en":
+        if not can_translate:
+            return ChatResponse(
+                answer=FALLBACK_ANSWER, sources=[], faithfulness=0.0, auto_trained=False, collection_size=memory.count(),
+                confidence="low", fallback=True, mode="fallback", language=asked_in,
+                notice=f"This model's archive is in English. Ask in English, or turn on AI voice for this model to ask in "
+                       f"{translate.LANGUAGES.get(asked_in, 'your language')}.")
+        try:
+            query = translate.translate(req.query, "en", asked_in)
+        except Exception as e:
+            logger.error(f"Translating the question failed: {e}")
+            raise HTTPException(status_code=503, detail="Couldn't translate the question right now; please ask in English")
+        if wellbeing.needs_support(query):
+            return _support_reply(persona, memory, started)
+        notes.append(f"Your question was translated from {translate.LANGUAGES.get(asked_in, asked_in)} by AI.")
 
     # Simple profile facts skip retrieval. A question that also asks
     # something else ("When were you born and why did you start SpaceX?")
     # gets the fact AND an answer from memory for the rest.
-    basic = check_basic_info(req.query, persona["id"])
+    basic = check_basic_info(query, persona["id"])
     if basic and not basic.get("remainder"):
         result = {**basic, "faithfulness": 1.0, "notice": ""}
     elif basic:
@@ -389,14 +448,30 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
             "fallback": False,
         }
     else:
-        result = answer_from_memory(req.query, persona, memory, req.mode, req.history, req.n_results,
+        result = answer_from_memory(query, persona, memory, req.mode, req.history, req.n_results,
                                     years=years, on_token=on_token)
+
+    original, language = "", "en"
+    if target != "en" and target in translate.LANGUAGES:
+        if not can_translate:
+            notes.append("Answers in other languages need AI voice turned on for this model.")
+        else:
+            try:
+                original = result["response"]
+                result["response"] = translate.translate(original, target, "en")
+                language = target
+                notes.append("Translated by AI from the original English (shown below); sources are untranslated.")
+            except Exception as e:
+                logger.error(f"Translating the answer failed: {e}")
+                original = ""
+                notes.append("Couldn't translate the answer, so here it is in English.")
+    notice = " ".join(n for n in [result.get("notice", ""), *notes] if n)
 
     # Every answer is logged, refusals included: they show what the archive
     # is missing (knowledge-gap report)
     entry_id = log_qa(req.query, result["response"], result["sources"], persona=persona["id"],
                       mode=result["mode"], confidence=result["confidence"], fallback=result["fallback"],
-                      faithfulness=result["faithfulness"],
+                      faithfulness=result["faithfulness"], language=language,
                       latency_ms=round((time.perf_counter() - started) * 1000))
 
     return ChatResponse(
@@ -408,8 +483,10 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
         confidence=result["confidence"],
         fallback=result["fallback"],
         mode=result["mode"],
-        notice=result.get("notice", ""),
+        notice=notice,
         id=entry_id or "",
+        language=language,
+        original_answer=original,
     )
 
 
@@ -629,6 +706,8 @@ def complete_interview(responses: list[InterviewAnswer], person: str = PERSON_ID
 
 # Pretrained + custom models: list, create, upload, interview, build, delete
 app.include_router(make_router(client, embedder))
+# Encrypted .chronus export / import of custom models
+app.include_router(bundle.make_router(client, embedder, config.EMBEDDING_MODEL, summarize_persona))
 # Adaptive interview: free-form follow-up questions
 app.include_router(followups.make_router(client, embedder))
 # Memory browser, citation context, time-travel year counts

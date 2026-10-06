@@ -20,6 +20,7 @@ from fastapi import APIRouter
 from pydantic import BaseModel, Field, field_validator
 
 from services import personas as ps
+from services import wellbeing
 
 MAX_SEATS = 4
 
@@ -62,6 +63,9 @@ def make_router(load_ready: Callable[[str], dict], collection_for: Callable[[dic
     @router.post("/roundtable")
     def roundtable(req: RoundtableRequest):
         seats = [load_ready(pid) for pid in req.personas]  # 404 / 409 before any work
+        if wellbeing.needs_support(req.query):
+            return {"query": req.query, "answers": [], "replies": [], "support": wellbeing.SUPPORT_MESSAGE,
+                    "helplines": wellbeing.HELPLINES}
         first = []
         for persona in seats:
             result = answer(req.query, persona, collection_for(persona), req.mode, [])

@@ -14,6 +14,7 @@ requirement).
 
 from __future__ import annotations
 
+import contextvars
 import hashlib
 import json
 import re
@@ -55,21 +56,36 @@ def _folder(persona: dict) -> Path:
     return base / persona["id"]
 
 
-def load_persona(persona_id: str) -> dict | None:
+# Signed-in user for this request when the server has accounts
+# (CHRONUS_USERS, services/access.py); None = single-user server.
+current_user: contextvars.ContextVar[str | None] = contextvars.ContextVar("chronus_user", default=None)
+
+
+def _visible(persona: dict) -> bool:
+    """Custom models belong to the account that made them. Pretrained ones,
+    and models made before accounts existed (no owner), are shared."""
+    user = current_user.get()
+    return user is None or persona.get("kind") != "custom" or persona.get("owner") in (None, user)
+
+
+def load_persona(persona_id: str, any_owner: bool = False) -> dict | None:
     if not re.match(PERSONA_ID_PATTERN, persona_id or ""):
         return None
     for base in (PRETRAINED_DIR, CUSTOM_DIR):
         path = base / persona_id / "persona.json"
         if path.exists():
-            return json.loads(path.read_text(encoding="utf-8"))
+            persona = json.loads(path.read_text(encoding="utf-8"))
+            return persona if any_owner or _visible(persona) else None
     return None
 
 
-def list_personas() -> list[dict]:
+def list_personas(any_owner: bool = False) -> list[dict]:
     found = []
     for base in (PRETRAINED_DIR, CUSTOM_DIR):
         for path in sorted(base.glob("*/persona.json")) if base.exists() else []:
-            found.append(json.loads(path.read_text(encoding="utf-8")))
+            persona = json.loads(path.read_text(encoding="utf-8"))
+            if any_owner or _visible(persona):
+                found.append(persona)
     return found
 
 
@@ -81,6 +97,7 @@ def save_persona(persona: dict) -> None:
 
 def create_custom_persona(
     name: str, description: str, relationship: str, allow_cloud_llm: bool, consent_statement: str,
+    memorial: bool = False,
 ) -> dict:
     slug = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")[:30] or "persona"
     persona_id = f"{slug}_{secrets.token_hex(3)}"
@@ -96,6 +113,8 @@ def create_custom_persona(
         "allow_cloud_llm": allow_cloud_llm,
         "style_notes": DEFAULT_STYLE_NOTES,
         "relationship": relationship,  # creator's relationship to the person
+        "memorial": memorial,  # the person has died (services/wellbeing.py)
+        "owner": current_user.get(),  # account that made it (None on a single-user server)
         "consent": {"statement": consent_statement, "given_at": _now()},
         "created_at": _now(),
         "uploads": [],
@@ -208,7 +227,7 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
 
     entry = {"filename": name, "authored_by": authored_by, "memories": len(docs), "uploaded_at": _now()}
     with _lock:
-        fresh = load_persona(persona["id"]) or persona
+        fresh = load_persona(persona["id"], any_owner=True) or persona
         fresh["uploads"] = [u for u in fresh.get("uploads", []) if u["filename"] != name] + [entry]
         save_persona(fresh)
     return entry
@@ -219,7 +238,7 @@ def delete_document(persona: dict, collection, filename: str) -> int:
     many memories were removed. FileNotFoundError if there's no such upload."""
     name = _safe_filename(filename)
     with _lock:
-        fresh = load_persona(persona["id"]) or persona
+        fresh = load_persona(persona["id"], any_owner=True) or persona
         uploads = fresh.get("uploads", [])
         if not any(u["filename"] == name for u in uploads):
             raise FileNotFoundError(name)
@@ -276,7 +295,7 @@ def save_voice_sample(persona: dict, data: bytes, fish_voice_id: str) -> dict:
     voice = {"seconds": round(seconds, 1), "fish_voice_id": fish_voice_id,
              "consent": {"statement": VOICE_CONSENT_STATEMENT, "given_at": _now()}}
     with _lock:
-        fresh = load_persona(persona["id"]) or persona
+        fresh = load_persona(persona["id"], any_owner=True) or persona
         fresh["voice"] = voice
         save_persona(fresh)
     return voice
@@ -285,14 +304,14 @@ def save_voice_sample(persona: dict, data: bytes, fish_voice_id: str) -> dict:
 def delete_voice_sample(persona: dict) -> None:
     voice_path(persona).unlink(missing_ok=True)
     with _lock:
-        fresh = load_persona(persona["id"]) or persona
+        fresh = load_persona(persona["id"], any_owner=True) or persona
         fresh.pop("voice", None)
         save_persona(fresh)
 
 
 def record_interview_answer(persona: dict, question_id: str) -> None:
     with _lock:
-        fresh = load_persona(persona["id"]) or persona
+        fresh = load_persona(persona["id"], any_owner=True) or persona
         if question_id not in fresh.setdefault("interview_answered", []):
             fresh["interview_answered"].append(question_id)
             save_persona(fresh)
@@ -300,7 +319,7 @@ def record_interview_answer(persona: dict, question_id: str) -> None:
 
 def record_followup(persona: dict, question_id: str) -> None:
     with _lock:
-        fresh = load_persona(persona["id"]) or persona
+        fresh = load_persona(persona["id"], any_owner=True) or persona
         if question_id not in fresh.setdefault("followups_answered", []):
             fresh["followups_answered"].append(question_id)
             save_persona(fresh)
@@ -319,7 +338,7 @@ def build_persona(collection, persona: dict) -> dict:
             "Upload more documents or answer more interview questions."
         )
     with _lock:
-        fresh = load_persona(persona["id"]) or persona
+        fresh = load_persona(persona["id"], any_owner=True) or persona
         fresh.update(status="ready", built_at=_now())
         save_persona(fresh)
     return fresh

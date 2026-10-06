@@ -33,6 +33,8 @@ class PersonaCreate(BaseModel):
     description: str = Field(default="", max_length=300)
     relationship: Literal["self", "family", "friend", "colleague", "other"]
     allow_cloud_llm: bool = False
+    # The person has died: memorial framing (services/wellbeing.py)
+    memorial: bool = False
     consent: bool
 
 
@@ -66,6 +68,7 @@ def summarize(persona: dict, collection) -> dict:
         "description": persona.get("description", ""),
         "allow_cloud_llm": bool(persona.get("allow_cloud_llm")),
         "relationship": persona.get("relationship", ""),
+        "memorial": bool(persona.get("memorial")),
         "created_at": persona.get("created_at", ""),
         "memories": collection.count(),
         "uploads": persona.get("uploads", []),
@@ -110,6 +113,7 @@ def make_router(client, embedder) -> APIRouter:
             raise HTTPException(status_code=400, detail="Consent is required to build a model of a real person")
         persona = ps.create_custom_persona(
             body.name, body.description, body.relationship, body.allow_cloud_llm, CONSENT_STATEMENT,
+            memorial=body.memorial,
         )
         return summarize(persona, ps.get_collection(client, persona))
 

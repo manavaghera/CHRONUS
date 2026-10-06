@@ -176,6 +176,13 @@ def analytics(entries: list[dict], feedback: list[dict], days: int = 30, today: 
     }
 
 
+def _mine(item: dict) -> bool:
+    """Accounts: questions asked from other accounts (even to shared
+    pretrained models) are theirs, not this person's."""
+    user = ps.current_user.get()
+    return user is None or item.get("user") in (None, user)
+
+
 def make_router(client, embedder) -> APIRouter:
     router = APIRouter(tags=["insights"])
 
@@ -194,7 +201,7 @@ def make_router(client, embedder) -> APIRouter:
     @router.post("/feedback", status_code=201)
     def give_feedback(body: FeedbackIn):
         _visible_persona(body.persona)
-        entry = next((e for e in qa_log.read_entries(body.persona) if e.get("id") == body.entry_id), None)
+        entry = next((e for e in qa_log.read_entries(body.persona) if e.get("id") == body.entry_id and _mine(e)), None)
         if entry is None:
             raise HTTPException(status_code=404, detail="That answer isn't in the log (it may have been deleted)")
         item = {
@@ -202,7 +209,7 @@ def make_router(client, embedder) -> APIRouter:
             "rating": body.rating, "reason": body.reason, "note": body.note.strip(),
             "question": entry["query"], "answer": entry.get("answer", ""), "mode": entry.get("mode"),
             "sources": entry.get("sources", []), "timestamp": datetime.now().isoformat(timespec="seconds"),
-            "status": "pending",
+            "status": "pending", "user": ps.current_user.get(),
         }
         with _lock:
             # One vote per answer: a second click changes it
@@ -214,7 +221,8 @@ def make_router(client, embedder) -> APIRouter:
     def review_queue(persona: str | None = Query(None, pattern=ps.PERSONA_ID_PATTERN),
                      status: Literal["pending", "approved", "dismissed", "all"] = "pending"):
         allowed = _scope(persona)
-        items = [i for i in read_feedback() if i.get("persona") in allowed and (status == "all" or i.get("status") == status)]
+        items = [i for i in read_feedback() if i.get("persona") in allowed and _mine(i)
+                 and (status == "all" or i.get("status") == status)]
         kinds = {p["id"]: p["kind"] for p in ps.list_personas()}
         for i in items:
             i["can_approve"] = kinds.get(i["persona"]) == "custom"
@@ -224,7 +232,7 @@ def make_router(client, embedder) -> APIRouter:
         with _lock:
             items = read_feedback()
             item = next((i for i in items if i.get("id") == feedback_id), None)
-            if item is None or item.get("persona") not in _scope(None):
+            if item is None or item.get("persona") not in _scope(None) or not _mine(item):
                 raise HTTPException(status_code=404, detail="No such feedback")
             update(item)
             item["reviewed_at"] = datetime.now().isoformat(timespec="seconds")
@@ -259,7 +267,7 @@ def make_router(client, embedder) -> APIRouter:
     @router.get("/insights/gaps")
     def gaps(persona: str = Query(..., pattern=ps.PERSONA_ID_PATTERN), limit: int = Query(20, ge=1, le=100)):
         p = _visible_persona(persona)
-        entries = qa_log.read_entries(persona)
+        entries = [e for e in qa_log.read_entries(persona) if _mine(e)]
         unanswered = [e for e in entries if e.get("fallback") or e.get("mode") == "fallback" or e.get("confidence") == "low"]
         clusters = cluster_questions(unanswered)[:limit]
         # Custom models: the interview question that would most likely fill the gap
@@ -277,8 +285,8 @@ def make_router(client, embedder) -> APIRouter:
     @router.get("/insights/analytics")
     def get_analytics(persona: str | None = Query(None, pattern=ps.PERSONA_ID_PATTERN), days: int = Query(30, ge=1, le=365)):
         allowed = _scope(persona)
-        entries = [e for e in qa_log.read_entries() if e["persona"] in allowed]
-        feedback = [f for f in read_feedback() if f.get("persona") in allowed]
+        entries = [e for e in qa_log.read_entries() if e["persona"] in allowed and _mine(e)]
+        feedback = [f for f in read_feedback() if f.get("persona") in allowed and _mine(f)]
         return analytics(entries, feedback, days)
 
     return router

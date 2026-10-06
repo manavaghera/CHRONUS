@@ -67,7 +67,7 @@ def test_delete_removes_it_at_fish_too(client, fake_fish):
 
 def test_a_models_voice_cant_be_deleted_from_the_sandbox(client, fake_fish, monkeypatch):
     monkeypatch.setattr(voice_sandbox.ps, "list_personas",
-                        lambda: [{"id": "x", "voice": {"fish_voice_id": "modelvoice0001"}}])
+                        lambda **_: [{"id": "x", "voice": {"fish_voice_id": "modelvoice0001"}}])
     assert client.delete("/voice/sandbox/modelvoice0001").status_code == 409
     assert not fake_fish.requests
     assert ps.load_persona("elon_musk")  # sanity: the real personas are untouched

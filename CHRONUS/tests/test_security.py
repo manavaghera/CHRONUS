@@ -35,7 +35,7 @@ def test_access_code(srv, client, monkeypatch):
     assert client.get("/health").status_code == 200  # public, so the site can tell it's online
     r = client.get("/personas")
     assert r.status_code == 401 and r.json()["login"] is True
-    assert client.get("/auth/status").json() == {"required": True, "signed_in": False}
+    assert client.get("/auth/status").json() == {"required": True, "signed_in": False, "accounts": False, "user": None}
     assert client.post("/auth/login", json={"code": "wrong"}).status_code == 401
     fresh = TestClient(srv.app, base_url="http://localhost")
     assert fresh.post("/auth/login", json={"code": "open sesame"}).status_code == 200

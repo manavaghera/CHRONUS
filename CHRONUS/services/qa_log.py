@@ -29,7 +29,12 @@ def log_qa(query: str, answer: str, sources: list[dict], **details) -> str:
 
     *details*: persona, mode, confidence, faithfulness, latency_ms...
     """
+    from services.personas import current_user
+
     entry_id = secrets.token_hex(6)
+    user = current_user.get()
+    if user:
+        details.setdefault("user", user)  # accounts: only this person sees it in Insights
     entry = {
         "id": entry_id,
         "timestamp": datetime.now().isoformat(timespec="seconds"),

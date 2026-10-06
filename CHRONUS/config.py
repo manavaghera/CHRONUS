@@ -186,6 +186,10 @@ class ChronusConfig:
     DNS rebinding (a website pointing its own domain at 127.0.0.1 to read
     this server). Add your LAN name or domain here if you host it."""
 
+    USERS: str = field(default_factory=lambda: os.getenv("CHRONUS_USERS", ""))
+    """Accounts, "name:code,name:code". Each person signs in and sees only the
+    custom models they made; pretrained ones are shared. Overrides ACCESS_CODE."""
+
     ACCESS_CODE: str = field(default_factory=lambda: os.getenv("CHRONUS_ACCESS_CODE", ""))
     """Optional passcode for the whole API (services/access.py). Empty = no
     login, fine on loopback; set it before exposing the server anywhere."""

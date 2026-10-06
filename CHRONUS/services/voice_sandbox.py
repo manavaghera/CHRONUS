@@ -54,12 +54,18 @@ class SandboxSpeak(BaseModel):
     voice_id: str = Field(pattern=r"^[A-Za-z0-9_-]{8,64}$")
 
 
-def load_registry() -> list[dict]:
+def _all_voices() -> list[dict]:
     try:
         data = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
     except (FileNotFoundError, json.JSONDecodeError):
         return []
     return data if isinstance(data, list) else []
+
+
+def load_registry() -> list[dict]:
+    """This account's test voices (all of them on a single-user server)."""
+    user = ps.current_user.get()
+    return [v for v in _all_voices() if user is None or v.get("owner") in (None, user)]
 
 
 def _save_registry(voices: list[dict]) -> None:
@@ -74,7 +80,7 @@ def _public(voice: dict) -> dict:
 
 
 def _persona_voice_ids() -> set[str]:
-    return {(p.get("voice") or {}).get("fish_voice_id") for p in ps.list_personas()} - {None}
+    return {(p.get("voice") or {}).get("fish_voice_id") for p in ps.list_personas(any_owner=True)} - {None}
 
 
 def make_router() -> APIRouter:
@@ -108,8 +114,9 @@ def make_router() -> APIRouter:
         voice = {"id": voice_id, "name": body.name.strip(), "seconds": round(seconds, 1),
                  "created_at": datetime.now().isoformat(timespec="seconds"),
                  "consent": {"statement": CONSENT_STATEMENT, "given_at": datetime.now().isoformat(timespec="seconds")}}
+        voice["owner"] = ps.current_user.get()
         with _lock:
-            _save_registry([*load_registry(), voice])
+            _save_registry([*_all_voices(), voice])
         return _public(voice)
 
     @router.delete("/{voice_id}")
@@ -121,14 +128,15 @@ def make_router() -> APIRouter:
         too. A voice that belongs to a custom model is refused: remove it
         from that model instead.
         """
-        if voice_id in _persona_voice_ids():
+        others = {v.get("id") for v in _all_voices()} - {v.get("id") for v in load_registry()}
+        if voice_id in _persona_voice_ids() or voice_id in others:
             raise HTTPException(status_code=409, detail="This voice belongs to a model; remove it on the model's page")
         try:
             tts.fish_delete_voice(voice_id)
         except tts.VoiceServiceError as e:
             raise HTTPException(status_code=e.status, detail=f"{e}. Nothing was removed; please try again.")
         with _lock:
-            _save_registry([v for v in load_registry() if v.get("id") != voice_id])
+            _save_registry([v for v in _all_voices() if v.get("id") != voice_id])
         tts.fish_speech.cache_clear()
         return {"deleted": voice_id}
 
