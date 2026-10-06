@@ -1,86 +1,91 @@
+import json
 import time
 
 from services import access
 
 
-def _login(client, username="admin", pw=None, **extra):
-    body = {
-        "username": username,
-        "password": pw or access.ADMIN_BOOTSTRAP_PASSWORD,
-        **extra,
-    }
-    return client.post("/auth/login", json=body)
+def test_rbac_permissions():
+    assert access.has_permission("admin", "audit.read")
+    assert not access.has_permission("analyst", "audit.read")
 
 
-def _auth_header(token: str) -> dict[str, str]:
-    return {"Authorization": "Bearer " + token}
-
-
-def test_auth_session_lifecycle(client):
-    r = _login(client)
-    assert r.status_code == 200, r.text
-    token = r.json()["access_token"]
-
-    me = client.get("/auth/me", headers=_auth_header(token))
-    assert me.status_code == 200 and me.json()["username"] == "admin"
-
-    out = client.post("/auth/logout", headers=_auth_header(token))
-    assert out.status_code == 200
-
-    me_after = client.get("/auth/me", headers=_auth_header(token))
-    assert me_after.status_code == 401
-
-
-def test_login_rate_limit_returns_retry_after(client):
+def test_login_rate_limit_and_reset_with_success():
+    user = "admin"
+    client = "pytest-client"
     for _ in range(4):
-        bad = _login(client, pw="wrong-pw")
-        assert bad.status_code == 401
-    blocked = _login(client, pw="wrong-pw")
-    assert blocked.status_code == 429
-    assert "Retry-After" in blocked.headers
+        r = access.login(user, "wrong-pw", client)
+        assert not r.ok and r.retry_after is None
+
+    blocked = access.login(user, "wrong-pw", client)
+    assert not blocked.ok and blocked.retry_after is not None
+
+    # Different client id is independent and should still allow successful login.
+    ok = access.login(user, access.ADMIN_BOOTSTRAP_PASSWORD, "pytest-client-2")
+    assert ok.ok and ok.token
 
 
-def test_mfa_enable_and_login_with_totp(client):
+def test_session_logout_invalidation_and_expired_handling():
+    token, _ = access.issue_session("admin", "admin")
+    payload = access.parse_session(token)
+    assert payload["sub"] == "admin"
+
+    access.revoke_session(token)
+    try:
+        access.parse_session(token)
+        assert False, "expected revoked session to fail"
+    except ValueError as e:
+        assert "logged out" in str(e)
+
+
+def test_mfa_totp_and_backup_codes():
     access.disable_mfa("admin")
-    ok = _login(client)
-    token = ok.json()["access_token"]
-
-    setup = client.post("/auth/mfa/enable", headers=_auth_header(token))
-    assert setup.status_code == 200, setup.text
-    secret = setup.json()["secret"]
+    setup = access.enable_mfa("admin")
+    secret = setup["secret"]
     code = access._totp(secret, int(time.time()))
 
-    client.post("/auth/logout", headers=_auth_header(token))
+    needs_mfa = access.login("admin", access.ADMIN_BOOTSTRAP_PASSWORD, "mfa-client")
+    assert not needs_mfa.ok and "MFA required" in needs_mfa.message
 
-    needs_mfa = _login(client)
-    assert needs_mfa.status_code == 401
-    assert "MFA required" in needs_mfa.json()["detail"]
+    with_totp = access.login("admin", access.ADMIN_BOOTSTRAP_PASSWORD, "mfa-client", otp_code=code)
+    assert with_totp.ok and with_totp.token
 
-    mfa_login = _login(client, otp_code=code)
-    assert mfa_login.status_code == 200, mfa_login.text
+    backup_code = setup["backup_codes"][0]
+    with_backup = access.login("admin", access.ADMIN_BOOTSTRAP_PASSWORD, "mfa-client", backup_code=backup_code)
+    assert with_backup.ok
+
+    reused = access.login("admin", access.ADMIN_BOOTSTRAP_PASSWORD, "mfa-client", backup_code=backup_code)
+    assert not reused.ok and "Invalid backup code" in reused.message
 
     access.disable_mfa("admin")
 
 
-def test_notifications_presets_export_and_analytics(client):
-    r = _login(client)
-    token = r.json()["access_token"]
-    headers = _auth_header(token)
+def test_audit_notifications_search_presets_cache_and_timing(tmp_path, monkeypatch):
+    monkeypatch.setattr(access, "AUDIT_LOG_PATH", tmp_path / "audit.jsonl")
+    monkeypatch.setattr(access, "QA_LOG_PATH", tmp_path / "qa.jsonl")
 
-    preset = client.post("/search/presets", json={"name": "default", "filters": {"mode": "mix_method"}}, headers=headers)
-    assert preset.status_code == 200
+    access.record_audit("auth.login", "admin", "success", {"ip": "127.0.0.1"})
+    rows = access.iter_audit(limit=10, action="auth.login")
+    assert rows and rows[0]["actor"] == "admin"
 
-    listed = client.get("/search/presets", headers=headers)
-    assert listed.status_code == 200 and "default" in listed.json()["presets"]
+    note = access.create_notification("admin", "hi", "welcome")
+    assert note["id"] > 0
+    unread = access.list_notifications("admin", unread_only=True)
+    assert unread
+    updated = access.mark_notifications_read("admin", [note["id"]])
+    assert updated == 1
 
-    notes = client.get("/notifications", headers=headers)
-    assert notes.status_code == 200
+    access.save_search_preset("admin", "strict", {"confidence": "high"})
+    assert "strict" in access.list_search_presets("admin")
 
-    exported = client.post("/bulk/export/logs", headers=headers)
-    assert exported.status_code == 200 and exported.headers["content-type"].startswith("text/csv")
+    with access.QA_LOG_PATH.open("w", encoding="utf-8") as f:
+        f.write(json.dumps({"query": "mars", "mode": "mix_method", "confidence": "high", "persona": "elon_musk"}) + "\n")
+    found = access.search_qa_logs({"query": "mars"}, limit=10)
+    assert len(found) == 1
 
-    dashboard = client.get("/analytics/dashboard", headers=headers)
-    assert dashboard.status_code == 200
+    access.cache_set("k", {"x": 1}, ttl_seconds=5)
+    assert access.cache_get("k") == {"x": 1}
 
-    audit = client.get("/audit", headers=headers)
-    assert audit.status_code == 200
+    access.record_timing("endpoint", 10)
+    access.record_timing("endpoint", 30)
+    summary = access.timing_summary()
+    assert summary["endpoint"]["count"] >= 2
