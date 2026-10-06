@@ -74,3 +74,38 @@
 .demo-listen { margin-top: .5rem; font-size: .7rem; font-weight: 500; color: var(--accent); }
 .demo-listen:disabled { opacity: .5; cursor: default; }
 .demo-voice-row { display: flex; gap: 1rem; align-items: flex-start; flex-wrap: wrap; }
+
+/* ---- Clone voice page ---- */
+.clone-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); align-items: start; }
+.clone-card { display: flex; flex-direction: column; gap: .875rem; }
+.clone-card .page-h2, .clone-card .page-note { margin-bottom: 0; }
+.clone-script { margin: 0; padding: .75rem 1rem; border-left: 3px solid var(--accent); background: var(--surface); border-radius: 0 var(--r-ctrl) var(--r-ctrl) 0; font-size: .875rem; line-height: 1.6; color: rgba(17,17,17,.75); }
+.clone-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+.clone-hint { margin-top: -.25rem; }
+.clone-recording { animation: clone-pulse 1.4s ease-in-out infinite; }
+@keyframes clone-pulse { 50% { opacity: .7; } }
+.clone-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .5rem; }
+.clone-list li { display: flex; align-items: center; gap: .75rem; padding: .625rem .875rem; border: 1px solid var(--line); border-radius: var(--r-ctrl); background: var(--surface); }
+.clone-list li.is-active { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+.clone-pick { display: flex; flex-direction: column; align-items: flex-start; gap: .125rem; text-align: left; flex: 1; min-width: 0; font: inherit; }
+.clone-pick span { font-size: .75rem; color: var(--muted); }
+.clone-legacy { border-top: 1px dashed var(--line); padding-top: .875rem; display: flex; flex-direction: column; gap: .5rem; }
+.clone-test { border-top: 1px solid var(--line); padding-top: 1rem; display: flex; flex-direction: column; gap: .625rem; align-items: flex-start; }
+.clone-test h3 { font-size: 1rem; font-weight: 600; }
+.clone-test textarea { resize: vertical; }
+.clone-audio { width: 100%; }
+
+/* ---- Sign-in screen (CHRONUS_ACCESS_CODE) ---- */
+.login-gate { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; padding: 1rem; background: rgba(250,249,247,.92); backdrop-filter: blur(8px); }
+.login-card { width: min(100%, 24rem); background: var(--bg); border: 1px solid var(--line); border-radius: var(--r-card-sm); padding: 2rem; display: flex; flex-direction: column; gap: 1rem; box-shadow: 0 24px 60px -24px rgba(0,0,0,.25); }
+.login-card h2 { font-size: 1.5rem; font-weight: 600; letter-spacing: -.02em; }
+
+/* ---- Start / contact panel (RequestModal.jsx) ---- */
+.start-panel { max-width: 36rem; }
+.start-options { display: flex; flex-direction: column; gap: .625rem; }
+.start-option { text-align: left; display: flex; flex-direction: column; gap: .25rem; padding: 1rem 1.125rem; border: 1px solid var(--line); border-radius: var(--r-ctrl); background: var(--bg); transition: border-color .25s, background .25s; }
+@media(hover:hover) { .start-option:hover { border-color: rgba(177,95,44,.5); background: rgba(177,95,44,.03); } }
+.start-option strong { font-weight: 600; }
+.start-option span { font-size: .85rem; color: rgba(17,17,17,.6); line-height: 1.5; }
+.start-option em { font-style: normal; font-size: .8rem; font-weight: 500; color: var(--accent); margin-top: .25rem; }
+.start-contact { margin-top: 1.25rem; font-size: .85rem; color: rgba(17,17,17,.6); }

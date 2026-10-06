@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { api } from '../api'
+import { playExclusive, stopCurrent } from '../audio'
 
 export const SPARK = <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg>
 
@@ -50,7 +51,7 @@ function Listen({ personaId, text, standIn }) {
       const audio = new Audio(url)
       audioRef.current = audio
       audio.onended = audio.onpause = () => { URL.revokeObjectURL(url); setState('idle') }
-      await audio.play()
+      await playExclusive(audio, () => setState('idle'))
       setState('playing')
     } catch (e) { setState('idle'); setError(e.message) }
   }
@@ -74,6 +75,7 @@ function ReadAloud({ text }) {
   const toggle = () => {
     window.speechSynthesis.cancel()
     if (speaking) { setSpeaking(false); return }
+    stopCurrent()  // never talk over a Listen clip
     const utterance = new SpeechSynthesisUtterance(text)
     utterance.onend = utterance.onerror = () => setSpeaking(false)
     setSpeaking(true)
@@ -192,7 +194,10 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
       )}
       <div className="demo-chat-footer">
         <input className="demo-chat-input" value={input} maxLength={1000} onChange={e => setInput(e.target.value)}
-          onKeyDown={e => e.key === 'Enter' && send(input)} placeholder={`Ask ${persona.name.split(' ')[0]} anything...`} />
+          onKeyDown={e => {
+            // Enter while an IME (Hindi, Gujarati, Japanese...) is composing picks a word; don't send half of it
+            if (e.key === 'Enter' && !e.nativeEvent.isComposing && e.keyCode !== 229) send(input)
+          }} placeholder={`Ask ${persona.name.split(' ')[0]} anything...`} />
         <button className="demo-send-btn" disabled={!input.trim() || typing} onClick={() => send(input)} aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
       </div>
     </div>

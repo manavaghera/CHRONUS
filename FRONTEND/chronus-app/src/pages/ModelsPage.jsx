@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useState } from 'react'
 import { api } from '../api'
 import { navigate } from '../router'
-import { SPARK } from '../components/ChatPanel'
+import { Emblem } from '../components/Emblems'
+import '../components/gallery.css'
 
 // Famous-figure models from the CHRONUS report (section 6.9). Ones the
 // backend has built (CHRONUS/figures/build_figures.py) are listed as live
@@ -24,7 +25,7 @@ function ModelCard({ persona, onDelete }) {
   return (
     <article className="model-card">
       <div className="model-card-top">
-        <div className="demo-avatar">{SPARK}</div>
+        <div className="model-emblem"><Emblem id={persona.id} name={persona.name} /></div>
         <span className={`model-status model-status--${ready ? 'ready' : 'draft'}`}>{ready ? 'Ready' : 'Draft'}</span>
       </div>
       <h3>{persona.name}</h3>
@@ -95,7 +96,7 @@ export default function ModelsPage() {
         <div className="model-grid">
           {planned.map(([name, note]) => (
             <article key={name} className="model-card model-card--planned">
-              <div className="model-card-top"><div className="demo-avatar">{SPARK}</div><span className="model-status">Planned</span></div>
+              <div className="model-card-top"><div className="model-emblem"><Emblem id="" name={name} /></div><span className="model-status">Planned</span></div>
               <h3>{name}</h3>
               <p>{note}</p>
             </article>

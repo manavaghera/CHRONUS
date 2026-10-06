@@ -14,7 +14,9 @@ import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import NavMenu from './components/NavMenu'
 import RequestModal from './components/RequestModal'
+import LoginGate from './components/LoginGate'
 import TrainYourModel from './components/TrainYourModel'
+import ModelGallery from './components/ModelGallery'
 import ModelsPage from './pages/ModelsPage'
 import ChatPage from './pages/ChatPage'
 import CreatePage from './pages/CreatePage'
@@ -102,9 +104,10 @@ function App() {
         {page === 'clone-voice' && <CloneVoicePage />}
         {!PAGES.has(page) && page !== 'chat' && (
           <>
-            <Hero scrollToId={scrollToId} openModal={openModal} />
+            <Hero scrollToId={scrollToId} />
             <Marquee />
             <LiveDemo />
+            <ModelGallery />
             <WhySection />
             <Band />
             <TrainYourModel />
@@ -115,9 +118,10 @@ function App() {
           </>
         )}
       </main>
-      <Footer openModal={openModal} />
+      <Footer />
       <NavMenu open={navOpen} onClose={closeNav} onNav={handleNav} onCta={() => { closeNav(); setTimeout(openModal, 200) }} />
       <RequestModal open={modalOpen} onClose={closeModal} />
+      <LoginGate />
     </>
   )
 }

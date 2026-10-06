@@ -1,262 +1,138 @@
-import { useState } from 'react'
-import { api } from '../api'
+import { navigate } from '../router'
 import useScrollReveal from './useScrollReveal'
+import './train.css'
 
-function VoiceCloningSimulator() {
-  const [inputText, setInputText] = useState('');
-  const [isProcessing, setIsProcessing] = useState(false);
-  const [processStep, setProcessStep] = useState(0);
-  const [audioUrl, setAudioUrl] = useState(null);
-  const [error, setError] = useState('');
+// The real "Create your model" flow (pages/CreatePage.jsx), each step shown
+// with an illustrated mockup of its screen. The mockups are plain HTML, so
+// they always render, and they only show what the product actually does.
 
-  const processSteps = [
-    "Analyzing phonetic patterns...",
-    "Extracting acoustic features...",
-    "Synthesizing voice...",
-    "Finalizing audio output..."
-  ];
+const Check = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12l5 5L20 7" /></svg>
+const Doc = () => <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><path d="M14 2v6h6M8 13h8M8 17h5" /></svg>
 
-  const handleClone = async () => {
-    if (!inputText) return;
-    setIsProcessing(true);
-    setAudioUrl(null);
-    setError('');
-
-    // Fake process to look cool
-    for (let i = 0; i < processSteps.length; i++) {
-      setProcessStep(i);
-      await new Promise(r => setTimeout(r, 800)); // wait 0.8s per step
-    }
-
-    try {
-      const url = await api.demoVoice(inputText);
-      setAudioUrl(url);
-    } catch (e) {
-      setError(e.message || "Failed to clone voice via API.");
-    }
-
-    setIsProcessing(false);
-  };
-
+function ConsentMock() {
   return (
-    <div className="voice-clone-demo" style={{ marginTop: '4rem', padding: '2rem', background: 'rgba(255,255,255,0.05)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.1)' }}>
-      <h3 style={{ marginBottom: '1rem', color: '#fff' }}>Test Your FishAudio Key (Voice Cloning Simulator)</h3>
-      <p style={{ marginBottom: '1.5rem', color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
-        Since you just added your FishAudio API key, you can test the integration here. Type any custom text below, and watch the synthesis process.
-      </p>
-      
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem' }}>
-        <input 
-          type="text" 
-          value={inputText} 
-          onChange={e => setInputText(e.target.value)} 
-          placeholder="Type custom text for output..." 
-          style={{ flex: 1, padding: '0.75rem', borderRadius: '6px', border: '1px solid rgba(255,255,255,0.2)', background: 'rgba(0,0,0,0.2)', color: '#fff' }}
-          disabled={isProcessing}
-        />
-        <button 
-          onClick={handleClone} 
-          disabled={isProcessing || !inputText.trim()}
-          className="pill-btn pill-btn--accent"
-          style={{ cursor: isProcessing || !inputText.trim() ? 'not-allowed' : 'pointer' }}
-        >
-          <span className="pill-inner">{isProcessing ? 'Processing...' : 'Clone Voice'}</span>
-        </button>
+    <div className="mock mock-consent">
+      <div className="mock-bar"><span /><span /><span /><em>Create a model</em></div>
+      <div className="mock-field"><label>Name</label><div>Kamla Patel</div></div>
+      <div className="mock-field"><label>Your relationship</label><div>Family ▾</div></div>
+      <div className="mock-check is-on"><span><Check /></span>I am this person, or I have their permission (or their estate's) to build this model from their words.</div>
+      <div className="mock-row">
+        <div className="mock-toggle"><span />Cloud AI voice <b>off</b></div>
+        <div className="mock-stamp">Consent recorded · 14:02</div>
       </div>
-
-      {isProcessing && (
-        <div style={{ padding: '1rem', background: 'rgba(0,0,0,0.3)', borderRadius: '6px', color: '#00d2ff', fontSize: '0.9rem', fontFamily: 'monospace' }}>
-          {'>'} {processSteps[processStep]}
-          <span className="cursor-blink">_</span>
-        </div>
-      )}
-
-      {error && (
-        <div style={{ padding: '1rem', background: 'rgba(255,50,50,0.1)', border: '1px solid rgba(255,50,50,0.3)', borderRadius: '6px', color: '#ff6b6b' }}>
-          {error}
-        </div>
-      )}
-
-      {audioUrl && !isProcessing && (
-        <div style={{ marginTop: '1.5rem', animation: 'fadeIn 0.5s ease-in' }}>
-          <p style={{ marginBottom: '0.5rem', color: '#00d2ff', fontSize: '0.9rem' }}>Synthesis Complete!</p>
-          <audio controls src={audioUrl} autoPlay style={{ width: '100%' }} />
-        </div>
-      )}
     </div>
   )
 }
 
-const steps = [
+function UploadMock() {
+  const files = [
+    ['letters_to_ravi.docx', 'their words', 42],
+    ['diary_1987.pdf', 'their words', 118],
+    ['school_newsletter.txt', 'about them', 9],
+  ]
+  return (
+    <div className="mock mock-upload">
+      <div className="mock-bar"><span /><span /><span /><em>Documents</em></div>
+      <div className="mock-drop">Drop files · .txt .md .pdf .docx .csv .json</div>
+      <ul className="mock-files">
+        {files.map(([name, who, n], i) => (
+          <li key={name} style={{ animationDelay: `${i * 0.15}s` }}>
+            <span className="mock-file-icon"><Doc /></span>
+            <span className="mock-file-name">{name}</span>
+            <span className={`mock-tag${who === 'about them' ? ' mock-tag--muted' : ''}`}>{who}</span>
+            <span className="mock-count">{n} memories</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function InterviewMock() {
+  const dims = [['Personality', 4, 4], ['Core memories', 3, 4], ['Relationships', 2, 4], ['Passions', 1, 4], ['Beliefs & values', 0, 4], ['Voice', 0, 5]]
+  return (
+    <div className="mock mock-interview">
+      <div className="mock-bar"><span /><span /><span /><em>Interview · 10 of 25</em></div>
+      <div className="mock-question">
+        <span className="mock-qid">Q5</span>
+        What experience or period in your life most fundamentally shaped who you are today?
+        <div className="mock-answer">The monsoon of 1987, when the river flooded the village and we carried the goats up to the temple steps…</div>
+        <div className="mock-origin">Answered by: <b>family</b></div>
+      </div>
+      <ul className="mock-dims">
+        {dims.map(([d, done, total]) => (
+          <li key={d}><span>{d}</span><i><b style={{ width: `${(done / total) * 100}%` }} /></i></li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function ChatMock() {
+  return (
+    <div className="mock mock-chat">
+      <div className="mock-bar"><span /><span /><span /><em>Chat · Kamla Patel</em></div>
+      <div className="mock-bubble mock-bubble--you">What was your favourite birthday?</div>
+      <div className="mock-bubble mock-bubble--them">In my own words: “My favourite birthday was my eighteenth. My father bought me a blue Hero bicycle…”</div>
+      <div className="mock-sources">
+        <div><span className="mock-tag">own words</span>letters_to_ravi.docx<em>match 81%</em></div>
+        <div><span className="mock-tag">own words</span>Interview · Q5<em>match 64%</em></div>
+      </div>
+      <div className="mock-listen">
+        <span className="mock-play">▶</span>
+        <span className="mock-wave">{Array.from({ length: 28 }, (_, i) => <i key={i} style={{ height: `${25 + Math.abs(Math.sin(i * 1.7)) * 75}%` }} />)}</span>
+        <span className="mock-voice">consented voice</span>
+      </div>
+    </div>
+  )
+}
+
+const STEPS = [
   {
-    num: '01',
-    label: 'Step One',
-    tag: 'DATA INGESTION',
-    title: 'Upload Everything You Know',
-    desc: 'Feed CHRONUS the full breadth of a person\'s knowledge — voice recordings, journals, research papers, emails, transcripts, handwritten notes, and more. The richer and more varied the input, the more nuanced and accurate the resulting intelligence.',
-    features: [
-      'Audio & video recordings in any format',
-      'PDFs, DOCX, TXT, and Markdown files',
-      'Structured data: notes, Q&A logs, annotations',
-      'Up to 10 GB on Pro — unlimited on Enterprise',
-    ],
-    images: [
-      { gradient: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)', icon: 'mountains' },
-      { gradient: 'linear-gradient(135deg, #ff6b6b 0%, #ee5a24 50%, #f39c12 100%)', icon: 'cubes' },
-    ],
+    num: '01', tag: 'CONSENT FIRST', title: 'Start with permission',
+    desc: "Name the person and your relationship to them, and confirm you have their consent (or their estate's). The consent is recorded with the model. Nothing leaves your computer unless you turn the cloud AI voice on.",
+    features: ['Consent statement saved with a timestamp', 'Private by default: models live on your machine', 'Delete everything, vectors and files, in one click'],
+    Mock: ConsentMock,
   },
   {
-    num: '02',
-    label: 'Step Two',
-    tag: 'SEMANTIC ENGINE',
-    title: 'Process & Structure Your Knowledge',
-    desc: 'CHRONUS parses every piece of content, extracting meaning, building a semantic knowledge graph, and mapping the unique way this mind connects ideas. It doesn\'t just index words — it understands the reasoning patterns behind them.',
-    features: [
-      'Automatic entity & concept extraction',
-      'Cross-document relationship mapping',
-      'Temporal context & memory sequencing',
-      'Contradiction detection & resolution',
-    ],
-    images: [
-      { gradient: 'linear-gradient(135deg, #0c0c1d 0%, #1a1a3e 50%, #2d2d5e 100%)', icon: 'chart' },
-      { gradient: 'linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3a7bd5 100%)', icon: 'code' },
-    ],
+    num: '02', tag: 'THEIR OWN WORDS', title: 'Add letters, journals and transcripts',
+    desc: 'Upload what they wrote or said. Each file is split into short memories and embedded for search. Mark whether a file is in their own words or written about them, so a biography is never quoted as something they said.',
+    features: ['.txt, .md, .pdf, .docx, .csv and .json, up to 10 MB each', 'Re-uploading a file replaces its old memories', 'Every memory keeps its source file and page'],
+    Mock: UploadMock,
   },
   {
-    num: '03',
-    label: 'Step Three',
-    tag: 'MODEL TRAINING',
-    title: 'Build the Personal Intelligence Model',
-    desc: 'Using the processed knowledge graph, CHRONUS fine-tunes a dedicated model that reflects this specific mind — not a generic language model, but one that reasons, prioritizes, and responds the way this person actually would. Training completes in hours, not weeks.',
-    features: [
-      'Private fine-tuning on isolated infrastructure',
-      'Iterative refinement with feedback loops',
-      'Personality & reasoning style calibration',
-      'Real-time training progress dashboard',
-    ],
-    images: [
-      { gradient: 'linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%)', icon: 'brain' },
-      { gradient: 'linear-gradient(135deg, #2d1b4e 0%, #4a2c7a 50%, #6b3fa0 100%)', icon: 'network' },
-    ],
+    num: '03', tag: 'GUIDED INTERVIEW', title: 'Fill the gaps with 25 questions',
+    desc: 'A structured interview across six dimensions, from personality to how they talk, captures what documents miss. Answers can come from the person or from family and friends, and the model always says who answered.',
+    features: ['6 dimensions: personality, memories, relationships, passions, values, voice', 'Answering again replaces the earlier answer', 'Built once there are at least 10 memories'],
+    Mock: InterviewMock,
   },
   {
-    num: '04',
-    label: 'Step Four',
-    tag: 'DEPLOYMENT',
-    title: 'Chat, Query & Hear Your Model',
-    desc: 'Your intelligence is live. Ask it anything — in text or voice. Receive answers grounded in its actual knowledge, in the tone and manner of the real person. Embed it in your products via API, share it selectively, or keep it entirely private.',
-    features: [
-      'Text & voice response modes',
-      'REST API with full SDK support',
-      'Granular sharing & access controls',
-      'Continuous improvement from interactions',
-    ],
-    images: [
-      { gradient: 'linear-gradient(135deg, #1a1a2e 0%, #2d2d44 50%, #3d3d5c 100%)', icon: 'chat' },
-      { gradient: 'linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #4a6785 100%)', icon: 'wave' },
-    ],
+    num: '04', tag: 'TALK & VERIFY', title: 'Ask, check the source, listen',
+    desc: "Answers are built from the closest memories, quoted or carefully tidied, with every source and its match strength one click away. If nothing in the archive fits, it says “I don't know” instead of guessing.",
+    features: ['Verbatim quotes mode, or an AI voice grounded in the quotes', 'Listen in their consented voice (optional)', 'Low-confidence answers are labelled as such'],
+    Mock: ChatMock,
   },
 ]
 
-function ImagePlaceholder({ gradient, icon }) {
-  return (
-    <div className="train-step-image" style={{ background: gradient }}>
-      <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity="0.3">
-        {icon === 'mountains' && (
-          <>
-            <path d="M0 50 L25 20 L50 45 L75 15 L100 50 Z" fill="rgba(255,255,255,0.2)" />
-            <path d="M0 55 L30 30 L60 50 L90 25 L100 55 Z" fill="rgba(255,255,255,0.15)" />
-          </>
-        )}
-        {icon === 'cubes' && (
-          <>
-            <rect x="20" y="20" width="25" height="25" rx="3" fill="rgba(255,100,100,0.4)" />
-            <rect x="55" y="15" width="30" height="30" rx="3" fill="rgba(255,200,50,0.3)" />
-            <circle cx="70" cy="45" r="12" fill="rgba(0,200,100,0.3)" />
-          </>
-        )}
-        {icon === 'chart' && (
-          <>
-            <rect x="15" y="35" width="12" height="20" fill="rgba(0,150,255,0.4)" />
-            <rect x="32" y="25" width="12" height="30" fill="rgba(0,200,150,0.4)" />
-            <rect x="49" y="15" width="12" height="40" fill="rgba(0,255,200,0.4)" />
-            <rect x="66" y="20" width="12" height="35" fill="rgba(100,200,255,0.4)" />
-            <path d="M15 30 L35 20 L55 10 L75 15" stroke="rgba(255,255,255,0.5)" strokeWidth="2" fill="none" />
-          </>
-        )}
-        {icon === 'code' && (
-          <>
-            <text x="15" y="25" fill="rgba(0,200,150,0.5)" fontSize="8" fontFamily="monospace">{'{'}</text>
-            <text x="25" y="35" fill="rgba(0,150,255,0.5)" fontSize="8" fontFamily="monospace">data:</text>
-            <text x="25" y="45" fill="rgba(255,200,100,0.5)" fontSize="8" fontFamily="monospace">process()</text>
-            <text x="70" y="25" fill="rgba(0,200,150,0.5)" fontSize="8" fontFamily="monospace">{'}'}</text>
-          </>
-        )}
-        {icon === 'brain' && (
-          <>
-            <circle cx="50" cy="30" r="20" fill="rgba(150,100,200,0.3)" />
-            <path d="M35 30 Q50 10 65 30 Q50 50 35 30" fill="rgba(200,150,255,0.2)" />
-            <circle cx="40" cy="25" r="4" fill="rgba(255,200,100,0.4)" />
-            <circle cx="60" cy="25" r="4" fill="rgba(100,255,200,0.4)" />
-            <circle cx="50" cy="35" r="4" fill="rgba(100,200,255,0.4)" />
-          </>
-        )}
-        {icon === 'network' && (
-          <>
-            <circle cx="50" cy="30" r="8" fill="rgba(100,200,255,0.4)" />
-            <circle cx="25" cy="20" r="5" fill="rgba(255,150,100,0.4)" />
-            <circle cx="75" cy="20" r="5" fill="rgba(150,255,150,0.4)" />
-            <circle cx="30" cy="45" r="5" fill="rgba(255,200,100,0.4)" />
-            <circle cx="70" cy="45" r="5" fill="rgba(200,150,255,0.4)" />
-            <line x1="50" y1="30" x2="25" y2="20" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-            <line x1="50" y1="30" x2="75" y2="20" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-            <line x1="50" y1="30" x2="30" y2="45" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-            <line x1="50" y1="30" x2="70" y2="45" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-          </>
-        )}
-        {icon === 'chat' && (
-          <>
-            <rect x="15" y="15" width="35" height="25" rx="5" fill="rgba(100,200,255,0.3)" />
-            <rect x="50" y="20" width="35" height="25" rx="5" fill="rgba(150,255,200,0.3)" />
-            <path d="M25 45 L25 55 L35 45" fill="rgba(100,200,255,0.3)" />
-          </>
-        )}
-        {icon === 'wave' && (
-          <>
-            <path d="M0 30 Q25 10 50 30 Q75 50 100 30" stroke="rgba(100,200,255,0.4)" strokeWidth="3" fill="none" />
-            <path d="M0 35 Q25 15 50 35 Q75 55 100 35" stroke="rgba(150,255,200,0.3)" strokeWidth="2" fill="none" />
-            <path d="M0 40 Q25 20 50 40 Q75 60 100 40" stroke="rgba(200,150,255,0.2)" strokeWidth="2" fill="none" />
-          </>
-        )}
-      </svg>
-    </div>
-  )
-}
-
 function Step({ step, index }) {
   const [ref, inView] = useScrollReveal(0.2)
-
+  const { Mock } = step
   return (
-    <div ref={ref} className={`train-step ${inView ? 'in-view' : ''}`} style={{ transitionDelay: `${index * 100}ms` }}>
+    <div ref={ref} className={`train-step ${inView ? 'in-view' : ''}`} style={{ transitionDelay: `${index * 80}ms` }}>
       <div className="train-step-left">
         <div className="train-step-num">{step.num}</div>
-        <div className="train-step-label">{step.label}</div>
         <div className="train-step-line" />
       </div>
-      <div className="train-step-card">
-        <div className="train-step-tag">{step.tag}</div>
-        <h3>{step.title}</h3>
-        <p>{step.desc}</p>
-        <ul className="train-step-features">
-          {step.features.map((f, i) => (
-            <li key={i}>{f}</li>
-          ))}
-        </ul>
-        <div className="train-step-images">
-          {step.images.map((img, i) => (
-            <ImagePlaceholder key={i} gradient={img.gradient} icon={img.icon} />
-          ))}
+      <div className={`train-step-card${index % 2 ? ' is-flipped' : ''}`}>
+        <div className="train-step-text">
+          <div className="train-step-tag">{step.tag}</div>
+          <h3>{step.title}</h3>
+          <p>{step.desc}</p>
+          <ul className="train-step-features">
+            {step.features.map(f => <li key={f}>{f}</li>)}
+          </ul>
         </div>
+        <div className="train-step-visual"><Mock /></div>
       </div>
     </div>
   )
@@ -264,21 +140,27 @@ function Step({ step, index }) {
 
 export default function TrainYourModel() {
   const [hRef, hIn] = useScrollReveal()
-
   return (
     <section className="train-section" id="train">
       <div className="shell train-inner">
         <div ref={hRef} className={`train-header sr ${hIn ? 'in-view' : ''}`}>
-          <div className="eyebrow eyebrow--dark">TRAIN YOUR MODEL</div>
-          <h2 className="train-h2">Build your own intelligence</h2>
-          <p className="train-sub">Four steps to create a personal AI that thinks, speaks, and reasons exactly like you.</p>
+          <div className="eyebrow eyebrow--dark">CREATE YOUR MODEL</div>
+          <h2 className="train-h2">Preserve someone's words</h2>
+          <p className="train-sub">Four steps, all in your browser, to a model that answers only from what they actually said.</p>
         </div>
         <div className="train-timeline">
-          {steps.map((step, i) => (
-            <Step key={i} step={step} index={i} />
-          ))}
+          {STEPS.map((step, i) => <Step key={step.num} step={step} index={i} />)}
         </div>
-        <VoiceCloningSimulator />
+        <div className="train-cta">
+          <div>
+            <h3>Ready when you are.</h3>
+            <p>Start a model now, or try the voice sandbox to hear how a consented voice clone sounds first.</p>
+          </div>
+          <div className="train-cta-actions">
+            <button className="pill-btn pill-btn--dark" onClick={() => navigate('/create')}><span className="pill-inner">Create a model</span></button>
+            <button className="pill-btn pill-btn--outline" onClick={() => navigate('/clone-voice')}><span className="pill-inner">Open the voice sandbox</span></button>
+          </div>
+        </div>
       </div>
     </section>
   )

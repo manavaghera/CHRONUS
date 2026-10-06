@@ -10,7 +10,7 @@ export default function WhySection() {
             <div className="why-big-text" ref={ref}>
               {['Personal archives', 'disappear with', 'the person.'].map((line, li) => (
                 <span className="line-clip" key={li}><span>
-                  {line.split(' ').map((w, wi) => <span key={wi} className={`char-reveal ${inView?'in-view':''}`} style={{transitionDelay:(li*2+wi)*80+'ms'}}>{w}{' '}</span>)}
+                  {line.split(' ').map((w, wi) => <span key={wi}><span className={`char-reveal ${inView?'in-view':''}`} style={{transitionDelay:(li*2+wi)*80+'ms'}}>{w}</span>{' '}</span>)}
                 </span></span>
               ))}
             </div>

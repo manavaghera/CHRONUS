@@ -1,0 +1,25 @@
+/* ---- Pretrained model gallery (ModelGallery.jsx) ---- */
+.gallery-section { position: relative; z-index: 10; background: var(--bg); }
+.gallery-inner { padding-block: 5rem; }
+@media(min-width:1024px) { .gallery-inner { padding-block: 7rem; } }
+.gallery-header { display: grid; gap: 1.25rem; margin-bottom: 2.5rem; align-items: end; }
+@media(min-width:900px) { .gallery-header { grid-template-columns: 1.2fr 1fr; gap: 3rem; } }
+.gallery-h2 { margin-top: 1rem; font-size: clamp(2rem, 4.5vw, 3.25rem); font-weight: 600; letter-spacing: -.03em; line-height: 1.05; }
+.gallery-header p { color: rgba(17,17,17,.6); line-height: 1.6; }
+.gallery-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15.5rem), 1fr)); }
+.gallery-card { text-align: left; display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--r-card-sm); overflow: hidden; background: var(--bg); opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease-smooth), transform .6s var(--ease-smooth), border-color .3s, box-shadow .3s; }
+.gallery-card.in-view { opacity: 1; transform: none; }
+@media(hover:hover) { .gallery-card:hover { border-color: rgba(177,95,44,.5); box-shadow: 0 22px 44px -26px rgba(97,52,20,.45); } .gallery-card:hover .gallery-emblem { transform: scale(1.06) rotate(-2deg); } }
+.gallery-art { position: relative; aspect-ratio: 4/3; display: grid; place-items: center; overflow: hidden; }
+.gallery-art::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.12) 1px, transparent 1px); background-size: 12px 12px; mask-image: radial-gradient(circle at 50% 50%, #000, transparent 75%); }
+.gallery-art::after { content: ''; position: absolute; width: 70%; aspect-ratio: 1; border-radius: 50%; border: 1px solid rgba(255,255,255,.14); box-shadow: 0 0 0 18px rgba(255,255,255,.03), 0 0 0 40px rgba(255,255,255,.02); }
+.gallery-emblem { position: relative; z-index: 1; width: 42%; aspect-ratio: 1; color: #f3c9a3; filter: drop-shadow(0 6px 18px rgba(0,0,0,.35)); transition: transform .5s var(--ease-spring); }
+.gallery-count { position: absolute; z-index: 1; left: .75rem; bottom: .75rem; font-size: .65rem; font-weight: 600; letter-spacing: .03em; color: rgba(255,255,255,.85); background: rgba(0,0,0,.28); padding: .2rem .55rem; border-radius: var(--r-pill); backdrop-filter: blur(4px); }
+.gallery-text { padding: 1.125rem 1.25rem 1.25rem; display: flex; flex-direction: column; gap: .4rem; flex: 1; }
+.gallery-text h3 { font-size: 1.125rem; font-weight: 600; letter-spacing: -.01em; }
+.gallery-text p { font-size: .82rem; line-height: 1.5; color: rgba(17,17,17,.58); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.gallery-cta { margin-top: auto; padding-top: .5rem; font-size: .8rem; font-weight: 500; color: var(--accent); }
+.gallery-more { margin-top: 2rem; display: flex; justify-content: center; }
+
+/* Emblem avatars on the Models page */
+.model-emblem { width: 2.75rem; height: 2.75rem; padding: .45rem; border-radius: var(--r-ctrl); background: var(--ink); color: var(--accent-from); display: grid; place-items: center; }

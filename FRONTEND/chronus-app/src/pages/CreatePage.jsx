@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { api, MAX_UPLOAD_MB, UPLOAD_ACCEPT } from '../api'
 import { navigate } from '../router'
+import { toWav } from '../audio'
 
 const RELATIONSHIPS = [['self', 'This is me'], ['family', 'Family member'], ['friend', 'Friend'], ['colleague', 'Colleague'], ['other', 'Other']]
 const ANSWERERS = [['self', 'The person themselves'], ['family', 'Family'], ['friend', 'A friend'], ['colleague', 'A colleague']]
@@ -179,7 +180,7 @@ function VoiceStep({ persona, onChange }) {
     e.target.value = ''
     if (!file) return
     setBusy(true); setError('')
-    try { onChange(await api.addVoice(persona.id, file)) } catch (err) { setError(err.message) } finally { setBusy(false) }
+    try { onChange(await api.addVoice(persona.id, await toWav(file))) } catch (err) { setError(err.message) } finally { setBusy(false) }
   }
   const remove = async () => {
     setBusy(true); setError('')
@@ -189,7 +190,7 @@ function VoiceStep({ persona, onChange }) {
   return (
     <section className="create-card">
       <h2 className="page-h2">5. Voice <span className="create-count">optional</span></h2>
-      <p className="page-note">A clear 6-60 second .wav recording of {persona.name} speaking lets answers be read aloud in their voice. Fish Audio (a cloud service) turns it into a private voice; removing the voice, or the model, deletes it there and here.</p>
+      <p className="page-note">A clear 6-60 second recording (any audio format) of {persona.name} speaking lets answers be read aloud in their voice. Fish Audio (a cloud service) turns it into a private voice; removing the voice, or the model, deletes it there and here.</p>
       {persona.voice ? (
         <div className="create-upload-row">
           <span className="model-status model-status--ready">Voice added · {persona.voice.seconds} s · {persona.voice.provider}</span>
@@ -209,8 +210,8 @@ function VoiceStep({ persona, onChange }) {
             <span><strong>Cloud processing.</strong> I agree that the recording, and the text of each answer I play, is sent to Fish Audio to make and use the voice.</span>
           </label>
           <label className={`pill-btn pill-btn--dark create-file${canUpload ? '' : ' is-disabled'}`}>
-            <span className="pill-inner">{busy ? 'Making voice…' : 'Choose .wav recording'}</span>
-            <input type="file" accept=".wav,audio/wav" disabled={!canUpload || busy} onChange={upload} />
+            <span className="pill-inner">{busy ? 'Making voice…' : 'Choose a recording'}</span>
+            <input type="file" accept="audio/*,.wav,.mp3,.m4a" disabled={!canUpload || busy} onChange={upload} />
           </label>
         </>
       )}
