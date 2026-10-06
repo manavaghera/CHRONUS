@@ -136,7 +136,18 @@ def _generate_backup_codes() -> list[str]:
 
 
 def _hash_backup_code(code: str) -> str:
-    return hashlib.sha256(code.encode("utf-8")).hexdigest()
+    return _hash_password(code)
+
+
+def _consume_backup_code(user: dict, code: str) -> bool:
+    normalized = code.strip().upper()
+    codes = list(user.get("backup_code_hashes", []))
+    for idx, stored in enumerate(codes):
+        if _verify_password(normalized, stored):
+            del codes[idx]
+            user["backup_code_hashes"] = codes
+            return True
+    return False
 
 
 _users = {
@@ -256,12 +267,9 @@ def login(username: str, password: str, client_id: str, otp_code: str | None = N
                 retry_after = _register_failure(username, client_id)
                 return LoginResult(ok=False, message="Invalid one-time code.", retry_after=retry_after)
         elif backup_code:
-            code_hash = _hash_backup_code(backup_code.strip().upper())
-            codes = user.get("backup_code_hashes", [])
-            if code_hash not in codes:
+            if not _consume_backup_code(user, backup_code):
                 retry_after = _register_failure(username, client_id)
                 return LoginResult(ok=False, message="Invalid backup code.", retry_after=retry_after)
-            user["backup_code_hashes"] = [c for c in codes if c != code_hash]
         else:
             return LoginResult(ok=False, message="MFA required: provide otp_code or backup_code.")
 
