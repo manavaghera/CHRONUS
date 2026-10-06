@@ -1,6 +1,15 @@
 """
-Shared fixtures. Tests run against the real api_server module and the real
-ChromaDB with every LLM call mocked, so they cost no API quota.
+Shared fixtures. Tests run against the real api_server module with every
+LLM call mocked, so they cost no API quota.
+
+Two setups, picked automatically:
+* full: the real embedding model and Elon's real collection (chroma_db/)
+  are available. Everything runs.
+* sample: a fresh clone or CI, where chroma_db/ (gitignored) is missing or
+  the model can't be downloaded. A throwaway database and a deterministic
+  word-hash embedder (services/embedder.py HashEmbedder) are used, and tests
+  marked `corpus` (they need real embeddings on Elon's archive) are skipped.
+  Force it with CHRONUS_TEST_SAMPLE=1.
 
 They must never change real data: `guard_real_data` fails the run if Elon's
 collection size changes or a test persona is left behind (an earlier ad-hoc
@@ -9,6 +18,7 @@ check once deleted a real interview answer).
 
 import os
 import sys
+import tempfile
 from pathlib import Path
 from unittest import mock
 
@@ -19,20 +29,54 @@ ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "06-Testing"))
 os.chdir(ROOT)
+os.environ.setdefault("CHRONUS_RATE_LIMIT", "0")  # tests send many requests a minute
 
 TEST_PERSONA_PREFIX = "pytest "  # names of personas created by tests
 
 
+def _full_setup_available() -> bool:
+    if os.getenv("CHRONUS_TEST_SAMPLE") == "1":
+        return False
+    try:
+        import sentence_transformers  # noqa: F401
+        import chromadb
+        from config import config
+        return chromadb.PersistentClient(path=config.CHROMA_PATH).get_collection(config.COLLECTION_NAME).count() > 0
+    except Exception:
+        return False
+
+
+FULL = _full_setup_available()
+if not FULL:
+    os.environ["CHRONUS_CHROMA_PATH"] = tempfile.mkdtemp(prefix="chronus_test_db_")
+
+
+def pytest_configure(config):
+    config.addinivalue_line("markers", "corpus: needs the real embedding model and Elon's full collection")
+
+
+def pytest_collection_modifyitems(config, items):
+    if FULL:
+        return
+    skip = pytest.mark.skip(reason="needs the real embedding model + chroma_db (sample setup; see tests/conftest.py)")
+    for item in items:
+        if "corpus" in item.keywords:
+            item.add_marker(skip)
+
+
 @pytest.fixture(scope="session")
 def srv():
-    import api_server  # loads ChromaDB + the embedding model once per run
+    import api_server  # connects to ChromaDB once per run; the embedder loads on first use
+    if not FULL:
+        from services.embedder import HashEmbedder
+        api_server.embedder._model = HashEmbedder()
     return api_server
 
 
 @pytest.fixture(scope="session")
 def client(srv):
     from fastapi.testclient import TestClient
-    return TestClient(srv.app)
+    return TestClient(srv.app, base_url="http://localhost")  # an allowed host (config.ALLOWED_HOSTS)
 
 
 @pytest.fixture(autouse=True)

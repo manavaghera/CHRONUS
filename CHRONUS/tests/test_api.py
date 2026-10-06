@@ -65,12 +65,14 @@ def test_root_serves_the_react_site(srv, client):
 
 # ---- Phase 6 regression (originally 06-Testing/_phase6_tests.py) ----
 
+@pytest.mark.corpus
 def test_6_1_high_confidence_query(client):
     d = _chat(client, "What is the goal of SpaceX?")
     assert not d["fallback"] and d["confidence"] == "high" and d["sources"]
     assert 0 < d["faithfulness"] <= 1
 
 
+@pytest.mark.corpus
 def test_6_2_unanswerable_question_falls_back(client):
     # Calibrated threshold (config.DISTANCE_THRESHOLD). The original pizza
     # question sits in the grey zone (0.51; he tweets about food) and is
@@ -89,6 +91,7 @@ def test_6_3_theme_classification(question, theme):
     assert classify_theme(question)["theme"] == theme
 
 
+@pytest.mark.corpus
 def test_6_4_quote_is_verbatim_from_its_source(srv, client):
     d = _chat(client, "What do you think about artificial intelligence?")
     source = d["sources"][0]
@@ -100,6 +103,7 @@ def test_6_4_quote_is_verbatim_from_its_source(srv, client):
     assert quote and norm(quote) in norm(full)
 
 
+@pytest.mark.corpus
 def test_6_6_interview_answers_are_retrievable_and_labelled(client):
     d = _chat(client, "How would you describe your personality?")
     interview = [s for s in d["sources"] if s["source_type"] == "interview_protocol"]

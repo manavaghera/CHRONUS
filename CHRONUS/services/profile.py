@@ -142,11 +142,36 @@ def _sentence(key: str, value: str) -> str:
     return value if key in _SENTENCE_KEYS or value.endswith(".") else f"{value}."
 
 
+# Clause boundaries for questions that ask several things at once
+_CLAUSE_SPLIT = re.compile(r"[?!;.]+|,|\s+\b(?:and|also|plus|but|then)\b\s+")
+
+
+def remaining_question(query: str) -> str:
+    """The part of *query* that isn't a profile question, or "".
+
+    "When were you born and why did you start SpaceX?" -> "why did you start
+    SpaceX". Clauses with fewer than two content words ("and where?") belong
+    to the profile question before them.
+    """
+    from services.provenance import content_words
+
+    rest = []
+    for clause in _CLAUSE_SPLIT.split(query.lower().replace("’", "'")):
+        clause = clause.strip()
+        if not clause or any(re.search(p, clause) for p in BASIC_INFO_PATTERNS):
+            continue
+        if len(content_words(clause)) >= 2:
+            rest.append(clause)
+    return " ".join(rest)
+
+
 def check_basic_info(query: str, persona: str) -> dict | None:
     """Answer simple profile questions directly, or None to use retrieval.
 
     Answers every profile question asked at once: "Which year were you born,
-    and where?" gets both the year and the place.
+    and where?" gets both the year and the place. When the query also asks
+    something else ("...and why did you start SpaceX?"), that part is
+    returned as "remainder" for the caller to answer from memory.
     """
     profile = get_profile(persona)
     if not profile:
@@ -178,7 +203,7 @@ def check_basic_info(query: str, persona: str) -> dict | None:
             "quote": "", "distance": None,
         })
     return {"response": " ".join(answers), "sources": sources, "confidence": "high", "fallback": False,
-            "mode": "basic_info"}
+            "mode": "basic_info", "remainder": remaining_question(query)}
 
 
 def profile_context_block(persona: str = "elon_musk") -> str:

@@ -86,11 +86,14 @@ class ChronusConfig:
     LLM_CONTEXT_WINDOW: int = 8192
 
     # === LLM PROVIDER ===
-    LLM_PROVIDER: str = "openrouter"  # "local" (on-device, services/local_llm.py), "ollama", or "openai"-compatible ("openrouter")
+    LLM_PROVIDER: str = field(default_factory=lambda: os.getenv("CHRONUS_LLM_PROVIDER", "openrouter"))
+    """"local" (on-device, services/local_llm.py), "ollama", or an OpenAI-compatible
+    API ("openrouter", "openai"). Set CHRONUS_LLM_PROVIDER in .env to switch."""
     OPENAI_API_KEY: str = field(default_factory=lambda: os.getenv("OPENAI_API_KEY", ""))
     """API key for the OpenAI-compatible provider (also used for OpenRouter).
     Read from the OPENAI_API_KEY env var or CHRONUS/.env (gitignored)."""
-    OPENAI_MODEL: str = "nvidia/nemotron-3-super-120b-a12b:free"
+    OPENAI_MODEL: str = field(default_factory=lambda: os.getenv(
+        "CHRONUS_OPENAI_MODEL", "nvidia/nemotron-3-super-120b-a12b:free"))
     """Primary model. ":free" models work on a key with no purchased credits.
     "openrouter/auto" needs credits (HTTP 402 otherwise), and "openrouter/free"
     can route to non-chat models (e.g. a safety classifier), so pin one."""
@@ -101,7 +104,8 @@ class ChronusConfig:
     ])
     """OpenRouter tries these in order when the primary errors or is
     rate-limited (free models return 429 under load)."""
-    OPENAI_BASE_URL: str = "https://openrouter.ai/api/v1"
+    OPENAI_BASE_URL: str = field(default_factory=lambda: os.getenv(
+        "CHRONUS_OPENAI_BASE_URL", "https://openrouter.ai/api/v1"))
     """OpenAI-compatible endpoint. For OpenRouter: https://openrouter.ai/api/v1"""
 
     # === LOCAL LLM (LLM_PROVIDER = "local") ===
@@ -124,8 +128,10 @@ class ChronusConfig:
     (paid, about $15 per 12 hours of speech)."""
 
     # === STORAGE ===
-    CHROMA_PATH: str = field(default_factory=lambda: str(Path(__file__).parent / "chroma_db"))
-    """Path to ChromaDB persistent storage."""
+    CHROMA_PATH: str = field(default_factory=lambda: os.getenv(
+        "CHRONUS_CHROMA_PATH", str(Path(__file__).parent / "chroma_db")))
+    """Path to ChromaDB persistent storage (CHRONUS_CHROMA_PATH overrides; the
+    tests use a throwaway one when the real corpus isn't available)."""
 
     COLLECTION_NAME: str = "elon_musk"
     """Default ChromaDB collection name."""
@@ -137,23 +143,23 @@ class ChronusConfig:
     """Directory containing interview protocol and other data."""
 
     # === SERVER ===
-    HOST: str = "127.0.0.1"
-    """Server bind address (localhost only — no auth on endpoints)."""
+    HOST: str = field(default_factory=lambda: os.getenv("CHRONUS_HOST", "127.0.0.1"))
+    """Server bind address. Loopback by default: anything else exposes the
+    server to the network, so set CHRONUS_ACCESS_CODE too (see below)."""
 
-    PORT: int = 8001
-    """Server port."""
+    PORT: int = field(default_factory=lambda: int(os.getenv("CHRONUS_PORT", "8001")))
+    """Server port (the website's dev proxy expects 8001)."""
 
-    # === VOICE (Optional) ===
-    VOICE_ENGINE: str = "xtts"
-    """Voice synthesis engine: 'xtts' (local) or 'elevenlabs' (cloud)."""
+    ALLOWED_HOSTS: list[str] = field(default_factory=lambda: [
+        h.strip() for h in os.getenv("CHRONUS_ALLOWED_HOSTS", "localhost,127.0.0.1,::1").split(",") if h.strip()
+    ])
+    """Host names the server answers to. Anything else is refused, which stops
+    DNS rebinding (a website pointing its own domain at 127.0.0.1 to read
+    this server). Add your LAN name or domain here if you host it."""
 
-    SPEAKER_WAV_PATH: str = field(default_factory=lambda: str(
-        Path(__file__).parent / "07-Voice" / "reference_elon.wav"
-    ))
-    """Path to reference speaker audio for voice cloning."""
-
-    ELEVENLABS_API_KEY: str = field(default_factory=lambda: os.getenv("ELEVENLABS_API_KEY", ""))
-    """API key for ElevenLabs cloud TTS (set via ELEVENLABS_API_KEY env var)."""
+    ACCESS_CODE: str = field(default_factory=lambda: os.getenv("CHRONUS_ACCESS_CODE", ""))
+    """Optional passcode for the whole API (services/access.py). Empty = no
+    login, fine on loopback; set it before exposing the server anywhere."""
 
     # === PERSONA DEFAULTS ===
     DEFAULT_PERSONA: str = "elon_musk"

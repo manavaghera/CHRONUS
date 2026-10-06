@@ -32,6 +32,7 @@ def test_ted_talks_are_interviews(units):
     assert {u["source_type"] for u in units if u["source_file"].upper().startswith("TED")} == {"interview"}
 
 
+@pytest.mark.corpus
 def test_collection_matches_pipeline_output(srv, units):
     interview = srv.collection.get(where={"source_type": "interview_protocol"}, include=["metadatas"])["metadatas"]
     assert srv.collection.count() == len(units) + len(interview)

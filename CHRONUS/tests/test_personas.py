@@ -46,6 +46,7 @@ def persona(client):
     assert ps.load_persona(pid) is None and not (ps.CUSTOM_DIR / pid).exists()
 
 
+@pytest.mark.corpus
 def test_elon_is_listed_as_ready(client):
     elon = next(p for p in client.get("/personas").json() if p["id"] == "elon_musk")
     assert elon["kind"] == "pretrained" and elon["status"] == "ready" and elon["memories"] > 16000
@@ -98,6 +99,7 @@ def test_interview_answers_replace_not_duplicate(client, persona):
     assert client.get(f"/personas/{persona}").json()["memories"] == count
 
 
+@pytest.mark.corpus
 def test_build_then_chat_from_her_own_memories(srv, client, persona):
     assert client.post(f"/personas/{persona}/build").json()["status"] == "ready"
     d = client.post("/chat", json={"query": "What was your favourite birthday?", "persona": persona, "mode": "natural"}).json()

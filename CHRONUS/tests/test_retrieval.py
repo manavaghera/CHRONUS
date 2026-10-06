@@ -3,27 +3,32 @@
 import pytest
 
 
+@pytest.mark.corpus
 def test_short_tweets_skipped_when_better_evidence_exists(srv):
     # "Why Mars?" used to return "Mars is The New World" (5 words)
     memories = srv.retrieve("Why Mars?")
     assert all(len(doc.split()) >= srv.config.MIN_EVIDENCE_WORDS for _, doc, _, _ in memories)
 
 
+@pytest.mark.corpus
 @pytest.mark.parametrize("question", ["What is the goal of SpaceX?", "Why did you buy Twitter?", "Tell me about your childhood"])
 def test_supporting_memories_are_close_to_the_best(srv, question):
     dists = [m[3] for m in srv.retrieve(question)]
     assert max(dists) - min(dists) <= srv.config.SUPPORT_MARGIN
 
 
+@pytest.mark.corpus
 def test_no_duplicate_texts(srv):
     docs = [" ".join(doc.lower().split()) for _, doc, _, _ in srv.retrieve("What is the goal of SpaceX?")]
     assert len(docs) == len(set(docs))
 
 
+@pytest.mark.corpus
 def test_clearly_unanswerable_question_returns_none(srv):
     assert srv.retrieve("How do I descale a kettle?") is None
 
 
+@pytest.mark.corpus
 def test_where_filter_holds_a_source_out(srv):
     held_out = srv.retrieve("What is the goal of SpaceX?", where={"source_file": {"$ne": "Joe Rogan podcast clean.md"}})
     assert all(m[2]["source_file"] != "Joe Rogan podcast clean.md" for m in held_out)

@@ -296,13 +296,17 @@ def build_persona(collection, persona: dict) -> dict:
 
 
 def delete_custom_persona(client, persona: dict) -> None:
-    """Permanently delete a custom persona: vectors, uploads and record."""
+    """Permanently delete a custom persona: vectors, uploads, record, and its
+    questions and answers in the Q&A log (they quote its private memories)."""
+    from services import qa_log
+
     if persona.get("kind") != "custom":
         raise PermissionError("Only custom models can be deleted")
     try:
         client.delete_collection(persona["collection"])
     except Exception:
         pass  # never had any memories
+    qa_log.purge(persona["id"])
     folder = (CUSTOM_DIR / persona["id"]).resolve()
     if folder.parent == CUSTOM_DIR.resolve() and folder.exists():
         shutil.rmtree(folder)
