@@ -35,6 +35,7 @@ from services import (
     jobs,
     memory_routes,
     roundtable,
+    security_headers,
     stt,
     timeline,
     translate,
@@ -813,6 +814,9 @@ async def revalidate_html(request, call_next):
         response.headers["Cache-Control"] = "no-cache"
     return response
 
+
+# Outermost middleware: every response, refusals included (services/security_headers.py)
+security_headers.install(app)
 
 if (SITE_DIR / "index.html").exists():
     app.mount("/", StaticFiles(directory=str(SITE_DIR), html=True), name="site")
