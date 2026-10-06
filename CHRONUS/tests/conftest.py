@@ -56,6 +56,7 @@ if not FULL:
 
 def pytest_configure(config):
     config.addinivalue_line("markers", "corpus: needs the real embedding model and Elon's full collection")
+    config.addinivalue_line("markers", "browser: drives the built website in Chromium (tests/test_browser_smoke.py)")
 
 
 def pytest_collection_modifyitems(config, items):

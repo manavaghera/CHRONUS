@@ -18,4 +18,6 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: { port: 3000, proxy: api },
   preview: { proxy: api },
+  // Unit tests (npm test): src/**/*.test.js(x), in a simulated browser
+  test: { environment: 'happy-dom', include: ['src/**/*.test.{js,jsx}'] },
 })
