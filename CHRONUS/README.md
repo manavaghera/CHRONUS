@@ -64,6 +64,7 @@ Settings live in `config.py`; override them in `CHRONUS/.env` (see
 | `CHRONUS_RETRIEVAL_MODE` | `dense` (default) or `hybrid` (semantic + BM25) |
 | `CHRONUS_LOG_RETENTION_DAYS` | Questions and feedback are deleted after this many days (default 90, `0` = keep) |
 | `CHRONUS_ANSWER_CACHE` | `0` turns off the answer cache |
+| `CHRONUS_SESSION_SECRET` + `CHRONUS_ADMIN_PASSWORD` | Turn on the admin/ops endpoints under `/ops` (audit log, MFA, log search and CSV export, timings; `services/ops.py`). Off without them; `CHRONUS_ANALYST_PASSWORD` adds a read-only analyst |
 
 The server binds 127.0.0.1 and only answers to allowed host names, refuses
 cross-site writes, and sends browser security headers (a content security

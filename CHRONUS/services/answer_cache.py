@@ -22,7 +22,7 @@ from collections import OrderedDict
 MAX_ENTRIES = 256
 TTL_SECONDS = 3600
 # Writes that don't change what a model knows
-_READ_LIKE = ("/chat", "/roundtable", "/feedback", "/speak", "/voice", "/transcribe", "/auth", "/jobs", "/history")
+_READ_LIKE = ("/chat", "/roundtable", "/feedback", "/speak", "/voice", "/transcribe", "/auth", "/jobs", "/history", "/ops")
 
 _lock = threading.Lock()
 _entries: OrderedDict = OrderedDict()

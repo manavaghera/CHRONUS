@@ -34,6 +34,7 @@ from services import (
     insights,
     jobs,
     memory_routes,
+    ops,
     roundtable,
     security_headers,
     stt,
@@ -358,8 +359,10 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
         era = f"{years[0] or 'the start'} to {years[1] or 'today'}"
     if length == "detailed":
         n_results = max(n_results, 4)  # room for a third supporting memory
+    started = time.perf_counter()
     memories = retrieve(retrieval_query(query, history), n_results, memory, where=where,
                         threshold=persona.get("distance_threshold"))
+    ops.record_timing("chat.retrieve", (time.perf_counter() - started) * 1000)
 
     # True uncertainty fallback: no memory passed the threshold, so there is
     # insufficient evidence. Answer without calling the LLM at all.
@@ -388,6 +391,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
         notice = ("AI voice is off for this model because it would send excerpts to a cloud AI service, "
                   "so these are verbatim quotes.")
 
+    started = time.perf_counter()
     if mode == "natural":
         result = generate_natural_response(
             query=query,
@@ -417,6 +421,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
         # Mix Method quotes evidence[0] (Part 1) + evidence[1:3] (Part 2), so
         # citations cover exactly the evidence used, in the same order.
         sources = [format_source_citation(meta, doc, dist) for _, doc, meta, dist in evidence]
+    ops.record_timing(f"chat.generate.{mode}", (time.perf_counter() - started) * 1000)
 
     if era:
         notice = (notice + " " if notice else "") + f"Time travel: only memories dated {era}."
@@ -787,6 +792,8 @@ app.include_router(roundtable.make_router(_load_ready_persona, lambda p: ps.get_
 app.include_router(insights.make_router(client, embedder))
 # Optional access code (CHRONUS_ACCESS_CODE)
 app.include_router(access.make_router(config))
+# Admin/ops: audit log, MFA, log search/export, timings (off unless configured)
+app.include_router(ops.make_router())
 
 
 # ---- The website (FRONTEND/chronus-app, built with `npm run build`) ----
@@ -808,10 +815,13 @@ async def forget_cached_answers(request, call_next):
 @app.middleware("http")
 async def revalidate_html(request, call_next):
     """Browsers must re-check index.html on every visit (assets have hashed
-    names and can be cached), so an old page is never shown after an update."""
+    names and can be cached), so an old page is never shown after an update.
+    Also times every request for the ops dashboard (services/ops.py)."""
+    started = time.perf_counter()
     response = await call_next(request)
     if response.headers.get("content-type", "").startswith("text/html"):
         response.headers["Cache-Control"] = "no-cache"
+    ops.record_timing(ops.route_metric(request), (time.perf_counter() - started) * 1000)
     return response
 
 
