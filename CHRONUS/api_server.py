@@ -12,6 +12,7 @@ import hashlib
 import json
 import logging
 import re
+import time
 from datetime import datetime
 from pathlib import Path
 from typing import Literal, Optional
@@ -24,7 +25,7 @@ import chromadb
 # sentence_transformers -> torch/sklearn/datasets. Pre-loading pyarrow.dataset
 # FIRST fixes the import order and avoids the crash.
 import pyarrow.dataset  # noqa: F401  (must be imported before sentence_transformers)
-from fastapi import FastAPI, HTTPException, Query, UploadFile, File
+from fastapi import FastAPI, HTTPException, Query, UploadFile, File, Request, Header, Depends
 from fastapi.responses import Response
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator
@@ -36,6 +37,7 @@ from services.natural_mode import generate_natural_response
 from services.provenance import anchor_first, content_words, format_source_citation, grounding_score
 from services import personas as ps
 from services import tts
+from services import access
 # Quick profile answers; re-exported for tests and evaluation scripts
 from services.profile import (BASIC_INFO_PATTERNS, BASIC_PROFILE, check_basic_info, get_profile,  # noqa: F401
                               profile_context_block)
@@ -166,6 +168,51 @@ class SpeakRequest(BaseModel):
     # Speak in this model's consented voice (services/personas.py); the client
     # no longer passes a file path
     persona: str = Field(pattern=ps.PERSONA_ID_PATTERN)
+
+
+class LoginRequest(BaseModel):
+    username: str = Field(min_length=1, max_length=64)
+    password: str = Field(min_length=1, max_length=200)
+    otp_code: Optional[str] = Field(default=None, min_length=6, max_length=8)
+    backup_code: Optional[str] = Field(default=None, min_length=8, max_length=32)
+
+
+class NotificationReadRequest(BaseModel):
+    ids: list[int] = Field(default_factory=list, max_length=500)
+
+
+class SearchPresetRequest(BaseModel):
+    name: str = Field(min_length=1, max_length=64)
+    filters: dict[str, str] = Field(default_factory=dict)
+
+
+def _bearer_token(authorization: str | None) -> str:
+    if not authorization or not authorization.lower().startswith("bearer "):
+        raise HTTPException(status_code=401, detail="Missing bearer token")
+    token = authorization.split(" ", 1)[1].strip()
+    if not token:
+        raise HTTPException(status_code=401, detail="Missing bearer token")
+    return token
+
+
+def current_user(authorization: str | None = Header(default=None)) -> dict:
+    token = _bearer_token(authorization)
+    try:
+        payload = access.parse_session(token)
+    except ValueError as e:
+        detail = str(e)
+        if "expired" in detail.lower():
+            detail = "Session expired. Please log in again."
+        raise HTTPException(status_code=401, detail=detail)
+    return {"username": payload["sub"], "role": payload["role"], "token": token}
+
+
+def require_permission(permission: str):
+    def _guard(user: dict = Depends(current_user)) -> dict:
+        if not access.has_permission(user["role"], permission):
+            raise HTTPException(status_code=403, detail=f"Missing permission: {permission}")
+        return user
+    return _guard
 
 
 # ---- Core functions ----
@@ -448,8 +495,14 @@ def chat(req: ChatRequest):
         )
 
     # 1. Retrieve memories (follow-ups borrow the previous question's topic)
-    memories = retrieve(retrieval_query(req.query, req.history), req.n_results, memory,
-                        threshold=persona.get("distance_threshold"))
+    retrieval_text = retrieval_query(req.query, req.history)
+    cache_key = f"retrieve:{persona['id']}:{req.n_results}:{retrieval_text}"
+    memories = access.cache_get(cache_key)
+    if memories is None:
+        t0 = time.perf_counter()
+        memories = retrieve(retrieval_text, req.n_results, memory, threshold=persona.get("distance_threshold"))
+        access.record_timing("chat.retrieve", (time.perf_counter() - t0) * 1000)
+        access.cache_set(cache_key, memories, ttl_seconds=20)
 
     # BUG 3 FIX: true uncertainty fallback — if retrieve() returned None, no
     # memory passed DISTANCE_THRESHOLD, so there is insufficient evidence.
@@ -488,6 +541,7 @@ def chat(req: ChatRequest):
         notice = "AI voice is off for this model because it would send excerpts to a cloud AI service, so these are verbatim quotes."
 
     if mode == "natural":
+        t_gen = time.perf_counter()
         result = generate_natural_response(
             query=req.query,
             memories=evidence,
@@ -499,8 +553,10 @@ def chat(req: ChatRequest):
             # The local LoRA adapter (lora/train_lora.py) was trained on Elon's words only
             use_adapter=persona["id"] == "elon_musk",
         )
+        access.record_timing("chat.generate.natural", (time.perf_counter() - t_gen) * 1000)
         sources = result["sources"]
     else:
+        t_gen = time.perf_counter()
         result = generate_mix_method_response(
             query=req.query,
             memories=evidence,  # (adjusted_dist, doc_text, metadata, raw_dist) tuples
@@ -508,6 +564,7 @@ def chat(req: ChatRequest):
             persona_name=persona["name"],
             include_sources=True,
         )
+        access.record_timing("chat.generate.mix_method", (time.perf_counter() - t_gen) * 1000)
         # Mix Method quotes evidence[0] (Part 1) + evidence[1:3] (Part 2), so
         # citations cover exactly the evidence used, in the same order.
         sources = [format_source_citation(meta, doc, dist) for _, doc, meta, dist in evidence]
@@ -548,6 +605,169 @@ async def stats():
         "llm_model": config.OPENAI_MODEL if uses_openai_api else config.LLM_MODEL,
         "embedding_model": config.EMBEDDING_MODEL,
     }
+
+
+# ---- Access control / operations ----
+@app.post("/auth/login")
+def auth_login(req: LoginRequest, request: Request):
+    client_id = request.client.host if request.client else "unknown"
+    result = access.login(req.username, req.password, client_id, otp_code=req.otp_code, backup_code=req.backup_code)
+    headers = {}
+    if result.retry_after:
+        headers["Retry-After"] = str(result.retry_after)
+    if not result.ok:
+        access.record_audit("auth.login", req.username, "denied", {"client_id": client_id, "message": result.message})
+        raise HTTPException(status_code=429 if result.retry_after else 401, detail=result.message, headers=headers)
+    access.record_audit("auth.login", req.username, "success", {"client_id": client_id})
+    access.create_notification(req.username, "Login successful", "You signed in to CHRONUS.", level="success")
+    return {"access_token": result.token, "token_type": "bearer", "expires_at": result.expires_at, "user": result.user}
+
+
+@app.post("/auth/logout")
+def auth_logout(user: dict = Depends(current_user)):
+    access.revoke_session(user["token"])
+    access.record_audit("auth.logout", user["username"], "success", {})
+    access.create_notification(user["username"], "Logged out", "Your session was invalidated.", level="info")
+    return {"success": True}
+
+
+@app.get("/auth/me")
+def auth_me(user: dict = Depends(current_user)):
+    status = access.mfa_status(user["username"])
+    return {"username": user["username"], "role": user["role"], "mfa": status}
+
+
+@app.post("/auth/mfa/enable")
+def auth_enable_mfa(user: dict = Depends(require_permission("auth.mfa.manage"))):
+    setup = access.enable_mfa(user["username"])
+    access.record_audit("auth.mfa.enable", user["username"], "success", {})
+    access.create_notification(user["username"], "MFA enabled", "Two-factor authentication is now active.", level="warning")
+    return setup
+
+
+@app.post("/auth/mfa/disable")
+def auth_disable_mfa(user: dict = Depends(require_permission("auth.mfa.manage"))):
+    access.disable_mfa(user["username"])
+    access.record_audit("auth.mfa.disable", user["username"], "success", {})
+    access.create_notification(user["username"], "MFA disabled", "Two-factor authentication was turned off.", level="warning")
+    return {"success": True}
+
+
+@app.get("/notifications")
+def notifications(unread_only: bool = False, limit: int = Query(default=100, ge=1, le=500),
+                  user: dict = Depends(require_permission("notifications.read"))):
+    rows = access.list_notifications(user["username"], unread_only=unread_only, limit=limit)
+    return {"items": rows, "count": len(rows)}
+
+
+@app.post("/notifications/read")
+def notifications_read(req: NotificationReadRequest, user: dict = Depends(require_permission("notifications.write"))):
+    ids = req.ids or None
+    count = access.mark_notifications_read(user["username"], ids=ids)
+    access.record_audit("notifications.read", user["username"], "success", {"count": count, "bulk": ids is None})
+    return {"updated": count}
+
+
+@app.get("/audit")
+def get_audit(limit: int = Query(default=100, ge=1, le=500), action: str | None = None, actor: str | None = None,
+              user: dict = Depends(require_permission("audit.read"))):
+    rows = access.iter_audit(limit=limit, action=action, actor=actor)
+    access.record_audit("audit.read", user["username"], "success", {"limit": limit})
+    return {"items": rows, "count": len(rows)}
+
+
+@app.get("/search/logs")
+def search_logs(query: str | None = None, persona: str | None = None, mode: str | None = None,
+                confidence: str | None = None, preset: str | None = None,
+                limit: int = Query(default=100, ge=1, le=1000),
+                user: dict = Depends(require_permission("search.logs.read"))):
+    filters = {"query": query or "", "persona": persona or "", "mode": mode or "", "confidence": confidence or ""}
+    if preset:
+        preset_filters = access.list_search_presets(user["username"]).get(preset)
+        if not preset_filters:
+            raise HTTPException(status_code=404, detail=f"Unknown preset '{preset}'")
+        filters = preset_filters
+    cache_key = f"search:{user['username']}:{json.dumps(filters, sort_keys=True)}:{limit}"
+    cached = access.cache_get(cache_key)
+    if cached is not None:
+        rows = cached
+    else:
+        t0 = time.perf_counter()
+        rows = access.search_qa_logs(filters=filters, limit=limit)
+        access.record_timing("search.logs", (time.perf_counter() - t0) * 1000)
+        access.cache_set(cache_key, rows, ttl_seconds=20)
+    access.record_audit("search.logs", user["username"], "success", {"filters": filters, "limit": limit})
+    return {"items": rows, "count": len(rows), "filters": filters}
+
+
+@app.post("/search/presets")
+def save_search_preset(req: SearchPresetRequest, user: dict = Depends(require_permission("search.presets.write"))):
+    access.save_search_preset(user["username"], req.name, req.filters)
+    access.record_audit("search.presets.write", user["username"], "success", {"name": req.name})
+    return {"success": True}
+
+
+@app.get("/search/presets")
+def search_presets(user: dict = Depends(require_permission("search.presets.read"))):
+    return {"presets": access.list_search_presets(user["username"])}
+
+
+@app.post("/bulk/export/logs")
+def bulk_export_logs(query: str | None = None, persona: str | None = None, mode: str | None = None,
+                     confidence: str | None = None, limit: int = Query(default=200, ge=1, le=5000),
+                     user: dict = Depends(require_permission("bulk.logs.export"))):
+    filters = {"query": query or "", "persona": persona or "", "mode": mode or "", "confidence": confidence or ""}
+    rows = access.search_qa_logs(filters=filters, limit=limit)
+    csv_text = access.qa_logs_to_csv(rows)
+    access.record_audit("bulk.logs.export", user["username"], "success", {"rows": len(rows), "filters": filters})
+    return Response(content=csv_text, media_type="text/csv", headers={"Content-Disposition": "attachment; filename=qa_logs.csv"})
+
+
+@app.get("/analytics/dashboard")
+def analytics_dashboard(user: dict = Depends(require_permission("analytics.read"))):
+    timings = access.timing_summary()
+    cache = access.cache_stats()
+    recent_qas = access.search_qa_logs(filters={}, limit=200)
+    by_mode: dict[str, int] = {}
+    by_confidence: dict[str, int] = {}
+    for row in recent_qas:
+        by_mode[row.get("mode", "unknown")] = by_mode.get(row.get("mode", "unknown"), 0) + 1
+        by_confidence[row.get("confidence", "unknown")] = by_confidence.get(row.get("confidence", "unknown"), 0) + 1
+    return {
+        "qa_total": len(recent_qas),
+        "qa_by_mode": by_mode,
+        "qa_by_confidence": by_confidence,
+        "performance": timings,
+        "cache": cache,
+        "generated_at": datetime.now().isoformat(),
+    }
+
+
+@app.get("/analytics/dashboard.csv")
+def analytics_dashboard_csv(user: dict = Depends(require_permission("analytics.read"))):
+    data = analytics_dashboard(user)
+    rows = [
+        {"metric": "qa_total", "value": str(data["qa_total"])},
+        {"metric": "cache_entries", "value": str(data["cache"]["entries"])},
+    ]
+    for key, value in data["qa_by_mode"].items():
+        rows.append({"metric": f"qa_mode_{key}", "value": str(value)})
+    for key, value in data["qa_by_confidence"].items():
+        rows.append({"metric": f"qa_confidence_{key}", "value": str(value)})
+    for metric, detail in data["performance"].items():
+        rows.append({"metric": f"{metric}_avg_ms", "value": str(detail["avg_ms"])})
+        rows.append({"metric": f"{metric}_p95_ms", "value": str(detail["p95_ms"])})
+
+    import io
+    import csv as _csv
+
+    buf = io.StringIO()
+    writer = _csv.DictWriter(buf, fieldnames=["metric", "value"])
+    writer.writeheader()
+    writer.writerows(rows)
+    access.record_audit("analytics.download", user["username"], "success", {"rows": len(rows)})
+    return Response(content=buf.getvalue(), media_type="text/csv",
+                    headers={"Content-Disposition": "attachment; filename=dashboard.csv"})
 
 
 # ---- Voice endpoints (services/tts.py) ----
@@ -748,9 +968,12 @@ async def revalidate_html(request, call_next):
     """Browsers must re-check index.html on every visit (assets have hashed
     names and can be cached): otherwise a browser that saw the old single-page
     UI kept showing it after the switch to the React site."""
+    start = time.perf_counter()
     response = await call_next(request)
     if response.headers.get("content-type", "").startswith("text/html"):
         response.headers["Cache-Control"] = "no-cache"
+    duration_ms = (time.perf_counter() - start) * 1000
+    access.record_timing(f"http.{request.method}:{request.url.path}", duration_ms)
     return response
 
 
