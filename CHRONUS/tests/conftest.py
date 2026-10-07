@@ -41,6 +41,7 @@ def _full_setup_available() -> bool:
         return False
     try:
         import chromadb
+        import pyarrow.dataset  # noqa: F401  (Windows: torch, via sentence_transformers, crashes if loaded first)
         import sentence_transformers  # noqa: F401
 
         from config import config

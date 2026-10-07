@@ -99,14 +99,26 @@ def test_interview_answers_replace_not_duplicate(client, persona):
     assert client.get(f"/personas/{persona}").json()["memories"] == count
 
 
+DIARY = """The school got its first computer in 1998, and I stayed late every evening to learn it before the children did.
+
+Every Diwali I made besan laddoos for the whole street, and the neighbours' children queued at our gate.
+
+Your grandfather and I walked to the lake every Sunday morning; he named every bird, and I named every tree.
+
+The proudest day of my life was when my first student became a doctor and came back to teach at our school."""
+
+
 @pytest.mark.corpus
 def test_build_then_chat_from_her_own_memories(srv, client, persona):
+    # escape.txt repeats the letter, so it adds nothing (duplicates are skipped); the diary is new material
+    r = client.post(f"/personas/{persona}/documents", json={"filename": "diary.txt", "content_base64": b64(DIARY)})
+    assert r.status_code == 200 and r.json()["upload"]["duplicates_skipped"] == 0
     assert client.post(f"/personas/{persona}/build").json()["status"] == "ready"
     d = client.post("/chat", json={"query": "What was your favourite birthday?", "persona": persona, "mode": "natural"}).json()
     assert "bicycle" in d["answer"].lower()
     assert d["mode"] == "mix_method" and "cloud" in d["notice"]  # AI voice needs the creator's opt-in
     assert d["sources"][0]["voice"] == "first_person" and d["answer"].startswith("In my own words:")
-    assert all(s["source_file"] in ("letter.txt", "escape.txt", "notes.docx", "interview_protocol") for s in d["sources"])
+    assert all(s["source_file"] in ("letter.txt", "escape.txt", "notes.docx", "diary.txt", "interview_protocol") for s in d["sources"])
     assert "First principles" not in d["answer"]  # no Elon-style sign-off
 
 
