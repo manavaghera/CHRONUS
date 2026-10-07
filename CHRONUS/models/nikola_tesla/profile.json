@@ -4,8 +4,14 @@
   "wikidata": "Q9036",
   "url": "https://www.wikidata.org/wiki/Q9036",
   "license": "CC0 1.0 (public domain)",
-  "retrieved": "2026-10-07",
-  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "retrieved": "2026-10-08",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected or added by hand (figures/profile_overrides.json).",
+  "living": false,
+  "birth_date": null,
+  "aliases": [
+    "Nicola Tesla",
+    "Tesla"
+  ],
   "facts": {
     "Born": "10 July 1856, Smiljan (then in the Austrian Empire, today Croatia)",
     "Died": "7 January 1943, New York City, United States",
@@ -16,6 +22,10 @@
     "Occupation": "inventor, electrical engineer, physicist and electrician",
     "Citizenship": "born in the Austrian Empire; American citizen from 1891",
     "Awards": "Elliott Cresson Medal (1894), Edison Medal (1916), John Scott Medal (1934)",
+    "Religion": "raised Serbian Orthodox; my father was a priest",
+    "Languages": "English, French, German, Czech and Hungarian",
+    "Cause of death": "myocardial infarction",
+    "Resting place": "ashes in a gilded sphere at the Nikola Tesla Museum, Belgrade",
     "Spouse": "never married",
     "Known for": "the alternating current induction motor, the AC power system, the Tesla coil"
   },
@@ -28,11 +38,17 @@
     "father": "My father was Milutin Tesla.",
     "mother": "My mother was Đuka Mandic.",
     "siblings": "I had four siblings: my brother Dane and my sisters Milka, Angelina and Marica.",
+    "family": "My family on public record: my parents Milutin Tesla, an Orthodox priest, and Đuka Mandić, and 4 siblings. I never married and had no children.",
     "education": "I studied at the gymnasium in Karlovac, then at the Polytechnic in Graz, and briefly at Charles University in Prague.",
     "occupation": "I was an inventor, electrical engineer, physicist and electrician.",
     "nationality": "I was born in the Austrian Empire and became an American citizen in 1891.",
     "awards": "My honours included the Elliott Cresson Medal in 1894, the Edison Medal in 1916 and the John Scott Medal in 1934.",
+    "religion": "I was raised in the Serbian Orthodox Church; my father was a priest.",
+    "languages": "I spoke English, French, German, Czech and Hungarian.",
+    "cause_of_death": "I died of heart failure, alone in my room at the Hotel New Yorker.",
+    "burial": "My ashes are kept in a gilded sphere at the Nikola Tesla Museum in Belgrade.",
     "spouse": "I never married.",
-    "notable_works": "I'm best known for the alternating current induction motor, the AC power system and the Tesla coil."
+    "notable_works": "I'm best known for the alternating current induction motor, the AC power system and the Tesla coil.",
+    "children": "I never had children."
   }
 }

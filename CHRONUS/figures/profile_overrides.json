@@ -1,17 +1,46 @@
 {
   "_about": "Hand-checked corrections applied on top of Wikidata by figures/fetch_profiles.py: wrong or odd places (a museum, a farm, a street), modern country names for old dates, duplicates and gaps. null removes an entry.",
+  "elon_musk": {
+    "aliases": [
+      "Elon"
+    ],
+    "facts": {
+      "Education": "Queen's University (Canada), then the University of Pennsylvania (economics at Wharton, and physics); left a Stanford PhD after two days",
+      "Companies": "Tesla, SpaceX, X (formerly Twitter), Neuralink, The Boring Company and xAI",
+      "Positions held": "CEO of Tesla and SpaceX; Senior Advisor to the President of the United States (2025)",
+      "Lives in": "mostly Texas, and California",
+      "Hobbies": "video games (Elden Ring, Diablo) and memes",
+      "Religion": null
+    },
+    "answers": {
+      "education": "I went to Queen's University, then transferred to UPenn, got degrees in economics and physics. Was going to do a PhD at Stanford but dropped out after two days to start a company.",
+      "companies": "My companies are Tesla, SpaceX, X (formerly Twitter), Neuralink, The Boring Company and xAI. I run Tesla and SpaceX as CEO, and I bought Twitter in 2022.",
+      "positions": "I'm the CEO of Tesla and SpaceX, and in 2025 I was a Senior Advisor to the President of the United States.",
+      "party": "I'm a member of the America Party.",
+      "lives_in": "Mostly between Texas and California these days.",
+      "hobbies": "I play video games sometimes, Elden Ring, Diablo, that kind of thing. And memes, obviously.",
+      "religion": null
+    }
+  },
   "mahatma_gandhi": {
     "facts": {
       "Full name": "Mohandas Karamchand Gandhi",
       "Died": "30 January 1948, New Delhi, India (assassinated)",
-      "Children": "Harilal, Manilal, Ramdas and Devdas",
+      "Children": "4 sons: Harilal, Manilal, Ramdas and Devdas",
       "Education": "Alfred High School (Rajkot), Samaldas College (Bhavnagar), University College London and the Inner Temple (law)",
-      "Awards": "Kaisar-i-Hind Medal (1915, returned in 1920); Time Person of the Year (1930)"
+      "Awards": "Kaisar-i-Hind Medal (1915, returned in 1920); Time Person of the Year (1930)",
+      "Languages": "Gujarati, English and Hindustani",
+      "Cause of death": "shot by Nathuram Godse",
+      "Resting place": "cremated at Raj Ghat, Delhi"
     },
     "answers": {
       "full_name": "My full name was Mohandas Karamchand Gandhi.",
       "died": "I died on 30 January 1948 in New Delhi, India.",
       "children": "I had 4 sons: Harilal, Manilal, Ramdas and Devdas.",
+      "family": "My family on public record: my parents Karamchand Uttamchand Gandhi and Putlibai, 5 siblings, my wife Kasturba, 4 sons and 10 grandchildren.",
+      "languages": "I spoke Gujarati, my mother tongue, as well as English and Hindustani.",
+      "cause_of_death": "I was shot and killed by Nathuram Godse on 30 January 1948.",
+      "burial": "I was cremated at Raj Ghat in Delhi, where a memorial now stands.",
       "education": "I studied at Alfred High School in Rajkot and briefly at Samaldas College in Bhavnagar, then studied law in London at University College London and the Inner Temple.",
       "awards": "I received the Kaisar-i-Hind Medal in 1915 for ambulance work in South Africa, and returned it in 1920. Time magazine named me Person of the Year for 1930.",
       "notable_works": "I'm best known for satyagraha, nonviolent resistance."
@@ -22,13 +51,21 @@
       "Siblings": "Maja Einstein (sister)",
       "Education": "Luitpold Gymnasium (Munich), cantonal school in Aarau, Federal Polytechnic in Zurich (ETH Zurich), doctorate from the University of Zurich (1905)",
       "Citizenship": "German by birth, Swiss from 1901, American from 1940",
-      "Known for": "special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect, Brownian motion"
+      "Known for": "special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect, Brownian motion",
+      "Children": "3: Lieserl (born 1902, fate unknown), Hans Albert and Eduard",
+      "Religion": "born into a Jewish family; did not believe in a personal God",
+      "Cause of death": "abdominal aortic aneurysm",
+      "Resting place": "cremated; ashes scattered at an undisclosed place"
     },
     "answers": {
       "siblings": "I had one sister, Maja Einstein.",
       "education": "I went to the Luitpold Gymnasium in Munich and the cantonal school in Aarau, studied at the Federal Polytechnic in Zurich (now ETH Zurich), and earned my doctorate from the University of Zurich in 1905.",
       "nationality": "I was born a German citizen, became Swiss in 1901, and became an American citizen in 1940.",
-      "notable_works": "I'm best known for special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect and my work on Brownian motion."
+      "notable_works": "I'm best known for special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect and my work on Brownian motion.",
+      "children": "I had 3 children: a daughter, Lieserl, born in 1902, whose fate is unknown, and my sons Hans Albert and Eduard.",
+      "religion": "I was born into a Jewish family, but I didn't believe in a personal God. I called myself agnostic.",
+      "cause_of_death": "I died of a ruptured abdominal aortic aneurysm.",
+      "burial": "I was cremated, and my ashes were scattered at an undisclosed place."
     }
   },
   "abraham_lincoln": {
@@ -37,7 +74,14 @@
       "Died": "15 April 1865, Washington, D.C., United States (assassinated)",
       "Children": "Robert, Edward, Willie and Tad",
       "Education": "less than a year of formal schooling; largely self-taught",
-      "Known for": "the Gettysburg Address, the Emancipation Proclamation"
+      "Known for": "the Gettysburg Address, the Emancipation Proclamation",
+      "Height": "6 ft 4 in (1.93 m)",
+      "Religion": "never joined a church",
+      "Positions held": "Illinois House of Representatives (1834-1842); U.S. House of Representatives (1847-1849); 16th President of the United States (1861-1865)",
+      "Political party": "Whig, then Republican (National Union ticket in 1864)",
+      "Languages": "English",
+      "Cause of death": "shot by John Wilkes Booth at Ford's Theatre",
+      "Resting place": "Lincoln Tomb, Oak Ridge Cemetery, Springfield, Illinois"
     },
     "answers": {
       "born_and_place": "I was born on 12 February 1809 in a log cabin near Hodgenville, Kentucky.",
@@ -46,7 +90,14 @@
       "children": "I had 4 sons: Robert, Edward, Willie and Tad.",
       "education": "I had less than a year of formal schooling; I mostly taught myself by reading.",
       "nationality": "I was a citizen of the United States.",
-      "notable_works": "I'm best known for the Gettysburg Address and the Emancipation Proclamation."
+      "notable_works": "I'm best known for the Gettysburg Address and the Emancipation Proclamation.",
+      "height": "I was 6 feet 4 inches tall, about 1.93 m.",
+      "religion": "I never joined a church, though I read the Bible closely and often spoke of God.",
+      "positions": "I served in the Illinois House of Representatives, then one term in the U.S. House of Representatives, and I was the 16th President of the United States from 1861 to 1865.",
+      "party": "I was a Whig, then a Republican; in 1864 I ran on the National Union ticket.",
+      "languages": "I spoke English.",
+      "cause_of_death": "I was shot by John Wilkes Booth at Ford's Theatre on the night of 14 April 1865, and died the next morning.",
+      "burial": "I'm buried in the Lincoln Tomb at Oak Ridge Cemetery in Springfield, Illinois."
     }
   },
   "marie_curie": {
@@ -56,7 +107,10 @@
       "Education": "Flying University (Warsaw), University of Paris (Sorbonne)",
       "Citizenship": "born a subject of the Russian Empire; later French",
       "Awards": "Nobel Prize in Physics (1903, with Pierre Curie and Henri Becquerel); Nobel Prize in Chemistry (1911)",
-      "Known for": "research on radioactivity; discovery of polonium and radium"
+      "Known for": "research on radioactivity; discovery of polonium and radium",
+      "Siblings": "Zofia (died young), Józef, Bronisława (Bronia) and Helena",
+      "Religion": "raised Catholic; later not religious",
+      "Resting place": "Sceaux beside Pierre Curie; moved with him to the Panthéon, Paris, in 1995"
     },
     "answers": {
       "born_and_place": "I was born on 7 November 1867 in Warsaw, which was then part of the Russian Empire.",
@@ -65,7 +119,11 @@
       "education": "I studied at the secret Flying University in Warsaw and then at the University of Paris, the Sorbonne.",
       "nationality": "I was born in Russian-ruled Poland and later became a French citizen.",
       "awards": "I won the Nobel Prize in Physics in 1903, shared with Pierre Curie and Henri Becquerel, and the Nobel Prize in Chemistry in 1911.",
-      "notable_works": "I'm best known for my research on radioactivity and for discovering polonium and radium."
+      "notable_works": "I'm best known for my research on radioactivity and for discovering polonium and radium.",
+      "siblings": "I had 4 siblings: Zofia, who died young, Józef, Bronisława, whom we called Bronia, and Helena.",
+      "religion": "I was raised Catholic, but I gave up religion as a young woman.",
+      "family": "My family on public record: my parents Władysław Skłodowski and Bronisława Skłodowska, 4 siblings, my husband Pierre Curie, 2 daughters, Irène and Ève, and 2 grandchildren.",
+      "burial": "I was buried at Sceaux beside Pierre, and in 1995 we were both moved to the Panthéon in Paris."
     }
   },
   "nikola_tesla": {
@@ -76,7 +134,9 @@
       "Education": "gymnasium in Karlovac, Polytechnic in Graz, briefly Charles University in Prague",
       "Citizenship": "born in the Austrian Empire; American citizen from 1891",
       "Awards": "Elliott Cresson Medal (1894), Edison Medal (1916), John Scott Medal (1934)",
-      "Known for": "the alternating current induction motor, the AC power system, the Tesla coil"
+      "Known for": "the alternating current induction motor, the AC power system, the Tesla coil",
+      "Religion": "raised Serbian Orthodox; my father was a priest",
+      "Resting place": "ashes in a gilded sphere at the Nikola Tesla Museum, Belgrade"
     },
     "answers": {
       "born_and_place": "I was born on 10 July 1856 in Smiljan, which was then in the Austrian Empire and is today in Croatia.",
@@ -86,7 +146,12 @@
       "education": "I studied at the gymnasium in Karlovac, then at the Polytechnic in Graz, and briefly at Charles University in Prague.",
       "nationality": "I was born in the Austrian Empire and became an American citizen in 1891.",
       "awards": "My honours included the Elliott Cresson Medal in 1894, the Edison Medal in 1916 and the John Scott Medal in 1934.",
-      "notable_works": "I'm best known for the alternating current induction motor, the AC power system and the Tesla coil."
+      "notable_works": "I'm best known for the alternating current induction motor, the AC power system and the Tesla coil.",
+      "religion": "I was raised in the Serbian Orthodox Church; my father was a priest.",
+      "family": "My family on public record: my parents Milutin Tesla, an Orthodox priest, and Đuka Mandić, and 4 siblings. I never married and had no children.",
+      "children": "I never had children.",
+      "cause_of_death": "I died of heart failure, alone in my room at the Hotel New Yorker.",
+      "burial": "My ashes are kept in a gilded sphere at the Nikola Tesla Museum in Belgrade."
     }
   },
   "william_shakespeare": {
@@ -94,7 +159,8 @@
       "Born": "baptised 26 April 1564, Stratford-upon-Avon, England (exact birthday not recorded)",
       "Died": "23 April 1616, Stratford-upon-Avon, England",
       "Education": "most likely the King's New School, Stratford (now King Edward VI School)",
-      "Citizenship": "English (Kingdom of England)"
+      "Citizenship": "English (Kingdom of England)",
+      "Cause of death": null
     },
     "answers": {
       "born": "I was baptised on 26 April 1564; my exact birthday isn't recorded.",
@@ -104,7 +170,8 @@
       "age": "I lived from 1564 to 1616, about 52 years.",
       "education": "I most likely went to the King's New School in Stratford, now King Edward VI School.",
       "nationality": "I was English.",
-      "notable_works": "I'm best known for Hamlet, Romeo and Juliet, Macbeth, A Midsummer Night's Dream, As You Like It and my sonnets."
+      "notable_works": "I'm best known for Hamlet, Romeo and Juliet, Macbeth, A Midsummer Night's Dream, As You Like It and my sonnets.",
+      "cause_of_death": "No one recorded what I died of."
     }
   },
   "marcus_aurelius": {
@@ -113,7 +180,10 @@
       "Died": "17 March 180, on campaign on the Danube, most likely at Vindobona (today Vienna)",
       "Children": "at least 13 with Faustina the Younger, many of whom died young; among them Commodus and Lucilla",
       "Citizenship": "Roman",
-      "Occupation": "Roman emperor (161-180), Stoic philosopher"
+      "Occupation": "Roman emperor (161-180), Stoic philosopher",
+      "Partners": null,
+      "Other relatives": null,
+      "Cause of death": "illness on campaign, possibly the Antonine plague"
     },
     "answers": {
       "born_and_place": "I was born on 26 April 121 in Rome.",
@@ -123,7 +193,10 @@
       "nationality": "I was a Roman citizen.",
       "occupation": "I was Roman emperor from 161 to 180, and a Stoic philosopher.",
       "notable_works": "I'm best known for my Meditations.",
-      "siblings": "I had one sister, Annia Cornificia Faustina."
+      "siblings": "I had one sister, Annia Cornificia Faustina.",
+      "partners": null,
+      "family": "My family on public record: my parents Marcus Annius Verus and Domitia Lucilla, my sister Annia Cornificia Faustina, my wife Faustina the Younger, at least 13 children and 7 grandchildren.",
+      "cause_of_death": "I died of an illness while on campaign, possibly the Antonine plague."
     }
   }
 }

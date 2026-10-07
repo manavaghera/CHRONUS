@@ -65,7 +65,6 @@ from services.persona_routes import summarize as summarize_persona
 # Quick profile answers; re-exported for tests and evaluation scripts
 from services.profile import (  # noqa: F401
     BASIC_INFO_PATTERNS,
-    BASIC_PROFILE,
     check_basic_info,
     get_profile,
     profile_context_block,

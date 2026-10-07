@@ -4,8 +4,18 @@
   "wikidata": "Q1430",
   "url": "https://www.wikidata.org/wiki/Q1430",
   "license": "CC0 1.0 (public domain)",
-  "retrieved": "2026-10-07",
-  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "retrieved": "2026-10-08",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected or added by hand (figures/profile_overrides.json).",
+  "living": false,
+  "birth_date": null,
+  "aliases": [
+    "Antoninus",
+    "Marcus Annius Verus",
+    "Marcus Aurelius Antoninus",
+    "Marcus Aurelius Verus",
+    "Marcus Catilius Severus Annius Verus",
+    "Verissimus"
+  ],
   "facts": {
     "Born": "26 April 121, Rome",
     "Died": "17 March 180, on campaign on the Danube, most likely at Vindobona (today Vienna)",
@@ -14,9 +24,15 @@
     "Siblings": "Annia Cornificia Faustina",
     "Spouse": "Faustina the Younger",
     "Children": "at least 13 with Faustina the Younger, many of whom died young; among them Commodus and Lucilla",
+    "Grandchildren": "Tiberius Claudius Severus Proculus, Plautia Servilla, Aurelia Lucilla, Lucilla Plautia, Lucius Aurelius Verus, Lucius Aurellius Commodus Pompeianus and Petronius Antoninus",
     "Occupation": "Roman emperor (161-180), Stoic philosopher",
     "Citizenship": "Roman",
-    "Known for": "Meditations"
+    "Known for": "Meditations",
+    "Religion": "ancient Roman religion",
+    "Positions held": "Roman emperor, ancient Roman senator, Roman consul and quaestor",
+    "Languages": "Latin and Ancient Greek",
+    "Cause of death": "illness on campaign, possibly the Antonine plague",
+    "Resting place": "Castel Sant'Angelo"
   },
   "answers": {
     "born": "I was born on 26 April 121.",
@@ -29,8 +45,15 @@
     "siblings": "I had one sister, Annia Cornificia Faustina.",
     "spouse": "I was married to Faustina the Younger.",
     "children": "Faustina and I had at least 13 children, and many of them died young. Commodus, who succeeded me, and Lucilla are the best known.",
+    "grandchildren": "I had 7 grandchildren on public record: Tiberius Claudius Severus Proculus, Plautia Servilla, Aurelia Lucilla, Lucilla Plautia, Lucius Aurelius Verus, Lucius Aurellius Commodus Pompeianus and Petronius Antoninus.",
+    "family": "My family on public record: my parents Marcus Annius Verus and Domitia Lucilla, my sister Annia Cornificia Faustina, my wife Faustina the Younger, at least 13 children and 7 grandchildren.",
     "occupation": "I was Roman emperor from 161 to 180, and a Stoic philosopher.",
     "nationality": "I was a Roman citizen.",
-    "notable_works": "I'm best known for my Meditations."
+    "notable_works": "I'm best known for my Meditations.",
+    "religion": "My religion was ancient Roman religion.",
+    "positions": "Positions I held: Roman emperor, ancient Roman senator, Roman consul and quaestor.",
+    "languages": "I spoke Latin and Ancient Greek.",
+    "cause_of_death": "I died of an illness while on campaign, possibly the Antonine plague.",
+    "burial": "I was laid to rest at Castel Sant'Angelo."
   }
 }
