@@ -18,13 +18,14 @@ ENV/
 chroma_db/
 *.log
 *.jsonl
+# (the memory units included: they quote a copyrighted biography; python rebuild_elon.py makes them)
 .obsidian/
 
 # Voice output (large files)
 07-Voice/output/
 
 # Memory unit backups
-04-Memory-Units/*BACKUP*/
+04-Memory-Units/*BACKUP*
 04-Memory-Units/*.bak
 
 # IDE

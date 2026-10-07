@@ -3,7 +3,16 @@ venv/
 __pycache__/
 *.pyc
 chroma_db/
+# One-server lock next to the database (services/instance_lock.py)
+chroma_db.lock
 _backups/
+# python backup.py create: private data (memories, family documents, voice samples)
+CHRONUS/backups/
+# Pipeline outputs that contain passages of the Isaacson biography (copyrighted):
+# rebuilt locally by rebuild_elon.py / merge_sources.py, never published
+CHRONUS/04-Memory-Units/elon_musk_memory_units.jsonl
+CHRONUS/02-Cleaned-Data/master-elon-data.csv
+CHRONUS/02-Cleaned-Data/master-elon-data.md
 # Custom persona models: private personal data (uploads, interview answers)
 CHRONUS/personas/
 # LoRA: regenerable training data, checkpoints and adapter weights
@@ -37,5 +46,11 @@ build/
 .mimocode/
 **/.mimocode/
 
-# Large copyrighted source material (not for repo)
+# Copyrighted source material (biography excerpts): kept locally, not in the
+# repo. The memory units built from them are in 04-Memory-Units/.
+CHRONUS/01-Raw-Data/Books/
 CHRONUS/02-Cleaned-Data/Books/
+# Downloaded speech-recognition model (services/stt.py)
+CHRONUS/models/.whisper/
+# Tesseract languages for photos and scans (services/originals.py)
+CHRONUS/models/.tessdata/

@@ -14,17 +14,15 @@ import base64
 import binascii
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException, Path as PathParam
+from fastapi import APIRouter, HTTPException
+from fastapi import Path as PathParam
 from pydantic import BaseModel, Field
 
+from services import consent, consent_text, tts
 from services import personas as ps
-from services import tts
 
 PERSONA_PATH = PathParam(pattern=ps.PERSONA_ID_PATTERN)
-CONSENT_STATEMENT = (
-    "I am this person, or I have their permission (or their estate's) to build "
-    "this model from their words."
-)
+CONSENT_STATEMENT = consent_text.MODEL["en"]
 
 
 class PersonaCreate(BaseModel):
@@ -32,7 +30,11 @@ class PersonaCreate(BaseModel):
     description: str = Field(default="", max_length=300)
     relationship: Literal["self", "family", "friend", "colleague", "other"]
     allow_cloud_llm: bool = False
+    # The person has died: memorial framing (services/wellbeing.py)
+    memorial: bool = False
     consent: bool
+    # The language the consent statement was shown in, and is recorded in
+    language: consent_text.Language = "en"
 
 
 class DocumentUpload(BaseModel):
@@ -46,6 +48,7 @@ class VoiceUpload(BaseModel):
     content_base64: str = Field(min_length=1, max_length=ps.MAX_UPLOAD_BYTES * 4 // 3 + 16)
     consent: bool  # the person (or their estate) agreed to their voice being used
     cloud: bool  # ...and to the recording going to Fish Audio to make the voice (services/tts.py)
+    language: consent_text.Language = "en"
 
 
 class InterviewAnswer(BaseModel):
@@ -65,10 +68,12 @@ def summarize(persona: dict, collection) -> dict:
         "description": persona.get("description", ""),
         "allow_cloud_llm": bool(persona.get("allow_cloud_llm")),
         "relationship": persona.get("relationship", ""),
+        "memorial": bool(persona.get("memorial")),
         "created_at": persona.get("created_at", ""),
         "memories": collection.count(),
         "uploads": persona.get("uploads", []),
         "interview_answered": persona.get("interview_answered", []),
+        "followups_answered": len(persona.get("followups_answered", [])),
         "min_memories": ps.MIN_MEMORIES_TO_BUILD,
         # pretrained famous figures (figures/build_figures.py)
         "voice": {"seconds": persona["voice"]["seconds"], "provider": "Fish Audio"} if persona.get("voice") else None,
@@ -77,6 +82,8 @@ def summarize(persona: dict, collection) -> dict:
         "suggested_questions": persona.get("suggested_questions", []),
         "sources": persona.get("sources", []),
         "license": persona.get("license", ""),
+        # custom models: paused?, review date, off-limits topics (services/consent.py)
+        "consent": consent.state(persona) if persona["kind"] == "custom" else None,
     }
 
 
@@ -107,7 +114,9 @@ def make_router(client, embedder) -> APIRouter:
         if not body.consent:
             raise HTTPException(status_code=400, detail="Consent is required to build a model of a real person")
         persona = ps.create_custom_persona(
-            body.name, body.description, body.relationship, body.allow_cloud_llm, CONSENT_STATEMENT,
+            body.name, body.description, body.relationship, body.allow_cloud_llm, consent_text.MODEL[body.language],
+            consent_language=body.language,
+            memorial=body.memorial,
         )
         return summarize(persona, ps.get_collection(client, persona))
 
@@ -131,10 +140,37 @@ def make_router(client, embedder) -> APIRouter:
             raise HTTPException(status_code=400, detail=str(e))
         return {"upload": entry, "persona": detail(persona_id)}
 
+    @router.post("/{persona_id}/documents/async", status_code=202)
+    def upload_async(body: DocumentUpload, persona_id: str = PERSONA_PATH):
+        """Same as /documents, in the background: poll GET /jobs/{job_id}."""
+        from services import jobs
+
+        persona = _custom(persona_id)
+        try:
+            data = base64.b64decode(body.content_base64, validate=True)
+        except (binascii.Error, ValueError):
+            raise HTTPException(status_code=400, detail="File content is not valid base64")
+
+        def work(progress):
+            entry = ps.ingest_document(persona, ps.get_collection(client, persona), embedder, body.filename, data,
+                                       body.authored_by, progress=progress)
+            return {"upload": entry, "persona": detail(persona_id)}
+        try:
+            return {"job_id": jobs.start(work, "upload")}
+        except jobs.Busy as e:
+            raise HTTPException(status_code=429, detail=str(e))
+
     @router.post("/{persona_id}/interview")
     def interview(body: InterviewAnswer, persona_id: str = PERSONA_PATH):
+        from data.interview_protocol import get_all_questions
+        from services.followups import suggest
+
         persona = _custom(persona_id)
-        return {"result": embed_interview_answer(client, embedder, persona, body), "persona": detail(persona_id)}
+        result = embed_interview_answer(client, embedder, persona, body)
+        fresh = detail(persona_id)
+        unanswered = [q for q in get_all_questions() if q["id"] not in set(fresh["interview_answered"])]
+        # Adaptive interview: what to ask next, from what this answer mentions
+        return {"result": result, "persona": fresh, "followups": suggest(body.answer, unanswered, embedder)}
 
     @router.post("/{persona_id}/voice")
     def add_voice(body: VoiceUpload, persona_id: str = PERSONA_PATH):
@@ -154,7 +190,8 @@ def make_router(client, embedder) -> APIRouter:
             raise HTTPException(status_code=400, detail=str(e))
         old_voice_id = (persona.get("voice") or {}).get("fish_voice_id")
         try:
-            ps.save_voice_sample(persona, data, tts.fish_create_voice(data))
+            ps.save_voice_sample(persona, data, tts.fish_create_voice(data), consent_text.VOICE[body.language],
+                                 body.language)
             if old_voice_id:
                 tts.fish_delete_voice(old_voice_id)  # replaced: don't leave the old one at Fish
         except tts.VoiceServiceError as e:
@@ -176,16 +213,23 @@ def make_router(client, embedder) -> APIRouter:
             built = ps.build_persona(collection, persona)
         except ValueError as e:
             raise HTTPException(status_code=400, detail=str(e))
+        # Its own "I don't know" threshold, from its own memories (services/calibration.py)
+        from services.calibration import calibrate_threshold
+        built = ps.update_persona(built["id"], distance_threshold=calibrate_threshold(collection, embedder))
         return summarize(built, collection)
 
     @router.delete("/{persona_id}")
     def delete(persona_id: str = PERSONA_PATH):
-        persona = _custom(persona_id)
-        _delete_cloud_voice(persona)
-        ps.delete_custom_persona(client, persona)
+        delete_model(client, _custom(persona_id))
         return {"deleted": persona_id}
 
     return router
+
+
+def delete_model(client, persona: dict) -> None:
+    """Delete a custom model and everything in it (Delete, and revoking consent)."""
+    _delete_cloud_voice(persona)
+    ps.delete_custom_persona(client, persona)
 
 
 def _delete_cloud_voice(persona: dict) -> None:

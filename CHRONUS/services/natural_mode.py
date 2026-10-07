@@ -15,27 +15,35 @@ tried and removed: free models pasted them into unrelated answers.)
 
 from __future__ import annotations
 
+import json
 import logging
 import re
-import sys
-from pathlib import Path
+import threading
+import time
+from typing import Callable
 
 import requests
 
 from config import config
-from services.mix_method import calculate_confidence, generate_mix_method_response
+from services.mix_method import (
+    TRANSCRIPT_TYPES,
+    calculate_confidence,
+    clean_for_display,
+    generate_mix_method_response,
+    without_host_questions,
+)
+from services.post_process import scrub
 from services.provenance import (
     FIRST_PERSON,
     SYNTHESIZED,
     anchor_first,
     attribution,
+    context_clause,
     format_source_citation,
     grounding_score,
+    semantic_support,
     voice_of,
 )
-
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "06-Testing"))
-from post_process import scrub  # noqa: E402
 
 logger = logging.getLogger("chronus")
 
@@ -85,6 +93,28 @@ def _usable_llm_text(text: str | None, truncated: bool) -> str:
     return text
 
 
+_MARKERS_AFTER_STOP = re.compile(r"([.!?])\s*((?:\[\d{1,2}\]\s*)+)")
+_MARKER = re.compile(r"\s*\[(\d{1,2})\]")
+
+
+def clean_citations(text: str, n_sources: int) -> str:
+    """Keep only valid [n] evidence markers (1..n_sources), placed before the
+    sentence's full stop, so sentence splitting and display stay clean.
+    "Mars matters. [1] [9] Next" -> "Mars matters [1]. Next"."""
+    text = _MARKERS_AFTER_STOP.sub(lambda m: " " + "".join(f"[{d}]" for d in re.findall(r"\d+", m.group(2))) + m.group(1) + " ", text)
+
+    def keep(m: re.Match) -> str:
+        return f" [{m.group(1)}]" if 1 <= int(m.group(1)) <= n_sources else ""
+    text = _MARKER.sub(keep, text)
+    text = re.sub(r"(\[\d+\])(?:\s*\1)+", r"\1", text)  # "[1] [1]" -> "[1]"
+    return re.sub(r"\s+([.!?,])", r"\1", re.sub(r"\s{2,}", " ", text)).strip()
+
+
+def strip_citations(text: str) -> str:
+    """Text without [n] markers (for reading aloud or scoring)."""
+    return re.sub(r"\s{2,}", " ", _MARKER.sub("", text)).strip()
+
+
 def _evidence_line(index: int, doc: str, meta: dict, citation: str) -> str:
     """One evidence entry, labelled with whose words it is."""
     voice = voice_of(meta)
@@ -94,13 +124,23 @@ def _evidence_line(index: int, doc: str, meta: dict, citation: str) -> str:
         label = f"SYNTHESIZED SUMMARY, NOT A QUOTE ({attribution(meta)})"
     else:
         label = f"ABOUT YOU, WRITTEN BY SOMEONE ELSE ({attribution(meta)})"
-    return f"[{index}] {label}:\n{doc.strip()}"
+    # A tweet that quoted or answered a post means little without it
+    context = context_clause(meta, limit=280).strip()
+    context = f"\n(This post was {context[1:-1]}; that post is not your words.)" if context else ""
+    return f"[{index}] {label}:\n{doc.strip()}{context}"
+
+
+# Sentences asked for, and the cap enforced (one sentence of slack), per length
+LENGTHS = {"short": ("One or two sentences", 2), "normal": ("One to three sentences", MAX_ANSWER_SENTENCES),
+           "detailed": ("Three to six sentences", 7)}
 
 
 def build_system_prompt(
     persona_name: str, evidence_block: str, profile_block: str = "", style_notes: str | None = None,
+    length: str = "normal",
 ) -> str:
     """Assemble the natural-mode system prompt (no dashes on purpose)."""
+    sentences = LENGTHS.get(length, LENGTHS["normal"])[0]
     return f"""You are {persona_name}, talking in a live conversation. Answer the user's question.
 
 HOW TO ANSWER
@@ -108,8 +148,9 @@ HOW TO ANSWER
 2. Evidence marked ABOUT YOU was written by someone else. You can use its facts, but never present its wording as something you said.
 3. Evidence marked SYNTHESIZED is a generated summary. Use it for facts only, not for phrasing.
 4. Do not add facts, opinions, numbers or examples that are not in the evidence or the profile. If the evidence does not really answer the question, say that briefly, in your own voice.
-5. One to three sentences, spoken style. Start with the answer itself. No intro and no wrap-up line that sums things up.
+5. {sentences}, spoken style. Start with the answer itself. No intro and no wrap-up line that sums things up.
 6. Never use dashes of any kind, and never use the words "crucial", "ensuring", "pivotal", "delve", "testament", "landscape" or "journey".
+7. End each sentence, before its full stop, with the number of the evidence it comes from in square brackets, like [1] or [2]. Only use numbers shown in EVIDENCE.
 
 HOW YOU TALK
 {style_notes or _DEFAULT_STYLE_NOTES}
@@ -130,13 +171,133 @@ def _clean_history(history: list[dict] | None) -> list[dict]:
     return turns[-MAX_HISTORY_TURNS:]
 
 
-def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: bool = False) -> str:
-    """Call the configured provider and return usable raw text (or raise)."""
+class DeadlineExceeded(TimeoutError):
+    """The provider took longer than config.LLM_DEADLINE_SECONDS for one answer."""
+
+
+class ProviderUnavailable(RuntimeError):
+    """The circuit breaker is open: the provider failed repeatedly just now."""
+
+
+class StreamCancelled(Exception):
+    """The person who asked went away (closed the page): stop generating."""
+
+
+class _Breaker:
+    """After FAILURES failures in a row, skip the provider for COOLDOWN
+    seconds, so a down service costs each question nothing instead of a
+    full timeout; then let one question try again."""
+
+    FAILURES, COOLDOWN = 3, 60.0
+
+    def __init__(self):
+        self.failures, self.open_until = 0, 0.0
+        self.lock = threading.Lock()
+
+    def check(self) -> None:
+        with self.lock:
+            if time.monotonic() < self.open_until:
+                raise ProviderUnavailable("the AI service failed repeatedly; skipping it for a minute")
+
+    def record(self, ok: bool) -> None:
+        with self.lock:
+            if ok:
+                self.failures, self.open_until = 0, 0.0
+                return
+            self.failures += 1
+            if self.failures >= self.FAILURES:
+                self.failures, self.open_until = 0, time.monotonic() + self.COOLDOWN
+
+
+breaker = _Breaker()
+
+
+def _timeout() -> tuple[float, float]:
+    """(connect, read) for requests: never longer than the whole-answer deadline."""
+    return (5.0, config.LLM_DEADLINE_SECONDS)
+
+
+def _check_deadline(started: float) -> None:
+    if time.monotonic() - started > config.LLM_DEADLINE_SECONDS:
+        raise DeadlineExceeded(f"no complete answer within {config.LLM_DEADLINE_SECONDS:g} s")
+
+
+def _stream_openai(url: str, headers: dict, payload: dict, on_token: Callable[[str], None]) -> tuple[str, bool]:
+    """OpenAI-compatible streaming (server-sent events); returns (text, cut_off)."""
+    parts, finish, started = [], None, time.monotonic()
+    with requests.post(url, headers=headers, json={**payload, "stream": True}, timeout=_timeout(), stream=True) as response:
+        response.raise_for_status()
+        for line in response.iter_lines(decode_unicode=True):
+            _check_deadline(started)
+            if not line or not line.startswith("data:"):
+                continue  # keep-alive comments like ": OPENROUTER PROCESSING"
+            data = line[5:].strip()
+            if data == "[DONE]":
+                break
+            try:
+                chunk = json.loads(data)
+            except json.JSONDecodeError:
+                continue
+            if chunk.get("error"):
+                raise ValueError(f"LLM stream error: {chunk['error']}")
+            choice = (chunk.get("choices") or [{}])[0]
+            delta = (choice.get("delta") or {}).get("content") or ""
+            if delta:
+                parts.append(delta)
+                on_token(delta)
+            finish = choice.get("finish_reason") or finish
+    return "".join(parts), finish == "length"
+
+
+def _stream_ollama(payload: dict, on_token: Callable[[str], None]) -> tuple[str, bool]:
+    parts, done_reason, started = [], None, time.monotonic()
+    with requests.post(f"{config.OLLAMA_URL}/api/generate", json={**payload, "stream": True}, timeout=_timeout(),
+                       stream=True) as response:
+        response.raise_for_status()
+        for line in response.iter_lines(decode_unicode=True):
+            _check_deadline(started)
+            if not line:
+                continue
+            chunk = json.loads(line)
+            if chunk.get("response"):
+                parts.append(chunk["response"])
+                on_token(chunk["response"])
+            if chunk.get("done"):
+                done_reason = chunk.get("done_reason")
+                break
+    return "".join(parts), done_reason == "length"
+
+
+def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: bool = False,
+              on_token: Callable[[str], None] | None = None) -> str:
+    """Call the configured provider and return usable raw text (or raise).
+
+    *on_token*: stream the reply, calling it with each new piece of text as
+    it arrives (the website's typing effect, /chat/stream); it may raise
+    StreamCancelled to stop generating. Cloud and Ollama calls have a
+    whole-answer deadline and go through the circuit breaker.
+    """
+    if config.LLM_PROVIDER == "local":
+        return _call_provider(system_prompt, query, history, use_adapter, on_token)
+    breaker.check()
+    try:
+        text = _call_provider(system_prompt, query, history, use_adapter, on_token)
+    except (requests.RequestException, DeadlineExceeded):
+        breaker.record(False)
+        raise
+    breaker.record(True)
+    return text
+
+
+def _call_provider(system_prompt: str, query: str, history: list[dict], use_adapter: bool,
+                   on_token: Callable[[str], None] | None) -> str:
     if config.LLM_PROVIDER == "local":
         # On-device model (services/local_llm.py): nothing leaves the machine
         from services.local_llm import generate
         messages = [{"role": "system", "content": system_prompt}, *history, {"role": "user", "content": query}]
         text, cut_off = generate(messages, LOCAL_MAX_TOKENS, use_adapter=use_adapter, temperature=config.LLM_TEMPERATURE)
+        if on_token and text:
+            on_token(text)
         return _usable_llm_text(text, truncated=cut_off)
 
     if config.LLM_PROVIDER in ("openai", "openrouter") and config.OPENAI_API_KEY:
@@ -163,9 +324,11 @@ def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: 
             if config.OPENAI_FALLBACK_MODELS:
                 # OpenRouter-only: try these in order if the primary fails
                 payload["models"] = [config.OPENAI_MODEL, *config.OPENAI_FALLBACK_MODELS]
-        response = requests.post(
-            f"{config.OPENAI_BASE_URL}/chat/completions", headers=headers, json=payload, timeout=60,
-        )
+        url = f"{config.OPENAI_BASE_URL}/chat/completions"
+        if on_token:
+            text, cut_off = _stream_openai(url, headers, payload, on_token)
+            return _usable_llm_text(text, truncated=cut_off)
+        response = requests.post(url, headers=headers, json=payload, timeout=_timeout())
         response.raise_for_status()
         choice = response.json()["choices"][0]
         return _usable_llm_text(
@@ -175,20 +338,20 @@ def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: 
 
     # Ollama's single-prompt API
     convo = "".join(f"\n{t['role'].upper()}: {t['content']}" for t in history)
-    response = requests.post(
-        f"{config.OLLAMA_URL}/api/generate",
-        json={
-            "model": config.LLM_MODEL,
-            "prompt": f"{system_prompt}\n{convo}\n\nTHE QUESTION: {query}",
-            "stream": False,
-            "options": {
-                "temperature": 0.7,
-                "num_predict": NATURAL_MAX_TOKENS,
-                "num_ctx": config.LLM_CONTEXT_WINDOW,
-            },
+    payload = {
+        "model": config.LLM_MODEL,
+        "prompt": f"{system_prompt}\n{convo}\n\nTHE QUESTION: {query}",
+        "stream": False,
+        "options": {
+            "temperature": 0.7,
+            "num_predict": NATURAL_MAX_TOKENS,
+            "num_ctx": config.LLM_CONTEXT_WINDOW,
         },
-        timeout=60,
-    )
+    }
+    if on_token:
+        text, cut_off = _stream_ollama(payload, on_token)
+        return _usable_llm_text(text, truncated=cut_off)
+    response = requests.post(f"{config.OLLAMA_URL}/api/generate", json=payload, timeout=_timeout())
     response.raise_for_status()
     data = response.json()
     return _usable_llm_text(data.get("response"), truncated=data.get("done_reason") == "length")
@@ -203,6 +366,9 @@ def generate_natural_response(
     persona_name: str = "Elon Musk",
     style_notes: str | None = None,
     use_adapter: bool = False,  # local provider only: apply the persona's LoRA adapter
+    embedder=None,  # enables the sentence-level support check (config.NATURAL_MIN_SEMANTIC_SUPPORT)
+    on_token: Callable[[str], None] | None = None,  # stream the draft (see _call_llm)
+    length: str = "normal",  # "short" | "normal" | "detailed"
 ) -> dict:
     """Answer *query* in the persona's voice, grounded in *memories*.
 
@@ -210,24 +376,40 @@ def generate_natural_response(
     ("natural" on success; Mix Method output with mode="mix_method_fallback"
     if the LLM call fails).
     """
-    memories = anchor_first(memories[:3])
+    memories = anchor_first(memories[:4 if length == "detailed" else 3])
+    # The model sees (and is scored against) the evidence with transcript
+    # noise and extraction damage removed ("pointat" -> "point at"), and
+    # without interviewers' questions, which it would otherwise voice as the persona
+    texts = [without_host_questions(clean_for_display(doc)) if meta.get("source_type") in TRANSCRIPT_TYPES
+             else clean_for_display(doc) for _, doc, meta, _ in memories]
     evidence, sources = [], []
-    for i, (_, doc, meta, raw_dist) in enumerate(memories, start=1):
+    for i, ((_, doc, meta, raw_dist), text) in enumerate(zip(memories, texts), start=1):
         citation = format_source_citation(meta, doc, raw_dist)
         sources.append(citation)
-        evidence.append(_evidence_line(i, doc, meta, citation["citation"]))
-    system_prompt = build_system_prompt(persona_name, "\n\n".join(evidence), profile_block, style_notes)
+        evidence.append(_evidence_line(i, text, meta, citation["citation"]))
+    system_prompt = build_system_prompt(persona_name, "\n\n".join(evidence), profile_block, style_notes, length)
+    max_sentences = LENGTHS.get(length, LENGTHS["normal"])[1]
 
     try:
-        clean_text = scrub(_call_llm(system_prompt, query, _clean_history(history), use_adapter))
-        if not clean_text:
+        raw = _call_llm(system_prompt, query, _clean_history(history), use_adapter, on_token)
+        # Markers go before the full stop first: scrub() cuts anything after
+        # the last one ("...bicycle. [1]" would lose its citation)
+        clean_text = clean_citations(scrub(clean_citations(raw, len(memories))), len(memories))
+        if not strip_citations(clean_text):
             raise ValueError("LLM reply was empty after scrubbing")
-        clean_text = " ".join(re.split(r"(?<=[.!?])\s+", clean_text)[:MAX_ANSWER_SENTENCES])
+        clean_text = " ".join(re.split(r"(?<=[.!?])\s+", clean_text)[:max_sentences])
         # Grounding guard: an answer whose words mostly aren't in the evidence
         # (or the curated profile) is invented, whatever the prompt said.
-        grounding = grounding_score(clean_text, [m[1] for m in memories] + [profile_block])
+        grounding = grounding_score(strip_citations(clean_text), texts + [profile_block])
         if grounding < config.NATURAL_MIN_GROUNDING:
             raise ValueError(f"answer not grounded in evidence (score {grounding})")
+        # Sentence-level check: every sentence should be backed by some
+        # evidence, not just the answer's words on average
+        if embedder is not None and config.NATURAL_MIN_SEMANTIC_SUPPORT > 0:
+            support = semantic_support(strip_citations(clean_text), texts + [profile_block], embedder,
+                                       config.SEMANTIC_SENTENCE_MIN)
+            if support < config.NATURAL_MIN_SEMANTIC_SUPPORT:
+                raise ValueError(f"answer sentences not backed by evidence (support {support})")
         best_dist = min((m[3] for m in memories), default=2.0)
         return {
             "response": clean_text,
@@ -238,15 +420,22 @@ def generate_natural_response(
             "faithfulness": grounding,
         }
     except Exception as e:
-        logger.error(f"Natural mode LLM call failed ({e}); falling back to Mix Method")
+        if isinstance(e, StreamCancelled):
+            logger.info("Natural mode stopped: the person who asked went away")
+        else:
+            logger.error(f"Natural mode LLM call failed ({e}); falling back to Mix Method")
         mix_fallback = generate_mix_method_response(
             query=query,
             memories=memories,
             identity_card=identity_card,
             persona_name=persona_name,
             include_sources=True,
+            length=length,
+            embedder=embedder,
         )
         mix_fallback["mode"] = "mix_method_fallback"
+        if isinstance(e, (ProviderUnavailable, DeadlineExceeded, requests.RequestException)):
+            mix_fallback["notice"] = "The AI service is slow or unavailable right now, so these are verbatim quotes."
         # Keep the citation schema identical to the success path.
         mix_fallback["sources"] = sources
         return mix_fallback

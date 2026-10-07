@@ -1,7 +1,8 @@
-import { useState, useCallback, useEffect } from 'react'
+import { lazy, Suspense, useState, useCallback, useEffect } from 'react'
 import { useLenis, getLenis } from './hooks/useLenis'
 import PageLoader from './components/PageLoader'
 import Header from './components/Header'
+import { useT } from './i18n'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import LiveDemo from './components/LiveDemo'
@@ -14,21 +15,31 @@ import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import NavMenu from './components/NavMenu'
 import RequestModal from './components/RequestModal'
+import LoginGate from './components/LoginGate'
 import TrainYourModel from './components/TrainYourModel'
-import ModelsPage from './pages/ModelsPage'
-import ChatPage from './pages/ChatPage'
-import CreatePage from './pages/CreatePage'
-import CloneVoicePage from './pages/CloneVoicePage'
+import ModelGallery from './components/ModelGallery'
 import { navigate, useRoute } from './router'
 import './pages.css'
 
+// Sub-pages load on first visit, so the landing page downloads less
+const ModelsPage = lazy(() => import('./pages/ModelsPage'))
+const ChatPage = lazy(() => import('./pages/ChatPage'))
+const CreatePage = lazy(() => import('./pages/CreatePage'))
+const CloneVoicePage = lazy(() => import('./pages/CloneVoicePage'))
+const MemoriesPage = lazy(() => import('./pages/MemoriesPage'))
+const InsightsPage = lazy(() => import('./pages/InsightsPage'))
+const RoundtablePage = lazy(() => import('./pages/RoundtablePage'))
+import './dark.css'
+
 // Header/menu targets that are pages rather than landing-page sections
-const PAGES = new Set(['models', 'create', 'clone-voice'])
+const PAGES = new Set(['models', 'create', 'clone-voice', 'roundtable', 'insights'])
+// Every #/page the app renders (the rest of the hash space is the landing page)
+const ROUTED = new Set([...PAGES, 'chat', 'memories'])
 
 function App() {
+  const t = useT()
   useLenis()
   const { page, id } = useRoute()
-  const [ready, setReady] = useState(false)
   const [navOpen, setNavOpen] = useState(false)
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -56,7 +67,6 @@ function App() {
   const closeModal = useCallback(() => { setModalOpen(false); startScroll() }, [startScroll])
 
   const handleReady = useCallback(() => {
-    setReady(true)
     document.body.classList.add('ready')
     startScroll()
   }, [startScroll])
@@ -93,18 +103,25 @@ function App() {
 
   return (
     <>
+      <a className="skip-link" href="#main" onClick={e => { e.preventDefault(); document.getElementById('main')?.focus() }}>{t('app.skip')}</a>
       <PageLoader stopScroll={stopScroll} onReady={handleReady} />
       <Header go={go} openNav={openNav} />
-      <main id="main">
+      <main id="main" tabIndex={-1}>
+        <Suspense fallback={<div className="page shell page-loading" role="status">{t('common.loading')}</div>}>
         {page === 'models' && <ModelsPage />}
         {page === 'chat' && <ChatPage id={id} />}
         {page === 'create' && <CreatePage key={id || 'new'} id={id} />}
         {page === 'clone-voice' && <CloneVoicePage />}
-        {!PAGES.has(page) && page !== 'chat' && (
+        {page === 'memories' && <MemoriesPage key={id} id={id} />}
+        {page === 'insights' && <InsightsPage id={id} />}
+        {page === 'roundtable' && <RoundtablePage key={id || 'all'} id={id} />}
+        </Suspense>
+        {!ROUTED.has(page) && (
           <>
-            <Hero scrollToId={scrollToId} openModal={openModal} />
+            <Hero scrollToId={scrollToId} />
             <Marquee />
             <LiveDemo />
+            <ModelGallery />
             <WhySection />
             <Band />
             <TrainYourModel />
@@ -115,9 +132,10 @@ function App() {
           </>
         )}
       </main>
-      <Footer openModal={openModal} />
+      <Footer />
       <NavMenu open={navOpen} onClose={closeNav} onNav={handleNav} onCta={() => { closeNav(); setTimeout(openModal, 200) }} />
       <RequestModal open={modalOpen} onClose={closeModal} />
+      <LoginGate />
     </>
   )
 }

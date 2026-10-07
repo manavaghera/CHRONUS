@@ -19,6 +19,7 @@ def figures(client):
     return {f: listed[f] for f in FIGURES}
 
 
+@pytest.mark.corpus
 @pytest.mark.parametrize("figure_id", FIGURES)
 def test_figure_is_ready_with_its_own_threshold(figures, figure_id):
     p = figures[figure_id]
@@ -31,6 +32,7 @@ def test_figure_is_ready_with_its_own_threshold(figures, figure_id):
     assert ps.load_persona(figure_id)["stand_in_voice"] in tts.STAND_IN_VOICES
 
 
+@pytest.mark.corpus
 @pytest.mark.parametrize("figure_id", FIGURES)
 def test_suggested_questions_are_answered_from_their_own_books(client, figures, figure_id):
     p = figures[figure_id]
@@ -43,6 +45,7 @@ def test_suggested_questions_are_answered_from_their_own_books(client, figures, 
 
 
 @pytest.mark.parametrize("figure_id", [f for f in FIGURES if f != "mahatma_gandhi"])  # his Guide to Health covers water
+@pytest.mark.corpus
 def test_unanswerable_question_falls_back(client, figures, figure_id):
     d = client.post("/chat", json={"query": "How do I descale a kettle?", "persona": figure_id, "mode": "mix_method"}).json()
     assert d["fallback"] is True

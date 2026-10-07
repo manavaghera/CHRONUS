@@ -3,8 +3,8 @@ Real question/answer pairs for evaluation, from the one transcript with
 speaker labels: the TED Gigafactory interview (Chris Anderson asks, Elon Musk
 answers). Each pair is (interviewer question, Elon's actual answer).
 
-Elon's answers are also in the memory store, inside the cleaned copy of this
-interview ("TED TEST fractory.md"), so the pairs serve two tests:
+Elon's answers are also in the memory store (rebuild_elon.py keeps only his
+turns of this interview, "TED Tesla fract.txt"), so the pairs serve two tests:
 * retrieval — can the system find the memory holding his real answer?
 * match test — with that interview held out, how close is the clone's answer
   to what he really said?
@@ -17,8 +17,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 RAW_TRANSCRIPT = ROOT / "01-Raw-Data" / "Interviews" / "TED Tesla fract.txt"
-# The cleaned copy of this interview inside the memory store
-SOURCE_IN_MEMORY = "TED TEST fractory.md"
+# This interview inside the memory store (source_file of its memories)
+SOURCE_IN_MEMORY = "TED Tesla fract.txt"
 
 _SPEAKER = re.compile(r"\b(Chris Anderson|CA|Elon Musk|EM):\s")
 _TIMESTAMP = re.compile(r"\b\d{2}:\d{2}:\d{2}\.\d{1,3}\b")

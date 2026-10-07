@@ -3,6 +3,8 @@
 import base64
 import io
 import json
+import threading
+from unittest import mock
 
 import docx
 import pytest
@@ -46,9 +48,10 @@ def persona(client):
     assert ps.load_persona(pid) is None and not (ps.CUSTOM_DIR / pid).exists()
 
 
+@pytest.mark.corpus
 def test_elon_is_listed_as_ready(client):
     elon = next(p for p in client.get("/personas").json() if p["id"] == "elon_musk")
-    assert elon["kind"] == "pretrained" and elon["status"] == "ready" and elon["memories"] > 16000
+    assert elon["kind"] == "pretrained" and elon["status"] == "ready" and elon["memories"] > 14000
 
 
 def test_consent_is_required(client):
@@ -60,6 +63,38 @@ def test_new_model_is_private_draft(client, persona):
     p = client.get(f"/personas/{persona}").json()
     assert p["status"] == "draft" and p["allow_cloud_llm"] is False
     assert client.post("/chat", json={"query": "hello there friend", "persona": persona}).status_code == 409
+
+
+def test_old_interview_endpoint_still_serves_custom_models(srv, client, persona):
+    with mock.patch.object(srv, "embed_interview_answer", return_value={"dimension": "personality", "memory_id": "x"}) as emb:
+        r = client.post(f"/interview/answer?person={persona}", json={"question_id": "Q1", "answer": "x", "origin": "family"})
+    assert r.status_code == 200 and emb.call_args.args[3].origin == "family"
+
+
+def test_persona_file_is_never_read_half_written(persona):
+    # Concurrent requests used to read persona.json mid-rewrite and fail with 500s
+    record = ps.load_persona(persona)
+    errors = []
+
+    def writer():
+        for i in range(150):
+            ps.save_persona({**record, "description": "x" * (i % 40) * 200})
+
+    def reader():
+        for _ in range(300):
+            try:
+                assert ps.load_persona(persona)["id"] == persona
+            except Exception as e:  # noqa: BLE001 (any failure counts)
+                errors.append(repr(e))
+
+    threads = [threading.Thread(target=writer)] + [threading.Thread(target=reader) for _ in range(4)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    ps.save_persona(record)
+    assert not errors, errors[:3]
+    assert not list((ps.CUSTOM_DIR / persona).glob(".persona.json.*.tmp"))  # no temp files left behind
 
 
 def test_upload_text_and_word(client, persona):
@@ -98,13 +133,26 @@ def test_interview_answers_replace_not_duplicate(client, persona):
     assert client.get(f"/personas/{persona}").json()["memories"] == count
 
 
+DIARY = """The school got its first computer in 1998, and I stayed late every evening to learn it before the children did.
+
+Every Diwali I made besan laddoos for the whole street, and the neighbours' children queued at our gate.
+
+Your grandfather and I walked to the lake every Sunday morning; he named every bird, and I named every tree.
+
+The proudest day of my life was when my first student became a doctor and came back to teach at our school."""
+
+
+@pytest.mark.corpus
 def test_build_then_chat_from_her_own_memories(srv, client, persona):
+    # escape.txt repeats the letter, so it adds nothing (duplicates are skipped); the diary is new material
+    r = client.post(f"/personas/{persona}/documents", json={"filename": "diary.txt", "content_base64": b64(DIARY)})
+    assert r.status_code == 200 and r.json()["upload"]["duplicates_skipped"] == 0
     assert client.post(f"/personas/{persona}/build").json()["status"] == "ready"
     d = client.post("/chat", json={"query": "What was your favourite birthday?", "persona": persona, "mode": "natural"}).json()
     assert "bicycle" in d["answer"].lower()
     assert d["mode"] == "mix_method" and "cloud" in d["notice"]  # AI voice needs the creator's opt-in
     assert d["sources"][0]["voice"] == "first_person" and d["answer"].startswith("In my own words:")
-    assert all(s["source_file"] in ("letter.txt", "escape.txt", "notes.docx", "interview_protocol") for s in d["sources"])
+    assert all(s["source_file"] in ("letter.txt", "escape.txt", "notes.docx", "diary.txt", "interview_protocol") for s in d["sources"])
     assert "First principles" not in d["answer"]  # no Elon-style sign-off
 
 

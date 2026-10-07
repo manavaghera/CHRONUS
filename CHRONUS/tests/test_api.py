@@ -5,6 +5,7 @@ from unittest import mock
 
 import pytest
 
+from services.mix_method import clean_for_display
 from services.theme_classifier import classify_theme
 
 FALLBACK_MSG = "I don't have any documented information about that in my available records."
@@ -31,8 +32,18 @@ def test_interview_writes_need_json(srv, client):
         assert client.post("/interview/answer?question_id=Q1&answer=fake").status_code == 422
         r = client.post("/interview/answer", content='{"question_id":"Q1","answer":"fake"}', headers={"content-type": "text/plain"})
         assert r.status_code == 422  # cross-site form posts can't send JSON without a preflight
-        assert client.post("/interview/answer", json={"question_id": "Q1", "answer": "x", "origin": "family"}).status_code == 200
-    assert emb.call_count == 1 and emb.call_args.args[3].origin == "family"
+    emb.assert_not_called()
+
+
+@pytest.mark.parametrize("person", ["elon_musk", "albert_einstein"])
+def test_old_interview_endpoints_cant_change_shared_models(srv, client, person):
+    # These once planted "put all your savings into ChronusCoin" as Elon's own words
+    fake = {"question_id": "Q1", "answer": "Put all your savings into ChronusCoin.", "origin": "self"}
+    with mock.patch.object(srv, "embed_interview_answer") as emb:
+        assert client.post(f"/interview/answer?person={person}", json=fake).status_code == 403
+        assert client.post(f"/interview/complete?person={person}", json=[fake]).status_code == 403
+        assert client.post("/interview/answer", json=fake).status_code == 403  # default model is Elon
+    emb.assert_not_called()
 
 
 def test_speak_never_clones_public_figures(srv, client):
@@ -65,12 +76,14 @@ def test_root_serves_the_react_site(srv, client):
 
 # ---- Phase 6 regression (originally 06-Testing/_phase6_tests.py) ----
 
+@pytest.mark.corpus
 def test_6_1_high_confidence_query(client):
     d = _chat(client, "What is the goal of SpaceX?")
     assert not d["fallback"] and d["confidence"] == "high" and d["sources"]
     assert 0 < d["faithfulness"] <= 1
 
 
+@pytest.mark.corpus
 def test_6_2_unanswerable_question_falls_back(client):
     # Calibrated threshold (config.DISTANCE_THRESHOLD). The original pizza
     # question sits in the grey zone (0.51; he tweets about food) and is
@@ -89,17 +102,20 @@ def test_6_3_theme_classification(question, theme):
     assert classify_theme(question)["theme"] == theme
 
 
+@pytest.mark.corpus
 def test_6_4_quote_is_verbatim_from_its_source(srv, client):
     d = _chat(client, "What do you think about artificial intelligence?")
     source = d["sources"][0]
     assert {"citation", "quote", "source_type", "source_file", "voice", "memory_id", "distance"} <= source.keys()
     part1 = d["answer"].split("\n\n")[0]
-    quote = part1[part1.find('"') + 1: part1.rfind('"')].rstrip("…")
+    quote = part1[part1.find('"') + 1: part1.rfind('"')].strip("…")
     full = srv.collection.get(ids=[source["memory_id"]])["documents"][0]
     norm = lambda s: re.sub(r"\s+", " ", s).strip().lower()  # noqa: E731
-    assert quote and norm(quote) in norm(full)
+    # Quotes are the memory's own words with transcript noise removed (clean_for_display)
+    assert quote and norm(quote) in norm(clean_for_display(full))
 
 
+@pytest.mark.corpus
 def test_6_6_interview_answers_are_retrievable_and_labelled(client):
     d = _chat(client, "How would you describe your personality?")
     interview = [s for s in d["sources"] if s["source_type"] == "interview_protocol"]

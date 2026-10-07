@@ -1,194 +1,203 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { api } from '../api'
 import { navigate } from '../router'
+import { playExclusive, startRecording, stopCurrent, toWav, wavSeconds } from '../audio'
+import { useT } from '../i18n'
+
+// Voices this page kept only in the browser before the server tracked them.
+// They still exist at Fish Audio, so we offer to delete them there.
+const LEGACY_KEY = 'chronus_saved_voices'
+const MAX_SECONDS = 60
+
+function readLegacy() {
+  try { return JSON.parse(localStorage.getItem(LEGACY_KEY) || '[]').filter(v => v && v.id) } catch { return [] }
+}
+
+function writeLegacy(list) {
+  try { list.length ? localStorage.setItem(LEGACY_KEY, JSON.stringify(list)) : localStorage.removeItem(LEGACY_KEY) } catch { /* storage blocked */ }
+}
 
 export default function CloneVoicePage() {
-  const [voices, setVoices] = useState(() => {
-    try {
-      return JSON.parse(localStorage.getItem('chronus_saved_voices') || '[]')
-    } catch { return [] }
-  })
-  const [busy, setBusy] = useState(false)
+  const t = useT()
+  const [voices, setVoices] = useState([])
+  const [legacy, setLegacy] = useState(readLegacy)
+  const [consent, setConsent] = useState(false)
+  const [cloud, setCloud] = useState(false)
+  const [cloudReady, setCloudReady] = useState(null)
+  const [name, setName] = useState('')
+  const [busy, setBusy] = useState('')
   const [error, setError] = useState('')
-  const [customText, setCustomText] = useState('')
+  const [recording, setRecording] = useState(null)
+  const [elapsed, setElapsed] = useState(0)
+  const [active, setActive] = useState(null)
+  const [text, setText] = useState('')
   const [audioUrl, setAudioUrl] = useState(null)
-  const [activeVoice, setActiveVoice] = useState(null)
-  
-  const [isRecording, setIsRecording] = useState(false)
-  const [mediaRecorder, setMediaRecorder] = useState(null)
 
   useEffect(() => {
-    localStorage.setItem('chronus_saved_voices', JSON.stringify(voices))
-  }, [voices])
+    api.sandboxVoices().then(setVoices).catch(e => setError(e.message))
+    api.voiceStatus().then(s => setCloudReady(s.cloned.configured)).catch(() => setCloudReady(null))
+  }, [])
 
-  const processFile = async (file) => {
-    if (!file) return
-    const name = prompt("Enter a name for this cloned voice (e.g. My Voice, John's Voice):", "Recorded Voice")
-    if (!name) return
+  // Release the previous clip's memory whenever a new one replaces it
+  useEffect(() => () => { if (audioUrl) URL.revokeObjectURL(audioUrl) }, [audioUrl])
+  // Leaving the page: stop the microphone and any playing clip
+  const recordingRef = useRef(null)
+  recordingRef.current = recording
+  useEffect(() => () => { recordingRef.current?.cancel(); stopCurrent() }, [])
 
-    setBusy(true); setError(''); setAudioUrl(null)
+  // Recording timer, auto-stop at the server's 60 s limit
+  useEffect(() => {
+    if (!recording) return
+    const started = Date.now()
+    const id = setInterval(() => {
+      const s = (Date.now() - started) / 1000
+      setElapsed(s)
+      if (s >= MAX_SECONDS) stopAndClone()
+    }, 250)
+    return () => clearInterval(id)
+  }, [recording]) // eslint-disable-line react-hooks/exhaustive-deps
+
+  const allowed = consent && cloud && cloudReady !== false && name.trim()
+
+  const clone = async (blob) => {
+    setBusy('vs.making'); setError('')
     try {
-      const id = await api.quickClone(file)
-      const newVoice = { id, name, date: new Date().toISOString() }
-      setVoices([...voices, newVoice])
-      setActiveVoice(id)
-    } catch (err) { setError(err.message) } finally { setBusy(false) }
+      const wav = await toWav(blob)
+      const seconds = wavSeconds(wav)
+      if (seconds < 6) throw new Error(t('vs.tooShort', { seconds: seconds.toFixed(0) }))
+      const voice = await api.sandboxClone(name.trim(), wav)
+      setVoices(v => [...v, voice])
+      setActive(voice.id)
+      setName('')
+    } catch (e) { setError(e.message) } finally { setBusy('') }
   }
 
-  const handleUpload = (e) => {
+  const onFile = (e) => {
     const file = e.target.files[0]
     e.target.value = ''
-    processFile(file)
+    if (file) clone(file)
   }
 
-  const startRecording = async () => {
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true })
-      const recorder = new MediaRecorder(stream)
-      const chunks = []
-      recorder.ondataavailable = e => chunks.push(e.data)
-      recorder.onstop = () => {
-        const blob = new Blob(chunks, { type: recorder.mimeType })
-        const ext = recorder.mimeType.includes('mp4') ? 'mp4' : 'webm'
-        const file = new File([blob], `recording.${ext}`, { type: recorder.mimeType })
-        processFile(file)
-      }
-      recorder.start()
-      setMediaRecorder(recorder)
-      setIsRecording(true)
-    } catch (err) {
-      setError("Microphone access denied or unavailable.")
+  const record = async () => {
+    setError('')
+    try { setElapsed(0); setRecording(await startRecording()) } catch (e) {
+      setError(e.name === 'NotAllowedError' ? t('voiceIn.denied') : e.message)
     }
   }
 
-  const stopRecording = () => {
-    if (mediaRecorder) {
-      mediaRecorder.stop()
-      mediaRecorder.stream.getTracks().forEach(t => t.stop())
-      setIsRecording(false)
-    }
+  async function stopAndClone() {
+    const r = recording
+    setRecording(null)
+    if (r) clone(await r.stop())
   }
 
-  const handleSpeak = async (text, voiceId) => {
-    if (!text) return;
-    setBusy(true); setError(''); setAudioUrl(null)
+  const remove = async (voiceId, isLegacy = false) => {
+    if (!confirm(t('vs.deleteConfirm'))) return
+    setBusy('common.deleting'); setError('')
     try {
-      const url = await api.quickSpeak(text, voiceId)
+      await api.sandboxDelete(voiceId)
+      if (isLegacy) { const rest = legacy.filter(v => v.id !== voiceId); setLegacy(rest); writeLegacy(rest) }
+      else setVoices(v => v.filter(x => x.id !== voiceId))
+      if (active === voiceId) setActive(null)
+    } catch (e) { setError(e.message) } finally { setBusy('') }
+  }
+
+  const speak = async (line) => {
+    if (!line.trim() || !active) return
+    setBusy('vs.speaking'); setError('')
+    try {
+      const url = await api.sandboxSpeak(line.trim(), active)
       setAudioUrl(url)
-    } catch (err) { setError(err.message) } finally { setBusy(false) }
+      await playExclusive(new Audio(url))
+    } catch (e) { setError(e.message) } finally { setBusy('') }
   }
 
-  const handleDelete = (idToRemove) => {
-    setVoices(voices.filter(v => v.id !== idToRemove))
-    if (activeVoice === idToRemove) setActiveVoice(null)
-  }
+  const activeVoice = voices.find(v => v.id === active)
 
   return (
-    <div className="page" style={{ paddingTop: '100px', minHeight: '100vh', background: 'var(--bg)' }}>
+    <div className="page">
       <section className="page-hero page-hero--compact shell">
-        <button className="page-back" onClick={() => navigate('/')}>&larr; Home</button>
-        <div className="eyebrow eyebrow--accent">Voice Sandbox</div>
-        <h1 className="page-h1">Clone & Test Voices</h1>
-        <p className="page-sub">Upload a short audio clip to clone a voice instantly. Save them locally and test text-to-speech without creating a full model.</p>
+        <button className="page-back" onClick={() => navigate('/')}>{t('vs.home')}</button>
+        <div className="eyebrow eyebrow--accent">{t('nav.voiceSandbox')}</div>
+        <h1 className="page-h1">{t('vs.title')}</h1>
+        <p className="page-sub">{t('vs.sub')}</p>
       </section>
 
-      <section className="shell page-section" style={{ display: 'grid', gap: '2rem', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))' }}>
-        
-        {/* Left Col: Saved Voices & Upload */}
-        <div className="create-card">
-          <h2 className="page-h2">Your Voices</h2>
-          
-          <div style={{ padding: '1rem', background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: '8px', marginBottom: '1.5rem' }}>
-            <p style={{ fontWeight: 'bold', marginBottom: '0.5rem', color: 'var(--text)' }}>Ready to clone your voice?</p>
-            <p style={{ fontSize: '0.9rem', color: 'var(--text-dim)', marginBottom: '1rem' }}>Click Record and read the following text clearly:</p>
-            <blockquote style={{ fontSize: '0.95rem', fontStyle: 'italic', borderLeft: '3px solid #00d2ff', paddingLeft: '1rem', color: 'var(--text)', margin: 0, lineHeight: 1.5 }}>
-              "The quick brown fox jumps over the lazy dog. Voice cloning technology allows us to capture the unique phonetic patterns, pitch, and cadence of a speaker. By reading this short paragraph, the system has enough acoustic data to synthesize my voice naturally."
-            </blockquote>
-          </div>
-
-          <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem' }}>
-            {isRecording ? (
-              <button className="pill-btn" style={{ flex: 1, background: '#ff6b6b', color: 'white', borderColor: '#ff6b6b', animation: 'pulse 1.5s infinite' }} onClick={stopRecording}>
-                <span className="pill-inner">⏹ Stop Recording</span>
+      <section className="shell page-section clone-grid">
+        <div className="create-card clone-card">
+          <h2 className="page-h2">{t('vs.new')}</h2>
+          {cloudReady === false && (
+            <div className="page-alert">{t('vs.notSetUp').split(/\{(key|file)\}/).map((part, i) => (i % 2 ? <code key={i}>{part === 'key' ? 'FISH_API_KEY=your_key' : 'CHRONUS/.env'}</code> : part))}</div>
+          )}
+          <label className="create-check">
+            <input type="checkbox" checked={consent} onChange={e => setConsent(e.target.checked)} />
+            <span><strong>{t('create.voiceConsentTitle')}</strong> {t('vs.consentText')}</span>
+          </label>
+          <label className="create-check">
+            <input type="checkbox" checked={cloud} onChange={e => setCloud(e.target.checked)} />
+            <span><strong>{t('create.cloudTitle')}</strong> {t('vs.cloudText')}</span>
+          </label>
+          <input className="create-select" placeholder={t('vs.namePlaceholder')} maxLength={60} value={name} onChange={e => setName(e.target.value)} />
+          <blockquote className="clone-script">{t('vs.readThis')} “{t('vs.script')}”</blockquote>
+          <div className="clone-actions">
+            {recording ? (
+              <button className="pill-btn pill-btn--dark clone-recording" onClick={stopAndClone}>
+                <span className="pill-inner">{t('vs.stop', { seconds: Math.floor(elapsed) })}</span>
               </button>
             ) : (
-              <button className="pill-btn pill-btn--accent" style={{ flex: 1 }} disabled={busy} onClick={startRecording}>
-                <span className="pill-inner">🎙 Record</span>
+              <button className="pill-btn pill-btn--accent" disabled={!allowed || !!busy} onClick={record}>
+                <span className="pill-inner">{t('vs.record')}</span>
               </button>
             )}
-            
-            <label className="pill-btn pill-btn--dark create-file" style={{ flex: 1, textAlign: 'center', cursor: 'pointer' }}>
-              <span className="pill-inner">{busy && !activeVoice && !isRecording ? 'Uploading...' : '📁 Upload .wav'}</span>
-              <input type="file" accept=".wav,audio/wav" disabled={busy || isRecording} onChange={handleUpload} />
+            <label className={`pill-btn pill-btn--outline create-file${allowed && !busy && !recording ? '' : ' is-disabled'}`}>
+              <span className="pill-inner">{t('vs.upload')}</span>
+              <input type="file" accept="audio/*,.wav,.mp3,.m4a" disabled={!allowed || !!busy || !!recording} onChange={onFile} />
             </label>
           </div>
+          <p className="page-note clone-hint">{t('vs.hint')}</p>
+          {busy && <p className="page-note">{t(busy)}</p>}
+          {error && <div className="page-alert">{error}</div>}
+        </div>
 
-          {voices.length === 0 ? (
-            <p className="page-note">No voices saved yet.</p>
-          ) : (
-            <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+        <div className="create-card clone-card">
+          <h2 className="page-h2">{t('vs.yours')} <span className="create-count">{voices.length}</span></h2>
+          {voices.length === 0 ? <p className="page-note">{t('vs.none')}</p> : (
+            <ul className="clone-list">
               {voices.map(v => (
-                <li key={v.id} style={{ 
-                  padding: '1rem', 
-                  background: activeVoice === v.id ? 'rgba(0, 210, 255, 0.1)' : 'var(--bg)', 
-                  border: activeVoice === v.id ? '1px solid #00d2ff' : '1px solid var(--border)',
-                  borderRadius: '8px',
-                  display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-                  cursor: 'pointer',
-                  transition: 'all 0.2s ease'
-                }} onClick={() => setActiveVoice(v.id)}>
-                  <div>
-                    <strong style={{ display: 'block', color: 'var(--text)' }}>{v.name}</strong>
-                    <div style={{ fontSize: '0.8rem', color: 'var(--text-dim)', marginTop: '4px' }}>ID: {v.id.substring(0,8)}...</div>
-                  </div>
-                  <button onClick={(e) => { e.stopPropagation(); handleDelete(v.id) }} style={{ background: 'rgba(255,0,0,0.1)', border: '1px solid rgba(255,0,0,0.2)', color: '#ff6b6b', cursor: 'pointer', padding: '0.5rem', borderRadius: '4px' }}>✕</button>
+                <li key={v.id} className={active === v.id ? 'is-active' : ''}>
+                  <button className="clone-pick" onClick={() => setActive(v.id)}>
+                    <strong>{v.name}</strong>
+                    <span>{t('vs.sample', { seconds: v.seconds, date: new Date(v.created_at).toLocaleDateString() })}</span>
+                  </button>
+                  <button className="model-delete" disabled={!!busy} onClick={() => remove(v.id)}>{t('mem.delete')}</button>
                 </li>
               ))}
             </ul>
           )}
-        </div>
 
-        {/* Right Col: Testing Area */}
-        <div className="create-card">
-          <h2 className="page-h2">Testing Area</h2>
-          {error && <div className="page-alert" style={{ marginBottom: '1rem' }}>{error}</div>}
-          
-          {!activeVoice ? (
-            <p className="page-note">Select a voice from the left or upload a new one to start testing.</p>
-          ) : (
-            <div>
-              <p style={{ marginBottom: '1.5rem', fontSize: '1.1rem', color: 'var(--text)' }}>Active Voice: <strong style={{ color: '#00d2ff' }}>{voices.find(v => v.id === activeVoice)?.name}</strong></p>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <button className="demo-quick-btn" disabled={busy} onClick={() => handleSpeak("Hello! This is a quick test to see how my cloned voice sounds.", activeVoice)}>
-                  Quick Test: "Hello! This is a quick test..."
-                </button>
-                
-                <div style={{ position: 'relative', marginTop: '1rem' }}>
-                  <textarea 
-                    rows={4}
-                    value={customText}
-                    onChange={e => setCustomText(e.target.value)}
-                    placeholder="Type anything here to hear it in the cloned voice..."
-                    style={{ width: '100%', padding: '1rem', background: 'var(--bg)', border: '1px solid var(--border)', color: 'var(--text)', borderRadius: '8px', fontFamily: 'inherit', resize: 'vertical' }}
-                  />
-                  <button 
-                    className="pill-btn pill-btn--accent" 
-                    disabled={busy || !customText.trim()} 
-                    onClick={() => handleSpeak(customText, activeVoice)}
-                    style={{ marginTop: '1rem', width: '100%' }}
-                  >
-                    <span className="pill-inner">{busy ? 'Synthesizing...' : 'Speak Custom Text'}</span>
-                  </button>
-                </div>
-              </div>
+          {legacy.length > 0 && (
+            <div className="clone-legacy">
+              <p className="page-note">{t('vs.legacy')}</p>
+              <ul className="clone-list">
+                {legacy.map(v => (
+                  <li key={v.id}>
+                    <span className="clone-pick"><strong>{v.name || t('vs.unnamed')}</strong></span>
+                    <button className="model-delete" disabled={!!busy} onClick={() => remove(v.id, true)}>{t('vs.deleteFish')}</button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
-              {audioUrl && (
-                <div style={{ marginTop: '2rem', animation: 'fadeIn 0.5s ease-in', padding: '1.5rem', background: 'rgba(0,210,255,0.05)', borderRadius: '8px', border: '1px solid rgba(0,210,255,0.2)' }}>
-                  <p style={{ marginBottom: '0.5rem', color: '#00d2ff', fontSize: '0.9rem', fontWeight: 'bold' }}>Synthesis Complete!</p>
-                  <audio controls src={audioUrl} autoPlay style={{ width: '100%' }} />
-                </div>
-              )}
+          {activeVoice && (
+            <div className="clone-test">
+              <h3>{t('vs.test', { name: activeVoice.name })}</h3>
+              <button className="demo-quick-btn" disabled={!!busy} onClick={() => speak(t('vs.quickLine'))}>{t('vs.quickTest')}</button>
+              <textarea className="create-select" rows={3} maxLength={2000} value={text} onChange={e => setText(e.target.value)} placeholder={t('vs.typePlaceholder')} />
+              <button className="pill-btn pill-btn--accent" disabled={!!busy || !text.trim()} onClick={() => speak(text)}>
+                <span className="pill-inner">{busy === 'vs.speaking' ? t('vs.synth') : t('vs.speak')}</span>
+              </button>
+              {audioUrl && <audio className="clone-audio" controls src={audioUrl} />}
             </div>
           )}
         </div>

@@ -27,7 +27,7 @@ SYNTHESIZED = "synthesized"
 # ("personal_writing": letters, journals... uploaded to a custom model as
 # written by the person; "written_about" uploads are third party;
 # "writing": a famous figure's published works, figures/build_figures.py)
-_FIRST_PERSON_TYPES = {"interview", "tweet", "book", "speech", "personal_writing", "writing"}
+_FIRST_PERSON_TYPES = {"interview", "tweet", "book", "speech", "personal_writing", "writing", "voice_note"}
 # interview_protocol "origin" values (who answered the interview question)
 _SELF_ORIGINS = {"self", ""}
 _SYNTHESIZED_ORIGINS = {"synthesized"}
@@ -47,6 +47,8 @@ _TYPE_LABELS = {
     "personal_writing": "Personal Writing",
     "writing": "Writing",
     "written_about": "Document",
+    "reviewed_answer": "Reviewed past answer",
+    "voice_note": "Voice note",
 }
 
 
@@ -58,7 +60,7 @@ def voice_of(meta: dict) -> str:
         if origin in _SYNTHESIZED_ORIGINS:
             return SYNTHESIZED
         return FIRST_PERSON if origin in _SELF_ORIGINS else THIRD_PARTY
-    if source_type in ("auto_trained", "conversation"):
+    if source_type in ("auto_trained", "conversation", "reviewed_answer"):
         return SYNTHESIZED
     if source_type in _FIRST_PERSON_TYPES:
         return FIRST_PERSON
@@ -83,6 +85,8 @@ def attribution(meta: dict) -> str:
         return "the persona's own interview" if origin in _SELF_ORIGINS else f"an interview with their {origin}"
     if source_type == "written_about":
         return f"the document \"{meta.get('source_name', '')}\""
+    if source_type == "reviewed_answer":
+        return "a past answer a person reviewed and approved"
     return {
         "news": "a news report",
         "document": "a web article",
@@ -153,6 +157,35 @@ def grounding_score(answer: str, evidence_texts: list[str]) -> float:
     return round(len(answer_words & evidence_words) / len(answer_words), 2)
 
 
+_SENTENCE_END = re.compile(r"(?<=[.!?])\s+")
+
+
+def _sentences(text: str, min_words: int = 4) -> list[str]:
+    return [p.strip() for p in _SENTENCE_END.split(text) if len(p.split()) >= min_words]
+
+
+def semantic_support(answer: str, evidence_texts: list[str], embedder, min_similarity: float) -> float:
+    """Share (0-1) of the answer's sentences that some evidence sentence backs.
+
+    A sentence counts as supported when its embedding is within
+    *min_similarity* (cosine) of at least one sentence, or whole passage, of
+    the evidence. Unlike grounding_score this catches an answer that reuses
+    the evidence's words for one sentence and invents the next (the
+    "half-invented" 0.27-0.38 cases lexical scoring lets through), and it
+    doesn't punish faithful rewording.
+    """
+    claims = _sentences(answer)
+    if not claims:
+        return 1.0
+    pieces = [t for text in evidence_texts if text for t in (_sentences(text) or [text.strip()]) + [text.strip()]]
+    if not pieces:
+        return 0.0
+    claim_vecs = embedder.encode(claims, normalize_embeddings=True)
+    piece_vecs = embedder.encode(pieces, normalize_embeddings=True)
+    best = (claim_vecs @ piece_vecs.T).max(axis=1)
+    return round(float((best >= min_similarity).mean()), 2)
+
+
 def format_source_citation(metadata: dict, doc_text: str = "", distance: float | None = None) -> dict:
     """Format a user-facing source citation from ChromaDB metadata.
 
@@ -162,11 +195,16 @@ def format_source_citation(metadata: dict, doc_text: str = "", distance: float |
     """
     source_type = metadata.get("source_type", "unknown")
     source_file = metadata.get("source_file", "unknown")
-    # .title() capitalises after apostrophes ("Freedom'S Battle"); undo that
-    source_name = re.sub(r"'S\b", "'s", str(metadata.get("source_name", "")).replace("_", " ").title())
+    source_name = str(metadata.get("source_name", "")).replace("_", " ")
+    if source_name == source_name.lower():
+        # file-derived names ("joe rogan podcast"); real titles keep their case ("TED2022", "OpenAI")
+        # .title() capitalises after apostrophes ("Freedom'S Battle"); undo that
+        source_name = re.sub(r"'S\b", "'s", source_name.title())
     date = metadata.get("date", "")
     page = metadata.get("page")
     voice = voice_of(metadata)
+    start = metadata.get("start_seconds")
+    at = _clock(start) if isinstance(start, (int, float)) else ""
 
     parts = [_TYPE_LABELS.get(source_type, str(source_type).title())]
     bare_file = str(source_file)
@@ -178,6 +216,8 @@ def format_source_citation(metadata: dict, doc_text: str = "", distance: float |
         parts.append(f"({date})")
     if page:
         parts.append(f"p. {page}")
+    if at:
+        parts.append(f"at {at}")
     if voice == SYNTHESIZED:
         parts.append("(synthesized, not a quote)")
     elif voice == THIRD_PARTY:
@@ -192,4 +232,64 @@ def format_source_citation(metadata: dict, doc_text: str = "", distance: float |
         "voice": voice,
         "memory_id": metadata.get("memory_id", ""),
         "distance": round(distance, 3) if distance is not None else None,
+        # A link to the moment in the video ("Watch at 1:02:14") or to the post
+        "url": _safe_url(metadata.get("url")),
+        "at": at,
+        # What a tweet quoted or replied to (rebuild_elon.py), shown with it
+        "context": tweet_context(metadata),
+        # Interviews whose transcript doesn't name the speakers: unknown, or
+        # told apart by a language model (speaker_labels.py)
+        "speaker_verified": metadata.get("speaker_verified", None),
+        "speaker_inferred": bool(metadata.get("speaker_inferred")),
+        # Custom models: the voice note (and the moment in it) or photo it came from
+        "original": _original(metadata),
     }
+
+
+def _original(metadata: dict) -> dict | None:
+    kind = metadata.get("original_kind")
+    if kind not in ("audio", "image", "scan") or not metadata.get("source_file"):
+        return None
+    out = {"kind": kind, "file": metadata["source_file"]}
+    if kind == "audio" and isinstance(metadata.get("audio_start"), (int, float)):
+        out.update(start=metadata["audio_start"], end=metadata.get("audio_end"), at=_clock(metadata["audio_start"]))
+    if kind == "scan" and metadata.get("page"):
+        out["page"] = metadata["page"]
+    return out
+
+
+def _clock(seconds: float) -> str:
+    h, rest = divmod(int(seconds), 3600)
+    m, s = divmod(rest, 60)
+    return f"{h}:{m:02d}:{s:02d}" if h else f"{m}:{s:02d}"
+
+
+def _safe_url(url) -> str:
+    """Only plain web links to the sources' own sites reach the page."""
+    url = str(url or "")
+    return url if re.match(r"^https://(?:www\.)?(?:youtube\.com|youtu\.be|x\.com|twitter\.com)/", url) else ""
+
+
+def tweet_context(metadata: dict) -> dict | None:
+    """{"kind": "quote" | "reply", "author", "text"} for a tweet that quoted or answered a post."""
+    kind = metadata.get("context_kind")
+    if kind not in ("quote", "reply"):
+        return None
+    return {"kind": kind, "author": str(metadata.get("context_author") or ""), "text": str(metadata.get("context_text") or "")}
+
+
+def context_clause(metadata: dict, limit: int = 140) -> str:
+    """' (quoting @user: “…”)' / ' (replying to @user)' after a quoted tweet,
+    so it isn't read as a standalone view."""
+    context = tweet_context(metadata)
+    if not context:
+        return ""
+    who = "my earlier post" if context["author"].lower() == str(metadata.get("person_handle", "elonmusk")).lower() \
+        else f"@{context['author']}" if context["author"] else "a post"
+    text = re.sub(r"https?://\S+", "", context["text"]).strip()
+    # shown inside quote marks: its own quotations get single ones
+    text = re.sub(r"\s+", " ", text).replace('"', "'").replace("“", "‘").replace("”", "’")
+    if len(text) > limit:
+        text = text[:limit].rsplit(" ", 1)[0] + "…"
+    verb = "quoting" if context["kind"] == "quote" else "replying to"
+    return f" ({verb} {who}: “{text}”)" if text else f" ({verb} {who})"

@@ -1,7 +1,27 @@
+"""Admin/ops endpoints from PR #2 (services/ops.py): roles, MFA, sessions,
+audit, notifications, log search, timings; and that they're off unless
+configured, with no default password or secret."""
+
+import base64
+import hashlib
+import hmac
 import json
 import time
 
-from services import access
+import pytest
+
+from services import ops as access
+
+SECRET, ADMIN_PW, ANALYST_PW = "pytest-ops-secret-0123456789", "pytest-admin-pw", "pytest-analyst-pw"
+
+
+@pytest.fixture(autouse=True)
+def ops_on(tmp_path, monkeypatch):
+    monkeypatch.setattr(access, "AUDIT_LOG_PATH", tmp_path / "audit.jsonl")
+    monkeypatch.setattr(access, "QA_LOG_PATH", tmp_path / "qa.jsonl")
+    assert access.configure(secret=SECRET, admin_password=ADMIN_PW, analyst_password=ANALYST_PW)
+    yield
+    access.configure(secret="", admin_password="", analyst_password="")
 
 
 def test_rbac_permissions():
@@ -89,3 +109,65 @@ def test_audit_notifications_search_presets_cache_and_timing(tmp_path, monkeypat
     access.record_timing("endpoint", 30)
     summary = access.timing_summary()
     assert summary["endpoint"]["count"] >= 2
+
+
+# ---- Off unless configured; no published password or secret ----
+
+def _forge(secret: str, role: str = "admin") -> str:
+    b64 = lambda b: base64.urlsafe_b64encode(b).rstrip(b"=").decode()  # noqa: E731
+    body = b64(json.dumps({"exp": int(time.time()) + 3600, "jti": "x", "role": role, "sub": role},
+                          separators=(",", ":"), sort_keys=True).encode())
+    return body + "." + b64(hmac.new(secret.encode(), body.encode(), hashlib.sha256).digest())
+
+
+def test_off_without_settings(client):
+    access.configure(secret="", admin_password="", analyst_password="")
+    r = client.post("/ops/auth/login", json={"username": "admin", "password": "admin123!"})
+    assert r.status_code == 404 and "CHRONUS_SESSION_SECRET" in r.json()["detail"]
+    assert client.get("/ops/search/logs", headers={"authorization": "Bearer " + _forge("x" * 20)}).status_code == 404
+    # PR #2's built-in secret, or a weak one, never switches it on
+    assert not access.configure(secret="chronus-dev-only-secret-change-me", admin_password="a-long-password")
+    assert not access.configure(secret="short", admin_password="a-long-password")
+    assert not access.configure(secret=SECRET, admin_password="")
+
+
+def test_tokens_signed_with_another_secret_are_refused(client):
+    for secret in ("chronus-dev-only-secret-change-me", "some-other-secret-0123456789"):
+        r = client.get("/ops/audit", headers={"authorization": "Bearer " + _forge(secret)})
+        assert r.status_code == 401
+    assert client.get("/ops/audit", headers={"authorization": "Bearer " + _forge(SECRET)}).status_code == 200
+
+
+def test_old_default_passwords_dont_work():
+    assert not access.login("admin", "admin123!", "c1").ok
+    assert not access.login("analyst", "analyst123!", "c2").ok
+
+
+def test_http_flow_roles_and_audit(client):
+    def login(user, pw):
+        r = client.post("/ops/auth/login", json={"username": user, "password": pw})
+        assert r.status_code == 200, r.text
+        return {"authorization": f"Bearer {r.json()['access_token']}"}
+
+    admin, analyst = login("admin", ADMIN_PW), login("analyst", ANALYST_PW)
+    access.QA_LOG_PATH.write_text(json.dumps({"query": "Why Mars?", "mode": "mix_method", "confidence": "high",
+                                              "persona": "elon_musk", "timestamp": "2026-10-07T00:00:00"}) + "\n")
+    assert client.get("/ops/search/logs", params={"query": "mars"}, headers=analyst).json()["count"] == 1
+    export = client.post("/ops/bulk/export/logs", headers=admin)
+    assert export.status_code == 200 and "Why Mars?" in export.text
+    assert client.get("/ops/audit", headers=analyst).status_code == 403  # analysts can't read the audit log
+    actions = [row["action"] for row in client.get("/ops/audit", headers=admin).json()["items"]]
+    assert "bulk.logs.export" in actions and "search.logs" in actions
+    assert client.get("/ops/auth/me", headers=admin).json()["role"] == "admin"
+    assert client.post("/ops/auth/logout", headers=admin).json() == {"success": True}
+    assert client.get("/ops/auth/me", headers=admin).status_code == 401
+    # The site's own sign-in is unchanged
+    assert client.post("/auth/login", json={"code": "anything"}).json() == {"signed_in": True, "user": None}
+
+
+def test_timings_use_route_names(client):
+    client.get("/personas/elon_musk")
+    client.get("/no/such/page/12345")
+    names = access.timing_summary()
+    assert "http.GET:/personas/{persona_id}" in names
+    assert not any("12345" in n for n in names)

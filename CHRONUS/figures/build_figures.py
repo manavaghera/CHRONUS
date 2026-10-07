@@ -30,6 +30,7 @@ import pyarrow.dataset  # noqa: E402,F401  (before sentence_transformers: Window
 from sentence_transformers import SentenceTransformer  # noqa: E402
 
 import merge_sources  # noqa: E402
+from services import chroma_index  # noqa: E402
 from config import config  # noqa: E402
 from evaluation.questions import OUT_OF_DOMAIN  # noqa: E402
 
@@ -117,17 +118,9 @@ def build_units(figure: dict) -> list[dict]:
 
 
 def calibrate_threshold(collection, embedder) -> float:
-    """Distance just below the 10th percentile of best matches for questions
-    this archive can't answer (evaluation/questions.py), within
-    [config.DISTANCE_THRESHOLD, THRESHOLD_MAX]."""
-    vectors = embedder.encode(OUT_OF_DOMAIN, normalize_embeddings=True, show_progress_bar=False).tolist()
-    found = collection.query(query_embeddings=vectors, n_results=12, include=["documents", "distances"])
-    best = []
-    for docs, dists in zip(found["documents"], found["distances"]):
-        substantive = [d for doc, d in zip(docs, dists) if len(doc.split()) >= config.MIN_EVIDENCE_WORDS]
-        best.append(min(substantive or dists))  # same short-memory filter as retrieval
-    p10 = sorted(best)[len(best) // 10]
-    return round(min(THRESHOLD_MAX, max(config.DISTANCE_THRESHOLD, p10 - THRESHOLD_MARGIN)), 2)
+    """Per-figure "I don't know" threshold (services/calibration.py)."""
+    from services.calibration import calibrate_threshold as calibrate
+    return calibrate(collection, embedder, cap=THRESHOLD_MAX)
 
 
 def build(figure: dict, client, embedder) -> int:
@@ -137,7 +130,7 @@ def build(figure: dict, client, embedder) -> int:
         client.delete_collection(collection_name)  # rebuild from scratch: sources may have changed
     except Exception:
         pass
-    collection = client.create_collection(name=collection_name, metadata={"hnsw:space": "cosine"})
+    collection = client.create_collection(name=collection_name, metadata=chroma_index.COLLECTION_METADATA)
     ids, docs, metas = [], [], []
     for i, unit in enumerate(units):
         memory_id = "fig_" + hashlib.md5(f"{figure['id']}|{i}|{unit['text']}".encode("utf-8")).hexdigest()[:16]

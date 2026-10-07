@@ -4,9 +4,9 @@ CHRONUS Configuration — Single source of truth for all settings.
 All other modules should import from here instead of hardcoding values.
 """
 
+import os
 from dataclasses import dataclass, field
 from pathlib import Path
-import os
 
 
 @dataclass
@@ -36,6 +36,18 @@ class ChronusConfig:
     invented answers scored 0.14-0.22 and good ones 0.60-1.00; half-invented
     ones (0.27-0.38) slip through, a limit of lexical scoring. 0 disables."""
 
+    NATURAL_MIN_SEMANTIC_SUPPORT: float = field(default_factory=lambda: float(
+        os.getenv("CHRONUS_MIN_SEMANTIC_SUPPORT", "0")))
+    """Natural-mode answers where less than this share of sentences is backed
+    by an evidence sentence (services/provenance.py semantic_support) fall
+    back to Mix Method. Catches half-invented answers the lexical score lets
+    through. 0 = off until calibrated on your samples; try 0.67 (at most one
+    unsupported sentence in three) with SEMANTIC_SENTENCE_MIN 0.5."""
+
+    SEMANTIC_SENTENCE_MIN: float = 0.5
+    """Cosine similarity (MiniLM) at which an evidence sentence counts as
+    backing an answer sentence."""
+
     SUPPORT_MARGIN: float = 0.25
     """Supporting memories must be within this raw distance of the best match.
     Measured 2026-10-06: on Elon's corpus the 2nd/3rd memories were at most
@@ -46,8 +58,22 @@ class ChronusConfig:
     threshold: short tweets embed close to short questions ("Why Mars?" ->
     "Mars is The New World") but carry almost no content."""
 
-    IMPORTANCE_WEIGHT: float = 0.15
-    """Weight for importance score in re-ranking: adjusted = dist - (importance * weight)."""
+    IMPORTANCE_WEIGHT: float = field(default_factory=lambda: float(os.getenv("CHRONUS_IMPORTANCE_WEIGHT", "0.08")))
+    """Largest ranking bonus importance can give (a score-5 memory; score 1 gets 0):
+    adjusted = dist - weight * (importance - 1) / 4. It breaks near-ties only.
+    It used to be importance x 0.15, which gave interview answers (score 4) a
+    0.45 lead over tweets and letters (score 1), more than SUPPORT_MARGIN, and
+    the 2026-10-06 evaluation ranked that pipeline below plain semantic search
+    (P@1 0.12 vs 0.16). `python -m evaluation.run_eval` scores weight 0 too."""
+
+    RETRIEVAL_MODE: str = field(default_factory=lambda: os.getenv("CHRONUS_RETRIEVAL_MODE", "dense").strip().lower())
+    """"dense" (semantic search + importance bias) or "hybrid" (semantic + BM25
+    keyword search fused by reciprocal rank; services/hybrid.py). Both keep
+    the same distance threshold, so "I don't know" behaves the same."""
+
+    RERANKER_MODEL: str = field(default_factory=lambda: os.getenv("CHRONUS_RERANKER_MODEL", ""))
+    """Optional cross-encoder to rerank retrieved memories, e.g.
+    "cross-encoder/ms-marco-MiniLM-L-6-v2" (~90 MB download). Empty = off."""
 
     # === EMBEDDING ===
     EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
@@ -86,23 +112,37 @@ class ChronusConfig:
     LLM_CONTEXT_WINDOW: int = 8192
 
     # === LLM PROVIDER ===
-    LLM_PROVIDER: str = "openrouter"  # "local" (on-device, services/local_llm.py), "ollama", or "openai"-compatible ("openrouter")
+    LLM_PROVIDER: str = field(default_factory=lambda: os.getenv("CHRONUS_LLM_PROVIDER", "openrouter").strip().lower())
+    """"local" (on-device, services/local_llm.py), "ollama", or an OpenAI-compatible
+    API ("openrouter", "openai"). Set CHRONUS_LLM_PROVIDER in .env to switch.
+    Case doesn't matter ("OpenRouter" once sent every request to Ollama)."""
     OPENAI_API_KEY: str = field(default_factory=lambda: os.getenv("OPENAI_API_KEY", ""))
     """API key for the OpenAI-compatible provider (also used for OpenRouter).
     Read from the OPENAI_API_KEY env var or CHRONUS/.env (gitignored)."""
-    OPENAI_MODEL: str = "nvidia/nemotron-3-super-120b-a12b:free"
+    OPENAI_MODEL: str = field(default_factory=lambda: os.getenv(
+        "CHRONUS_OPENAI_MODEL", "nvidia/nemotron-3-super-120b-a12b:free"))
     """Primary model. ":free" models work on a key with no purchased credits.
     "openrouter/auto" needs credits (HTTP 402 otherwise), and "openrouter/free"
     can route to non-chat models (e.g. a safety classifier), so pin one."""
 
     OPENAI_FALLBACK_MODELS: list[str] = field(default_factory=lambda: [
-        "qwen/qwen3.8-27b:free",
         "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "google/gemma-4-31b-it:free",
     ])
     """OpenRouter tries these in order when the primary errors or is
-    rate-limited (free models return 429 under load)."""
-    OPENAI_BASE_URL: str = "https://openrouter.ai/api/v1"
+    rate-limited (free models return 429 under load). Free models come and
+    go (qwen3.8-27b stopped being free in Oct 2026): check
+    openrouter.ai/api/v1/models. A key with no credits gets 50 free
+    requests a day in total, whichever model answers."""
+    OPENAI_BASE_URL: str = field(default_factory=lambda: os.getenv(
+        "CHRONUS_OPENAI_BASE_URL", "https://openrouter.ai/api/v1"))
     """OpenAI-compatible endpoint. For OpenRouter: https://openrouter.ai/api/v1"""
+
+    LLM_DEADLINE_SECONDS: float = field(default_factory=lambda: float(os.getenv("CHRONUS_LLM_DEADLINE", "25")))
+    """Most time one AI-voice answer may take, streaming included; after that
+    the answer is verbatim quotes. A slow provider used to hold every question
+    for 60 s. After 3 failures in a row the AI voice is skipped for a minute
+    (services/natural_mode.py breaker)."""
 
     # === LOCAL LLM (LLM_PROVIDER = "local") ===
     LOCAL_BASE_MODEL: str = "Qwen/Qwen2.5-1.5B-Instruct"
@@ -123,9 +163,16 @@ class ChronusConfig:
     """Free developer tier (fair use) until 2026-11-30; after that "s2.1-pro"
     (paid, about $15 per 12 hours of speech)."""
 
+    # === SPEECH TO TEXT (voice input, services/stt.py) ===
+    STT_MODEL: str = field(default_factory=lambda: os.getenv("CHRONUS_STT_MODEL", "base"))
+    """faster-whisper model for local transcription ("tiny", "base", "small"...).
+    Optional: pip install faster-whisper. Runs on this machine."""
+
     # === STORAGE ===
-    CHROMA_PATH: str = field(default_factory=lambda: str(Path(__file__).parent / "chroma_db"))
-    """Path to ChromaDB persistent storage."""
+    CHROMA_PATH: str = field(default_factory=lambda: os.getenv(
+        "CHRONUS_CHROMA_PATH", str(Path(__file__).parent / "chroma_db")))
+    """Path to ChromaDB persistent storage (CHRONUS_CHROMA_PATH overrides; the
+    tests use a throwaway one when the real corpus isn't available)."""
 
     COLLECTION_NAME: str = "elon_musk"
     """Default ChromaDB collection name."""
@@ -137,23 +184,33 @@ class ChronusConfig:
     """Directory containing interview protocol and other data."""
 
     # === SERVER ===
-    HOST: str = "127.0.0.1"
-    """Server bind address (localhost only — no auth on endpoints)."""
+    HOST: str = field(default_factory=lambda: os.getenv("CHRONUS_HOST", "127.0.0.1"))
+    """Server bind address. Loopback by default: anything else exposes the
+    server to the network, so set CHRONUS_ACCESS_CODE too (see below)."""
 
-    PORT: int = 8001
-    """Server port."""
+    PORT: int = field(default_factory=lambda: int(os.getenv("CHRONUS_PORT", "8001")))
+    """Server port (the website's dev proxy expects 8001)."""
 
-    # === VOICE (Optional) ===
-    VOICE_ENGINE: str = "xtts"
-    """Voice synthesis engine: 'xtts' (local) or 'elevenlabs' (cloud)."""
+    ALLOWED_HOSTS: list[str] = field(default_factory=lambda: [
+        h.strip() for h in os.getenv("CHRONUS_ALLOWED_HOSTS", "localhost,127.0.0.1,::1").split(",") if h.strip()
+    ])
+    """Host names the server answers to. Anything else is refused, which stops
+    DNS rebinding (a website pointing its own domain at 127.0.0.1 to read
+    this server). Add your LAN name or domain here if you host it."""
 
-    SPEAKER_WAV_PATH: str = field(default_factory=lambda: str(
-        Path(__file__).parent / "07-Voice" / "reference_elon.wav"
-    ))
-    """Path to reference speaker audio for voice cloning."""
+    USERS: str = field(default_factory=lambda: os.getenv("CHRONUS_USERS", ""))
+    """Accounts, "name:code,name:code". Each person signs in and sees only the
+    custom models they made; pretrained ones are shared. Overrides ACCESS_CODE."""
 
-    ELEVENLABS_API_KEY: str = field(default_factory=lambda: os.getenv("ELEVENLABS_API_KEY", ""))
-    """API key for ElevenLabs cloud TTS (set via ELEVENLABS_API_KEY env var)."""
+    ACCESS_CODE: str = field(default_factory=lambda: os.getenv("CHRONUS_ACCESS_CODE", ""))
+    """Optional passcode for the whole API (services/access.py). Empty = no
+    login, fine on loopback; set it before exposing the server anywhere."""
+
+    LOG_RETENTION_DAYS: int = field(default_factory=lambda: int(os.getenv("CHRONUS_LOG_RETENTION_DAYS", "90")))
+    """Questions and answers (qa_log.jsonl) and feedback (feedback.jsonl) older
+    than this many days are deleted, checked at most once an hour. 0 keeps them
+    forever. People can also delete their own history at any time
+    (DELETE /history, the "Delete my history" button on the Insights page)."""
 
     # === PERSONA DEFAULTS ===
     DEFAULT_PERSONA: str = "elon_musk"
@@ -199,9 +256,56 @@ _load_env_file(Path(__file__).parent / ".env")
 # Singleton instance
 config = ChronusConfig()
 
+LLM_PROVIDERS = ("openrouter", "openai", "ollama", "local")
+RETRIEVAL_MODES = ("dense", "hybrid")
+_SECRET_NAME = ("KEY", "CODE", "USERS", "SECRET", "PASSWORD", "TOKEN")
+
+
+def validate(cfg: ChronusConfig = config) -> tuple[list[str], list[str]]:
+    """(errors, warnings) about the settings. Errors stop the server from
+    starting: a typo used to fall back silently ("hybird" -> dense search)."""
+    errors, warnings = [], []
+    if cfg.LLM_PROVIDER not in LLM_PROVIDERS:
+        errors.append(f"CHRONUS_LLM_PROVIDER is {cfg.LLM_PROVIDER!r}; use one of {', '.join(LLM_PROVIDERS)}")
+    if cfg.RETRIEVAL_MODE not in RETRIEVAL_MODES:
+        errors.append(f"CHRONUS_RETRIEVAL_MODE is {cfg.RETRIEVAL_MODE!r}; use one of {', '.join(RETRIEVAL_MODES)}")
+    if not 0 <= cfg.NATURAL_MIN_SEMANTIC_SUPPORT <= 1:
+        errors.append("CHRONUS_MIN_SEMANTIC_SUPPORT must be between 0 and 1")
+    if not 0 <= cfg.IMPORTANCE_WEIGHT <= 0.5:
+        errors.append("CHRONUS_IMPORTANCE_WEIGHT must be between 0 and 0.5")
+    if cfg.LOG_RETENTION_DAYS < 0:
+        errors.append("CHRONUS_LOG_RETENTION_DAYS can't be negative (0 keeps logs forever)")
+    if not 1 <= cfg.LLM_DEADLINE_SECONDS <= 300:
+        errors.append("CHRONUS_LLM_DEADLINE must be between 1 and 300 seconds")
+    if not 0 < cfg.PORT < 65536:
+        errors.append(f"CHRONUS_PORT {cfg.PORT} is not a valid port")
+    if not cfg.ALLOWED_HOSTS:
+        errors.append("CHRONUS_ALLOWED_HOSTS is empty, so every request would be refused")
+    if cfg.LLM_PROVIDER in ("openrouter", "openai") and not cfg.OPENAI_API_KEY:
+        warnings.append("No OPENAI_API_KEY: the AI voice is off and every answer will be verbatim quotes")
+    if cfg.HOST not in ("127.0.0.1", "localhost", "::1") and not (cfg.ACCESS_CODE or cfg.USERS):
+        warnings.append(f"Binding {cfg.HOST} with no CHRONUS_ACCESS_CODE: anyone on the network can use this server")
+    return errors, warnings
+
+
+def describe(cfg: ChronusConfig = config) -> list[str]:
+    """Settings for display, with keys, codes and passwords hidden."""
+    lines = []
+    for name, value in vars(cfg).items():
+        if name.startswith("_"):
+            continue
+        if any(word in name for word in _SECRET_NAME):
+            value = "set (hidden)" if value else "not set"
+        lines.append(f"  {name}: {value}")
+    return lines
+
+
 if __name__ == "__main__":
     print("CHRONUS Configuration")
     print("=" * 50)
-    for field_name, field_value in vars(config).items():
-        if not field_name.startswith("_"):
-            print(f"  {field_name}: {field_value}")
+    print("\n".join(describe()))
+    problems, notes = validate()
+    for line in problems:
+        print(f"ERROR: {line}")
+    for line in notes:
+        print(f"Warning: {line}")

@@ -3,7 +3,7 @@
 import pytest
 
 import services.natural_mode as nm
-from post_process import scrub
+from services.post_process import scrub
 
 
 @pytest.fixture(scope="module")
@@ -11,6 +11,7 @@ def spacex(srv):
     return srv.retrieve("What is the goal of SpaceX?"), srv.load_mix_method_identity_card()
 
 
+@pytest.mark.corpus
 @pytest.mark.parametrize("label,kwargs", [
     ("null content (old crash)", {"content": None}),
     ("empty content", {"content": ""}),
@@ -26,6 +27,7 @@ def test_bad_llm_replies_fall_back_to_quotes(fake_llm, spacex, label, kwargs):
     assert all({"citation", "voice", "memory_id", "distance"} <= s.keys() for s in out["sources"])
 
 
+@pytest.mark.corpus
 def test_good_reply_is_used_and_cleaned(fake_llm, spacex):
     memories, card = spacex
     with fake_llm(content="Mars is the goal—a backup for life."):
@@ -33,6 +35,7 @@ def test_good_reply_is_used_and_cleaned(fake_llm, spacex):
     assert out["mode"] == "natural" and out["response"] == "Mars is the goal, a backup for life."
 
 
+@pytest.mark.corpus
 def test_cut_off_reply_keeps_complete_sentences(fake_llm, spacex):
     memories, card = spacex
     with fake_llm(content="The goal of SpaceX is life on Mars. And then we", finish="length"):
@@ -40,6 +43,7 @@ def test_cut_off_reply_keeps_complete_sentences(fake_llm, spacex):
     assert out["response"] == "The goal of SpaceX is life on Mars."
 
 
+@pytest.mark.corpus
 def test_answers_capped_at_four_sentences(fake_llm, spacex):
     memories, card = spacex
     reply = "The goal of SpaceX is life on Mars. Rockets must be reusable. Earth needs a backup. Mars is the goal. Five. Six."
@@ -48,6 +52,7 @@ def test_answers_capped_at_four_sentences(fake_llm, spacex):
     assert out["response"].endswith("Mars is the goal.")
 
 
+@pytest.mark.corpus
 def test_history_and_settings_reach_the_llm(fake_llm, spacex):
     memories, card = spacex
     with fake_llm(content="Making life multiplanetary.") as post:
@@ -57,6 +62,7 @@ def test_history_and_settings_reach_the_llm(fake_llm, spacex):
     assert sent["reasoning"] == {"enabled": False} and sent["max_tokens"] == nm.NATURAL_MAX_TOKENS
 
 
+@pytest.mark.corpus
 def test_local_provider_runs_on_device_with_adapter(spacex, monkeypatch):
     from unittest import mock
     memories, card = spacex

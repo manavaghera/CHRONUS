@@ -35,3 +35,14 @@ soundfile>=0.12
 torch>=2.0.0
 # To reinstall torch with CUDA: pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
+
+# Encrypted model export/import (services/bundle.py)
+cryptography>=42
+
+# ---- Optional: read photos and scanned letters on this computer (services/originals.py) ----
+# rapidocr-onnxruntime>=1.4   (English; or install Tesseract for Hindi and Gujarati too)
+# Hindi and Gujarati: winget install UB-Mannheim.TesseractOCR, pip install pytesseract,
+#   then put eng/hin/guj.traineddata (github.com/tesseract-ocr/tessdata) in models/.tessdata/
+
+# ---- Optional: local speech-to-text for voice input (services/stt.py) ----
+# faster-whisper>=1.0  av<15   (av 15+ breaks faster-whisper 1.2: "unexpected keyword metadata_errors")

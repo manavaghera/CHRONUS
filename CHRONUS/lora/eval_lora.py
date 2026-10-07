@@ -25,7 +25,7 @@ sys.path.insert(0, str(ROOT))
 
 from evaluation.run_eval import _cosine, _f1, _mean, srv  # noqa: E402  (loads pyarrow before torch)
 from evaluation.ted_qa import SOURCE_IN_MEMORY, load_pairs  # noqa: E402
-from post_process import scrub  # noqa: E402
+from services.post_process import scrub  # noqa: E402
 import services.natural_mode as nm  # noqa: E402
 from services import local_llm  # noqa: E402
 from services.provenance import anchor_first, format_source_citation  # noqa: E402

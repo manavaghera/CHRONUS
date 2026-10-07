@@ -1,466 +1,308 @@
 """
-Access control, sessions, MFA, audit trail, notifications, search presets and
-basic performance instrumentation for CHRONUS operational endpoints.
+Who may talk to the server, and how often.
+
+1. Host check: only requests addressed to an allowed host name are served
+   (config.ALLOWED_HOSTS). Stops DNS rebinding, where a website points its
+   own domain at 127.0.0.1 and then reads this server as "same origin".
+2. Cross-site writes: POST/PUT/PATCH/DELETE sent by another website are
+   refused (Origin / Sec-Fetch-Site headers). JSON bodies already force a
+   preflight, but bodyless posts and form uploads don't; this covers them all.
+3. Sign-in (optional):
+   * one shared access code (CHRONUS_ACCESS_CODE), or
+   * accounts (CHRONUS_USERS="asha:code1,ravi:code2"): each person signs in
+     with a name and code, and sees only the custom models they made
+     (services/personas.py current_user). Pretrained models are shared.
+   Every API call then needs the chronus_access cookie from POST
+   /auth/login: a random session id kept on the server (it used to be a
+   plain hash of the code, so a 4-digit code came back from a copied cookie
+   in milliseconds, it never expired, and logging out didn't stop a copy).
+   Sessions last SESSION_DAYS, end at logout or when that code changes, and
+   the cookie is Secure over HTTPS. A restart signs everyone out. The
+   website's files and /health stay public so the sign-in screen can load.
+4. Rate limit: expensive endpoints (chat, voice) allow RATE_LIMIT_PER_MIN
+   requests per client per minute (CHRONUS_RATE_LIMIT, 0 = all limits off).
+   Heavy ones (uploads, builds, cloud voice, bundle import/export,
+   transcription, follow-ups) also have a tighter limit
+   (CHRONUS_HEAVY_RATE_LIMIT) and at most CHRONUS_MAX_HEAVY run at once.
 """
 
 from __future__ import annotations
 
-import base64
-import csv
 import hashlib
 import hmac
-import json
 import os
+import re
 import secrets
+import threading
 import time
 from collections import defaultdict, deque
-from dataclasses import dataclass
-from datetime import datetime, timezone
-from pathlib import Path
-from statistics import mean
-from typing import Any
+from urllib.parse import urlsplit
+
+from fastapi import APIRouter, HTTPException, Request, Response
+from fastapi.responses import JSONResponse
+from pydantic import BaseModel, Field
+from starlette.middleware.trustedhost import TrustedHostMiddleware
+
+from services import personas as ps
+
+COOKIE = "chronus_access"
+UNSAFE_METHODS = {"POST", "PUT", "PATCH", "DELETE"}
+# Paths that work without the access code: the website itself and login
+PUBLIC_PREFIXES = ("/health", "/ready", "/auth/", "/assets/", "/favicon")
+PUBLIC_PATHS = {"/", "/index.html"}
+# Endpoints that cost real compute or API credit
+LIMITED_PREFIXES = ("/chat", "/speak", "/voice", "/roundtable")
+# Each call embeds documents, derives a key (bundles: memory-heavy scrypt),
+# transcribes audio, or calls a cloud service
+HEAVY_PATHS = re.compile(
+    r"^/(?:transcribe|personas/import|personas/[^/]+/(?:documents(?:/async)?|build|voice|export|followup))$"
+)
+LOGIN_FAILURES_PER_MIN = 10  # per client address
+SESSION_DAYS = 30
+MAX_SESSIONS = 10_000
 
 
-ROOT = Path(__file__).resolve().parent.parent
-AUDIT_LOG_PATH = ROOT / "audit_log.jsonl"
-QA_LOG_PATH = ROOT / "qa_log.jsonl"
-
-SESSION_TTL_SECONDS = 60 * 60
-LOGIN_WINDOW_SECONDS = 5 * 60
-LOGIN_MAX_FAILURES = 5
-LOGIN_BLOCK_SECONDS = 5 * 60
-
-_SESSION_SECRET = os.getenv("CHRONUS_SESSION_SECRET", "chronus-dev-only-secret-change-me").encode("utf-8")
-ADMIN_BOOTSTRAP_PASSWORD = os.getenv("CHRONUS_ADMIN_PASSWORD", "admin123!")
-ANALYST_BOOTSTRAP_PASSWORD = os.getenv("CHRONUS_ANALYST_PASSWORD", "analyst123!")
-
-
-ROLE_PERMISSIONS = {
-    "admin": {
-        "auth.mfa.manage",
-        "audit.read",
-        "notifications.read",
-        "notifications.write",
-        "search.logs.read",
-        "search.presets.read",
-        "search.presets.write",
-        "bulk.logs.export",
-        "analytics.read",
-    },
-    "analyst": {
-        "notifications.read",
-        "notifications.write",
-        "search.logs.read",
-        "search.presets.read",
-        "search.presets.write",
-        "bulk.logs.export",
-        "analytics.read",
-    },
-    "user": {
-        "notifications.read",
-        "notifications.write",
-        "search.presets.read",
-        "search.presets.write",
-    },
-}
-
-
-def _utc_now() -> datetime:
-    return datetime.now(timezone.utc)
-
-
-def _hash_password(password: str, salt: str | None = None) -> str:
-    salt = salt or secrets.token_hex(16)
-    digest = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), salt.encode("utf-8"), 200_000)
-    return f"{salt}${digest.hex()}"
-
-
-def _verify_password(password: str, stored: str) -> bool:
+def _env_int(name: str, default: int) -> int:
     try:
-        salt, expected = stored.split("$", 1)
+        return int(os.getenv(name, str(default)))
     except ValueError:
-        return False
-    actual = _hash_password(password, salt).split("$", 1)[1]
-    return hmac.compare_digest(actual, expected)
+        return default
 
 
-def _b64url(data: bytes) -> str:
-    return base64.urlsafe_b64encode(data).rstrip(b"=").decode("ascii")
-
-
-def _b64url_decode(data: str) -> bytes:
-    padding = "=" * ((4 - len(data) % 4) % 4)
-    return base64.urlsafe_b64decode((data + padding).encode("ascii"))
+def _rate_limit() -> int:
+    return _env_int("CHRONUS_RATE_LIMIT", 30)
 
-
-def _sign(blob: bytes) -> str:
-    return _b64url(hmac.new(_SESSION_SECRET, blob, hashlib.sha256).digest())
 
+def _heavy_rate_limit() -> int:
+    return 0 if _rate_limit() <= 0 else _env_int("CHRONUS_HEAVY_RATE_LIMIT", 10)
 
-def _make_token(payload: dict[str, Any]) -> str:
-    body = _b64url(json.dumps(payload, separators=(",", ":"), sort_keys=True).encode("utf-8"))
-    return f"{body}.{_sign(body.encode('utf-8'))}"
-
 
-def _decode_token(token: str) -> dict[str, Any]:
-    body, sig = token.split(".", 1)
-    expected = _sign(body.encode("utf-8"))
-    if not hmac.compare_digest(sig, expected):
-        raise ValueError("Invalid token signature")
-    return json.loads(_b64url_decode(body).decode("utf-8"))
-
-
-def _totp(secret_b32: str, ts: int | None = None, digits: int = 6, step: int = 30) -> str:
-    ts = ts or int(time.time())
-    counter = ts // step
-    key = base64.b32decode(secret_b32.upper())
-    msg = counter.to_bytes(8, "big")
-    digest = hmac.new(key, msg, hashlib.sha1).digest()
-    offset = digest[-1] & 0x0F
-    code = ((digest[offset] & 0x7F) << 24) | ((digest[offset + 1] & 0xFF) << 16) | ((digest[offset + 2] & 0xFF) << 8) | (
-        digest[offset + 3] & 0xFF
-    )
-    return str(code % (10**digits)).zfill(digits)
+class LoginBody(BaseModel):
+    code: str = Field(min_length=1, max_length=200)
+    user: str | None = Field(default=None, max_length=40)
 
 
-def _verify_totp(secret_b32: str, code: str, drift_steps: int = 1) -> bool:
-    now = int(time.time())
-    for offset in range(-drift_steps, drift_steps + 1):
-        if hmac.compare_digest(_totp(secret_b32, now + (offset * 30)), code):
-            return True
-    return False
+# Only on this server, never sent to a browser: lets a session notice that its
+# code was changed (which signs that account out)
+_FINGERPRINT_KEY = secrets.token_bytes(32)
 
 
-def _generate_backup_codes() -> list[str]:
-    return [secrets.token_hex(4).upper() for _ in range(8)]
+def _fingerprint(code: str, user: str | None) -> str:
+    return hmac.new(_FINGERPRINT_KEY, f"{user or ''}:{code}".encode(), hashlib.sha256).hexdigest()
 
 
-def _hash_backup_code(code: str) -> str:
-    return _hash_password(code)
+class _Sessions:
+    """Signed-in browsers: random ids, so the cookie reveals nothing about the code."""
 
+    def __init__(self):
+        self.items: dict[str, dict] = {}
+        self.lock = threading.Lock()
 
-def _consume_backup_code(user: dict, code: str) -> bool:
-    normalized = code.strip().upper()
-    codes = list(user.get("backup_code_hashes", []))
-    for idx, stored in enumerate(codes):
-        if _verify_password(normalized, stored):
-            del codes[idx]
-            user["backup_code_hashes"] = codes
-            return True
-    return False
+    def create(self, user: str | None, code: str) -> str:
+        token = secrets.token_urlsafe(32)
+        now = time.time()
+        with self.lock:
+            if len(self.items) >= MAX_SESSIONS:
+                for old in [t for t, s in self.items.items() if s["expires"] < now] or sorted(
+                        self.items, key=lambda t: self.items[t]["expires"])[:len(self.items) // 10]:
+                    del self.items[old]
+            self.items[token] = {"user": user, "fp": _fingerprint(code, user), "expires": now + SESSION_DAYS * 86400}
+        return token
 
+    def get(self, token: str) -> dict | None:
+        with self.lock:
+            session = self.items.get(token or "")
+            if session and session["expires"] < time.time():
+                del self.items[token]
+                return None
+            return session
 
-_users = {
-    "admin": {
-        "username": "admin",
-        "password_hash": _hash_password(ADMIN_BOOTSTRAP_PASSWORD),
-        "role": "admin",
-        "mfa_enabled": False,
-        "mfa_secret": None,
-        "backup_code_hashes": [],
-        "disabled": False,
-    },
-    "analyst": {
-        "username": "analyst",
-        "password_hash": _hash_password(ANALYST_BOOTSTRAP_PASSWORD),
-        "role": "analyst",
-        "mfa_enabled": False,
-        "mfa_secret": None,
-        "backup_code_hashes": [],
-        "disabled": False,
-    },
-}
-
-_revoked_jtis: set[str] = set()
-_login_failures: dict[str, deque[float]] = defaultdict(deque)
-_login_blocks: dict[str, float] = {}
-_notifications: dict[str, list[dict[str, Any]]] = defaultdict(list)
-_next_notification_id = 1
-_saved_search_presets: dict[str, dict[str, dict[str, str]]] = defaultdict(dict)
-
-_timings_ms: dict[str, deque[float]] = defaultdict(lambda: deque(maxlen=500))
-
+    def revoke(self, token: str) -> None:
+        with self.lock:
+            self.items.pop(token or "", None)
 
-@dataclass
-class LoginResult:
-    ok: bool
-    message: str
-    token: str | None = None
-    expires_at: str | None = None
-    retry_after: int | None = None
-    user: dict | None = None
-
-
-def has_permission(role: str, permission: str) -> bool:
-    return permission in ROLE_PERMISSIONS.get(role, set())
-
-
-def issue_session(username: str, role: str) -> tuple[str, str]:
-    exp = int(time.time()) + SESSION_TTL_SECONDS
-    payload = {"sub": username, "role": role, "exp": exp, "jti": secrets.token_hex(12)}
-    token = _make_token(payload)
-    return token, datetime.fromtimestamp(exp, tz=timezone.utc).isoformat()
-
-
-def parse_session(token: str) -> dict[str, Any]:
-    payload = _decode_token(token)
-    if payload.get("jti") in _revoked_jtis:
-        raise ValueError("Session already logged out")
-    if int(payload.get("exp", 0)) <= int(time.time()):
-        raise ValueError("Session expired")
-    return payload
-
-
-def revoke_session(token: str) -> None:
-    payload = _decode_token(token)
-    if payload.get("jti"):
-        _revoked_jtis.add(payload["jti"])
-
-
-def _failure_key(username: str, client_id: str) -> str:
-    return f"{username}|{client_id}"
-
-
-def _cleanup_failures(failures: deque[float], now_ts: float) -> None:
-    cutoff = now_ts - LOGIN_WINDOW_SECONDS
-    while failures and failures[0] < cutoff:
-        failures.popleft()
-
-
-def _register_failure(username: str, client_id: str) -> int | None:
-    now_ts = time.time()
-    key = _failure_key(username, client_id)
-    failures = _login_failures[key]
-    _cleanup_failures(failures, now_ts)
-    failures.append(now_ts)
-    if len(failures) >= LOGIN_MAX_FAILURES:
-        until = now_ts + LOGIN_BLOCK_SECONDS
-        _login_blocks[key] = until
-        return int(until - now_ts)
-    return None
-
-
-def _clear_login_failures(username: str, client_id: str) -> None:
-    key = _failure_key(username, client_id)
-    _login_failures.pop(key, None)
-    _login_blocks.pop(key, None)
-
-
-def login(username: str, password: str, client_id: str, otp_code: str | None = None, backup_code: str | None = None) -> LoginResult:
-    now_ts = time.time()
-    key = _failure_key(username, client_id)
-    blocked_until = _login_blocks.get(key)
-    if blocked_until and blocked_until > now_ts:
-        return LoginResult(ok=False, message="Too many failed login attempts. Try again later.", retry_after=int(blocked_until - now_ts))
-
-    user = _users.get(username)
-    if not user or user.get("disabled"):
-        retry_after = _register_failure(username, client_id)
-        return LoginResult(ok=False, message="Invalid credentials.", retry_after=retry_after)
-    if not _verify_password(password, user["password_hash"]):
-        retry_after = _register_failure(username, client_id)
-        return LoginResult(ok=False, message="Invalid credentials.", retry_after=retry_after)
-
-    if user.get("mfa_enabled"):
-        if otp_code:
-            if not (user.get("mfa_secret") and _verify_totp(user["mfa_secret"], otp_code)):
-                retry_after = _register_failure(username, client_id)
-                return LoginResult(ok=False, message="Invalid one-time code.", retry_after=retry_after)
-        elif backup_code:
-            if not _consume_backup_code(user, backup_code):
-                retry_after = _register_failure(username, client_id)
-                return LoginResult(ok=False, message="Invalid backup code.", retry_after=retry_after)
-        else:
-            return LoginResult(ok=False, message="MFA required: provide otp_code or backup_code.")
-
-    _clear_login_failures(username, client_id)
-    token, expires = issue_session(username, user["role"])
-    return LoginResult(ok=True, message="Login successful.", token=token, expires_at=expires, user={"username": username, "role": user["role"]})
-
-
-def enable_mfa(username: str) -> dict[str, Any]:
-    user = _users.get(username)
-    if not user:
-        raise ValueError("Unknown user")
-    secret = base64.b32encode(secrets.token_bytes(10)).decode("ascii").rstrip("=")
-    backup_codes = _generate_backup_codes()
-    user["mfa_enabled"] = True
-    user["mfa_secret"] = secret
-    user["backup_code_hashes"] = [_hash_backup_code(code) for code in backup_codes]
-    uri = f"otpauth://totp/CHRONUS:{username}?secret={secret}&issuer=CHRONUS"
-    return {"secret": secret, "otpauth_uri": uri, "backup_codes": backup_codes}
-
-
-def disable_mfa(username: str) -> None:
-    user = _users.get(username)
-    if not user:
-        raise ValueError("Unknown user")
-    user["mfa_enabled"] = False
-    user["mfa_secret"] = None
-    user["backup_code_hashes"] = []
-
-
-def mfa_status(username: str) -> dict[str, Any]:
-    user = _users.get(username)
-    if not user:
-        raise ValueError("Unknown user")
-    return {"enabled": bool(user.get("mfa_enabled")), "backup_codes_remaining": len(user.get("backup_code_hashes", []))}
-
-
-def record_audit(action: str, actor: str, outcome: str, details: dict[str, Any] | None = None) -> None:
-    entry = {
-        "timestamp": _utc_now().isoformat(),
-        "action": action,
-        "actor": actor,
-        "outcome": outcome,
-        "details": details or {},
-    }
-    with AUDIT_LOG_PATH.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-
-
-def iter_audit(limit: int = 100, action: str | None = None, actor: str | None = None) -> list[dict[str, Any]]:
-    if not AUDIT_LOG_PATH.exists():
-        return []
-    out = []
-    for line in AUDIT_LOG_PATH.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
-            continue
-        item = json.loads(line)
-        if action and item.get("action") != action:
-            continue
-        if actor and item.get("actor") != actor:
-            continue
-        out.append(item)
-    return out[-limit:][::-1]
-
-
-def create_notification(username: str, title: str, body: str, level: str = "info") -> dict[str, Any]:
-    global _next_notification_id
-    row = {
-        "id": _next_notification_id,
-        "title": title,
-        "body": body,
-        "level": level,
-        "read": False,
-        "created_at": _utc_now().isoformat(),
-    }
-    _next_notification_id += 1
-    _notifications[username].append(row)
-    return row
-
-
-def list_notifications(username: str, unread_only: bool = False, limit: int = 100) -> list[dict[str, Any]]:
-    rows = _notifications.get(username, [])
-    if unread_only:
-        rows = [r for r in rows if not r["read"]]
-    return rows[-limit:][::-1]
-
-
-def mark_notifications_read(username: str, ids: list[int] | None = None) -> int:
-    rows = _notifications.get(username, [])
-    count = 0
-    wanted = set(ids or [])
-    for row in rows:
-        if ids is None or row["id"] in wanted:
-            if not row["read"]:
-                row["read"] = True
-                count += 1
-    return count
-
-
-def save_search_preset(username: str, name: str, filters: dict[str, str]) -> None:
-    _saved_search_presets[username][name] = filters
-
-
-def list_search_presets(username: str) -> dict[str, dict[str, str]]:
-    return _saved_search_presets.get(username, {})
-
-
-def _matches_qa_filters(item: dict[str, Any], filters: dict[str, str]) -> bool:
-    query_text = filters.get("query")
-    persona = filters.get("persona")
-    mode = filters.get("mode")
-    confidence = filters.get("confidence")
-    if query_text and query_text.lower() not in item.get("query", "").lower():
-        return False
-    if persona and item.get("persona") != persona:
-        return False
-    if mode and item.get("mode") != mode:
-        return False
-    if confidence and item.get("confidence") != confidence:
-        return False
-    return True
-
-
-def search_qa_logs(filters: dict[str, str], limit: int = 100) -> list[dict[str, Any]]:
-    if not QA_LOG_PATH.exists():
-        return []
-    rows = []
-    for line in QA_LOG_PATH.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
-            continue
-        item = json.loads(line)
-        if _matches_qa_filters(item, filters):
-            rows.append(item)
-    return rows[-limit:][::-1]
-
-
-def qa_logs_to_csv(rows: list[dict[str, Any]]) -> str:
-    columns = ["timestamp", "persona", "mode", "confidence", "faithfulness", "query", "answer", "sources"]
-    output: list[str] = []
-    from io import StringIO
-
-    io_buf = StringIO()
-    writer = csv.DictWriter(io_buf, fieldnames=columns)
-    writer.writeheader()
-    for row in rows:
-        writer.writerow({k: row.get(k, "") for k in columns})
-    output.append(io_buf.getvalue())
-    return "".join(output)
-
-
-def record_timing(metric: str, duration_ms: float) -> None:
-    _timings_ms[metric].append(float(duration_ms))
-
-
-def timing_summary() -> dict[str, dict[str, float]]:
-    out: dict[str, dict[str, float]] = {}
-    for metric, values in _timings_ms.items():
-        if not values:
-            continue
-        ordered = sorted(values)
-        p95_idx = min(len(ordered) - 1, int(round(0.95 * (len(ordered) - 1))))
-        out[metric] = {
-            "count": len(values),
-            "avg_ms": round(mean(values), 2),
-            "p95_ms": round(ordered[p95_idx], 2),
-            "max_ms": round(max(values), 2),
-        }
+
+sessions = _Sessions()
+
+
+def users(config) -> dict[str, str]:
+    """{name: code} from config.USERS ("asha:code1,ravi:code2")."""
+    out = {}
+    for item in (config.USERS or "").split(","):
+        name, _, code = item.strip().partition(":")
+        if name.strip() and code.strip():
+            out[name.strip().lower()] = code.strip()
     return out
 
 
-_cache: dict[str, tuple[float, Any]] = {}
+def signed_in_as(request: Request, config) -> tuple[bool, str | None]:
+    """(allowed, account name) for this request's session cookie."""
+    accounts = users(config)
+    if not accounts and not config.ACCESS_CODE:
+        return True, None
+    session = sessions.get(request.cookies.get(COOKIE, ""))
+    if session is None:
+        return False, None
+    name = session["user"]
+    code = accounts.get(name) if accounts else (config.ACCESS_CODE if name is None else None)
+    # A changed code (or a removed account) ends its sessions
+    if not code or not hmac.compare_digest(session["fp"], _fingerprint(code, name)):
+        return False, None
+    return True, name
 
 
-def cache_get(key: str) -> Any | None:
-    row = _cache.get(key)
-    if not row:
-        return None
-    expires_at, value = row
-    if expires_at <= time.time():
-        _cache.pop(key, None)
-        return None
-    return value
+def _secure_cookie(request: Request) -> bool:
+    return request.url.scheme == "https" or os.getenv("CHRONUS_COOKIE_SECURE") == "1"
 
 
-def cache_set(key: str, value: Any, ttl_seconds: int = 30) -> None:
-    _cache[key] = (time.time() + ttl_seconds, value)
+class _Limiter:
+    def __init__(self):
+        self.hits: dict[str, deque] = defaultdict(deque)
+        self.lock = threading.Lock()
+
+    def _recent(self, key: str, window: float, now: float) -> deque:
+        q = self.hits[key]
+        while q and now - q[0] > window:
+            q.popleft()
+        return q
+
+    def allow(self, key: str, limit: int, window: float = 60.0) -> bool:
+        """Count one request; False once *limit* were counted in *window*."""
+        now = time.monotonic()
+        with self.lock:
+            q = self._recent(key, window, now)
+            if len(q) >= limit:
+                return False
+            q.append(now)
+            return True
+
+    def full(self, key: str, limit: int, window: float = 60.0) -> bool:
+        """Has *key* used up its limit? (Doesn't count anything.)"""
+        with self.lock:
+            return len(self._recent(key, window, time.monotonic())) >= limit
+
+    def hit(self, key: str) -> None:
+        with self.lock:
+            self.hits[key].append(time.monotonic())
 
 
-def cache_stats() -> dict[str, int]:
-    now = time.time()
-    expired = [k for k, (exp, _) in _cache.items() if exp <= now]
-    for key in expired:
-        _cache.pop(key, None)
-    return {"entries": len(_cache)}
+limiter = _Limiter()
+
+
+class _Slots:
+    """At most *n* heavy requests at once; the rest are told to retry."""
+
+    def __init__(self, n: int):
+        self.sem = threading.BoundedSemaphore(max(1, n))
+
+    def try_acquire(self) -> bool:
+        return self.sem.acquire(blocking=False)
+
+    def release(self) -> None:
+        self.sem.release()
+
+
+heavy_slots = _Slots(_env_int("CHRONUS_MAX_HEAVY", 2))
+
+
+def _is_cross_site(request: Request, allowed_hosts: list[str]) -> bool:
+    if request.headers.get("sec-fetch-site") == "cross-site":
+        return True
+    origin = request.headers.get("origin")
+    if origin is None:
+        return False  # not a browser cross-site request (curl, scripts, same-origin GET)
+    host = urlsplit(origin).hostname
+    return host is None or host not in allowed_hosts
+
+
+def install(app, config) -> None:
+    """Add the host check, cross-site guard, access code and rate limit to *app*."""
+
+    @app.middleware("http")
+    async def guard(request: Request, call_next):
+        path = request.url.path
+        if request.method in UNSAFE_METHODS and _is_cross_site(request, config.ALLOWED_HOSTS):
+            return JSONResponse({"detail": "Cross-site requests are not allowed"}, status_code=403)
+
+        allowed, user = signed_in_as(request, config)
+        if not allowed and request.method != "OPTIONS" and not (path in PUBLIC_PATHS or path.startswith(PUBLIC_PREFIXES)):
+            return JSONResponse({"detail": "Access code required", "login": True}, status_code=401)
+
+        client = request.client.host if request.client else "unknown"
+        limit = _rate_limit()
+        if limit > 0 and request.method == "POST" and path.startswith(LIMITED_PREFIXES):
+            if not limiter.allow(client, limit):
+                return JSONResponse({"detail": "Too many requests; please wait a minute"}, status_code=429,
+                                    headers={"Retry-After": "60"})
+        heavy = request.method == "POST" and bool(HEAVY_PATHS.match(path))
+        if heavy:
+            heavy_limit = _heavy_rate_limit()
+            if heavy_limit > 0 and not limiter.allow(f"heavy:{client}", heavy_limit):
+                return JSONResponse({"detail": "Too many uploads or builds; please wait a minute"}, status_code=429,
+                                    headers={"Retry-After": "60"})
+            if not heavy_slots.try_acquire():
+                return JSONResponse({"detail": "The server is busy with other uploads or builds; try again in a moment"},
+                                    status_code=503, headers={"Retry-After": "5"})
+        # Which account's models this request may see (services/personas.py)
+        token = ps.current_user.set(user if allowed else None)
+        try:
+            return await call_next(request)
+        finally:
+            ps.current_user.reset(token)
+            if heavy:
+                heavy_slots.release()
+
+    # Added last so it runs first: unknown Host names never reach anything
+    app.add_middleware(TrustedHostMiddleware, allowed_hosts=config.ALLOWED_HOSTS)
+
+
+def make_router(config) -> APIRouter:
+    router = APIRouter(prefix="/auth", tags=["auth"])
+
+    @router.get("/status")
+    def status(request: Request):
+        accounts = bool(users(config))
+        ok, user = signed_in_as(request, config)
+        return {"required": accounts or bool(config.ACCESS_CODE), "signed_in": ok, "accounts": accounts,
+                "user": user if ok else None}
+
+    @router.post("/login")
+    def login(body: LoginBody, request: Request, response: Response):
+        accounts = users(config)
+        if not accounts and not config.ACCESS_CODE:
+            return {"signed_in": True, "user": None}
+        client = request.client.host if request.client else "unknown"
+        key = f"login:{client}"
+        # Only failed attempts count, so signing in often is fine. Checked before
+        # the code: a client that has failed too often gets nothing from a right
+        # guess. A success doesn't reset the count (that let someone with an
+        # account reset it between guesses at another account's code).
+        if limiter.full(key, LOGIN_FAILURES_PER_MIN):
+            raise HTTPException(status_code=429, detail="Too many attempts; please wait a minute",
+                                headers={"Retry-After": "60"})
+        if accounts:
+            name = (body.user or "").strip().lower()
+            expected = accounts.get(name)
+            # compare even for unknown names, so timing doesn't reveal which names exist
+            ok = hmac.compare_digest(body.code, expected or "\0" * len(body.code)) and bool(expected)
+            if not ok:
+                limiter.hit(key)
+                raise HTTPException(status_code=401, detail="Wrong name or access code")
+            token = sessions.create(name, expected)
+        else:
+            name = None
+            if not hmac.compare_digest(body.code, config.ACCESS_CODE):
+                limiter.hit(key)
+                raise HTTPException(status_code=401, detail="Wrong access code")
+            token = sessions.create(None, config.ACCESS_CODE)
+        response.set_cookie(COOKIE, token, httponly=True, samesite="strict", max_age=SESSION_DAYS * 86400,
+                            secure=_secure_cookie(request))
+        return {"signed_in": True, "user": name}
+
+    @router.post("/logout")
+    def logout(request: Request, response: Response):
+        sessions.revoke(request.cookies.get(COOKIE, ""))  # a copied cookie stops working too
+        response.delete_cookie(COOKIE)
+        return {"signed_in": False}
+
+    return router
