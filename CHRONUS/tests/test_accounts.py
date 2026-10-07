@@ -50,3 +50,26 @@ def test_insights_are_per_account(srv, accounts):
     assert asha.get("/insights/analytics", params={"persona": "elon_musk"}).json()["total"] == 1
     assert ravi.get("/insights/analytics", params={"persona": "elon_musk"}).json()["total"] == 0
     assert ravi.get("/insights/gaps", params={"persona": "elon_musk"}).json()["unanswered"] == 0
+
+
+def test_sign_in_rate_limit_cannot_be_bypassed(srv, accounts, monkeypatch):
+    """Only failed attempts count, but once a client has failed 10 times in a
+    minute every attempt is refused, a right code included; and signing in
+    to your own account doesn't reset the count."""
+    from fastapi.testclient import TestClient
+
+    guesser = TestClient(srv.app, base_url="http://localhost")
+    seen = []
+    for i in range(20):
+        if i % 5 == 4:  # the attacker's own valid login in between
+            guesser.post("/auth/login", json={"user": "asha", "code": "mango-tree"})
+        seen.append(guesser.post("/auth/login", json={"user": "ravi", "code": f"guess-{i}"}).status_code)
+    assert seen[:10] == [401] * 10 and set(seen[10:]) == {429}
+    right = guesser.post("/auth/login", json={"user": "ravi", "code": "blue-bicycle"})
+    assert right.status_code == 429 and "chronus_access" not in right.cookies  # the right code learns nothing
+    # successful sign-ins alone never use up the limit (test clients share one address)
+    from services import access
+
+    monkeypatch.setattr(access, "limiter", access._Limiter())
+    for _ in range(15):
+        accounts("asha", "mango-tree")

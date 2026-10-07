@@ -43,6 +43,7 @@ PUBLIC_PREFIXES = ("/health", "/auth/", "/assets/", "/favicon")
 PUBLIC_PATHS = {"/", "/index.html"}
 # Endpoints that cost real compute or API credit
 LIMITED_PREFIXES = ("/chat", "/speak", "/voice", "/roundtable")
+LOGIN_FAILURES_PER_MIN = 10  # per client address
 
 
 def _rate_limit() -> int:
@@ -92,20 +93,30 @@ class _Limiter:
         self.hits: dict[str, deque] = defaultdict(deque)
         self.lock = threading.Lock()
 
+    def _recent(self, key: str, window: float, now: float) -> deque:
+        q = self.hits[key]
+        while q and now - q[0] > window:
+            q.popleft()
+        return q
+
     def allow(self, key: str, limit: int, window: float = 60.0) -> bool:
+        """Count one request; False once *limit* were counted in *window*."""
         now = time.monotonic()
         with self.lock:
-            q = self.hits[key]
-            while q and now - q[0] > window:
-                q.popleft()
+            q = self._recent(key, window, now)
             if len(q) >= limit:
                 return False
             q.append(now)
             return True
 
-    def clear(self, key: str) -> None:
+    def full(self, key: str, limit: int, window: float = 60.0) -> bool:
+        """Has *key* used up its limit? (Doesn't count anything.)"""
         with self.lock:
-            self.hits.pop(key, None)
+            return len(self._recent(key, window, time.monotonic())) >= limit
+
+    def hit(self, key: str) -> None:
+        with self.lock:
+            self.hits[key].append(time.monotonic())
 
 
 limiter = _Limiter()
@@ -168,24 +179,28 @@ def make_router(config) -> APIRouter:
             return {"signed_in": True, "user": None}
         client = request.client.host if request.client else "unknown"
         key = f"login:{client}"
+        # Only failed attempts count, so signing in often is fine. Checked before
+        # the code: a client that has failed too often gets nothing from a right
+        # guess. A success doesn't reset the count (that let someone with an
+        # account reset it between guesses at another account's code).
+        if limiter.full(key, LOGIN_FAILURES_PER_MIN):
+            raise HTTPException(status_code=429, detail="Too many attempts; please wait a minute",
+                                headers={"Retry-After": "60"})
         if accounts:
             name = (body.user or "").strip().lower()
             expected = accounts.get(name)
             # compare even for unknown names, so timing doesn't reveal which names exist
             ok = hmac.compare_digest(body.code, expected or "\0" * len(body.code)) and bool(expected)
             if not ok:
-                if not limiter.allow(key, 10):
-                    raise HTTPException(status_code=429, detail="Too many attempts; please wait a minute")
+                limiter.hit(key)
                 raise HTTPException(status_code=401, detail="Wrong name or access code")
             token = _token(expected, name)
         else:
             name = None
             if not hmac.compare_digest(body.code, config.ACCESS_CODE):
-                if not limiter.allow(key, 10):
-                    raise HTTPException(status_code=429, detail="Too many attempts; please wait a minute")
+                limiter.hit(key)
                 raise HTTPException(status_code=401, detail="Wrong access code")
             token = _token(config.ACCESS_CODE)
-        limiter.clear(key)
         response.set_cookie(COOKIE, token, httponly=True, samesite="strict", max_age=30 * 24 * 3600)
         return {"signed_in": True, "user": name}
 
