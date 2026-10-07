@@ -45,6 +45,81 @@ def test_access_code(srv, client, monkeypatch):
     assert fresh.get("/personas").status_code == 401
 
 
+def test_sign_in_cookie_is_a_random_server_side_session(srv, monkeypatch):
+    import hashlib
+
+    monkeypatch.setattr(srv.config, "ACCESS_CODE", "4821")
+    a, b = (TestClient(srv.app, base_url="http://localhost") for _ in range(2))
+    a.post("/auth/login", json={"code": "4821"})
+    b.post("/auth/login", json={"code": "4821"})
+    cookie = a.cookies.get(access.COOKIE)
+    # It used to be a plain hash of the code: a 4-digit code came back from a cookie in 0.006 s
+    assert cookie != b.cookies.get(access.COOKIE) and len(cookie) >= 40
+    assert all(hashlib.sha256(f"chronus::{c:04d}".encode()).hexdigest() != cookie for c in range(10000))
+    # A copied cookie stops working when its owner logs out
+    thief = TestClient(srv.app, base_url="http://localhost", cookies={access.COOKIE: cookie})
+    assert thief.get("/personas").status_code == 200
+    a.post("/auth/logout")
+    assert thief.get("/personas").status_code == 401
+    # Sessions expire on the server, whatever the browser keeps
+    access.sessions.items[b.cookies.get(access.COOKIE)]["expires"] = 0
+    assert b.get("/personas").status_code == 401
+    # Changing the code signs everyone out
+    c = TestClient(srv.app, base_url="http://localhost")
+    c.post("/auth/login", json={"code": "4821"})
+    monkeypatch.setattr(srv.config, "ACCESS_CODE", "9917")
+    assert c.get("/personas").status_code == 401
+
+
+def test_cookie_is_secure_over_https(srv, monkeypatch):
+    monkeypatch.setattr(srv.config, "ACCESS_CODE", "open sesame")
+    plain = TestClient(srv.app, base_url="http://localhost").post("/auth/login", json={"code": "open sesame"})
+    https = TestClient(srv.app, base_url="https://localhost").post("/auth/login", json={"code": "open sesame"})
+    assert "secure" not in plain.headers["set-cookie"].lower() and "secure" in https.headers["set-cookie"].lower()
+
+
+def test_heavy_endpoints_have_their_own_limits(client, monkeypatch):
+    monkeypatch.setenv("CHRONUS_RATE_LIMIT", "100")
+    monkeypatch.setenv("CHRONUS_HEAVY_RATE_LIMIT", "2")
+    monkeypatch.setattr(access, "limiter", access._Limiter())
+    # Bundle import (memory-heavy key derivation) used to have no limit at all
+    codes = [client.post("/personas/import", json={}).status_code for _ in range(3)]
+    assert codes[:2] != [429, 429] and codes[2] == 429
+    # Only a few run at once: the next is told to retry instead of piling up
+    monkeypatch.setattr(access, "heavy_slots", access._Slots(1))
+    assert access.heavy_slots.try_acquire()
+    try:
+        monkeypatch.setattr(access, "limiter", access._Limiter())
+        r = client.post("/personas/elon_musk/build")
+        assert r.status_code == 503 and r.headers["retry-after"] == "5"
+    finally:
+        access.heavy_slots.release()
+    assert client.get("/personas").status_code == 200  # reads are never limited
+
+
+def test_background_uploads_queue_with_a_cap(monkeypatch):
+    import threading
+
+    from services import jobs
+
+    release = threading.Event()
+    monkeypatch.setattr(jobs, "_running", threading.BoundedSemaphore(1))
+    first = jobs.start(lambda progress: release.wait(5) and {}, "upload")
+    second = jobs.start(lambda progress: {}, "upload")
+    try:
+        assert jobs.get(second)["message"].startswith("Waiting")  # queued behind the first
+        monkeypatch.setattr(jobs, "MAX_PENDING_PER_USER", 2)
+        with pytest.raises(jobs.Busy):
+            jobs.start(lambda progress: {}, "upload")
+    finally:
+        release.set()
+    for _ in range(100):
+        if jobs.get(second)["status"] == "done":
+            break
+        threading.Event().wait(0.05)
+    assert jobs.get(first)["status"] == "done" and jobs.get(second)["status"] == "done"
+
+
 def test_rate_limit(client, monkeypatch):
     monkeypatch.setenv("CHRONUS_RATE_LIMIT", "2")
     monkeypatch.setattr(access, "limiter", access._Limiter())

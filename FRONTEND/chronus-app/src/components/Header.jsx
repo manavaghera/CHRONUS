@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { applyTheme, storedTheme } from '../theme'
+import { LanguagePicker, useT } from '../i18n'
 
 const NEXT = { auto: 'light', light: 'dark', dark: 'auto' }
 const ICON = { auto: '◐', light: '☀', dark: '☾' }
@@ -11,6 +12,7 @@ export default function Header({ go, openNav }) {
   const [time, setTime] = useState('')
   const [date, setDate] = useState('')
   const [theme, setTheme] = useState(storedTheme)
+  const t = useT()
   const cycleTheme = () => { const t = NEXT[theme]; applyTheme(t); setTheme(t) }
 
   useEffect(() => {
@@ -32,24 +34,25 @@ export default function Header({ go, openNav }) {
           </span>
         </button>
         <nav className="header-nav">
-          {[['home','Home'],['demo','Live Demo'],['models','Models'],['create','Create'],['roundtable','Roundtable'],['clone-voice','Voice'],['insights','Insights'],['ethics','Trust']].map(([id,label]) => (
+          {[['home','nav.home'],['demo','nav.demo'],['models','nav.models'],['create','nav.create'],['roundtable','nav.roundtable'],['clone-voice','nav.voice'],['insights','nav.insights'],['ethics','nav.trust']].map(([id,key]) => (
             <button key={id} onClick={() => go(id)}>
-              <span className="nav-label">{label}</span>
+              <span className="nav-label">{t(key)}</span>
             </button>
           ))}
         </nav>
         <div className="header-right">
           <div className="clock-chip">
-            <span className="clock-label">Local time</span>
+            <span className="clock-label">{t('nav.localTime')}</span>
             <span className="clock-time">{time}</span>
             <span className="clock-dot">&bull;</span>
             <span className="clock-date">{date}</span>
           </div>
+          <LanguagePicker />
           <button className="theme-toggle" onClick={cycleTheme} title={`${LABEL[theme]} (click to change)`} aria-label={`${LABEL[theme]}. Change theme`}>{ICON[theme]}</button>
           <button className="menu-btn" onClick={openNav}>
             <span className="menu-label">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width=".875rem" height=".875rem"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-              <span className="menu-text">Menu</span>
+              <span className="menu-text">{t('nav.menu')}</span>
             </span>
           </button>
         </div>

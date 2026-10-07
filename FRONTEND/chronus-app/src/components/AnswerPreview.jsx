@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { navigate } from '../router'
 import { Emblem } from './Emblems'
+import { useT } from '../i18n'
 
 // Hero preview of what an answer looks like. Every answer below is a
 // verbatim passage from the public-domain text the model is built from
@@ -11,19 +12,19 @@ const EXAMPLES = [
     id: 'marcus_aurelius', name: 'Marcus Aurelius',
     q: 'How do I find peace when life gets busy?',
     a: 'At what time soever thou wilt, it is in thy power to retire into thyself, and to be at rest, and free from all businesses.',
-    source: 'Meditations', voice: 'own words', confidence: 'high',
+    source: 'Meditations', voice: 'preview.ownWords', confidence: 'high',
   },
   {
     id: 'abraham_lincoln', name: 'Abraham Lincoln',
     q: 'What were the soldiers at Gettysburg fighting for?',
     a: '...that this nation, under God, shall have a new birth of freedom; and that government of the people, by the people, and for the people, shall not perish from the earth.',
-    source: 'Speeches and Letters', voice: 'own words', confidence: 'high',
+    source: 'Speeches and Letters', voice: 'preview.ownWords', confidence: 'high',
   },
   {
     id: 'marie_curie', name: 'Marie Curie',
     q: 'When did you discover radium?',
     a: 'We announced the existence of polonium in July, 1898, and of radium in December of the same year.',
-    source: 'Pierre Curie (her biography of him)', voice: 'own words', confidence: 'high',
+    source: 'Pierre Curie (her biography of him)', voice: 'preview.ownWords', confidence: 'high',
   },
   {
     id: 'albert_einstein', name: 'Albert Einstein',
@@ -37,6 +38,7 @@ const TYPE_MS = 22
 const HOLD_MS = 4200
 
 export default function AnswerPreview() {
+  const t = useT()
   const [index, setIndex] = useState(0)
   const [typed, setTyped] = useState(0)
   const example = EXAMPLES[index]
@@ -62,7 +64,7 @@ export default function AnswerPreview() {
           <strong>{example.name}</strong>
           <span>chronus-model:{example.id}</span>
         </div>
-        <span className="ap-live"><span />Example</span>
+        <span className="ap-live"><span />{t('preview.example')}</span>
       </div>
 
       <div className="ap-body" aria-live="off">
@@ -79,23 +81,23 @@ export default function AnswerPreview() {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z" /><path d="M4 19.5V21h16" /></svg>
                 {example.source}
               </span>
-              <span className="ap-chip ap-chip--voice">{example.voice}</span>
-              <span className="ap-chip">verbatim</span>
+              <span className="ap-chip ap-chip--voice">{t(example.voice)}</span>
+              <span className="ap-chip">{t('preview.verbatim')}</span>
             </>
           ) : (
-            <span className="ap-chip ap-chip--honest">No source found, so it says so</span>
+            <span className="ap-chip ap-chip--honest">{t('preview.noSource')}</span>
           )}
-          <span className={`ap-confidence ap-confidence--${example.confidence}`}>{example.confidence} confidence</span>
+          <span className={`ap-confidence ap-confidence--${example.confidence}`}>{t('conf.label', { level: t.label('conf', example.confidence) })}</span>
         </div>
       </div>
 
       <div className="ap-foot">
-        <div className="ap-dots" role="tablist" aria-label="Examples">
+        <div className="ap-dots" role="tablist" aria-label={t('preview.examples')}>
           {EXAMPLES.map((e, i) => (
             <button key={e.id} role="tab" aria-selected={i === index} aria-label={e.name} className={i === index ? 'is-active' : ''} onClick={() => pick(i)} />
           ))}
         </div>
-        <button className="ap-open" onClick={() => navigate(`/chat/${example.id}`)}>Ask {example.name.split(' ')[0]} yourself →</button>
+        <button className="ap-open" onClick={() => navigate(`/chat/${example.id}`)}>{t('preview.ask', { name: example.name.split(' ')[0] })}</button>
       </div>
     </div>
   )

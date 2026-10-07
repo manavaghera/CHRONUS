@@ -18,18 +18,27 @@ from __future__ import annotations
 import json
 import logging
 import re
+import threading
+import time
 from typing import Callable
 
 import requests
 
 from config import config
-from services.mix_method import calculate_confidence, clean_for_display, generate_mix_method_response
+from services.mix_method import (
+    TRANSCRIPT_TYPES,
+    calculate_confidence,
+    clean_for_display,
+    generate_mix_method_response,
+    without_host_questions,
+)
 from services.post_process import scrub
 from services.provenance import (
     FIRST_PERSON,
     SYNTHESIZED,
     anchor_first,
     attribution,
+    context_clause,
     format_source_citation,
     grounding_score,
     semantic_support,
@@ -115,7 +124,10 @@ def _evidence_line(index: int, doc: str, meta: dict, citation: str) -> str:
         label = f"SYNTHESIZED SUMMARY, NOT A QUOTE ({attribution(meta)})"
     else:
         label = f"ABOUT YOU, WRITTEN BY SOMEONE ELSE ({attribution(meta)})"
-    return f"[{index}] {label}:\n{doc.strip()}"
+    # A tweet that quoted or answered a post means little without it
+    context = context_clause(meta, limit=280).strip()
+    context = f"\n(This post was {context[1:-1]}; that post is not your words.)" if context else ""
+    return f"[{index}] {label}:\n{doc.strip()}{context}"
 
 
 # Sentences asked for, and the cap enforced (one sentence of slack), per length
@@ -159,12 +171,64 @@ def _clean_history(history: list[dict] | None) -> list[dict]:
     return turns[-MAX_HISTORY_TURNS:]
 
 
+class DeadlineExceeded(TimeoutError):
+    """The provider took longer than config.LLM_DEADLINE_SECONDS for one answer."""
+
+
+class ProviderUnavailable(RuntimeError):
+    """The circuit breaker is open: the provider failed repeatedly just now."""
+
+
+class StreamCancelled(Exception):
+    """The person who asked went away (closed the page): stop generating."""
+
+
+class _Breaker:
+    """After FAILURES failures in a row, skip the provider for COOLDOWN
+    seconds, so a down service costs each question nothing instead of a
+    full timeout; then let one question try again."""
+
+    FAILURES, COOLDOWN = 3, 60.0
+
+    def __init__(self):
+        self.failures, self.open_until = 0, 0.0
+        self.lock = threading.Lock()
+
+    def check(self) -> None:
+        with self.lock:
+            if time.monotonic() < self.open_until:
+                raise ProviderUnavailable("the AI service failed repeatedly; skipping it for a minute")
+
+    def record(self, ok: bool) -> None:
+        with self.lock:
+            if ok:
+                self.failures, self.open_until = 0, 0.0
+                return
+            self.failures += 1
+            if self.failures >= self.FAILURES:
+                self.failures, self.open_until = 0, time.monotonic() + self.COOLDOWN
+
+
+breaker = _Breaker()
+
+
+def _timeout() -> tuple[float, float]:
+    """(connect, read) for requests: never longer than the whole-answer deadline."""
+    return (5.0, config.LLM_DEADLINE_SECONDS)
+
+
+def _check_deadline(started: float) -> None:
+    if time.monotonic() - started > config.LLM_DEADLINE_SECONDS:
+        raise DeadlineExceeded(f"no complete answer within {config.LLM_DEADLINE_SECONDS:g} s")
+
+
 def _stream_openai(url: str, headers: dict, payload: dict, on_token: Callable[[str], None]) -> tuple[str, bool]:
     """OpenAI-compatible streaming (server-sent events); returns (text, cut_off)."""
-    parts, finish = [], None
-    with requests.post(url, headers=headers, json={**payload, "stream": True}, timeout=60, stream=True) as response:
+    parts, finish, started = [], None, time.monotonic()
+    with requests.post(url, headers=headers, json={**payload, "stream": True}, timeout=_timeout(), stream=True) as response:
         response.raise_for_status()
         for line in response.iter_lines(decode_unicode=True):
+            _check_deadline(started)
             if not line or not line.startswith("data:"):
                 continue  # keep-alive comments like ": OPENROUTER PROCESSING"
             data = line[5:].strip()
@@ -186,11 +250,12 @@ def _stream_openai(url: str, headers: dict, payload: dict, on_token: Callable[[s
 
 
 def _stream_ollama(payload: dict, on_token: Callable[[str], None]) -> tuple[str, bool]:
-    parts, done_reason = [], None
-    with requests.post(f"{config.OLLAMA_URL}/api/generate", json={**payload, "stream": True}, timeout=60,
+    parts, done_reason, started = [], None, time.monotonic()
+    with requests.post(f"{config.OLLAMA_URL}/api/generate", json={**payload, "stream": True}, timeout=_timeout(),
                        stream=True) as response:
         response.raise_for_status()
         for line in response.iter_lines(decode_unicode=True):
+            _check_deadline(started)
             if not line:
                 continue
             chunk = json.loads(line)
@@ -208,8 +273,24 @@ def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: 
     """Call the configured provider and return usable raw text (or raise).
 
     *on_token*: stream the reply, calling it with each new piece of text as
-    it arrives (the website's typing effect, /chat/stream).
+    it arrives (the website's typing effect, /chat/stream); it may raise
+    StreamCancelled to stop generating. Cloud and Ollama calls have a
+    whole-answer deadline and go through the circuit breaker.
     """
+    if config.LLM_PROVIDER == "local":
+        return _call_provider(system_prompt, query, history, use_adapter, on_token)
+    breaker.check()
+    try:
+        text = _call_provider(system_prompt, query, history, use_adapter, on_token)
+    except (requests.RequestException, DeadlineExceeded):
+        breaker.record(False)
+        raise
+    breaker.record(True)
+    return text
+
+
+def _call_provider(system_prompt: str, query: str, history: list[dict], use_adapter: bool,
+                   on_token: Callable[[str], None] | None) -> str:
     if config.LLM_PROVIDER == "local":
         # On-device model (services/local_llm.py): nothing leaves the machine
         from services.local_llm import generate
@@ -247,7 +328,7 @@ def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: 
         if on_token:
             text, cut_off = _stream_openai(url, headers, payload, on_token)
             return _usable_llm_text(text, truncated=cut_off)
-        response = requests.post(url, headers=headers, json=payload, timeout=60)
+        response = requests.post(url, headers=headers, json=payload, timeout=_timeout())
         response.raise_for_status()
         choice = response.json()["choices"][0]
         return _usable_llm_text(
@@ -270,7 +351,7 @@ def _call_llm(system_prompt: str, query: str, history: list[dict], use_adapter: 
     if on_token:
         text, cut_off = _stream_ollama(payload, on_token)
         return _usable_llm_text(text, truncated=cut_off)
-    response = requests.post(f"{config.OLLAMA_URL}/api/generate", json=payload, timeout=60)
+    response = requests.post(f"{config.OLLAMA_URL}/api/generate", json=payload, timeout=_timeout())
     response.raise_for_status()
     data = response.json()
     return _usable_llm_text(data.get("response"), truncated=data.get("done_reason") == "length")
@@ -297,8 +378,10 @@ def generate_natural_response(
     """
     memories = anchor_first(memories[:4 if length == "detailed" else 3])
     # The model sees (and is scored against) the evidence with transcript
-    # noise and extraction damage removed ("pointat" -> "point at")
-    texts = [clean_for_display(doc) for _, doc, _, _ in memories]
+    # noise and extraction damage removed ("pointat" -> "point at"), and
+    # without interviewers' questions, which it would otherwise voice as the persona
+    texts = [without_host_questions(clean_for_display(doc)) if meta.get("source_type") in TRANSCRIPT_TYPES
+             else clean_for_display(doc) for _, doc, meta, _ in memories]
     evidence, sources = [], []
     for i, ((_, doc, meta, raw_dist), text) in enumerate(zip(memories, texts), start=1):
         citation = format_source_citation(meta, doc, raw_dist)
@@ -337,7 +420,10 @@ def generate_natural_response(
             "faithfulness": grounding,
         }
     except Exception as e:
-        logger.error(f"Natural mode LLM call failed ({e}); falling back to Mix Method")
+        if isinstance(e, StreamCancelled):
+            logger.info("Natural mode stopped: the person who asked went away")
+        else:
+            logger.error(f"Natural mode LLM call failed ({e}); falling back to Mix Method")
         mix_fallback = generate_mix_method_response(
             query=query,
             memories=memories,
@@ -348,6 +434,8 @@ def generate_natural_response(
             embedder=embedder,
         )
         mix_fallback["mode"] = "mix_method_fallback"
+        if isinstance(e, (ProviderUnavailable, DeadlineExceeded, requests.RequestException)):
+            mix_fallback["notice"] = "The AI service is slow or unavailable right now, so these are verbatim quotes."
         # Keep the citation schema identical to the success path.
         mix_fallback["sources"] = sources
         return mix_fallback

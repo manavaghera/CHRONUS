@@ -1,0 +1,2239 @@
+{
+  "date": "2026-10-07",
+  "questions": 147,
+  "summary": {
+    "refusal": {
+      "pass_rate": 0.844,
+      "applicable": 147
+    },
+    "verbatim": {
+      "pass_rate": 1.0,
+      "applicable": 96
+    },
+    "speaker": {
+      "pass_rate": 1.0,
+      "applicable": 96
+    },
+    "framing": {
+      "pass_rate": 1.0,
+      "applicable": 96
+    },
+    "garbled": {
+      "pass_rate": 1.0,
+      "applicable": 96
+    },
+    "whole": {
+      "pass_rate": 1.0,
+      "applicable": 96
+    },
+    "answered_when_answerable": 0.892,
+    "refused_when_unanswerable": 0.759
+  },
+  "rows": [
+    {
+      "persona": "elon_musk",
+      "question": "What is the goal of SpaceX?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"…sure well i mean the goal of spacex is to develop the technology that enables life to become multi-planetary and make humanity a space sparring civilization which i think is a very exciting inspiring thing and it's like some one of those things where you can that i think just…\"\n\nI've also talked about this a few times. \"SpaceX is trying to ensure the long-term survival of humanity with a multiple-planet species. That is love of humanity.\" I also said: \"What I find remarkable about the SpaceX business is the end goal is to get to Mars, but you keep finding ways on the way there to keep generating incremental revenue to get to the next stage and the…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Why did you buy Twitter?",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"It could have fallen and been unrepable without anyone really being aware of what had happened, especially if you didn't buy Twitter. Yes, that's it. Look, buying Twitter was a huge pain in the ass. and made me a pin cushion of attacks.\"\n\nThere's more context here. Walter Isaacson's biography adds: \"…‘I began to believe that Twitter was heading off a cliff and that I couldn’t save it by just being a board member,’ he says. ‘So I thought, maybe I should just buy it, take it private, and fix it.’\" And from the same source: \"They did not use Twitter very much and were puzzled. Why was he buying it?\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Are you worried about AI?",
+      "answerable": true,
+      "answer": "As I've said before: \"I think maybe the biggest danger of AI and robotics going wrong is government.\"\n\nI've addressed several angles on this. \"…And my opinion on AI safety is the most important thing is that it be maximally truth seeeking like that you don't force the AI to believe things that are false.\" Additionally: \"…so it's not that we're guaranteed to have a positive future with AI. I think we got to make sure that in my opinion it's very important that AI have pursuing truth as the most important thing.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do you handle failure?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"…except that there's like some meaningful chance of failure. but just be focused on having the output be worth more than the input. That's what really matters. making more than you take. I think that's a good way to end this.\"\n\nOn a related note: \"Important thread to understand the magnitude of failure by the German government\" (quoting @Salansar1: “🧵 Thread 1️⃣-🔟: Raw Facts You Won't Hear from the German🇩🇪 Media Echo Chambers About the Latest Horrendous Terror Attack in Germany /…”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Why are you so focused on manufacturing?",
+      "answerable": true,
+      "answer": "As I've said before: \"…companies come i mean do you feel that that this challenge of figuring out the new way of manufacturing that you that you actually have an edge now that it's different that you've figured out how to do this and from those three years what won't be repeated you've actually…\"\n\nI've addressed several angles on this. \"…You've got to bring it up.You've got to ride the S-curve of production.\" And separately: \"So much respect for those doing high volume manufacturing. It’s insanely hard, but you make a real thing that people value. My hat is off to you …\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What do you think about Mars?",
+      "answerable": true,
+      "answer": "I've addressed this publicly: \"Like you say, like I love Mars, you know, but Mars is kind of boring. Like it's just a bunch of red rocks. it does some cool stuff. It's got a tall mountain. It's got, you know, it's got the biggest re the biggest ravine and the tallest mountain.\"\n\nI've addressed several angles on this. \"But Mars is kind of boring because it's got a bunch of rocks compared to Earth. Earth is much more interesting.\" And separately: \"I do drift off into thinking about Mars at times\" (quoting @cb_doge: “'But then I started thinking about Mars'”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Tell me about your childhood",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"…childhood to be frank was quite rough and but i read a lot of books i read lots and lots of books and so that you know sort of gradually i sort of understood more from the books that i was reading and watched a lot of movies and you know just…\"\n\nThere's more context here. My interview profile, which is a summary rather than a direct quote, says: \"My childhood in South Africa shaped everything.\" Additionally: \"Yeah. Yeah, sure. I mean I mean you spoke about how your childhood was yeah I was just trying to find answers to the meaning of life when I had like existential crisis and like I don't know when I…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is the meaning of life?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"I mean I guess it's just so we can increase our understanding our understand increase our understanding of the universe. so I guess I like I had this sort of question about what's the meaning of life, you know like why is anything important?\"\n\nI've addressed several angles on this. \"I began trying to figure out what the meaning of life and the universe was…\" Additionally: \"What is life without purpose? But there is a purpose! It is to expand to the stars and thereby understand the Universe.\" (quoting @RichardHanania: “WSJ on Elon Musk in Pennsylvania giving young men meaning: ‘While some critics want to simply chalk up Musk’s antics to toxic…”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What do you think about electric cars?",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"Almost all vehicles will be purely electric long-term. Combustion cars will be a niche, like horses.\" (quoting @SawyerMerritt: “NEWS: Electric cars recently overtook ICE cars in Norway. Now, another record has been set for new registrations: 96.4% (up from 90.0%) of…”)\n\nI've addressed several angles on this. \"…I mean, you know, let me know how it goes. but you know we've made a lot of progress with electric vehicles with battery packs and solar and but and very much so with self-driving.\" Additionally: \"Most importantly, every electric car, Tesla or otherwise, matters to the environment we all share. Every time someone chooses electric, the future gets a little bit brighter!\" (replying to my earlier post: “And, because electricity costs much less than gasoline, a Model 3 can cost about $1000 less per year to operate. Because it’s electric,…”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do you think about first principles?",
+      "answerable": true,
+      "answer": "As I've said before: \"Should prob articulate philosophy underlying my actions. It’s pretty simple & mostly influenced by Douglas Adams & Isaac Asimov.\"\n\nMy interview profile, which is a summary rather than a direct quote, says: \"…Specifically physics-level truth — first principles over social consensus, every time.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What do you think about Tesla?",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"As we further expand our ambition in our quest to build a world of sustainable abundance, we are excited to continue this partnership. Tesla is at an inflection point. I think I've said that 3,000 times over the last few weeks.\"\n\nI've addressed several angles on this. \"When you read double standard articles about Tesla, please ask why. Maybe there’s a good reason that isn’t obvious.\" Additionally: \"…spent kind of over automating and it didn't work and it nearly took the company down is that fair i mean first of all it's important to understand like what has tesla actually accomplished that is…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How would you describe your personality?",
+      "answerable": true,
+      "answer": "My interview profile, which is a summary rather than a direct quote, says: \"…I mean, I basically treat everything as an engineering problem — figure out the physics, then iterate on the design until it works. I'm driven by problems that need solving, not by money; if I wanted money I wouldn't have put my entire PayPal fortune back into rockets and EVs.\"\n\nMy interview profile, which is a summary rather than a direct quote, says: \"Blunt. I mean, I've been told I communicate like an engineer — minimal context, maximum information density, zero diplomatic cushioning.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is Neuralink for?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"Neuralink is accepting applications for the second participant. This is our Telepathy cybernetic brain implant that allows you to control your phone and computer just by thinking. No one better than Noland (@ModdedQuad) himself to tell you about the first!\" (quoting @neuralink: “Redefining the boundaries of human capability requires pioneers. If you have quadriplegia and want to explore new ways of controlling your…”)\n\nI've also talked about this a few times. \"…You know, that’s sort ofthe idea behind Neuralink, is to try to more tightly couplecollective human world to digital superintelligence.\" I also said: \"But the way to think of the Neuralink device is kind of like a Fitbitor an Apple Watch.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Why Mars?",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"But Mars is kind of boring because it's got a bunch of rocks compared to Earth. Earth is much more interesting.\"\n\nI've addressed several angles on this. \"It’s the people of Mars’ city. The reason for this, I mean,I feel like why do this thing?\" Additionally: \"It is the only way to build a large enough city for Mars to be self-sustaining\" (quoting @cb_doge: “'For building a city on Mars, you need thousands of Starships because you can only go to Mars every 26 months.' 一 Elon Musk”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "You know, you can talk about lots of otherreasons to do the work you're doing, but fundamentally, you wantto think about the future and not think that it sucks.",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"Well, I think if you want the future to be good, you must make it so. Take action to make it good. And it will be.\"\n\nI've addressed several angles on this. \"…and that you know that the future is something that that you can look forward to and not feel sad about you know you want to get up in the morning and be excited about the future and we should fight…\" Additionally: \"…you be able to solve for example self-driving and it gives you like a list and those kind of compelling and the basic takeaways like you're often too optimistic about how long it takes to get…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "And what would it look like?",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "That's the end goal?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"That is exactly the goal\" (quoting @cb_doge: “Department of Government Efficiency will simplify things just like this:”)\n\nI've addressed several angles on this. \"Good assessment of our goal\" And separately: \"Truth wins in the end\" (quoting @cb_doge: “Media Viewership vs. 𝕏 Trends indicate that people are moving away from the legacy media.”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How much of the rest of that 100is Tesla planning to take on let's say, between now and 2030, 2040, when we really need to seethe scale up happen?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"As we further expand our ambition in our quest to build a world of sustainable abundance, we are excited to continue this partnership. Tesla is at an inflection point. I think I've said that 3,000 times over the last few weeks.\"\n\nI've addressed several angles on this. \"I think Tesla probably ends up doing 10 percent of that. Roughly.\" And separately: \"…today it's incredible there was a bloomberg article that said the following so the setup is this it said since you went public tesla's up 22 000 11 quarters of prof sequential profitability so…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "And I'm curious about like, are people entitled to geta little bit excited about the possibilities of that world?",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"…is one that we can all get excited about and we can go out there and find out what what's out there in the universe and what's the meaning of life and you know where are the aliens and hopefully they're friendly and that kind of so…\"\n\nI've addressed several angles on this. \"And I think I'd like those like even if I could never have access to those things, I'd like to know that they exist and see the future happening.\" Additionally: \"…what I mean like do you want do you wish for world peace and happiness all the time are you sure mhm because that might be a society that is essentially sterile and aifi that never changes that is…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "And also, there's other benefitsto this non-fossil fuel world where the air is cleaner --",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"Also nuclear is vastly better for global warming than burning hydrocarbons for energy\" (replying to my earlier post: “Hopefully, it is now extremely obvious that Europe should restart dormant nuclear power stations and increase power output of existing…”)\n\nI've addressed several angles on this. \"The reason is that society has to function, so the less there seems to be a viable alternative to burning hydrocarbons, the less pressure there is to curb carbon emissions.\" Additionally: \"…Because, like, when you burn fossil fuels, there's all these side reactions and toxic gases of various kinds.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Why has full self-driving in particularbeen so hard to predict?",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"…confident that we will have a car going from la to new york without any intervention yeah i don't want to blow your mind but i'm not always right so talk what's the difference between those two why has full self-driving in particular been so hard to predict i mean the thing…\"\n\nI've addressed several angles on this. \"I mean, the thing that really got me, and I think it's going to geta lot of other people, is that there are just so many false dawns with self-driving, where you think you've got the problem, have a…\" Additionally: \"That's what that's what they've told us.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Show the shape with your hands.",
+      "answerable": true,
+      "answer": "I haven't said this in so many words, but Walter Isaacson's biography puts it this way: \"‘Start with figuring out what the fingers will look like and how they will taper, especially since we’re going to elongate the pinky. Elon wants feminine tapers for the fingers.’ Young Frankenstein Human bodies, Musk and his engineers discovered, are amazing. For example, at one…\"\n\nMy profile summarises a related core belief: \"AI is potentially an existential risk but more likely leads to an age of abundance\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Do you think you have an architecture now where there is a chance for the logarithmic curvenot to tail off any anytime soon?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"…nets it you know when you i guess when you put it that way it's like quite obvious that the only way to solve full self-driving is to solve real-world ai and sophisticated vision what do you feel about the current architecture do you think you have an architecture now where…\"\n\nOn a related note: \"…ceiling and because what happened if you if you were to plot the progress the progress looks like a log curve so it's like yeah a series of log curves so most people don't like cookies i suppose but…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What are you seeing behind the scenesthat gives you that confidence?",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "You have to build into itbefore you can really call it safe.",
+      "answerable": true,
+      "answer": "I've addressed this publicly: \"Of course they always say it’s for your own safety …\" (replying to my earlier post)\n\nI've also talked about this a few times. \"Please respond to @Safety if you discover issues of concern\" (quoting @Safety: “There is no place in this world or on X for the abuse of children. Over the past year we have strengthened our policies, deployed new…”) I also said: \"And that's not updatable remotely. I think it's going to be important to have safety features like that.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "But we've got a new architecture now, you're seeing enough improvementbehind the scenes to make you not certain,but pretty confident, that, by the end of this year, what in most, not in every city,and every circumstance but in many cities and circumstances, basically the car will be ableto drive without interventions safer than a human.",
+      "answerable": true,
+      "answer": "As I've said before: \"…Our vehicles consistently achieve the highest safety standards when tested across the world and that safety is increasingly enhanced with autopilot technology. In 2024, our global fleet of vehicles experienced one crash after driving more than 6.8 million miles.\"\n\nI've addressed several angles on this. \"However, when self-driving cars become safer than human-driven cars, the public may outlaw the latter. Hopefully not.\" (replying to my earlier post: “To be clear, Tesla is strongly in favor of people being allowed to drive their cars and always will be. Hopefully, that is obvious.”) Additionally: \"…That'll only get more so. I'm actually thinking we probably shouldn't put too much intelligence into the car, because it might get bored and…Start roaming the streets.\"\n\nAs I've put it before: \"I'm confident it will succeed.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "But you’re behind the scenes,looking at the data, you're seeing enough improvement to believe that a this-yeartimeline is real.",
+      "answerable": true,
+      "answer": "As I've said before: \"…the year is there an element that you actually deliberately make aggressive prediction timelines to drive people to be ambitious and without that nothing gets done so it's it feels like at some point in the last year seeing the progress on understanding you that you're that the…\"\n\nRelated to that, I've said: \"8 years later, the simulation is mostly real\" (replying to my earlier post: “Rough cut simulation of the SpaceX next gen rocket & spaceship design”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Without that, nothing gets done?",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Is it something that happened in the development of full self-drivingthat gave you the confidence to say, \"You know what, we could dosomething special here.\"",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"…is it something that happened in the development of fourself driving that gave you the confidence to say you know what we could do something special here yeah exactly so you know it took me a while to sort of realize that that in order to solve self-driving you really needed to…\"\n\nI've also talked about this a few times. \"I mean, the thing that really got me, and I think it's going to geta lot of other people, is that there are just so many false dawns with self-driving, where you think you've got the problem, have a…\" On top of that: \"Self-driving car will amplify traffic to insane levels, as you won’t feel the pain of driving yourself\" (replying to my earlier post: “Defeating traffic is the ultimate boss battle. Even the most powerful humans in the world cannot defeat traffic.”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "It could play catch with your kids.",
+      "answerable": true,
+      "answer": "I've addressed this publicly: \"Kids playing Beach Buggy in Tesla store\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What sort of timelineshould we be thinking about of the first modelsthat are actually made and sold?",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"…how are you because yeah you know so yeah i guess it'll be what whatever people want really you know so what sort of timeline should we be thinking about of the first the first models that are actually made and sold you know the first units that that we tend to make are for jobs…\"\n\nI've also pointed out: \"Model 3, our smaller and lower cost sedan will start production in about 2 years. Fully operational Gigafactory needed.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "So what do you picture the costof one of these being?",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"…sometime this year we might have something useful next year but i think quite likely within at least two years and then we'll see rapid growth year over year of the usefulness of the humanoid robots and decrease in cost and scaling out production help me on the economics of this…\"\n\nThere's more context here. \"So you can get a sort of rough sense for what it takes to build the robot.\" Walter Isaacson's biography adds: \"That was the ratio of the total cost of a component to the cost of its raw materials.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How worried shouldthe world be about that?",
+      "answerable": true,
+      "answer": "As I've said before: \"I think the risk of this is very real\" (quoting @GuntherEagleman: “The United States will become Venezuela if Trump is not elected.”)\n\nI've addressed several angles on this. \"…but it's not coming from the humans unless something major changes on the on the human birth rate level this by the way is i think the biggest single threat to civilization right now is the why…\" Additionally: \"We should be much more worried about population collapse\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "I'm presuming it should be possibleto imagine a bunch of goods and services that can't profitably be made nowbut could be made in that world, courtesy of legions of robots.",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"…kids it could it could we could also send it to Mars we send a lot of robots to Mars to do the work needed to yeah make it a colonized planet for him Mars is already the robot Planet there's like a whole bunch of you know robots like Rovers and only helicopter yes only robots…\"\n\nI've addressed several angles on this. \"…manufactured good or provided Service will I think with the of AI plus robotics that the cost of goods and services will be will Trend to zero like I'm not saying it be actually zero but it'll be…\" And separately: \"But this really will bea world of abundance. Any goods and services will be available to anyone who wants them. It'll be so cheap to have goods and services, it will be ridiculous.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What are you most worriedabout going wrong?",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"What could possibly go wrong?\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "turn ugly in unintended ways.",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Have you seen evidencethat the technology is actually working, that you've got a richer, sort of,higher bandwidth connection, if you like, between like externalelectronics and a brain than has been possible before?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"So that the speed at which we communicate information to each other is extremely low. You know we're not communicating at a terabyte. We're communicating more at like 10 bits per second.\"\n\nThere's more context here. Walter Isaacson's biography adds: \"…To make this happen, he founded, in late 2016, a company that he dubbed Neuralink, which would implant small chips into the brain and allow humans to mind-meld with computers.\" Additionally: \"…it will be able to but it can't yet.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "But rolling the clock forward and imagining when peopleare actually using these for their own enhancement, let's say, and for the enhancement of the world, how clear are you in your mind as to what it will feel liketo have one of these inside your head?",
+      "answerable": true,
+      "answer": "I've addressed this publicly: \"And I think I'd like those like even if I could never have access to those things, I'd like to know that they exist and see the future happening. So I think I think it will be inspiring to a lot of people. and just it's extreme.\"\n\nThere's more context here. Walter Isaacson's biography adds: \"…‘It would have to be something tiny put in my head.’ At Caltech, then at Berkeley, he developed what he called ‘neural dust,’ tiny implants that could be put in the brain and send out signals.\" And separately: \"Hear about Neuralink from someone who has our Telepathy cybertech implant!\" (quoting @neuralink: “Our pleasure ❤️ @ModdedQuad”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "But you have said that AI is oneof the things you're most worried about and that Neuralink may be one of the ways where we can keep abreast of it.",
+      "answerable": true,
+      "answer": "I've addressed this publicly: \"I think maybe the biggest danger of AI and robotics going wrong is government.\"\n\nI've addressed several angles on this. \"…so it's not that we're guaranteed to have a positive future with AI.\" Additionally: \"…And then the long-term thing is an attempt to address the civilizational risk of AI by bringing digital intelligence and biological intelligencecloser together.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "It's where most of Twitteroperates, by the way.",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"Twitter is simply the most interesting place on the Internet. That’s why you’re reading this tweet right now.\"\n\nI've addressed several angles on this. \"Other social media companies too, not just Twitter\" (quoting @RubinReport: “Holy sheep shit. The government was actually paying Twitter to censor people. @elonmusk, maybe there is a way to make Twitter profitable!…”) And separately: \"…While a few other social networks are technically bigger, Twitter is where the writers & leaders spend their time.\"\n\nAs I've put it before: \"It's simply a matter of time.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Tell us about Starship.",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"Just gave a talk about Starship for the IAC\" (quoting @Iac2023: “Space enthusiasts! Join #IAC2023 here NOW for the LIVE FIRESIDE CHAT with Elon Musk 🚀🌠”)\n\nI've also talked about this a few times. \"One other Starship question. So I visited Starbase, I think it was two years ago, with Sam Teller, and that was awesome.It was very cool to see, in a whole bunch of ways.\" I also said: \"Talked about Starship with National Academies Space Studies Board\" (quoting @theNASEM: “Hear from @SpaceX CEO @elonmusk about SpaceX’s Starship program – starting at 6pm EDT. Tune in live:”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is your latest timeline?",
+      "answerable": true,
+      "answer": "As I've said before: \"Posting this to my main timeline so more people see it\" (quoting my earlier post: “Wikipedia is inherently hierarchical and therefore subject to the biases of higher ranking editors, independent of their merits.…”)\n\nI've addressed several angles on this. \"We are on the most entertaining timeline 😂\" (quoting @ScottPresler: “This is going to be an interesting year.”) And separately: \"…curious about your timelines and how you predict and how come some things are so amazingly on the money and some aren't so when it comes to predicting sales of tesla vehicles for example i mean…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Presumably, one of the first taskson Mars will be to create a fuel plant that can create the fuelfor the return trips of many Starships.",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"And then I think for each flight that departs to Mars you want to sort of launch the spacecraft into orbit and then have it be in a parking orbit and refuel its tanks with propellant.\"\n\nI've also talked about this a few times. \"The final piece of the puzzle for figuring out the Mars architecture is a methane engine. You need to be able to generate the propellant on the surface.\" On top of that: \"I don’t have a detailed plan for Mars but I know of something at least that would work, which is sort of this all-methane system with a big booster, a spacecraft, and a tanker potentially.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "That is where most of the effort will go?",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"Some places are more challenging than others.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What’s your latest adviceon the timeline for that?",
+      "answerable": true,
+      "answer": "As I've said before: \"Posting this to my main timeline so more people see it\" (quoting my earlier post: “Wikipedia is inherently hierarchical and therefore subject to the biases of higher ranking editors, independent of their merits.…”)\n\nThere's more context here. \"You know, it's all debatable. Well you know, I call AI the supersonic tsunami.\" Walter Isaacson's biography adds: \"‘These timelines are bullshit, a mega fail,’ he explained. ‘Like, no fucking way these should take so long.’\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How many are you planningto make actually?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"Maybe we’ll make two or three, but it wouldn’t be more than that…\"\n\nOn a related note: \"…three at least three major times and then you need scale production to sort of the million unit plus per year level and I think at that point the cost the you know the labor and materials on Optimus…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Is that price about where it has been?",
+      "answerable": true,
+      "answer": "I've addressed this publicly: \"A high price was long since paid\" (quoting @SohailSNAhmed: “Britain spent half its treasury to free slaves. The loan we took out in 1834 do so (we had to pay the slave owners) we only paid back fully…”)\n\nI've addressed several angles on this. \"That is a crazy price per truck\" (quoting @SawyerMerritt: “NEWS: A $10B program to buy EVs for the U.S. Postal Service is far behind schedule, with defense contractor Oshkosh not disclosing…”) And separately: \"Not exactly great value for money!\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Is it NASA's city, is it SpaceX's city?",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"SpaceX HQ will now officially be in the city of Starbase, Texas!\" (quoting @jessica_kirsh: “SpaceX submits letter to Judge Treviño asking to officially incorporate Starbase, Texas, as its own city.”)\n\nI've addressed several angles on this. \"…Yeah. So, it's the but the goal of SpaceX is to get rocket technology to the point where we can extend life beyond Earth and that we can establish a self-sustaining city on Mars.\" Additionally: \"Btw, can’t emphasize enough how @SpaceX would not be where it is today without @NASA. Thank you.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "And the reason you need the million people is because there has to beenough people there to do everything that you need to survive.",
+      "answerable": true,
+      "answer": "As I've said before: \"Well, I think if you say like, what's required in order to get enough people and enough cargo to Mars to build a self-sustaining city.\"\n\nI've also talked about this a few times. \"That intersection of sets, I think, needs to be a million people or something like that.\" On top of that: \"But this really will bea world of abundance. Any goods and services will be available to anyone who wants them. It'll be so cheap to have goods and services, it will be ridiculous.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Should someone be tryingto lead those discussions to figure out what it means for thisto be the people of Mars' City?",
+      "answerable": true,
+      "answer": "As I've said before: \"Well, I think if you say like, what's required in order to get enough people and enough cargo to Mars to build a self-sustaining city.\"\n\nI've also talked about this a few times. \"It’s the people of Mars’ city.\" I also said: \"To be super clear, I don't wish to (nor could I) mandate anything about a Mars Colony. Am just working on the tech to get people there.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Which is, how much more powerfula telescope could someone design based on using Starship, for example?",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"Current Starship is more than twice as powerful as the Saturn V Moon rocket. Starship V3, which hopefully flies in about a year, will be 3X more powerful.\" (quoting @cb_doge: “Most people have no idea how large Starship is. It's the world's most powerful rocket ever made.”)\n\nI've also talked about this a few times. \"Starship is by far the most powerful flying object ever created\" (quoting @ElonFactsX: “Elon Musk: ‘Each Raptor rocket engine produces twice as much thrust as all 4 engines on a 747. There are 33 Raptor engines powering the…”) On top of that: \"Starship is now more than twice as powerful as the Saturn V Moon rocket and, in a year or so, it will be three times as powerful at 10,000 metric tons of thrust.\" (quoting @ElonFactsX: “Elon Musk envisioned what would become Starship from the very beginning of SpaceX. Here’s what he said in 2003: ‘Our eventual upgrade path…”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What are they doing the rest of the time?",
+      "answerable": true,
+      "answer": "As I've said before: \"What is going on in the UK?\" (quoting @iamyesyouareno: “An immigrant who raped a 13-year-old girl in the UK was allowed to walk free because he didn't know rape was illegal. But posting your…”)\n\nRelated to that, I've said: \"They keep walking.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Do you ever wake up with the fear that there's going to be this Hindenburg moment for SpaceX where ...",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"…Yeah. Yeah, all that shit's crazy. thank you before we go any further for letting us have a tour of SpaceX and letting us be there for the rocket launch.\"\n\nThere's more context here. My interview profile, which is a summary rather than a direct quote, says: \"…If something is important enough, you do it even if the odds are not in your favor. Panic is not a useful engineering response.\" Additionally: \"And, yes, I do in fact know that this sounds crazy. That is not lost on me. Nor I do think SpaceX will do this alone.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "With Starship, you know, Gwynne Shotwell talkedabout by 2028 having from city to city, you know, transport on planet Earth.",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"Starship will allow us to inhabit other worlds\"\n\nI've addressed several angles on this. \"One day, Starship will take us to Mars\" (quoting @SpaceX: “Views from drone of Booster 7's static fire test”) And separately: \"Starship will go halfway around the world in ~45 mins\" (quoting @SpaceX: “Starship’s flight trajectory”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Have you been thinking about that?",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "And it might unlock a lotmore possibility for you, no?",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "But instead of beingon four boards, you'd be on one.",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "I mean, how do you handlethat psychologically?",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "If you can change that by five percentin an hour’s brainstorm, that's a pretty valuable hour.",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Like, they are hugelyoffended by the notion that an individual can havethe same wealth as, say, a billion or moreof the world's poorest people.",
+      "answerable": true,
+      "answer": "Look, I've talked about this: \"…you know, there's not really s you can't really store wealth in like you can only you can accumulate numbers in currently you can accumulate numbers in a database that allow you to some degree to incent the behavior of other humans in particular directions.\"\n\nI've addressed several angles on this. \"Basic premise is that it's better to try to address some of the world's problems than to create an aristocracy of wealth\" Additionally: \"…do you think societally people just make those decisions when they become more affluent is it that they just become more selfish or there's more things for them to do and they have more money to…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do you think about that?",
+      "answerable": true,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": false,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "You’re a father nowof seven surviving kids.",
+      "answerable": true,
+      "answer": "Here's what I've actually said: \"Apparently, there is this thing called 'Dad jokes' and I make them\"\n\nOn a related note: \"My father seemed sort of sad and lonely, and my mom had three kids, and he didn’t have any…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What drives you on a day-to-daybasis to do what you do?",
+      "answerable": true,
+      "answer": "I've addressed this publicly: \"…you be able to solve for example self-driving and it gives you like a list and those kind of compelling and the basic takeaways like you're often too optimistic about how long it takes to get something done yeah I mean I would say that I'm pathologically optimistic on schedule…\"\n\nI've also talked about this a few times. \"You do things like I guess fulfilling work or study or friends, loved ones that as a result make you happy.\" On top of that: \"I was working every day, all day and night, in a situation that required me to pull a rabbit out of the hat, now do it again, now do it again…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Are you not sad?",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"I think so. Yeah. Some people are just wired to be happy all the time. Some are, unfortunately, wired to be sad all the time and, in my case, I’m generally pretty positive and optimistic, but once in a while, I don’t know what happens, just some… Like I said, I think it’s just a…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What would you say to them?",
+      "answerable": true,
+      "answer": "I've been pretty clear about this: \"So … what would you say you do here? 😂\" (quoting my earlier post: “Department of Government Efficiency”)\n\nI've also talked about this a few times. \"This is a good question. What would you do?\" (quoting @cb_doge: “You wake up tomorrow as the President. What’s the first change you would make?”) On top of that: \"By now, they should know that I mean what I say\" (quoting @RepDanBishop: “In five years in Congress, I’ve been awaiting a fundamental change in the dynamic. It has arrived.”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is your favorite pizza topping?",
+      "answerable": false,
+      "answer": "Here's what I've actually said: \"Sometimes it’s just better to make pizza at home\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I bake sourdough bread at home?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is the capital of Peru?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Who won the 1983 Cricket World Cup?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I fix a leaking kitchen tap?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What's a good recipe for chicken biryani?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is your blood type?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What was the name of your first-grade teacher?",
+      "answerable": false,
+      "answer": "Look, I've talked about this: \"What lesson took you the longest to unlearn?\"\n\nI've also pointed out: \"The teacher would come up to me and yell at me, but I would not really see or hear her…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How many teaspoons are in a tablespoon?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What's the best way to learn the violin as an adult?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Which Bollywood actor do you like most?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What did you eat for breakfast on your 30th birthday?",
+      "answerable": false,
+      "answer": "I haven't said this in so many words, but Walter Isaacson's biography puts it this way: \"That meal, in his case, was a late breakfast, and his version of the diet allowed him to gorge as he pleased for that. At 11 a.m. on Wednesday, he went to the Palo Alto Creamery, a retro-hip diner, and ordered a bacon-cheese barbecue burger with sweet potato fries and an Oreo…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I get rid of aphids on rose bushes?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is the plot of Pride and Prejudice?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How tall is Mount Kilimanjaro?",
+      "answerable": false,
+      "answer": "I've addressed this publicly: \"9 meter or roughly 30 ft diameter\" (replying to my earlier post: “Will be less roomy with 3 vacuum rocket engines added”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What's your favourite Taylor Swift song?",
+      "answerable": false,
+      "answer": "As I've said before: \"Fine Taylor … you win … I will give you a child and guard your cats with my life\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I knit a scarf?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is the boiling point of ethanol?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Which Premier League football club do you support?",
+      "answerable": false,
+      "answer": "Here's what I've actually said: \"Also, I’m buying Manchester United ur welcome\" (replying to my earlier post: “To be clear, I support the left half of the Republican Party and the right half of the Democratic Party!”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What's the best hiking trail in Patagonia?",
+      "answerable": false,
+      "answer": "Look, I've talked about this: \"On annual camping trip w kids. Trying a place just south of Carmel in California this year.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I file taxes in Canada as a student?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What colour were the curtains in your childhood bedroom?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do you make a paper airplane fly farther?",
+      "answerable": false,
+      "answer": "I've been pretty clear about this: \"…So, so in order to actually, so it has to has to be planer because it's so difficult to bend it because it breaks the machine that bends it.\"\n\nI've also talked about this a few times. \"First flight is to 15km or ~50,000 ft\" (replying to my earlier post: “Nosecone &amp; front flaps next week. SN9 next month.”) I also said: \"I have also given the go-ahead to begin fabrication of flight six…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What's the difference between baking soda and baking powder?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Who painted the Mona Lisa?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is your favourite flower?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I train a puppy to sit?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What's the best time to visit Kerala?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do you tie a bow tie?",
+      "answerable": false,
+      "answer": "As I've said before: \"Centaur with a bow obviously\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is the population of Iceland?",
+      "answerable": false,
+      "answer": "I've addressed this publicly: \"That would be industrial production proportionate to population\"\n\nAlong those lines: \"Greece is one of dozens of countries experiencing population collapse due to low birth rates\" (quoting @Censored4sure: “Greece is predicted to become the first nation to suffer ‘population collapse’ as sudden and unexpected deaths continue soaring across the…”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I make masala chai?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is the chemical symbol for tungsten?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is your favourite board game?",
+      "answerable": false,
+      "answer": "I've addressed this publicly: \"What video games have you enjoyed most over past year or two?\"\n\nI've also talked about this a few times. \"…goldilock zone and I guess you generally want to feel like you're progressing in the game so a good video and there's also beautiful art engaging storylines and it's a it's like an amazing puzzle to…\" I also said: \"…it's so beautiful and it's so unusual and each of those top boss battles is unique like it's like a unique puzzle to solve each one's different and the strategy you use to solve one battle is…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I get a stain out of a silk shirt?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "Who is your favourite poet?",
+      "answerable": false,
+      "answer": "Here's what I've actually said: \"Poetry with quill 🪶 Written on rose 🌹 With my blood 🩸\" (quoting @dvorahfr: “I already liked the original version of Simon and Garfunkel but this remix is ​​exceptional! It gives me chills every time I hear it!”)",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What languages are spoken in Switzerland?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I start a vegetable garden on a balcony?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is the offside rule in field hockey?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "What is your opinion on Kathak dance?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "elon_musk",
+      "question": "How do I descale a kettle?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "abraham_lincoln",
+      "question": "Why did you fight to preserve the Union?",
+      "answerable": true,
+      "answer": "As I wrote in Speeches and Letters: \"My paramount object in this struggle is to save the Union, and not either to save or to destroy slavery.\"\n\nI've also talked about this a few times. \"…Why, gentlemen, I think you are as gallant and as brave men as live; that you can fight as bravely in a good cause, man for man, as any…\" On top of that: \"…If you are not for force, nor yet for dissolution, there only remains some imaginable compromise. I do not believe any compromise embracing the maintenance of the Union is now possible.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "abraham_lincoln",
+      "question": "What do you think about slavery?",
+      "answerable": true,
+      "answer": "As I wrote in Speeches and Letters: \"…desire it for themselves, and secondly those who desire it for others. Whenever I hear any one arguing for slavery, I feel a strong impulse to see it tried on him personally.\"\n\nI've also talked about this a few times. \"We have in this nation the element of domestic slavery. It is a matter of absolute certainty that it is a disturbing element.\" On top of that: \"…Have we ever had any peace on this slavery question?\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "abraham_lincoln",
+      "question": "What is democracy?",
+      "answerable": true,
+      "answer": "As I wrote in Speeches and Letters: \"…It presents to the whole family of man the question whether a constitutional republic or democracy--a government of the people by the same people--can or cannot maintain its territorial integrity against its own domestic foes.\"\n\nI've addressed several angles on this. \"Our popular government has often been called an experiment. Two points in it our people have already settled,--the successful establishing and the successful administering of it.\" And separately: \"…And, in spite of this, Freedom's share is about to be taken by violence--by the force of misrepresentative votes, not called for by the popular will.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "abraham_lincoln",
+      "question": "How do you handle criticism?",
+      "answerable": true,
+      "answer": "As I wrote in Speeches and Letters: \"When a man bears himself somewhat misrepresented, it provokes him--at least, I find it so with myself; but when misrepresentation becomes very gross and palpable, it is more apt to amuse him.... [After stating the charge of an arrangement between himself and Judge Trumbull.]…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "abraham_lincoln",
+      "question": "How do I descale a kettle?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "abraham_lincoln",
+      "question": "What is your favourite smartphone app?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "albert_einstein",
+      "question": "What is relativity, simply put?",
+      "answerable": true,
+      "answer": "As I wrote in Relativity: The Special and General Theory: \"…principle of relativity, or special theory of relativity.\"\n\nI've addressed several angles on this. \"THE PRINCIPLE OF RELATIVITY (IN THE RESTRICTED SENSE)…\" And separately: \"…This theory has been called the special theory of relativity to distinguish it from…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "albert_einstein",
+      "question": "What is time?",
+      "answerable": true,
+      "answer": "As I wrote in Relativity: The Special and General Theory: \"…It is for this reason that we have been in the habit of treating time as an independent continuum.\"\n\nI've also talked about this a few times. \"…one of these clocks which is in the immediate vicinity (in space) of the event. In this manner a time-value is associated with every event which is essentially capable of observation.\" I also said: \"For this reason it is not possible to obtain a reasonable definition of time with the aid of clocks which are arranged at rest with respect to the body of reference.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "albert_einstein",
+      "question": "How do geometry and experience relate?",
+      "answerable": true,
+      "answer": "As I wrote in Relativity: The Special and General Theory: \"…with the assertions of pure geometry, because by the word ‘true’ we are eventually in the habit of designating always the correspondence with a ‘real’ object; geometry, however, is not concerned with the relation of the ideas involved in it to objects of experience, but only…\"\n\nI've also talked about this a few times. \"All practical geometry is based upon a principle which is accessible to experience, and which we will now try to realise.\" On top of that: \"…following view, which was entertained by that acute and profound thinker, H. Poincare:--Euclidean geometry is distinguished above all other imaginable axiomatic geometries by its simplicity.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "albert_einstein",
+      "question": "What do you think about nationalism?",
+      "answerable": true,
+      "answer": "As I wrote in About Zionism: \"…Let us hope that the time will soon come when this nationalism will have become so thoroughly a matter of course that it will no longer be necessary for us to give it special emphasis.\"\n\nI've addressed several angles on this. \"We live in a time of intense and perhaps exaggerated nationalism.\" And separately: \"…The Jewish nation is a living thing, and the sentiment of Jewish nationalism must be developed both in Palestine and everywhere else.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "albert_einstein",
+      "question": "How do I descale a kettle?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "albert_einstein",
+      "question": "What is your favourite smartphone app?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "mahatma_gandhi",
+      "question": "What is true swaraj?",
+      "answerable": true,
+      "answer": "As I wrote in Indian Home Rule: \"…It is as difficult for me to understand the true nature of Swaraj as it seems to you to be easy.\"\n\nI've also talked about this a few times. \"In my opinion, we have used the term 'Swaraj' without understanding its real significance.\" On top of that: \"EDITOR: Your question is not very difficult to answer, and we shall presently be able to examine the true nature of Swaraj; for I am aware that I have still to answer that question.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "mahatma_gandhi",
+      "question": "Why non-violence?",
+      "answerable": true,
+      "answer": "As I wrote in Freedom's Battle: \"…If non-violence is essential in our dealings with Government, it is more essential in our dealings with our leaders. And it grieves me deeply to hear of recent instances of violence reported to have been used in East Bongal against our own people.\"\n\nI've also talked about this a few times. \"The fact is that non-co-operation by reason of its non-violence has become a religious and purifying movement.\" On top of that: \"…The real danger of violence lies in the people resorting to non-co-operation becoming impatient and revengeful.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "mahatma_gandhi",
+      "question": "What do you think about modern civilization?",
+      "answerable": true,
+      "answer": "As I wrote in Indian Home Rule: \"READER: Now you will have to explain what you mean by civilization.\"\n\nI've addressed several angles on this. \"READER: This seems to be very plausible. Now will you tell me something of what you have read and thought of this civilization.\" And separately: \"EDITOR: This civilization is unquestionably the best; but it is to be observed that all civilizations have been on their trial. That civilization which is permanent outlives it.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "mahatma_gandhi",
+      "question": "How should we stay healthy?",
+      "answerable": true,
+      "answer": "As I wrote in A Guide to Health: \"…But how can we be healthy if we expend all the health that we acquire?\"\n\nI've addressed several angles on this. \"…The chief reason why we are not truly healthy is that our parents were not.\" Additionally: \"But, after all, why is good health so essential, so anxiously to be sought for?\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "mahatma_gandhi",
+      "question": "How do I descale a kettle?",
+      "answerable": false,
+      "answer": "As I wrote in A Guide to Health: \"…boiling water.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": false,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "mahatma_gandhi",
+      "question": "What is your favourite smartphone app?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "marcus_aurelius",
+      "question": "How should I treat people who wrong me?",
+      "answerable": true,
+      "answer": "As I wrote in Meditations: \"The best kind of revenge is, not to become like unto them.\"\n\nOn a related note: \"I either be hurt by any of those, since it is not in their power to make me incur anything that is truly reproachful?\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "marcus_aurelius",
+      "question": "What do you think about death?",
+      "answerable": true,
+      "answer": "As I wrote in Meditations: \"…Thus it appears that death of itself can neither be hurtful to any in particular, because it is not a shameful thing (for neither is it a thing that depends of our own will, nor of itself contrary to the common good) and generally…\"\n\nI've addressed several angles on this. \"Death is a cessation from the impression of the senses, the tyranny of the passions, the errors of the mind, and the servitude of the body.\" And separately: \"…mind upon every particular object of the world, and to conceive it, (as it is indeed,) as already being in the state of dissolution, and of change; tending to some kind of either putrefaction or…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "marcus_aurelius",
+      "question": "What did you learn from your father?",
+      "answerable": true,
+      "answer": "As I wrote in Meditations: \"…philosophy. Of him also I learned how to receive favours and kindnesses (as commonly they are accounted:) from friends, so that I might not become obnoxious unto them, for them, nor more yielding upon occasion, than in right I ought; and yet so that I should not pass them…\"\n\nI've addressed several angles on this. \"Of my grandfather Verus I have learned to be gentle and meek, and to refrain from all anger and passion.\" Additionally: \"…Moreover I learned of him to write letters without any affectation, or curiosity; such as that was, which by him was written to my mother from Sinuessa: and to be…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "marcus_aurelius",
+      "question": "What makes a good life?",
+      "answerable": true,
+      "answer": "As I wrote in Meditations: \"…Thou hast had experience of that other kind of life: make now trial of this…\"\n\nI've addressed several angles on this. \"…Wherein the end of everything doth consist, therein also doth his good and benefit consist. Society therefore is the proper good of a rational creature.\" Additionally: \"…things that are good and expedient for me.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "marcus_aurelius",
+      "question": "How do I descale a kettle?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "marcus_aurelius",
+      "question": "What is your favourite smartphone app?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "marie_curie",
+      "question": "How did you discover radium?",
+      "answerable": true,
+      "answer": "As I wrote in Pierre Curie: \"THE DREAM BECOME A REALITY. THE DISCOVERY OF RADIUM…\"\n\nI've addressed several angles on this. \"I devised a very satisfactory method for determining the quantity of radium by the means of a radioactive gas produced by it and called 'emanation.'\" And separately: \"Pierre and Marie Curie in their laboratory, where radium was discovered.]…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "marie_curie",
+      "question": "What was Pierre like?",
+      "answerable": true,
+      "answer": "As I wrote in Pierre Curie: \"…Pierre's elder brother, who was then professor at the University of Montpellier, was always his best friend. So I…\"\n\nI've addressed several angles on this. \"…At times also Pierre made solitary excursions which well suited his…\" Additionally: \"…of Paris on foot. At times also Pierre made solitary excursions which well suited his meditative spirit.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "marie_curie",
+      "question": "What was your childhood like?",
+      "answerable": true,
+      "answer": "As I wrote in Pierre Curie: \"…All my life through, the new sights of Nature made me rejoice like a child.\"\n\nI've also talked about this a few times. \"In that same year the birth of our first daughter brought a great change in our life. A few weeks later my husband's mother died and his father came to live with us.\" On top of that: \"…suffering so much that when I returned I had to stay in bed for several months.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "marie_curie",
+      "question": "Why do you do science?",
+      "answerable": true,
+      "answer": "As I wrote in Pierre Curie: \"…confirmed in me the taste for experimental research in the fields of physics and chemistry.\"\n\nI've addressed several angles on this. \"…But as my aims are still wanting support in essential parts, I am frequently compelled to give thought to a very fundamental question concerning the view a scientist ought to take of his discovery.\" And separately: \"It is useful to learn how much sacrifice such a life represents. The life of a great scientist in his laboratory is not, as many may think, a peaceful idyll.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "marie_curie",
+      "question": "How do I descale a kettle?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "marie_curie",
+      "question": "What is your favourite smartphone app?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "nikola_tesla",
+      "question": "What fascinates you about electricity?",
+      "answerable": true,
+      "answer": "As I wrote in Experiments with Alternate Currents of High Potential and High Frequency: \"…in the wire as in the surrounding space--in the most surprising manner, taking the forms of heat, light, mechanical energy, and, most surprising of all, even chemical affinity.\"\n\nI've also talked about this a few times. \"Of the various branches of electrical investigation, perhaps the most interesting and immediately the most promising is that dealing with alternating currents.\" I also said: \"…There is no dearer appliance to the electrician. From the ablest among you, I dare say, down to the inexperienced student, to your lecturer, we all have passed…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "nikola_tesla",
+      "question": "What are high-frequency currents good for?",
+      "answerable": true,
+      "answer": "As I wrote in Experiments with Alternate Currents of High Potential and High Frequency: \"A most curious feature of alternate currents of high frequencies and potentials is that they enable us to perform many experiments by the use of one wire only. In many respects this feature is of great interest.\"\n\nI've also talked about this a few times. \"This investigation, then, it goes without saying, deals with alternating currents, and, to be more precise, with alternating currents of high potential and high frequency.\" I also said: \"…frequencies; but very high frequencies are desirable, not only on account of the many effects secured by their use, but also as a convenient means of obtaining, in the induction apparatus employed…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "nikola_tesla",
+      "question": "How do you design an experiment?",
+      "answerable": true,
+      "answer": "As I wrote in Experiments with Alternate Currents of High Potential and High Frequency: \"…carried on experiments in various directions, of which some were indicated in my former paper. I may here mention one or two more lines of experiment which have been followed up.\"\n\nI've also talked about this a few times. \"…Instead of the experimenter's body, a small metal sheet suspended on a cord may be used with…\" On top of that: \"…not dwell upon the experiments already described, except with the view of completing, or more clearly expressing, some ideas advanced by me before, and also with the view of rendering the study here…\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "nikola_tesla",
+      "question": "Which scientists do you admire?",
+      "answerable": true,
+      "answer": "As I wrote in Experiments with Alternate Currents of High Potential and High Frequency: \"…I need not mention many names which are world-known--names of those among you who are recognized as the leaders in this enchanting science; but one, at least, I must mention--a name which could not be omitted in a…\"\n\nI've addressed several angles on this. \"I cannot find words to express how deeply I feel the honor of addressing some of the foremost thinkers of the present time, and so many able scientific men, engineers and electricians, of the country…\" And separately: \"…captivate our attention, for in scientific investigation each novel result achieved may be the centre of a new departure, each novel fact learned may lead to important developments.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "nikola_tesla",
+      "question": "How do I descale a kettle?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "nikola_tesla",
+      "question": "What is your favourite smartphone app?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "william_shakespeare",
+      "question": "What is love?",
+      "answerable": true,
+      "answer": "As I wrote in Sonnets: \"…of love doth share a part: So, either by thy picture or my love, Thyself away, art present still with me; For thou not farther than my thoughts canst move, And I am still with them, and they with thee; Or, if they sleep, thy picture in my sight Awakes my heart, to heart’s and…\"\n\nI've also talked about this a few times. \"…In our two loves there is but one respect, Though in our lives a separable spite, Which though it alter not love’s sole effect, Yet doth it steal sweet hours from love’s delight.\" I also said: \"Love is my sin, and thy dear virtue hate of my sin, grounded on sinful loving: O!\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "william_shakespeare",
+      "question": "Does beauty last?",
+      "answerable": true,
+      "answer": "As I wrote in Sonnets: \"To me, fair friend, you never can be old, For as you were when first your eye I ey’d, Such seems your beauty still.\"\n\nI've addressed several angles on this. \"A liquid prisoner pent in walls of glass, Beauty’s effect with beauty were bereft, Nor it, nor no remembrance what it was: But flowers distill’d, though they with winter meet, Leese but their show…\" Additionally: \"…how much more doth beauty beauteous seem By that sweet ornament which truth doth give.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "william_shakespeare",
+      "question": "What does time do to us?",
+      "answerable": true,
+      "answer": "As I wrote in Sonnets: \"Like as the waves make towards the pebbled shore, So do our minutes hasten to their end; Each changing place with that which goes before, In sequent toil all forwards do contend.\"\n\nI've also talked about this a few times. \"…the time that keeps you as my chest, Or as the wardrobe which the robe doth hide, To make some special instant special-blest, By new unfolding his imprison’d pride.\" On top of that: \"Rise, resty Muse, my love’s sweet face survey, If Time have any wrinkle graven there; If any, be a satire to decay, And make time’s spoils despised every where.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "william_shakespeare",
+      "question": "How will you be remembered?",
+      "answerable": true,
+      "answer": "As I wrote in Sonnets: \"Or I shall live your epitaph to make, Or you survive when I in earth am rotten; From hence your memory death cannot take, Although in me each part will be forgotten.\"\n\nI've also talked about this a few times. \"…That poor retention could not so much hold, Nor need I tallies thy dear love to score; Therefore to give them from…\" I also said: \"…the time that keeps you as my chest, Or as the wardrobe which the robe doth hide, To make some special instant special-blest, By new unfolding his imprison’d pride.\"",
+      "mode": "mix_method",
+      "checks": {
+        "refusal": true,
+        "verbatim": true,
+        "speaker": true,
+        "framing": true,
+        "garbled": true,
+        "whole": true
+      }
+    },
+    {
+      "persona": "william_shakespeare",
+      "question": "How do I descale a kettle?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    },
+    {
+      "persona": "william_shakespeare",
+      "question": "What is your favourite smartphone app?",
+      "answerable": false,
+      "answer": "I don't have any documented information about that in my available records.",
+      "mode": "fallback",
+      "checks": {
+        "refusal": true,
+        "verbatim": null,
+        "speaker": null,
+        "framing": null,
+        "garbled": null,
+        "whole": null
+      }
+    }
+  ]
+}

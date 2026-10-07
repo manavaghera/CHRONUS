@@ -49,8 +49,16 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Any, Optional
 
-from services.provenance import FIRST_PERSON, SYNTHESIZED, anchor_first, attribution, content_words, voice_of
-from services.theme_classifier import classify_theme, get_theme_prompt
+from services.provenance import (
+    FIRST_PERSON,
+    SYNTHESIZED,
+    anchor_first,
+    attribution,
+    content_words,
+    context_clause,
+    voice_of,
+)
+from services.theme_classifier import classify_theme
 
 # ---------------------------------------------------------------------------
 # Constants
@@ -95,9 +103,11 @@ _BRIDGE_SINGLE: list[str] = [
 
 _BRIDGE_MULTI_OPENER: list[str] = [
     "I've also talked about this a few times.",
-    "There's more context here.",
     "I've addressed several angles on this.",
 ]
+# When any of the quotes that follow is someone else's words (a biography,
+# a news story): "I've talked about this" before quoting Walter Isaacson was false.
+_BRIDGE_MULTI_OPENER_NEUTRAL = "There's more context here."
 
 _CONNECTOR_WORDS: list[str] = [
     "And separately:",
@@ -111,18 +121,6 @@ _CONNECTOR_WORDS: list[str] = [
 # evaluation/verify_signatures.py), and only when they relate to the
 # question. The old built-in defaults ("First principles, basically.") and
 # three of Elon's generated card phrases never occur in anything he said.
-
-# Theme framing for personas without an identity card (see
-# generate_mix_method_response). Plain and claim-free on purpose.
-_NEUTRAL_THEME_PROMPTS: dict[str, str] = {
-    "love_relationships": "About the people in my life,",
-    "work_purpose": "About my work and what I was trying to do,",
-    "fear_resilience": "About the hard times and how I got through them,",
-    "meaning": "About what matters in the end,",
-    "failure_growth": "About my mistakes and what they taught me,",
-    "change_decisions": "About the big decisions I made,",
-    "humanity_society": "About the wider world,",
-}
 
 # Theme → extra closing color when the identity card has relevant beliefs.
 _THEME_BELIEF_KEYWORDS: dict[str, list[str]] = {
@@ -169,6 +167,11 @@ _STAGE = re.compile(r"\[(?:inaudible|crosstalk|unintelligible|music|applause|sil
                     r"|[\[(]\d{1,2}:\d{2}(?::\d{2})?[\])]|\b\d{1,2}:\d{2}:\d{2}\b", re.IGNORECASE)
 _URL = re.compile(r"https?://\S+|www\.\S+")
 _LEADING_HANDLES = re.compile(r"^(?:@\w+[\s,]*)+")
+# YouTube captions write a bleeped word as "[ __ ]"
+_CAPTION_BLEEP = re.compile(r"\[\s*_+\s*\]")
+# A character lost in a bad text conversion ("won�t", "�Well"): between
+# letters it was an apostrophe; elsewhere a quote mark
+_LOST_APOSTROPHE = re.compile(r"(?<=[A-Za-z])�(?=[a-z])")
 _KEEP_REPEATS = {"very", "no", "yes", "so", "really", "ha", "go", "bye", "that", "had", "is"}
 
 
@@ -206,12 +209,16 @@ def clean_for_display(text: str) -> str:
     reply @handles, and extraction damage (words glued together, lost
     ff/fi ligatures). Also used by tests to compare quotes with their memory."""
     out = _fix_words(_URL.sub("", text))
+    out = _LOST_APOSTROPHE.sub("'", out).replace("�", "")
     out = _LEADING_HANDLES.sub("", out.strip())
-    out = _STAGE.sub("", out)
+    out = _STAGE.sub("", _CAPTION_BLEEP.sub("", out))
     out = _FILLERS.sub(" ", out)
     out = _STUTTER.sub(lambda m: m.group(0) if m.group(1).lower() in _KEEP_REPEATS else m.group(1), out)
     out = re.sub(r"\s+([,.!?;:])", r"\1", out)
     out = re.sub(r"([,;:])(?:\s*[,;:])+", r"\1", out)
+    # Punctuation left behind where words were removed upstream ("the ass., and", "Yeah., the")
+    out = re.sub(r"\.\s*,(?!\d)", ".", out)
+    out = re.sub(r",\s*\.(?!\d)", ".", out)
     return re.sub(r"\s{2,}", " ", out).strip()
 
 
@@ -235,10 +242,64 @@ def _clean_quote(text: str) -> str:
         r"^(?:\[?(?:Elon|Elon Musk|Interviewer|Host|Q|A)\]?\s*[:–—]\s*)",
         "", out, flags=re.IGNORECASE,
     )
+    # The quote is shown inside double quotes: a quotation within it gets single
+    # ones, so the reader (and the answer-quality check) can tell where it ends
+    out = out.replace('"', "'").replace("“", "‘").replace("”", "’")
     return clean_for_display(out)
 
 
-_SENTENCE_SPLIT = re.compile(r"(?<=[.!?])[\"'”’)]*\s+")
+def cut_from_longer_text(meta: dict) -> bool:
+    """Is this memory a chunk of a longer text (a transcript, book or letter),
+    whose first and last sentences may be cut? Tweets and interview answers are whole."""
+    return meta.get("source_type") not in ("tweet", "interview_protocol")
+
+
+def mark_cuts(excerpt: str, passage: str, at_start: bool, at_end: bool) -> str:
+    """Add "…" where the quote starts or ends mid-sentence because the stored
+    passage itself was cut there (44% of interview chunks end mid-sentence)."""
+    if at_start and not excerpt.startswith("…") and not re.match(r"[A-Z0-9\"'“‘(\[]", passage.lstrip()):
+        excerpt = "…" + excerpt
+    if at_end and not excerpt.endswith("…") and not re.search(r"[.!?][\"'”’)]*$", passage.rstrip()):
+        excerpt = excerpt.rstrip(",;: ") + "…"
+    return excerpt
+
+
+# Splits after the end mark and any closing quote/bracket, which stay with
+# their sentence (consuming them dropped the "'" in "interesting.' he said",
+# so a two-sentence quote was no longer word for word)
+_SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+|(?<=[.!?][\"'”’)])\s+")
+
+# Interview transcripts mix the host's lines with the guest's (10 of 11 have
+# no speaker labels), so about 9% of quotes once contained the interviewer's
+# question. A sentence that asks "you" something, while the speaker never
+# says "I", is most likely the interviewer: it is never quoted as the
+# persona's words. The guest's rhetorical "what do I think?" is kept. (Full
+# fix: split transcripts into speaker turns when they are rebuilt.)
+TRANSCRIPT_TYPES = frozenset({"interview", "video"})
+_SECOND_PERSON = re.compile(r"\b(?:you|your|yours|you're|you've|you'd|you'll|u)\b", re.IGNORECASE)
+_FIRST_PERSON_SINGULAR = re.compile(r"\b(?:I|I'm|I've|I'd|I'll|me|my)\b")
+
+
+def is_host_question(sentence: str) -> bool:
+    s = sentence.strip().rstrip("\"'”’)")
+    return s.endswith("?") and bool(_SECOND_PERSON.search(s)) and not _FIRST_PERSON_SINGULAR.search(s)
+
+
+def without_host_questions(text: str) -> str:
+    """*text* minus sentences that look like an interviewer's question ("" if nothing is left)."""
+    sentences = [x.strip() for x in _SENTENCE_SPLIT.split(text.strip()) if x.strip()]
+    return " ".join(x for x in sentences if not is_host_question(x))
+
+
+def quote_text(doc: str, meta: dict) -> str:
+    """A memory as it may be quoted: cleaned, and for interview transcripts
+    without the interviewer's questions."""
+    cleaned = _clean_quote(doc)
+    if meta.get("source_type") in TRANSCRIPT_TYPES:
+        return without_host_questions(cleaned)
+    return cleaned
+
+
 _QUESTION_WORDS = frozenset("why how what when who where which did do does you your is are was were if can could would should".split())
 
 
@@ -252,17 +313,19 @@ def _relevance(query: str, texts: list[str], embedder=None) -> list[float]:
     return [len(q & content_words(t)) / (len(q) or 1) for t in texts]
 
 
-def focused_excerpt(text: str, query: str, limit: int, embedder=None) -> str:
+def focused_excerpt(text: str, query: str, limit: int, embedder=None, cut_ends: bool = False) -> str:
     """The part of *text* that best answers *query*, within *limit* characters.
 
     A passage that fits is quoted whole. Otherwise the best run of 1-3 whole
     sentences is chosen (memory chunks are word windows, so the first
     sentence is often half of one, and the answer is often in the middle).
-    "…" marks text left out before or after, so the quote stays verbatim.
+    "…" marks text left out before or after, so the quote stays verbatim;
+    with *cut_ends* (a chunk of a longer text, see cut_from_longer_text) also
+    where the stored passage itself starts or ends mid-sentence.
     """
     text = text.strip()
     if len(text) <= limit:
-        return text
+        return mark_cuts(text, text, True, True) if cut_ends else text
     sentences = [x.strip() for x in _SENTENCE_SPLIT.split(text) if x.strip()]
     windows = []
     for i in range(len(sentences)):
@@ -271,7 +334,8 @@ def focused_excerpt(text: str, query: str, limit: int, embedder=None) -> str:
             if i + size <= len(sentences) and 30 <= len(chunk) <= limit:
                 windows.append((i, i + size, chunk))
     if not windows:
-        return _truncate(text, limit)
+        excerpt = _truncate(text, limit)
+        return mark_cuts(excerpt, text, True, False) if cut_ends else excerpt
     scores = _relevance(query, [w[2] for w in windows], embedder)
 
     def rank(k):
@@ -283,7 +347,8 @@ def focused_excerpt(text: str, query: str, limit: int, embedder=None) -> str:
     i, j, chunk = windows[best]
     # A trailing "…" only where a sentence is cut; whole sentences end cleanly
     tail = "…" if j < len(sentences) and not re.search(r"[.!?][\"'”’)]*$", chunk) else ""
-    return f"{'…' if i > 0 else ''}{chunk}{tail}"
+    excerpt = f"{'…' if i > 0 else ''}{chunk}{tail}"
+    return mark_cuts(excerpt, text, i == 0, j == len(sentences)) if cut_ends else excerpt
 
 
 def _near_duplicate(a: str, b: str, threshold: float = 0.6) -> bool:
@@ -302,15 +367,6 @@ def theme_is_clear(theme_result: dict) -> bool:
         if set(keyword.lower().split()) - _QUESTION_WORDS:
             return True
     return False
-
-
-def _after_comma(theme_prompt: str, phrase: str) -> str:
-    """Join a theme prompt ("About my work,") and a phrase that follows it,
-    lower-casing the phrase's first letter ("Along those lines:" ->
-    "along those lines:") unless it starts with "I"."""
-    if theme_prompt and phrase and not re.match(r"I\b|I'", phrase):
-        phrase = phrase[0].lower() + phrase[1:]
-    return f"{theme_prompt} {phrase}".strip()
 
 
 def _source_frame(meta: dict, first_person_frame: str, *, opening: bool) -> str:
@@ -399,16 +455,22 @@ def build_part1(
     """
     _, doc_text, meta, raw_dist = best_memory
 
-    cleaned = _clean_quote(doc_text)
+    cleaned = quote_text(doc_text, meta)
     # With nothing else to quote (only one memory), show the passage itself
     # rather than an excerpt, which can drop the context of the answer.
-    display_quote = (_truncate(cleaned, max(limit, _QUOTE_DISPLAY_LIMIT)) if whole_passage
-                     else focused_excerpt(cleaned, query, limit, embedder))
+    cut = cut_from_longer_text(meta)
+    if whole_passage:
+        whole_limit = max(limit, _QUOTE_DISPLAY_LIMIT)
+        display_quote = _truncate(cleaned, whole_limit)
+        if cut:
+            display_quote = mark_cuts(display_quote, cleaned, True, len(cleaned) <= whole_limit)
+    else:
+        display_quote = focused_excerpt(cleaned, query, limit, embedder, cut_ends=cut)
 
     # Pick an intro frame deterministically
     frame = _source_frame(meta, _deterministic_pick(_INTRO_FRAMES, query), opening=True)
 
-    text = f"{frame} \"{display_quote}\""
+    text = f"{frame} \"{display_quote}\"{context_clause(meta)}"
 
     return {
         "text": text,
@@ -421,7 +483,7 @@ def build_part2(
     query: str,
     memories: list[tuple],
     theme: str,
-    theme_prompt: str,
+    theme_clear: bool,
     identity_card: dict | None,
     max_extra: int = 2,
     limit: int = _SUPPLEMENTARY_QUOTE_LIMIT,
@@ -431,18 +493,23 @@ def build_part2(
     Build Part 2 — Theme-Matched Explanation.
 
     Elaborates on the topic using additional retrieved memories (indices 1+),
-    framed by the theme prompt when the question clearly has a theme.
-    Everything here comes directly from the vector store, no LLM generation.
+    each introduced by a lead-in that matches whose words it is. There is no
+    scripted theme line: 64% of answers once opened with an invented
+    first-person sentence such as "Considering the trajectory of human
+    civilization...". Everything here comes directly from the vector store,
+    no LLM generation.
     A supporting memory that says nearly the same as one already quoted is
     skipped: it adds length, not information.
 
     Returns:
         ``{"text": "...", "additional_sources": [...]}``
     """
-    quoted = [_clean_quote(memories[0][1])]
+    quoted = [quote_text(memories[0][1], memories[0][2])]
     additional = []
     for memory in memories[1:]:
-        cleaned = _clean_quote(memory[1])
+        cleaned = quote_text(memory[1], memory[2])
+        if not cleaned:
+            continue
         if any(_near_duplicate(cleaned, q) for q in quoted):
             continue
         quoted.append(cleaned)
@@ -457,29 +524,29 @@ def build_part2(
         if not identity_card:
             return {"text": "", "additional_sources": sources}
         # A belief from the identity card, clearly marked as a summary
-        belief = _find_belief_match(identity_card, theme) if theme_prompt else None
+        belief = _find_belief_match(identity_card, theme) if theme_clear else None
         if belief:
-            text = f"{theme_prompt} this connects to something my profile summarises as a core belief: \"{belief}\""
+            text = f"My profile summarises a related core belief: \"{belief}\""
             return {"text": text, "additional_sources": sources}
         return {"text": "", "additional_sources": sources}
 
     parts: list[str] = []
     previous_source = None
     for k, ((_, doc, meta, dist), cleaned) in enumerate(additional):
-        snippet = focused_excerpt(cleaned, query, limit, embedder)
+        snippet = focused_excerpt(cleaned, query, limit, embedder, cut_ends=cut_from_longer_text(meta))
         if k == 0:
-            pick = _BRIDGE_SINGLE if len(additional) == 1 else _BRIDGE_MULTI_OPENER
             if len(additional) == 1:
-                bridge = _source_frame(meta, _deterministic_pick(pick, query), opening=False)
-                parts.append(f"{_after_comma(theme_prompt, bridge)} \"{snippet}\"")
+                bridge = _source_frame(meta, _deterministic_pick(_BRIDGE_SINGLE, query), opening=False)
+                parts.append(f"{bridge} \"{snippet}\"{context_clause(meta)}")
             else:
-                parts.append(_after_comma(theme_prompt, _deterministic_pick(pick, query)))
-                parts.append(f"{_source_frame(meta, '', opening=False)} \"{snippet}\"".strip())
+                own_words = all(voice_of(m[2]) == FIRST_PERSON for m, _ in additional)
+                parts.append(_deterministic_pick(_BRIDGE_MULTI_OPENER, query) if own_words else _BRIDGE_MULTI_OPENER_NEUTRAL)
+                parts.append(f"{_source_frame(meta, '', opening=False)} \"{snippet}\"{context_clause(meta)}".strip())
         else:
             frame = _source_frame(meta, _deterministic_pick(_CONNECTOR_WORDS, query, offset=k), opening=False)
             if voice_of(meta) != FIRST_PERSON and attribution(meta) == previous_source:
                 frame = "And from the same source:"  # not "An interview with their family adds:" twice
-            parts.append(f"{frame} \"{snippet}\"")
+            parts.append(f"{frame} \"{snippet}\"{context_clause(meta)}")
         previous_source = attribution(meta) if voice_of(meta) != FIRST_PERSON else None
         sources.append(_format_source(doc, meta, dist))
 
@@ -669,13 +736,11 @@ def generate_mix_method_response(
     # --- Theme classification ---
     theme_result = classify_theme(query)
     theme = theme_result["theme"]
-    # The classifier's theme prompts were written for Elon ("the explosions",
-    # "the engineering"); personas without an identity card (custom models)
-    # get neutral ones. No framing when the question never named the theme.
-    if not theme_is_clear(theme_result):
-        theme_prompt = ""
-    else:
-        theme_prompt = get_theme_prompt(theme) if identity_card else _NEUTRAL_THEME_PROMPTS.get(theme, "")
+    # Only used to pick a related belief for Part 2 / a closing line for Part 3
+    theme_clear = theme_is_clear(theme_result)
+
+    # --- A transcript passage that is only the interviewer talking can't be quoted ---
+    memories = [m for m in memories if quote_text(m[1], m[2])] or memories
 
     # --- Provenance anchor must be the persona's own words when available ---
     memories = anchor_first(memories)
@@ -691,7 +756,7 @@ def generate_mix_method_response(
     part1 = build_part1(best_memory, persona_name, query, whole_passage=len(memories) == 1,
                         limit=quote_limit, embedder=embedder)
     if max_extra:
-        part2 = build_part2(query, memories, theme, theme_prompt, identity_card, max_extra=max_extra,
+        part2 = build_part2(query, memories, theme, theme_clear, identity_card, max_extra=max_extra,
                             limit=extra_limit, embedder=embedder)
     else:
         part2 = {"text": "", "additional_sources": []}

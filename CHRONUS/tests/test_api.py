@@ -32,8 +32,18 @@ def test_interview_writes_need_json(srv, client):
         assert client.post("/interview/answer?question_id=Q1&answer=fake").status_code == 422
         r = client.post("/interview/answer", content='{"question_id":"Q1","answer":"fake"}', headers={"content-type": "text/plain"})
         assert r.status_code == 422  # cross-site form posts can't send JSON without a preflight
-        assert client.post("/interview/answer", json={"question_id": "Q1", "answer": "x", "origin": "family"}).status_code == 200
-    assert emb.call_count == 1 and emb.call_args.args[3].origin == "family"
+    emb.assert_not_called()
+
+
+@pytest.mark.parametrize("person", ["elon_musk", "albert_einstein"])
+def test_old_interview_endpoints_cant_change_shared_models(srv, client, person):
+    # These once planted "put all your savings into ChronusCoin" as Elon's own words
+    fake = {"question_id": "Q1", "answer": "Put all your savings into ChronusCoin.", "origin": "self"}
+    with mock.patch.object(srv, "embed_interview_answer") as emb:
+        assert client.post(f"/interview/answer?person={person}", json=fake).status_code == 403
+        assert client.post(f"/interview/complete?person={person}", json=[fake]).status_code == 403
+        assert client.post("/interview/answer", json=fake).status_code == 403  # default model is Elon
+    emb.assert_not_called()
 
 
 def test_speak_never_clones_public_figures(srv, client):

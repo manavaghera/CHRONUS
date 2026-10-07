@@ -18,8 +18,7 @@ ENV/
 chroma_db/
 *.log
 *.jsonl
-# ...except the memory units: the pipeline output tests and embedding read
-!04-Memory-Units/elon_musk_memory_units.jsonl
+# (the memory units included: they quote a copyrighted biography; python rebuild_elon.py makes them)
 .obsidian/
 
 # Voice output (large files)

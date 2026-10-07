@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { api } from '../../api'
 import { startRecording, toWav } from '../../audio'
+import { useT } from '../../i18n'
 
 // Voice input. Prefers the server's local Whisper (services/stt.py: audio
 // never leaves this computer); otherwise the browser's own speech
@@ -20,6 +21,7 @@ const BrowserRecognition = typeof window !== 'undefined' && (window.SpeechRecogn
 const LANG_TAGS = { en: 'en-IN', hi: 'hi-IN', gu: 'gu-IN', mr: 'mr-IN', bn: 'bn-IN', ta: 'ta-IN', te: 'te-IN', kn: 'kn-IN', ml: 'ml-IN', pa: 'pa-IN', ur: 'ur-IN' }
 
 export default function useVoiceInput(language) {
+  const t = useT()
   const [engine, setEngine] = useState(BrowserRecognition ? 'browser' : null)
   const [state, setState] = useState('idle')
   const [error, setError] = useState('')
@@ -40,7 +42,7 @@ export default function useVoiceInput(language) {
       try {
         rec = await startRecording(auto ? { onSilence: () => active.current?.finish?.() } : {})
       } catch (e) {
-        setError(e.name === 'NotAllowedError' ? 'Microphone access was denied.' : e.message)
+        setError(e.name === 'NotAllowedError' ? t('voiceIn.denied') : e.message)
         throw e
       }
       setState('listening')
@@ -67,15 +69,15 @@ export default function useVoiceInput(language) {
         r.maxAlternatives = 1
         let text = ''
         r.onresult = (e) => { text = Array.from(e.results).map(x => x[0].transcript).join(' ') }
-        r.onerror = (e) => { setError(e.error === 'not-allowed' ? 'Microphone access was denied.' : `Speech recognition: ${e.error}`) }
+        r.onerror = (e) => { setError(e.error === 'not-allowed' ? t('voiceIn.denied') : t('voiceIn.error', { error: e.error })) }
         r.onend = () => { active.current = null; setState('idle'); text ? resolve(text) : reject(new Error('nothing heard')) }
         active.current = { cancel: () => r.abort(), finish: () => r.stop() }
         setState('listening')
         r.start()
       })
     }
-    throw new Error('Voice input is not available in this browser')
-  }, [engine, language])
+    throw new Error(t('voiceIn.unavailable'))
+  }, [engine, language, t])
 
   return { engine, state, error, listen, stop, cancel: () => active.current?.cancel?.() }
 }

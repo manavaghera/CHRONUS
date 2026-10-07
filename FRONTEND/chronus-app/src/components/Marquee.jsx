@@ -1,5 +1,10 @@
+import { useT } from '../i18n'
+
+const ITEMS = ['mq.consent', 'mq.reviewed', 'mq.nothingInvented', 'mq.cited', 'mq.privacy', 'mq.notResurrection', 'mq.remembering']
+
 export default function Marquee() {
-  const items = ['Consent-first','Human-reviewed','Nothing invented','Source-cited','Privacy-preserving','Not a resurrection','A remembering']
+  const t = useT()
+  const items = ITEMS.map(key => t(key))
   const doubled = [...items, ...items]
   return (
     <section className="marquee-section" aria-hidden="true">

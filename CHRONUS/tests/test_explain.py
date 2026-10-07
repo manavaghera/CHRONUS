@@ -22,7 +22,8 @@ def test_pretrained_about_has_no_consent_record(client):
     assert a["kind"] == "pretrained" and "consent_given_at" not in a and 0 < a["threshold"] < 1
 
 
-def test_refusals_explain_themselves(client):
+def test_refusals_explain_themselves(srv, client):
     d = client.post("/chat", json={"query": "How do I descale a kettle?", "mode": "mix_method"}).json()
-    assert d["fallback"] and d["why"]["threshold_match"] == 42 and d["why"]["sources"] == 0
+    threshold = srv.ps.load_persona("elon_musk").get("distance_threshold", srv.DISTANCE_THRESHOLD)
+    assert d["fallback"] and d["why"]["threshold_match"] == srv._match(threshold) and d["why"]["sources"] == 0
     assert "best_match" in d["why"]

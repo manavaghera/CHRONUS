@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react'
 import { api, LOGIN_EVENT } from '../api'
 import useDialog from '../useDialog'
+import { useT } from '../i18n'
 
 // Shown when the server has an access code (CHRONUS_ACCESS_CODE) and this
 // browser hasn't signed in yet. The code is checked by the server, which
 // sets an HttpOnly cookie; nothing is stored in the page.
 export default function LoginGate() {
+  const t = useT()
   const [open, setOpen] = useState(false)
   const [accounts, setAccounts] = useState(false)
   const [user, setUser] = useState('')
@@ -30,13 +32,13 @@ export default function LoginGate() {
   return (
     <div className="login-gate" role="dialog" aria-modal="true" aria-labelledby="login-title">
       <form className="login-card" ref={dialogRef} onSubmit={submit}>
-        <div className="eyebrow eyebrow--accent">Private server</div>
-        <h2 id="login-title">{accounts ? 'Sign in' : 'Enter the access code'}</h2>
-        <p className="page-note">{accounts ? 'Each person has their own name and code, and sees only the models they made.' : 'This CHRONUS server is protected. Ask whoever runs it for the code.'}</p>
-        {accounts && <input className="create-select" autoFocus autoComplete="username" value={user} onChange={e => setUser(e.target.value)} placeholder="Your name" aria-label="Your name" />}
-        <input className="create-select" type="password" autoFocus={!accounts} autoComplete="current-password" value={code} onChange={e => setCode(e.target.value)} placeholder="Access code" />
+        <div className="eyebrow eyebrow--accent">{t('login.eyebrow')}</div>
+        <h2 id="login-title">{accounts ? t('login.signIn') : t('login.enterCode')}</h2>
+        <p className="page-note">{accounts ? t('login.accountsNote') : t('login.codeNote')}</p>
+        {accounts && <input className="create-select" autoFocus autoComplete="username" value={user} onChange={e => setUser(e.target.value)} placeholder={t('login.name')} aria-label={t('login.name')} />}
+        <input className="create-select" type="password" autoFocus={!accounts} autoComplete="current-password" value={code} onChange={e => setCode(e.target.value)} placeholder={t('login.code')} />
         {error && <div className="page-alert">{error}</div>}
-        <button className="pill-btn pill-btn--dark" disabled={!code || (accounts && !user) || busy}><span className="pill-inner">{busy ? 'Checking…' : 'Sign in'}</span></button>
+        <button className="pill-btn pill-btn--dark" disabled={!code || (accounts && !user) || busy}><span className="pill-inner">{busy ? t('login.checking') : t('login.signIn')}</span></button>
       </form>
     </div>
   )

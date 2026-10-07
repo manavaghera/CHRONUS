@@ -65,6 +65,8 @@ export function fileToBase64(file) {
 }
 
 const pid = (id) => encodeURIComponent(id)
+// The uploaded file behind a memory: a voice note to play, a photo to see
+export const originalUrl = (id, filename) => `${API}/personas/${pid(id)}/uploads/${encodeURIComponent(filename)}/original`
 
 export const api = {
   health: () => request('/health'),
@@ -95,9 +97,11 @@ export const api = {
   deletePersona: (id) => request(`/personas/${pid(id)}`, { method: 'DELETE' }),
   interviewQuestions: () => request('/interview/questions'),
   // consent + cloud: both boxes on the Create page's voice step were ticked
-  addVoice: async (id, wav) => request(`/personas/${pid(id)}/voice`, {
-    method: 'POST', body: { content_base64: await fileToBase64(wav), consent: true, cloud: true },
+  // language: the consent statement was shown, and is recorded, in it
+  addVoice: async (id, wav, language = 'en') => request(`/personas/${pid(id)}/voice`, {
+    method: 'POST', body: { content_base64: await fileToBase64(wav), consent: true, cloud: true, language },
   }),
+  consentText: (lang) => request(`/consent-text?lang=${encodeURIComponent(lang)}`),
   voiceStatus: () => request('/voice/status'),
   removeVoice: (id) => request(`/personas/${pid(id)}/voice`, { method: 'DELETE' }),
   speak: (persona, text) => requestAudio('/speak', { persona, text }),
@@ -145,6 +149,16 @@ export const api = {
   memory: (id, memoryId) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}`),
   editMemory: (id, memoryId, text) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}`, { method: 'PATCH', body: { text } }),
   deleteMemory: (id, memoryId) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}`, { method: 'DELETE' }),
+  neverQuote: (id, memoryId, never_quote) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}/never-quote`,
+    { method: 'PUT', body: { never_quote } }),
+  // Memory history with undo (services/memory_history.py)
+  memoryHistory: (id, memoryId) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}/history`),
+  restoreMemory: (id, memoryId, seq) => request(`/personas/${pid(id)}/memories/${pid(memoryId)}/restore`,
+    { method: 'POST', body: { seq } }),
+  history: (id) => request(`/personas/${pid(id)}/history`),
+  // Consent that can change (services/consent.py)
+  changeConsent: (id, action) => request(`/personas/${pid(id)}/consent`, { method: 'POST', body: { action } }),
+  setOffLimits: (id, topics) => request(`/personas/${pid(id)}/off-limits`, { method: 'PUT', body: { topics } }),
   deleteDocument: (id, filename) => request(`/personas/${pid(id)}/documents/${pid(filename)}`, { method: 'DELETE' }),
   timeline: (id) => request(`/personas/${pid(id)}/timeline`),
   about: (id) => request(`/personas/${pid(id)}/about`),
@@ -189,7 +203,8 @@ export function download(blob, filename) {
 }
 
 // Accepted by the backend (services/personas.py UPLOAD_TYPES)
-export const UPLOAD_ACCEPT = '.txt,.md,.pdf,.docx,.csv,.json'
+// Photos and scans of letters are read on the server's computer (services/originals.py)
+export const UPLOAD_ACCEPT = '.txt,.md,.pdf,.docx,.csv,.json,.jpg,.jpeg,.png,.webp'
 // Voice notes, when the server can transcribe locally (services/stt.py)
 export const AUDIO_ACCEPT = '.wav,.mp3,.m4a,.ogg,.webm,.flac,.aac'
 export const MAX_UPLOAD_MB = 10

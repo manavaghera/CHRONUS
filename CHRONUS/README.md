@@ -42,7 +42,7 @@ others** (a biography, a family member's interview answer) or **synthesized**
 cd CHRONUS
 pip install -r requirements.txt          # Python 3.10+
 python doctor.py                         # checks your setup and says what's missing
-python 06-Testing/embed_elon.py          # once: builds Elon's memory collection (chroma_db/)
+python rebuild_elon.py --embed           # once: builds Elon's memories from the raw sources (chroma_db/)
 python figures/build_figures.py          # once: builds the seven public-domain figures
 
 npm --prefix ../FRONTEND/chronus-app install
@@ -50,7 +50,16 @@ npm --prefix ../FRONTEND/chronus-app run build
 
 python run_server.py                     # API + website on http://127.0.0.1:8001
 # Windows: start_server.bat   ·   live-reloading website: npm --prefix ../FRONTEND/chronus-app run dev (port 3000)
+
+python backup.py create                  # back up memories, custom models and logs (stop the server first)
+python backup.py restore backups/chronus-<date>.zip
 ```
+
+`GET /ready` says when the server can answer (embedding model and memories
+loaded, settings valid); `/health` only says the process is up. One server
+per data folder: a second one refuses to start, because two corrupt the
+database. Wrong settings stop the server with a message, and `python
+config.py` prints them with keys and codes hidden.
 
 Settings live in `config.py`; override them in `CHRONUS/.env` (see
 [`.env.example`](.env.example)). The main ones:
@@ -117,8 +126,8 @@ an access code.
 | `services/` | Retrieval helpers, Mix Method, natural mode, provenance, personas, memories, timeline, insights, roundtable, translation, speech, bundles, access control, wellbeing |
 | `models/` | Pretrained personas (`persona.json`, profiles) |
 | `personas/` | Your custom models (git-ignored: private data) |
-| `01-Raw-Data/`, `02-Cleaned-Data/`, `merge_sources.py` | Source archives and the cleaning/merging pipeline |
-| `04-Memory-Units/` | Elon's 16,631 chunked memories (pipeline output) |
+| `01-Raw-Data/`, `02-Cleaned-Data/`, `rebuild_elon.py`, `elon_sources.py` | Source archives and Elon's pipeline: raw transcripts with timestamps, links and dates (`data/elon_sources.json`), sentence-sized chunks, the biography's lost letters restored, tweets with the post they quote or answer |
+| `04-Memory-Units/` | Elon's ~15,900 memories (pipeline output) |
 | `06-Testing/` | Embedding and data-preparation scripts |
 | `evaluation/` | `python -m evaluation.run_eval`: retrieval, match test, "I don't know" calibration |
 | `figures/`, `lora/` | Public-domain figure builder; LoRA training for the local model |
@@ -154,6 +163,13 @@ pipeline below plain semantic search; the importance bonus is now bounded
 (at most 0.08 of distance, `CHRONUS_IMPORTANCE_WEIGHT`), so re-run it to
 check, and before changing `CHRONUS_IMPORTANCE_WEIGHT` or
 `CHRONUS_RETRIEVAL_MODE` defaults.
+
+`python -m evaluation.answer_quality` checks the answers themselves: ~145
+labelled questions (Quotes only), each answer checked for word-for-word
+quotes, no interviewer lines, honest lead-ins, no damaged text, whole
+sentences, and "I don't know" when it should
+(`evaluation/results/answer_quality.md`). The checks also run in CI on the
+public-domain figures (`tests/test_answer_quality_eval.py`).
 
 Answer-quality data, rebuilt with:
 - `python -m evaluation.verify_signatures`: keeps only the closing phrases

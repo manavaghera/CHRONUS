@@ -1,5 +1,6 @@
 import { navigate } from '../router'
 import useScrollReveal from './useScrollReveal'
+import { useT } from '../i18n'
 import './train.css'
 
 // The real "Create your model" flow (pages/CreatePage.jsx), each step shown
@@ -87,34 +88,16 @@ function ChatMock() {
   )
 }
 
+// Each step's words are in strings/home.js: s1.tag, s1.title, s1.desc, s1.f1 to s1.f3...
 const STEPS = [
-  {
-    num: '01', tag: 'CONSENT FIRST', title: 'Start with permission',
-    desc: "Name the person and your relationship to them, and confirm you have their consent (or their estate's). The consent is recorded with the model. Nothing leaves your computer unless you turn the cloud AI voice on.",
-    features: ['Consent statement saved with a timestamp', 'Private by default: models live on your machine', 'Delete everything, vectors and files, in one click'],
-    Mock: ConsentMock,
-  },
-  {
-    num: '02', tag: 'THEIR OWN WORDS', title: 'Add letters, journals and transcripts',
-    desc: 'Upload what they wrote or said. Each file is split into short memories and embedded for search. Mark whether a file is in their own words or written about them, so a biography is never quoted as something they said.',
-    features: ['.txt, .md, .pdf, .docx, .csv and .json, up to 10 MB each', 'Re-uploading a file replaces its old memories', 'Every memory keeps its source file and page'],
-    Mock: UploadMock,
-  },
-  {
-    num: '03', tag: 'GUIDED INTERVIEW', title: 'Fill the gaps with 25 questions',
-    desc: 'A structured interview across six dimensions, from personality to how they talk, captures what documents miss. Answers can come from the person or from family and friends, and the model always says who answered.',
-    features: ['6 dimensions: personality, memories, relationships, passions, values, voice', 'Answering again replaces the earlier answer', 'Built once there are at least 10 memories'],
-    Mock: InterviewMock,
-  },
-  {
-    num: '04', tag: 'TALK & VERIFY', title: 'Ask, check the source, listen',
-    desc: "Answers are built from the closest memories, quoted or carefully tidied, with every source and its match strength one click away. If nothing in the archive fits, it says “I don't know” instead of guessing.",
-    features: ['Verbatim quotes mode, or an AI voice grounded in the quotes', 'Listen in their consented voice (optional)', 'Low-confidence answers are labelled as such'],
-    Mock: ChatMock,
-  },
+  { num: '01', key: 's1', Mock: ConsentMock },
+  { num: '02', key: 's2', Mock: UploadMock },
+  { num: '03', key: 's3', Mock: InterviewMock },
+  { num: '04', key: 's4', Mock: ChatMock },
 ]
 
 function Step({ step, index }) {
+  const t = useT()
   const [ref, inView] = useScrollReveal(0.2)
   const { Mock } = step
   return (
@@ -125,11 +108,11 @@ function Step({ step, index }) {
       </div>
       <div className={`train-step-card${index % 2 ? ' is-flipped' : ''}`}>
         <div className="train-step-text">
-          <div className="train-step-tag">{step.tag}</div>
-          <h3>{step.title}</h3>
-          <p>{step.desc}</p>
+          <div className="train-step-tag">{t(`${step.key}.tag`)}</div>
+          <h3>{t(`${step.key}.title`)}</h3>
+          <p>{t(`${step.key}.desc`)}</p>
           <ul className="train-step-features">
-            {step.features.map(f => <li key={f}>{f}</li>)}
+            {[1, 2, 3].map(n => <li key={n}>{t(`${step.key}.f${n}`)}</li>)}
           </ul>
         </div>
         <div className="train-step-visual"><Mock /></div>
@@ -139,26 +122,27 @@ function Step({ step, index }) {
 }
 
 export default function TrainYourModel() {
+  const t = useT()
   const [hRef, hIn] = useScrollReveal()
   return (
     <section className="train-section" id="train">
       <div className="shell train-inner">
         <div ref={hRef} className={`train-header sr ${hIn ? 'in-view' : ''}`}>
-          <div className="eyebrow eyebrow--dark">CREATE YOUR MODEL</div>
-          <h2 className="train-h2">Preserve someone's words</h2>
-          <p className="train-sub">Four steps, all in your browser, to a model that answers only from what they actually said.</p>
+          <div className="eyebrow eyebrow--dark">{t('create.eyebrow').toLocaleUpperCase()}</div>
+          <h2 className="train-h2">{t('train.title')}</h2>
+          <p className="train-sub">{t('train.sub')}</p>
         </div>
         <div className="train-timeline">
           {STEPS.map((step, i) => <Step key={step.num} step={step} index={i} />)}
         </div>
         <div className="train-cta">
           <div>
-            <h3>Ready when you are.</h3>
-            <p>Start a model now, or try the voice sandbox to hear how a consented voice clone sounds first.</p>
+            <h3>{t('train.readyTitle')}</h3>
+            <p>{t('train.readySub')}</p>
           </div>
           <div className="train-cta-actions">
-            <button className="pill-btn pill-btn--dark" onClick={() => navigate('/create')}><span className="pill-inner">Create a model</span></button>
-            <button className="pill-btn pill-btn--outline" onClick={() => navigate('/clone-voice')}><span className="pill-inner">Open the voice sandbox</span></button>
+            <button className="pill-btn pill-btn--dark" onClick={() => navigate('/create')}><span className="pill-inner">{t('common.createModel')}</span></button>
+            <button className="pill-btn pill-btn--outline" onClick={() => navigate('/clone-voice')}><span className="pill-inner">{t('train.sandbox')}</span></button>
           </div>
         </div>
       </div>

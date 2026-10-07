@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
+import { useT } from '../i18n'
 
 export default function PageLoader({ stopScroll, onReady }) {
+  const t = useT()
   const elRef = useRef(null)
 
   useEffect(() => {
@@ -38,11 +40,11 @@ export default function PageLoader({ stopScroll, onReady }) {
           <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg>
           CHRONUS
         </div>
-        <p className="loader-tagline">Their words. Their voice. Their memory — never invented.</p>
+        <p className="loader-tagline">{t('loader.tagline')}</p>
       </div>
       <div className="loader-progress">
         <div className="loader-track"><div className="loader-fill" /></div>
-        <div className="loader-info"><span>Initializing</span><span className="loader-count">000</span></div>
+        <div className="loader-info"><span>{t('loader.init')}</span><span className="loader-count">000</span></div>
       </div>
     </div>
   )

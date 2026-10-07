@@ -10,6 +10,7 @@ happens through the human review queue (services/feedback.py).
 Run: python api_server.py  (http://127.0.0.1:8001, website included)
 """
 
+import asyncio
 import json
 import logging
 import queue
@@ -17,11 +18,11 @@ import re
 import threading
 import time
 from pathlib import Path
-from typing import Literal, Optional
+from typing import Annotated, Literal, Optional
 
 import chromadb
-from fastapi import FastAPI, HTTPException, Query
-from fastapi.responses import Response, StreamingResponse
+from fastapi import FastAPI, HTTPException, Query, Request
+from fastapi.responses import JSONResponse, Response, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field, field_validator, model_validator
 
@@ -29,12 +30,19 @@ from services import (
     access,
     answer_cache,
     bundle,
+    chroma_index,
+    consent,
+    consent_text,
     followups,
     hybrid,
     insights,
+    instance_lock,
     jobs,
     memory_routes,
+    natural_mode,
     ops,
+    originals,
+    private_files,
     roundtable,
     security_headers,
     stt,
@@ -51,7 +59,7 @@ from services.mix_method import _near_duplicate as near_duplicate
 # ---- Response pipelines ----
 from services.mix_method import generate_mix_method_response  # CHRONUS core contribution
 from services.natural_mode import generate_natural_response
-from services.persona_routes import InterviewAnswer, embed_interview_answer, make_router
+from services.persona_routes import InterviewAnswer, delete_model, embed_interview_answer, make_router
 from services.persona_routes import summarize as summarize_persona
 
 # Quick profile answers; re-exported for tests and evaluation scripts
@@ -71,6 +79,15 @@ logger = logging.getLogger("chronus")
 
 # ---- Config (centralized in config.py) ----
 from config import config
+from config import validate as validate_settings
+
+# Wrong settings stop the server instead of failing silently (a typo like
+# "hybird" used to fall back to dense search without a word)
+_setting_errors, _setting_warnings = validate_settings(config)
+for _warning in _setting_warnings:
+    logger.warning(_warning)
+if _setting_errors:
+    raise SystemExit("CHRONUS can't start, fix these settings (CHRONUS/.env):\n  " + "\n  ".join(_setting_errors))
 
 COLLECTION_NAME = config.COLLECTION_NAME
 CHROMA_PATH = config.CHROMA_PATH
@@ -79,6 +96,11 @@ IMPORTANCE_WEIGHT = config.IMPORTANCE_WEIGHT
 DISTANCE_THRESHOLD = config.DISTANCE_THRESHOLD
 
 FALLBACK_ANSWER = "I don't have any documented information about that in my available records."
+
+# ---- Private data: owner-only files (services/private_files.py) ----
+private_files.restrict_new_files()
+private_files.tighten([ps.CUSTOM_DIR, Path(CHROMA_PATH), QA_LOG_PATH, insights.FEEDBACK_PATH, ops.AUDIT_LOG_PATH,
+                      Path(__file__).resolve().parent / ".env"])
 
 # ---- FastAPI ----
 app = FastAPI(title="CHRONUS API", version="1.1.0")
@@ -90,9 +112,15 @@ try:
     collection = client.get_collection(COLLECTION_NAME)
     logger.info(f"Loaded collection '{COLLECTION_NAME}' with {collection.count():,} memory units")
 except Exception:
-    collection = client.create_collection(name=COLLECTION_NAME, metadata={"hnsw:space": "cosine"})
+    collection = client.create_collection(name=COLLECTION_NAME, metadata=chroma_index.COLLECTION_METADATA)
     logger.warning(f"Created NEW empty collection '{COLLECTION_NAME}'. "
                    "Run: python 06-Testing/embed_elon.py to populate memories.")
+
+# Small collections used to keep their search index only in memory, and failed
+# with "Nothing found on disk" when Chroma reloaded it (services/chroma_index.py)
+_switched = chroma_index.ensure_all_saved(client)
+if _switched:
+    logger.info(f"Saved the search index of {_switched} collection(s) to disk")
 
 # ---- Embedding model: loaded on first use (services/embedder.py) ----
 embedder = LazyEmbedder(config.EMBEDDING_MODEL, device="cpu")
@@ -120,6 +148,10 @@ def load_mix_method_identity_card(person: str = "elon_musk") -> dict:
 class ChatTurn(BaseModel):
     role: Literal["user", "assistant"]
     content: str = Field(min_length=1, max_length=2000)
+    # Assistant turns: the memories that answer cited (sources[].memory_id), so
+    # a follow-up searches from them and doesn't repeat the same quotes
+    memory_ids: list[Annotated[str, Field(pattern=r"^[A-Za-z0-9_.:-]{1,100}$")]] = Field(default_factory=list,
+                                                                                       max_length=10)
 
 
 class ChatRequest(BaseModel):
@@ -199,6 +231,8 @@ def is_follow_up(query: str) -> bool:
     Mars answer onto the failure question).
     """
     words = re.findall(r"[a-z']+", query.lower())
+    if words and len(words) <= 8 and set(words) <= _CONTINUATION_WORDS:
+        return True  # "tell me more", "what else?", "go on", "anything else about that?"
     if not words or len(words) > 6:
         return False
     own_topic = content_words(query)
@@ -209,7 +243,33 @@ def is_follow_up(query: str) -> bool:
     return len(words) <= 2 and words[0] in ("which", "what", "where", "when", "who")  # "which state?"
 
 
-def retrieval_query(query: str, history: list[ChatTurn]) -> str:
+# Words a continuation is made of ("tell me more", "what else?", "go on"):
+# they carry no topic, so they used to be searched as if they did
+_CONTINUATION_WORDS = frozenset(
+    "tell me more say talk explain elaborate go on keep going continue else further anything something what please "
+    "about that this it and then so detail details bit little a some can could you would".split()
+)
+_QUOTED = re.compile(r"[\"“]([^\"”]{15,})[\"”]")
+
+
+def _previous_answer_text(turn: ChatTurn | None, memory) -> str:
+    """What the previous answer was about: the memories it cited, or else the
+    words it quoted. Its template text ("As I've said before:", "There's
+    more context here.") used to steer the search for the follow-up."""
+    if turn is None:
+        return ""
+    if turn.memory_ids and memory is not None:
+        try:
+            docs = memory.get(ids=turn.memory_ids[:3], include=["documents"])["documents"]
+        except Exception:  # deleted since, or another model's ids
+            docs = []
+        if docs:
+            return " ".join(d[:300] for d in docs)
+    quoted = _QUOTED.findall(turn.content)
+    return " ".join(quoted)[:600] if quoted else turn.content[:300]
+
+
+def retrieval_query(query: str, history: list[ChatTurn], memory=None) -> str:
     """Text to search memory with.
 
     Follow-ups (see is_follow_up) carry no topic of their own, so the previous
@@ -219,15 +279,24 @@ def retrieval_query(query: str, history: list[ChatTurn]) -> str:
     """
     if history and is_follow_up(query):
         prev_question = next((t.content for t in reversed(history) if t.role == "user"), "")
-        prev_answer = next((t.content for t in reversed(history) if t.role == "assistant"), "")
-        context = f"{prev_question} {prev_answer[:300]}".strip()
+        prev_answer = next((t for t in reversed(history) if t.role == "assistant"), None)
+        context = f"{prev_question} {_previous_answer_text(prev_answer, memory)}".strip()
         if context:
             return f"{context} {query}"
     return query
 
 
+def used_memory_ids(query: str, history: list[ChatTurn]) -> set[str]:
+    """For a follow-up, the memories already quoted in this conversation (skipped, so
+    "tell me more" brings something new instead of the same quotes again)."""
+    if not (history and is_follow_up(query)):
+        return set()
+    return {mid for turn in history if turn.role == "assistant" for mid in turn.memory_ids}
+
+
 def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = None,
-             threshold: float | None = None, mode: str | None = None) -> Optional[list[tuple]]:
+             threshold: float | None = None, mode: str | None = None,
+             exclude: set[str] | None = None, skip=None) -> Optional[list[tuple]]:
     """Retrieve top-K memories from *memory* (a persona's ChromaDB collection;
     defaults to the default persona's). *where* is a ChromaDB metadata
     filter, e.g. to hold a source out during evaluation. *mode*: "dense"
@@ -253,10 +322,15 @@ def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = N
         found = set(dense_order)
         candidates += hybrid.fetch_with_distance(memory, [i for i in keyword_order if i not in found], q_emb[0])
 
-    # 1. Skip exact duplicate texts (e.g. the same letter uploaded twice)
+    # 1. Skip exact duplicate texts (e.g. the same letter uploaded twice), and
+    # *exclude*: memories a follow-up shouldn't quote again
     scored, seen = [], set()
     for mid, doc, meta, dist in candidates:
         key = " ".join(doc.lower().split())
+        if exclude and (mid in exclude or (meta or {}).get("memory_id") in exclude):
+            continue
+        if skip is not None and skip(doc, meta or {}):  # never quoted: "never quote", off-limits topics
+            continue
         if key not in seen:
             seen.add(key)
             scored.append((mid, doc, meta or {}, dist))
@@ -339,6 +413,9 @@ def _load_ready_persona(persona_id: str) -> dict:
         raise HTTPException(status_code=404, detail=f"No model called '{persona_id}'")
     if persona.get("status") != "ready":
         raise HTTPException(status_code=409, detail=f"{persona['name']} isn't built yet. Finish the Create steps first.")
+    reason = consent.unavailable(persona)  # paused, or consent due for review
+    if reason:
+        raise HTTPException(status_code=423, detail=reason)
     return persona
 
 
@@ -352,6 +429,11 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
     Returns a dict with response, sources, confidence, fallback, mode,
     faithfulness and notice. Shared by /chat and the roundtable.
     """
+    topic = consent.off_limits_topic(persona, query)
+    if topic:  # marked off limits by whoever gave consent: no search, nothing quoted
+        return {"response": f"That's something {persona['name']}'s archive keeps private.", "sources": [],
+                "faithfulness": 1.0, "confidence": "high", "fallback": True, "mode": "off_limits",
+                "why": {"sources": 0}, "notice": "This topic was marked off limits for this model."}
     era = ""
     if years != (None, None):
         timeline.ensure_year_metadata(memory)
@@ -360,16 +442,25 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
     if length == "detailed":
         n_results = max(n_results, 4)  # room for a third supporting memory
     started = time.perf_counter()
-    memories = retrieve(retrieval_query(query, history), n_results, memory, where=where,
-                        threshold=persona.get("distance_threshold"))
+    search_text = retrieval_query(query, history, memory)
+    used = used_memory_ids(query, history)
+    memories = retrieve(search_text, n_results, memory, where=where, threshold=persona.get("distance_threshold"),
+                        exclude=used, skip=lambda doc, meta: consent.blocked(persona, doc, meta))
     ops.record_timing("chat.retrieve", (time.perf_counter() - started) * 1000)
 
     # True uncertainty fallback: no memory passed the threshold, so there is
     # insufficient evidence. Answer without calling the LLM at all.
     limit = persona.get("distance_threshold")
     limit = DISTANCE_THRESHOLD if limit is None else limit
+    if memories is None and used and retrieve(search_text, n_results, memory, where=where,
+                                              threshold=persona.get("distance_threshold"),
+                                              skip=lambda doc, meta: consent.blocked(persona, doc, meta)) is not None:
+        # Everything relevant was already quoted in this conversation
+        return {"response": "That's everything my records have on this.", "sources": [], "faithfulness": 0.0,
+                "confidence": "low", "fallback": True, "mode": "fallback", "why": {"sources": 0},
+                "notice": "Nothing new beyond the quotes above."}
     if memories is None:
-        closest = closest_distance(retrieval_query(query, history), memory, where)
+        closest = closest_distance(search_text, memory, where)
         why = {"threshold_match": _match(limit), "best_match": None if closest is None else _match(closest), "sources": 0}
         return {"response": FALLBACK_ANSWER, "sources": [], "faithfulness": 0.0, "confidence": "low",
                 "fallback": True, "mode": "fallback", "why": why,
@@ -423,6 +514,8 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
         sources = [format_source_citation(meta, doc, dist) for _, doc, meta, dist in evidence]
     ops.record_timing(f"chat.generate.{mode}", (time.perf_counter() - started) * 1000)
 
+    if result.get("notice"):  # e.g. the AI service was too slow, so these are quotes
+        notice = (notice + " " if notice else "") + result["notice"]
     if era:
         notice = (notice + " " if notice else "") + f"Time travel: only memories dated {era}."
     why = {"best_match": _match(min(m[3] for m in evidence)), "threshold_match": _match(limit),
@@ -441,13 +534,14 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
 
 
 # ---- Endpoints ----
-def _support_reply(persona: dict, memory, started: float) -> ChatResponse:
+def _support_reply(persona: dict, memory, started: float, query: str) -> ChatResponse:
     """Crisis language: step out of character, give helplines, generate
     nothing in the persona's voice, and keep the message out of the log."""
-    entry_id = log_qa("(withheld: support message shown)", wellbeing.SUPPORT_MESSAGE, [], persona=persona["id"],
+    message = wellbeing.support_message(query)  # Hindi or Gujarati first when they wrote in that script
+    entry_id = log_qa("(withheld: support message shown)", message, [], persona=persona["id"],
                       mode="support", confidence="high", fallback=False, faithfulness=1.0,
                       latency_ms=round((time.perf_counter() - started) * 1000))
-    return ChatResponse(answer=wellbeing.SUPPORT_MESSAGE, sources=[], faithfulness=1.0, auto_trained=False,
+    return ChatResponse(answer=message, sources=[], faithfulness=1.0, auto_trained=False,
                         collection_size=memory.count(), confidence="high", fallback=False, mode="support",
                         notice="Out of character: support information", id=entry_id or "",
                         helplines=wellbeing.HELPLINES)
@@ -461,7 +555,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
     memory = ps.get_collection(client, persona)
     years = (req.year_from, req.year_to)
     if wellbeing.needs_support(req.query):
-        return _support_reply(persona, memory, started)
+        return _support_reply(persona, memory, started, req.query)
 
     # Other languages: translate the question to English (the archive's
     # language), answer as usual, translate the answer back (services/translate.py)
@@ -482,7 +576,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
             logger.error(f"Translating the question failed: {e}")
             raise HTTPException(status_code=503, detail="Couldn't translate the question right now; please ask in English")
         if wellbeing.needs_support(query):
-            return _support_reply(persona, memory, started)
+            return _support_reply(persona, memory, started, req.query)
         notes.append(f"Your question was translated from {translate.LANGUAGES.get(asked_in, asked_in)} by AI.")
 
     # Repeated questions (quick-question buttons) come from the cache;
@@ -556,7 +650,8 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
         original_answer=original,
         why=result.get("why", {}),
     )
-    if cache_key is not None and "Couldn't translate" not in notice:
+    # Not cached: answers shaped by a passing outage (no translation, AI service down)
+    if cache_key is not None and "Couldn't translate" not in notice and "AI service is slow" not in notice:
         answer_cache.put(cache_key, response.model_dump())
     return response
 
@@ -576,42 +671,99 @@ def _sse(event: str, data) -> str:
 
 
 @app.post("/chat/stream")
-def chat_stream(req: ChatRequest):
+def chat_stream(req: ChatRequest, request: Request):
     """/chat as server-sent events, so AI-voice answers appear as they're written.
 
     Events: "token" ({"text"}: the next piece of the draft), then "final"
     (the full /chat response, which replaces the draft: it is cleaned, and
     may be the verbatim fallback if the draft wasn't grounded), or "error".
     Unknown or unbuilt models fail as normal HTTP errors before streaming.
+    If the browser goes away, generation stops (it used to run to the end,
+    using up the provider for nobody).
     """
     _load_ready_persona(req.persona)
     events: queue.Queue = queue.Queue()
+    gone = threading.Event()
+
+    def on_token(text: str) -> None:
+        if gone.is_set():
+            raise natural_mode.StreamCancelled()
+        events.put(("token", {"text": text}))
 
     def work():
         try:
-            events.put(("final", respond(req, on_token=lambda t: events.put(("token", {"text": t}))).model_dump()))
+            events.put(("final", respond(req, on_token=on_token).model_dump()))
         except HTTPException as e:
             events.put(("error", {"detail": e.detail, "status": e.status_code}))
         except Exception as e:  # never leave the client hanging
             logger.exception("chat stream failed")
             events.put(("error", {"detail": f"Answer failed: {type(e).__name__}", "status": 500}))
 
-    def stream():
+    async def stream():
         threading.Thread(target=work, daemon=True).start()
-        while True:
-            event, data = events.get()
-            yield _sse(event, data)
-            if event in ("final", "error"):
-                return
+        try:
+            while True:
+                try:
+                    event, data = events.get_nowait()
+                except queue.Empty:
+                    if await request.is_disconnected():
+                        return
+                    await asyncio.sleep(0.05)
+                    continue
+                yield _sse(event, data)
+                if event in ("final", "error"):
+                    return
+        finally:
+            gone.set()
 
     return StreamingResponse(stream(), media_type="text/event-stream",
                              headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"})
 
 
+@app.get("/consent-text")
+def get_consent_text(lang: str = Query("en", pattern="^(en|hi|gu)$")):
+    """The consent statements in English, Hindi or Gujarati (services/consent_text.py):
+    the website shows exactly the words the consent record will keep."""
+    return consent_text.texts(lang)
+
+
 @app.get("/health")
 def health():
-    """Health check."""
+    """Health check: the process is up (it may still be loading; see /ready)."""
     return {"status": "ok", "collection_size": collection.count()}
+
+
+_server_lock = instance_lock.InstanceLock(instance_lock.lock_path(CHROMA_PATH))
+
+
+@app.on_event("startup")
+def _start():
+    """Refuse to run beside another server on the same data (services/instance_lock.py),
+    then load the embedding model in the background, so /ready turns true
+    without waiting for someone's first question."""
+    _server_lock.acquire()
+    threading.Thread(target=lambda: embedder.model, name="embedder-warmup", daemon=True).start()
+
+
+@app.on_event("shutdown")
+def _stop():
+    _server_lock.release()
+
+
+@app.get("/ready")
+def ready():
+    """Can the server answer questions yet? 200 when the embedding model and
+    Elon's memories are loaded and the settings are valid, else 503 with
+    what is missing (for start scripts, monitors and the website)."""
+    checks = {
+        "settings": not validate_settings(config)[0],
+        "embedding_model": embedder.loaded,
+        "memories": collection.count() > 0,
+        "website": (SITE_DIR / "index.html").exists(),
+        "ai_voice": bool(config.OPENAI_API_KEY) or config.LLM_PROVIDER in ("ollama", "local"),
+    }
+    ok = checks["settings"] and checks["embedding_model"] and checks["memories"]
+    return JSONResponse({"ready": ok, "checks": checks}, status_code=200 if ok else 503)
 
 
 @app.get("/stats")
@@ -731,10 +883,15 @@ PERSON_ID = Query(config.DEFAULT_PERSONA, pattern=ps.PERSONA_ID_PATTERN)
 MAX_INTERVIEW_BATCH = 50
 
 
-def _persona_or_404(person: str) -> dict:
+def _custom_persona(person: str) -> dict:
+    """Only custom models take interview answers here, as on /personas/{id}/interview:
+    these older endpoints once let anyone plant fake first-person "answers"
+    (e.g. investment advice) in Elon's and the figures' shared archives."""
     persona = ps.load_persona(person)
     if persona is None:
         raise HTTPException(status_code=404, detail=f"No model called '{person}'")
+    if persona.get("kind") != "custom":
+        raise HTTPException(status_code=403, detail="Pretrained models can't be changed")
     return persona
 
 
@@ -745,7 +902,7 @@ def submit_interview_answer(item: InterviewAnswer, person: str = PERSON_ID):
     Body: {"question_id": "Q7", "answer": "...", "origin": "self"}; origin
     records who answered (the person, family, a friend...).
     """
-    persona = _persona_or_404(person)
+    persona = _custom_persona(person)
     result = embed_interview_answer(client, embedder, persona, item)
     return {
         "success": True,
@@ -760,7 +917,7 @@ def complete_interview(responses: list[InterviewAnswer], person: str = PERSON_ID
     """Embed several interview answers at once (body: a list of answers)."""
     if len(responses) > MAX_INTERVIEW_BATCH:
         raise HTTPException(status_code=400, detail=f"At most {MAX_INTERVIEW_BATCH} answers per request")
-    persona = _persona_or_404(person)
+    persona = _custom_persona(person)
 
     results = {"embedded": 0, "failed": 0, "errors": []}
     for item in responses:
@@ -777,6 +934,8 @@ def complete_interview(responses: list[InterviewAnswer], person: str = PERSON_ID
 
 # Pretrained + custom models: list, create, upload, interview, build, delete
 app.include_router(make_router(client, embedder))
+# Pause, revoke, review date and off-limits topics for custom models
+app.include_router(consent.make_router(lambda persona: delete_model(client, persona)))
 # Background work (large uploads) with progress
 app.include_router(jobs.make_router())
 # Encrypted .chronus export / import of custom models
@@ -785,6 +944,8 @@ app.include_router(bundle.make_router(client, embedder, config.EMBEDDING_MODEL, 
 app.include_router(followups.make_router(client, embedder))
 # Memory browser, citation context, time-travel year counts
 app.include_router(memory_routes.make_router(client, embedder))
+# The uploaded file behind a memory: play the voice note, see the photo (services/originals.py)
+app.include_router(originals.make_router())
 # Several models answer one question (and reply to each other)
 app.include_router(roundtable.make_router(_load_ready_persona, lambda p: ps.get_collection(client, p),
                                           answer_from_memory, lambda *a, **k: log_qa(*a, **k)))

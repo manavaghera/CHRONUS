@@ -1,6 +1,7 @@
 """Q&A log retention and "delete my history" (services/qa_log.py, DELETE /history)."""
 
 import json
+import os
 from datetime import datetime, timedelta
 
 import pytest
@@ -97,3 +98,30 @@ def test_pruning_never_deadlocks_with_log_writers(client, logs, monkeypatch, srv
     t.join(timeout=60)
     assert not t.is_alive(), "a log lock was taken twice"
     assert not failures
+
+
+def test_server_log_never_contains_the_question(srv, tmp_path, monkeypatch, caplog):
+    monkeypatch.setattr(qa_log, "QA_LOG_PATH", tmp_path / "qa.jsonl")
+    with caplog.at_level("INFO", logger="chronus"):
+        entry_id = qa_log.log_qa("Where are my grandmother's divorce papers?", "answer", [], persona="x")
+    assert entry_id in caplog.text and "divorce" not in caplog.text
+
+
+@pytest.mark.skipif(os.name != "posix", reason="Windows profiles are already private to their account")
+def test_private_files_are_owner_only(tmp_path):
+    from services import private_files
+    folder = tmp_path / "personas" / "amma"
+    folder.mkdir(parents=True)
+    letter = folder / "letter.txt"
+    letter.write_text("private")
+    os.chmod(folder, 0o755)
+    os.chmod(letter, 0o644)  # how they used to be created
+    assert private_files.tighten([tmp_path / "personas"]) == 3
+    assert (letter.stat().st_mode & 0o777) == 0o600 and (folder.stat().st_mode & 0o777) == 0o700
+    old = os.umask(0o022)
+    try:
+        private_files.restrict_new_files()
+        (tmp_path / "new.txt").write_text("x")
+        assert (tmp_path / "new.txt").stat().st_mode & 0o077 == 0
+    finally:
+        os.umask(old)

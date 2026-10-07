@@ -30,6 +30,7 @@ import pyarrow.dataset  # noqa: E402,F401  (before sentence_transformers: Window
 from sentence_transformers import SentenceTransformer  # noqa: E402
 
 import merge_sources  # noqa: E402
+from services import chroma_index  # noqa: E402
 from config import config  # noqa: E402
 from evaluation.questions import OUT_OF_DOMAIN  # noqa: E402
 
@@ -129,7 +130,7 @@ def build(figure: dict, client, embedder) -> int:
         client.delete_collection(collection_name)  # rebuild from scratch: sources may have changed
     except Exception:
         pass
-    collection = client.create_collection(name=collection_name, metadata={"hnsw:space": "cosine"})
+    collection = client.create_collection(name=collection_name, metadata=chroma_index.COLLECTION_METADATA)
     ids, docs, metas = [], [], []
     for i, unit in enumerate(units):
         memory_id = "fig_" + hashlib.md5(f"{figure['id']}|{i}|{unit['text']}".encode("utf-8")).hexdigest()[:16]

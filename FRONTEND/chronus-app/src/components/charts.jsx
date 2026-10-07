@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useT } from '../i18n'
 import './charts.css'
 
 // Small single-series charts for Insights and time travel. One hue (the
@@ -31,6 +32,7 @@ export function ColumnChart({ data, height = 160, label, format = compact, tickE
   const [width, setWidth] = useState(480)
   const [hover, setHover] = useState(null)
   const [table, setTable] = useState(false)
+  const t = useT()
 
   useEffect(() => {
     const el = wrapRef.current
@@ -62,7 +64,7 @@ export function ColumnChart({ data, height = 160, label, format = compact, tickE
     <figure className="chart" aria-label={label}>
       <div className="chart-head">
         <figcaption>{label}</figcaption>
-        <button className="chart-toggle" onClick={() => setTable(t => !t)}>{table ? 'Chart' : 'Table'}</button>
+        <button className="chart-toggle" onClick={() => setTable(on => !on)}>{table ? t('chart.chart') : t('chart.table')}</button>
       </div>
       {table ? (
         <table className="chart-table">
@@ -109,11 +111,12 @@ export function ColumnChart({ data, height = 160, label, format = compact, tickE
 
 // Horizontal bars for a ranked list: items [{label, value, note?}]
 export function BarList({ items, label, format = compact }) {
+  const t = useT()
   const max = Math.max(1, ...items.map(i => i.value))
   return (
     <figure className="chart" aria-label={label}>
       <div className="chart-head"><figcaption>{label}</figcaption></div>
-      {items.length === 0 ? <p className="chart-empty">Nothing yet.</p> : (
+      {items.length === 0 ? <p className="chart-empty">{t('chart.empty')}</p> : (
         <ul className="barlist">
           {items.map(i => (
             <li key={i.label} title={`${i.label}: ${format(i.value)}`}>

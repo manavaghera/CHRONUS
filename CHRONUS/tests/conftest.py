@@ -69,6 +69,22 @@ def pytest_collection_modifyitems(config, items):
             item.add_marker(skip)
 
 
+@pytest.fixture(scope="session", autouse=True)
+def _no_server_on_this_data():
+    """The tests write test models into the real database: never beside a
+    running server (two processes corrupt it; services/instance_lock.py)."""
+    from config import config
+    from services import instance_lock
+
+    lock = instance_lock.InstanceLock(instance_lock.lock_path(config.CHROMA_PATH))
+    try:
+        lock.acquire()
+    except instance_lock.AlreadyRunning:
+        pytest.exit("A CHRONUS server is running on this data: stop it before running the tests", returncode=3)
+    yield
+    lock.release()
+
+
 @pytest.fixture(scope="session")
 def srv():
     import api_server  # connects to ChromaDB once per run; the embedder loads on first use
@@ -93,9 +109,11 @@ def no_qa_log(srv, monkeypatch):
 def fresh_rate_limits(srv, monkeypatch):
     """Each test starts with its own login/request counts, so the sign-ins
     of one test never use up another's (services/access.py limiter)."""
-    from services import access
+    from services import access, natural_mode
 
     monkeypatch.setattr(access, "limiter", access._Limiter())
+    # ...and a closed circuit breaker: one test's simulated outage never skips another's AI call
+    monkeypatch.setattr(natural_mode, "breaker", natural_mode._Breaker())
 
 
 @pytest.fixture(scope="session", autouse=True)

@@ -195,11 +195,16 @@ def format_source_citation(metadata: dict, doc_text: str = "", distance: float |
     """
     source_type = metadata.get("source_type", "unknown")
     source_file = metadata.get("source_file", "unknown")
-    # .title() capitalises after apostrophes ("Freedom'S Battle"); undo that
-    source_name = re.sub(r"'S\b", "'s", str(metadata.get("source_name", "")).replace("_", " ").title())
+    source_name = str(metadata.get("source_name", "")).replace("_", " ")
+    if source_name == source_name.lower():
+        # file-derived names ("joe rogan podcast"); real titles keep their case ("TED2022", "OpenAI")
+        # .title() capitalises after apostrophes ("Freedom'S Battle"); undo that
+        source_name = re.sub(r"'S\b", "'s", source_name.title())
     date = metadata.get("date", "")
     page = metadata.get("page")
     voice = voice_of(metadata)
+    start = metadata.get("start_seconds")
+    at = _clock(start) if isinstance(start, (int, float)) else ""
 
     parts = [_TYPE_LABELS.get(source_type, str(source_type).title())]
     bare_file = str(source_file)
@@ -211,6 +216,8 @@ def format_source_citation(metadata: dict, doc_text: str = "", distance: float |
         parts.append(f"({date})")
     if page:
         parts.append(f"p. {page}")
+    if at:
+        parts.append(f"at {at}")
     if voice == SYNTHESIZED:
         parts.append("(synthesized, not a quote)")
     elif voice == THIRD_PARTY:
@@ -225,4 +232,64 @@ def format_source_citation(metadata: dict, doc_text: str = "", distance: float |
         "voice": voice,
         "memory_id": metadata.get("memory_id", ""),
         "distance": round(distance, 3) if distance is not None else None,
+        # A link to the moment in the video ("Watch at 1:02:14") or to the post
+        "url": _safe_url(metadata.get("url")),
+        "at": at,
+        # What a tweet quoted or replied to (rebuild_elon.py), shown with it
+        "context": tweet_context(metadata),
+        # Interviews whose transcript doesn't name the speakers: unknown, or
+        # told apart by a language model (speaker_labels.py)
+        "speaker_verified": metadata.get("speaker_verified", None),
+        "speaker_inferred": bool(metadata.get("speaker_inferred")),
+        # Custom models: the voice note (and the moment in it) or photo it came from
+        "original": _original(metadata),
     }
+
+
+def _original(metadata: dict) -> dict | None:
+    kind = metadata.get("original_kind")
+    if kind not in ("audio", "image", "scan") or not metadata.get("source_file"):
+        return None
+    out = {"kind": kind, "file": metadata["source_file"]}
+    if kind == "audio" and isinstance(metadata.get("audio_start"), (int, float)):
+        out.update(start=metadata["audio_start"], end=metadata.get("audio_end"), at=_clock(metadata["audio_start"]))
+    if kind == "scan" and metadata.get("page"):
+        out["page"] = metadata["page"]
+    return out
+
+
+def _clock(seconds: float) -> str:
+    h, rest = divmod(int(seconds), 3600)
+    m, s = divmod(rest, 60)
+    return f"{h}:{m:02d}:{s:02d}" if h else f"{m}:{s:02d}"
+
+
+def _safe_url(url) -> str:
+    """Only plain web links to the sources' own sites reach the page."""
+    url = str(url or "")
+    return url if re.match(r"^https://(?:www\.)?(?:youtube\.com|youtu\.be|x\.com|twitter\.com)/", url) else ""
+
+
+def tweet_context(metadata: dict) -> dict | None:
+    """{"kind": "quote" | "reply", "author", "text"} for a tweet that quoted or answered a post."""
+    kind = metadata.get("context_kind")
+    if kind not in ("quote", "reply"):
+        return None
+    return {"kind": kind, "author": str(metadata.get("context_author") or ""), "text": str(metadata.get("context_text") or "")}
+
+
+def context_clause(metadata: dict, limit: int = 140) -> str:
+    """' (quoting @user: “…”)' / ' (replying to @user)' after a quoted tweet,
+    so it isn't read as a standalone view."""
+    context = tweet_context(metadata)
+    if not context:
+        return ""
+    who = "my earlier post" if context["author"].lower() == str(metadata.get("person_handle", "elonmusk")).lower() \
+        else f"@{context['author']}" if context["author"] else "a post"
+    text = re.sub(r"https?://\S+", "", context["text"]).strip()
+    # shown inside quote marks: its own quotations get single ones
+    text = re.sub(r"\s+", " ", text).replace('"', "'").replace("“", "‘").replace("”", "’")
+    if len(text) > limit:
+        text = text[:limit].rsplit(" ", 1)[0] + "…"
+    verb = "quoting" if context["kind"] == "quote" else "replying to"
+    return f" ({verb} {who}: “{text}”)" if text else f" ({verb} {who})"

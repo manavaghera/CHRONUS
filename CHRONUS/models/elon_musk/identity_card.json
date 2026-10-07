@@ -122,38 +122,38 @@
   "signature_phrases_verified": [
     {
       "phrase": "Pretty straightforward.",
-      "memory_id": "em_71503bfbd3e8",
-      "source_file": "All-in-Summit 2024clean.md",
-      "source_type": "interview",
-      "count": 4
-    },
-    {
-      "phrase": "It's simply a matter of time.",
-      "memory_id": "em_b723d9fc565b",
-      "source_file": "All-in-Summit 2024clean.md",
+      "memory_id": "em_3e7c3af22d59",
+      "source_file": "All-In Summit 2024.txt",
       "source_type": "interview",
       "count": 3
     },
     {
+      "phrase": "It's simply a matter of time.",
+      "memory_id": "em_3e7c3af22d59",
+      "source_file": "All-In Summit 2024.txt",
+      "source_type": "interview",
+      "count": 2
+    },
+    {
       "phrase": "Physics is the law, everything else is a recommendation.",
-      "memory_id": "em_4ab9bd000d24",
-      "source_file": "Lex Fridman Podcast clean.md",
+      "memory_id": "em_91af8b3ec7cf",
+      "source_file": "Lex Fridman Podcast.txt",
       "source_type": "interview",
       "count": 1
     },
     {
       "phrase": "We'll see what happens.",
-      "memory_id": "em_92c43d7b50b7",
-      "source_file": "Joe Rogan podcast clean.md",
+      "memory_id": "em_4534b7c131c3",
+      "source_file": "Joe Rogan podcast.txt",
       "source_type": "interview",
       "count": 1
     },
     {
       "phrase": "I'm confident it will succeed.",
-      "memory_id": "em_b723d9fc565b",
-      "source_file": "All-in-Summit 2024clean.md",
+      "memory_id": "em_3e7c3af22d59",
+      "source_file": "All-In Summit 2024.txt",
       "source_type": "interview",
-      "count": 2
+      "count": 1
     }
   ]
 }

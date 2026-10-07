@@ -3,6 +3,7 @@ import { api } from '../api'
 import { navigate } from '../router'
 import { Emblem } from './Emblems'
 import useScrollReveal from './useScrollReveal'
+import { useT } from '../i18n'
 import './gallery.css'
 
 // Shown until the server answers (or if it's offline), so the section is
@@ -26,26 +27,28 @@ const TONES = {
 }
 
 function Card({ persona, index }) {
+  const t = useT()
   const [ref, inView] = useScrollReveal(0.15)
   const [from, to] = TONES[persona.id] || ['#2a2522', '#6a4a35']
   const first = persona.name.split(' ')[0]
   return (
     <button ref={ref} className={`gallery-card ${inView ? 'in-view' : ''}`} style={{ transitionDelay: `${(index % 4) * 70}ms` }}
-      onClick={() => navigate(`/chat/${persona.id}`)} aria-label={`Chat with ${persona.name}`}>
+      onClick={() => navigate(`/chat/${persona.id}`)} aria-label={t('create.chatWith', { name: persona.name })}>
       <div className="gallery-art" style={{ background: `radial-gradient(circle at 70% 25%, ${to}, ${from} 70%)` }}>
         <span className="gallery-emblem"><Emblem id={persona.id} name={persona.name} /></span>
-        {persona.memories > 0 && <span className="gallery-count">{persona.memories.toLocaleString()} memories</span>}
+        {persona.memories > 0 && <span className="gallery-count">{t('common.memories', { count: persona.memories.toLocaleString() })}</span>}
       </div>
       <div className="gallery-text">
         <h3>{persona.name}</h3>
         <p>{persona.description}</p>
-        <span className="gallery-cta">Ask {first} →</span>
+        <span className="gallery-cta">{t('gallery.ask', { name: first })}</span>
       </div>
     </button>
   )
 }
 
 export default function ModelGallery() {
+  const t = useT()
   const [models, setModels] = useState(FALLBACK)
   const [hRef, hIn] = useScrollReveal()
 
@@ -63,16 +66,16 @@ export default function ModelGallery() {
       <div className="shell gallery-inner">
         <div ref={hRef} className={`gallery-header sr ${hIn ? 'in-view' : ''}`}>
           <div>
-            <div className="eyebrow eyebrow--accent">Pretrained models</div>
-            <h2 className="gallery-h2">Talk to history, in their own words</h2>
+            <div className="eyebrow eyebrow--accent">{t('gallery.eyebrow')}</div>
+            <h2 className="gallery-h2">{t('gallery.title')}</h2>
           </div>
-          <p>Each model answers only from texts its subject actually wrote or said: public-domain books, letters and speeches, or public interviews. Listen buttons use a labelled stand-in voice, never a clone.</p>
+          <p>{t('gallery.intro')}</p>
         </div>
         <div className="gallery-grid">
           {models.map((p, i) => <Card key={p.id} persona={p} index={i} />)}
         </div>
         <div className="gallery-more">
-          <button className="pill-btn pill-btn--outline" onClick={() => navigate('/models')}><span className="pill-inner">All models, including yours</span></button>
+          <button className="pill-btn pill-btn--outline" onClick={() => navigate('/models')}><span className="pill-inner">{t('gallery.more')}</span></button>
         </div>
       </div>
     </section>

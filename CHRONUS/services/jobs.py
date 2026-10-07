@@ -7,11 +7,14 @@ long request.
     GET  /jobs/{job_id}                   {status, progress, message, result | error}
 
 Jobs live in memory for an hour after they finish; a restart forgets them
-(the upload itself, once done, is saved like any other).
+(the upload itself, once done, is saved like any other). At most MAX_RUNNING
+run at once (the rest wait their turn), and one account can't queue more
+than MAX_PENDING_PER_USER.
 """
 
 from __future__ import annotations
 
+import os
 import secrets
 import threading
 import time
@@ -23,8 +26,18 @@ from fastapi import Path as PathParam
 from services import personas as ps
 
 KEEP_SECONDS = 3600
+MAX_PENDING_PER_USER = 5
+try:
+    MAX_RUNNING = max(1, int(os.getenv("CHRONUS_MAX_HEAVY", "2")))  # same cap as heavy requests (services/access.py)
+except ValueError:
+    MAX_RUNNING = 2
 _jobs: dict[str, dict] = {}
 _lock = threading.Lock()
+_running = threading.BoundedSemaphore(MAX_RUNNING)
+
+
+class Busy(Exception):
+    """This account already has MAX_PENDING_PER_USER jobs waiting or running."""
 
 
 def _prune() -> None:
@@ -36,10 +49,13 @@ def _prune() -> None:
 def start(work: Callable[[Callable[[float, str], None]], dict], kind: str) -> str:
     """Run work(progress) in a thread; returns the job id."""
     job_id = secrets.token_hex(8)
-    job = {"id": job_id, "kind": kind, "status": "running", "progress": 0.0, "message": "Starting",
-           "user": ps.current_user.get(), "started_at": time.time()}
+    user = ps.current_user.get()
+    job = {"id": job_id, "kind": kind, "status": "running", "progress": 0.0, "message": "Waiting for other work to finish",
+           "user": user, "started_at": time.time()}
     with _lock:
         _prune()
+        if sum(1 for j in _jobs.values() if j["status"] == "running" and j["user"] == user) >= MAX_PENDING_PER_USER:
+            raise Busy(f"You already have {MAX_PENDING_PER_USER} uploads in progress; wait for one to finish")
         _jobs[job_id] = job
 
     def progress(fraction: float, message: str) -> None:
@@ -47,7 +63,9 @@ def start(work: Callable[[Callable[[float, str], None]], dict], kind: str) -> st
 
     def run(context_user):
         token = ps.current_user.set(context_user)
+        _running.acquire()  # waits for a free slot
         try:
+            job["message"] = "Starting"
             job["result"] = work(progress)
             job.update(status="done", progress=1.0, message="Done")
         except ValueError as e:
@@ -55,6 +73,7 @@ def start(work: Callable[[Callable[[float, str], None]], dict], kind: str) -> st
         except Exception as e:  # never leave a job "running" forever
             job.update(status="failed", error=f"Unexpected error ({type(e).__name__})")
         finally:
+            _running.release()
             job["finished_at"] = time.time()
             ps.current_user.reset(token)
 

@@ -3,6 +3,8 @@
 import base64
 import io
 import json
+import threading
+from unittest import mock
 
 import docx
 import pytest
@@ -49,7 +51,7 @@ def persona(client):
 @pytest.mark.corpus
 def test_elon_is_listed_as_ready(client):
     elon = next(p for p in client.get("/personas").json() if p["id"] == "elon_musk")
-    assert elon["kind"] == "pretrained" and elon["status"] == "ready" and elon["memories"] > 16000
+    assert elon["kind"] == "pretrained" and elon["status"] == "ready" and elon["memories"] > 14000
 
 
 def test_consent_is_required(client):
@@ -61,6 +63,38 @@ def test_new_model_is_private_draft(client, persona):
     p = client.get(f"/personas/{persona}").json()
     assert p["status"] == "draft" and p["allow_cloud_llm"] is False
     assert client.post("/chat", json={"query": "hello there friend", "persona": persona}).status_code == 409
+
+
+def test_old_interview_endpoint_still_serves_custom_models(srv, client, persona):
+    with mock.patch.object(srv, "embed_interview_answer", return_value={"dimension": "personality", "memory_id": "x"}) as emb:
+        r = client.post(f"/interview/answer?person={persona}", json={"question_id": "Q1", "answer": "x", "origin": "family"})
+    assert r.status_code == 200 and emb.call_args.args[3].origin == "family"
+
+
+def test_persona_file_is_never_read_half_written(persona):
+    # Concurrent requests used to read persona.json mid-rewrite and fail with 500s
+    record = ps.load_persona(persona)
+    errors = []
+
+    def writer():
+        for i in range(150):
+            ps.save_persona({**record, "description": "x" * (i % 40) * 200})
+
+    def reader():
+        for _ in range(300):
+            try:
+                assert ps.load_persona(persona)["id"] == persona
+            except Exception as e:  # noqa: BLE001 (any failure counts)
+                errors.append(repr(e))
+
+    threads = [threading.Thread(target=writer)] + [threading.Thread(target=reader) for _ in range(4)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    ps.save_persona(record)
+    assert not errors, errors[:3]
+    assert not list((ps.CUSTOM_DIR / persona).glob(".persona.json.*.tmp"))  # no temp files left behind
 
 
 def test_upload_text_and_word(client, persona):

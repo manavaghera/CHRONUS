@@ -1,0 +1,94 @@
+{
+  "2025 shareholders.txt": {
+    "kind": "interview",
+    "video_id": "VGPlvmMjPtE",
+    "url": "https://www.youtube.com/watch?v=VGPlvmMjPtE",
+    "title": "2025 Annual Shareholder Meeting | Tesla",
+    "date": "2025-11-06"
+  },
+  "All-In Summit 2024.txt": {
+    "kind": "interview",
+    "video_id": "pSFvOUswFwA",
+    "url": "https://www.youtube.com/watch?v=pSFvOUswFwA",
+    "title": "Elon Musk | All-In Summit 2024",
+    "date": "2024-09-09"
+  },
+  "ALL-in-One online.txt": {
+    "kind": "interview",
+    "video_id": "j6_VfR-CyuM",
+    "url": "https://www.youtube.com/watch?v=j6_VfR-CyuM",
+    "title": "Elon Musk: OpenAI Betrayal, His Future at Tesla, and the Next Big Thing — Grokipedia",
+    "date": "2025-10-31"
+  },
+  "ALL-IN-ONE-MULTI.txt": {
+    "kind": "interview",
+    "video_id": "CnxzrX9tNoc",
+    "url": "https://www.youtube.com/watch?v=CnxzrX9tNoc",
+    "title": "Elon Musk: Twitter's bot problem, SpaceX's grand plan, Tesla stories & more",
+    "date": "2022-05-16"
+  },
+  "Don Lemon.txt": {
+    "kind": "interview",
+    "title": "The Don Lemon Show: Elon Musk",
+    "date": "2024-03-18",
+    "url": null,
+    "note": "Aired on YouTube and podcast platforms on 18 March 2024; the transcript has no video link."
+  },
+  "Dwarkesh patel.txt": {
+    "kind": "interview",
+    "video_id": "BYXbuik3dgA",
+    "url": "https://www.youtube.com/watch?v=BYXbuik3dgA",
+    "title": "Elon Musk – \"In 36 months, the cheapest place to put AI will be space”",
+    "date": "2026-02-05"
+  },
+  "Joe Rogan podcast.txt": {
+    "kind": "interview",
+    "video_id": "O4wBUysNe2k",
+    "url": "https://www.youtube.com/watch?v=O4wBUysNe2k",
+    "title": "Joe Rogan Experience #2404 - Elon Musk",
+    "date": "2025-10-31"
+  },
+  "Lex Fridman Podcast.txt": {
+    "kind": "interview",
+    "video_id": "JN3KPFbWCy8",
+    "url": "https://www.youtube.com/watch?v=JN3KPFbWCy8",
+    "title": "Elon Musk: War, AI, Aliens, Politics, Physics, Video Games, and Humanity | Lex Fridman Podcast #400",
+    "date": "2023-11-09"
+  },
+  "Nikhil.txt": {
+    "kind": "interview",
+    "video_id": "Rni7Fz7208c",
+    "url": "https://www.youtube.com/watch?v=Rni7Fz7208c",
+    "title": "Elon Musk: A Different Conversation w/ Nikhil Kamath | Full Episode | People by WTF Ep. 16",
+    "date": "2025-11-30"
+  },
+  "TED Tesla fract.txt": {
+    "kind": "interview",
+    "video_id": "YRvf00NooN8",
+    "url": "https://www.youtube.com/watch?v=YRvf00NooN8",
+    "title": "Elon Musk: A future worth getting excited about | Tesla Texas Gigafactory interview | TED",
+    "date": "2022-04-17"
+  },
+  "TED2022.txt": {
+    "kind": "interview",
+    "video_id": "cdZZpaB2kDM",
+    "url": "https://www.youtube.com/watch?v=cdZZpaB2kDM",
+    "title": "Elon Musk talks Twitter, Tesla and how his brain works — live at TED2022",
+    "date": "2022-04-14"
+  },
+  "Elon Musk (Walter Isaacson).pdf": {
+    "title": "Elon Musk, by Walter Isaacson",
+    "date": "2023-09-12",
+    "kind": "book"
+  },
+  "Isaacson-Quotes-cleaned.md": {
+    "title": "Quotes from Elon Musk, by Walter Isaacson",
+    "date": "2023-09-12",
+    "kind": "book"
+  },
+  "Vance-Quotes-cleaned.md": {
+    "title": "Quotes from Elon Musk: Tesla, SpaceX, and the Quest for a Fantastic Future, by Ashlee Vance",
+    "date": "2015-05-19",
+    "kind": "book"
+  }
+}

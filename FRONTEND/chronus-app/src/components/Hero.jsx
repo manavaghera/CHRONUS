@@ -3,6 +3,7 @@ import { api } from '../api'
 import { navigate } from '../router'
 import MemoryField from './MemoryField'
 import AnswerPreview from './AnswerPreview'
+import { useT } from '../i18n'
 import './hero.css'
 
 // What CHRONUS actually runs on (see CHRONUS/requirements.txt)
@@ -26,6 +27,7 @@ function useArchiveStats() {
 }
 
 export default function Hero({ scrollToId }) {
+  const t = useT()
   const stats = useArchiveStats()
   return (
     <section id="home" className="hero">
@@ -35,33 +37,30 @@ export default function Hero({ scrollToId }) {
 
       <div className="shell hero-content">
         <div className="hero-left">
-          <div className="hero-eyebrow">Memory, not mimicry</div>
+          <div className="hero-eyebrow">{t('hero.eyebrow')}</div>
           <h1 className="hero-h1">
-            <span className="line-clip hero-line"><span>Their words.</span></span>
-            <span className="line-clip hero-line"><span style={{ transitionDelay: '.12s' }}>Their voice.</span></span>
-            <span className="line-clip hero-line"><span style={{ transitionDelay: '.24s' }} className="hero-h1-accent">Never invented.</span></span>
+            <span className="line-clip hero-line"><span>{t('hero.line1')}</span></span>
+            <span className="line-clip hero-line"><span style={{ transitionDelay: '.12s' }}>{t('hero.line2')}</span></span>
+            <span className="line-clip hero-line"><span style={{ transitionDelay: '.24s' }} className="hero-h1-accent">{t('hero.line3')}</span></span>
           </h1>
-          <p className="hero-sub">
-            CHRONUS answers in a person's own words, drawn from their interviews, letters and books.
-            Every reply shows its source, and when the archive is silent, it says so.
-          </p>
+          <p className="hero-sub">{t('hero.sub')}</p>
           <div className="hero-ctas">
             <button className="pill-btn pill-btn--dark pill-btn--with-arrow" onClick={() => navigate('/create')}>
-              <span className="pill-inner">Create a model with consent<span className="pill-badge pill-arrow-upright">{ARROW}</span></span>
+              <span className="pill-inner">{t('hero.create')}<span className="pill-badge pill-arrow-upright">{ARROW}</span></span>
             </button>
-            <button className="pill-btn pill-btn--outline" onClick={() => scrollToId('demo')}><span className="pill-inner">Try the live demo</span></button>
+            <button className="pill-btn pill-btn--outline" onClick={() => scrollToId('demo')}><span className="pill-inner">{t('hero.tryDemo')}</span></button>
           </div>
           <ul className="hero-facts">
-            {stats && <li><strong>{stats.models}</strong> models ready to talk to</li>}
-            {stats && <li><strong>{stats.memories.toLocaleString()}</strong> source-tagged memories</li>}
-            <li>Every factual answer cites its source, or says “I don't know”</li>
+            {stats && <li><strong>{stats.models}</strong> {t('hero.modelsReady')}</li>}
+            {stats && <li><strong>{stats.memories.toLocaleString()}</strong> {t('hero.memories')}</li>}
+            <li>{t('hero.cites')}</li>
           </ul>
         </div>
 
         <div className="hero-right">
           <AnswerPreview />
           <div className="hero-built">
-            <span>Built on</span>
+            <span>{t('hero.builtOn')}</span>
             <ul>{BUILT_ON.map(n => <li key={n}>{n}</li>)}</ul>
           </div>
         </div>
@@ -69,9 +68,9 @@ export default function Hero({ scrollToId }) {
 
       <div className="hero-status">
         <div className="shell hero-status-inner">
-          <span>Research since 2024</span>
-          <span className="status-center">Parul University — B.Tech Project</span>
-          <button onClick={() => scrollToId('demo')}>Scroll to explore &darr;</button>
+          <span>{t('hero.since')}</span>
+          <span className="status-center">{t('hero.university')}</span>
+          <button onClick={() => scrollToId('demo')}>{t('hero.scroll')} &darr;</button>
         </div>
       </div>
     </section>

@@ -18,14 +18,11 @@ from fastapi import APIRouter, HTTPException
 from fastapi import Path as PathParam
 from pydantic import BaseModel, Field
 
+from services import consent, consent_text, tts
 from services import personas as ps
-from services import tts
 
 PERSONA_PATH = PathParam(pattern=ps.PERSONA_ID_PATTERN)
-CONSENT_STATEMENT = (
-    "I am this person, or I have their permission (or their estate's) to build "
-    "this model from their words."
-)
+CONSENT_STATEMENT = consent_text.MODEL["en"]
 
 
 class PersonaCreate(BaseModel):
@@ -36,6 +33,8 @@ class PersonaCreate(BaseModel):
     # The person has died: memorial framing (services/wellbeing.py)
     memorial: bool = False
     consent: bool
+    # The language the consent statement was shown in, and is recorded in
+    language: consent_text.Language = "en"
 
 
 class DocumentUpload(BaseModel):
@@ -49,6 +48,7 @@ class VoiceUpload(BaseModel):
     content_base64: str = Field(min_length=1, max_length=ps.MAX_UPLOAD_BYTES * 4 // 3 + 16)
     consent: bool  # the person (or their estate) agreed to their voice being used
     cloud: bool  # ...and to the recording going to Fish Audio to make the voice (services/tts.py)
+    language: consent_text.Language = "en"
 
 
 class InterviewAnswer(BaseModel):
@@ -82,6 +82,8 @@ def summarize(persona: dict, collection) -> dict:
         "suggested_questions": persona.get("suggested_questions", []),
         "sources": persona.get("sources", []),
         "license": persona.get("license", ""),
+        # custom models: paused?, review date, off-limits topics (services/consent.py)
+        "consent": consent.state(persona) if persona["kind"] == "custom" else None,
     }
 
 
@@ -112,7 +114,8 @@ def make_router(client, embedder) -> APIRouter:
         if not body.consent:
             raise HTTPException(status_code=400, detail="Consent is required to build a model of a real person")
         persona = ps.create_custom_persona(
-            body.name, body.description, body.relationship, body.allow_cloud_llm, CONSENT_STATEMENT,
+            body.name, body.description, body.relationship, body.allow_cloud_llm, consent_text.MODEL[body.language],
+            consent_language=body.language,
             memorial=body.memorial,
         )
         return summarize(persona, ps.get_collection(client, persona))
@@ -152,7 +155,10 @@ def make_router(client, embedder) -> APIRouter:
             entry = ps.ingest_document(persona, ps.get_collection(client, persona), embedder, body.filename, data,
                                        body.authored_by, progress=progress)
             return {"upload": entry, "persona": detail(persona_id)}
-        return {"job_id": jobs.start(work, "upload")}
+        try:
+            return {"job_id": jobs.start(work, "upload")}
+        except jobs.Busy as e:
+            raise HTTPException(status_code=429, detail=str(e))
 
     @router.post("/{persona_id}/interview")
     def interview(body: InterviewAnswer, persona_id: str = PERSONA_PATH):
@@ -184,7 +190,8 @@ def make_router(client, embedder) -> APIRouter:
             raise HTTPException(status_code=400, detail=str(e))
         old_voice_id = (persona.get("voice") or {}).get("fish_voice_id")
         try:
-            ps.save_voice_sample(persona, data, tts.fish_create_voice(data))
+            ps.save_voice_sample(persona, data, tts.fish_create_voice(data), consent_text.VOICE[body.language],
+                                 body.language)
             if old_voice_id:
                 tts.fish_delete_voice(old_voice_id)  # replaced: don't leave the old one at Fish
         except tts.VoiceServiceError as e:
@@ -213,12 +220,16 @@ def make_router(client, embedder) -> APIRouter:
 
     @router.delete("/{persona_id}")
     def delete(persona_id: str = PERSONA_PATH):
-        persona = _custom(persona_id)
-        _delete_cloud_voice(persona)
-        ps.delete_custom_persona(client, persona)
+        delete_model(client, _custom(persona_id))
         return {"deleted": persona_id}
 
     return router
+
+
+def delete_model(client, persona: dict) -> None:
+    """Delete a custom model and everything in it (Delete, and revoking consent)."""
+    _delete_cloud_voice(persona)
+    ps.delete_custom_persona(client, persona)
 
 
 def _delete_cloud_voice(persona: dict) -> None:

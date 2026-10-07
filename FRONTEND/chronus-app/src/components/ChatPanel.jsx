@@ -2,6 +2,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { api, download } from '../api'
 import { playExclusive, playUntilEnd, speakBrowser, stopCurrent } from '../audio'
 import AnswerText, { plain } from './chat/AnswerText'
+import Original from './chat/Original'
+import { useT } from '../i18n'
 import Feedback from './chat/Feedback'
 import SourceViewer from './chat/SourceViewer'
 import TimeTravel from './chat/TimeTravel'
@@ -12,39 +14,53 @@ import './chat/chat.css'
 export const SPARK = <svg viewBox="0 0 48 48" fill="currentColor"><path d="M24 2c2.2 13.8 7.9 19.6 22 22-14.1 2.4-19.8 8.2-22 22-2.2-13.8-7.9-19.6-22-22 14.1-2.4 19.8-8.2 22-22Z"/></svg>
 
 const MAX_HISTORY = 10
+
+// An answer as conversation history: its text, plus the memories it cited, so
+// a follow-up ("tell me more") searches from them and skips quotes already shown
+function turnOf(text, sources) {
+  const memory_ids = (sources || []).map(s => s.memory_id).filter(id => /^[A-Za-z0-9_.:-]{1,100}$/.test(id || '')).slice(0, 10)
+  return { role: 'assistant', content: plain(text).slice(0, 2000), memory_ids }
+}
 // Gentle break reminder for personal (and memorial) models
 const NUDGE_AFTER_MS = 25 * 60 * 1000
-
-const MODE_LABELS = {
-  natural: 'AI voice',
-  mix_method: 'Verbatim quotes',
-  // The AI's draft was unreachable or not backed by the sources (grounding guard)
-  mix_method_fallback: 'Verbatim quotes, AI answer not used',
-  basic_info: 'Profile fact',
-  fallback: 'Not enough evidence',
-  support: 'Support information',
-}
 
 const LANGUAGES = [['auto', 'Same as question'], ['en', 'English'], ['hi', 'हिन्दी'], ['gu', 'ગુજરાતી'], ['mr', 'मराठी'],
   ['bn', 'বাংলা'], ['ta', 'தமிழ்'], ['te', 'తెలుగు'], ['ur', 'اردو'], ['es', 'Español'], ['fr', 'Français']]
 
-const DEFAULT_VOICE_LABELS = { first_person: 'own words', third_party: 'written by others', synthesized: 'synthesized' }
-
-export function Sources({ sources, voiceLabels = DEFAULT_VOICE_LABELS, onOpen, open }) {
+// voiceGroup: the names for whose words each source is (strings/chat.js voices.*, elonVoices.*)
+export function Sources({ sources, voiceGroup = 'voices', onOpen, open, personaId }) {
+  const t = useT()
   if (!sources?.length) return null
   return (
     <details className="demo-sources" open={open || undefined}>
-      <summary>Sources ({sources.length})</summary>
+      <summary>{t('chat.sources')} ({sources.length})</summary>
       {sources.map((s, i) => (
         <div key={i} className="demo-source">
           <div className="demo-msg-source">
             <span className="src-num">{i + 1}</span>
             {s.citation || s.source_file}
-            {s.voice && <span className={`demo-voice demo-voice--${s.voice}`}>{voiceLabels[s.voice] || s.voice}</span>}
-            {s.distance != null && <span className="demo-match">match {Math.max(0, Math.round((1 - s.distance) * 100))}%</span>}
+            {s.voice && <span className={`demo-voice demo-voice--${s.voice}`}>{t.label(voiceGroup, s.voice)}</span>}
+            {s.distance != null && <span className="demo-match">{t('chat.match', { pct: Math.max(0, Math.round((1 - s.distance) * 100)) })}</span>}
           </div>
+          {s.context && (
+            <div className="src-context">
+              {s.context.kind === 'quote' ? t('chat.quoting') : t('chat.replyingTo')} {s.context.author ? `@${s.context.author}` : t('chat.aPost')}
+              {s.context.text && <>: “{s.context.text}”</>}
+            </div>
+          )}
           {s.quote && <div className="demo-msg-quote">{s.quote}</div>}
-          {s.memory_id && <button className="src-open" onClick={() => onOpen(i)}>View in context</button>}
+          {s.speaker_verified === false && (
+            <div className="src-note">{t(s.speaker_inferred ? 'chat.speakerInferred' : 'chat.speakerNote')}</div>
+          )}
+          <div className="src-actions">
+            {s.memory_id && <button className="src-open" onClick={() => onOpen(i)}>{t('chat.viewInContext')}</button>}
+            <Original personaId={personaId} original={s.original} />
+            {/^https:\/\/(www\.)?(youtube\.com|youtu\.be|x\.com|twitter\.com)\//.test(s.url || '') && (
+              <a className="src-open" href={s.url} target="_blank" rel="noopener noreferrer">
+                {s.at ? t('chat.watchAt', { at: s.at }) : s.source_type === 'tweet' ? t('chat.viewPost') : t('chat.openSource')}
+              </a>
+            )}
+          </div>
         </div>
       ))}
     </details>
@@ -54,6 +70,7 @@ export function Sources({ sources, voiceLabels = DEFAULT_VOICE_LABELS, onOpen, o
 // Server voice: the consented cloned voice of a custom model, or for public
 // figures a synthetic stand-in voice that is labelled as not theirs
 function Listen({ personaId, text, standIn }) {
+  const t = useT()
   const [state, setState] = useState('idle')
   const [error, setError] = useState('')
   const audioRef = useRef(null)
@@ -70,12 +87,12 @@ function Listen({ personaId, text, standIn }) {
       setState('playing')
     } catch (e) { setState('idle'); setError(e.message) }
   }
-  const label = standIn ? '▶ Listen (stand-in voice, not theirs)' : '▶ Listen in their voice'
+  const label = standIn ? t('chat.listenStandIn') : t('chat.listenTheirs')
   return (
     <div>
       <button className="demo-listen" disabled={state === 'loading'} onClick={toggle}
-        title={standIn ? "A synthetic voice chosen for this model. It is not a recording or copy of the real person's voice." : undefined}>
-        {state === 'loading' ? 'Generating voice…' : state === 'playing' ? '■ Stop' : label}
+        title={standIn ? t('chat.standInTip') : undefined}>
+        {state === 'loading' ? t('chat.generating') : state === 'playing' ? t('chat.stop') : label}
       </button>
       {error && <div className="demo-msg-source">{error}</div>}
     </div>
@@ -85,6 +102,7 @@ function Listen({ personaId, text, standIn }) {
 // Any model: the browser's built-in speech voice. Clearly a computer voice,
 // so it imitates nobody, and it needs no download or licence.
 function ReadAloud({ text, lang }) {
+  const t = useT()
   const [speaking, setSpeaking] = useState(false)
   if (typeof window === 'undefined' || !window.speechSynthesis) return null
   const toggle = async () => {
@@ -93,10 +111,11 @@ function ReadAloud({ text, lang }) {
     await speakBrowser(plain(text), lang)
     setSpeaking(false)
   }
-  return <button className="demo-listen" onClick={toggle}>{speaking ? '■ Stop' : '🔊 Read aloud'}</button>
+  return <button className="demo-listen" onClick={toggle}>{speaking ? t('chat.stop') : t('chat.readAloud')}</button>
 }
 
-function Msg({ m, voiceLabels, voice, personaId, onOpenSource }) {
+function Msg({ m, voiceGroup, voice, personaId, onOpenSource }) {
+  const t = useT()
   const [copied, setCopied] = useState(false)
   const copy = async () => {
     try { await navigator.clipboard.writeText(plain(m.text)); setCopied(true); setTimeout(() => setCopied(false), 1500) } catch { /* no clipboard */ }
@@ -105,7 +124,7 @@ function Msg({ m, voiceLabels, voice, personaId, onOpenSource }) {
     m.mode === 'support' && 'is-support'].filter(Boolean).join(' ')
   return (
     <div className={`demo-msg demo-msg--${m.type}`}>
-      <div className="demo-msg-avatar">{m.type === 'assistant' ? SPARK : 'You'}</div>
+      <div className="demo-msg-avatar">{m.type === 'assistant' ? SPARK : t('chat.you')}</div>
       <div className="demo-msg-main">
         {/* Plain text children, not innerHTML: answers quote real documents */}
         <div className={bubble} lang={m.language && m.language !== 'en' ? m.language : undefined}>
@@ -118,22 +137,22 @@ function Msg({ m, voiceLabels, voice, personaId, onOpenSource }) {
           </ul>
         )}
         {m.original && (
-          <details className="original-answer"><summary>Original (English)</summary><AnswerText text={m.original} sources={m.sources} onCite={onOpenSource} /></details>
+          <details className="original-answer"><summary>{t('chat.originalEnglish')}</summary><AnswerText text={m.original} sources={m.sources} onCite={onOpenSource} /></details>
         )}
         {m.meta && <div className="demo-msg-source">{m.meta}</div>}
         {m.why && m.why.threshold_match != null && (
           <details className="why">
-            <summary>Why this confidence?</summary>
+            <summary>{t('chat.whyConfidence')}</summary>
             {m.why.sources === 0
-              ? <p>{m.why.best_match == null ? 'This model has no memories to search yet.' : `The closest memory matched ${m.why.best_match}%, and this model only answers above ${m.why.threshold_match}%. So instead of guessing, it says it doesn't know.`}</p>
-              : <p>The best source matches the question {m.why.best_match}% (this model answers from {m.why.threshold_match}% up). {m.why.sources} source{m.why.sources === 1 ? '' : 's'} used, {m.why.own_words} in their own words. Higher matches and own words mean higher confidence.</p>}
+              ? <p>{m.why.best_match == null ? t('chat.whyEmpty') : t('chat.whyRefused', { best: m.why.best_match, threshold: m.why.threshold_match })}</p>
+              : <p>{t('chat.whyAnswered', { best: m.why.best_match, threshold: m.why.threshold_match, sources: m.why.sources, own: m.why.own_words })}</p>}
           </details>
         )}
-        <Sources sources={m.sources} voiceLabels={voiceLabels} onOpen={onOpenSource} />
+        <Sources sources={m.sources} voiceGroup={voiceGroup} onOpen={onOpenSource} personaId={personaId} />
         {m.sources && !m.error && !m.draft && (
           <div className="demo-voice-row">
             {voice ? <Listen personaId={voice.personaId} text={m.text} standIn={voice.standIn} /> : <ReadAloud text={m.text} lang={m.language} />}
-            <button className="demo-listen" onClick={copy}>{copied ? '✓ Copied' : 'Copy'}</button>
+            <button className="demo-listen" onClick={copy}>{copied ? t('chat.copied') : t('chat.copy')}</button>
             {m.mode !== 'support' && <Feedback entryId={m.id} personaId={personaId} />}
           </div>
         )}
@@ -150,11 +169,13 @@ function Msg({ m, voiceLabels, voice, personaId, onOpenSource }) {
  * persist: keep the conversation in this browser (the Chat page does; the
  * landing-page demo doesn't).
  */
-export default function ChatPanel({ persona, greeting, quick = [], tall = false, voiceLabels = DEFAULT_VOICE_LABELS, persist = false }) {
+export default function ChatPanel({ persona, greeting, quick = [], tall = false, voiceGroup = 'voices', persist = false }) {
+  const t = useT()
   const aiAllowed = persona.allowAiVoice !== false
   const voice = useMemo(() => (persona.hasVoice || persona.standInVoice ? { personaId: persona.id, standIn: !persona.hasVoice } : null),
     [persona.hasVoice, persona.standInVoice, persona.id])
-  const greetingMsg = { type: 'assistant', text: greeting, meta: 'Model initialization' }
+  // A marker, so the greeting is always shown in the language chosen now
+  const greetingMsg = { type: 'assistant', greeting: true }
   const [msgs, setMsgs] = useState(() => (persist && loadHistory(persona.id)) || [greetingMsg])
   const [input, setInput] = useState('')
   const [typing, setTyping] = useState(false)
@@ -168,12 +189,13 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
   const [conversation, setConversation] = useState(false)
   const [nudge, setNudge] = useState(false)
   const [announce, setAnnounce] = useState('')
-  const history = useRef(persist ? (loadHistory(persona.id) || []).filter(m => !m.meta?.startsWith('Model')).slice(-MAX_HISTORY)
-    .map(m => ({ role: m.type === 'user' ? 'user' : 'assistant', content: plain(m.text).slice(0, 2000) })) : [])
+  const history = useRef(persist ? (loadHistory(persona.id) || []).filter(m => !m.greeting && !m.meta?.startsWith('Model')).slice(-MAX_HISTORY)
+    .map(m => m.type === 'user' ? { role: 'user', content: plain(m.text).slice(0, 2000) } : turnOf(m.text, m.sources)) : [])
   const bodyRef = useRef(null)
   const abortRef = useRef(null)
   const conversationRef = useRef(false)
   const voiceInput = useVoiceInput(language)
+  const shown = msgs.map(m => (m.greeting ? { ...m, text: greeting, meta: t('chat.greetingMeta') } : m))
 
   useEffect(() => {
     let cancelled = false
@@ -236,23 +258,23 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
         d = await api.chat(body)
       }
       setStatus({ online: true, memories: d.collection_size })
-      const meta = d.mode === 'support' ? d.notice : [d.notice, `${MODE_LABELS[d.mode] || d.mode} · ${d.confidence} confidence`].filter(Boolean).join(' · ')
+      const meta = d.mode === 'support' ? d.notice : [d.notice, `${t.label('mode', d.mode)} · ${t('conf.label', { level: t.label('conf', d.confidence) })}`].filter(Boolean).join(' · ')
       setMsgs(p => [...p.filter(m => !m.draft), {
         type: 'assistant', text: d.answer, meta, sources: d.sources, id: d.id, mode: d.mode,
         helplines: d.helplines, language: d.language, original: d.original_answer || '', why: d.why,
       }])
       setAnnounce(`${persona.name}: ${plain(d.answer)}`)  // read out by screen readers once, not token by token
-      history.current = [...history.current, { role: 'user', content: query }, { role: 'assistant', content: plain(d.answer).slice(0, 2000) }].slice(-MAX_HISTORY)
+      history.current = [...history.current, { role: 'user', content: query }, turnOf(d.answer, d.sources)].slice(-MAX_HISTORY)
       return d
     } catch (e) {
       if (e.name === 'AbortError') return null
-      setMsgs(p => [...p.filter(m => !m.draft), { type: 'assistant', error: true, text: e.offline ? e.message : `Error: ${e.message}` }])
+      setMsgs(p => [...p.filter(m => !m.draft), { type: 'assistant', error: true, text: e.offline ? e.message : t('chat.error', { message: e.message }) }])
       if (e.offline) setStatus(s => ({ ...s, online: false }))
       return null
     } finally {
       setTyping(false)
     }
-  }, [mode, typing, persona.id, persona.name, years, language, length])
+  }, [mode, typing, persona.id, persona.name, years, language, length, t])
 
   // Hands-free conversation: listen -> ask -> speak the answer -> listen again
   const converse = useCallback(async () => {
@@ -281,7 +303,7 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
   }
 
   const exportMarkdown = () => {
-    download(new Blob([toMarkdown(persona, msgs.filter(m => !m.draft))], { type: 'text/markdown' }),
+    download(new Blob([toMarkdown(persona, shown.filter(m => !m.draft))], { type: 'text/markdown' }),
       `chronus-${persona.id}-${new Date().toISOString().slice(0, 10)}.md`)
     setPanel(null)
   }
@@ -293,14 +315,14 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
     setTimeout(() => window.print(), 50)
   }
   const clear = () => {
-    if (!window.confirm('Clear this conversation from this browser?')) return
+    if (!window.confirm(t('chat.clearConfirm'))) return
     clearHistory(persona.id)
     history.current = []
     setMsgs([greetingMsg])
     setPanel(null)
   }
 
-  const voiceNote = voiceInput.engine === 'browser' ? "Uses your browser's speech recognition, which may send audio to its provider" : 'Transcribed on this computer'
+  const voiceNote = voiceInput.engine === 'browser' ? t('chat.voiceBrowser') : t('chat.voiceLocal')
 
   return (
     <div className={`demo-chat${tall ? ' demo-chat--page' : ''}`}>
@@ -309,69 +331,69 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
           <div className="demo-avatar">{SPARK}</div>
           <div>
             <div className="demo-name">{persona.name}</div>
-            <div className="demo-id">chronus-model:{persona.id}{status.memories ? ` · ${status.memories.toLocaleString()} memories` : ''}</div>
+            <div className="demo-id">chronus-model:{persona.id}{status.memories ? ` · ${t('common.memories', { count: status.memories.toLocaleString() })}` : ''}</div>
           </div>
         </div>
         <div className={`demo-live-badge${status.online === false ? ' demo-live-badge--off' : ''}`}>
-          <span className="demo-live-dot"/>{status.online === false ? 'Offline' : status.online ? 'Live' : 'Connecting'}
+          <span className="demo-live-dot"/>{status.online === false ? t('chat.offline') : status.online ? t('chat.live') : t('chat.connecting')}
         </div>
       </div>
 
-      <div className="chat-toolbar" role="toolbar" aria-label="Chat options">
+      <div className="chat-toolbar" role="toolbar" aria-label={t('chat.options')}>
         <button className={`chip-btn${years ? ' is-on' : ''}${panel === 'time' ? ' is-open' : ''}`} onClick={() => setPanel(p => (p === 'time' ? null : 'time'))} aria-expanded={panel === 'time'}>
-          ⏳ {years ? `${years.from}${years.to !== years.from ? `–${years.to}` : ''}` : 'Time travel'}
+          ⏳ {years ? `${years.from}${years.to !== years.from ? `–${years.to}` : ''}` : t('chat.timeTravel')}
         </button>
-        <label className="chip-select" title={aiAllowed ? 'Answer language (translated by AI)' : 'Other languages need AI voice for this model'}>
+        <label className="chip-select" title={aiAllowed ? t('chat.langTip') : t('chat.langNeedsAi')}>
           🌐
-          <select value={language} onChange={e => setLanguage(e.target.value)} aria-label="Answer language">
-            {LANGUAGES.map(([v, l]) => <option key={v} value={v}>{l}</option>)}
+          <select value={language} onChange={e => setLanguage(e.target.value)} aria-label={t('chat.answerLanguage')}>
+            {LANGUAGES.map(([v, l]) => <option key={v} value={v}>{v === 'auto' ? t('chat.sameAsQuestion') : l}</option>)}
           </select>
         </label>
-        <label className="chip-select" title="How long answers should be">
+        <label className="chip-select" title={t('chat.lengthTip')}>
           ¶
-          <select value={length} onChange={e => setLength(e.target.value)} aria-label="Answer length">
-            <option value="short">Short</option>
-            <option value="normal">Normal length</option>
-            <option value="detailed">Detailed</option>
+          <select value={length} onChange={e => setLength(e.target.value)} aria-label={t('chat.answerLength')}>
+            <option value="short">{t('chat.short')}</option>
+            <option value="normal">{t('chat.normal')}</option>
+            <option value="detailed">{t('chat.detailed')}</option>
           </select>
         </label>
         {voiceInput.engine && (
-          <button className={`chip-btn${conversation ? ' is-on' : ''}`} onClick={toggleConversation} title={`Talk hands-free: it listens, answers aloud, then listens again. ${voiceNote}.`}>
-            {conversation ? '■ End conversation' : '🎧 Voice conversation'}
+          <button className={`chip-btn${conversation ? ' is-on' : ''}`} onClick={toggleConversation} title={t('chat.conversationTip', { note: voiceNote })}>
+            {conversation ? t('chat.endConversation') : t('chat.voiceConversation')}
           </button>
         )}
-        <button className={`chip-btn${panel === 'more' ? ' is-open' : ''}`} onClick={() => setPanel(p => (p === 'more' ? null : 'more'))} aria-expanded={panel === 'more'}>⋯ Save</button>
+        <button className={`chip-btn${panel === 'more' ? ' is-open' : ''}`} onClick={() => setPanel(p => (p === 'more' ? null : 'more'))} aria-expanded={panel === 'more'}>{t('chat.save')}</button>
       </div>
       {panel === 'time' && <TimeTravel personaId={persona.id} value={years} onChange={setYears} />}
       {panel === 'more' && (
         <div className="more-panel">
-          <button className="demo-quick-btn" onClick={exportMarkdown}>Download as Markdown</button>
-          <button className="demo-quick-btn" onClick={printChat}>Print / save as PDF</button>
-          {persist && <button className="demo-quick-btn" onClick={clear}>Clear conversation</button>}
-          <span className="page-note">{persist ? 'Conversations are kept in this browser only.' : 'This demo conversation is not saved.'}</span>
+          <button className="demo-quick-btn" onClick={exportMarkdown}>{t('chat.markdown')}</button>
+          <button className="demo-quick-btn" onClick={printChat}>{t('chat.print')}</button>
+          {persist && <button className="demo-quick-btn" onClick={clear}>{t('chat.clear')}</button>}
+          <span className="page-note">{persist ? t('chat.keptHere') : t('chat.notSaved')}</span>
         </div>
       )}
 
       <div className="sr-only" aria-live="polite" aria-atomic="true">{announce}</div>
-      <div className="demo-chat-body" ref={bodyRef} role="log" aria-live="off" aria-label={`Conversation with ${persona.name}`}>
+      <div className="demo-chat-body" ref={bodyRef} role="log" aria-live="off" aria-label={t('chat.conversationWith', { name: persona.name })}>
         {nudge && (
           <div className="nudge" role="status">
-            <p>You've been talking with {persona.name}'s {persona.memorial ? 'remembered words' : 'memories'} for a while. This is an archive, not the person. It's okay to take a break, or to talk to someone close to you.</p>
-            <div><button className="demo-quick-btn" onClick={() => { window.location.hash = '' }}>Take a break</button><button className="demo-quick-btn" onClick={() => setNudge(false)}>Keep going</button></div>
+            <p>{t(persona.memorial ? 'chat.nudgeMemorial' : 'chat.nudge', { name: persona.name })}</p>
+            <div><button className="demo-quick-btn" onClick={() => { window.location.hash = '' }}>{t('chat.takeBreak')}</button><button className="demo-quick-btn" onClick={() => setNudge(false)}>{t('chat.keepGoing')}</button></div>
           </div>
         )}
-        {msgs.map((m, i) => <Msg key={i} m={m} voiceLabels={voiceLabels} voice={voice} personaId={persona.id} onOpenSource={(idx) => setViewer({ source: m.sources?.[idx], index: idx })} />)}
+        {shown.map((m, i) => <Msg key={i} m={m} voiceGroup={voiceGroup} voice={voice} personaId={persona.id} onOpenSource={(idx) => setViewer({ source: m.sources?.[idx], index: idx })} />)}
         {typing && <div className="demo-msg demo-msg--assistant"><div className="demo-msg-avatar">{SPARK}</div><div className="demo-msg-bubble"><div className="demo-typing"><span/><span/><span/></div></div></div>}
       </div>
-      <div className="demo-chat-modes" role="group" aria-label="Answer mode">
+      <div className="demo-chat-modes" role="group" aria-label={t('common.answerMode')}>
         <button className={`demo-quick-btn${mode === 'natural' ? ' demo-quick-btn--active' : ''}`} aria-pressed={mode === 'natural'}
           disabled={!aiAllowed} onClick={() => setMode('natural')}
-          title={aiAllowed ? 'AI answers in their voice, built from their own words' : 'Off for this model: it would send excerpts to a cloud AI service'}>
-          AI voice
+          title={aiAllowed ? t('chat.aiTip') : t('chat.aiOffTip')}>
+          {t('chat.aiVoice')}
         </button>
         <button className={`demo-quick-btn${mode === 'mix_method' ? ' demo-quick-btn--active' : ''}`} aria-pressed={mode === 'mix_method'}
-          onClick={() => setMode('mix_method')} title="Only verbatim quotes from the sources, no AI writing">
-          Quotes only
+          onClick={() => setMode('mix_method')} title={t('chat.quotesTip')}>
+          {t('chat.quotesOnly')}
         </button>
       </div>
       {quick.length > 0 && (
@@ -384,14 +406,14 @@ export default function ChatPanel({ persona, greeting, quick = [], tall = false,
           onKeyDown={e => {
             // Enter while an IME (Hindi, Gujarati, Japanese...) is composing picks a word; don't send half of it
             if (e.key === 'Enter' && !e.nativeEvent.isComposing && e.keyCode !== 229) send(input)
-          }} placeholder={voiceInput.state === 'listening' ? 'Listening…' : voiceInput.state === 'transcribing' ? 'Transcribing…' : `Ask ${persona.name.split(' ')[0]} anything...`} />
+          }} placeholder={voiceInput.state === 'listening' ? t('chat.listening') : voiceInput.state === 'transcribing' ? t('chat.transcribing') : t('chat.ask', { name: persona.name.split(' ')[0] })} />
         {voiceInput.engine && !conversation && (
           <button className={`demo-mic-btn${voiceInput.state !== 'idle' ? ' is-on' : ''}`} onClick={dictate} disabled={voiceInput.state === 'transcribing'}
-            aria-label={voiceInput.state === 'listening' ? 'Stop dictating' : 'Dictate a question'} title={voiceNote}>
+            aria-label={voiceInput.state === 'listening' ? t('chat.stopDictating') : t('chat.dictate')} title={voiceNote}>
             {voiceInput.state === 'listening' ? '■' : '🎙'}
           </button>
         )}
-        <button className="demo-send-btn" disabled={!input.trim() || typing} onClick={() => send(input)} aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
+        <button className="demo-send-btn" disabled={!input.trim() || typing} onClick={() => send(input)} aria-label={t('chat.send')}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4z"/></svg></button>
       </div>
       {voiceInput.error && <div className="chat-voice-error">{voiceInput.error}</div>}
       {viewer?.source && <SourceViewer personaId={persona.id} source={viewer.source} index={viewer.index} onClose={() => setViewer(null)} />}

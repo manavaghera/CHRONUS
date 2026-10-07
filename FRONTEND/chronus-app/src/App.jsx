@@ -2,6 +2,7 @@ import { lazy, Suspense, useState, useCallback, useEffect } from 'react'
 import { useLenis, getLenis } from './hooks/useLenis'
 import PageLoader from './components/PageLoader'
 import Header from './components/Header'
+import { useT } from './i18n'
 import Hero from './components/Hero'
 import Marquee from './components/Marquee'
 import LiveDemo from './components/LiveDemo'
@@ -36,6 +37,7 @@ const PAGES = new Set(['models', 'create', 'clone-voice', 'roundtable', 'insight
 const ROUTED = new Set([...PAGES, 'chat', 'memories'])
 
 function App() {
+  const t = useT()
   useLenis()
   const { page, id } = useRoute()
   const [navOpen, setNavOpen] = useState(false)
@@ -101,11 +103,11 @@ function App() {
 
   return (
     <>
-      <a className="skip-link" href="#main" onClick={e => { e.preventDefault(); document.getElementById('main')?.focus() }}>Skip to content</a>
+      <a className="skip-link" href="#main" onClick={e => { e.preventDefault(); document.getElementById('main')?.focus() }}>{t('app.skip')}</a>
       <PageLoader stopScroll={stopScroll} onReady={handleReady} />
       <Header go={go} openNav={openNav} />
       <main id="main" tabIndex={-1}>
-        <Suspense fallback={<div className="page shell page-loading" role="status">Loading…</div>}>
+        <Suspense fallback={<div className="page shell page-loading" role="status">{t('common.loading')}</div>}>
         {page === 'models' && <ModelsPage />}
         {page === 'chat' && <ChatPage id={id} />}
         {page === 'create' && <CreatePage key={id || 'new'} id={id} />}

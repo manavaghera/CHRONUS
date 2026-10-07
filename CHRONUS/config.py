@@ -66,7 +66,7 @@ class ChronusConfig:
     the 2026-10-06 evaluation ranked that pipeline below plain semantic search
     (P@1 0.12 vs 0.16). `python -m evaluation.run_eval` scores weight 0 too."""
 
-    RETRIEVAL_MODE: str = field(default_factory=lambda: os.getenv("CHRONUS_RETRIEVAL_MODE", "dense"))
+    RETRIEVAL_MODE: str = field(default_factory=lambda: os.getenv("CHRONUS_RETRIEVAL_MODE", "dense").strip().lower())
     """"dense" (semantic search + importance bias) or "hybrid" (semantic + BM25
     keyword search fused by reciprocal rank; services/hybrid.py). Both keep
     the same distance threshold, so "I don't know" behaves the same."""
@@ -112,9 +112,10 @@ class ChronusConfig:
     LLM_CONTEXT_WINDOW: int = 8192
 
     # === LLM PROVIDER ===
-    LLM_PROVIDER: str = field(default_factory=lambda: os.getenv("CHRONUS_LLM_PROVIDER", "openrouter"))
+    LLM_PROVIDER: str = field(default_factory=lambda: os.getenv("CHRONUS_LLM_PROVIDER", "openrouter").strip().lower())
     """"local" (on-device, services/local_llm.py), "ollama", or an OpenAI-compatible
-    API ("openrouter", "openai"). Set CHRONUS_LLM_PROVIDER in .env to switch."""
+    API ("openrouter", "openai"). Set CHRONUS_LLM_PROVIDER in .env to switch.
+    Case doesn't matter ("OpenRouter" once sent every request to Ollama)."""
     OPENAI_API_KEY: str = field(default_factory=lambda: os.getenv("OPENAI_API_KEY", ""))
     """API key for the OpenAI-compatible provider (also used for OpenRouter).
     Read from the OPENAI_API_KEY env var or CHRONUS/.env (gitignored)."""
@@ -125,14 +126,23 @@ class ChronusConfig:
     can route to non-chat models (e.g. a safety classifier), so pin one."""
 
     OPENAI_FALLBACK_MODELS: list[str] = field(default_factory=lambda: [
-        "qwen/qwen3.8-27b:free",
         "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "google/gemma-4-31b-it:free",
     ])
     """OpenRouter tries these in order when the primary errors or is
-    rate-limited (free models return 429 under load)."""
+    rate-limited (free models return 429 under load). Free models come and
+    go (qwen3.8-27b stopped being free in Oct 2026): check
+    openrouter.ai/api/v1/models. A key with no credits gets 50 free
+    requests a day in total, whichever model answers."""
     OPENAI_BASE_URL: str = field(default_factory=lambda: os.getenv(
         "CHRONUS_OPENAI_BASE_URL", "https://openrouter.ai/api/v1"))
     """OpenAI-compatible endpoint. For OpenRouter: https://openrouter.ai/api/v1"""
+
+    LLM_DEADLINE_SECONDS: float = field(default_factory=lambda: float(os.getenv("CHRONUS_LLM_DEADLINE", "25")))
+    """Most time one AI-voice answer may take, streaming included; after that
+    the answer is verbatim quotes. A slow provider used to hold every question
+    for 60 s. After 3 failures in a row the AI voice is skipped for a minute
+    (services/natural_mode.py breaker)."""
 
     # === LOCAL LLM (LLM_PROVIDER = "local") ===
     LOCAL_BASE_MODEL: str = "Qwen/Qwen2.5-1.5B-Instruct"
@@ -246,9 +256,56 @@ _load_env_file(Path(__file__).parent / ".env")
 # Singleton instance
 config = ChronusConfig()
 
+LLM_PROVIDERS = ("openrouter", "openai", "ollama", "local")
+RETRIEVAL_MODES = ("dense", "hybrid")
+_SECRET_NAME = ("KEY", "CODE", "USERS", "SECRET", "PASSWORD", "TOKEN")
+
+
+def validate(cfg: ChronusConfig = config) -> tuple[list[str], list[str]]:
+    """(errors, warnings) about the settings. Errors stop the server from
+    starting: a typo used to fall back silently ("hybird" -> dense search)."""
+    errors, warnings = [], []
+    if cfg.LLM_PROVIDER not in LLM_PROVIDERS:
+        errors.append(f"CHRONUS_LLM_PROVIDER is {cfg.LLM_PROVIDER!r}; use one of {', '.join(LLM_PROVIDERS)}")
+    if cfg.RETRIEVAL_MODE not in RETRIEVAL_MODES:
+        errors.append(f"CHRONUS_RETRIEVAL_MODE is {cfg.RETRIEVAL_MODE!r}; use one of {', '.join(RETRIEVAL_MODES)}")
+    if not 0 <= cfg.NATURAL_MIN_SEMANTIC_SUPPORT <= 1:
+        errors.append("CHRONUS_MIN_SEMANTIC_SUPPORT must be between 0 and 1")
+    if not 0 <= cfg.IMPORTANCE_WEIGHT <= 0.5:
+        errors.append("CHRONUS_IMPORTANCE_WEIGHT must be between 0 and 0.5")
+    if cfg.LOG_RETENTION_DAYS < 0:
+        errors.append("CHRONUS_LOG_RETENTION_DAYS can't be negative (0 keeps logs forever)")
+    if not 1 <= cfg.LLM_DEADLINE_SECONDS <= 300:
+        errors.append("CHRONUS_LLM_DEADLINE must be between 1 and 300 seconds")
+    if not 0 < cfg.PORT < 65536:
+        errors.append(f"CHRONUS_PORT {cfg.PORT} is not a valid port")
+    if not cfg.ALLOWED_HOSTS:
+        errors.append("CHRONUS_ALLOWED_HOSTS is empty, so every request would be refused")
+    if cfg.LLM_PROVIDER in ("openrouter", "openai") and not cfg.OPENAI_API_KEY:
+        warnings.append("No OPENAI_API_KEY: the AI voice is off and every answer will be verbatim quotes")
+    if cfg.HOST not in ("127.0.0.1", "localhost", "::1") and not (cfg.ACCESS_CODE or cfg.USERS):
+        warnings.append(f"Binding {cfg.HOST} with no CHRONUS_ACCESS_CODE: anyone on the network can use this server")
+    return errors, warnings
+
+
+def describe(cfg: ChronusConfig = config) -> list[str]:
+    """Settings for display, with keys, codes and passwords hidden."""
+    lines = []
+    for name, value in vars(cfg).items():
+        if name.startswith("_"):
+            continue
+        if any(word in name for word in _SECRET_NAME):
+            value = "set (hidden)" if value else "not set"
+        lines.append(f"  {name}: {value}")
+    return lines
+
+
 if __name__ == "__main__":
     print("CHRONUS Configuration")
     print("=" * 50)
-    for field_name, field_value in vars(config).items():
-        if not field_name.startswith("_"):
-            print(f"  {field_name}: {field_value}")
+    print("\n".join(describe()))
+    problems, notes = validate()
+    for line in problems:
+        print(f"ERROR: {line}")
+    for line in notes:
+        print(f"Warning: {line}")

@@ -86,7 +86,7 @@ def test_contents_must_match_the_name(client, persona, filename, data, message):
 
 def test_voice_note_becomes_first_person_memories(client, persona, monkeypatch):
     class FakeWhisper:
-        def transcribe(self, audio, vad_filter=True):
+        def transcribe(self, audio, vad_filter=True, word_timestamps=False):
             return iter([SimpleNamespace(text="I remember the monsoon of 1987 flooding the village school."),
                          SimpleNamespace(text="We taught under the banyan tree for a whole month after that.")]), None
     monkeypatch.setattr(stt, "available", lambda: True)

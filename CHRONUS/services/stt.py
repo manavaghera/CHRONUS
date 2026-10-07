@@ -17,6 +17,7 @@ import importlib.util
 import io
 import threading
 import wave
+from pathlib import Path
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
@@ -28,6 +29,7 @@ MAX_BYTES = 10 * 1024 * 1024
 
 _lock = threading.Lock()
 _model = None
+MODEL_DIR = Path(__file__).resolve().parent.parent / "models" / ".whisper"  # downloaded speech model (git-ignored)
 
 
 class TranscribeIn(BaseModel):
@@ -45,7 +47,10 @@ def _whisper():
         with _lock:
             if _model is None:
                 from faster_whisper import WhisperModel
-                _model = WhisperModel(config.STT_MODEL, device="cpu", compute_type="int8")
+                # Its own plain folder: the shared Hugging Face cache links files with
+                # symlinks, which Windows refuses without Developer Mode (WinError 1314)
+                _model = WhisperModel(config.STT_MODEL, device="cpu", compute_type="int8",
+                                      download_root=str(MODEL_DIR))
     return _model
 
 

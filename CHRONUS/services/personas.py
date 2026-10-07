@@ -17,13 +17,17 @@ from __future__ import annotations
 import contextvars
 import hashlib
 import json
+import os
 import re
 import secrets
 import shutil
+import tempfile
 import threading
+import time
 from datetime import datetime
 from pathlib import Path
 
+from services import chroma_index
 from services.timeline import year_of
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -74,13 +78,26 @@ def _visible(persona: dict) -> bool:
     return user is None or persona.get("kind") != "custom" or persona.get("owner") in (None, user)
 
 
+def _read_json(path: Path) -> dict:
+    """persona.json is replaced atomically (save_persona), but on Windows the
+    swap can briefly deny reads; retry instead of failing the request."""
+    for attempt in range(20):
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except (PermissionError, json.JSONDecodeError):
+            if attempt == 19:
+                raise
+            time.sleep(0.01 * (attempt + 1))
+    raise AssertionError("unreachable")
+
+
 def load_persona(persona_id: str, any_owner: bool = False) -> dict | None:
     if not re.match(PERSONA_ID_PATTERN, persona_id or ""):
         return None
     for base in (PRETRAINED_DIR, CUSTOM_DIR):
         path = base / persona_id / "persona.json"
         if path.exists():
-            persona = json.loads(path.read_text(encoding="utf-8"))
+            persona = _read_json(path)
             return persona if any_owner or _visible(persona) else None
     return None
 
@@ -89,20 +106,44 @@ def list_personas(any_owner: bool = False) -> list[dict]:
     found = []
     for base in (PRETRAINED_DIR, CUSTOM_DIR):
         for path in sorted(base.glob("*/persona.json")) if base.exists() else []:
-            persona = json.loads(path.read_text(encoding="utf-8"))
+            persona = _read_json(path)
             if any_owner or _visible(persona):
                 found.append(persona)
     return found
 
 
+def atomic_write_text(path: Path, text: str) -> None:
+    """Write via a temp file in the same folder, then swap it in, so readers
+    see the old file or the new one, never a half-written one (8 of 25
+    interview answers once failed with 500s while persona.json was rewritten
+    in place). Windows refuses the swap while a reader has the file open, so
+    retry briefly."""
+    fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=f".{path.name}.", suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            f.write(text)
+        for attempt in range(50):
+            try:
+                os.replace(tmp, path)
+                return
+            except PermissionError:
+                if attempt == 49:
+                    raise
+                time.sleep(0.01 * (attempt + 1))
+    finally:
+        if os.path.exists(tmp):
+            os.unlink(tmp)
+
+
 def save_persona(persona: dict) -> None:
     folder = _folder(persona)
     folder.mkdir(parents=True, exist_ok=True)
-    (folder / "persona.json").write_text(json.dumps(persona, indent=2, ensure_ascii=False), encoding="utf-8")
+    atomic_write_text(folder / "persona.json", json.dumps(persona, indent=2, ensure_ascii=False))
 
 
 def create_custom_persona(
     name: str, description: str, relationship: str, allow_cloud_llm: bool, consent_statement: str,
+    consent_language: str = "en",
     memorial: bool = False,
 ) -> dict:
     slug = re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")[:30] or "persona"
@@ -121,7 +162,8 @@ def create_custom_persona(
         "relationship": relationship,  # creator's relationship to the person
         "memorial": memorial,  # the person has died (services/wellbeing.py)
         "owner": current_user.get(),  # account that made it (None on a single-user server)
-        "consent": {"statement": consent_statement, "given_at": _now()},
+        # the exact words agreed to, in the language they were read in (services/consent_text.py)
+        "consent": {"statement": consent_statement, "language": consent_language, "given_at": _now()},
         "created_at": _now(),
         "uploads": [],
         "interview_answered": [],
@@ -132,7 +174,7 @@ def create_custom_persona(
 
 
 def get_collection(client, persona: dict):
-    return client.get_or_create_collection(name=persona["collection"], metadata={"hnsw:space": "cosine"})
+    return client.get_or_create_collection(name=persona["collection"], metadata=chroma_index.COLLECTION_METADATA)
 
 
 def _safe_filename(name: str) -> str:
@@ -166,25 +208,6 @@ def _parse_docx(path: Path, merge_sources) -> list[dict]:
         text_path.unlink(missing_ok=True)
 
 
-def _transcribe_upload(data: bytes, name: str) -> list[dict]:
-    """A voice note as records of spoken text (one per ~paragraph of speech)."""
-    from services import stt
-
-    if not stt.available():
-        raise ValueError("Audio uploads need local speech recognition: pip install faster-whisper")
-    import io
-    segments, _ = stt._whisper().transcribe(io.BytesIO(data), vad_filter=True)
-    records, current = [], []
-    for seg in segments:
-        current.append(seg.text.strip())
-        if sum(len(t) for t in current) > 600:  # a paragraph's worth of speech
-            records.append(" ".join(current))
-            current = []
-    if current:
-        records.append(" ".join(current))
-    return [{"text": t, "date": "unknown", "char_count": len(t), "word_count": len(t.split())} for t in records if t.strip()]
-
-
 def ingest_document(persona: dict, collection, embedder, filename: str, data: bytes, authored_by: str,
                     progress=None) -> dict:
     """Parse, chunk and embed one uploaded document into the persona's memory.
@@ -200,8 +223,11 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
     report = progress or (lambda fraction, message: None)
     name = _safe_filename(filename)
     ext = Path(name).suffix.lower()
-    if ext not in UPLOAD_TYPES | AUDIO_TYPES:
-        raise ValueError(f"Unsupported file type '{ext or name}'. Use: {', '.join(sorted(UPLOAD_TYPES | AUDIO_TYPES))}")
+    from services import originals
+
+    accepted = UPLOAD_TYPES | AUDIO_TYPES | originals.IMAGE_TYPES
+    if ext not in accepted:
+        raise ValueError(f"Unsupported file type '{ext or name}'. Use: {', '.join(sorted(accepted))}")
     if len(data) > MAX_UPLOAD_BYTES:
         raise ValueError(f"File is larger than {MAX_UPLOAD_BYTES // (1024 * 1024)} MB")
     check_upload_content(ext, data)
@@ -215,7 +241,10 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
     try:
         if ext in AUDIO_TYPES:
             report(0.1, "Transcribing the recording")
-            records = [{**r, "source_file": name} for r in _transcribe_upload(data, name)]
+            records = [{**r, "source_file": name} for r in originals.transcribe(data)]
+        elif ext in originals.IMAGE_TYPES:  # a photo of a letter, read on this computer
+            report(0.1, "Reading the photo")
+            records = originals.read_image(data)
         elif ext in (".txt", ".md"):
             records = merge_sources.parse_markdown(path)
         elif ext == ".docx":
@@ -226,6 +255,9 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
             records = merge_sources.parse_json_file(path)
         else:
             records = merge_sources.parse_pdf_file(str(path))
+            if sum(len(r["text"]) for r in records) < 50:  # a scan with no text layer
+                report(0.1, "Reading the scanned pages")
+                records = originals.read_scanned_pdf(path)
     except ValueError:
         path.unlink(missing_ok=True)  # don't keep a file we couldn't use
         raise
@@ -285,7 +317,8 @@ def ingest_document(persona: dict, collection, embedder, filename: str, data: by
     # All duplicates (the same letter saved twice) still counts as uploaded:
     # the file is theirs; it just added nothing new.
     entry = {"filename": name, "authored_by": authored_by, "memories": stored, "duplicates_skipped": duplicates,
-             "kind": "audio" if ext in AUDIO_TYPES else "document", "uploaded_at": _now()}
+             "kind": "audio" if ext in AUDIO_TYPES else "image" if ext in originals.IMAGE_TYPES else "document",
+             "uploaded_at": _now()}
     with _lock:
         fresh = load_persona(persona["id"], any_owner=True) or persona
         fresh["uploads"] = [u for u in fresh.get("uploads", []) if u["filename"] != name] + [entry]
@@ -301,9 +334,14 @@ _MAGIC = {".pdf": (b"%PDF",), ".docx": (b"PK\x03\x04",), ".wav": (b"RIFF",), ".f
 def check_upload_content(ext: str, data: bytes) -> None:
     """The file's bytes must match its name: a renamed executable or HTML
     page is refused before any parser sees it."""
+    from services.originals import IMAGE_MAGIC
+
     head = data[:16]
-    if ext in _MAGIC and not head.startswith(_MAGIC[ext]):
+    magic = {**_MAGIC, **IMAGE_MAGIC}
+    if ext in magic and not head.startswith(magic[ext]):
         raise ValueError(f"This doesn't look like a real {ext} file")
+    if ext == ".webp" and data[8:12] != b"WEBP":
+        raise ValueError("This doesn't look like a real .webp file")
     if ext in (".txt", ".md", ".csv", ".json"):
         if b"\x00" in data[:4096]:
             raise ValueError("This text file contains binary data")
@@ -361,7 +399,7 @@ def check_voice_sample(data: bytes) -> float:
     return seconds
 
 
-def save_voice_sample(persona: dict, data: bytes, fish_voice_id: str) -> dict:
+def save_voice_sample(persona: dict, data: bytes, fish_voice_id: str, statement: str = "", language: str = "en") -> dict:
     """Store a consented recording and its private Fish voice id (custom models only).
 
     The .wav is kept locally so the voice can be remade, e.g. with another engine.
@@ -371,7 +409,7 @@ def save_voice_sample(persona: dict, data: bytes, fish_voice_id: str) -> dict:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(data)
     voice = {"seconds": round(seconds, 1), "fish_voice_id": fish_voice_id,
-             "consent": {"statement": VOICE_CONSENT_STATEMENT, "given_at": _now()}}
+             "consent": {"statement": statement or VOICE_CONSENT_STATEMENT, "language": language, "given_at": _now()}}
     with _lock:
         fresh = load_persona(persona["id"], any_owner=True) or persona
         fresh["voice"] = voice
@@ -400,6 +438,16 @@ def update_persona(persona_id: str, **fields) -> dict:
     with _lock:
         fresh = load_persona(persona_id, any_owner=True)
         fresh.update(fields)
+        save_persona(fresh)
+    return fresh
+
+
+def record_consent_change(persona_id: str, change: dict) -> dict:
+    """Apply a consent change (services/consent.py) and add it to the model's consent history."""
+    with _lock:
+        fresh = load_persona(persona_id, any_owner=True)
+        fresh.update(change)
+        fresh.setdefault("consent_history", []).append({"at": _now(), **change})
         save_persona(fresh)
     return fresh
 

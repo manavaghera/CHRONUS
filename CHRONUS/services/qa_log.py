@@ -57,7 +57,7 @@ def log_qa(query: str, answer: str, sources: list[dict], **details) -> str:
     prune_if_due()
     with _lock, QA_LOG_PATH.open("a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")
-    logger.info(f"Logged Q&A: {query[:50]}...")
+    logger.info(f"Logged Q&A {entry_id}")  # never the question: server logs aren't private
     return entry_id
 
 
