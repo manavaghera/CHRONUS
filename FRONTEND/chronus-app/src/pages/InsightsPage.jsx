@@ -1,57 +1,52 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { api } from '../api'
 import { navigate } from '../router'
-import { BarList, ColumnChart, StatTile } from '../components/charts'
-import { useT } from '../i18n'
-import '../components/charts.css'
+import { tx, useLanguage, useT } from '../i18n'
+import { SplitWords } from '../lib/motion'
+import { useToast } from '../lib/toast'
+import Icon from '../lib/Icon'
+import { BarList, ColumnChart, StatTile } from '../components/Charts'
+import { LEVELS, MODES } from '../chat/Conversation'
 
-// Days; their names, and those of answer modes and feedback reasons, are in strings/
-const RANGES = [7, 30, 90]
-
+const RANGES = [[7, tx('7 days')], [30, tx('30 days')], [90, tx('90 days')]]
+const REASONS = { not_their_words: tx('Not their words'), wrong_attribution: tx('Wrong source'), incorrect: tx('Factually wrong'), unhelpful: tx('Didn’t answer'), other: tx('Something else') }
 const pct = (x) => `${Math.round(x * 100)}%`
 const secs = (ms) => (ms < 1000 ? `${Math.round(ms)} ms` : `${(ms / 1000).toFixed(1)} s`)
-const shortDate = (iso) => new Date(`${iso}T00:00:00`).toLocaleDateString(undefined, { month: 'short', day: 'numeric' })
 
-function Overview({ persona, days }) {
-  const t = useT()
+function useLoad(fn, deps) {
   const [data, setData] = useState(null)
   const [error, setError] = useState('')
   useEffect(() => {
-    let cancelled = false
-    api.analytics(persona, days).then(d => !cancelled && setData(d)).catch(e => !cancelled && setError(e.message))
-    return () => { cancelled = true }
-  }, [persona, days])
-  if (error) return <div className="page-alert">{error}</div>
-  if (!data) return <p className="page-note">{t('common.loading')}</p>
-  if (!data.total) return <p className="page-note">{persona ? t('ins.noneModel') : t('ins.noneAll')}</p>
+    let off = false
+    setData(null); setError('')
+    fn().then(d => !off && setData(d)).catch(e => !off && setError(e.message))
+    return () => { off = true }
+  }, deps) // eslint-disable-line react-hooks/exhaustive-deps
+  return [data, error, setData]
+}
+
+function Overview({ persona, days }) {
+  const { t, lang } = useLanguage()
+  const [d, error] = useLoad(() => api.analytics(persona, days), [persona, days])
+  const short = (iso) => new Date(`${iso}T00:00:00`).toLocaleDateString(lang, { month: 'short', day: 'numeric' })
+  if (error) return <div className="alert" role="alert">{error}</div>
+  if (!d) return <p className="row gap8 note"><span className="spinner" />{t('Loading…')}</p>
+  if (!d.total) return <div className="card empty-s"><Icon name="chart" size={30} /><p className="serif" style={{ fontSize: 28 }}>{t('No questions yet.')}</p><p className="small">{persona ? t('Numbers appear here as people talk with this model.') : t('Numbers appear here as people talk with your models.')}</p></div>
   return (
-    <div className={`insights-overview${data ? '' : ' is-loading'}`}>
-      <div className="kpi-row">
-        <StatTile label={t('ins.answered')} value={data.total.toLocaleString()} sub={t('ins.allTime')} />
-        <StatTile label={t('ins.idk')} value={pct(data.refusal_rate)} sub={t('ins.questions', { count: data.refused.toLocaleString() })} />
-        <StatTile label={t('ins.grounding')} value={data.grounding.median == null ? '–' : pct(data.grounding.median)} sub={t('ins.groundingSub')} />
-        <StatTile label={t('ins.time')} value={data.latency_ms.p50 == null ? '–' : secs(data.latency_ms.p50)}
-          sub={data.latency_ms.p95 == null ? '' : t('ins.p95', { time: secs(data.latency_ms.p95) })} />
-        <StatTile label={t('ins.feedback')} value={`👍 ${data.feedback.up} · 👎 ${data.feedback.down}`} sub={t('ins.waiting', { count: data.feedback.pending })} />
+    <div className="ins">
+      <div className="kpis">
+        <StatTile label={t('Questions answered')} value={d.total.toLocaleString()} sub={t('in this range')} accent />
+        <StatTile label={t('Said “I don’t know”')} value={pct(d.refusal_rate)} sub={t('{n} questions', { n: d.refused.toLocaleString() })} />
+        <StatTile label={t('Median grounding')} value={d.grounding.median == null ? '–' : pct(d.grounding.median)} sub={t('answer words found in sources')} />
+        <StatTile label={t('Typical answer time')} value={d.latency_ms.p50 == null ? '–' : secs(d.latency_ms.p50)} sub={d.latency_ms.p95 == null ? '' : t('95% within {time}', { time: secs(d.latency_ms.p95) })} />
+        <StatTile label={t('Feedback')} value={t('{up} up · {down} down', { up: d.feedback.up, down: d.feedback.down })} sub={t('{n} waiting for review', { n: d.feedback.pending })} />
       </div>
-      <div className="insights-grid">
-        <div className="create-card">
-          <ColumnChart label={t('ins.perDay', { range: t(`range.${days}`).toLowerCase() })}
-            data={data.per_day.map(d => ({ label: d.date, short: shortDate(d.date), value: d.count, tip: shortDate(d.date) }))} />
-        </div>
-        <div className="create-card">
-          <ColumnChart label={t('ins.groundedChart')}
-            data={data.grounding.buckets.map(b => ({ label: `${pct(b.from)}–${pct(b.to)}`, value: b.count, tip: t('ins.groundedTip', { from: pct(b.from), to: pct(b.to) }) }))} />
-        </div>
-        <div className="create-card">
-          <BarList label={t('ins.howAnswered')} items={Object.entries(data.by_mode).map(([k, v]) => ({ label: t.label('mode', k), value: v }))} />
-        </div>
-        <div className="create-card">
-          <BarList label={t('ins.confidence')} items={['high', 'medium', 'low'].filter(k => data.by_confidence[k]).map(k => ({ label: t.label('conf', k), value: data.by_confidence[k] }))} />
-        </div>
-        <div className="create-card insights-wide">
-          <BarList label={t('ins.mostAsked')} items={data.top_questions.map(q => ({ label: q.question, value: q.count }))} />
-        </div>
+      <div className="ins-grid">
+        <div className="card ins-card"><ColumnChart label={t('Questions per day')} data={d.per_day.map(x => ({ label: x.date, short: short(x.date), value: x.count }))} /></div>
+        <div className="card ins-card"><ColumnChart label={t('How grounded answers are')} data={d.grounding.buckets.map(b => ({ label: `${pct(b.from)}–${pct(b.to)}`, value: b.count }))} /></div>
+        <div className="card ins-card"><BarList label={t('How questions were answered')} items={Object.entries(d.by_mode).map(([k, v]) => ({ label: t(MODES[k] || k), value: v }))} /></div>
+        <div className="card ins-card"><BarList label={t('Confidence')} items={['high', 'medium', 'low'].filter(k => d.by_confidence[k]).map(k => ({ label: t(LEVELS[k]), value: d.by_confidence[k] }))} /></div>
+        <div className="card ins-card wide"><BarList label={t('Most asked')} items={d.top_questions.map(q => ({ label: q.question, value: q.count }))} /></div>
       </div>
     </div>
   )
@@ -59,168 +54,128 @@ function Overview({ persona, days }) {
 
 function Gaps({ persona, kind }) {
   const t = useT()
-  const [data, setData] = useState(null)
-  const [error, setError] = useState('')
-  useEffect(() => {
-    let cancelled = false
-    setData(null)
-    api.gaps(persona).then(d => !cancelled && setData(d)).catch(e => !cancelled && setError(e.message))
-    return () => { cancelled = true }
-  }, [persona])
-  if (error) return <div className="page-alert">{error}</div>
-  if (!data) return <p className="page-note">{t('common.loading')}</p>
-  if (!data.gaps.length) return <p className="page-note">{t('gaps.none')}</p>
+  const [d, error] = useLoad(() => api.gaps(persona), [persona])
+  if (error) return <div className="alert" role="alert">{error}</div>
+  if (!d) return <p className="row gap8 note"><span className="spinner" />{t('Loading…')}</p>
+  if (!d.gaps.length) return <div className="card empty-s"><Icon name="check" size={30} /><p className="serif" style={{ fontSize: 28 }}>{t('No gaps yet.')}</p><p className="small">{t('Questions the archive can’t answer, or answers only with low confidence, collect here.')}</p></div>
   return (
-    <>
-      <p className="page-note">{t('gaps.summary', { unanswered: data.unanswered, total: data.total_questions })}</p>
-      <ul className="gap-list">
-        {data.gaps.map(g => (
-          <li key={g.question} className="create-card">
-            <div className="gap-top"><strong>“{g.question}”</strong><span className="gap-count">{t('gaps.asked', { count: g.count })}</span></div>
-            {g.examples.length > 0 && <p className="page-note">{t('gaps.also', { list: g.examples.map(e => `“${e}”`).join(', ') })}</p>}
-            {kind === 'custom' && (
-              <div className="gap-fix">
-                {g.suggestion && <span>{t('gaps.couldFill', { id: g.suggestion.id, question: g.suggestion.question })}</span>}
-                <button className="page-link" onClick={() => navigate(`/create/${persona}`)}>{g.suggestion ? t('gaps.answerIt') : t('gaps.addDoc')} →</button>
-              </div>
-            )}
-          </li>
-        ))}
-      </ul>
-    </>
+    <div className="col gap12">
+      <p className="small">{t('{n} of {total} questions couldn’t be answered well. Similar questions are grouped.', { n: d.unanswered, total: d.total_questions })}</p>
+      {d.gaps.map(g => (
+        <div key={g.question} className="card gap-card">
+          <div className="row-sb"><p className="serif" style={{ fontSize: 22, lineHeight: 1.25 }}>“{g.question}”</p><span className="badge">{t('asked {n}×', { n: g.count })}</span></div>
+          {g.examples.length > 0 && <p className="note">{t('Also:')} {g.examples.map(e => `“${e}”`).join(', ')}</p>}
+          {kind === 'custom' && (
+            <div className="row-sb wrap-row gap12 gap-fix">
+              <span className="small">{g.suggestion ? t('Could be filled by interview {id}: “{question}”', { id: g.suggestion.id, question: t(g.suggestion.question) }) : t('Add a document that covers this.')}</span>
+              <button type="button" className="btn btn-s btn-sm" onClick={() => navigate(`/create/${persona}`)}>{g.suggestion ? t('Answer it') : t('Add a document')}<Icon name="arrow" size={14} /></button>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
   )
 }
 
-function ReviewItem({ item, onDone, names }) {
-  const t = useT()
+function ReviewItem({ item, name, onDone }) {
+  const { t, lang } = useLanguage()
+  const toast = useToast()
   const [answer, setAnswer] = useState(item.answer)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
-  const act = async (fn) => {
+  const act = async (fn, msg) => {
     setBusy(true); setError('')
-    try { await fn(); onDone(item.id) } catch (e) { setError(e.message); setBusy(false) }
+    try { await fn(); toast(msg); onDone(item.id) } catch (e) { setError(e.message); setBusy(false) }
   }
   return (
-    <li className="create-card review-item">
-      <div className="gap-top">
-        <span className={`review-rating review-rating--${item.rating}`}>{item.rating === 'up' ? t('review.good') : `👎 ${item.reason ? t.label('reason', item.reason) : t('review.problem')}`}</span>
-        <span className="page-note">{names[item.persona] || item.persona} · {new Date(item.timestamp).toLocaleString()}</span>
+    <div className="card review">
+      <div className="row-sb wrap-row gap8">
+        <span className={`badge${item.rating === 'up' ? ' ok' : ' acc'}`}>{item.rating === 'up' ? t('Good answer') : item.reason ? t(REASONS[item.reason] || item.reason) : t('Problem')}</span>
+        <span className="lab">{name} · {new Date(item.timestamp).toLocaleString(lang)}</span>
       </div>
-      <p><strong>{t('review.q')}</strong> {item.question}</p>
-      {item.can_approve ? (
-        <label className="review-answer">
-          <span>{t('review.edit')}</span>
-          <textarea className="create-select" rows={4} maxLength={4000} value={answer} onChange={e => setAnswer(e.target.value)} />
-        </label>
-      ) : <p className="review-answer-text"><strong>{t('review.a')}</strong> {item.answer}</p>}
-      {item.note && <p className="page-note">{t('review.note', { note: item.note })}</p>}
-      {error && <div className="page-alert">{error}</div>}
-      <div className="model-actions">
-        {item.can_approve && (
-          <button className="pill-btn pill-btn--dark" disabled={busy} onClick={() => act(() => api.approve(item.id, answer.trim() !== item.answer ? answer.trim() : undefined))}
-            title={t('review.approveTip')}>
-            <span className="pill-inner">{t('review.approve')}</span>
-          </button>
-        )}
-        <button className="pill-btn pill-btn--outline" disabled={busy} onClick={() => act(() => api.dismiss(item.id))}><span className="pill-inner">{t('review.dismiss')}</span></button>
+      <p className="small"><b>{t('Question:')}</b> {item.question}</p>
+      {item.can_approve
+        ? <label className="fld">{t('Answer (edit before approving if needed)')}<textarea className="field" rows={4} maxLength={4000} value={answer} onChange={e => setAnswer(e.target.value)} /></label>
+        : <p className="small"><b>{t('Answer:')}</b> {item.answer}</p>}
+      {item.note && <p className="note">{t('Note: {note}', { note: item.note })}</p>}
+      {error && <div className="alert" role="alert">{error}</div>}
+      <div className="row wrap-row gap8">
+        {item.can_approve && <button type="button" className="btn btn-p btn-sm" disabled={busy} title={t('Stored as a memory labelled “reviewed past answer”, never quoted as their own words')}
+          onClick={() => act(() => api.approve(item.id, answer.trim() !== item.answer ? answer.trim() : undefined), t('Approved into memory'))}>{t('Approve into memory')}</button>}
+        <button type="button" className="btn btn-s btn-sm" disabled={busy} onClick={() => act(() => api.dismiss(item.id), t('Dismissed'))}>{t('Dismiss')}</button>
       </div>
-    </li>
+    </div>
   )
 }
 
 function Review({ persona, names }) {
   const t = useT()
-  const [items, setItems] = useState(null)
-  const [error, setError] = useState('')
-  useEffect(() => {
-    let cancelled = false
-    setItems(null)
-    api.reviewQueue(persona || undefined).then(d => !cancelled && setItems(d)).catch(e => !cancelled && setError(e.message))
-    return () => { cancelled = true }
-  }, [persona])
-  if (error) return <div className="page-alert">{error}</div>
-  if (!items) return <p className="page-note">{t('common.loading')}</p>
-  if (!items.length) return <p className="page-note">{t('review.none')}</p>
+  const [items, error, setItems] = useLoad(() => api.reviewQueue(persona || undefined), [persona])
+  if (error) return <div className="alert" role="alert">{error}</div>
+  if (!items) return <p className="row gap8 note"><span className="spinner" />{t('Loading…')}</p>
+  if (!items.length) return <div className="card empty-s"><Icon name="check" size={30} /><p className="serif" style={{ fontSize: 28 }}>{t('Nothing waiting.')}</p><p className="small">{t('Thumbs up and down on answers land here for a person to review.')}</p></div>
   return (
-    <>
-      <p className="page-note">{t('review.explain')}</p>
-      <ul className="gap-list">{items.map(i => <ReviewItem key={i.id} item={i} names={names} onDone={(id) => setItems(list => list.filter(x => x.id !== id))} />)}</ul>
-    </>
-  )
-}
-
-function DeleteHistory({ persona, name, onDeleted }) {
-  const t = useT()
-  const [confirming, setConfirming] = useState(false)
-  const [busy, setBusy] = useState(false)
-  const [message, setMessage] = useState('')
-  useEffect(() => { setConfirming(false); setMessage('') }, [persona])
-  const run = async () => {
-    setBusy(true)
-    try {
-      const r = await api.deleteHistory(persona || undefined)
-      setMessage(t('hist.deleted', { questions: r.questions_deleted, feedback: r.feedback_deleted }))
-      onDeleted()
-    } catch (e) { setMessage(e.message) }
-    setBusy(false); setConfirming(false)
-  }
-  return (
-    <div className="history-delete">
-      {confirming ? (
-        <>
-          <span>{t('hist.confirm', { name: name || t('hist.anyModel') })}</span>
-          <button className="pill-btn pill-btn--dark" disabled={busy} onClick={run}><span className="pill-inner">{busy ? t('common.deleting') : t('mem.delete')}</span></button>
-          <button className="pill-btn pill-btn--outline" disabled={busy} onClick={() => setConfirming(false)}><span className="pill-inner">{t('common.cancel')}</span></button>
-        </>
-      ) : (
-        <button className="page-link" onClick={() => { setConfirming(true); setMessage('') }}>{name ? t('hist.linkWith', { name }) : t('hist.link')}</button>
-      )}
-      {message && <span className="page-note" role="status">{message}</span>}
+    <div className="col gap12">
+      <p className="small">{t('Approving a personal model’s answer stores it as a memory labelled “reviewed past answer”: it can help later answers but is never quoted as their own words. Pretrained models only learn from published sources, so their feedback can only be dismissed.')}</p>
+      {items.map(i => <ReviewItem key={i.id} item={i} name={names[i.persona] || i.persona} onDone={(id) => setItems(list => list.filter(x => x.id !== id))} />)}
     </div>
   )
 }
 
 export default function InsightsPage({ id }) {
   const t = useT()
+  const toast = useToast()
   const [personas, setPersonas] = useState([])
-  const [persona, setPersona] = useState(id || '')
   const [days, setDays] = useState(30)
   const [tab, setTab] = useState('overview')
   const [refresh, setRefresh] = useState(0)
+  const [confirm, setConfirm] = useState(false)
   useEffect(() => { api.personas().then(setPersonas).catch(() => {}) }, [])
-  useEffect(() => { setPersona(id || '') }, [id])
-  const choose = useCallback((value) => { setPersona(value); navigate(value ? `/insights/${value}` : '/insights') }, [])
-  const kind = personas.find(p => p.id === persona)?.kind
-  const name = personas.find(p => p.id === persona)?.name
+  const persona = id || ''
+  const current = personas.find(p => p.id === persona)
+
+  const wipe = async () => {
+    try { const r = await api.deleteHistory(persona || undefined); toast(t('Deleted {q} questions and {f} feedback entries', { q: r.questions_deleted, f: r.feedback_deleted })); setRefresh(n => n + 1) }
+    catch (e) { toast(e.message) } finally { setConfirm(false) }
+  }
 
   return (
     <div className="page">
-      <section className="page-hero page-hero--compact shell">
-        <div className="eyebrow eyebrow--accent">{t('nav.insights')}</div>
-        <h1 className="page-h1">{t('ins.title')}</h1>
-        <p className="page-sub">{t('ins.sub')}</p>
+      <section className="page-hero">
+        <div className="page-hero-bg" aria-hidden="true" />
+        <div className="wrap">
+          <nav className="crumbs" aria-label={t('Breadcrumb')}><a href="#/">{t('Home')}</a><span aria-hidden="true">/</span><span>{t('Insights')}</span></nav>
+          <span className="over">{t('Insights')}</span>
+          <SplitWords as="h1" className="h1 h1-sm" text={t('How your models')} em={t('are doing.')} />
+          <p className="lede">{t('What people ask, how grounded the answers are, what the archive can’t answer yet, and feedback waiting for a person to review.')}</p>
+        </div>
       </section>
-      <section className="shell page-section insights-layout">
-        <div className="insights-filters">
-          <select className="create-select" value={persona} onChange={e => choose(e.target.value)} aria-label={t('ins.model')}>
-            <option value="">{t('common.allModels')}</option>
-            {personas.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
-          </select>
-          {tab === 'overview' && (
-            <div className="seg" role="group" aria-label={t('ins.dateRange')}>
-              {RANGES.map(d => <button key={d} className={days === d ? 'is-on' : ''} aria-pressed={days === d} onClick={() => setDays(d)}>{t(`range.${d}`)}</button>)}
-            </div>
-          )}
+      <section className="sec" style={{ paddingTop: 8 }}>
+        <div className="wrap col gap16">
+          <div className="tbar">
+            <label className="tchip sel"><Icon name="search" size={14} /><span className="sr-only">{t('Model')}</span>
+              <select value={persona} onChange={e => navigate(e.target.value ? `/insights/${e.target.value}` : '/insights')}>
+                <option value="">{t('All models')}</option>{personas.map(p => <option key={p.id} value={p.id}>{p.name}</option>)}
+              </select></label>
+            {tab === 'overview' && <div className="seg" role="group" aria-label={t('Date range')}>{RANGES.map(([d, l]) => <button key={d} type="button" aria-pressed={days === d} onClick={() => setDays(d)}>{t(l)}</button>)}</div>}
+            {current && <a className="btn btn-s btn-sm" href={`#/memories/${current.id}`}>{t('{name}’s memories', { name: current.name })}</a>}
+          </div>
+          <div className="dtabs" role="group" aria-label={t('Insights views')}>
+            {[['overview', t('Overview')], ['gaps', t('Knowledge gaps')], ['review', t('Review queue')]].map(([k, l]) => <button key={k} type="button" className="dtab" aria-pressed={tab === k} onClick={() => setTab(k)}>{l}</button>)}
+          </div>
+          <div key={`${tab}-${refresh}`} className="tabpanel">
+            {tab === 'overview' && <Overview persona={persona} days={days} />}
+            {tab === 'gaps' && (persona ? <Gaps persona={persona} kind={current?.kind} /> : <p className="small">{t('Choose a model above to see what its archive can’t answer.')}</p>)}
+            {tab === 'review' && <Review persona={persona} names={Object.fromEntries(personas.map(p => [p.id, p.name]))} />}
+          </div>
+          <div className="row wrap-row gap12 wipe">
+            {confirm ? <>
+              <span className="small">{t('Delete every question you asked {name}, and your feedback? This can’t be undone.', { name: current?.name || t('any model') })}</span>
+              <button type="button" className="btn btn-a btn-sm" onClick={wipe}>{t('Delete')}</button>
+              <button type="button" className="btn btn-s btn-sm" onClick={() => setConfirm(false)}>{t('Cancel')}</button>
+            </> : <button type="button" className="linkbtn" onClick={() => setConfirm(true)}>{current ? t('Delete my question history with {name}', { name: current.name }) : t('Delete my question history')}</button>}
+          </div>
         </div>
-        <div className="tabs" role="tablist">
-          {['overview', 'gaps', 'review'].map(name => (
-            <button key={name} role="tab" aria-selected={tab === name} className={tab === name ? 'is-on' : ''} onClick={() => setTab(name)}>{t(`ins.${name}`)}</button>
-          ))}
-        </div>
-        {tab === 'overview' && <Overview key={refresh} persona={persona} days={days} />}
-        {tab === 'gaps' && (persona ? <Gaps key={refresh} persona={persona} kind={kind} /> : <p className="page-note">{t('gaps.choose')}</p>)}
-        {tab === 'review' && <Review key={refresh} persona={persona} names={Object.fromEntries(personas.map(p => [p.id, p.name]))} />}
-        <DeleteHistory persona={persona} name={name} onDeleted={() => setRefresh(n => n + 1)} />
       </section>
     </div>
   )

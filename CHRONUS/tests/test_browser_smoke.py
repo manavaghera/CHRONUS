@@ -109,8 +109,8 @@ def test_pages_load_without_errors(page, site, model):
     assert page.evaluate("document.activeElement.className") == "skip-link"
 
     # every page is its own lazy-loaded chunk
-    for route, text in [("/#/models", "pytest Smoke"), ("/#/create", "Create"), ("/#/insights", "How the models are doing"),
-                        ("/#/roundtable", "Roundtable"), (f"/#/memories/{model}", "garden")]:
+    for route, text in [("/#/models", "pytest Smoke"), ("/#/create", "Who are you"), (f"/#/create/{model}", "Preserving"),
+                        ("/#/pretrained", "Try it on history"), ("/#/voice", "Keep the voice")]:
         page.goto(site + route)
         page.get_by_text(text, exact=False).first.wait_for()
     assert page.problems == []
@@ -118,20 +118,19 @@ def test_pages_load_without_errors(page, site, model):
 
 def test_chat_and_open_a_source(page, site, model):
     page.goto(f"{site}/#/chat/{model}")
-    page.get_by_text("Quotes only").click()
-    page.fill(".demo-chat-input", "What did you grow in the garden?")
+    page.get_by_role("button", name="Quotes only").click()
+    page.fill("#chat-in", "What did you grow in the garden?")
     page.keyboard.press("Enter")
-    answer = page.locator(".demo-msg--assistant").nth(1)
+    answer = page.locator(".msg--ai").nth(1)  # the first is the greeting
     answer.wait_for()
-    page.wait_for_function("!document.querySelector('.is-draft')")
+    page.wait_for_function("!document.querySelector('.caret')")
     assert "mangoes" in answer.inner_text().lower()
 
-    answer.locator("summary", has_text="Sources").click()
-    answer.locator(".src-open").first.click()
-    viewer = page.locator(".viewer-panel")
+    page.locator(".src .linkbtn", has_text="View in context").first.click()
+    viewer = page.locator(".viewer")
     viewer.wait_for()
     assert "garden" in viewer.inner_text()
-    assert page.evaluate("document.activeElement.closest('.viewer-panel') !== null")  # focus moved into the dialog
+    assert page.evaluate("document.activeElement.closest('.viewer') !== null")  # focus moved into the dialog
     page.keyboard.press("Escape")
     viewer.wait_for(state="detached")
     assert page.problems == []
@@ -139,12 +138,14 @@ def test_chat_and_open_a_source(page, site, model):
 
 def test_theme_toggle(page, site):
     page.goto(site + "/")
-    toggle = page.locator(".theme-toggle")
+    toggle = page.locator('.nav button[aria-label^="Switch to"]')
+    first = "dark" if "dark" in toggle.get_attribute("aria-label") else "light"
+    second = "light" if first == "dark" else "dark"
     toggle.click()
-    assert page.evaluate("document.documentElement.dataset.theme") == "light"
+    page.wait_for_function(f"document.documentElement.dataset.theme === '{first}'")
     toggle.click()
-    assert page.evaluate("document.documentElement.dataset.theme") == "dark"
+    page.wait_for_function(f"document.documentElement.dataset.theme === '{second}'")
     page.reload()
     page.locator("h1").first.wait_for()
-    assert page.evaluate("document.documentElement.dataset.theme") == "dark"  # remembered
+    assert page.evaluate("document.documentElement.dataset.theme") == second  # remembered
     assert page.problems == []
