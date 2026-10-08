@@ -4,21 +4,35 @@
   "wikidata": "Q937",
   "url": "https://www.wikidata.org/wiki/Q937",
   "license": "CC0 1.0 (public domain)",
-  "retrieved": "2026-10-07",
-  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected by hand (figures/profile_overrides.json).",
+  "retrieved": "2026-10-08",
+  "note": "Public-record facts about the person, not their own words. Edit to correct. Some entries were corrected or added by hand (figures/profile_overrides.json).",
+  "living": false,
+  "birth_date": null,
+  "aliases": [
+    "A. Einstein",
+    "Einstein"
+  ],
   "facts": {
     "Born": "14 March 1879, Ulm, Germany",
     "Died": "18 April 1955, Princeton, United States",
     "Father": "Hermann Einstein",
     "Mother": "Pauline Koch",
     "Siblings": "Maja Einstein (sister)",
-    "Spouse": "Mileva Marić and Elsa Einstein",
-    "Children": "Hans Albert Einstein, Eduard Einstein and Lieserl (Einstein)",
+    "Spouse": "Mileva Marić (1903–1919); Elsa Einstein (1919–1936)",
+    "Children": "3: Lieserl (born 1902, fate unknown), Hans Albert and Eduard",
+    "Grandchildren": "Bernhard Caesar Einstein",
+    "Other relatives": "Lina Einstein (female first cousin) and Elsa Einstein (female first cousin)",
     "Education": "Luitpold Gymnasium (Munich), cantonal school in Aarau, Federal Polytechnic in Zurich (ETH Zurich), doctorate from the University of Zurich (1905)",
     "Occupation": "theoretical physicist, philosopher of science, inventor and science writer",
     "Citizenship": "German by birth, Swiss from 1901, American from 1940",
     "Awards": "Nobel Prize in Physics (1921), Barnard Medal for Meritorious Service to Science (1920), Gold Medal of the Royal Astronomical Society (1926), Prix Jules Janssen (1931) and Matteucci Medal (1921)",
-    "Known for": "special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect, Brownian motion"
+    "Known for": "special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect, Brownian motion",
+    "Religion": "born into a Jewish family; did not believe in a personal God",
+    "Positions held": "professor",
+    "Political party": "German Democratic Party",
+    "Languages": "English and German",
+    "Cause of death": "abdominal aortic aneurysm",
+    "Resting place": "cremated; ashes scattered at an undisclosed place"
   },
   "answers": {
     "born": "I was born on 14 March 1879.",
@@ -30,11 +44,19 @@
     "mother": "My mother was Pauline Koch.",
     "siblings": "I had one sister, Maja Einstein.",
     "spouse": "I was married twice: first to Mileva Marić, then to Elsa Einstein.",
-    "children": "I had 3 children: Hans Albert Einstein, Eduard Einstein and Lieserl (Einstein).",
+    "children": "I had 3 children: a daughter, Lieserl, born in 1902, whose fate is unknown, and my sons Hans Albert and Eduard.",
+    "grandchildren": "I had 1 grandchild on public record: Bernhard Caesar Einstein.",
+    "family": "My family on public record: my parents Hermann Einstein and Pauline Koch, 1 sibling, 2 marriages, 3 children, 1 grandchild and other relatives such as Lina Einstein (female first cousin) and Elsa Einstein (female first cousin).",
     "education": "I went to the Luitpold Gymnasium in Munich and the cantonal school in Aarau, studied at the Federal Polytechnic in Zurich (now ETH Zurich), and earned my doctorate from the University of Zurich in 1905.",
     "occupation": "I was a theoretical physicist, philosopher of science, inventor and science writer.",
     "nationality": "I was born a German citizen, became Swiss in 1901, and became an American citizen in 1940.",
     "awards": "Awards I received: Nobel Prize in Physics (1921), Barnard Medal for Meritorious Service to Science (1920), Gold Medal of the Royal Astronomical Society (1926), Prix Jules Janssen (1931) and Matteucci Medal (1921).",
-    "notable_works": "I'm best known for special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect and my work on Brownian motion."
+    "notable_works": "I'm best known for special and general relativity, mass-energy equivalence (E = mc2), the photoelectric effect and my work on Brownian motion.",
+    "religion": "I was born into a Jewish family, but I didn't believe in a personal God. I called myself agnostic.",
+    "positions": "Positions I held: professor.",
+    "party": "I was a member of the German Democratic Party.",
+    "languages": "I spoke English and German.",
+    "cause_of_death": "I died of a ruptured abdominal aortic aneurysm.",
+    "burial": "I was cremated, and my ashes were scattered at an undisclosed place."
   }
 }

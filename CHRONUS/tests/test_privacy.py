@@ -110,14 +110,19 @@ def test_server_log_never_contains_the_question(srv, tmp_path, monkeypatch, capl
 @pytest.mark.skipif(os.name != "posix", reason="Windows profiles are already private to their account")
 def test_private_files_are_owner_only(tmp_path):
     from services import private_files
-    folder = tmp_path / "personas" / "amma"
+    personas = tmp_path / "personas"
+    folder = personas / "amma"
     folder.mkdir(parents=True)
     letter = folder / "letter.txt"
     letter.write_text("private")
+    # How they used to be created. Set on all three, not left to mkdir: once a
+    # test has started the server, this process's umask is already 077.
+    os.chmod(personas, 0o755)
     os.chmod(folder, 0o755)
-    os.chmod(letter, 0o644)  # how they used to be created
-    assert private_files.tighten([tmp_path / "personas"]) == 3
+    os.chmod(letter, 0o644)
+    assert private_files.tighten([personas]) == 3
     assert (letter.stat().st_mode & 0o777) == 0o600 and (folder.stat().st_mode & 0o777) == 0o700
+    assert (personas.stat().st_mode & 0o777) == 0o700
     old = os.umask(0o022)
     try:
         private_files.restrict_new_files()

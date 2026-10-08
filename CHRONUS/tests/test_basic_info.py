@@ -44,7 +44,56 @@ def test_age_is_computed(srv, today, age):
 
 
 def test_profile_has_no_em_dashes(srv):
-    assert not any("—" in str(v) for v in srv.BASIC_PROFILE["elon_musk"].values())
+    assert not any("—" in str(v) for v in srv.get_profile("elon_musk").values())
+
+
+def _ask(srv, question, persona="elon_musk"):
+    answer = srv.check_basic_info(question, persona)
+    return answer and answer["response"]
+
+
+def test_public_personal_facts_are_answered_not_kept_private(srv):
+    # A public figure's family and wealth are public record: answered with facts and dates
+    kids = _ask(srv, "How many kids do you have?")
+    assert re.match(r"I have \d+ children: ", kids) and "with Shivon Zilis" in kids
+    assert "don't" not in kids.lower() and "private" not in kids.lower()
+    assert re.search(r"net worth at about \$[\d,.]+ (billion|million) as of \d+ \w+ 20\d\d", _ask(srv, "What's your net worth?"))
+    peak = _ask(srv, "What was your peak net worth?")
+    assert peak.startswith("The highest estimate of my net worth") and "as of" not in peak  # not also the current one
+    assert "married three times" in _ask(srv, "Were you ever married?")
+    assert "Kimbal Musk" in _ask(srv, "Do you have any siblings?")
+    assert _ask(srv, "Who are your grandchildren?", "mahatma_gandhi").startswith("I had 10 grandchildren")
+    assert _ask(srv, "How did you die?", "mahatma_gandhi") == "I was shot and killed by Nathuram Godse on 30 January 1948."
+    block = srv.profile_context_block("elon_musk")
+    assert "never call them private" in block and re.search(r"- Children: \d+: ", block) and re.search(r"- Age: \d\d", block)
+    assert "Net worth" in block and "Highest net worth on record" in block
+
+
+@pytest.mark.parametrize("question,persona,start", [
+    ("How many kids does Elon Musk have?", "elon_musk", "I have"),
+    ("What's the peak net worth of Elon Musk?", "elon_musk", "The highest estimate"),
+    ("What is Elon's net worth?", "elon_musk", "The latest public estimate"),
+    ("Is Elon married?", "elon_musk", "I've been married"),
+    ("What is Mr. Musk's net worth?", "elon_musk", "The latest public estimate"),
+    ("How many kids did Gandhi have?", "mahatma_gandhi", "I had 4 sons"),
+    ("When was Mahatma Gandhi born?", "mahatma_gandhi", "I was born on 2 October 1869"),
+    ("How many relatives did Gandhiji have?", "mahatma_gandhi", "My family on public record"),
+    ("Who are Bapu's grandchildren?", "mahatma_gandhi", "I had 10 grandchildren"),
+    ("How tall was Lincoln?", "abraham_lincoln", "I was 6 feet 4 inches"),
+])
+def test_questions_that_name_the_person(srv, question, persona, start):
+    assert _ask(srv, question, persona).startswith(start)
+
+
+@pytest.mark.parametrize("question,persona", [
+    ("When was Pierre Curie born?", "marie_curie"),  # her husband, not her
+    ("How old is Kimbal Musk?", "elon_musk"),  # his brother
+    ("How many kids does Kimbal have?", "elon_musk"),
+    ("How many kids does Elon Musk have?", "mahatma_gandhi"),  # asked in someone else's chat
+    ("Tell me about your wife", "elon_musk"),  # a story, not a fact: his own words answer it
+])
+def test_questions_about_someone_else_go_to_retrieval(srv, question, persona):
+    assert srv.check_basic_info(question, persona) is None
 
 
 def test_custom_personas_have_no_profile(srv):

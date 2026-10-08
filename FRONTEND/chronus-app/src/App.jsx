@@ -1,143 +1,69 @@
-import { lazy, Suspense, useState, useCallback, useEffect } from 'react'
-import { useLenis, getLenis } from './hooks/useLenis'
-import PageLoader from './components/PageLoader'
-import Header from './components/Header'
+import { lazy, Suspense, useEffect } from 'react'
+import { useRoute } from './router'
+import { ToastProvider } from './lib/toast'
 import { useT } from './i18n'
-import Hero from './components/Hero'
-import Marquee from './components/Marquee'
-import LiveDemo from './components/LiveDemo'
-import WhySection from './components/WhySection'
-import Band from './components/Band'
-import TrustSection from './components/TrustSection'
-import UnderHood from './components/UnderHood'
-import Roadmap from './components/Roadmap'
-import FAQ from './components/FAQ'
+import Nav from './components/Nav'
 import Footer from './components/Footer'
-import NavMenu from './components/NavMenu'
-import RequestModal from './components/RequestModal'
+import Cursor from './components/Cursor'
+import CommandPalette from './components/CommandPalette'
 import LoginGate from './components/LoginGate'
-import TrainYourModel from './components/TrainYourModel'
-import ModelGallery from './components/ModelGallery'
-import { navigate, useRoute } from './router'
-import './pages.css'
+import ScrollChrome from './components/ScrollChrome'
+import { Intro, NotFound, Shortcuts } from './components/Extras'
+import Home from './pages/Home'
 
-// Sub-pages load on first visit, so the landing page downloads less
+// Pages load on first visit, so the landing page downloads less
 const ModelsPage = lazy(() => import('./pages/ModelsPage'))
-const ChatPage = lazy(() => import('./pages/ChatPage'))
 const CreatePage = lazy(() => import('./pages/CreatePage'))
-const CloneVoicePage = lazy(() => import('./pages/CloneVoicePage'))
+const ChatPage = lazy(() => import('./pages/ChatPage'))
+const PretrainedPage = lazy(() => import('./pages/PretrainedPage'))
+const VoicePage = lazy(() => import('./pages/VoicePage'))
 const MemoriesPage = lazy(() => import('./pages/MemoriesPage'))
 const InsightsPage = lazy(() => import('./pages/InsightsPage'))
 const RoundtablePage = lazy(() => import('./pages/RoundtablePage'))
-import './dark.css'
 
-// Header/menu targets that are pages rather than landing-page sections
-const PAGES = new Set(['models', 'create', 'clone-voice', 'roundtable', 'insights'])
-// Every #/page the app renders (the rest of the hash space is the landing page)
-const ROUTED = new Set([...PAGES, 'chat', 'memories'])
-
-function App() {
-  const t = useT()
-  useLenis()
-  const { page, id } = useRoute()
-  const [navOpen, setNavOpen] = useState(false)
-  const [modalOpen, setModalOpen] = useState(false)
-
-  const stopScroll = useCallback(() => {
-    getLenis()?.stop()
-    Object.assign(document.documentElement.style, { position: 'relative', overflow: 'hidden', height: '100%' })
-  }, [])
-
-  const startScroll = useCallback(() => {
-    getLenis()?.start()
-    ;['position', 'overflow', 'height'].forEach(p => document.documentElement.style.removeProperty(p))
-  }, [])
-
-  const scrollToId = useCallback((id) => {
-    const el = document.getElementById(id)
-    if (!el) return
-    getLenis()?.stop()
-    setTimeout(() => window.scrollTo({ top: el.getBoundingClientRect().top + window.pageYOffset, behavior: 'smooth' }), 50)
-    setTimeout(() => getLenis()?.start(), 100)
-  }, [])
-
-  const openNav = useCallback(() => { setNavOpen(true); stopScroll() }, [stopScroll])
-  const closeNav = useCallback(() => { setNavOpen(false); startScroll() }, [startScroll])
-  const openModal = useCallback(() => { setModalOpen(true); stopScroll() }, [stopScroll])
-  const closeModal = useCallback(() => { setModalOpen(false); startScroll() }, [startScroll])
-
-  const handleReady = useCallback(() => {
-    document.body.classList.add('ready')
-    startScroll()
-  }, [startScroll])
-
-  useEffect(() => {
-    const h = (e) => {
-      if (e.key === 'Escape') { if (modalOpen) closeModal(); else if (navOpen) closeNav() }
-    }
-    document.addEventListener('keydown', h)
-    return () => document.removeEventListener('keydown', h)
-  }, [navOpen, modalOpen, closeModal, closeNav])
-
-  // A section id ("demo") scrolls on the landing page, a page id ("models")
-  // opens that page; sections clicked from a sub-page go home first.
-  const go = useCallback((target) => {
-    if (target === 'contact') { openModal(); return }
-    if (PAGES.has(target)) { navigate(`/${target}`); return }
-    if (page) { navigate('/'); setTimeout(() => scrollToId(target), 150); return }
-    scrollToId(target)
-  }, [page, openModal, scrollToId])
-
-  const handleNav = useCallback((target) => {
-    closeNav()
-    setTimeout(() => go(target), target === 'contact' ? 200 : 100)
-  }, [closeNav, go])
-
-  // New page: start at the top. Back on home via a footer anchor (#demo):
-  // scroll to that section once the landing page has rendered.
-  useEffect(() => {
-    if (page) { getLenis()?.scrollTo(0, { immediate: true }); window.scrollTo(0, 0); return }
-    const anchor = window.location.hash.slice(1)
-    if (anchor && !anchor.startsWith('/')) setTimeout(() => scrollToId(anchor), 150)
-  }, [page, id, scrollToId])
-
-  return (
-    <>
-      <a className="skip-link" href="#main" onClick={e => { e.preventDefault(); document.getElementById('main')?.focus() }}>{t('app.skip')}</a>
-      <PageLoader stopScroll={stopScroll} onReady={handleReady} />
-      <Header go={go} openNav={openNav} />
-      <main id="main" tabIndex={-1}>
-        <Suspense fallback={<div className="page shell page-loading" role="status">{t('common.loading')}</div>}>
-        {page === 'models' && <ModelsPage />}
-        {page === 'chat' && <ChatPage id={id} />}
-        {page === 'create' && <CreatePage key={id || 'new'} id={id} />}
-        {page === 'clone-voice' && <CloneVoicePage />}
-        {page === 'memories' && <MemoriesPage key={id} id={id} />}
-        {page === 'insights' && <InsightsPage id={id} />}
-        {page === 'roundtable' && <RoundtablePage key={id || 'all'} id={id} />}
-        </Suspense>
-        {!ROUTED.has(page) && (
-          <>
-            <Hero scrollToId={scrollToId} />
-            <Marquee />
-            <LiveDemo />
-            <ModelGallery />
-            <WhySection />
-            <Band />
-            <TrainYourModel />
-            <TrustSection />
-            <UnderHood />
-            <Roadmap />
-            <FAQ />
-          </>
-        )}
-      </main>
-      <Footer />
-      <NavMenu open={navOpen} onClose={closeNav} onNav={handleNav} onCta={() => { closeNav(); setTimeout(openModal, 200) }} />
-      <RequestModal open={modalOpen} onClose={closeModal} />
-      <LoginGate />
-    </>
-  )
+const PAGES = {
+  models: () => <ModelsPage />,
+  create: (id) => <CreatePage key={id || 'new'} id={id} />,
+  chat: (id) => <ChatPage key={id} id={id} />,
+  pretrained: () => <PretrainedPage />,
+  voice: () => <VoicePage />,
+  'clone-voice': () => <VoicePage />,
+  memories: (id) => <MemoriesPage key={id} id={id} />,
+  insights: (id) => <InsightsPage id={id} />,
+  roundtable: (id) => <RoundtablePage key={id || 'all'} id={id} />,
 }
 
-export default App
+export default function App() {
+  const t = useT()
+  const { page, id } = useRoute()
+  const render = PAGES[page]
+
+  // A new page starts at the top; a section link (#how) from another page
+  // scrolls once the home page has rendered
+  useEffect(() => {
+    if (page) { window.scrollTo(0, 0); return }
+    const anchor = window.location.hash.slice(1)
+    if (anchor && !anchor.startsWith('/')) setTimeout(() => document.getElementById(anchor)?.scrollIntoView({ behavior: 'smooth' }), 120)
+  }, [page, id])
+
+  return (
+    <ToastProvider>
+      <a className="skip-link" href="#main" onClick={e => { e.preventDefault(); document.getElementById('main')?.focus() }}>{t('Skip to content')}</a>
+      <ScrollChrome home={!page} />
+      <Nav page={render ? page : ''} />
+      <main id="main" tabIndex={-1}>
+        <div className="route" key={page || 'home'}>
+          <Suspense fallback={<div className="page-loading" role="status"><span className="spinner" />{t('Loading…')}</div>}>
+            {!page ? <Home /> : render ? render(id) : <NotFound />}
+          </Suspense>
+        </div>
+      </main>
+      <Footer />
+      <CommandPalette />
+      <Shortcuts />
+      <Cursor />
+      <LoginGate />
+      <Intro />
+    </ToastProvider>
+  )
+}
