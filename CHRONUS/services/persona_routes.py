@@ -18,7 +18,7 @@ from fastapi import APIRouter, HTTPException
 from fastapi import Path as PathParam
 from pydantic import BaseModel, Field
 
-from services import consent, consent_text, tts
+from services import consent, consent_text, style, tts
 from services import personas as ps
 
 PERSONA_PATH = PathParam(pattern=ps.PERSONA_ID_PATTERN)
@@ -84,6 +84,8 @@ def summarize(persona: dict, collection) -> dict:
         "license": persona.get("license", ""),
         # custom models: paused?, review date, off-limits topics (services/consent.py)
         "consent": consent.state(persona) if persona["kind"] == "custom" else None,
+        # learn their style, allow "in their spirit" answers, frozen (services/style.py)
+        "person_settings": style.settings(persona),
     }
 
 
@@ -167,6 +169,7 @@ def make_router(client, embedder) -> APIRouter:
 
         persona = _custom(persona_id)
         result = embed_interview_answer(client, embedder, persona, body)
+        style.auto_train_quietly(persona, ps.get_collection(client, persona))
         fresh = detail(persona_id)
         unanswered = [q for q in get_all_questions() if q["id"] not in set(fresh["interview_answered"])]
         # Adaptive interview: what to ask next, from what this answer mentions

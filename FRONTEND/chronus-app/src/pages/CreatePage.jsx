@@ -109,6 +109,7 @@ export default function CreatePage({ id }) {
             {persona && (
               <div className="card pcard quick-links">
                 <span className="lab">{t('Manage')}</span>
+                <a className="qlink" href={`#/person/${persona.id}`}><Icon name="brain" size={16} />{t('Profile, style and switches')}<Icon name="arrow" size={14} /></a>
                 <a className="qlink" href={`#/memories/${persona.id}`}><Icon name="search" size={16} />{t('Browse and correct memories')}<Icon name="arrow" size={14} /></a>
                 <a className="qlink" href={`#/insights/${persona.id}`}><Icon name="chart" size={16} />{t('Insights and knowledge gaps')}<Icon name="arrow" size={14} /></a>
                 {persona.status === 'ready' && <a className="qlink" href={`#/chat/${persona.id}`}><Icon name="sparkle" size={16} />{t('Talk to {name}', { name: persona.name.split(' ')[0] })}<Icon name="arrow" size={14} /></a>}

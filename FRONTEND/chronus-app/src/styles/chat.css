@@ -31,6 +31,8 @@
 .msg-main { display: flex; flex-direction: column; gap: 9px; min-width: 0; max-width: 88%; }
 .ans { font-size: 15.5px; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; }
 .ans.is-quote { font-family: var(--serif); font-style: italic; font-size: 21px; line-height: 1.4; }
+/* "In their spirit": inferred, never their words, so it must not look like a quote */
+.ans.is-spirit { padding: 12px 14px; border: 1px dashed var(--line-2); border-radius: 12px; color: var(--ink-2); }
 .msg.is-error .ans { color: var(--accent-ink); }
 .msg.is-focus .ans { padding-left: 14px; border-left: 2px solid var(--accent); }
 .caret { display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -.14em; background: var(--accent); animation: blink 1s steps(1) infinite; }

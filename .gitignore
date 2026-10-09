@@ -19,6 +19,10 @@ CHRONUS/personas/
 CHRONUS/lora/data/
 CHRONUS/lora/checkpoints/
 CHRONUS/lora/adapters/
+# Style adapters per model (lora/pipeline.py): weights, run logs, exam rows
+CHRONUS/models/*/adapters/
+# Identity profiles of the pretrained models: rebuilt from the archive on first use
+CHRONUS/models/*/identity.json
 qdrant_storage/
 .env
 *.log

@@ -35,6 +35,7 @@ from services import (
     consent_text,
     followups,
     hybrid,
+    identity,
     insights,
     instance_lock,
     jobs,
@@ -42,10 +43,13 @@ from services import (
     natural_mode,
     ops,
     originals,
+    person_routes,
     private_files,
     roundtable,
     security_headers,
+    spirit,
     stt,
+    style,
     timeline,
     translate,
     tts,
@@ -168,6 +172,9 @@ class ChatRequest(BaseModel):
     language: Optional[str] = Field(default=None, pattern=r"^[a-z]{2}$")
     # How much to say: one focused quote / sentence, the usual, or more
     length: Literal["short", "normal", "detailed"] = "normal"
+    # When the archive doesn't cover the question, infer an answer from what
+    # they believed and said, labelled as such (services/spirit.py)
+    spirit: bool = False
 
     @field_validator("query")
     @classmethod
@@ -418,13 +425,33 @@ def _load_ready_persona(persona_id: str) -> dict:
     return persona
 
 
+def ai_voice_allowed(persona: dict) -> bool:
+    """Custom models are local-first: the AI voice sends evidence excerpts to
+    the cloud LLM provider, so it needs the creator's opt-in. Ollama and the
+    "local" provider run on this machine, so they need none."""
+    return config.LLM_PROVIDER in ("ollama", "local") or bool(persona.get("allow_cloud_llm"))
+
+
+def person_profile_block(persona: dict, memory) -> str:
+    """Public-record facts and the identity profile (services/identity.py),
+    for the AI voice's prompt. A profile that can't be built is left out."""
+    try:
+        who = identity.prompt_block(identity.get(persona, memory, embedder))
+    except Exception as e:  # never let the profile stop an answer
+        logger.error(f"Identity profile for {persona['id']} unavailable: {e}")
+        who = ""
+    return "\n\n".join(block for block in (profile_context_block(persona["id"]), who) if block)
+
+
 def answer_from_memory(query: str, persona: dict, memory, mode: str, history: list[ChatTurn],
                        n_results: int = N_RESULTS, where: dict | None = None,
                        years: tuple[int | None, int | None] = (None, None), on_token=None,
-                       length: str = "normal") -> dict:
+                       length: str = "normal", in_spirit: bool = False) -> dict:
     """Retrieve evidence for *query* and answer it in *mode*.
 
     *years*: time travel, only memories dated in that range (inclusive).
+    *in_spirit*: when nothing covers the question, try an answer inferred
+    from their values (services/spirit.py) before saying "I don't know".
     Returns a dict with response, sources, confidence, fallback, mode,
     faithfulness and notice. Shared by /chat and the roundtable.
     """
@@ -458,6 +485,22 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
         return {"response": "That's everything my records have on this.", "sources": [], "faithfulness": 0.0,
                 "confidence": "low", "fallback": True, "mode": "fallback", "why": {"sources": 0},
                 "notice": "Nothing new beyond the quotes above."}
+    if memories is None and in_spirit and mode == "natural" and spirit.allowed(persona) and ai_voice_allowed(persona):
+        inferred = spirit.answer(
+            query, persona, memory, embedder,
+            search=lambda _q: retrieve(search_text, n_results, memory, where=where, threshold=limit + spirit.MARGIN,
+                                       exclude=used, skip=lambda doc, meta: consent.blocked(persona, doc, meta)),
+            profile_block=person_profile_block(persona, memory),
+            history=[turn.model_dump() for turn in history],
+            style_notes=wellbeing.style_for(persona),
+            use_adapter=style.adapter_for(persona),
+            on_token=on_token,
+            length=length,
+        )
+        if inferred:
+            return {**inferred, "why": {"threshold_match": _match(limit), "sources": len(inferred["sources"]),
+                                        "inferred": True},
+                    "notice": " ".join(n for n in (inferred["notice"], f"Time travel: only memories dated {era}." if era else "") if n)}
     if memories is None:
         closest = closest_distance(search_text, memory, where)
         why = {"threshold_match": _match(limit), "best_match": None if closest is None else _match(closest), "sources": 0}
@@ -473,10 +516,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
     identity_card = load_mix_method_identity_card(persona["id"])
     evidence = anchor_first(memories[:4 if length == "detailed" else 3])
     notice = ""
-    # Custom models are local-first: AI voice sends evidence excerpts to the
-    # cloud LLM provider, so it needs the creator's opt-in. (Ollama and the
-    # "local" provider run on this machine, so they need no opt-in.)
-    if mode == "natural" and config.LLM_PROVIDER not in ("ollama", "local") and not persona.get("allow_cloud_llm"):
+    if mode == "natural" and not ai_voice_allowed(persona):
         mode = "mix_method"
         notice = ("AI voice is off for this model because it would send excerpts to a cloud AI service, "
                   "so these are verbatim quotes.")
@@ -487,12 +527,12 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
             query=query,
             memories=evidence,
             identity_card=identity_card,
-            profile_block=profile_context_block(persona["id"]),
+            profile_block=person_profile_block(persona, memory),
             history=[turn.model_dump() for turn in history],
             persona_name=persona["name"],
             style_notes=wellbeing.style_for(persona),
-            # The local LoRA adapter (lora/train_lora.py) was trained on Elon's words only
-            use_adapter=persona["id"] == "elon_musk",
+            # This person's promoted style adapter, if any (services/style.py)
+            use_adapter=style.adapter_for(persona),
             embedder=embedder,
             on_token=on_token,
             length=length,
@@ -582,7 +622,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
     # follow-ups depend on the conversation, so they never do
     cache_key = None
     if not (req.history and is_follow_up(query)):
-        cache_key = answer_cache.key(persona["id"], req.query, req.mode, req.n_results, years, target, req.length)
+        cache_key = answer_cache.key(persona["id"], req.query, req.mode, req.n_results, years, target, req.length, req.spirit)
         cached = answer_cache.get(cache_key)
         if cached is not None:
             entry_id = log_qa(req.query, cached["answer"], cached["sources"], persona=persona["id"], mode=cached["mode"],
@@ -599,7 +639,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
         result = {**basic, "faithfulness": 1.0, "notice": ""}
     elif basic:
         rest = answer_from_memory(basic["remainder"], persona, memory, req.mode, req.history, req.n_results,
-                                  years=years, on_token=on_token, length=req.length)
+                                  years=years, on_token=on_token, length=req.length, in_spirit=req.spirit)
         result = {
             **rest,
             "response": f"{basic['response']}\n\n{rest['response']}",
@@ -609,7 +649,7 @@ def respond(req: ChatRequest, on_token=None) -> ChatResponse:
         }
     else:
         result = answer_from_memory(query, persona, memory, req.mode, req.history, req.n_results,
-                                    years=years, on_token=on_token, length=req.length)
+                                    years=years, on_token=on_token, length=req.length, in_spirit=req.spirit)
 
     original, language = "", "en"
     if target != "en" and target in translate.LANGUAGES:
@@ -941,6 +981,8 @@ app.include_router(jobs.make_router())
 app.include_router(bundle.make_router(client, embedder, config.EMBEDDING_MODEL, summarize_persona))
 # Adaptive interview: free-form follow-up questions
 app.include_router(followups.make_router(client, embedder))
+# Person model: identity profile, style adapters, switches
+app.include_router(person_routes.make_router(client, embedder))
 # Memory browser, citation context, time-travel year counts
 app.include_router(memory_routes.make_router(client, embedder))
 # The uploaded file behind a memory: play the voice note, see the photo (services/originals.py)
