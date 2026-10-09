@@ -42,7 +42,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-import pyarrow.dataset  # noqa: E402,F401  (pyarrow after torch crashes silently on Windows)
+try:
+    import pyarrow.dataset  # noqa: E402,F401  (pyarrow after torch crashes silently on Windows)
+except ImportError:  # CI's light install has neither pyarrow nor torch: nothing to guard against
+    pass
 
 from config import config  # noqa: E402
 from services import identity, style, wellbeing  # noqa: E402
