@@ -6,9 +6,12 @@ import useDialog from '../useDialog'
 // Shown when the server has an access code (CHRONUS_ACCESS_CODE) or accounts
 // (CHRONUS_USERS) and this browser hasn't signed in. The server checks the
 // code and sets an HttpOnly cookie; nothing is stored in the page.
-export default function LoginGate() {
+// *allowed*: only on app pages; the public website (home, pricing, legal,
+// the waitlist...) stays open to visitors, who sign in at #/signin.
+export default function LoginGate({ open: allowed = true }) {
   const t = useT()
-  const [open, setOpen] = useState(false)
+  const [needed, setOpen] = useState(false)
+  const open = allowed && needed
   const [accounts, setAccounts] = useState(false)
   const [user, setUser] = useState('')
   const [code, setCode] = useState('')
