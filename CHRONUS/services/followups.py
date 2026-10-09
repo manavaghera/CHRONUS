@@ -25,6 +25,7 @@ from fastapi import Path as PathParam
 from pydantic import BaseModel, Field
 
 from services import personas as ps
+from services import style
 from services.provenance import content_words
 
 PERSONA_PATH = PathParam(pattern=ps.PERSONA_ID_PATTERN)
@@ -104,6 +105,7 @@ def make_router(client, embedder) -> APIRouter:
                                       "question": body.question.strip()[:300],
                                       "answered_at": datetime.now().isoformat(timespec="seconds")}])
         ps.record_followup(persona, question_id)
+        style.auto_train_quietly(persona, collection)
         return {"question_id": question_id, "memory_id": memory_id, "memories": collection.count(),
                 "followups": suggest(body.answer, [], None)}
 

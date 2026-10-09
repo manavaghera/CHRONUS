@@ -163,6 +163,15 @@ export const api = {
   timeline: (id) => request(`/personas/${pid(id)}/timeline`),
   about: (id) => request(`/personas/${pid(id)}/about`),
 
+  // Person model (services/person_routes.py): identity profile, style layer, switches
+  identity: (id) => request(`/personas/${pid(id)}/identity`),
+  rebuildIdentity: (id) => request(`/personas/${pid(id)}/identity/rebuild`, { method: 'POST' }),
+  hideIdentityLine: (id, lineId, hidden) => request(`/personas/${pid(id)}/identity/lines/${pid(lineId)}`,
+    { method: 'PUT', body: { hidden } }),
+  styleStatus: (id) => request(`/personas/${pid(id)}/style`),
+  trainStyle: (id) => request(`/personas/${pid(id)}/style/train`, { method: 'POST' }),
+  personSettings: (id, settings) => request(`/personas/${pid(id)}/person-settings`, { method: 'PUT', body: settings }),
+
   // Feedback, review queue, gaps, analytics (services/insights.py)
   feedback: (body) => request('/feedback', { method: 'POST', body }),
   reviewQueue: (persona, status = 'pending') => request(`/review?${new URLSearchParams({ ...(persona ? { persona } : {}), status })}`),

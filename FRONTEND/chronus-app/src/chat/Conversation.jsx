@@ -13,7 +13,7 @@ import { downloadQuoteCard } from './quoteCard'
 
 const MAX_HISTORY = 10
 const NUDGE_AFTER_MS = 25 * 60 * 1000
-export const MODES = { natural: tx('AI voice'), mix_method: tx('Verbatim quotes'), mix_method_fallback: tx('Verbatim quotes, AI answer not used'), basic_info: tx('Profile fact'), fallback: tx('Not enough evidence'), support: tx('Support information') }
+export const MODES = { natural: tx('AI voice'), mix_method: tx('Verbatim quotes'), mix_method_fallback: tx('Verbatim quotes, AI answer not used'), basic_info: tx('Profile fact'), fallback: tx('Not enough evidence'), support: tx('Support information'), spirit: tx('In their spirit') }
 export const LEVELS = { high: tx('High'), medium: tx('Medium'), low: tx('Low') }
 const LANGUAGES = [['auto', tx('Same as question')], ['en', 'English'], ['hi', 'हिन्दी'], ['gu', 'ગુજરાતી'], ['mr', 'मराठी'], ['bn', 'বাংলা'], ['ta', 'தமிழ்'], ['te', 'తెలుగు'], ['ur', 'اردو'], ['es', 'Español'], ['fr', 'Français']]
 
@@ -78,7 +78,7 @@ function Msg({ m, persona, voice, onCite, onSources, focused }) {
     <div className={`msg msg--ai${focused ? ' is-focus' : ''}${m.error ? ' is-error' : ''}`}>
       <span className="av av-sm" aria-hidden="true">{initials(persona.name)}</span>
       <div className="msg-main">
-        <div className={`ans${m.mode === 'mix_method' || m.mode === 'mix_method_fallback' ? ' is-quote' : ''}`} lang={m.greeting ? undefined : m.language || 'en'}>
+        <div className={`ans${m.mode === 'mix_method' || m.mode === 'mix_method_fallback' ? ' is-quote' : ''}${m.mode === 'spirit' ? ' is-spirit' : ''}`} lang={m.greeting ? undefined : m.language || 'en'}>
           {m.greeting ? m.text : <AnswerText text={m.text || ''} sources={m.sources} onCite={(i) => onCite(m, i)} />}
           {m.draft && <span className="caret" aria-hidden="true" />}
         </div>
@@ -125,6 +125,10 @@ export default function Conversation({ persona, greeting, quick, onCite, onSourc
   const [panel, setPanel] = useState(null)
   const [language, setLanguage] = useState('auto')
   const [length, setLength] = useState('normal')
+  // "In their spirit": when nothing they said covers a question, an inferred
+  // answer, labelled as such (services/spirit.py). Off until asked for.
+  const spiritAllowed = aiAllowed && !!persona.person_settings?.allow_spirit
+  const [spirit, setSpirit] = useState(false)
   const [talking, setTalking] = useState(false)
   const [nudge, setNudge] = useState(false)
   const [announce, setAnnounce] = useState('')
@@ -163,6 +167,7 @@ export default function Conversation({ persona, greeting, quick, onCite, onSourc
       ...(years ? { year_from: years.from, year_to: years.to } : {}),
       ...(language !== 'auto' ? { language } : {}),
       ...(length !== 'normal' ? { length } : {}),
+      ...(spirit && spiritAllowed && mode === 'natural' ? { spirit: true } : {}),
     }
     abort.current = new AbortController()
     try {
@@ -188,7 +193,7 @@ export default function Conversation({ persona, greeting, quick, onCite, onSourc
       if (e.offline) setOnline(false)
       return null
     } finally { setTyping(false) }
-  }, [mode, typing, persona.id, persona.name, years, language, length, onSources, t])
+  }, [mode, typing, persona.id, persona.name, years, language, length, spirit, spiritAllowed, onSources, t])
 
   const speak = useCallback(async (d) => {
     const text = plain(d.answer)
@@ -242,6 +247,11 @@ export default function Conversation({ persona, greeting, quick, onCite, onSourc
           <select value={language} onChange={e => setLanguage(e.target.value)} title={aiAllowed ? t('Answer language') : t('Translation needs the AI voice')}>{LANGUAGES.map(([v, l]) => <option key={v} value={v}>{t(l)}</option>)}</select></label>
         <label className="tchip sel"><span className="sr-only">{t('Answer length')}</span>
           <select value={length} onChange={e => setLength(e.target.value)}><option value="short">{t('Short')}</option><option value="normal">{t('Normal')}</option><option value="detailed">{t('Detailed')}</option></select></label>
+        {spiritAllowed && mode === 'natural' && (
+          <button type="button" className={`tchip${spirit ? ' is-on' : ''}`} aria-pressed={spirit} onClick={() => setSpirit(s => !s)}
+            title={t('When they never talked about something, answer the way they likely would, clearly labelled as inferred')}>
+            <Icon name="sparkle" size={14} />{t('In their spirit')}</button>
+        )}
         {voiceInput.engine && <button type="button" className={`tchip${talking ? ' is-on' : ''}`} onClick={toggleTalk}><Icon name="mic" size={14} />{talking ? t('End conversation') : t('Talk hands-free')}</button>}
         <button type="button" className="tchip" aria-expanded={panel === 'more'} aria-label={t('More options')} onClick={() => setPanel(p => (p === 'more' ? null : 'more'))}><Icon name="dots" size={16} /></button>
       </div>

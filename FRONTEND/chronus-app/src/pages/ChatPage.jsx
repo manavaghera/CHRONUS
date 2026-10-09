@@ -64,6 +64,7 @@ export default function ChatPage({ id }) {
             <a href={pre ? '#/pretrained' : '#/models'}>{pre ? t('Pretrained') : t('Your models')}</a><span aria-hidden="true">/</span><span>{persona?.name || '…'}</span></nav>
           {persona && (
             <div className="row wrap-row gap8">
+              <a className="btn btn-s btn-sm" href={`#/person/${persona.id}`}><Icon name="brain" size={14} />{t('Who they are')}</a>
               <a className="btn btn-s btn-sm" href={`#/memories/${persona.id}`}><Icon name="search" size={14} />{t('Memories')}</a>
               <a className="btn btn-s btn-sm" href={`#/insights/${persona.id}`}><Icon name="chart" size={14} />{t('Insights')}</a>
               <a className="btn btn-s btn-sm" href={`#/roundtable/${persona.id}`}><Icon name="table" size={14} />{t('Roundtable')}</a>

@@ -20,6 +20,7 @@ const VoicePage = lazy(() => import('./pages/VoicePage'))
 const MemoriesPage = lazy(() => import('./pages/MemoriesPage'))
 const InsightsPage = lazy(() => import('./pages/InsightsPage'))
 const RoundtablePage = lazy(() => import('./pages/RoundtablePage'))
+const PersonPage = lazy(() => import('./pages/PersonPage'))
 
 const PAGES = {
   models: () => <ModelsPage />,
@@ -30,6 +31,7 @@ const PAGES = {
   'clone-voice': () => <VoicePage />,
   memories: (id) => <MemoriesPage key={id} id={id} />,
   insights: (id) => <InsightsPage id={id} />,
+  person: (id) => <PersonPage key={id} id={id} />,
   roundtable: (id) => <RoundtablePage key={id || 'all'} id={id} />,
 }
 

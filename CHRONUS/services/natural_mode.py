@@ -135,19 +135,31 @@ LENGTHS = {"short": ("One or two sentences", 2), "normal": ("One to three senten
            "detailed": ("Three to six sentences", 7)}
 
 
+# "In their spirit" (services/spirit.py): the evidence doesn't cover the
+# question, so the answer reasons from what they believed, and says so first.
+_SPIRIT_RULES = """1. You never talked about this directly. Say so plainly in your first sentence, in your own voice (for example "I never really talked about that, but"), then answer the way you would, reasoning only from your values and words in the evidence and in WHO YOU ARE.
+2. Evidence marked ABOUT YOU was written by someone else. You can use its facts, but never present its wording as something you said.
+3. Evidence marked SYNTHESIZED is a generated summary. Use it for facts only, not for phrasing.
+4. Never invent memories, events, people, places, numbers or quotes. Speak about what you value and how you would see it, not about things that happened."""
+
+
 def build_system_prompt(
     persona_name: str, evidence_block: str, profile_block: str = "", style_notes: str | None = None,
-    length: str = "normal",
+    length: str = "normal", spirit: bool = False,
 ) -> str:
-    """Assemble the natural-mode system prompt (no dashes on purpose)."""
+    """Assemble the natural-mode system prompt (no dashes on purpose).
+
+    *spirit*: the "in their spirit" rules (rules 1-4) instead of answering
+    from evidence that covers the question."""
     sentences = LENGTHS.get(length, LENGTHS["normal"])[0]
+    rules = _SPIRIT_RULES if spirit else """1. Answer the actual question, building the answer from YOUR OWN WORDS in the evidence. Reuse your actual phrases, examples, numbers and jokes where they fit, and only tidy them up: drop fillers like "um", "uh" and "you know", fix run-together or broken words, and join fragments into sentences. Do not just paste unrelated lines together.
+2. Evidence marked ABOUT YOU was written by someone else. You can use its facts, but never present its wording as something you said.
+3. Evidence marked SYNTHESIZED is a generated summary. Use it for facts only, not for phrasing.
+4. Do not add facts, opinions, numbers or examples that are not in the evidence or the profile. If the evidence does not really answer the question, say that briefly, in your own voice."""
     return f"""You are {persona_name}, talking in a live conversation. Answer the user's question.
 
 HOW TO ANSWER
-1. Answer the actual question, building the answer from YOUR OWN WORDS in the evidence. Reuse your actual phrases, examples, numbers and jokes where they fit, and only tidy them up: drop fillers like "um", "uh" and "you know", fix run-together or broken words, and join fragments into sentences. Do not just paste unrelated lines together.
-2. Evidence marked ABOUT YOU was written by someone else. You can use its facts, but never present its wording as something you said.
-3. Evidence marked SYNTHESIZED is a generated summary. Use it for facts only, not for phrasing.
-4. Do not add facts, opinions, numbers or examples that are not in the evidence or the profile. If the evidence does not really answer the question, say that briefly, in your own voice.
+{rules}
 5. {sentences}, spoken style. Start with the answer itself. No intro and no wrap-up line that sums things up.
 6. Never use dashes of any kind, and never use the words "crucial", "ensuring", "pivotal", "delve", "testament", "landscape" or "journey".
 7. End each sentence, before its full stop, with the number of the evidence it comes from in square brackets, like [1] or [2]. Only use numbers shown in EVIDENCE.
@@ -227,6 +239,9 @@ def _stream_openai(url: str, headers: dict, payload: dict, on_token: Callable[[s
     parts, finish, started = [], None, time.monotonic()
     with requests.post(url, headers=headers, json={**payload, "stream": True}, timeout=_timeout(), stream=True) as response:
         response.raise_for_status()
+        # Server-sent events are always UTF-8, but without a charset in the
+        # Content-Type requests decodes text/* as ISO-8859-1: "don’t" -> "donât"
+        response.encoding = "utf-8"
         for line in response.iter_lines(decode_unicode=True):
             _check_deadline(started)
             if not line or not line.startswith("data:"):
@@ -369,6 +384,7 @@ def generate_natural_response(
     embedder=None,  # enables the sentence-level support check (config.NATURAL_MIN_SEMANTIC_SUPPORT)
     on_token: Callable[[str], None] | None = None,  # stream the draft (see _call_llm)
     length: str = "normal",  # "short" | "normal" | "detailed"
+    spirit: bool = False,  # "in their spirit": reason from values, say it was never said (services/spirit.py)
 ) -> dict:
     """Answer *query* in the persona's voice, grounded in *memories*.
 
@@ -387,7 +403,7 @@ def generate_natural_response(
         citation = format_source_citation(meta, doc, raw_dist)
         sources.append(citation)
         evidence.append(_evidence_line(i, text, meta, citation["citation"]))
-    system_prompt = build_system_prompt(persona_name, "\n\n".join(evidence), profile_block, style_notes, length)
+    system_prompt = build_system_prompt(persona_name, "\n\n".join(evidence), profile_block, style_notes, length, spirit)
     max_sentences = LENGTHS.get(length, LENGTHS["normal"])[1]
 
     try:

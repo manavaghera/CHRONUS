@@ -79,3 +79,21 @@ def test_natural_answer_streams_tokens_then_cited_final(srv, client, cloud_perso
     assert event == "final" and final["mode"] == "natural", final
     assert final["answer"].endswith("bicycle [1].") and final["sources"]
     assert post.call_args.kwargs["stream"] is True and post.call_args.kwargs["json"]["stream"] is True
+
+
+def test_streamed_text_is_decoded_as_utf8():
+    """SSE without a charset: requests would decode it as ISO-8859-1 ("donât")."""
+    import io
+
+    import requests
+
+    events = ['data: {"choices":[{"delta":{"content":"I don’t know"}}]}',
+              'data: {"choices":[{"delta":{"content":" — yet."},"finish_reason":"stop"}]}', "data: [DONE]"]
+    response = requests.models.Response()
+    response.status_code = 200
+    response.headers["Content-Type"] = "text/event-stream"
+    response.raw = io.BytesIO("\n\n".join(events).encode("utf-8"))
+    tokens = []
+    with mock.patch.object(nm.requests, "post", return_value=response):
+        text, cut_off = nm._stream_openai("https://llm.test", {}, {}, tokens.append)
+    assert text == "I don’t know — yet." and tokens == ["I don’t know", " — yet."] and not cut_off
