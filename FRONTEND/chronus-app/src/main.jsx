@@ -8,6 +8,7 @@ import './styles/home.css'
 import './styles/pages.css'
 import './styles/chat.css'
 import './styles/extra.css'
+import './styles/site.css'
 
 // Before the first render, so a dark-mode reader never sees a white flash
 applyTheme(storedTheme())

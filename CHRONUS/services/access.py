@@ -47,8 +47,9 @@ from services import personas as ps
 
 COOKIE = "chronus_access"
 UNSAFE_METHODS = {"POST", "PUT", "PATCH", "DELETE"}
-# Paths that work without the access code: the website itself and login
-PUBLIC_PREFIXES = ("/health", "/ready", "/auth/", "/assets/", "/favicon")
+# Paths that work without the access code: the website itself, login, and the
+# website's public forms (services/site_forms.py: waitlist, contact, report)
+PUBLIC_PREFIXES = ("/health", "/ready", "/auth/", "/assets/", "/favicon", "/site/")
 PUBLIC_PATHS = {"/", "/index.html"}
 # Endpoints that cost real compute or API credit
 LIMITED_PREFIXES = ("/chat", "/speak", "/voice", "/roundtable")

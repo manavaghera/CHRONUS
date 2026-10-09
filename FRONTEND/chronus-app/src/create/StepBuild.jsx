@@ -6,7 +6,7 @@ import Icon from '../lib/Icon'
 
 const STAGES = [tx('Checking the consent record'), tx('Gathering their memories'), tx('Labelling every memory by voice'), tx('Embedding with Sentence-BERT'), tx('Calibrating the “I don’t know” threshold')]
 
-function Backup({ persona }) {
+export function Backup({ persona }) {
   const t = useT()
   const toast = useToast()
   const [pw, setPw] = useState('')

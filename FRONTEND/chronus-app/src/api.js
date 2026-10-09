@@ -163,6 +163,11 @@ export const api = {
   timeline: (id) => request(`/personas/${pid(id)}/timeline`),
   about: (id) => request(`/personas/${pid(id)}/about`),
 
+  // The website's public forms (services/site_forms.py)
+  siteWaitlist: (body) => request('/site/waitlist', { method: 'POST', body }),
+  siteContact: (body) => request('/site/contact', { method: 'POST', body }),
+  siteReport: (body) => request('/site/report', { method: 'POST', body }),
+
   // Person model (services/person_routes.py): identity profile, style layer, switches
   identity: (id) => request(`/personas/${pid(id)}/identity`),
   rebuildIdentity: (id) => request(`/personas/${pid(id)}/identity/rebuild`, { method: 'POST' }),

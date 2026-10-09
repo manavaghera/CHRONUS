@@ -1,16 +1,18 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { applyTheme, isDark, THEME_EVENT } from '../theme'
-import { LANGUAGES, tx, useLanguage } from '../i18n'
+import { tx, useLanguage } from '../i18n'
 import Icon from '../lib/Icon'
 
 export const SEARCH_EVENT = 'chronus:search'
 
+// Voice studio, Roundtable and Insights stay one click away in the footer,
+// the command palette (Ctrl K) and each model's page
 const LINKS = [
-  ['#/models', tx('Your models'), 'models'],
+  ['#/how-it-works', tx('How it works'), 'how-it-works'],
+  ['#/pricing', tx('Pricing'), 'pricing'],
   ['#/pretrained', tx('Pretrained'), 'pretrained'],
-  ['#/roundtable', tx('Roundtable'), 'roundtable'],
-  ['#/voice', tx('Voice studio'), 'voice'],
-  ['#/insights', tx('Insights'), 'insights'],
+  ['#/lab', tx('Lab'), 'lab'],
+  ['#/models', tx('Your models'), 'models'],
 ]
 
 // Theme switch with a circular reveal from the button (View Transitions)
@@ -38,38 +40,6 @@ export function useDark() {
     return () => { window.removeEventListener(THEME_EVENT, update); mq?.removeEventListener?.('change', update) }
   }, [])
   return dark
-}
-
-// Site language: a small menu of English, हिन्दी, ગુજરાતી
-function LanguageMenu() {
-  const { lang, setLang, t } = useLanguage()
-  const [open, setOpen] = useState(false)
-  const box = useRef(null)
-  useEffect(() => {
-    if (!open) return
-    const close = (e) => { if (!box.current?.contains(e.target)) setOpen(false) }
-    const esc = (e) => { if (e.key === 'Escape') setOpen(false) }
-    document.addEventListener('pointerdown', close)
-    document.addEventListener('keydown', esc)
-    return () => { document.removeEventListener('pointerdown', close); document.removeEventListener('keydown', esc) }
-  }, [open])
-  const current = LANGUAGES.find(l => l[0] === lang)
-  return (
-    <div className="langm" ref={box}>
-      <button className="icbtn lang-btn" type="button" aria-haspopup="true" aria-expanded={open} aria-label={t('Language: {name}', { name: current[1] })} onClick={() => setOpen(o => !o)}>
-        <span lang={lang}>{current[2]}</span>
-      </button>
-      {open && (
-        <div className="lang-pop card" role="group" aria-label={t('Language')}>
-          {LANGUAGES.map(([code, name]) => (
-            <button key={code} type="button" lang={code} aria-pressed={lang === code} onClick={() => { setLang(code); setOpen(false) }}>
-              {name}{lang === code && <Icon name="check" size={14} />}
-            </button>
-          ))}
-        </div>
-      )}
-    </div>
-  )
 }
 
 export default function Nav({ page }) {
@@ -108,7 +78,6 @@ export default function Nav({ page }) {
           <button className="sbtn" type="button" aria-haspopup="dialog" onClick={() => window.dispatchEvent(new Event(SEARCH_EVENT))}>
             <Icon name="search" size={16} /><span className="sbtn-t">{t('Search')}</span><kbd>Ctrl K</kbd>
           </button>
-          <LanguageMenu />
           <button className="icbtn" type="button" aria-label={dark ? t('Switch to light theme') : t('Switch to dark theme')} onClick={switchTheme}>
             <span style={{ display: 'grid' }}><Icon name="sun" className="th-sun" /><Icon name="moon" className="th-moon" /></span>
           </button>

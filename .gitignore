@@ -15,6 +15,8 @@ CHRONUS/02-Cleaned-Data/master-elon-data.csv
 CHRONUS/02-Cleaned-Data/master-elon-data.md
 # Custom persona models: private personal data (uploads, interview answers)
 CHRONUS/personas/
+# Website form submissions (services/site_forms.py): personal data
+CHRONUS/site_data/
 # LoRA: regenerable training data, checkpoints and adapter weights
 CHRONUS/lora/data/
 CHRONUS/lora/checkpoints/

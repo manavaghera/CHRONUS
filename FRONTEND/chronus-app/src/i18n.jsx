@@ -29,8 +29,19 @@ export function translate(lang, text, vars) {
   return fill((d && d[text]) || text, vars)
 }
 
+// The site language switch is off: the site is English only for now. The
+// Hindi and Gujarati tables stay in strings/ (and i18n.test.js keeps them
+// complete), so turning this back on is a one-line change, plus the menu
+// in components/Nav.jsx and the footer. A language chosen while the switch
+// existed is ignored and forgotten, so nobody is stuck in it.
+export const LANGUAGE_SWITCH = false
+
 export function storedLanguage() {
-  try { const v = localStorage.getItem(KEY); return LANGUAGES.some(l => l[0] === v) ? v : 'en' } catch { return 'en' }
+  try {
+    if (!LANGUAGE_SWITCH) { localStorage.removeItem(KEY); return 'en' }
+    const v = localStorage.getItem(KEY)
+    return LANGUAGES.some(l => l[0] === v) ? v : 'en'
+  } catch { return 'en' }
 }
 
 const Ctx = createContext({ lang: 'en', setLang: () => {}, t: (s, v) => fill(s, v) })

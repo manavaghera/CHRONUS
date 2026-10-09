@@ -47,6 +47,7 @@ from services import (
     private_files,
     roundtable,
     security_headers,
+    site_forms,
     spirit,
     stt,
     style,
@@ -102,7 +103,7 @@ FALLBACK_ANSWER = "I don't have any documented information about that in my avai
 
 # ---- Private data: owner-only files (services/private_files.py) ----
 private_files.restrict_new_files()
-private_files.tighten([ps.CUSTOM_DIR, Path(CHROMA_PATH), QA_LOG_PATH, insights.FEEDBACK_PATH, ops.AUDIT_LOG_PATH,
+private_files.tighten([ps.CUSTOM_DIR, Path(CHROMA_PATH), QA_LOG_PATH, insights.FEEDBACK_PATH, ops.AUDIT_LOG_PATH, site_forms.DATA_DIR,
                       Path(__file__).resolve().parent / ".env"])
 
 # ---- FastAPI ----
@@ -983,6 +984,8 @@ app.include_router(bundle.make_router(client, embedder, config.EMBEDDING_MODEL, 
 app.include_router(followups.make_router(client, embedder))
 # Person model: identity profile, style adapters, switches
 app.include_router(person_routes.make_router(client, embedder))
+# Website forms: waitlist, contact, report a model (public, rate-limited)
+app.include_router(site_forms.make_router())
 # Memory browser, citation context, time-travel year counts
 app.include_router(memory_routes.make_router(client, embedder))
 # The uploaded file behind a memory: play the voice note, see the photo (services/originals.py)
