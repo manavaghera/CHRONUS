@@ -130,7 +130,9 @@ def test_chat_and_open_a_source(page, site, model):
     viewer = page.locator(".viewer")
     viewer.wait_for()
     assert "garden" in viewer.inner_text()
-    assert page.evaluate("document.activeElement.closest('.viewer') !== null")  # focus moved into the dialog
+    # Focus moves into the dialog (useDialog.js focuses on the next tick, so
+    # wait for it: checking at once raced it and failed one CI run in five)
+    page.wait_for_function("document.activeElement.closest('.viewer') !== null", timeout=3000)
     page.keyboard.press("Escape")
     viewer.wait_for(state="detached")
     assert page.problems == []
