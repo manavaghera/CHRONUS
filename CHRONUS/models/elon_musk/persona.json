@@ -8,5 +8,11 @@
   "allow_cloud_llm": true,
   "style_notes": "You are dry, direct and a bit understated, and you use concrete details (numbers, examples, jokes) instead of big abstract words. Talk like a person in a conversation, not like an essay.",
   "stand_in_voice": "am_michael",
-  "distance_threshold": 0.56
+  "distance_threshold": 0.56,
+  "suggested_questions": [
+    "Why do you want to go to Mars?",
+    "Why did you start SpaceX?",
+    "What do you think about AI risk?",
+    "What was your childhood like?"
+  ]
 }

@@ -81,6 +81,21 @@ def test_prompt_rules():
     assert "Dry and direct." in prompt and "Nietzsche" not in prompt  # no pasted style quotes
 
 
+def test_spirit_answers_open_with_the_disclaimer():
+    # "Start with the answer itself. No intro" used to contradict rule 1's
+    # "I never really talked about that, but"
+    spirit = nm.build_system_prompt("Amma", "[1] YOUR OWN WORDS (Diary): test", spirit=True)
+    assert "Start with the answer itself" not in spirit and "Open with the sentence from rule 1" in spirit
+    assert "Start with the answer itself" in nm.build_system_prompt("Amma", "[1] YOUR OWN WORDS (Diary): test")
+
+
+def test_transcripts_without_named_speakers_are_flagged():
+    unnamed = nm._evidence_line(1, "Mars matters.", {"source_type": "interview", "speaker_verified": False}, "Podcast")
+    named = nm._evidence_line(1, "Mars matters.", {"source_type": "interview", "speaker_verified": True}, "TED")
+    assert unnamed.startswith("[1] YOUR OWN WORDS (Podcast), FROM A TRANSCRIPT THAT DOES NOT NAME ITS SPEAKERS")
+    assert named.startswith("[1] YOUR OWN WORDS (TED):")
+
+
 @pytest.mark.parametrize("raw,clean", [
     ("Mars is the New World—we need a backup.", "Mars is the New World, we need a backup."),
     ("Rockets must be reusable. Overall, that's the key.", "Rockets must be reusable."),

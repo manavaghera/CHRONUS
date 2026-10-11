@@ -71,6 +71,14 @@ from services.theme_classifier import classify_theme
 _HIGH_CONFIDENCE_CEIL = 0.45
 _MEDIUM_CONFIDENCE_CEIL = 0.52
 # 0.52 up to DISTANCE_THRESHOLD is "low" but still answered.
+# The bands were measured at the global threshold; a model with its own
+# (services/calibration.py: old or translated writing matches modern
+# questions more loosely) moves them by the difference
+_BANDS_THRESHOLD = 0.58
+# Closer than this to the model's threshold, the best memory only just
+# passed: Part 1 says it is the closest thing they said, not "I've been
+# pretty clear about this" (a 0.55 dinner tweet, asked about lasagne)
+_HEDGE_MARGIN = 0.03
 
 # Maximum characters to show in a quoted passage before truncating.
 _QUOTE_DISPLAY_LIMIT = 280
@@ -92,6 +100,18 @@ _INTRO_FRAMES: list[str] = [
     "Here's what I've actually said:",
     "I've addressed this publicly:",
 ]
+
+# The closest memory only just passed the threshold (_HEDGE_MARGIN). Distance
+# can't tell a loose fit from a real one ("How do you handle criticism?" ->
+# Lincoln on being misrepresented, 0.597 of 0.60), so these claim neither
+# certainty nor that they never spoke of it
+_INTRO_FRAMES_LOW: list[str] = [
+    "The closest thing I've said to that:",
+    "The nearest I've come to that:",
+    "Not in those words, but the closest thing I've said:",
+]
+_INTRO_WRITTEN_LOW = "The closest thing I wrote to that:"
+_BRIDGE_MULTI_OPENER_LOW = "A few other things I've said come near it."
 
 _BRIDGE_SINGLE: list[str] = [
     "I also mentioned:",
@@ -436,6 +456,7 @@ def build_part1(
     whole_passage: bool = False,
     limit: int = _QUOTE_DISPLAY_LIMIT,
     embedder=None,
+    hedged: bool = False,
 ) -> dict:
     """
     Build Part 1 — Persona Introduction + Authentic Quote.
@@ -449,6 +470,7 @@ def build_part1(
         query: The original user query (picks the excerpt and the phrasing).
         whole_passage: Quote the passage from its start (nothing else is quoted).
         limit: Maximum quote length in characters.
+        hedged: Low confidence: say this is only the closest thing they said.
 
     Returns:
         ``{"text": "...", "quote": "...", "source": {...}}``
@@ -469,6 +491,13 @@ def build_part1(
 
     # Pick an intro frame deterministically
     frame = _source_frame(meta, _deterministic_pick(_INTRO_FRAMES, query), opening=True)
+    if hedged and voice_of(meta) == FIRST_PERSON:
+        if meta.get("source_type") == "writing" and meta.get("source_name"):
+            frame = f"The closest I came to that was in {meta['source_name']}:"
+        elif meta.get("source_type") in ("personal_writing", "writing"):
+            frame = _INTRO_WRITTEN_LOW
+        else:
+            frame = _deterministic_pick(_INTRO_FRAMES_LOW, query)
 
     text = f"{frame} \"{display_quote}\"{context_clause(meta)}"
 
@@ -488,6 +517,7 @@ def build_part2(
     max_extra: int = 2,
     limit: int = _SUPPLEMENTARY_QUOTE_LIMIT,
     embedder=None,
+    hedged: bool = False,
 ) -> dict:
     """
     Build Part 2 — Theme-Matched Explanation.
@@ -540,7 +570,8 @@ def build_part2(
                 parts.append(f"{bridge} \"{snippet}\"{context_clause(meta)}")
             else:
                 own_words = all(voice_of(m[2]) == FIRST_PERSON for m, _ in additional)
-                parts.append(_deterministic_pick(_BRIDGE_MULTI_OPENER, query) if own_words else _BRIDGE_MULTI_OPENER_NEUTRAL)
+                opener = _BRIDGE_MULTI_OPENER_LOW if hedged else _deterministic_pick(_BRIDGE_MULTI_OPENER, query)
+                parts.append(opener if own_words else _BRIDGE_MULTI_OPENER_NEUTRAL)
                 parts.append(f"{_source_frame(meta, '', opening=False)} \"{snippet}\"{context_clause(meta)}".strip())
         else:
             frame = _source_frame(meta, _deterministic_pick(_CONNECTOR_WORDS, query, offset=k), opening=False)
@@ -586,24 +617,27 @@ def build_part3(
 # Confidence mapping
 # ---------------------------------------------------------------------------
 
-def calculate_confidence(raw_distance: float) -> str:
+def calculate_confidence(raw_distance: float, threshold: float | None = None) -> str:
     """
     Map a raw cosine distance to a human-readable confidence label.
 
-    Boundaries (shared by Mix Method and natural mode):
+    Boundaries (shared by Mix Method and natural mode), at the global threshold:
         distance < 0.45    → ``"high"``   — only answerable questions land here
         distance 0.45–0.52 → ``"medium"`` — grey zone, mostly answerable
         distance 0.52–0.58 → ``"low"``    — grey zone, up to DISTANCE_THRESHOLD
 
     Args:
         raw_distance: The raw cosine distance from ChromaDB.
+        threshold: The model's own "I don't know" threshold, which moves the
+            bands with it (Shakespeare's 0.62: high below 0.49).
 
     Returns:
         One of ``"high"``, ``"medium"``, or ``"low"``.
     """
-    if raw_distance < _HIGH_CONFIDENCE_CEIL:
+    shift = 0.0 if threshold is None else threshold - _BANDS_THRESHOLD
+    if raw_distance < _HIGH_CONFIDENCE_CEIL + shift:
         return "high"
-    if raw_distance < _MEDIUM_CONFIDENCE_CEIL:
+    if raw_distance < _MEDIUM_CONFIDENCE_CEIL + shift:
         return "medium"
     return "low"
 
@@ -683,6 +717,7 @@ def generate_mix_method_response(
     include_sources: bool = True,
     length: str = "normal",
     embedder=None,
+    threshold: float | None = None,
 ) -> dict:
     """
     Generate a 3-part Mix Method response grounded in retrieved evidence.
@@ -690,6 +725,8 @@ def generate_mix_method_response(
     *length*: "short" (one focused quote), "normal", or "detailed" (longer
     quotes, up to three supporting memories). *embedder*: picks the most
     relevant sentences of each memory by meaning (word overlap without it).
+    *threshold*: the model's "I don't know" threshold (default: the global
+    one), for the confidence label and the "closest thing I've said" opener.
 
     This is the primary public API of the module.  It orchestrates theme
     classification, the three part builders, confidence scoring, and final
@@ -747,17 +784,19 @@ def generate_mix_method_response(
 
     # --- Confidence from the closest memory's raw distance ---
     best_memory = memories[0]
-    confidence = calculate_confidence(min(m[3] for m in memories))
+    best_dist = min(m[3] for m in memories)
+    confidence = calculate_confidence(best_dist, threshold)
+    hedged = best_dist >= (_BANDS_THRESHOLD if threshold is None else threshold) - _HEDGE_MARGIN
 
     # --- Build the three parts ---
     limits = {"short": (220, 0, 0), "normal": (_QUOTE_DISPLAY_LIMIT, 2, _SUPPLEMENTARY_QUOTE_LIMIT),
               "detailed": (420, 3, 320)}
     quote_limit, max_extra, extra_limit = limits.get(length, limits["normal"])
     part1 = build_part1(best_memory, persona_name, query, whole_passage=len(memories) == 1,
-                        limit=quote_limit, embedder=embedder)
+                        limit=quote_limit, embedder=embedder, hedged=hedged)
     if max_extra:
         part2 = build_part2(query, memories, theme, theme_clear, identity_card, max_extra=max_extra,
-                            limit=extra_limit, embedder=embedder)
+                            limit=extra_limit, embedder=embedder, hedged=hedged)
     else:
         part2 = {"text": "", "additional_sources": []}
     part3 = build_part3(identity_card, theme=theme, query=query, context=part1["quote"]) if length != "short" \

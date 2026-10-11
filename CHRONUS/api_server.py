@@ -301,6 +301,11 @@ def used_memory_ids(query: str, history: list[ChatTurn]) -> set[str]:
     return {mid for turn in history if turn.role == "assistant" for mid in turn.memory_ids}
 
 
+def raw_caption(meta: dict) -> bool:
+    """An auto-caption chunk whose speakers no one told apart (rebuild_elon.py)."""
+    return str(meta.get("speaker_verified")) == "False" and str(meta.get("punctuated")) == "False"
+
+
 def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = None,
              threshold: float | None = None, mode: str | None = None,
              exclude: set[str] | None = None, skip=None) -> Optional[list[tuple]]:
@@ -352,6 +357,11 @@ def retrieve(query: str, n: int = N_RESULTS, memory=None, where: dict | None = N
     # whenever longer evidence also passed the threshold.
     substantive = [c for c in passing if len(c[1].split()) >= config.MIN_EVIDENCE_WORDS]
     passing = substantive or passing
+    # Raw auto-captions (no punctuation, speakers not told apart) run the
+    # host's words into the answer ("...let's ask about spacex okay well");
+    # likewise dropped whenever better-transcribed evidence also passed.
+    transcribed = [c for c in passing if not raw_caption(c[2])]
+    passing = transcribed or passing
     if not passing:
         return None
 
@@ -537,6 +547,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
             embedder=embedder,
             on_token=on_token,
             length=length,
+            threshold=limit,
         )
         sources = result["sources"]
     else:
@@ -548,6 +559,7 @@ def answer_from_memory(query: str, persona: dict, memory, mode: str, history: li
             include_sources=True,
             length=length,
             embedder=embedder,
+            threshold=limit,
         )
         # Mix Method quotes evidence[0] (Part 1) + evidence[1:3] (Part 2), so
         # citations cover exactly the evidence used, in the same order.

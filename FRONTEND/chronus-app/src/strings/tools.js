@@ -264,4 +264,10 @@ export const TOOLS = [
   ['{year}: {n} memories', '{year}: {n} यादें', '{year}: {n} યાદો'],
   ['{y} AD', 'ईस्वी {y}', 'ઈ.સ. {y}'],
   ['“I don’t know” threshold', '“मुझे नहीं पता” की सीमा', '“મને ખબર નથી” ની મર્યાદા'],
+  ['Speaker not verified', 'वक्ता की पुष्टि नहीं', 'વક્તાની પુષ્ટિ નથી'],
+  ['Speaker identified by AI', 'वक्ता की पहचान AI ने की', 'વક્તાની ઓળખ AI એ કરી'],
+  ['This transcript doesn’t say who is speaking, so the quote may include the interviewer’s words.',
+    'यह ट्रांसक्रिप्ट नहीं बताती कि कौन बोल रहा है, इसलिए उद्धरण में साक्षात्कारकर्ता के शब्द भी हो सकते हैं।',
+    'આ ટ્રાન્સક્રિપ્ટ જણાવતી નથી કે કોણ બોલી રહ્યું છે, તેથી અવતરણમાં ઇન્ટરવ્યૂ લેનારના શબ્દો પણ હોઈ શકે છે.'],
+  ['Chat with {name}', '{name} से बातचीत', '{name} સાથે વાતચીત'],
 ]

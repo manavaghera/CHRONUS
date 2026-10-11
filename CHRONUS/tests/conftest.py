@@ -116,12 +116,20 @@ def fresh_rate_limits(srv, monkeypatch):
     monkeypatch.setattr(natural_mode, "breaker", natural_mode._Breaker())
 
 
+def _test_collections(srv) -> list[str]:
+    return [c.name for c in srv.client.list_collections() if c.name.startswith("persona_pytest_")]
+
+
 @pytest.fixture(scope="session", autouse=True)
 def guard_real_data(srv):
+    # A run stopped half way leaves its test models behind, which would fail
+    # every later run; they are test-only (persona_pytest_*), so clear them
+    for name in _test_collections(srv):
+        srv.client.delete_collection(name)
     before = srv.collection.count()
     yield
     assert srv.collection.count() == before, "tests changed Elon's memory collection"
-    leftovers = [c.name for c in srv.client.list_collections() if c.name.startswith("persona_pytest_")]
+    leftovers = _test_collections(srv)
     assert not leftovers, f"test personas left behind: {leftovers}"
 
 

@@ -3,7 +3,7 @@ import { api } from '../api'
 import { useLanguage } from '../i18n'
 import Icon from '../lib/Icon'
 import Conversation from '../chat/Conversation'
-import SourceViewer, { matchPct, VOICES } from '../chat/SourceViewer'
+import SourceViewer, { matchPct, SpeakerNote, VOICES } from '../chat/SourceViewer'
 
 // Questions stay in English, like the archives they search
 const CUSTOM_QUICK = ['What was your favourite birthday?', 'What did you love about your work?', 'What are you most proud of?', 'What advice would you give me?']
@@ -59,6 +59,7 @@ export default function ChatPage({ id }) {
   return (
     <div className="page chat-page">
       <div className="wrap">
+        {persona && <h1 className="sr-only">{t('Chat with {name}', { name: persona.name })}</h1>}
         <div className="chat-top">
           <nav className="crumbs" aria-label={t('Breadcrumb')}><a href="#/">{t('Home')}</a><span aria-hidden="true">/</span>
             <a href={pre ? '#/pretrained' : '#/models'}>{pre ? t('Pretrained') : t('Your models')}</a><span aria-hidden="true">/</span><span>{persona?.name || '…'}</span></nav>
@@ -89,6 +90,7 @@ export default function ChatPage({ id }) {
                     <div className="row wrap-row gap8">
                       {s.voice && <span className="prov"><i className={`pm${s.voice === 'first_person' ? '' : s.voice === 'synthesized' ? ' dot' : ' dash'}`} />{t(VOICES[s.voice] || s.voice)}</span>}
                       {s.distance != null && <span className="lab">{t('Match {pct}%', { pct: matchPct(s.distance) })}</span>}
+                      <SpeakerNote source={s} t={t} />
                     </div>
                     {s.memory_id && <button type="button" className="linkbtn" onClick={() => setViewer({ source: s, index: i })}>{t('View in context')}<Icon name="arrow" size={13} /></button>}
                   </div>

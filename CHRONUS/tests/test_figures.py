@@ -40,7 +40,9 @@ def test_suggested_questions_are_answered_from_their_own_books(client, figures, 
     for question in p["suggested_questions"]:
         d = client.post("/chat", json={"query": question, "persona": figure_id, "mode": "mix_method"}).json()
         assert d["mode"] == "mix_method", f"{figure_id}: {question!r} fell back"
-        assert d["answer"].startswith("As I wrote in ") and any(t in d["answer"].split('"')[0] for t in titles)
+        # A match only just inside the model's threshold opens "The closest I came to that was in ..."
+        assert d["answer"].startswith(("As I wrote in ", "The closest I came to that was in "))
+        assert any(t in d["answer"].split('"')[0] for t in titles)
         assert all(s["voice"] == "first_person" and s["source_type"] == "writing" for s in d["sources"])
 
 

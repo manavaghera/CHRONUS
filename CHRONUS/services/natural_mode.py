@@ -120,6 +120,10 @@ def _evidence_line(index: int, doc: str, meta: dict, citation: str) -> str:
     voice = voice_of(meta)
     if voice == FIRST_PERSON:
         label = f"YOUR OWN WORDS ({citation})"
+        # Interview transcripts that don't name their speakers (rebuild_elon.py)
+        if str(meta.get("speaker_verified")) == "False" and not meta.get("speaker_inferred"):
+            label += (", FROM A TRANSCRIPT THAT DOES NOT NAME ITS SPEAKERS: it may include the interviewer's "
+                      "words, so use only what is clearly you")
     elif voice == SYNTHESIZED:
         label = f"SYNTHESIZED SUMMARY, NOT A QUOTE ({attribution(meta)})"
     else:
@@ -152,6 +156,9 @@ def build_system_prompt(
     *spirit*: the "in their spirit" rules (rules 1-4) instead of answering
     from evidence that covers the question."""
     sentences = LENGTHS.get(length, LENGTHS["normal"])[0]
+    # Spirit answers open with rule 1's "I never really talked about that"
+    opening = ("Open with the sentence from rule 1, then give the answer. No other intro"
+               if spirit else "Start with the answer itself. No intro")
     rules = _SPIRIT_RULES if spirit else """1. Answer the actual question, building the answer from YOUR OWN WORDS in the evidence. Reuse your actual phrases, examples, numbers and jokes where they fit, and only tidy them up: drop fillers like "um", "uh" and "you know", fix run-together or broken words, and join fragments into sentences. Do not just paste unrelated lines together.
 2. Evidence marked ABOUT YOU was written by someone else. You can use its facts, but never present its wording as something you said.
 3. Evidence marked SYNTHESIZED is a generated summary. Use it for facts only, not for phrasing.
@@ -160,7 +167,7 @@ def build_system_prompt(
 
 HOW TO ANSWER
 {rules}
-5. {sentences}, spoken style. Start with the answer itself. No intro and no wrap-up line that sums things up.
+5. {sentences}, spoken style. {opening} and no wrap-up line that sums things up.
 6. Never use dashes of any kind, and never use the words "crucial", "ensuring", "pivotal", "delve", "testament", "landscape" or "journey".
 7. End each sentence, before its full stop, with the number of the evidence it comes from in square brackets, like [1] or [2]. Only use numbers shown in EVIDENCE.
 
@@ -385,6 +392,7 @@ def generate_natural_response(
     on_token: Callable[[str], None] | None = None,  # stream the draft (see _call_llm)
     length: str = "normal",  # "short" | "normal" | "detailed"
     spirit: bool = False,  # "in their spirit": reason from values, say it was never said (services/spirit.py)
+    threshold: float | None = None,  # the model's "I don't know" threshold, for the confidence label
 ) -> dict:
     """Answer *query* in the persona's voice, grounded in *memories*.
 
@@ -430,7 +438,7 @@ def generate_natural_response(
         return {
             "response": clean_text,
             "sources": sources,
-            "confidence": calculate_confidence(best_dist),
+            "confidence": calculate_confidence(best_dist, threshold),
             "fallback": False,
             "mode": "natural",
             "faithfulness": grounding,
@@ -448,6 +456,7 @@ def generate_natural_response(
             include_sources=True,
             length=length,
             embedder=embedder,
+            threshold=threshold,
         )
         mix_fallback["mode"] = "mix_method_fallback"
         if isinstance(e, (ProviderUnavailable, DeadlineExceeded, requests.RequestException)):

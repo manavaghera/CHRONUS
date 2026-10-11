@@ -76,6 +76,28 @@ def test_length_short_is_one_quote():
     assert out["parts"]["part2_theme_explanation"] == "" and out["response"].count('"') == 2
 
 
+def test_weak_matches_are_not_introduced_as_certain():
+    # "I've been pretty clear about this:" before a 45% match about dinner, asked about lasagne
+    dinner = "Dinner in an old Belgian ironmongery, and the best menu art I have ever seen anywhere."
+    weak = mm.generate_mix_method_response("What is your favourite lasagne recipe?", [_mem(dinner, dist=0.55)], {},
+                                           "Elon Musk", threshold=0.56)
+    assert weak["confidence"] == "low"
+    assert any(weak["response"].startswith(f) for f in mm._INTRO_FRAMES_LOW)
+    sure = mm.generate_mix_method_response("What is your favourite dinner?", [_mem(dinner, dist=0.3)], {}, "Elon Musk")
+    assert any(sure["response"].startswith(f) for f in mm._INTRO_FRAMES)
+    letter = mm.generate_mix_method_response("Lasagne?", [_mem(dinner, "personal_writing", dist=0.57)], {}, "Amma")
+    assert letter["response"].startswith(mm._INTRO_WRITTEN_LOW)
+    # A model whose own threshold is higher (old writing matches loosely) isn't hedged as early
+    sonnet = mm.generate_mix_method_response("What is love?", [_mem(dinner, "writing", dist=0.567, source_name="Sonnets")],
+                                             {}, "William Shakespeare", threshold=0.62)
+    assert sonnet["response"].startswith("As I wrote in Sonnets:")
+
+
+def test_confidence_bands_follow_the_models_threshold():
+    assert mm.calculate_confidence(0.47) == "medium" and mm.calculate_confidence(0.47, 0.62) == "high"
+    assert mm.calculate_confidence(0.55, 0.56) == "low" and mm.calculate_confidence(0.55, 0.65) == "medium"
+
+
 def test_verify_signatures():
     memories = [{"text": "Well, physics is the law, everything else is a recommendation.", "source_type": "interview",
                  "source_file": "lex.md", "memory_id": "m1"},
@@ -123,6 +145,20 @@ def test_retrieval_skips_near_duplicates(srv, memory):
                metadatas=[{"source_type": "tweet"}] * 3)
     ids = [m[1] for m in srv.retrieve(q, n=3, memory=memory, threshold=1.0, mode="dense")]
     assert ids == [docs[0], docs[2]]
+
+
+def test_raw_captions_only_when_nothing_cleaner_passed(srv, memory):
+    # Auto-captions with no named speakers ran the host's words into Elon's answer
+    q = "why did you start the rocket company"
+    qv = np.asarray(srv.embedder.encode([q], normalize_embeddings=True)[0])
+    docs = ["you know it was a little more than fifty thousand but lets ask about the rocket company okay well",
+            "I started the rocket company because life needs to become multiplanetary to last in the long run."]
+    memory.add(ids=["caption", "clean"], documents=docs, embeddings=[_vec_at(qv, 0.30, 6), _vec_at(qv, 0.40, 7)],
+               metadatas=[{"source_type": "interview", "speaker_verified": False, "punctuated": False},
+                          {"source_type": "interview", "speaker_verified": False, "punctuated": True}])
+    assert [m[1] for m in srv.retrieve(q, n=3, memory=memory, threshold=1.0, mode="dense")] == [docs[1]]
+    memory.delete(ids=["clean"])  # with nothing else to go on, the caption still answers
+    assert [m[1] for m in srv.retrieve(q, n=3, memory=memory, threshold=1.0, mode="dense")] == [docs[0]]
 
 
 def test_custom_models_get_their_own_threshold(client):

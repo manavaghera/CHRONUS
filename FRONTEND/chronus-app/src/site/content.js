@@ -7,8 +7,8 @@ export const COMPANY = {
   number: '[NA]',
   registeredIn: '[India]',
   office: '[WFH]',
-  email: '[Not yet',
-  privacyEmail: '[Noy Yet]',
+  email: '[Not yet]',
+  privacyEmail: '[Not yet]',
 }
 
 export const FOUNDER = {
