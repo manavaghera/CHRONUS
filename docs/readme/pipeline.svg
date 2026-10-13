@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 390" width="1280" height="390" role="img" aria-label="How CHRONUS makes an answer">
+<title>How CHRONUS makes an answer</title>
+<style>
+.sans{font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, sans-serif} .mono{font-family:ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, Menlo, monospace}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs>
+<radialGradient id="bg" cx="72%" cy="28%" r="95%"><stop offset="0" stop-color="#2b140a"/><stop offset=".5" stop-color="#0e0806"/><stop offset="1" stop-color="#060404"/></radialGradient>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#FF6436" opacity=".09"/></pattern>
+<filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<filter id="blur14" x="-20%" y="-60%" width="140%" height="220%"><feGaussianBlur stdDeviation="14"/></filter>
+</defs>
+<rect x="1" y="1" width="1278" height="388" rx="24" fill="url(#bg)"/>
+<rect x="1" y="1" width="1278" height="388" rx="24" fill="url(#dots)"/>
+<rect x="1" y="1" width="1278" height="388" rx="24" fill="none" stroke="#FF6436" stroke-opacity=".22"/>
+
+<text x="44" y="56" class="mono" font-size="14" letter-spacing="4" fill="#FF6436">HOW AN ANSWER IS MADE</text>
+<line x1="190" y1="150" x2="1040" y2="150" stroke="#FF6436" stroke-opacity=".35" stroke-width="2" stroke-dasharray="6 6"><animate attributeName="stroke-dashoffset" from="0" to="-24" dur="1s" repeatCount="indefinite"/></line>
+<path d="M715 196 V262" stroke="#FFB394" stroke-opacity=".4" stroke-width="2" stroke-dasharray="6 6" fill="none"><animate attributeName="stroke-dashoffset" from="0" to="-24" dur="1s" repeatCount="indefinite"/></path>
+<circle r="6" fill="#FFB394" opacity="1" filter="url(#glow)"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-0.00s" repeatCount="indefinite"/></circle>
+<circle r="4.6" fill="#FF6436" opacity="0.55"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-0.07s" repeatCount="indefinite"/></circle>
+<circle r="3.4" fill="#FF6436" opacity="0.32"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-0.14s" repeatCount="indefinite"/></circle>
+<circle r="2.4" fill="#FF6436" opacity="0.18"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-0.21s" repeatCount="indefinite"/></circle>
+<circle r="6" fill="#FFB394" opacity="1" filter="url(#glow)"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-1.50s" repeatCount="indefinite"/></circle>
+<circle r="4.6" fill="#FF6436" opacity="0.55"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-1.57s" repeatCount="indefinite"/></circle>
+<circle r="3.4" fill="#FF6436" opacity="0.32"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-1.64s" repeatCount="indefinite"/></circle>
+<circle r="2.4" fill="#FF6436" opacity="0.18"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-1.71s" repeatCount="indefinite"/></circle>
+<circle r="6" fill="#FFB394" opacity="1" filter="url(#glow)"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-3.00s" repeatCount="indefinite"/></circle>
+<circle r="4.6" fill="#FF6436" opacity="0.55"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-3.07s" repeatCount="indefinite"/></circle>
+<circle r="3.4" fill="#FF6436" opacity="0.32"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-3.14s" repeatCount="indefinite"/></circle>
+<circle r="2.4" fill="#FF6436" opacity="0.18"><animateMotion path="M190,150 H1040" dur="4.5s" begin="-3.21s" repeatCount="indefinite"/></circle>
+<circle r="6" fill="#FFF3EC" filter="url(#glow)"><animateMotion path="M190,150 H715 V262" dur="6s" begin="-.5s" calcMode="linear" keyPoints="0;1;1" keyTimes="0;.55;1" repeatCount="indefinite"/><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.55;.6;1" dur="6s" begin="-.5s" repeatCount="indefinite"/></circle>
+<rect x="40" y="113" width="150" height="74" rx="16" fill="#140c08" stroke="#FF6436" stroke-width="1.6" stroke-opacity=".4"><animate attributeName="stroke-opacity" values=".35;1;.35" keyTimes="0;.18;1" dur="1.5s" begin="-0.40s" repeatCount="indefinite"/></rect><text x="115.0" y="145" text-anchor="middle" class="sans" font-size="17" font-weight="700" fill="#FFF3EC">Question</text><text x="115.0" y="167" text-anchor="middle" class="mono" font-size="12" fill="#FF6436" opacity=".85">any language</text>
+<rect x="226" y="113" width="180" height="74" rx="16" fill="#140c08" stroke="#FF6436" stroke-width="1.6" stroke-opacity=".4"><animate attributeName="stroke-opacity" values=".35;1;.35" keyTimes="0;.18;1" dur="1.5s" begin="-0.83s" repeatCount="indefinite"/></rect><text x="316.0" y="145" text-anchor="middle" class="sans" font-size="17" font-weight="700" fill="#FFF3EC">Crisis check</text><text x="316.0" y="167" text-anchor="middle" class="mono" font-size="12" fill="#FF6436" opacity=".85">then into English</text>
+<rect x="442" y="113" width="206" height="74" rx="16" fill="#140c08" stroke="#FF6436" stroke-width="1.6" stroke-opacity=".4"><animate attributeName="stroke-opacity" values=".35;1;.35" keyTimes="0;.18;1" dur="1.5s" begin="-1.12s" repeatCount="indefinite"/></rect><text x="545.0" y="145" text-anchor="middle" class="sans" font-size="17" font-weight="700" fill="#FFF3EC">Find memories</text><text x="545.0" y="167" text-anchor="middle" class="mono" font-size="12" fill="#FF6436" opacity=".85">MiniLM + ChromaDB</text><text x="545.0" y="213" text-anchor="middle" class="mono" font-size="11.5" fill="#FFF3EC" opacity=".45">hybrid + re-ranker optional</text>
+<polygon points="715,104 761,150 715,196 669,150" fill="#140c08" stroke="#FF6436" stroke-width="1.6"><animate attributeName="stroke-opacity" values=".35;1;.35" keyTimes="0;.18;1" dur="1.5s" begin="-0.22s" repeatCount="indefinite"/></polygon>
+<text x="715" y="147" text-anchor="middle" class="sans" font-size="13" font-weight="700" fill="#FFF3EC">close</text><text x="715" y="163" text-anchor="middle" class="sans" font-size="13" font-weight="700" fill="#FFF3EC">enough?</text>
+<text x="771" y="138" class="mono" font-size="12" fill="#FF6436">yes</text><text x="727" y="222" class="mono" font-size="12" fill="#FFB394">no</text>
+<rect x="800" y="113" width="206" height="74" rx="16" fill="#140c08" stroke="#FF6436" stroke-width="1.6" stroke-opacity=".4"><animate attributeName="stroke-opacity" values=".35;1;.35" keyTimes="0;.18;1" dur="1.5s" begin="-0.73s" repeatCount="indefinite"/></rect><text x="903.0" y="145" text-anchor="middle" class="sans" font-size="17" font-weight="700" fill="#FFF3EC">Answer</text><text x="903.0" y="167" text-anchor="middle" class="mono" font-size="12" fill="#FF6436" opacity=".85">quotes or AI voice</text><text x="903.0" y="213" text-anchor="middle" class="mono" font-size="11.5" fill="#FFF3EC" opacity=".45">AI voice must stay grounded</text>
+<rect x="1042" y="113" width="198" height="74" rx="16" fill="#140c08" stroke="#FF6436" stroke-width="1.6" stroke-opacity=".4"><animate attributeName="stroke-opacity" values=".35;1;.35" keyTimes="0;.18;1" dur="1.5s" begin="-0.97s" repeatCount="indefinite"/></rect><text x="1141.0" y="145" text-anchor="middle" class="sans" font-size="17" font-weight="700" fill="#FFF3EC">Sources</text><text x="1141.0" y="167" text-anchor="middle" class="mono" font-size="12" fill="#FF6436" opacity=".85">cited + confidence</text>
+<rect x="618" y="262" width="194" height="70" rx="16" fill="#140c08" stroke="#FFB394" stroke-width="1.6" stroke-opacity=".35"><animate attributeName="stroke-opacity" values=".35;.35;1;.35;.35" keyTimes="0;.54;.58;.75;1" dur="6s" begin="-.5s" repeatCount="indefinite"/></rect><text x="715" y="294" text-anchor="middle" class="sans" font-size="17" font-weight="700" fill="#FFF3EC">“I don’t know”</text><text x="715" y="316" text-anchor="middle" class="mono" font-size="12" fill="#FFB394">no guess, no AI call</text>
+</svg>

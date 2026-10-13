@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1280 28" width="1280" height="28" role="img" aria-label="">
+<title></title>
+<style>
+.sans{font-family:'Segoe UI', -apple-system, BlinkMacSystemFont, Inter, Helvetica, Arial, sans-serif} .mono{font-family:ui-monospace, SFMono-Regular, 'Cascadia Mono', Consolas, Menlo, monospace}
+
+@media (prefers-reduced-motion: reduce){*{animation:none!important}}
+</style>
+<defs><linearGradient id="comet" x1="0" x2="1"><stop offset="0" stop-color="#FF6436" stop-opacity="0"/>
+<stop offset=".8" stop-color="#FF6436"/><stop offset="1" stop-color="#FFE7DC"/></linearGradient>
+<filter id="glow" x="-10%" y="-200%" width="120%" height="500%"><feGaussianBlur stdDeviation="2.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<line x1="0" y1="14" x2="1280" y2="14" stroke="#FF6436" stroke-opacity=".22" stroke-width="1.5"/>
+<rect x="-300" y="12.5" width="300" height="3" rx="1.5" fill="url(#comet)" filter="url(#glow)">
+<animate attributeName="x" values="-300;1280" dur="3.8s" repeatCount="indefinite"/></rect>
+<g transform="translate(640.0 14)"><rect x="-6" y="-6" width="12" height="12" fill="#0d0806" stroke="#FF6436" stroke-width="1.6" transform="rotate(45)">
+<animateTransform attributeName="transform" type="rotate" values="45;225;45" dur="6s" repeatCount="indefinite"/></rect></g>
+</svg>
